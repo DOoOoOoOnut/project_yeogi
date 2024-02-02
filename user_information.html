@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 정보 관리 - 여기어때</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style/reset.css">
+</head>
+<body>
+    <main>
+        <!-- all 혹시 모를 대비 중 -->
+        <div class="container">
+            <!-- 오른쪽 네비 -->
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button">예약 내역<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                    <li>
+                        <button type="button">포인트<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                    <li>
+                        <button type="button">쿠폰<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                    <li>
+                        <button type="button">내 정보 관리<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                    <li>
+                        <button type="button">설정<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 왼쪽 글 -->
+            <div class="wrap">
+                <!-- 예약내역 -->
+                <div class="reservation">
+                    <h1>예약내역</h1>
+                    <div class="info">
+                        <p>
+                            <!-- font-awesome --> <!-- 클릭안됨 -->
+                            <i class="fa-solid fa-circle-info"></i>
+                            현재 숙소 외 예약내역은 여기어때 앱에서 확인 가능해요
+                        </p>
+                    </div>
+                    <div class="kr_world_btn">
+                        <button type="button" class="kr">국내숙소</button>
+                        <button type="button" class="world">해외숙소</button>
+                    </div>
+                    <section>
+                        <h3 class="skip">이용 전</h3>
+                        <div class="left">
+                            <em>예정된 여행이 없습니다.</em>
+                            <p>지금 새로운 예약을 진행해 보세요</p>
+                            <a href="#"><!-- index -->여행지 찾아보기</a>
+                        </div>
+                        <div class="right"><!-- svg이미지 다운로드 안됨 나중에 비슷하게라도.. --></div>
+                    </section>
+                    <section>
+                        <h2>이용완료 및 예약취소</h2>
+                        <div class="text">
+                            <p>해당되는 예약 내역이 없습니다.</p>
+                        </div>
+                    </section>
+                </div>
+                <!-- 포인트 -->
+                <div class="user_point">
+                    <h1>포인트</h1>
+                    <div class="box">
+                        <div class="user_point_info">
+                            <p>
+                                내 포인트
+                                <!-- font-awesome -->
+                                <span class="popup_info"><i class="fa-solid fa-circle-info"></i></span>
+                            </p>
+                            <em><span class="point"><!-- js --></span>p</em>
+                        </div>
+                        <div class="point_disappear">
+                            <p><span class="rest_day"><!-- js --></span>일 내 <span class="point"></span>가 소멸될 예정이에요</p>
+                        </div>
+                    </div>
+                    <section>
+                        <div class="point_details_btn">
+                            <ul>
+                                <li><button type="button" class="point_details_all">전체</button></li>
+                                <li><button type="button" class="point_details_save">적립</button></li>
+                                <li><button type="button" class="point_details_use">사용</button></li>
+                                <li><button type="button" class="point_details_disapper">소멸</button></li>
+                            </ul>
+                        </div>
+                        <div class="point_info_text">
+                            <h3 class="skip">이용 전</h3>
+                            <p>포인트 내역이 없어요</p>
+                        </div>
+                    </section>
+                </div>
+                <!-- 쿠폰 -->
+                <div class="coupon"></div>
+                <!-- 내 정보 관리 -->
+                <div class="user_information">
+                    <h1>내 정보 관리</h1>
+                    <div class="left">
+                        <div class="profile"></div>
+                    </div>
+                </div>
+                <!-- 설정 -->
+                <div class="setting"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
