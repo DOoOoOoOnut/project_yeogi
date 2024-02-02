@@ -9,10 +9,10 @@
 - 은지: 홈페이지 이미지 다운 및 페이지 캡쳐
 
 ## 개별 분담 페이지
-- 일혁: 
-- 다은: 
-- 민아: 
-- 은지: 
+- 일혁: 숙소 상세페이지 / 이용약관페이지 / 비회원예약조회, 공지사항
+- 다은: 숙소 검색페이지(지도팝업포함) / 로그인페이지 / 회원가입페이지
+- 민아: 메인페이지 / 서비스문의,혜택 / 숙소 예약페이지
+- 은지: 마이페이지 / 고객센터(챗gpt추가) / 이벤트 전체,상세페이지
 
 ## 작업
 - 반응형 웹 크기: 데스크탑 너비 1400 / 테블릿 너비 900 / 모바일 너비 430
@@ -42,9 +42,9 @@
 - 검색저장되는 기능 삭제(검색창에 남아있는 글 삭제)
 
 -----------------------------------------------------------------
-gitHub주소 : https://github.com/DOoOoOoOnut/project_yeogi.git
-Figma주소 : https://www.figma.com/file/jBgjvFMuj70w786UyRKf4a/%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8!!!?type=design&node-id=0%3A1&mode=design&t=Om2TsDX2O7MjstnR-1
-스타일가이드 주소 : https://www.figma.com/file/EPMmNUXDbWR7hIl8dyCVW6/Style-Guide?type=design&node-id=0%3A1&mode=design&t=YM2zPhYZo6oPD45l-1
+- gitHub주소 : https://github.com/DOoOoOoOnut/project_yeogi.git
+- Figma주소 : https://www.figma.com/file/jBgjvFMuj70w786UyRKf4a/%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8!!!?type=design&node-id=0%3A1&mode=design&t=Om2TsDX2O7MjstnR-1
+- 스타일가이드 주소 : https://www.figma.com/file/EPMmNUXDbWR7hIl8dyCVW6/Style-Guide?type=design&node-id=0%3A1&mode=design&t=YM2zPhYZo6oPD45l-1
 
 ### 작업규칙
 - push하기 전/후에 꼭 말하기
