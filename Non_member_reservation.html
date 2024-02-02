@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비회원 예약조회 | 여기어때</title>
+</head>
+<body>
+    <div class="certified"><!--주문번호 팝업창-->
+        <div class="bg">
+            <div class="deny_number">
+                <p>유효하지 않은 주문번호입니다.</p>
+                <a href="#">확인</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section>
+            <div class="title">
+                <h1>비회원 예약조회</h1>
+                <p>비회원으로 예약하셨나요?<br>
+                    예약내역 조회를 위해 고객확인이 필요해요.</p>
+                </div>
+                <form action="#" method="get" id="reservation">
+                    <fieldset>
+                        <legend class="skip">예약조회 양식</legend>
+                        <label for="reservation_num">
+                            <span>예약번호</span>
+                            <input type="text" name="reservation_num" id="reservation_num" placeholder="숫자+영문 조합">
+                        </label>
+                        <label for="reservation_phone">
+                            <span>휴대폰번호</span>
+                            <input type="tel" name="reservation_phone" id="reservation_phone" placeholder="01012345678" maxlength="12">
+                        </label>
+                    </fieldset>
+                </form>
+        </section>
+    </main>
+</body>
+</html>
