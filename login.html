@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인</title>
+    <title>이메일로 시작하기 - 여기어때</title>
 </head>
 <body>
-    
+    <main>
+        <section class="login_container">
+            <h1>이메일로 시작하기</h1>
+            <div class="contents">
+                <form action="#" method="post" id="login_frm">
+                    <fieldset>
+                        <legend class="skip">이메일 주소로 로그인</legend>
+                        <div class="input">
+                            <div class="id_pw">
+                                <div id="user_id_wrap">
+                                    <h2>이메일</h2>
+                                    <p><input type="text" placeholder="abc#gccompany.co.kr" id="user_id"></p>
+                                    <p class="error_massage"></p>
+                                </div>
+                                <div id="user_pw_wrap">
+                                    <h2>비밀번호</h2>
+                                    <p><input type="password" placeholder="비밀번호를 입력하세요" id="user_pw"></p>
+                                    <p class="error_massage"></p>
+                                </div>
+                            </div>
+                            <div class="keep_reset">
+                                <p><input type="checkbox" name="keep_login" id="keep_login"></p>
+                                <a href="#" class="pw_reset">비밀번호 재설정</a>
+                            </div>
+                        </div>
+                        <div class="btn_wrap">
+                            <button type="button" id="login_btn">로그인</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="join">
+                <p>계정이 없으신가요?</p>
+                <p class="go_join">이메일로 회원가입</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
