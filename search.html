@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙소 검색 결과 - 여행할 때 여기어때</title> <!-- js: 숙소 앞에 검색한 지역명 들어감 -->
+</head>
+<body>
+    <main>
+        <section>
+            <form action="#" method="get" id="result_frm">
+                <div class="result">
+                    <!-- 상단 좌측 필터 -->
+                    <div class="filter_container">
+                        <fieldset>
+                            <legend class="skip">숙소 검색 필터</legend>
+                            <div class="top">
+                                <h1>경주 숙소 261개</h1><!-- js -->
+                                <div class="map_container">
+                                    <div class="prev"><a href="#">지도 보기</a></div>
+                                    <div class="open">
+                                        <div class="left">
+                                            <!-- 바깥 filter 결정되면 같은 클래스로 붙여넣기 -->
+                                            <div class="filter"></div>
+                                            <div class="result"></div>
+                                        </div>
+                                        <div id="map">
+                                            <!-- 지도 API 사용 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fliter">
+                                <div class="top">
+                                    <h2>필터</h2>
+                                    <a href="#"><!-- fa -->초기화</a>
+                                    <p><input type="checkbox" name="soldout" id="soldout"></p>
+                                </div>
+                                <div class="type">
+                                    <h3>숙소유형</h3>
+                                    <div class="contents">
+                                        <label><input type="radio" name="type" class="all">전체</label>
+                                        <label><input type="radio" name="type" class="motel">모텔</label>
+                                        <label><input type="radio" name="type" class="hotel_resort">호텔·리조트</label>
+                                        <label><input type="radio" name="type" class="pension">펜션</label>
+                                        <label><input type="radio" name="type" class="home_villa">홈&빌라</label>
+                                        <label><input type="radio" name="type" class="camping">캠핑</label>
+                                        <label><input type="radio" name="type" class="guest_korean">게하·한옥</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price_range">
+                                <h3>가격<span>1박 기준</span></h3>
+                                <!-- js -->
+                            </div>
+                            <div class="taste">
+                                <h3>#취향</h3>
+                                <div class="chk_wrap">
+                                    <label><input type="checkbox" name="user_taste" id="user_taste">#가족여행숙소</label>
+                                    <label><input type="checkbox" name="user_taste" id="user_taste">#스파</label>
+                                    <label><input type="checkbox" name="user_taste" id="user_taste">#파티룸</label>
+                                    <label><input type="checkbox" name="user_taste" id="user_taste">#OTT</label>
+                                    <label><input type="checkbox" name="user_taste" id="user_taste">#연인추천</label>
+                                    <label><input type="checkbox" name="user_taste" id="user_taste">#감성숙소</label>
+                                    <label><input type="checkbox" name="user_taste" id="user_taste">#뷰맛집</label>
+                                    <label><input type="checkbox" name="user_taste" id="user_taste">#연박특가</label>
+                                    <label><input type="checkbox" name="user_taste" id="user_taste">#리뷰좋은</label>
+                                    <!-- 이후 js 고려해서 추가 / 삭제 -->
+                                </div>
+                            </div>
+                            <div class="discount">
+                                <h3>할인혜택</h3>
+                                <div class="chk_wrap">
+                                    <label><input type="checkbox" name="discount" id="discount_chk">쿠폰할인</label>
+                                    <label><input type="checkbox" name="discount" id="discount_chk">50%페이백</label>
+                                    <label><input type="checkbox" name="discount" id="discount_chk">무한대실</label>
+                                    <label><input type="checkbox" name="discount" id="discount_chk">할인특가</label>
+                                </div>
+                            </div>
+                            <div class="reservaiton">
+                                <h3>예약유형</h3>
+                                <div class="chk_wrap">
+                                    <label><input type="checkbox" name="reservaiton" id="reservaiton_chk"></label>
+                                </div>
+                            </div>
+                            <div class="rank">
+                                <h3>등급</h3>
+                                <div class="chk_wrap">
+                                    <label><input type="checkbox" name="rank" id="rank_chk">5성급</label>
+                                    <label><input type="checkbox" name="rank" id="rank_chk">4성급</label>
+                                    <label><input type="checkbox" name="rank" id="rank_chk">블랙</label>
+                                    <label><input type="checkbox" name="rank" id="rank_chk">풀빌라</label>
+                                </div>
+                            </div>
+                            <div class="facility">
+                                <h3>시설</h3>
+                                <dl class="contents">
+                                    <dt>공용시설</dt>
+                                    <dd class="public">
+                                        <label><input type="checkbox" name="public_facility" id="public_chk">사우나</label>
+                                        <label><input type="checkbox" name="public_facility" id="public_chk">수영장</label>
+                                        <label><input type="checkbox" name="public_facility" id="public_chk">BBQ</label>
+                                        <label><input type="checkbox" name="public_facility" id="public_chk">레스토랑</label>
+                                        <label><input type="checkbox" name="public_facility" id="public_chk">피트니스</label>
+                                        <label><input type="checkbox" name="public_facility" id="public_chk">물놀이시설</label>
+                                    </dd>
+                                    <dt>객실 내 시설</dt>
+                                    <dd class="inside">
+                                        <label><input type="checkbox" name="inside_facility" id="inside_chk">스파/월풀</label>
+                                        <label><input type="checkbox" name="inside_facility" id="inside_chk">객실스파</label>
+                                        <label><input type="checkbox" name="inside_facility" id="inside_chk">미니바</label>
+                                        <label><input type="checkbox" name="inside_facility" id="inside_chk">와이파이</label>
+                                        <label><input type="checkbox" name="inside_facility" id="inside_chk">에어컨</label>
+                                        <label><input type="checkbox" name="inside_facility" id="inside_chk">욕실용품</label>
+                                        <label><input type="checkbox" name="inside_facility" id="inside_chk">객실샤워실</label>
+                                        <label><input type="checkbox" name="inside_facility" id="inside_chk">개인콘센트</label>
+                                    </dd>
+                                    <dt>기타시설</dt>
+                                    <dd class="ect">
+                                        <label><input type="checkbox" name="ect_facility" id="ect_chk">조식포함</label>
+                                        <label><input type="checkbox" name="ect_facility" id="ect_chk">무료주차</label>
+                                        <label><input type="checkbox" name="ect_facility" id="ect_chk">반려견동반</label>
+                                        <label><input type="checkbox" name="ect_facility" id="ect_chk">사우나/찜질방</label>
+                                        <label><input type="checkbox" name="ect_facility" id="ect_chk">객실내취사</label>
+                                        <label><input type="checkbox" name="ect_facility" id="ect_chk">픽업가능</label>
+                                        <label><input type="checkbox" name="ect_facility" id="ect_chk">캠프파이어</label>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!-- 상단 우측 결과 숙소 리스트 -->
+                    <div id="room_container">
+                        <div class="page_wrap"><!-- 페이지 1 -->
+                            <ul class="page">
+                                <li class="room">
+                                    <a href="#">
+                                        <div class="photo"><img src="#" alt=""></div>
+                                        <div class="contents">
+                                            <div class="title_wrap">
+                                                <p class="type">호텔</p>
+                                                <h2 class="title"><em class="speical"><!-- js ★파격특가★ --></em><span class="name">세인트존스 호텔</span></h2>
+                                                <p class="location">
+                                                    <span class="city">강릉시</span>
+                                                    <span class="more">강릉 강문해변 앞</span>
+                                                </p>
+                                                <p class="review">
+                                                    <span class="point_wrap"><!-- fa --> 9.0</span>
+                                                    <span class="comment">
+                                                        6,233명 평가
+                                                    </span>
+                                                </p> 
+                                            </div>
+                                            <div class="price_info">
+                                                <p class="coupon">쿠폰 적용시</p>
+                                                <p class="price">
+                                                    <em class="now">159,000<span>원</span></em><del class="origin">352,000원</del>
+                                                </p>
+                                                <p class="info"><!-- js 재고상황 --></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- js / 한 페이지에 room 20개 배치 -->
+                            </ul>
+                            <!-- js / 페이지 5개이상 추가 -->
+                        </div>
+                        <div class="pagination">
+                            <button type="button" class="prev"></button>
+                            <span class="num"><!-- 페이지 갯수와 똑같이 넣기 --></span>
+                            <button type="button" class="next"></button>
+                        </div>
+                    </div>
+                </div>
+                <dl class="theme_keyword">
+                    <dt>경주 테마별 숙소</dt>
+                    <dd class="theme">
+                        <a href="#">풀빌라</a>
+                        <a href="#">조식포함</a>
+                        <a href="#">할인특가</a>
+                        <a href="#">가성비숙소</a>
+                        <a href="#">쿠폰할인</a>
+                        <a href="#">5성급</a>
+                        <a href="#">블랙</a>
+                        <a href="#">반려견</a>
+                    </dd>
+                    <dt>경주 검색 키워드</dt><!-- js 지역명은 검색한 곳으로 -->
+                    <dd class="keyword">
+                        <a href="#">료칸</a>
+                        <a href="#">풀빌라</a>
+                        <a href="#">글램핑</a>
+                        <a href="#">스파</a>
+                        <a href="#">감포</a>
+                        <a href="#">황리단길</a>
+                        <a href="#">키즈펜션</a>
+                        <a href="#">애견동반</a>
+                    </dd>
+                </dl>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
