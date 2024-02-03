@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - 여기어때</title>
+</head>
+<body>
+    <main>
+        <section>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend class="skip">휴대폰 인증</legend>
+                    <div class="title">
+                        <h1>휴대폰 인증</h1>
+                        <p>원활한 서비스 제공을 위해, 휴대폰 번호를 입력해 주세요.</p>
+                    </div>
+                    <div class="phone_frm">
+                        <div class="before">
+                            <span class="sub_title">휴대폰 번호</span>
+                            <span class="phone_num">
+                                <input type="num" placeholder="01012345678" maxlength="11" class="num_input">
+                                <button type="button" class="reset"><!-- fa --></button>
+                            </span>
+                        </div>
+                        <div class="after">
+                            <span class="sub_title">인증번호</span>
+                            <span class="pass_num">
+                                <span>
+                                    <input type="number" placeholder="인증 번호 4자리" maxlength="4" class="num_input">
+                                    <button type="button" class="reset"><!-- fa --></button>
+                                </span>
+                                <em class="time"><!-- js - 시간 3:00부터 초단위로 줄어들도록 --></em>
+                            </span>
+                            <em class="error"></em><!-- 클래스 디자인 따로 만들어주기 -->
+                            <button type="button" id="resend">인증번호 재전송</button>
+                        </div>
+                    </div>
+                    <div class="btn_wrap">
+                        <button type="button" id="send_btn">인증번호 전송</button>
+                        <button type="button" id="next_btn">확인</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
