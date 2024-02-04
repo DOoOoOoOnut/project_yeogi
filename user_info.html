@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 정보 관리 - 여기어때</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style/reset.css">
+</head>
+<body>
+    <main>
+        <!-- all 혹시 모를 대비 중 -->
+        <div class="container">
+            <!-- 왼쪽 네비 -->
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button">예약 내역<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                    <li>
+                        <button type="button">포인트<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                    <li>
+                        <button type="button">쿠폰<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                    <li>
+                        <button type="button">내 정보 관리<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                    <li>
+                        <button type="button">설정<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 오른쪽 글 -->
+            <div class="wrap">
+                <!-- 예약내역 -->
+                <div class="reservation">
+                    <h1>예약내역</h1>
+                    <div class="info">
+                        <p>
+                            <!-- font-awesome --> <!-- 클릭안됨 -->
+                            <i class="fa-solid fa-circle-info"></i>
+                            현재 숙소 외 예약내역은 여기어때 앱에서 확인 가능해요
+                        </p>
+                    </div>
+                    <div class="kr_world_btn">
+                        <button type="button" class="kr">국내숙소</button>
+                        <button type="button" class="world">해외숙소</button>
+                    </div>
+                    <section>
+                        <!-- section h 안쓰면 안됨 -->
+                        <h3 class="skip">이용 전</h3>
+                        <div class="left">
+                            <em>예정된 여행이 없습니다.</em>
+                            <p>지금 새로운 예약을 진행해 보세요</p>
+                            <a href="#"><!-- index -->여행지 찾아보기</a>
+                        </div>
+                        <div class="right"><!-- svg이미지 다운로드 안됨 나중에 비슷하게라도.. --></div>
+                    </section>
+                    <section>
+                        <h2>이용완료 및 예약취소</h2>
+                        <div class="text">
+                            <p>해당되는 예약 내역이 없습니다.</p>
+                        </div>
+                    </section>
+                </div>
+                <!-- 포인트 -->
+                <div class="user_point">
+                    <h1>포인트</h1>
+                    <div class="box">
+                        <div class="user_point_info">
+                            <p>
+                                내 포인트
+                                <!-- font-awesome -->
+                                <i class="fa-solid fa-circle-info"></i>
+                            </p>
+                            <em><span class="point"><!-- js --></span>p</em>
+                        </div>
+                        <div class="point_disappear">
+                            <p><span class="rest_day"><!-- js --></span>일 내 <span class="point"></span>가 소멸될 예정이에요</p>
+                        </div>
+                    </div>
+                    <section>
+                        <div class="point_details_btn">
+                            <ul>
+                                <li><button type="button" class="point_details_all">전체</button></li>
+                                <li><button type="button" class="point_details_save">적립</button></li>
+                                <li><button type="button" class="point_details_use">사용</button></li>
+                                <li><button type="button" class="point_details_disapper">소멸</button></li>
+                            </ul>
+                        </div>
+                        <div class="point_info_text">
+                            <!-- 마찬가지 -->
+                            <h3 class="skip">이용 전</h3>
+                            <p>포인트 내역이 없어요</p>
+                        </div>
+                    </section>
+                    <div class="point_popup">
+                        <div class="popup_box">
+                            <h2>포인트</h2>
+                            <ul>
+                                <li>포인트 사용 기간은 적립 일에 따라 각각 달라요.</li>
+                                <li>사용 기간 내에 쓰지 않는 포인트는 자동으로 소멸돼요.</li>
+                                <li>포인트 사용 기간 내에 포인트를 취소한다면 그대로 돌려드려요. 단, 사용 기간은 처음 지급한 날과 같아요.</li>
+                                <li>포인트 사용 기간 만료 후에 포인트를 취소한다면 자동으로 소멸되요.</li>
+                            </ul>
+                            <button type="button" class="close">확인</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 쿠폰 -->
+                <div class="coupon">
+                    <div class="top">
+                        <div class="left">
+                            <h1>쿠폰 <span class="coupon_num">2</span>장</h1>
+                            <p><span class="coupon_day">7</span>일 이내 소멸예정 쿠폰 <span class="coupon_num">2</span>장</p>
+                        </div>
+                        <div class="right">
+                            <button type="button">쿠폰등록</button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p>
+                            <!-- font-awesome -->
+                            <i class="fa-solid fa-circle-info"></i>
+                            레저·티켓, 렌터카, 공간대여 쿠폰은 여기어때 앱에서 사용 가능해요.
+                        </p>
+                    </div>
+                    <div class="couponkind_btn">
+                        <button type="button" class="all">전체</button>
+                        <button type="button" class="kr">국내숙소</button>
+                        <button type="button" class="world">해외숙소</button>
+                        <button type="button" class="leisure">레저·티켓</button>
+                        <button type="button" class="rentalcar">렌터카</button>
+                        <button type="button" class="space_rental">공간대여</button>
+                    </div>
+                    <div class="coupon_fillter">
+                        <div class="left">
+                            <p><span class="coupon_num">2</span>개 쿠폰</p>
+                        </div>
+                        <div class="fillter_now">
+                            <button type="button" id="fillter_btn">
+                                <!-- font_awesome -->
+                                할인 헤택순
+                            </button>
+                            <div class="fillter_option">
+                                <button type="button" class="latest">최신순</button>
+                                <button type="button" class="sale_benefit">할인 혜택순</button>
+                                <button type="button" class="expiration">만료 임박순</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 쿠폰 있을 때 -->
+                    <div class="coupon_grid">
+                        <div class="coupon_item">
+                            <section>
+                                <h2 class="skip">쿠폰 할인률</h2>
+                                <div class="percent_num">
+                                    <p><span class="sale_num">6</span>% 할인</p>
+                                </div>
+                                <div class="max_sale">
+                                    <p>최대 <span class="sale_total">20,0000</span>원 할인</p>
+                                </div>
+                                <div class="day">
+                                    <em><span>4</span>일 남음</em>
+                                    <span>24.2.2 (금) 15:53 - 24.2.9 (금) 15:53</span>
+                                </div>
+                            </section>
+                            <section>
+                                <h2 class="skip">쿠폰종류</h2>
+                                <em class="coupon_name">신규회원 WELCOME 쿠폰</em>
+                                <p>
+                                    <span class="lodging_category">모든 해외 숙소 카테고리</span>
+                                    <span class="max_pay_sale">300,000</span>원 이상 결제시 사용가능
+                                    <span class="use_num">4</span>개의 사용조건이 있습니다. 상세를 하세요.
+                                </p>
+                            </section>
+                            <button type="button" id="use_info">상세조건 상세 <!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                            <a href="./index.html">홈으로</a>
+                        </div>
+                    </div>
+                    <div class="popup_coupon">
+                        <div class="top">
+                            <span class="close"><!-- svg 집컴으로 안되서 확인 --></span>
+                            <span>사용 조건 상세</span>
+                        </div>
+                        <div class="important_contents">
+                            <section>
+                                <h2 class="skip">쿠폰 할인율</h2>
+                                <div class="percent_num">
+                                    <p><span class="sale_num">6</span>% 할인</p>
+                                </div>
+                                <div class="max_sale">
+                                    <p>최대 <span class="sale_total">20,0000</span>원 할인</p>
+                                </div>
+                                <div class="day">
+                                    <em><span>4</span>일 남음</em>
+                                    <span>24.2.2 (금) 15:53 - 24.2.9 (금) 15:53</span>
+                                </div>
+                            </section>
+                            <section>
+                                <h2 class="skip">쿠폰 종류</h2>
+                                <em class="coupon_name">신규회원 WELCOME 쿠폰</em>
+                                <p>
+                                    <span class="lodging_category">모든 해외 숙소 카테고리</span>
+                                    <span class="max_pay_sale">300,000</span>원 이상 결제시 사용가능
+                                </p>
+                            </section>
+                        </div>
+                        <div class="contents">
+                            <p>
+                                최소 <span class="max_pay_sale">300,000</span>원 이상 결제시 <br>
+                                최대 <span class="sale_total">20,000</span>원 할인
+                                숙박 전용
+                            </p>
+                        </div>
+                        <a href="index.html">사용 가능 상품보기</a>
+                    </div>
+                    <!-- 쿠폰 없을 때 -->
+                    <div class="coupon_zero">
+                        <h2>사용 가능한 보유 쿠폰이 없어요</h2>
+                        <p>사용한 쿠폰이나 유효기간이 만료된 쿠폰은 <br>쿠폰함에 노출되지 않습니다.</p>
+                    </div>
+                </div>
+                <!-- 내 정보 관리 -->
+                <div class="user_info">
+                    <h1>내 정보 관리</h1>
+                    <div class="info_text">
+                        <div class="left">
+                            <h2>회원 정보</h2>
+                            <p>현재 정보 수정은 여기어때 앱에서 가능해요.</p>
+                        </div>
+                        <div class="right">
+                            <img src="./images/user_info/ico_21.png" alt="">
+                        </div>
+                    </div>
+                    <div class="info">
+                        <!-- 정보 안보일 때 -->
+                        <section>
+                            <h2 class="skip">정보 비활성화</h2>
+                            <div class="left">
+                                <!-- svg -->
+                                <p>가려진 내 정보를 확인할 수 있어요!</p>
+                            </div>
+                            <div class="right">
+                                <input type="checkbox" name="info_see" id="info_see">
+                            </div>
+                        </section>
+                        <section>
+                            <h2 class="skip">유저 정보보기</h2>
+                            <div class="name">
+                                <h3>닉네임</h3>
+                                <p>월령01</p>
+                            </div>
+                            <div class="user_name">
+                                <h3>예약자 이름</h3>
+                                <p>미입력(앱에서 입력해 주세요.)</p>
+                            </div>
+                            <div class="user_phone">
+                                <h3>휴데폰 번호</h3>
+                                <p>0108878****</p>
+                            </div>
+                            <div class="user_birthday">
+                                <h3>생년월일</h3>
+                                <p>20**년 **일 **일</p>
+                            </div>
+                            <div class="user_gender">
+                                <h3>성별</h3>
+                                <p>**</p>
+                            </div>
+                        </section>
+                        <!-- 정보 보일 때 -->
+                        <section>
+                            <h2 class="skip">정보 활성화</h2>
+                            <!-- svg -->
+                            <p>내 정보가 보여지고 있어요</p>
+                        </section>
+                        <section>
+                            <h2 class="skip">유저 정보</h2>
+                            <div class="name">
+                                <h3>닉네임</h3>
+                                <p>월령01</p>
+                            </div>
+                            <div class="user_name">
+                                <h3>예약자 이름</h3>
+                                <p>미입력(앱에서 입력해 주세요.)</p>
+                            </div>
+                            <div class="user_phone">
+                                <h3>휴데폰 번호</h3>
+                                <p>01088786280</p>
+                            </div>
+                            <div class="user_birthday">
+                                <h3>생년월일</h3>
+                                <p>2001년 02일 27일</p>
+                            </div>
+                            <div class="user_gender">
+                                <h3>성별</h3>
+                                <p>여성</p>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- 내정보 보기 팝업 -->
+                    <div class="popup_use">
+                        <div class="top">
+                            <span class="close"><!-- svg 집컴으로 안되서 확인 --></span>
+                            <span>내 정보 확인</span>
+                        </div>
+                        <div class="text">
+                            <div class="phone_num">
+                                <form action="#" method="post">
+                                    <fieldset>
+                                        <legend class="skip">내정보 확인 양식</legend>
+                                        <p>휴데폰 번호</p>
+                                        <input type="tel" class="phone_last" maxlength="4" placeholder="휴데폰 뒷자리 4개 입력하세요." autofocus>
+                                        <p>가입하신 휴데폰 번호는 undefinded 에요</p>
+                                    </fieldset>
+                                </form>
+                                <section>
+                                    <h3>휴데폰 번호를 잊으셨나요?</h3>
+                                    <p>휴데폰 번호는 고객센터(1670-6250)를 통해 확인 가능해요.</p>
+                                </section>
+                            </div>
+                        </div>
+                        <button type="button" class="completion_btn">완료</button>
+                    </div>
+                    <div class="access_device_management">
+                        <div class="top">
+                            <p>접속 기기 관리</p>
+                            <button type="button" class="all_logout">전체 로그아웃</button>
+                        </div>
+                        <p>로그인 된 모든 기기에서 로그아웃 돼요.</p>
+                    </div>
+                    <!-- 로그아웃 팝업 -->
+                    <div class="popup_logout">
+                        <p>로그인된 모든 기기와 브라우서에서 로그아웃됩니다.로그아웃 하시겠습니까?</p>
+                        <div class="btn">
+                            <button type="button" class="cancellation">취소</button>
+                            <button type="button" class="completion_btn">확인</button>
+                        </div>
+                    </div>
+                    <div class="user_withdrawal">
+                        <span>더 이상 여기어때 이용을 원하지 않으신가요?</span>
+                        <a href="user_withdrawal.html">회원탈퇴</a>
+                    </div>
+                <!-- 설정 -->
+                <div class="setting">
+                    <h1>설정</h1>
+                    <p>특가, 쿠폰 등 이벤트 정보를 빠르게 알려드릴게요.</p>
+                    <div class="info">
+                        <p>
+                            <!-- font-awesome -->
+                            <i class="fa-solid fa-circle-info"></i>
+                            앱 장금,최근 본 상품 저장 ,앱 푸쉬, 접근 권한 설정은 여기어때 앱에서 가능해요.
+                        </p>
+                    </div>
+                    <div class="agree_marketing">
+                        <form action="#" method="get">
+                            <fieldset>
+                                <div class="marketing_notifications">
+                                    <input type="checkbox" name="agree_marketing" id="marketing_consent">
+                                    <label for="marketing_consent"><a href="marketing_consent.html">마케팅 알림 수신 동의</a></label>
+                                </div>
+                                <div class="letter">
+                                    <!-- svg -->
+                                    <input type="checkbox" name="agree_marketing" id="letter_consent">
+                                    <label for="letter_consent">문자</label>
+                                </div>
+                                <div class="email">
+                                    <!-- svg -->
+                                    <input type="checkbox" name="agree_marketing" id="email_consent">
+                                    <label for="email_consent">이메일</label>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="btn">
+                        <button type="button" class="storage">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
