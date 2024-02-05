@@ -10,6 +10,14 @@ $subColor-r:#f45858; // 강조색
 $subColor-ip:#f5f5f5; // input 비활성화
 $subColor-btn:#fafafa; // button 비활성화
 
+//====================================
+//정렬
+
+$margin0: 0 auto;
+$text-c: center;
+$text-r: right;
+$text-l: left;
+
 
 //====================================
 // 미디어쿼리
@@ -25,6 +33,7 @@ $min: 320px;
 
 $title32: 2rem;
 $title24: 1.5rem;
+$title18: 1.125rem;
 $defalt16: 1rem;
 $subT15: 0.938rem;
 $subC14: 0.875rem;
@@ -35,9 +44,9 @@ $small12: 0.75rem;
 // font-weight
 
 $weight400: 400;
-$weight400: 500;
-$weight400: 600;
-$weight400: 700;
+$weight500: 500;
+$weight600: 600;
+$weight700: 700;
 
 //=====================================
 // flex 변수 모음

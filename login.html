@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이메일로 시작하기 - 여기어때</title>
     <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/login.css">
 </head>
 <body>
     <main>
@@ -27,9 +28,15 @@
                                     <p class="error_massage"></p>
                                 </div>
                             </div>
-                            <div class="keep_reset">
-                                <p><input type="checkbox" name="keep_login" id="keep_login"></p>
-                                <a href="#" class="pw_reset">비밀번호 재설정</a>
+                            <div class="user_setting">
+                                <div class="keep_reset">
+                                    <label><input type="checkbox" name="keep_login" id="keep_login"><span>로그인 유지</span></label>
+                                    <a href="#" class="pw_reset">비밀번호 재설정</a>
+                                </div>
+                                <p class="notice">
+                                    <em>주의해 주세요!</em>
+                                    <span>· 로그인 유지는 개인정보 보호를 위해 개인 기기에서 사용해 주세요.</span>
+                                </p>
                             </div>
                         </div>
                         <div class="btn_wrap">
@@ -40,7 +47,7 @@
             </div>
             <div class="join">
                 <p>계정이 없으신가요?</p>
-                <p class="go_join">이메일로 회원가입</p>
+                <a href="./join_raw.html" class="go_join">이메일로 회원가입</a>
             </div>
         </section>
     </main>
