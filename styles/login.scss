@@ -1,0 +1,37 @@
+@import 'common';
+
+main {
+    .login_container {
+        h1 {
+            font-size: $title24;
+        }
+        .contents {
+            #login_frm {
+                fieldset {
+                    .input {
+                        .id_pw {
+                            div {
+                                h2 {}
+                                p {}
+                                .error_massage {}
+                            }
+                        }
+                        .keep_reset {
+                            p{
+                                #keep_login {}
+                                .pw_reset {}
+                            }
+                        }
+                    }
+                    .btn_wrap {
+                        #login_btn {}
+                    }
+                }
+            }
+        }
+        .join {
+            p {}
+            .go_join {}
+        }
+    }
+}

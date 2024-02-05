@@ -1,0 +1,65 @@
+// color 변수 모음
+
+// mainColor
+$mainColor-r:#f7323f;
+$mainColor-b:#1273e4;
+$mainColor-w:#ffffff;
+
+// subColor
+$subColor-r:#f45858; // 강조색
+$subColor-ip:#f5f5f5; // input 비활성화
+$subColor-btn:#fafafa; // button 비활성화
+
+
+//====================================
+// 미디어쿼리
+
+$desktop: 1400px;
+$notebook: 1200px;
+$tablet: 900px;
+$phone: 430px;
+$min: 320px;
+
+//====================================
+// font-size
+
+$title32: 2rem;
+$title24: 1.5rem;
+$defalt16: 1rem;
+$subT15: 0.938rem;
+$subC14: 0.875rem;
+$small13: 0.813rem;
+$small12: 0.75rem;
+
+//=====================================
+// font-weight
+
+$weight400: 400;
+$weight400: 500;
+$weight400: 600;
+$weight400: 700;
+
+//=====================================
+// flex 변수 모음
+// 규칙: flex-정렬/줄바꿈/메인축/교차축 앞글자
+
+@mixin flex-rnsc {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-rwsc {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-cnsc {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
