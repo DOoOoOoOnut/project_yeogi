@@ -1,0 +1,35 @@
+@import 'common';
+
+main {
+    section {
+        #phone_frm {
+            fieldset {
+                .title {
+                    h1 {}
+                    p {}
+                }
+                .contents {
+                    .before {
+                        .sub_title {}
+                        .phone_num {
+                            .num_input {}
+                            .reset {}
+                        }
+                    }
+                    .after {
+                        .sub_title {}
+                        .pass_num {
+                            .pass_input {
+                                .num_input {}
+                                .reset {}
+                            }
+                            .time {}
+                        }
+                        .error {}
+                        .resend {}
+                    }
+                }
+            }
+        }
+    }
+}
