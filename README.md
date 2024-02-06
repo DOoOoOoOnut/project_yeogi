@@ -114,9 +114,11 @@ ex) ./images/main/ _best_hotel001
 # 02/05 작업
 
 - 일혁
-1. 
+1. 비회원 예약페이지 완성, 숙소상세페이지 80%완성
 - 다은
-1. 
+1. raw.html 완성
+2. css 시작: join_raw.scss, login.scss 완성
+3. scss 변수생성: 스타일가이드 기반으로 common.scss 파일에 변수만들기
 - 은지
 1. 고객센터 완성
 2. 이벤트 목록 완성
