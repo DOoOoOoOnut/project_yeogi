@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입 - 여기어때</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/join_phone.css">
 </head>
 <body>
     <main>
         <section>
-            <form action="#" method="post">
+            <form action="#" method="post" id="phone_frm">
                 <fieldset>
                     <legend class="skip">휴대폰 인증</legend>
                     <div class="title">
                         <h1>휴대폰 인증</h1>
                         <p>원활한 서비스 제공을 위해, 휴대폰 번호를 입력해 주세요.</p>
                     </div>
-                    <div class="phone_frm">
+                    <div class="contents">
                         <div class="before">
                             <span class="sub_title">휴대폰 번호</span>
-                            <span class="phone_num">
+                            <span class="input_wrap">
                                 <input type="num" placeholder="01012345678" maxlength="11" class="num_input">
-                                <button type="button" class="reset"><!-- fa --></button>
+                                <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                             </span>
+                            <em class="error"></em>
                         </div>
                         <div class="after">
                             <span class="sub_title">인증번호</span>
-                            <span class="pass_num">
-                                <span>
-                                    <input type="number" placeholder="인증 번호 4자리" maxlength="4" class="num_input">
-                                    <button type="button" class="reset"><!-- fa --></button>
+                            <span class="input_wrap">
+                                <span class="pass_input">
+                                    <input type="text" placeholder="인증 번호 4자리" maxlength="4" class="num_input">
+                                    <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                                 </span>
                                 <em class="time"><!-- js - 시간 3:00부터 초단위로 줄어들도록 --></em>
                             </span>
@@ -44,5 +48,6 @@
             </form>
         </section>
     </main>
+    <script src="./script/join_phone.js"></script>
 </body>
 </html>
