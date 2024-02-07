@@ -1,0 +1,10 @@
+main {
+    @include desktop;
+    margin: 0 auto;
+    .container {
+        .top {
+            position: sticky; top: 0;
+            align-self: start;
+        }
+    }
+}
