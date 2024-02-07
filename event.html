@@ -5,34 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이벤트 | 여기어때</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/event.css">
 </head>
 <body>
-    <div class="container">
-        <h1>이벤트</h1>
-        <nav>
-            <button type="button" class="hot_btn">HOT</button>
-            <button type="button" class="motel_btn">모텔</button>
-            <button type="button" class="hotel_btn">호텔·리조트</button>
-            <button type="button" class="pension_btn">펜션·캠핑·게하</button>
-            <button type="button" class="world_btn">해외여행</button>
-        </nav>
-        <div class="coupon">
-            <!-- js -->
-            <a href="#">
-                <div class="photo">
-                    <img src="./images/event/new_year_coupon.png" alt="">
+    <main>
+        <div class="container">
+            <h1>이벤트</h1>
+            <nav>
+                <ul>
+                    <li><button type="button" class="btn hot_btn">HOT</button></li>
+                    <li><button type="button" class="btn motel_btn">모텔</button></li>
+                    <li><button type="button" class="btn hotel_btn">호텔·리조트</button></li>
+                    <li><button type="button" class="btn pension_btn">펜션·캠핑·게하</button></li>
+                    <li><button type="button" class="btn world_btn">해외여행</button></li>
+                </ul>
+            </nav>
+            <div class="wrap">
+                <div class="coupon hot">
+                    <a href="./event_new_year.html">
+                        <div class="photo">
+                            <img src="./images/event/new_year_coupon.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h2>설날맞이 쿠폰세트</h2>
+                            <p>24.01.15 - 24.02.11 23:59</p>
+                        </div>
+                    </a>
+                    <a href="./event_best_sole.html">
+                        <div class="photo">
+                            <img src="./images/event/overseas_coupon.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h2>해외여행 미리봄 쿠폰세트</h2>
+                            <p>24.02.01 - 24.02.29 23:59</p>
+                        </div>
+                    </a>
+                    <a href="./event_new_year.html">
+                        <div class="photo">
+                            <img src="./images/event/double_coupon.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h2>더블쿠폰 핫세일</h2>
+                            <p>24.02.01 - 24.02.10 23:59</p>
+                        </div>
+                    </a>
+                    <a href="./event_best_sole.html">
+                        <div class="photo">
+                            <img src="./images/event/best_sole.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h2>베스트 호텔딜 <span>마감임박</span></h2>
+                            <p>24.02.05 - 24.02.07 23:59</p>
+                        </div>
+                    </a>
+                    <a href="./event_new_year.html">
+                        <div class="photo">
+                            <img src="./images/event/new_subscription.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h2>2월 신규회원 웰컴쿠폰</h2>
+                            <p>24.02.01 - 24.02.29 23:59</p>
+                        </div>
+                    </a>
+                    <a href="./event_new_year.html">
+                        <div class="photo">
+                            <img src="./images/event/additional_discount.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h2>24년 2월 결제 프로모션 모음</h2>
+                            <p>24.02.01 - 24.02.29 23:59</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="contents">
-                    <h2>설날맞이 쿠폰세트</h2>
-                    <p>24.01.15 - 24.02.11 23:59</p>
+                <div class="coupon hotel_pension">
+                    <a href="./event_new_year.html">
+                        <div class="photo">
+                            <img src="./images/event/new_year_coupon.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h2>설날맞이 쿠폰세트</h2>
+                            <p>24.01.15 - 24.02.11 23:59</p>
+                        </div>
+                    </a>
+                    <a href="./event_new_year.html">
+                        <div class="photo">
+                            <img src="./images/event/double_coupon.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h2>더블쿠폰 핫세일</h2>
+                            <p>24.02.01 - 24.02.10 23:59</p>
+                        </div>
+                    </a>
                 </div>
-            </a>
+                <div class="coupon world">
+                    <a href="./event_best_sole.html">
+                        <div class="photo">
+                            <img src="./images/event/overseas_coupon.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h2>해외여행 미리봄 쿠폰세트</h2>
+                            <p>24.02.01 - 24.02.29 23:59</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="coupon not_coupon">
+                    <h2>등록된 이벤트가 없어요</h2>
+                    <p>해당 카테고리에 등록된 이벤트가 없어요</p>
+                </div>
+            </div>
         </div>
-        <div class="not_coupon">
-            <h2>등록된 이벤트가 없어요</h2>
-            <p>해당 카테고리에 등록된 이벤트가 없어요</p>
-        </div>
-    </div>
+    </main>
 </body>
 </html>

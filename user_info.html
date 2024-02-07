@@ -34,7 +34,7 @@
             <!-- 오른쪽 글 -->
             <div class="wrap">
                 <!-- 예약내역 -->
-                <div class="reservation">
+                <div class="contents reservation">
                     <h1>예약내역</h1>
                     <div class="info">
                         <p>
@@ -48,8 +48,6 @@
                         <button type="button" class="world">해외숙소</button>
                     </div>
                     <section>
-                        <!-- section h 안쓰면 안됨 -->
-                        <h3 class="skip">이용 전</h3>
                         <div class="left">
                             <em>예정된 여행이 없습니다.</em>
                             <p>지금 새로운 예약을 진행해 보세요</p>
@@ -65,7 +63,7 @@
                     </section>
                 </div>
                 <!-- 포인트 -->
-                <div class="user_point">
+                <div class="contents user_point">
                     <h1>포인트</h1>
                     <div class="box">
                         <div class="user_point_info">
@@ -90,8 +88,6 @@
                             </ul>
                         </div>
                         <div class="point_info_text">
-                            <!-- 마찬가지 -->
-                            <h3 class="skip">이용 전</h3>
                             <p>포인트 내역이 없어요</p>
                         </div>
                     </section>
@@ -109,7 +105,7 @@
                     </div>
                 </div>
                 <!-- 쿠폰 -->
-                <div class="coupon">
+                <div class="contents coupon">
                     <div class="top">
                         <div class="left">
                             <h1>쿠폰 <span class="coupon_num">2</span>장</h1>
@@ -155,7 +151,6 @@
                     <div class="coupon_grid">
                         <div class="coupon_item">
                             <section>
-                                <h2 class="skip">쿠폰 할인률</h2>
                                 <div class="percent_num">
                                     <p><span class="sale_num">6</span>% 할인</p>
                                 </div>
@@ -168,7 +163,6 @@
                                 </div>
                             </section>
                             <section>
-                                <h2 class="skip">쿠폰종류</h2>
                                 <em class="coupon_name">신규회원 WELCOME 쿠폰</em>
                                 <p>
                                     <span class="lodging_category">모든 해외 숙소 카테고리</span>
@@ -185,9 +179,8 @@
                             <span class="close"><!-- font_awesome --><i class="fa-solid fa-xmark"></i></span>
                             <span>사용 조건 상세</span>
                         </div>
-                        <div class="important_contents">
+                        <div class="important_box">
                             <section>
-                                <h2 class="skip">쿠폰 할인율</h2>
                                 <div class="percent_num">
                                     <p><span class="sale_num">6</span>% 할인</p>
                                 </div>
@@ -200,7 +193,6 @@
                                 </div>
                             </section>
                             <section>
-                                <h2 class="skip">쿠폰 종류</h2>
                                 <em class="coupon_name">신규회원 WELCOME 쿠폰</em>
                                 <p>
                                     <span class="lodging_category">모든 해외 숙소 카테고리</span>
@@ -208,7 +200,7 @@
                                 </p>
                             </section>
                         </div>
-                        <div class="contents">
+                        <div class="box">
                             <p>
                                 최소 <span class="max_pay_sale">300,000</span>원 이상 결제시 <br>
                                 최대 <span class="sale_total">20,000</span>원 할인
@@ -224,7 +216,7 @@
                     </div>
                 </div>
                 <!-- 내 정보 관리 -->
-                <div class="user_info">
+                <div class="contents user_info">
                     <h1>내 정보 관리</h1>
                     <div class="info_text">
                         <div class="left">
@@ -238,7 +230,6 @@
                     <div class="info">
                         <!-- 정보 안보일 때 -->
                         <section>
-                            <h2 class="skip">정보 비활성화</h2>
                             <div class="left">
                                 <!-- font-awsome -->
                                 <i class="fa-solid fa-lock"></i>
@@ -249,7 +240,6 @@
                             </div>
                         </section>
                         <section>
-                            <h2 class="skip">유저 정보보기</h2>
                             <div class="name">
                                 <h3>닉네임</h3>
                                 <p>월령01</p>
@@ -273,13 +263,11 @@
                         </section>
                         <!-- 정보 보일 때 -->
                         <section>
-                            <h2 class="skip">정보 활성화</h2>
                             <!-- font-awsome -->
                             <i class="fa-solid fa-lock-open"></i>
                             <p>내 정보가 보여지고 있어요</p>
                         </section>
                         <section>
-                            <h2 class="skip">유저 정보</h2>
                             <div class="name">
                                 <h3>닉네임</h3>
                                 <p>월령01</p>
@@ -310,7 +298,7 @@
                         </div>
                         <div class="text">
                             <div class="phone_num">
-                                <form action="#" method="post">
+                                <form action="#" method="post" id="user_info_from">
                                     <fieldset>
                                         <legend class="skip">내정보 확인 양식</legend>
                                         <p>휴데폰 번호</p>
@@ -346,7 +334,7 @@
                         <a href="user_withdrawal.html">회원탈퇴</a>
                     </div>
                 <!-- 설정 -->
-                <div class="setting">
+                <div class="contents setting">
                     <h1>설정</h1>
                     <p>특가, 쿠폰 등 이벤트 정보를 빠르게 알려드릴게요.</p>
                     <div class="info">
@@ -357,8 +345,9 @@
                         </p>
                     </div>
                     <div class="agree_marketing">
-                        <form action="#" method="get">
+                        <form action="#" method="get" id="marketint_form">
                             <fieldset>
+                                <legend class="skip">마케팅 알림 동의 양식</legend>
                                 <div class="marketing_notifications">
                                     <input type="checkbox" name="agree_marketing" id="marketing_consent">
                                     <label for="marketing_consent"><a href="marketing_consent.html">마케팅 알림 수신 동의</a></label>

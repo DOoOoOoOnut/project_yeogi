@@ -16,7 +16,7 @@
         <div class="contents">
             <p><img src="./images/user_info/withdrawal_reasons.png" alt="탈퇴하는 이유는 무엇인가요?"></p>
             <div class="reasons_check">
-                <form action="#" method="get">
+                <form action="#" method="get" id="withdrawal_from">
                     <fieldset>
                         <legend class="skip">탈퇴 이유 양식</legend>
                         <!-- 1. ------------------------------------------------ -->
@@ -149,8 +149,9 @@
             </div>
             <p><em>등록된 리뷰는 자동으로 삭제되지 않아요.</em> 탈퇴 전 개별적으로 삭제해주세요. </p>
             <p><em>계정 정보는 복구가 불가</em>하며, 동일한 아이디로 24시간 이후 재가입이 가능해요. </p>
-            <form action="#" method="post">
+            <form action="#" method="post" id="consent_form">
                 <fieldset>
+                    <legend class="skip">동의 양식</legend>
                     <input type="checkbox" name="user_consent" id="user_consent">
                     <label for="user_consent">위 주의사항을 모두 숙지했고, 탈퇴에 동의합니다.</label>
                 </fieldset>
