@@ -1,0 +1,94 @@
+main {
+  max-width: 1400px;
+  padding-top: 20px;
+  margin: 0 auto 96px;
+}
+main .container h1 {
+  margin: 16px 0 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main .container nav {
+  position: sticky;
+  top: 0;
+  height: 52px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  display: flex;
+}
+main .container nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container nav ul li {
+  position: relative;
+  padding: 0 16px;
+  margin-right: 24px;
+  line-height: 52px;
+  cursor: pointer;
+}
+main .container nav ul li .btn {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #70706F;
+}
+main .container nav ul li .hot_btn {
+  color: #1273e4;
+}
+main .container nav ul li .hot_btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 65px;
+  height: 2px;
+  background: #1273e4;
+}
+main .container .wrap .coupon {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 25px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+main .container .wrap .coupon a {
+  width: 30%;
+  cursor: pointer;
+}
+main .container .wrap .coupon a .photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+main .container .wrap .coupon a .contents {
+  padding: 12px 0 20px;
+}
+main .container .wrap .coupon a .contents h2 {
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+main .container .wrap .coupon a .contents p {
+  color: #999;
+  font-size: 0.8125rem;
+}
+main .container .wrap .not_coupon {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 92px;
+}
+main .container .wrap .not_coupon h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #999;
+}
+main .container .wrap .not_coupon p {
+  color: #c2c2c2;
+  font-size: 0.938rem;
+}/*# sourceMappingURL=event.css.map */

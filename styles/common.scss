@@ -73,3 +73,16 @@ $weight700: 700;
     align-items: center;
 }
 
+@mixin flex-rwfc {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex-rncc {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}

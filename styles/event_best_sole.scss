@@ -1,0 +1,131 @@
+@import 'common';
+
+main {
+    max-width:$desktop;
+    margin: 0 auto;
+    text-align: center;
+    width: 1080px;
+    .container {
+        margin-bottom: 96px;
+        position: relative; 
+        .nav {
+            position: sticky; top: 0; width: 100vw;
+            padding: 36px 0 20px;
+            background-color: #fff;
+            display: flex;
+            align-items:center ;
+            z-index: 999;
+            .close {
+                i[class *=arrow] {
+                    margin-right: 12px;
+                    height: 29px;
+                    width: 29px;
+                    line-height: 29px;
+                    font-size: 1.2rem;
+                }
+            }
+            span {
+                font-size: $title24; font-weight: $weight700;
+            }
+        }
+        .contents {
+            transform: translateX(-50%);
+            left: 50%;
+            position: relative;
+            display: inline-block;
+            .top {
+                position: relative; top: 4px;
+            }
+            .time {
+                width: 1080px;
+                position: relative;
+                top: 0; left: 50%; transform: translate(-50%);
+                text-align: center;
+                background-color: #ff7574;
+                padding: 49px 0;
+                .center {
+                    position: relative;
+                    text-align: center;
+                    @include flex-rncc;
+                    .clock {
+                        @include flex-rncc;
+                        position: relative;
+                        .box {
+                            position: relative;
+                            left: 5px;
+                            height: 90px;
+                            width: 20px;
+                            .clock_name {
+                                position: absolute;
+                                right: -65px; top: -30px;
+                                transform: translateX(50%);
+                                text-align: center;
+                                color: #fff;
+                                font-size: $subT15;
+                                text-transform: uppercase;
+                                background-color: transparent;
+                            }
+                            .display {
+                                position: absolute;
+                                left: 5px;
+                                width: 10px;
+                                height: 10px;
+                                display: block;
+                                background-color: #fff;
+                                border-radius: 50%
+                            }
+                            .clock_top {
+                                top: 27px
+                            }
+                            .clock_bottom {
+                                bottom: 27px;
+                            }
+                        }
+                        ul {
+                            @include flex-rncc;
+                            li {
+                                font-size: 4.375rem;
+                                color: #fff;
+                                background-color: #E55B5D;
+                                font-weight: 200;
+                                width: 60px;
+                                height: 90px; line-height: 90px;
+                                margin: 5px; 
+                                border-radius: 6px;
+                                outline: 1px solid rgba(0,0,0,0);
+                                overflow: hidden;
+                                text-shadow: 0 1px 2px rgba(0,0,0,.4);
+                            }
+                        }
+                    }
+                }
+            }
+            .photo {
+                background: #F2F2F2;
+                width: 1080px;
+                right: -7px;
+            }
+            .slide {
+                width: 1080px;
+                background-color: #F2F2F2;
+                @include flex-rnsc;
+                
+                overflow-x: hidden;
+                padding-left: 70px;
+                a {
+                    display: block;
+                    background-color: #F2F2F2;
+                    
+                    img {
+                        width: 657.5px; 
+                        margin-right: 15px;
+                    }
+                }
+            }
+            .coupon {
+                background-color: #F2F2F2;
+                padding-top: 30px;
+            }
+        }
+    }
+}
