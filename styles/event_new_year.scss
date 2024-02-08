@@ -43,10 +43,9 @@ main {
                     background:rgba(0,0,0,0.48);
                     position:fixed; left:0; top:0; z-index:999;
                     width:100vw; height:100vh;
-                    display: flex; flex-flow:column;
-                    justify-content: center;
                     .contents {
-                        position: absolute;
+                        position: absolute; left: 50%; top: 50%;
+                        transform: translateX(-50%);
                         background-color:white; border-radius: 20px;
                         width: 335px;
                         margin: 0 auto;
