@@ -17,6 +17,9 @@ main section #phone_frm fieldset .title h1 {
 main section #phone_frm fieldset .title p {
   color: #999;
 }
+main section #phone_frm fieldset .contents {
+  margin-bottom: 5px;
+}
 main section #phone_frm fieldset .contents .sub_title {
   font-size: 0.813rem;
   margin-bottom: 5px;
@@ -52,25 +55,30 @@ main section #phone_frm fieldset .contents .before .error {
   color: #f45858;
   font-size: 0.75rem;
 }
-main section #phone_frm fieldset .contents .after {
-  display: none;
-}
-main section #phone_frm fieldset .contents .after .pass_num .pass_input .reset i[class$=xmark] {
+main section #phone_frm fieldset .contents .before .input_wrap .reset i {
   color: #999;
 }
-main section #phone_frm fieldset .contents .after #resend {
+main section #phone_frm fieldset .after {
+  display: none;
+}
+main section #phone_frm fieldset .after .pass_num .pass_input .reset i[class$=xmark] {
+  color: #999;
+}
+main section #phone_frm fieldset .after #resend {
   color: #999;
   font-weight: 600;
   font-size: 0.875rem;
   text-decoration: underline;
+  float: right;
+  margin-bottom: 20px;
 }
-main section #phone_frm fieldset .contents .after .error {
+main section #phone_frm fieldset .after .error {
   color: #f45858;
   font-size: 0.75rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
 }
-main section #phone_frm fieldset .btn_wrap button {
+main section #phone_frm .btn_wrap button {
   width: 100%;
   height: 56px;
   background-color: #fafafa;
@@ -81,6 +89,6 @@ main section #phone_frm fieldset .btn_wrap button {
   cursor: not-allowed;
   display: block;
 }
-main section #phone_frm fieldset .btn_wrap #next_btn {
+main section #phone_frm .btn_wrap #next_btn {
   display: none;
 }/*# sourceMappingURL=join_phone.css.map */
