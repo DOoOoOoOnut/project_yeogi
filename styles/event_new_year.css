@@ -1,1 +1,64 @@
-/*# sourceMappingURL=event_new_year.css.map */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  width: 1080px;
+}
+main .container {
+  margin-bottom: 96px;
+  position: relative;
+}
+main .container .nav {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  padding: 36px 0 20px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+main .container .nav .close i[class*=arrow] {
+  margin-right: 12px;
+  height: 29px;
+  width: 29px;
+  line-height: 29px;
+  font-size: 1.2rem;
+}
+main .container .nav span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main .container .wrap {
+  text-decoration: none;
+}
+main .container .wrap .photo {
+  display: inline-block;
+  font-size: 0;
+}
+main .container .wrap .photo img {
+  vertical-align: top;
+}
+main .container .wrap .popup .all_doun {
+  cursor: pointer;
+}
+main .container .wrap .popup .popup_bg {
+  background: rgba(0, 0, 0, 0.48);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+main .container .wrap .popup .popup_bg .contents {
+  position: absolute;
+  background-color: white;
+  border-radius: 20px;
+  width: 335px;
+  margin: 0 auto;
+  max-height: 419.5px;
+}/*# sourceMappingURL=event_new_year.css.map */
