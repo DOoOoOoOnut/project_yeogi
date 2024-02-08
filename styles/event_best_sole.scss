@@ -113,7 +113,7 @@ main {
                 overflow-x: hidden;
                 padding-left: 70px;
                 a {
-                    display: block;
+                    display: inline-block;
                     background-color: #F2F2F2;
                     
                     img {
@@ -123,8 +123,62 @@ main {
                 }
             }
             .coupon {
+                position: relative;
                 background-color: #F2F2F2;
                 padding-top: 30px;
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                }
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+            .footer {
+                background-color: #393939;
+                color: #fff;
+                font-size: 0.688rem;
+                .footer_contents {
+                    padding:0 5.6% 22px 5.6%;
+                    .info {
+                        @include flex-rnfc;
+                        padding: 18px 5.5px;
+                        margin-bottom: 22px;
+                        border-bottom: 1px solid rgba(255,255,255,.15);
+                        span {
+                            color: #fff;
+                            font-size: 0.875rem;
+                            padding: 2px 10px 0 5px;
+                        }
+                        img {
+                            width: 16px;
+                        }
+                    }
+                    .info img:last-child {
+                        width: 12px;
+                    }
+                    .box {
+                        padding-bottom: 63px;
+                        ul {
+                            li {
+                                @include flex-rnfc;
+                                color: #fff;
+                                text-align: left;
+                                margin-bottom: 5.5px;
+                                font-size: 0.688rem;
+                            }
+                            li::before {
+                                content: '';
+                                display: block;
+                                background-color: #fff;
+                                width: 2px; height: 2px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

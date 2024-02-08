@@ -80,6 +80,13 @@ $weight700: 700;
     align-items: center;
 }
 
+@mixin flex-rnfc {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 @mixin flex-rncc {
     display: flex;
     flex-flow: row nowrap;

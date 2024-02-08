@@ -1,0 +1,58 @@
+@import 'common';
+
+main {
+    max-width:$desktop;
+    margin: 0 auto;
+    text-align: center;
+    width: 1080px;
+    .container {
+        margin-bottom: 96px;
+        position: relative; 
+        .nav {
+            position: sticky; top: 0; width: 100vw;
+            padding: 36px 0 20px;
+            background-color: #fff;
+            display: flex;
+            align-items:center ;
+            z-index: 999;
+            .close {
+                i[class *=arrow] {
+                    margin-right: 12px;
+                    height: 29px;
+                    width: 29px;
+                    line-height: 29px;
+                    font-size: 1.2rem;
+                }
+            }
+            span {
+                font-size: $title24; font-weight: $weight700;
+            }
+        }
+        .wrap {
+            text-decoration: none;
+            .photo {
+                display: inline-block;
+                font-size: 0;
+                img {
+                    vertical-align: top;
+                }
+            }
+            .popup {
+                .all_doun {cursor: pointer;}
+                .popup_bg {
+                    background:rgba(0,0,0,0.48);
+                    position:fixed; left:0; top:0; z-index:999;
+                    width:100vw; height:100vh;
+                    .contents {
+                        position: absolute; left: 50%; top: 50%;
+                        transform: translateX(-50%);
+                        background-color:white; border-radius: 20px;
+                        width: 335px;
+                        margin: 0 auto;
+                        max-height: 419.5px;
+                    }
+                }
+            }
+        }
+    }
+}
