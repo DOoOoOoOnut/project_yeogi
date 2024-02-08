@@ -141,3 +141,18 @@ ex) ./images/main/ _best_hotel001
 2. event.scss 완
 - 민아
 1. pay.html 구조 완성
+
+-----------------------------------------------------------
+# 02/08 작업
+- 일혁
+1. 
+- 다은
+1. search.scss 완료
+2. join_phone.js 완성
+- 은지
+1. event_best_sole.scss완성
+2. event_new_year.scss 작업중
+- 민아
+1. service_inquiry.html 완성
+2. footer_event.html 완성
+3. index.html fixed버튼 추가 / 검색창 수정

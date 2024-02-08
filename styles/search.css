@@ -1,0 +1,31 @@
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main section {
+  width: 1400px;
+  background-color: burlywood;
+  margin: 0 auto;
+}
+main section #result_frm .result {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main section #result_frm .result .filter_container {
+  width: 20%;
+}
+main section #result_frm .result .filter_container fieldset .top h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main section #result_frm .result .filter_container fieldset .filter .top h2 {
+  font-size: 1.125rem;
+}
+main section #result_frm .result #room_container {
+  width: 80%;
+}
+main section .theme_keyword {
+  width: 100%;
+}/*# sourceMappingURL=search.css.map */

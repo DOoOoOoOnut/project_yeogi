@@ -18,6 +18,7 @@ main {
                     p {color: #999;}
                 }
                 .contents {
+                    margin-bottom: 5px;
                     // 공통디자인
                     .sub_title {
                         font-size: $small13;
@@ -77,10 +78,12 @@ main {
                             color: #999; font-weight: $weight600;
                             font-size: $subC14;
                             text-decoration: underline;
+                            float: right;
+                            margin-bottom: 20px;
                         }
                         .error {
                             color: $subColor-r; font-size: $small12;
-                            margin-bottom: 20px;
+                            margin-bottom: 10px;
                             display: block;
                         }
                     }
@@ -95,7 +98,8 @@ main {
                         cursor: not-allowed;
                         display: block;
                     }
-                    #send_btn {}
+                    #send_btn {
+                    }
                     #next_btn {
                         display: none;
                     }
@@ -103,4 +107,3 @@ main {
             }
         }
     }
-}
