@@ -39,7 +39,6 @@ for(let i of user_num){
 // 전화번호 형식만 입력가능
 user_num[0].addEventListener('input',(e)=>{
     const phone_rule = /^010\d{8}$/;
-    const num_rule = /^\d{4}$/;
     if(phone_rule.test(e.target.value)){
         // btn_active class로 만들어주기
         send_btn.style.backgroundColor = '#1273e4'
