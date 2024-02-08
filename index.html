@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여기어때</title>
-    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./styles/reset.css">
 </head>
 <body>
     <!-- 헤더 -->
@@ -182,6 +182,21 @@
                 </div>
             </div>
         </div>
+        <!-- 고정버튼 -->
+        <div class="fixed_btn">
+            <div class="top_btn_container">
+                <button type="button" id="top_btn">
+                    <!-- fa -->
+                    <span>top</span>
+                </button>
+            </div>
+            <div class="customer_container">
+                <button type="button" id="customer_btn">
+                    <!-- fa -->
+                    <span>고객센터</span>
+                </button>
+            </div>
+        </div>
     </header>
     <!-- 메인 -->
     <main>
@@ -195,8 +210,8 @@
                             <legend class="skip">숙소검색창</legend>
                             <!-- 제목 탭 구성 -->
                             <div class="search_tap">
-                                <h2><button type="button" id="kr_room">국내 숙소</button></a></h2>
-                                <h2><button type="button" id="over_room">해외 숙소</button></a></h2>
+                                <h2><button type="button" id="kr_room">국내 숙소</button></h2>
+                                <h2><button type="button" id="over_room">해외 숙소</button></h2>
                             </div>
                             <!-- 내용 탭 구성 -->
                             <div class="user_search_box">
@@ -209,10 +224,7 @@
                                 </div>
                                 <div class="num_detail">
                                     <div class="num_view">
-                                        <label>
-                                            <input type="button" value="user_num_view" readonly>
-                                            <span>인원<span class="user_num">2</span></span>
-                                        </label>
+                                        <button type="button" id="num_select"><span>인원<span class="user_num">2</span></span></button>
                                     </div>
                                     <div class="user_num_select">
                                         <div class="num_left">
@@ -242,9 +254,26 @@
             <div class="event_wrap">
                 <div class="title_box">
                     <h1 class="subj">이벤트</h1>
-                    <button type="button" class="more_btn"><!-- fa --></button>
+                    <p><button type="button" class="more_btn"><!-- fa --></button></p>
                 </div>
-                <div class="event_detail"></div>
+                <div class="event_box">
+                    <div class="box_btn">
+                        <button type="button" class="left_btn"><!-- fa --></button>
+                        <button type="button" class="right_btn"><!-- fa --></button>
+                    </div>
+                    <div class="event_bnr">
+                        <a href="./event_new_year.html"><img src="./images/main/event_bnr001.png" alt="최대 10만원 할인 설날맞이 쿠폰세트"></a>
+                        <a href="./event_best_sole.html"><img src="./images/main/event_bnr002.png" alt="해외여행 미리봄 쿠폰세트"></a>
+                        <a href="./event_best_sole.html"><img src="./images/main/event_bnr003.png" alt="인기 호텔·펜션 더블쿠폰 핫세일"></a>
+                        <a href="./event_new_year.html"><img src="./images/main/event_bnr004.png" alt="베스트 호텔딜 최대 84% 특가"></a>
+                        <a href="./event_best_sole.html"><img src="./images/main/event_bnr005.png" alt="신규 가입 즉시! 최대 10% 할인"></a>
+                        <a href="./event_best_sole.html"><img src="./images/main/event_bnr006.png" alt="2월 제휴 추가 할인"></a>
+                    </div>
+                    <div class="circle_detail">
+                        <button type="button" class="circle_btn"><!-- fa --></button>
+                        <button type="button" class="circle_btn"><!-- fa --></button>
+                    </div>
+                </div>
             </div>
             <!-- 국내 인기 여행지 -->
             <div class="kr_hot_travel_wrap">
@@ -300,19 +329,19 @@
                             <div class="title_wrap">
                                 <p class="type">모텔</p>
                                 <h2 class="title"><em class="special"></em><span class="name">구월동 구월호텔</span></h2>
-                                <p class=”location”><span class=”city></span><span class=”more”>인천터미널역 도보 14분</span></p>
-                                <p class=”review”>
+                                <p class="location"><span class="city"></span><span class="more">인천터미널역 도보 14분</span></p>
+                                <p class="review">
                                     <span class="point_wrap">
                                         <em class="point"><!-- fa -->9.5</em>
                                     </span>
-                                    <span class=”comment”>9,155명 평가</span>
+                                    <span class="comment">9,155명 평가</span>
                                 </p>
                             </div>
                             <div class="price_info">
                                 <p class="coupon">쿠폰적용시</p>
-                                <p class=”price”>
-                                    <em class=”now”>45,000<span>원</span></em>
-                                    <del class=”origin”>50,000원</del>
+                                <p class="price">
+                                    <em class="now">45,000<span>원</span></em>
+                                    <del class="origin">50,000원</del>
                                 </p>
                             </div>
                         </div>
@@ -327,7 +356,7 @@
             <div class="today_special_wrap">
                 <div class="title_box">
                     <h1 class="subj">오늘 체크인 호텔 특가</h1>
-                    <button type="button" class="more_btn"><!-- fa --></button>
+                    <p><button type="button" class="more_btn"><!-- fa --></button></p>
                 </div>
                 <div class="room_box">
                     <a href="#" class="room">
@@ -336,19 +365,19 @@
                             <div class="title_wrap">
                                 <p class="type">블랙.특급.호텔</p>
                                 <h2 class="title"><em class="special">당일특가</em><span class="name">세인트존스 호텔</span></h2>
-                                <p class=”location”><span class=”city>강릉시</span><span class=”more”>강릉 강문해변 앞</span></p>
-                                <p class=”review”>
+                                <p class="location"><span class="city">강릉시</span><span class="more">강릉 강문해변 앞</span></p>
+                                <p class="review">
                                     <span class="point_wrap">
                                         <em class="point"><!-- fa -->9.0</em>
                                     </span>
-                                    <span class=”comment”>6,230명 평가</span>
+                                    <span class="comment">6,230명 평가</span>
                                 </p>
                             </div>
                             <div class="price_info">
                                 <p class="coupon"></p>
-                                <p class=”price”>
-                                    <em class=”now”>121,000<span>원</span></em>
-                                    <del class=”origin”>352,000원</del>
+                                <p class="price">
+                                    <em class="now">121,000<span>원</span></em>
+                                    <del class="origin">352,000원</del>
                                 </p>
                             </div>
                         </div>
@@ -363,7 +392,7 @@
             <div class="hot_pension_wrap">
                 <div class="title_box">
                     <h1 class="subj">오늘 체크인 호텔 특가</h1>
-                    <button type="button" class="more_btn"><!-- fa --></button>
+                    <p><button type="button" class="more_btn"><!-- fa --></button></p>
                 </div>
                 <div class="room_box">
                     <a href="#" class="room">
@@ -372,19 +401,19 @@
                             <div class="title_wrap">
                                 <p class="type">펜션</p>
                                 <h2 class="title"><em class="special"></em><span class="name">제주 와흘 팽나무집</span></h2>
-                                <p class=”location”><span class=”city>제주시</span><span class=”more”>함덕해수욕장 차량 16분</span></p>
-                                <p class=”review”>
+                                <p class="location"><span class="city">제주시</span><span class="more">함덕해수욕장 차량 16분</span></p>
+                                <p class="review">
                                     <span class="point_wrap">
                                         <em class="point"><!-- fa -->9.7</em>
                                     </span>
-                                    <span class=”comment”>7명 평가</span>
+                                    <span class="comment">7명 평가</span>
                                 </p>
                             </div>
                             <div class="price_info">
                                 <p class="coupon">쿠폰 적용시</p>
-                                <p class=”price”>
-                                    <em class=”now”>87,100<span>원</span></em>
-                                    <del class=”origin”>99,000원</del>
+                                <p class="price">
+                                    <em class="now">87,100<span>원</span></em>
+                                    <del class="origin">99,000원</del>
                                 </p>
                             </div>
                         </div>
