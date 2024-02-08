@@ -215,26 +215,103 @@
                             </div>
                             <!-- 내용 탭 구성 -->
                             <div class="user_search_box">
-                                <div class="user_search">
-                                    <!-- fa -->
-                                    <input type="text" name="search_input" id="search_input" placeholder="여행지나 숙소를 검색해보세요" maxlength="50">
+                                <div class="user_search_detail">
+                                    <div class="user_search">
+                                        <!-- fa -->
+                                        <input type="text" name="search_input" id="search_input" placeholder="여행지나 숙소를 검색해보세요" maxlength="50">
+                                    </div>
+                                    <!-- 검색창 누르면 뜨는 아래 창 -->
+                                    <div class="search_ranking">
+                                        <h3>여기어때 검색 순위</h3>
+                                        <ol>
+                                            <li><button type="button" class="ranking"><em>1</em><span>경주</span></button></li>
+                                            <li><button type="button" class="ranking"><em>2</em><span>강릉</span></button></li>
+                                            <li><button type="button" class="ranking"><em>3</em><span>속초</span></button></li>
+                                            <li><button type="button" class="ranking"><em>4</em><span>여수</span></button></li>
+                                            <li><button type="button" class="ranking"><em>5</em><span>부산</span></button></li>
+                                            <li><button type="button" class="ranking"><em>6</em><span>전주</span></button></li>
+                                            <li><button type="button" class="ranking"><em>7</em><span>춘천</span></button></li>
+                                            <li><button type="button" class="ranking"><em>8</em><span>제주도</span></button></li>
+                                            <li><button type="button" class="ranking"><em>9</em><span>포항</span></button></li>
+                                            <li><button type="button" class="ranking"><em>10</em><span>대전</span></button></li>
+                                        </ol>
+                                    </div>
+                                    <!-- 검색을 하기 시작하면 바뀌게 -->
+                                    <div class="user_search_service"></div>
                                 </div>
                                 <div class="calendar_detail">
                                     <!-- 캘린더 넣기 -->
                                 </div>
                                 <div class="num_detail">
                                     <div class="num_view">
-                                        <button type="button" id="num_select"><span>인원<span class="user_num">2</span></span></button>
+                                        <button type="button" id="num_select">
+                                            <!-- fa(사람모양) -->
+                                            <span>객실<span class="room_num">1</span>, </span>
+                                            <span>성인<span class="adult_num">1</span></span>
+                                            <span>, 아동<span class="children_num">0</span></span>
+                                        </button>
                                     </div>
-                                    <div class="user_num_select">
-                                        <div class="num_left">
-                                            <h3>인원</h3>
-                                            <p>유아 및 아동도 인원수에<br>포함해주세요.</p>
+                                    <div class="user_select">
+                                        <div class="user_room_num">
+                                            <h3>객실</h3>
+                                            <div class="user_room_select">
+                                                <button type="button" class="num_minus"><!-- fa --></button>
+                                                <span class="user_room_num">1</span>
+                                                <button type="button" class="num_plus"><!-- fa --></button>
+                                            </div>
                                         </div>
-                                        <div class="num_right">
-                                            <button type="button" id="num_minus"><!-- fa --></button>
-                                            <span class="user_num">2</span>
-                                            <button type="button" id="num_plus"><!-- fa --></button>
+                                        <div class="user_adult_left">
+                                            <div class="user_adult">
+                                                <h3>성인</h3>
+                                                <p>객실마다 1명 이상 필수 선택</p>
+                                            </div>
+                                            <div class="user_adult_select">
+                                                <button type="button" class="num_minus"><!-- fa --></button>
+                                                <span class="user_adult_num">2</span>
+                                                <button type="button" class="num_plus"><!-- fa --></button>
+                                            </div>
+                                        </div>
+                                        <div class="user_children_left">
+                                            <div class="user_children">
+                                                <h3>아동</h3>
+                                                <p>만 0세 ~ 17세</p>
+                                            </div>
+                                            <div class="user_children_select">
+                                                <button type="button" class="num_minus"><!-- fa --></button>
+                                                <span class="user_children_num">0</span>
+                                                <button type="button" class="num_plus"><!-- fa --></button>
+                                            </div>
+                                        </div>
+                                        <!-- 아동 선택하면 나옴 -->
+                                        <div class="children_notice">
+                                            <ul>
+                                                <li>숙소별로 아동으로 간주하는 나이가 다르므로 체크인 일자 기준의 정확한 만나이를 입력해주세요.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="children_age">
+                                            <span class="user_children_num">아동1</span>
+                                            <button type="button" class="user_children_age">
+                                                <span>만 12세</span>
+                                                <!-- fa -->
+                                            </button>
+                                        </div>
+                                        <div class="children_age_select">
+                                            <span>만 3세 미만</span>
+                                            <span>만 3세</span>
+                                            <span>만 4세</span>
+                                            <span>만 5세</span>
+                                            <span>만 6세</span>
+                                            <span>만 7세</span>
+                                            <span>만 8세</span>
+                                            <span>만 9세</span>
+                                            <span>만 10세</span>
+                                            <span>만 11세</span>
+                                            <span>만 12세</span>
+                                            <span>만 13세</span>
+                                            <span>만 14세</span>
+                                            <span>만 15세</span>
+                                            <span>만 16세</span>
+                                            <span>만 17세</span>
                                         </div>
                                     </div>
                                 </div>
