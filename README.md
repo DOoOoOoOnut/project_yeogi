@@ -156,3 +156,9 @@ ex) ./images/main/ _best_hotel001
 1. service_inquiry.html 완성
 2. footer_event.html 완성
 3. index.html fixed버튼 추가 / 검색창 수정
+
+-----------------------------------------------------------
+# 02/09 작업
+- 민아
+1. 폰트어썸 전부 넣기 완료
+2. 모바일 nav 완성
