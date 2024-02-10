@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 main {
   max-width: 1400px;
   margin: 0 auto;
@@ -29,20 +35,40 @@ main .container .nav span {
   font-size: 1.5rem;
   font-weight: 700;
 }
-main .container .wrap {
+main .container .wrap .bg {
+  font-size: 0;
   text-decoration: none;
+  margin: 0;
 }
-main .container .wrap .photo {
+main .container .wrap .bg .photo {
   display: inline-block;
+  vertical-align: top;
   font-size: 0;
 }
-main .container .wrap .photo img {
+main .container .wrap .bg .photo img {
+  vertical-align: top;
+  margin-right: 0;
+}
+main .container .wrap .bg .popup {
+  margin: 0;
+  display: inline-block;
+  text-decoration: none;
+  font-size: initial;
   vertical-align: top;
 }
-main .container .wrap .popup .all_doun {
+main .container .wrap .bg .popup .all_doun {
   cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
 }
-main .container .wrap .popup .popup_bg {
+main .container .wrap .bg .popup .all_doun img {
+  display: inline-block;
+  vertical-align: middle;
+}
+main .container .wrap .bg .popup .popup_bg {
+  display: inline-block;
+  vertical-align: middle;
+  display: none;
   background: rgba(0, 0, 0, 0.48);
   position: fixed;
   left: 0;
@@ -51,7 +77,7 @@ main .container .wrap .popup .popup_bg {
   width: 100vw;
   height: 100vh;
 }
-main .container .wrap .popup .popup_bg .contents {
+main .container .wrap .bg .popup .popup_bg .contents {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -61,4 +87,115 @@ main .container .wrap .popup .popup_bg .contents {
   width: 335px;
   margin: 0 auto;
   max-height: 419.5px;
+  padding: 28px 20px 20px;
+  text-align: left;
+}
+main .container .wrap .bg .popup .popup_bg .contents .text h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+main .container .wrap .bg .popup .popup_bg .contents .text p {
+  font-size: 0.875rem;
+  margin-bottom: 24px;
+}
+main .container .wrap .bg .popup .popup_bg .contents .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container .wrap .bg .popup .popup_bg .contents .btn button {
+  padding: 10px 18px;
+  width: calc(50% - 5px);
+  cursor: pointer;
+  height: 48px;
+  border-radius: 10px;
+  text-align: center;
+}
+main .container .wrap .bg .popup .popup_bg .contents .btn .close {
+  background-color: #ebebeb;
+}
+main .container .wrap .bg .popup .popup_bg .contents .btn .coupon_down {
+  background-color: #1273e4;
+  color: #fff;
+}
+main .container .wrap .bg a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  height: 100%;
+}
+main .container .wrap .bg a img {
+  display: inline-block;
+  vertical-align: middle;
+}
+main .container .wrap .bg .footer {
+  background-color: #393939;
+  color: #fff;
+  font-size: 0.688rem;
+}
+main .container .wrap .bg .footer .footer_contents {
+  padding: 0 5.6% 22px 5.6%;
+}
+main .container .wrap .bg .footer .footer_contents .info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 18px 5.5px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+main .container .wrap .bg .footer .footer_contents .info span {
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 2px 10px 0 5px;
+}
+main .container .wrap .bg .footer .footer_contents .info img {
+  width: 16px;
+}
+main .container .wrap .bg .footer .footer_contents .info img:last-child {
+  width: 12px;
+}
+main .container .wrap .bg .footer .footer_contents .box {
+  padding-bottom: 63px;
+}
+main .container .wrap .bg .footer .footer_contents .box ul {
+  margin: 11px 0 30px;
+}
+main .container .wrap .bg .footer .footer_contents .box ul li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 5.5px;
+  font-size: 0.688rem;
+}
+main .container .wrap .bg .footer .footer_contents .box h3 {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: #fff;
+  margin: 13px 0 8px;
+  padding: 0 9px;
+  font-size: 0.802rem;
+  font-weight: 100;
+}
+main .container .wrap .bg .footer .footer_contents .box h3::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+  margin-right: 3px;
+}
+main .container .wrap .bg .footer .footer_contents .box h3::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+  margin-left: 3px;
 }/*# sourceMappingURL=event_new_year.css.map */

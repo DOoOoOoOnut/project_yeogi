@@ -1,0 +1,165 @@
+@import "common";
+
+main {
+    max-width:$desktop ;
+    padding: 20px 0 96px;
+    margin: 0 auto;
+    .container {
+        max-width: 792px;
+        margin: 0 auto;
+        section {
+            padding:16px 0 20px ;
+            h1 {
+                margin: 2px 0 2px;
+                font-size:$title24 ;
+                font-weight:$weight700 ;
+            }
+            p {
+                margin-top: 4px;
+                line-height: 1.5rem;
+                color: #999999;
+            }
+        }
+        .wrap {
+            padding: 35px 30px;
+            @include flex-rnsc;
+            background-color:#f5f7fa ;
+            border-radius: 10px;
+            .left {
+                .tel_btn {
+                    margin-bottom: 8px;
+                    @include flex-rnsc;
+                    font-size: 1.25rem;
+                    font-weight: $weight700;
+                    i[class*=phone] {
+                        font-size: 15px;
+                        margin-right: 8px;
+                        color:rgb(194, 194, 194) ;
+                    }
+                }
+                p {
+                    font-size: 0.8125rem;
+                    line-height: 1.25rem;
+                    color: #999999;
+                }
+            }
+            .right {
+                position: relative;
+                .chatting_consultation {
+                    @include flex-rnsc;
+                    cursor: pointer;
+                    height: 48px;
+                    border-radius: 10px; 
+                    border: 2px solid rgb(235, 235, 235);
+                    font-weight: $weight600;
+                    background-color: #fff;
+                    padding: 10px 18px 10px 16px;
+                    i[class*=comment] {
+                        margin-right: 8px;
+                        font-size: 16px;
+                        color: rgb(194, 194, 194);
+                    }
+                    p {
+                        color: rgb(51, 51, 51);
+                        font-weight: $weight600;
+                    }
+                }
+                // 챗 화면
+                .chat_container {
+                    position: fixed; top: 200px; right: 0;
+                    width: 400px; height: 600px;
+                    border-radius:15px ;
+                    border: 2px solid #f5f7fa;
+                    .chat_message {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: $subColor-r;
+                        height: 80%; width: 100%;
+                        overflow-y:scroll ;
+                        overflow-x: hidden;
+                        border-top-left-radius:15px ;
+                        border-top-right-radius:15px ;
+                        padding: 15px;
+                        .message {
+                            border-radius: 5px;
+                            padding: 10px 5px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            width: 80%;
+                        }
+                        .ai_message {
+                            align-self: flex-start;
+                            background-color: #999999;
+
+                        }
+                        .user_message {
+                            background-color:$mainColor-b ;
+                            align-self: flex-end;
+                        }
+                    }
+                    .user_input {
+                        position: relative; top: 0; left: 0;
+                        height: 100px;
+                        background-color: #fff;
+                        #user_txt {
+                            width: calc(100% - 60px); outline: none;
+                            background-color: rgba(255, 255, 255, 0.5);
+                            width: 100%; height: 75%;
+                            padding:5px 10px; overflow-x: hidden;
+                            border: none; outline: none;
+                        }
+                        /* input[name=user_txt] {
+                            width: calc(100% - 60px); outline: none;
+                            background-color: rgba(255, 255, 255, 0.5);
+                            width: 100%; height: 70%;
+                            padding:0 10px; overflow-x: hidden;
+                        } */
+                        .chat_btn {
+                            position: absolute; bottom: 0; right: 20px;
+                            background-color:$mainColor-b ;
+                            color: #fff; width: 60px; height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .inquiry {
+            section {
+                h2 {
+                    margin-top: 20px;
+                    padding: 16px 0;
+                    font-size: $title18;
+                    font-weight:$weight700 ;
+                    
+                }
+                ul {
+                    margin-bottom: 8px;
+                    display: flex; flex-flow:row wrap;
+                    overflow: auto;
+                    gap: 6px 8px;
+                    li {
+                        display: flex; align-items: center;
+                        padding-bottom: 12px;
+                        height: 32px;
+                        max-width: 212px;
+                        padding: 8px 16px;
+                        cursor: pointer;
+                        border: 2px solid #f5f7fa;
+                        color: #fff;
+                        border-radius: 100px;
+                        button {
+                            font-size: 0.8125rem;
+                            font-weight:$weight600;
+                        }
+                    }
+                    li:first-of-type {
+                        button {
+                            color: #fff;
+                        }
+                        background-color: $mainColor-b;
+                    }
+                }
+            }
+        }
+    }
+}

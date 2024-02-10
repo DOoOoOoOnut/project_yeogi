@@ -1,0 +1,179 @@
+main {
+  max-width: 1400px;
+  padding: 20px 0 96px;
+  margin: 0 auto;
+}
+main .container {
+  max-width: 792px;
+  margin: 0 auto;
+}
+main .container section {
+  padding: 16px 0 20px;
+}
+main .container section h1 {
+  margin: 2px 0 2px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main .container section p {
+  margin-top: 4px;
+  line-height: 1.5rem;
+  color: #999999;
+}
+main .container .wrap {
+  padding: 35px 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+}
+main .container .wrap .left .tel_btn {
+  margin-bottom: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+main .container .wrap .left .tel_btn i[class*=phone] {
+  font-size: 15px;
+  margin-right: 8px;
+  color: rgb(194, 194, 194);
+}
+main .container .wrap .left p {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: #999999;
+}
+main .container .wrap .right {
+  position: relative;
+}
+main .container .wrap .right .chatting_consultation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 48px;
+  border-radius: 10px;
+  border: 2px solid rgb(235, 235, 235);
+  font-weight: 600;
+  background-color: #fff;
+  padding: 10px 18px 10px 16px;
+}
+main .container .wrap .right .chatting_consultation i[class*=comment] {
+  margin-right: 8px;
+  font-size: 16px;
+  color: rgb(194, 194, 194);
+}
+main .container .wrap .right .chatting_consultation p {
+  color: rgb(51, 51, 51);
+  font-weight: 600;
+}
+main .container .wrap .right .chat_container {
+  position: fixed;
+  top: 200px;
+  right: 0;
+  width: 400px;
+  height: 600px;
+  border-radius: 15px;
+  border: 2px solid #f5f7fa;
+}
+main .container .wrap .right .chat_container .chat_message {
+  display: flex;
+  flex-direction: column;
+  background-color: #f45858;
+  height: 80%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 15px;
+}
+main .container .wrap .right .chat_container .chat_message .message {
+  border-radius: 5px;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  color: #fff;
+  width: 80%;
+}
+main .container .wrap .right .chat_container .chat_message .ai_message {
+  align-self: flex-start;
+  background-color: #999999;
+}
+main .container .wrap .right .chat_container .chat_message .user_message {
+  background-color: #1273e4;
+  align-self: flex-end;
+}
+main .container .wrap .right .chat_container .user_input {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100px;
+  background-color: #fff;
+  /* input[name=user_txt] {
+      width: calc(100% - 60px); outline: none;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 100%; height: 70%;
+      padding:0 10px; overflow-x: hidden;
+  } */
+}
+main .container .wrap .right .chat_container .user_input #user_txt {
+  width: calc(100% - 60px);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 75%;
+  padding: 5px 10px;
+  overflow-x: hidden;
+  border: none;
+  outline: none;
+}
+main .container .wrap .right .chat_container .user_input .chat_btn {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  background-color: #1273e4;
+  color: #fff;
+  width: 60px;
+  height: 30px;
+}
+main .container .inquiry section h2 {
+  margin-top: 20px;
+  padding: 16px 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+main .container .inquiry section ul {
+  margin-bottom: 8px;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: auto;
+  gap: 6px 8px;
+}
+main .container .inquiry section ul li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  height: 32px;
+  max-width: 212px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 2px solid #f5f7fa;
+  color: #fff;
+  border-radius: 100px;
+}
+main .container .inquiry section ul li button {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+main .container .inquiry section ul li:first-of-type {
+  background-color: #1273e4;
+}
+main .container .inquiry section ul li:first-of-type button {
+  color: #fff;
+}/*# sourceMappingURL=customer_service.css.map */
