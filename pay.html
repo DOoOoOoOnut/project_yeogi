@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>예약 확인 및 결제 - 여기어때</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
 </head>
 <body>
     <main>
         <section class="top">
-            <a href="#"><!-- fa --></a>
+            <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>예약 확인 및 결제</h1>
         </section>
         <section class="container">
@@ -23,7 +24,7 @@
                                 <h3>예약자 이름</h3>
                                 <div class="input_box">
                                     <input type="text" placeholder="홍길동" id="user_name">
-                                    <button type="button" class="reset"><!-- fa --></button>
+                                    <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                                 </div>
                                 <p class="error_massage"><!-- js --></p>
                             </div>
@@ -31,7 +32,7 @@
                                 <h3>휴대폰 번호</h3>
                                 <div class="input_box">
                                     <input type="number" placeholder="010-1234-5678" id="user_phone"><!-- value="auto_complete_phone" -->
-                                    <button type="button" class="reset"><!-- fa --></button>
+                                    <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                                 </div>
                                 <p class="error_massage"><!-- js --></p>
                                 <p>개인 정보 보호를 위해 안심번호로 숙소에 전송됩니다.</p>
@@ -59,14 +60,14 @@
                             <div class="popup_bg">
                                 <div class="coupon_check_popup">
                                     <div class="detail_top">
-                                        <button type="button" class="close"><!-- fa --></button>
+                                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
                                         <em>쿠폰 적용</em>
                                     </div>
                                     <div class="coupon_detail">
                                         <div class="general_coupon">
                                             <div class="detail_title">
                                                 <span>일반쿠폰 <em>1장</em></span>
-                                                <!-- fa -->
+                                                <i class="fa-solid fa-angle-down"></i>
                                             </div>
                                             <div class="none">
                                                 <label><input type="radio" name="coupon_none" id="coupon_none"><span>적용안함</span></label>
@@ -100,7 +101,7 @@
                             <div class="voucher_bg">
                                 <div class="voucher_check_popup">
                                     <div class="detail_top">
-                                        <button type="button" class="close"><!-- fa --></button>
+                                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
                                         <em>상품권 적용</em>
                                     </div>
                                     <div class="voucher_detail">
@@ -108,7 +109,7 @@
                                         <div class="input_box">
                                             <span class="num_box">
                                                 <input type="text" placeholder="공백 없이 입력하세요" id="discount_num" maxlength="16">
-                                                <button type="button" class="close"><!-- fa --></button>
+                                                <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                                             </span>
                                             <button type="button" class="amount_check">잔액 확인</button>
                                             <p>유효 및 잔액 확인이 완료되면 자동계산/적용됩니다.</p>
@@ -125,7 +126,7 @@
                         <div class="login_bnr">
                             <a href="./login.html"><!-- bg넣기 -->
                                 <span><em>로그인</em> 하시면 <em>할인 수단</em>을 이용할 수 있습니다.</span>
-                                <!-- fa -->
+                                <i class="fa-solid fa-angle-right"></i>
                             </a>
                         </div>
                         <section class="payment_box">
@@ -161,7 +162,7 @@
                                     </div>
                                 </div>
                                 <div class="benefit_more_btn">
-                                    <span>모든 혜택 보기</span><!-- fa -->
+                                    <span>모든 혜택 보기</span><i class="fa-solid fa-angle-up"></i>
                                 </div>
                                 <!-- 누르면 아래가 펼쳐지게 -->
                                 <div class="benefit_more">
@@ -206,14 +207,14 @@
                                 <span>5</span>
                             </div>
                             <div class="elite_special">
-                                <p><!-- fa -->엘리트 회원은 <em>평생 10% 추가할인</em></p>
+                                <i class="fa-solid fa-gift"></i><p>엘리트 회원은 <em>평생 10% 추가할인</em></p>
                             </div>
                         </section>
                     </div>
                     <div class="wrap_right">
                         <div class="right_top">
                             <div class="cancell_notice">
-                                <!-- fa -->
+                                <i class="fa-solid fa-circle-info"></i>
                                 <span>24년 2월 13일 23:59까지 무료취소</span>
                             </div>
                             <h2>제주신라호텔</h2>
@@ -254,7 +255,7 @@
                             </div>
                             <div class="agree">
                                 <label><input type="checkbox" name="user_agree" id="user_agree"><span>약관 전체동의</span></label>
-                                <!-- fa -->
+                                <i class="fa-solid fa-angle-down"></i>
                             </div>
                             <div class="pay_btn_box">
                                 <button type="button" id="pay_btn">411,400원 결제하기</button>

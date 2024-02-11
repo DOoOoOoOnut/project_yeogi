@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여기어때</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
     <header>
         <div class="header_wrap">
             <h1><a href="./index.html"><img src="./images/main/logo.png" alt="여기어때"></a></h1>
-            <div class="header_right">
+            <nav>
                 <div class="kr_travel">
                     <h2>국내 여행지</h2>
                     <div class="kr_travel_box">
@@ -151,15 +152,15 @@
                             <a href="#">인천</a>
                         </div>
                         <div class="down">
-                            <!-- fa -->
+                            <i class="fa-solid fa-angle-down"></i>
                         </div>
                     </div>
                 </div>
                 <!-- 로그인 안했을시 -->
                 <div class="mypage_warp_nonmember">
                     <div class="menu">
-                        <!-- fa -->
-                        <img src="./images/main/side_sprite1x.png" alt="마이페이지">
+                        <i class="fa-solid fa-bars"></i>
+                        <img src="./images/main/more/side_sprite1x.png" alt="마이페이지">
                     </div>
                     <div class="mypage_detail">
                         <a href="#">로그인/회원가입</a>
@@ -170,8 +171,8 @@
                 <!-- 로그인 했을시 -->
                 <div class="mypage_warp_member">
                     <div class="menu">
-                        <!-- fa -->
-                        <img src="./images/main/mypage.png" alt="마이페이지">
+                        <i class="fa-solid fa-bars"></i>
+                        <img src="./images/icon/ico_21.png" alt="마이페이지">
                     </div>
                     <div class="mypage_detail">
                         <a href="#">내 정보</a>
@@ -180,19 +181,108 @@
                         <button type="button" class="logout">로그아웃</button>
                     </div>
                 </div>
+            </nav>
+        </div>
+        <!-- 모바일 nav -->
+        <div class="nav_wrap_m">
+            <div class="nva_bg_m">
+                <!-- 로그인 안했을시 -->
+                <nav class="nav_m">
+                    <div class="top">
+                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="mypage_warp_nonmember_m">
+                        <a href="./login.html"><img src="./images/sprite/side_sprite1x.png" alt=""></a>
+                        <div class="join_login">
+                            <a href="./login.html">
+                                <span>회원가입 / 로그인</span>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <p>여기어때 회원가입하고 엘리트 할인 혜택 받으세요!</p>
+                        </div>
+                        <div class="benefit_detail_m">
+                            <a href="./login.html">포인트</a>
+                            <a href="./login.html">쿠폰</a>
+                        </div>
+                        <div class="nav_detail_m">
+                            <a href="./non_member_reservation_check.html">
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span>비회원 예약조회</span>
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                            </a>
+                            <a href="./event.html">
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span>이벤트</span>
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                            </a>
+                            <a href="./customer_service.html">
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span>고객센터</span>
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- 로그인 했을시 -->
+                <nav class="nav_m">
+                    <div class="top">
+                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="mypage_box_m">
+                        <a href="./user_info.html"><img src="./images/icon/ico_21.png" alt=""></a>
+                        <div class="mypage_detail_m">
+                            <a href="./user_info.html">
+                                <span>닉네임</span>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <p>5번 더 예약하면 엘리트로 등급업!</p>
+                        </div>
+                        <div class="benefit_detail_m">
+                            <a href="#">포인트</a>
+                            <a href="#">쿠폰</a>
+                        </div>
+                        <div class="nav_detail_m">
+                            <a href="#">
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span>예약내역</span>
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                            </a>
+                            <a href="./event.html">
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span>이벤트</span>
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                            </a>
+                            <a href="./customer_service.html">
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span>고객센터</span>
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span>설정</span>
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span>로그아웃</span>
+                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
         <!-- 고정버튼 -->
         <div class="fixed_btn">
             <div class="top_btn_container">
                 <button type="button" id="top_btn">
-                    <!-- fa -->
+                    <i class="fa-solid fa-angle-up"></i>
                     <span>top</span>
                 </button>
             </div>
             <div class="customer_container">
                 <button type="button" id="customer_btn">
-                    <!-- fa -->
+                    <img src="./images/sprite/side_sprite1x.png" alt="">
                     <span>고객센터</span>
                 </button>
             </div>
@@ -217,7 +307,7 @@
                             <div class="user_search_box">
                                 <div class="user_search_detail">
                                     <div class="user_search">
-                                        <!-- fa -->
+                                        <i class="fa-solid fa-magnifying-glass"></i>
                                         <input type="text" name="search_input" id="search_input" placeholder="여행지나 숙소를 검색해보세요" maxlength="50">
                                     </div>
                                     <!-- 검색창 누르면 뜨는 아래 창 -->
@@ -245,7 +335,7 @@
                                 <div class="num_detail">
                                     <div class="num_view">
                                         <button type="button" id="num_select">
-                                            <!-- fa(사람모양) -->
+                                            <i class="fa-solid fa-user-large"></i>
                                             <span>객실<span class="room_num">1</span>, </span>
                                             <span>성인<span class="adult_num">1</span></span>
                                             <span>, 아동<span class="children_num">0</span></span>
@@ -255,9 +345,9 @@
                                         <div class="user_room_num">
                                             <h3>객실</h3>
                                             <div class="user_room_select">
-                                                <button type="button" class="num_minus"><!-- fa --></button>
+                                                <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
                                                 <span class="user_room_num">1</span>
-                                                <button type="button" class="num_plus"><!-- fa --></button>
+                                                <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
                                             </div>
                                         </div>
                                         <div class="user_adult_left">
@@ -266,9 +356,9 @@
                                                 <p>객실마다 1명 이상 필수 선택</p>
                                             </div>
                                             <div class="user_adult_select">
-                                                <button type="button" class="num_minus"><!-- fa --></button>
+                                                <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
                                                 <span class="user_adult_num">2</span>
-                                                <button type="button" class="num_plus"><!-- fa --></button>
+                                                <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
                                             </div>
                                         </div>
                                         <div class="user_children_left">
@@ -277,9 +367,9 @@
                                                 <p>만 0세 ~ 17세</p>
                                             </div>
                                             <div class="user_children_select">
-                                                <button type="button" class="num_minus"><!-- fa --></button>
+                                                <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
                                                 <span class="user_children_num">0</span>
-                                                <button type="button" class="num_plus"><!-- fa --></button>
+                                                <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
                                             </div>
                                         </div>
                                         <!-- 아동 선택하면 나옴 -->
@@ -292,7 +382,7 @@
                                             <span class="user_children_num">아동1</span>
                                             <button type="button" class="user_children_age">
                                                 <span>만 12세</span>
-                                                <!-- fa -->
+                                                <i class="fa-solid fa-angle-down"></i>
                                             </button>
                                         </div>
                                         <div class="children_age_select">
@@ -331,12 +421,12 @@
             <div class="event_wrap">
                 <div class="title_box">
                     <h1 class="subj">이벤트</h1>
-                    <p><button type="button" class="more_btn"><!-- fa --></button></p>
+                    <p><button type="button" class="more_btn"><i class="fa-solid fa-plus"></i></button></p>
                 </div>
                 <div class="event_box">
                     <div class="box_btn">
-                        <button type="button" class="left_btn"><!-- fa --></button>
-                        <button type="button" class="right_btn"><!-- fa --></button>
+                        <button type="button" class="left_btn"><i class="fa-solid fa-angle-left"></i></button>
+                        <button type="button" class="right_btn"><i class="fa-solid fa-angle-right"></i></button>
                     </div>
                     <div class="event_bnr">
                         <a href="./event_new_year.html"><img src="./images/main/event_bnr001.png" alt="최대 10만원 할인 설날맞이 쿠폰세트"></a>
@@ -347,8 +437,8 @@
                         <a href="./event_best_sole.html"><img src="./images/main/event_bnr006.png" alt="2월 제휴 추가 할인"></a>
                     </div>
                     <div class="circle_detail">
-                        <button type="button" class="circle_btn"><!-- fa --></button>
-                        <button type="button" class="circle_btn"><!-- fa --></button>
+                        <button type="button" class="circle_btn"><!-- css만들기 --></button>
+                        <button type="button" class="circle_btn"><!-- css만들기 --></button>
                     </div>
                 </div>
             </div>
@@ -363,8 +453,8 @@
                         <span class="kr_travel_txt">제주도</span>
                     </a>
                     <div class="box_btn">
-                        <button type="button" class="left_btn"><!-- fa --></button>
-                        <button type="button" class="right_btn"><!-- fa --></button>
+                        <button type="button" class="left_btn"><i class="fa-solid fa-angle-left"></i></button>
+                        <button type="button" class="right_btn"><i class="fa-solid fa-angle-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -379,8 +469,8 @@
                         <span class="kr_travel_txt">오사카</span>
                     </a>
                     <div class="box_btn">
-                        <button type="button" class="left_btn"><!-- fa --></button>
-                        <button type="button" class="right_btn"><!-- fa --></button>
+                        <button type="button" class="left_btn"><i class="fa-solid fa-angle-left"></i></button>
+                        <button type="button" class="right_btn"><i class="fa-solid fa-angle-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -409,7 +499,8 @@
                                 <p class="location"><span class="city"></span><span class="more">인천터미널역 도보 14분</span></p>
                                 <p class="review">
                                     <span class="point_wrap">
-                                        <em class="point"><!-- fa -->9.5</em>
+                                        <i class="fa-solid fa-star"></i>
+                                        <em class="point">9.5</em>
                                     </span>
                                     <span class="comment">9,155명 평가</span>
                                 </p>
@@ -425,15 +516,15 @@
                     </a>
                 </div>
                 <div class="box_btn">
-                    <button type="button" class="left_btn"><!-- fa --></button>
-                    <button type="button" class="right_btn"><!-- fa --></button>
+                    <button type="button" class="left_btn"><i class="fa-solid fa-angle-left"></i></button>
+                    <button type="button" class="right_btn"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
             <!-- 오늘 체크인 호텔 특가 -->
             <div class="today_special_wrap">
                 <div class="title_box">
                     <h1 class="subj">오늘 체크인 호텔 특가</h1>
-                    <p><button type="button" class="more_btn"><!-- fa --></button></p>
+                    <p><button type="button" class="more_btn"><i class="fa-solid fa-plus"></i></button></p>
                 </div>
                 <div class="room_box">
                     <a href="#" class="room">
@@ -445,7 +536,8 @@
                                 <p class="location"><span class="city">강릉시</span><span class="more">강릉 강문해변 앞</span></p>
                                 <p class="review">
                                     <span class="point_wrap">
-                                        <em class="point"><!-- fa -->9.0</em>
+                                        <i class="fa-solid fa-star"></i>
+                                        <em class="point">9.0</em>
                                     </span>
                                     <span class="comment">6,230명 평가</span>
                                 </p>
@@ -461,15 +553,15 @@
                     </a>
                 </div>
                 <div class="box_btn">
-                    <button type="button" class="left_btn"><!-- fa --></button>
-                    <button type="button" class="right_btn"><!-- fa --></button>
+                    <button type="button" class="left_btn"><i class="fa-solid fa-angle-left"></i></button>
+                    <button type="button" class="right_btn"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
             <!-- 이번주 HOT 인기 펜션 -->
             <div class="hot_pension_wrap">
                 <div class="title_box">
                     <h1 class="subj">오늘 체크인 호텔 특가</h1>
-                    <p><button type="button" class="more_btn"><!-- fa --></button></p>
+                    <p><button type="button" class="more_btn"><i class="fa-solid fa-plus"></i></button></p>
                 </div>
                 <div class="room_box">
                     <a href="#" class="room">
@@ -481,7 +573,8 @@
                                 <p class="location"><span class="city">제주시</span><span class="more">함덕해수욕장 차량 16분</span></p>
                                 <p class="review">
                                     <span class="point_wrap">
-                                        <em class="point"><!-- fa -->9.7</em>
+                                        <i class="fa-solid fa-star"></i>
+                                        <em class="point">9.7</em>
                                     </span>
                                     <span class="comment">7명 평가</span>
                                 </p>
@@ -497,8 +590,8 @@
                     </a>
                 </div>
                 <div class="box_btn">
-                    <button type="button" class="left_btn"><!-- fa --></button>
-                    <button type="button" class="right_btn"><!-- fa --></button>
+                    <button type="button" class="left_btn"><i class="fa-solid fa-angle-left"></i></button>
+                    <button type="button" class="right_btn"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
             <!-- 이번주 블랙 PICK -->
@@ -511,8 +604,8 @@
                     <img src="./images/main/week_pick001.jpeg" alt="">
                 </div>
                 <div class="box_btn">
-                    <button type="button" class="left_btn"><!-- fa --></button>
-                    <button type="button" class="right_btn"><!-- fa --></button>
+                    <button type="button" class="left_btn"><i class="fa-solid fa-angle-left"></i></button>
+                    <button type="button" class="right_btn"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
         </section>
@@ -541,8 +634,8 @@
                 <div class="wrap_top_left">
                     <p>고객센터</p>
                     <p>오전 9시 - 새벽 3시 운영</p>
-                    <a href="#" class="call">
-                        <!-- fa -->
+                    <a href="./customer_service.html" class="call">
+                        <i class="fa-solid fa-phone"></i>
                         <span>1670-6250</span>
                     </a>
                 </div>
@@ -554,18 +647,18 @@
                     <dl class="service">
                         <dt>서비스</dt>
                         <dd>
-                            <a href="#">공지사항</a>
-                            <a href="#">자주 묻는 질문</a>
-                            <a href="#">기업 출장/복지 서비스 문의</a>
+                            <a href="./notice.html">공지사항</a>
+                            <a href="./notice.html">자주 묻는 질문</a>
+                            <a href="./service_inquiry.html">기업 출장/복지 서비스 문의</a>
                         </dd>
                     </dl>
                     <dl class="benefit">
                         <dt>혜택</dt>
                         <dd>
-                            <a href="#">트립홀릭 혜택 안내</a>
-                            <a href="#">엘리트 혜택 안내</a>
-                            <a href="#">비즈니스 회원 혜택 안내</a>
-                            <a href="#">여기어때 상품권 조회</a>
+                            <a href="./footer_event.html">트립홀릭 혜택 안내</a>
+                            <a href="./footer_event.html">엘리트 혜택 안내</a>
+                            <a href="./footer_event.html">비즈니스 회원 혜택 안내</a>
+                            <a href="https://q.egiftcard.kr/couponstatus/auth">여기어때 상품권 조회</a>
                         </dd>
                     </dl>
                 </div>
@@ -588,8 +681,8 @@
                             <a href="#">콘텐츠산업진흥법에 의한 표시</a>
                         </div>
                         <div class="sns">
-                            <a href="https://www.facebook.com/goodchoiceofficial"><!-- fa -->facebook</a>
-                            <a href="https://www.instagram.com/goodchoice_official/"><!-- fa -->instagram</a>
+                            <a href="https://www.facebook.com/goodchoiceofficial"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/goodchoice_official/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
