@@ -170,3 +170,5 @@ ex) ./images/main/ _best_hotel001
 2. 고객센터 scss 작업중
 - 일혁
 1. notice.html - css 완성
+2. notice_detail - css 완성
+3. non_member_reservation 완성

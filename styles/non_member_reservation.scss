@@ -1,0 +1,89 @@
+@import 'common';
+
+// 주문번호 팝업창
+.certified {
+    display: none;
+    .bg {
+        .deny_number {
+            p {}
+            a {}
+        }
+    }
+}
+main {
+    max-width: 1400px;
+    section {
+        width: 400px;
+        margin: 0 auto;
+        padding: 30px 0;
+        .title {
+            h1 {
+                font-size: $title24;
+                color: #333;
+                font-weight: $weight600;
+            }
+            p {
+                font-size: $defalt16;
+                color: #999;
+                line-height: 1.5;
+                padding: 5px 0 20px 0;
+            }
+        }
+        #reservation {
+            fieldset {
+                label {
+                    display: flex; flex-flow: column nowrap;
+                    span {
+                        font-size: $small13;
+                        color: #707070;
+                        padding: 5px 0;
+                        em {
+                            color: $subColor-r;
+                        }
+                    }
+                    #reservation_num {
+                        background: #f5f5f5;
+                        padding: 15px 20px;
+                        border-radius: 10px;
+                        margin-bottom: 20px;
+                    }
+                    .resend {
+                        display: flex; flex-flow: column nowrap;
+                        #reservation_phone {
+                            background: #f5f5f5;
+                            padding: 15px 20px;
+                            border-radius: 10px;
+                            margin-bottom: 20px;
+                        }
+                        #resend_num {
+                            background: #FAFAFA;
+                            padding: 15px 20px;
+                            border-radius: 10px;
+                            font-size: $defalt16;
+                            color: #D6D6D6;
+                        }
+                    }
+                }
+            }
+            .certified {
+                display: none;
+                #authentication {}
+                .time {}
+                .error {}
+            }
+            #send {
+                display: none;
+            }
+        }
+        .join {
+            display: flex; justify-content: center;
+            margin-top: 40px;
+            font-size: $subC14;
+            color: #999;
+        }
+        .join:hover {
+            opacity: 50%;
+            text-decoration: underline;
+        }
+    }
+}

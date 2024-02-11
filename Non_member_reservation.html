@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>비회원 예약조회 | 여기어때</title>
+    <title>비회원 예약조회 - 여기어때</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/non_member_reservation.css">
 </head>
 <body>
     <div class="certified"><!--주문번호 팝업창-->
@@ -20,22 +23,22 @@
                 <h1>비회원 예약조회</h1>
                 <p>비회원으로 예약하셨나요?<br>
                     예약내역 조회를 위해 고객확인이 필요해요.</p>
-                </div>
+            </div>
                 <form action="#" method="get" id="reservation">
                     <fieldset>
                         <legend class="skip">예약조회 양식</legend>
                         <label for="reservation_num">
-                            <span>예약번호<em>*</em></span>
+                            <span>예약 번호<em>*</em></span>
                             <input type="text" name="reservation_num" id="reservation_num" placeholder="숫자+영문 조합">
                         </label>
                         <label for="reservation_phone">
-                            <span>휴대폰번호<em>*</em></span>
+                            <span>휴대폰 번호<em>*</em></span>
                             <div class="resend"><!--인증번호 재전송버튼-->
                                 <input type="tel" name="reservation_phone" id="reservation_phone" placeholder="01012345678" maxlength="12">
-                                <button type="button" id="resend_num">인증 번호 재전송</button>
+                                <button type="button" id="resend_num">인증 번호 전송</button>
                             </div>
                         </label>
-                        <div>
+                        <div class="certified">
                             <label for="authentication">
                                 <span>인증번호<em>*</em></span>
                                 <input type="text" name="authentication" id="authentication">
@@ -47,6 +50,7 @@
                         <button type="button" id="send">확인</button>
                     </fieldset>
                 </form>
+                <a href="#" class="join">잠깐! 여기어때 회원이신가요?</a>
         </section>
     </main>
 </body>
