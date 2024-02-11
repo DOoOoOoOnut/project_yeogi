@@ -145,7 +145,7 @@ ex) ./images/main/ _best_hotel001
 -----------------------------------------------------------
 # 02/08 작업
 - 일혁
-1. 
+1. detail.page 구조 완성 (swiper 컨펌 완료)
 - 다은
 1. search.scss 완료
 2. join_phone.js 완성
