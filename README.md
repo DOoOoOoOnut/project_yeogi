@@ -168,3 +168,5 @@ ex) ./images/main/ _best_hotel001
 - 은지
 1.  event_new_year.scss 완성
 2. 고객센터 scss 작업중
+- 일혁
+1. notice.html - css 완성
