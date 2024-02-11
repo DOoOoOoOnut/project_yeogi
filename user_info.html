@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내 정보 관리 - 여기어때</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/user_info.css">
 </head>
 <body>
     <main>
         <!-- all 혹시 모를 대비 중 -->
         <div class="container">
             <!-- 왼쪽 네비 -->
-            <nav>
+            <nav class="lnb">
                 <ul>
                     <li>
                         <button type="button">예약 내역<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
@@ -43,18 +44,17 @@
                             현재 숙소 외 예약내역은 여기어때 앱에서 확인 가능해요
                         </p>
                     </div>
-                    <div class="kr_world_btn">
-                        <button type="button" class="kr">국내숙소</button>
-                        <button type="button" class="world">해외숙소</button>
-                    </div>
-                    <section>
-                        <div class="left">
+                    <div class="travel_reservation_history">
+                        <div class="kr_world_btn">
+                            <button type="button" class="btn kr">국내숙소</button>
+                            <button type="button" class="btn world">해외숙소</button>
+                        </div>
+                        <section>
                             <em>예정된 여행이 없습니다.</em>
                             <p>지금 새로운 예약을 진행해 보세요</p>
-                            <a href="#"><!-- index -->여행지 찾아보기</a>
-                        </div>
-                        <div class="right"><!-- svg이미지 다운로드 안됨 나중에 비슷하게라도.. --></div>
-                    </section>
+                            <a href="./index.html">여행지 찾아보기</a>
+                        </section>
+                    </div>
                     <section>
                         <h2>이용완료 및 예약취소</h2>
                         <div class="text">
@@ -72,10 +72,24 @@
                                 <!-- font-awesome -->
                                 <i class="fa-solid fa-circle-info"></i>
                             </p>
-                            <em><span class="point"><!-- js --></span>p</em>
+                            <em><span class="point"><!-- js -->0</span> P</em>
                         </div>
                         <div class="point_disappear">
-                            <p><span class="rest_day"><!-- js --></span>일 내 <span class="point"></span>가 소멸될 예정이에요</p>
+                            <p><span class="rest_day"><!-- js -->30</span>일 내 <span class="point">0</span>P가 소멸될 예정이에요</p>
+                        </div>
+                    </div>
+                    <div class="point_popup">
+                        <div class="popup_box">
+                            <h2>포인트</h2>
+                            <ul>
+                                <li>포인트 사용 기간은 적립 일에 따라 각각 달라요.</li>
+                                <li>사용 기간 내에 쓰지 않는 포인트는 자동으로 소멸돼요.</li>
+                                <li>포인트 사용 기간 내에 포인트를 취소한다면 그대로 돌려드려요. 단, 사용 기간은 처음 지급한 날과 같아요.</li>
+                                <li>포인트 사용 기간 만료 후에 포인트를 취소한다면 자동으로 소멸되요.</li>
+                            </ul>
+                            <div class="btn">
+                                <button type="button" class="close_btn">확인</button>
+                            </div>
                         </div>
                     </div>
                     <section>
@@ -91,18 +105,6 @@
                             <p>포인트 내역이 없어요</p>
                         </div>
                     </section>
-                    <div class="point_popup">
-                        <div class="popup_box">
-                            <h2>포인트</h2>
-                            <ul>
-                                <li>포인트 사용 기간은 적립 일에 따라 각각 달라요.</li>
-                                <li>사용 기간 내에 쓰지 않는 포인트는 자동으로 소멸돼요.</li>
-                                <li>포인트 사용 기간 내에 포인트를 취소한다면 그대로 돌려드려요. 단, 사용 기간은 처음 지급한 날과 같아요.</li>
-                                <li>포인트 사용 기간 만료 후에 포인트를 취소한다면 자동으로 소멸되요.</li>
-                            </ul>
-                            <button type="button" class="close">확인</button>
-                        </div>
-                    </div>
                 </div>
                 <!-- 쿠폰 -->
                 <div class="contents coupon">
@@ -227,7 +229,7 @@
                             <img src="./images/user_info/ico_21.png" alt="">
                         </div>
                     </div>
-                    <div class="info">
+                    <div class="view_user_info">
                         <!-- 정보 안보일 때 -->
                         <section>
                             <div class="left">
@@ -240,7 +242,7 @@
                             </div>
                         </section>
                         <section>
-                            <div class="name">
+                            <div class="nickname">
                                 <h3>닉네임</h3>
                                 <p>월령01</p>
                             </div>
@@ -333,6 +335,7 @@
                         <span>더 이상 여기어때 이용을 원하지 않으신가요?</span>
                         <a href="user_withdrawal.html">회원탈퇴</a>
                     </div>
+                </div>
                 <!-- 설정 -->
                 <div class="contents setting">
                     <h1>설정</h1>

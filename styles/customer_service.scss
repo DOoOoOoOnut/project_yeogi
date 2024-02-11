@@ -160,6 +160,69 @@ main {
                     }
                 }
             }
+            .box {
+                ul {
+                    width: 100%;
+                    overflow: hidden;
+                    li {
+                        .btn {
+                            @include flex-rnsc;
+                            border-bottom: 1px solid #f5f7fa;
+                            padding: 20px 0;
+                            .left {
+                                
+                                line-height: 1.5rem;
+                                span {
+                                    margin-right: 8px;
+                                    padding: 0 6px;
+                                    font-size: $title18;
+                                    font-weight:$weight700 ;
+                                    color: #c2c2c2;
+                                }
+                                p {
+                                    font-weight: $weight600;
+                                }
+                            }
+                            .right {
+                                color: #c2c2c2;
+                                font-size: 12px;
+                            }
+                        }
+                        .contents {
+                            transform: all 0.3s ease-in-out;
+                            background-color: #f5f5f5;
+                            padding: 20px;
+                            .box {
+                                margin-bottom: 20px;
+                                em {
+                                    font-size: 0.833rem;
+                                    line-height: 1.375rem;
+                                    color: #252525;
+                                    font-weight: $weight600;
+                                }
+                                p {
+                                    font-size: 0.833rem;
+                                    line-height: 1.375rem;
+                                    color: #252525;
+                                    margin: 0;
+                                }
+                            }
+                            .box:last-child {
+                                margin: 0;
+                            }
+                            p {
+                                font-size: 0.833rem;
+                                line-height: 1.375rem;
+                                color: #252525;
+                                margin-bottom: 20px;
+                            }
+                            p:last-child {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
