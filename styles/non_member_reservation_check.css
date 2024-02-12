@@ -1,0 +1,43 @@
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main section {
+  margin: 0 auto;
+  width: 1000px;
+}
+main section .back {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 600;
+}
+main section .back i {
+  padding: 0 20px 30px 0;
+}
+main section .reservation_detail_wrap h1 {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+main section .reservation_detail_wrap .check_in {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  display: block;
+  background: #1273e4;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+main section .reservation_detail_wrap .check_in p img {
+  position: relative;
+  top: 2.5px;
+}
+main section .reservation_detail_wrap .check_in p span {
+  font-size: 0.75rem;
+  color: #fff;
+  padding-left: 8px;
+}
+main section .reservation_detail_wrap .check_in .room_info .room_title h2 {
+  font-size: 1.125rem;
+}/*# sourceMappingURL=non_member_reservation_check.css.map */

@@ -1,7 +1,7 @@
 @import 'common';
 
 main {
-    max-width: $desktop;
+    max-width: $desktop; margin: $margin0;
     section {
         width: 800px;
         margin: $margin0;

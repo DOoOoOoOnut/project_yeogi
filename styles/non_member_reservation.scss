@@ -11,9 +11,10 @@
     }
 }
 main {
-    max-width: 1400px;
+    max-width: 1400px; margin: $margin0;
     section {
         width: 400px;
+        margin: $margin0;
         margin: 0 auto;
         padding: 30px 0;
         .title {
@@ -31,6 +32,7 @@ main {
         }
         #reservation {
             fieldset {
+                display: flex; flex-flow: column nowrap;
                 label {
                     display: flex; flex-flow: column nowrap;
                     span {
@@ -66,13 +68,24 @@ main {
                 }
             }
             .certified {
-                display: none;
-                #authentication {}
+                display: flex; flex-flow: column nowrap;
+                #authentication {
+                    background: #FAFAFA;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    font-size: $defalt16;
+                    color: #D6D6D6;
+                }
                 .time {}
                 .error {}
             }
             #send {
-                display: none;
+                margin-top: 20px;
+                background: $mainColor-b;
+                padding: 15px 20px;
+                border-radius: 10px;
+                font-size: $defalt16;
+                color: #fff;
             }
         }
         .join {

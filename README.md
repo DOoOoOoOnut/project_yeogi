@@ -173,3 +173,5 @@ ex) ./images/main/ _best_hotel001
 # 02/11 작업
 - 은지
 1. 마이페이지 scss : 예약확인 완료 / 포인트 작업중
+- 일혁 
+1. notice, notice_detail scss 완성

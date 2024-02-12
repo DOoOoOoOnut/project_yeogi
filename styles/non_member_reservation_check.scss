@@ -1,0 +1,53 @@
+@import 'common';
+
+main {
+    max-width: 1400px; margin: $margin0;
+    section {
+        margin: $margin0;
+        width: 1000px;
+        .back {
+            font-size: 1.25rem;
+            color: #333; font-weight: $weight600;
+            i {
+                padding: 0 20px 30px 0;
+            }
+        }
+        .reservation_detail_wrap {
+            h1 {
+                font-size: 1.25rem;
+                color: #333; font-weight: $weight600;
+                padding-bottom: 30px;
+            }
+            .check_in {
+                display: flex; flex-flow: row nowrap;
+                align-items: center;
+                display: block;
+                background: $mainColor-b;
+                padding: 10px 20px;
+                border-radius: 10px;
+                p{
+                    img {
+                        position: relative; top: 2.5px;
+                    }
+                    span {
+                        font-size: 0.75rem;
+                        color: #fff;
+                        padding-left: 8px;
+                    }
+                }
+                .room_info {
+                    .room_img {
+                        img {
+                            
+                        }
+                    }
+                    .room_title {
+                        h2 {
+                            font-size: $title18;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

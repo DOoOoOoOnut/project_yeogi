@@ -1,9 +1,11 @@
 main {
   max-width: 1400px;
+  margin: 0 auto;
 }
 main section {
   width: 800px;
   margin: 0 auto;
+  padding-top: 50px;
 }
 main section .back_page {
   font-size: 1.25rem;
