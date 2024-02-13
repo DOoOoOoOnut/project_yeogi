@@ -1,12 +1,31 @@
 @import 'common';
 
+.address_copy {
+    width: 250px;
+    display: flex; flex-flow: column nowrap;
+    padding: 16px;
+    border-radius: 10px;
+    position: absolute; left: 50%; top: 50%;
+    transform: translateX(-50%);
+    .copy {
+        display: none;
+        background: #333;
+        border-radius: 5px;
+        text-align: center;
+        padding: 10px;
+        p {
+            font-size: $subC14;
+            color: #fff;
+        }
+    }
+}
 main {
     max-width: 1400px; margin: $margin0;
     section {
         margin: $margin0;
         width: 1000px;
         .back {
-            font-size: 1.25rem;
+            font-size: $title24;
             color: #333; font-weight: $weight600;
             i {
                 padding: 0 20px 30px 0;
@@ -14,40 +33,316 @@ main {
         }
         .reservation_detail_wrap {
             h1 {
-                font-size: 1.25rem;
+                font-size: $title24;
                 color: #333; font-weight: $weight600;
                 padding-bottom: 30px;
             }
             .check_in {
-                display: flex; flex-flow: row nowrap;
-                align-items: center;
-                display: block;
+                display: flex; align-items: center;
                 background: $mainColor-b;
                 padding: 10px 20px;
                 border-radius: 10px;
                 p{
-                    img {
-                        position: relative; top: 2.5px;
+                    i {
+                        color: #fff;
                     }
                     span {
-                        font-size: 0.75rem;
+                        font-size: $small13;
                         color: #fff;
                         padding-left: 8px;
                     }
-                }
-                .room_info {
-                    .room_img {
-                        img {
-                            
-                        }
+                }   
+            }
+            .room_info {
+                display: flex; flex-flow: row nowrap;
+                padding: 20px 0;
+                .room_img {
+                    img {
+                        width: 160px;
+                        border-radius: 5px;
                     }
+                }
+                .info {
+                    width: 100%;
+                    padding: 5px 0 0 15px;
                     .room_title {
+                        display: flex;
+                        justify-content: space-between;
+                        text-align: center;
+                        align-items: center;
                         h2 {
                             font-size: $title18;
+                            color: #333; font-weight: $weight600;
+                        }
+                        a {
+                            font-size: $small12; font-weight: $weight600;
+                            color: #333;
+                            padding: 9px 12px;
+                            background: #ebebeb;
+                            border-radius: 8px;
+                        }
+                        a:hover {
+                            background: #e1e1e1;
+                        }
+                    }
+                    .room_address {
+                        display: flex; flex-flow: row nowrap;
+                        align-items: center;
+                        margin-top: 10px;
+                        p {
+                            font-size: $subC14;
+                            color: #999;
+                        }
+                        a {
+                            font-size: $subC14; font-weight: $weight600;
+                            color: $mainColor-b;
+                            padding-left: 10px;
+                        }
+                        a:hover {
+                            text-decoration: underline;
                         }
                     }
                 }
             }
+            .container {
+                .room_detail {
+                    display: flex; flex-flow: row nowrap;
+                    border-bottom: 1px solid #f5f5f5;
+                    .room_type {
+                        display: flex; flex-flow: column nowrap;
+                        span {
+                            font-size: $subC14;
+                            color: #999;
+                            padding-bottom: 20px;
+                        }
+                    }
+                    .room_type_result {
+                        p {
+                            font-size: $subC14;
+                            color: #333;
+                            padding-bottom: 20px;
+                            em {
+                                font-size: 0.625rem;
+                                color: #49627A;
+                                padding: 2px 8px;
+                                background: #f5f7fa;
+                                border-radius: 25%;
+                                margin: 0 10px 0 15px;
+                            }
+                        }
+                        .stick {
+                            padding-bottom: 50px;
+                            display: flex;
+                            p {
+                                font-size: $subC14;
+                                color: #333;
+                                padding: 0 15px;
+                            }
+                            a {
+                                font-size: $subC14; font-weight: $weight600;
+                                color: $mainColor-b;
+                            }
+                            a:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .reservation_info {
+                    border-bottom: 1px solid #f5f5f5;
+                    h2 {
+                        font-size: $title18; font-weight: $weight600;
+                        color: #333;
+                        padding: 20px 0;
+                    }
+                    .reservation_box {
+                        display: flex; flex-flow: row nowrap;
+                        .reservation_num {
+                            display: flex; flex-flow: column nowrap;
+                            span {
+                                font-size: $subC14;
+                                color: #999;
+                                padding-bottom: 20px;
+                            }
+                        .reservation_num::placeholder {
+                            color: #f5f5f5;
+                        }
+                        }
+                        .reservation_num_result {
+                            margin-bottom: 30px;
+                            .stick {
+                                display: flex; flex-flow: row nowrap;
+                                p {
+                                    font-size: $subC14;
+                                    color: 333;
+                                    padding: 0 10px 20px 15px;
+                                }
+                                a {
+                                    font-size: $subC14; font-weight: $weight600;
+                                    color: $mainColor-b;
+                                }
+                                a:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                            p {
+                                font-size: $subC14;
+                                color: 333;
+                                padding: 0 0 20px 15px;
+                            }
+                            .safe_num {
+                                font-size: $subC14;
+                                color: 333;
+                                em {
+                                    font-size: $small12;
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                }
+                .payment_info {
+                    padding: 20px 0 40px 0;
+                    .title {
+                        display: flex; flex-flow: row nowrap;
+                        align-items: center;
+                        justify-content: space-between;
+                        h2 {
+                            font-size: $title18; font-weight: $weight600;
+                            color: #333;
+                            padding: 20px 0;
+                        }
+                        a {
+                            font-size: $small12; font-weight: $weight600;
+                            color: #333;
+                            background: #ebebeb;
+                            padding: 9px 12px;
+                            border-radius: 6px;
+                        }
+                        a:hover {
+                            background: #e1e1e1;
+                        }
+                    }
+                    .payment {
+                        width: 100%;
+                        display: flex; flex-flow: row nowrap;
+                        justify-content: center;
+                        border-top: 1px solid #ebebeb ;
+                        border-bottom: 1px solid #ebebeb;
+                        .payment_day {
+                            width: 50%;
+                            display: flex; flex-flow: row nowrap;
+                            justify-content: space-between;
+                            background: #f5f7fa;
+                            padding: 16px 20px;
+                            .payment_left {
+                                display: flex; flex-flow: column nowrap;
+                                span {
+                                    font-size: $subC14;
+                                    color: #999;
+                                    padding-bottom: 20px;
+                                }
+                            }
+                            .payment_right {
+                                display: flex; flex-flow: column nowrap;
+                                text-align: right;
+                                span {
+                                    font-size: $subC14;
+                                    color: #333;
+                                    padding-bottom: 20px;
+                                }
+                            }
+                        }
+                        .payment_price {
+                            width: 50%;
+                            display: flex; flex-flow: column nowrap;
+                            padding: 16px 20px;
+                            .all_price {
+                                display: flex; flex-flow: row nowrap;
+                                justify-content: space-between;
+                                .payment_left {
+                                    display: flex; flex-flow: column nowrap;
+                                    justify-content: space-between;
+                                    span {
+                                        font-size: $subC14;
+                                        color: #999;
+                                        padding: 0 0 20px 0 ;
+                                    }
+                                }
+                                }
+                                .payment_right {
+                                    display: flex; flex-flow: column nowrap;
+                                    span {
+                                        font-size: $subC14;
+                                        color: #333;
+                                        padding-bottom: 20px;
+                                    }
+                                }
+                            }
+                            .sum_price {
+                                display: flex; flex-flow: row nowrap;
+                                justify-content: space-between;
+                                border-top: 1px solid #ebebeb;
+                                padding: 20px 0;
+                                .price {
+                                    font-size: $subC14;
+                                    color: #999;
+                                }
+                                .all {
+                                    font-size: $subC14; font-weight: 600;
+                                    color: $subColor-r;
+                            }
+                        }
+                    }
+                    
+                }
+                .reservation_cancel {
+                    .cancel {
+                        border-top: 1px solid #f5f5f5;
+                        border-bottom: 1px solid #f5f5f5;
+                        padding: 30px 0;
+                        .title {
+                            display: flex; flex-flow: row nowrap;
+                            align-items: center;
+                            justify-content: space-between;
+                            h2 {
+                                font-size: $title18; font-weight: $weight600;
+                                color: #333;
+                                padding-bottom: 30px;
+                            }
+                            a {
+                                font-size: $small12; font-weight: 600;
+                                color: $subColor-r;
+                                background: #FFEBEB;
+                                padding: 9px 12px;
+                                border-radius: 6px;
+                            }
+                            a:hover {
+                                background: #ffdada;
+                            }
+                        }
+                        p {
+                            font-size: $subC14; font-weight: 600;
+                                color: $subColor-r
+                        }
+                    }
+                    .policy {
+                        display: flex; flex-flow: row nowrap;
+                        justify-content: space-between;
+                        padding: 30px 0;
+                        p {
+                            font-size: $title18; font-weight: $weight600;
+                            color: #333;
+                        }
+                        a {
+                            i {
+                                color: #999;
+                            }
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }

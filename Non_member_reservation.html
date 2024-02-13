@@ -9,11 +9,21 @@
     <link rel="stylesheet" href="./styles/non_member_reservation.css">
 </head>
 <body>
-    <div class="certified"><!--주문번호 팝업창-->
+    <div class="certified"><!--인증번호 에러 팝업창-->
         <div class="bg">
             <div class="deny_number">
-                <p>유효하지 않은 주문번호입니다.</p>
+                <p>인증번호화 다르게 입력되었습니다.<br>
+                    재입력해 주시기 바랍니다.</p>
                 <a href="#">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="reservation_number_error"><!--예약 번호 에러 팝업창-->
+        <div class="bg">
+            <div class="error_number">
+                <p>일치하는 예약 정보를 찾을 수 없어요.<br>
+                    확인 후 다시 시도해 주세요.</p>
+                    <a href="#">확인</a>    
             </div>
         </div>
     </div>
@@ -35,6 +45,7 @@
                             <span>휴대폰 번호<em>*</em></span>
                             <div class="resend"><!--인증번호 재전송버튼-->
                                 <input type="tel" name="reservation_phone" id="reservation_phone" placeholder="01012345678" maxlength="12">
+                                <button type="button" id="resend_renum">인증 번호 재전송</button>
                                 <button type="button" id="resend_num">인증 번호 전송</button>
                             </div>
                         </label>
