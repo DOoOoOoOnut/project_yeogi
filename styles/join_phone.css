@@ -55,11 +55,27 @@ main section #phone_frm fieldset .contents .before .error {
   color: #f45858;
   font-size: 0.75rem;
 }
-main section #phone_frm fieldset .contents .before .input_wrap .reset i {
+main section #phone_frm fieldset .contents .before .input_wrap {
+  position: relative;
+}
+main section #phone_frm fieldset .contents .before .input_wrap .reset {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+main section #phone_frm fieldset .contents .before .input_wrap .reset i[class$=xmark] {
   color: #999;
 }
 main section #phone_frm fieldset .after {
   display: none;
+}
+main section #phone_frm fieldset .after .pass_num .pass_input {
+  position: relative;
+}
+main section #phone_frm fieldset .after .pass_num .pass_input .reset {
+  position: absolute;
+  right: 10px;
+  top: 0;
 }
 main section #phone_frm fieldset .after .pass_num .pass_input .reset i[class$=xmark] {
   color: #999;

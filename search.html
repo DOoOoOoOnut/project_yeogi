@@ -4,167 +4,372 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>숙소 검색 결과 - 여행할 때 여기어때</title> <!-- js: 숙소 앞에 검색한 지역명 들어감 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/search.css">
+    <link rel="stylesheet" href="./styles/checkbox.css">
 </head>
 <body>
     <main>
         <section>
             <form action="#" method="get" id="result_frm">
+                <div class="search_top">
+                    <h1>경주 숙소 261개</h1><!-- js -->
+                    <div class="filter">
+                        <p class="now"><i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>추천순</p>
+                        <div class="open">
+                            <button type="button" class="active"><span>추천순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>평점높은순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>리뷰많은순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>낮은가격순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>높은가격순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>거리순</span><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                </div>
                 <div class="result">
                     <!-- 상단 좌측 필터 -->
                     <div class="filter_container">
                         <fieldset>
                             <legend class="skip">숙소 검색 필터</legend>
                             <div class="top">
-                                <h1>경주 숙소 261개</h1><!-- js -->
                                 <div class="map_container">
                                     <div class="prev"><a href="#">지도 보기</a></div>
-                                    <div class="open">
-                                        <div class="left">
-                                            <!-- 바깥 filter 결정되면 같은 클래스로 붙여넣기 -->
-                                            <div class="filter"></div>
-                                            <div class="result"></div>
-                                        </div>
-                                        <div id="map">
-                                            <!-- 지도 API 사용 -->
+                                    <div class="open_bg">
+                                        <div class="open">
+                                            <div class="title">
+                                                <p class="back_btn"><i class="fa-solid fa-xmark"></i></p>
+                                                <h1>지도</h1>
+                                            </div>
+                                            <div class="contents">
+                                                <div class="left">
+                                                    <div class="open_filter">
+                                                        <div class="top">
+                                                            <h2>필터</h2>
+                                                            <a href="#"><i class="fa-solid fa-rotate-right"></i>초기화</a>
+                                                        </div>
+                                                        <div class="soldout">
+                                                            <div class="checkbox-wrapper-4">
+                                                                <input class="inp-cbx" id="soldout_chk" type="checkbox"/>
+                                                                <label class="cbx" for="soldout_chk">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check-4"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <span>매진 숙소 제외</span>
+                                                                </label>
+                                                                <svg class="inline-svg">
+                                                                    <symbol id="check-4" viewbox="0 0 12 10">
+                                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                                    </symbol>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="type">
+                                                            <h3>숙소유형</h3>
+                                                            <div class="contents">
+                                                                <label><input type="radio" name="type" class="all"><span class="circle"></span>전체</label>
+                                                                <label><input type="radio" name="type" class="motel"><span class="circle"></span>모텔</label>
+                                                                <label><input type="radio" name="type" class="hotel_resort"><span class="circle"></span>호텔·리조트</label>
+                                                                <label><input type="radio" name="type" class="pension"><span class="circle"></span>펜션</label>
+                                                                <label><input type="radio" name="type" class="home_villa"><span class="circle"></span>홈&빌라</label>
+                                                                <label><input type="radio" name="type" class="camping"><span class="circle"></span>캠핑</label>
+                                                                <label><input type="radio" name="type" class="guest_korean"><span class="circle"></span>게하·한옥</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="price_range">
+                                                            <h3>가격<span>1박 기준</span></h3>
+                                                            <!-- js -->
+                                                        </div>
+                                                        <div class="taste">
+                                                            <h3>#취향</h3>
+                                                            <div class="chk_wrap">
+                                                                <label><input type="checkbox" name="user_taste" class="user_taste"><span>#가족여행숙소</span></label>
+                                                                <label><input type="checkbox" name="user_taste" class="user_taste"><span>#스파</span></label>
+                                                                <label><input type="checkbox" name="user_taste" class="user_taste"><span>#파티룸</span></label>
+                                                                <label><input type="checkbox" name="user_taste" class="user_taste"><span>#OTT</span></label>
+                                                                <label><input type="checkbox" name="user_taste" class="user_taste"><span>#연인추천</span></label>
+                                                                <label><input type="checkbox" name="user_taste" class="user_taste"><span>#감성숙소</span></label>
+                                                                <label><input type="checkbox" name="user_taste" class="user_taste"><span>#뷰맛집</span></label>
+                                                                <label><input type="checkbox" name="user_taste" class="user_taste"><span>#연박특가</span></label>
+                                                                <label><input type="checkbox" name="user_taste" class="user_taste"><span>#리뷰좋은</span></label>
+                                                                <!-- 이후 js 고려해서 추가 / 삭제 -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="discount">
+                                                            <h3>할인혜택</h3>
+                                                            <div class="chk_wrap">
+                                                                <label><input type="checkbox" name="discount" class="discount_chk"><span>쿠폰할인</span></label>
+                                                                <label><input type="checkbox" name="discount" class="discount_chk"><span>50%페이백</span></label>
+                                                                <label><input type="checkbox" name="discount" class="discount_chk"><span>무한대실</span></label>
+                                                                <label><input type="checkbox" name="discount" class="discount_chk"><span>할인특가</span></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reservation">
+                                                            <h3>예약유형</h3>
+                                                            <div class="checkbox-wrapper-4">
+                                                                <input class="inp-cbx" id="reservaiton_type" type="checkbox"/>
+                                                                <label class="cbx" for="reservaiton_type">
+                                                                    <span>
+                                                                        <svg width="12px" height="10px">
+                                                                            <use xlink:href="#check-4"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <span>대실 예약</span>
+                                                                </label>
+                                                                <svg class="inline-svg">
+                                                                    <symbol id="check-4" viewbox="0 0 12 10">
+                                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                                    </symbol>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="rank">
+                                                            <h3>등급</h3>
+                                                            <div class="chk_wrap">
+                                                                <label><input type="checkbox" name="rank" class="rank_chk"><span>5성급</span></label>
+                                                                <label><input type="checkbox" name="rank" class="rank_chk"><span>4성급</span></label>
+                                                                <label><input type="checkbox" name="rank" class="rank_chk"><span>블랙</span></label>
+                                                                <label><input type="checkbox" name="rank" class="rank_chk"><span>풀빌라</span></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="facility">
+                                                            <h3>시설</h3>
+                                                            <dl class="contents">
+                                                                <dt>공용시설</dt>
+                                                                <dd class="public">
+                                                                    <label><input type="checkbox" name="public_facility" class="public_chk"><span>사우나</span></label>
+                                                                    <label><input type="checkbox" name="public_facility" class="public_chk"><span>수영장</span></label>
+                                                                    <label><input type="checkbox" name="public_facility" class="public_chk"><span>BBQ</span></label>
+                                                                    <label><input type="checkbox" name="public_facility" class="public_chk"><span>레스토랑</span></label>
+                                                                    <label><input type="checkbox" name="public_facility" class="public_chk"><span>피트니스</span></label>
+                                                                    <label><input type="checkbox" name="public_facility" class="public_chk"><span>물놀이시설</span></label>
+                                                                </dd>
+                                                                <dt>객실 내 시설</dt>
+                                                                <dd class="inside">
+                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>스파/월풀</span></label>
+                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>객실스파</span></label>
+                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>미니바</span></label>
+                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>와이파이</span></label>
+                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>에어컨</span></label>
+                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>욕실용품</span></label>
+                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>객실샤워실</span></label>
+                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>개인콘센트</span></label>
+                                                                </dd>
+                                                                <dt>기타시설</dt>
+                                                                <dd class="ect">
+                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>조식포함</span></label>
+                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>무료주차</span></label>
+                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>반려견동반</span></label>
+                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>사우나/찜질방</span></label>
+                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>객실내취사</span></label>
+                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>픽업가능</span></label>
+                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>캠프파이어</span></label>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                    <div class="result_list">
+                                                        <a href="#" class="room">
+                                                            <div class="photo"></div>
+                                                            <div class="contents">
+                                                                <div class="title_wrap">
+                                                                    <p class="type">호텔</p>
+                                                                    <h2 class="title"><em class="speical"><!-- js ★파격특가★ --></em><span class="name">세인트존스 호텔</span></h2>
+                                                                    <p class="location">
+                                                                        <span class="city">강릉시</span>
+                                                                        <span class="more">강릉 강문해변 앞</span>
+                                                                    </p>
+                                                                    <p class="review">
+                                                                        <span class="point_wrap"><i class="fa-solid fa-star"></i>9.0</span>
+                                                                        <span class="comment">
+                                                                            6,233명 평가
+                                                                        </span>
+                                                                    </p> 
+                                                                </div>
+                                                                <div class="price_info">
+                                                                    <p class="price">
+                                                                        <del class="origin">352,000원</del>
+                                                                        <span class="coupon">쿠폰 적용시</span>
+                                                                        <em class="now">159,000<span class="won">원</span><span class="day">/1박</span></em>
+                                                                    </p>
+                                                                    <p class="info">이 가격으로 남은 객실 1개</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div id="map">
+                                                    <!-- 지도 API 사용 -->
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="fliter">
+                            <div class="filter">
                                 <div class="top">
                                     <h2>필터</h2>
-                                    <a href="#"><!-- fa -->초기화</a>
-                                    <p><input type="checkbox" name="soldout" id="soldout"></p>
+                                    <a href="#"><i class="fa-solid fa-rotate-right"></i>초기화</a>
+                                </div>
+                                <div class="soldout">
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx" id="soldout_chk" type="checkbox"/>
+                                        <label class="cbx" for="soldout_chk">
+                                            <span>
+                                                <svg width="12px" height="10px">
+                                                    <use xlink:href="#check-4"></use>
+                                                </svg>
+                                            </span>
+                                            <span>매진 숙소 제외</span>
+                                        </label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="type">
                                     <h3>숙소유형</h3>
                                     <div class="contents">
-                                        <label><input type="radio" name="type" class="all">전체</label>
-                                        <label><input type="radio" name="type" class="motel">모텔</label>
-                                        <label><input type="radio" name="type" class="hotel_resort">호텔·리조트</label>
-                                        <label><input type="radio" name="type" class="pension">펜션</label>
-                                        <label><input type="radio" name="type" class="home_villa">홈&빌라</label>
-                                        <label><input type="radio" name="type" class="camping">캠핑</label>
-                                        <label><input type="radio" name="type" class="guest_korean">게하·한옥</label>
+                                        <label><input type="radio" name="type" class="all"><span class="circle"></span>전체</label>
+                                        <label><input type="radio" name="type" class="motel"><span class="circle"></span>모텔</label>
+                                        <label><input type="radio" name="type" class="hotel_resort"><span class="circle"></span>호텔·리조트</label>
+                                        <label><input type="radio" name="type" class="pension"><span class="circle"></span>펜션</label>
+                                        <label><input type="radio" name="type" class="home_villa"><span class="circle"></span>홈&빌라</label>
+                                        <label><input type="radio" name="type" class="camping"><span class="circle"></span>캠핑</label>
+                                        <label><input type="radio" name="type" class="guest_korean"><span class="circle"></span>게하·한옥</label>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="price_range">
-                                <h3>가격<span>1박 기준</span></h3>
-                                <!-- js -->
-                            </div>
-                            <div class="taste">
-                                <h3>#취향</h3>
-                                <div class="chk_wrap">
-                                    <label><input type="checkbox" name="user_taste" class="user_taste">#가족여행숙소</label>
-                                    <label><input type="checkbox" name="user_taste" class="user_taste">#스파</label>
-                                    <label><input type="checkbox" name="user_taste" class="user_taste">#파티룸</label>
-                                    <label><input type="checkbox" name="user_taste" class="user_taste">#OTT</label>
-                                    <label><input type="checkbox" name="user_taste" class="user_taste">#연인추천</label>
-                                    <label><input type="checkbox" name="user_taste" class="user_taste">#감성숙소</label>
-                                    <label><input type="checkbox" name="user_taste" class="user_taste">#뷰맛집</label>
-                                    <label><input type="checkbox" name="user_taste" class="user_taste">#연박특가</label>
-                                    <label><input type="checkbox" name="user_taste" class="user_taste">#리뷰좋은</label>
-                                    <!-- 이후 js 고려해서 추가 / 삭제 -->
+                                <div class="price_range">
+                                    <h3>가격<span>1박 기준</span></h3>
+                                    <!-- js -->
                                 </div>
-                            </div>
-                            <div class="discount">
-                                <h3>할인혜택</h3>
-                                <div class="chk_wrap">
-                                    <label><input type="checkbox" name="discount" class="discount_chk">쿠폰할인</label>
-                                    <label><input type="checkbox" name="discount" class="discount_chk">50%페이백</label>
-                                    <label><input type="checkbox" name="discount" class="discount_chk">무한대실</label>
-                                    <label><input type="checkbox" name="discount" class="discount_chk">할인특가</label>
+                                <div class="taste">
+                                    <h3>#취향</h3>
+                                    <div class="chk_wrap">
+                                        <label><input type="checkbox" name="user_taste" class="user_taste"><span>#가족여행숙소</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste"><span>#스파</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste"><span>#파티룸</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste"><span>#OTT</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste"><span>#연인추천</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste"><span>#감성숙소</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste"><span>#뷰맛집</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste"><span>#연박특가</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste"><span>#리뷰좋은</span></label>
+                                        <!-- 이후 js 고려해서 추가 / 삭제 -->
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="reservaiton">
-                                <h3>예약유형</h3>
-                                <div class="chk_wrap">
-                                    <label><input type="checkbox" name="reservaiton" class="reservaiton_chk"></label>
+                                <div class="discount">
+                                    <h3>할인혜택</h3>
+                                    <div class="chk_wrap">
+                                        <label><input type="checkbox" name="discount" class="discount_chk"><span>쿠폰할인</span></label>
+                                        <label><input type="checkbox" name="discount" class="discount_chk"><span>50%페이백</span></label>
+                                        <label><input type="checkbox" name="discount" class="discount_chk"><span>무한대실</span></label>
+                                        <label><input type="checkbox" name="discount" class="discount_chk"><span>할인특가</span></label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="rank">
-                                <h3>등급</h3>
-                                <div class="chk_wrap">
-                                    <label><input type="checkbox" name="rank" class="rank_chk">5성급</label>
-                                    <label><input type="checkbox" name="rank" class="rank_chk">4성급</label>
-                                    <label><input type="checkbox" name="rank" class="rank_chk">블랙</label>
-                                    <label><input type="checkbox" name="rank" class="rank_chk">풀빌라</label>
+                                <div class="reservation">
+                                    <h3>예약유형</h3>
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx" id="reservaiton_type" type="checkbox"/>
+                                        <label class="cbx" for="reservaiton_type">
+                                            <span>
+                                                <svg width="12px" height="10px">
+                                                    <use xlink:href="#check-4"></use>
+                                                </svg>
+                                            </span>
+                                            <span>대실 예약</span>
+                                        </label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="facility">
-                                <h3>시설</h3>
-                                <dl class="contents">
-                                    <dt>공용시설</dt>
-                                    <dd class="public">
-                                        <label><input type="checkbox" name="public_facility" class="public_chk">사우나</label>
-                                        <label><input type="checkbox" name="public_facility" class="public_chk">수영장</label>
-                                        <label><input type="checkbox" name="public_facility" class="public_chk">BBQ</label>
-                                        <label><input type="checkbox" name="public_facility" class="public_chk">레스토랑</label>
-                                        <label><input type="checkbox" name="public_facility" class="public_chk">피트니스</label>
-                                        <label><input type="checkbox" name="public_facility" class="public_chk">물놀이시설</label>
-                                    </dd>
-                                    <dt>객실 내 시설</dt>
-                                    <dd class="inside">
-                                        <label><input type="checkbox" name="inside_facility" class="inside_chk">스파/월풀</label>
-                                        <label><input type="checkbox" name="inside_facility" class="inside_chk">객실스파</label>
-                                        <label><input type="checkbox" name="inside_facility" class="inside_chk">미니바</label>
-                                        <label><input type="checkbox" name="inside_facility" class="inside_chk">와이파이</label>
-                                        <label><input type="checkbox" name="inside_facility" class="inside_chk">에어컨</label>
-                                        <label><input type="checkbox" name="inside_facility" class="inside_chk">욕실용품</label>
-                                        <label><input type="checkbox" name="inside_facility" class="inside_chk">객실샤워실</label>
-                                        <label><input type="checkbox" name="inside_facility" class="inside_chk">개인콘센트</label>
-                                    </dd>
-                                    <dt>기타시설</dt>
-                                    <dd class="ect">
-                                        <label><input type="checkbox" name="ect_facility" class="ect_chk">조식포함</label>
-                                        <label><input type="checkbox" name="ect_facility" class="ect_chk">무료주차</label>
-                                        <label><input type="checkbox" name="ect_facility" class="ect_chk">반려견동반</label>
-                                        <label><input type="checkbox" name="ect_facility" class="ect_chk">사우나/찜질방</label>
-                                        <label><input type="checkbox" name="ect_facility" class="ect_chk">객실내취사</label>
-                                        <label><input type="checkbox" name="ect_facility" class="ect_chk">픽업가능</label>
-                                        <label><input type="checkbox" name="ect_facility" class="ect_chk">캠프파이어</label>
-                                    </dd>
-                                </dl>
+                                <div class="rank">
+                                    <h3>등급</h3>
+                                    <div class="chk_wrap">
+                                        <label><input type="checkbox" name="rank" class="rank_chk"><span>5성급</span></label>
+                                        <label><input type="checkbox" name="rank" class="rank_chk"><span>4성급</span></label>
+                                        <label><input type="checkbox" name="rank" class="rank_chk"><span>블랙</span></label>
+                                        <label><input type="checkbox" name="rank" class="rank_chk"><span>풀빌라</span></label>
+                                    </div>
+                                </div>
+                                <div class="facility">
+                                    <h3>시설</h3>
+                                    <dl class="contents">
+                                        <dt>공용시설</dt>
+                                        <dd class="public">
+                                            <label><input type="checkbox" name="public_facility" class="public_chk"><span>사우나</span></label>
+                                            <label><input type="checkbox" name="public_facility" class="public_chk"><span>수영장</span></label>
+                                            <label><input type="checkbox" name="public_facility" class="public_chk"><span>BBQ</span></label>
+                                            <label><input type="checkbox" name="public_facility" class="public_chk"><span>레스토랑</span></label>
+                                            <label><input type="checkbox" name="public_facility" class="public_chk"><span>피트니스</span></label>
+                                            <label><input type="checkbox" name="public_facility" class="public_chk"><span>물놀이시설</span></label>
+                                        </dd>
+                                        <dt>객실 내 시설</dt>
+                                        <dd class="inside">
+                                            <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>스파/월풀</span></label>
+                                            <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>객실스파</span></label>
+                                            <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>미니바</span></label>
+                                            <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>와이파이</span></label>
+                                            <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>에어컨</span></label>
+                                            <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>욕실용품</span></label>
+                                            <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>객실샤워실</span></label>
+                                            <label><input type="checkbox" name="inside_facility" class="inside_chk"><span>개인콘센트</span></label>
+                                        </dd>
+                                        <dt>기타시설</dt>
+                                        <dd class="ect">
+                                            <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>조식포함</span></label>
+                                            <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>무료주차</span></label>
+                                            <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>반려견동반</span></label>
+                                            <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>사우나/찜질방</span></label>
+                                            <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>객실내취사</span></label>
+                                            <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>픽업가능</span></label>
+                                            <label><input type="checkbox" name="ect_facility" class="ect_chk"><span>캠프파이어</span></label>
+                                        </dd>
+                                    </dl>
+                                </div>
                             </div>
                         </fieldset>
                     </div>
                     <!-- 상단 우측 결과 숙소 리스트 -->
                     <div id="room_container">
                         <div class="page_wrap"><!-- 페이지 1 -->
-                            <ul class="page">
-                                <li>
-                                    <a href="#" class="room">
-                                        <div class="photo"><img src="#" alt=""></div>
-                                        <div class="contents">
-                                            <div class="title_wrap">
-                                                <p class="type">호텔</p>
-                                                <h2 class="title"><em class="speical"><!-- js ★파격특가★ --></em><span class="name">세인트존스 호텔</span></h2>
-                                                <p class="location">
-                                                    <span class="city">강릉시</span>
-                                                    <span class="more">강릉 강문해변 앞</span>
-                                                </p>
-                                                <p class="review">
-                                                    <span class="point_wrap"><!-- fa --> 9.0</span>
-                                                    <span class="comment">
-                                                        6,233명 평가
-                                                    </span>
-                                                </p> 
-                                            </div>
-                                            <div class="price_info">
-                                                <p class="coupon">쿠폰 적용시</p>
-                                                <p class="price">
-                                                    <em class="now">159,000<span>원</span></em><del class="origin">352,000원</del>
-                                                </p>
-                                                <p class="info"><!-- js 재고상황 --></p>
-                                            </div>
+                            <div class="page">
+                                <a href="#" class="room">
+                                    <div class="photo"></div>
+                                    <div class="contents">
+                                        <div class="title_wrap">
+                                            <p class="type">호텔</p>
+                                            <h2 class="title"><em class="speical"><!-- js ★파격특가★ --></em><span class="name">세인트존스 호텔</span></h2>
+                                            <p class="location">
+                                                <span class="city">강릉시</span>
+                                                <span class="more">강릉 강문해변 앞</span>
+                                            </p>
+                                            <p class="review">
+                                                <span class="point_wrap"><i class="fa-solid fa-star"></i>9.0</span>
+                                                <span class="comment">
+                                                    6,233명 평가
+                                                </span>
+                                            </p> 
                                         </div>
-                                    </a>
-                                </li>
+                                        <div class="price_info">
+                                            <p class="price">
+                                                <del class="origin">352,000원</del>
+                                                <span class="coupon">쿠폰 적용시</span>
+                                                <em class="now">159,000<span class="won">원</span><span class="day">/1박</span></em>
+                                            </p>
+                                            <p class="info">이 가격으로 남은 객실 1개</p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <!-- js / 한 페이지에 room 20개 배치 -->
-                            </ul>
+                            </div>
                             <!-- js / 페이지 5개이상 추가 -->
                         </div>
                         <div class="pagination">
