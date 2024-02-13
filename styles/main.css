@@ -1,108 +1,281 @@
-header {
-  background-color: aqua;
-  max-width: 1400px;
+main .main_container .main_wrap {
+  width: 1400px;
   margin: 0 auto;
+  position: relative;
 }
-header .header_wrap {
-  background-color: aquamarine;
-  margin: 30px 0;
+main .main_container .main_wrap h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  letter-spacing: 1.7px;
+  position: absolute;
+  top: 210px;
+}
+main .main_container .main_wrap .search_wrap {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 320px;
+  border-radius: 15px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_tap {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 25px 20px 0;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_tap h2 #kr_room {
+  padding: 0 10px 18px;
+  margin-right: 20px;
+  color: #f7323f;
+  border-bottom: 2px solid #f7323f;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_tap h2 #over_room {
+  padding: 0 10px 18px;
+  color: #999;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 4px 14px;
+  margin-right: 10px;
+  width: 450px;
+  height: 48px;
+  position: relative;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail .user_search i {
+  color: #999;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail .user_search #search_input {
+  padding: 10px;
+  width: 95%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail .user_search #search_input::-moz-placeholder {
+  color: #d6d6d6;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail .user_search #search_input::placeholder {
+  color: #d6d6d6;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking {
+  display: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  width: 100%;
+  position: absolute;
+  top: 55px;
+  left: 0;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #f7323f;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking ol li {
+  padding: 10px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking ol li em {
+  font-weight: 600;
+  width: 30px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking ol li:last-child {
+  padding-bottom: 0;
+}
+main .main_container .main_wrap .search_wrap #search_frm .calendar_detail {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .calendar_date {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 4px 14px;
+  margin-right: 10px;
+  width: 400px;
+  height: 48px;
+}
+main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .calendar_date i {
+  color: #999;
+  margin-right: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .calendar_date span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select {
+  display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .num_view #num_select {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 4px 14px;
+  margin-right: 10px;
+  width: 350px;
+  height: 48px;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .num_view #num_select i {
+  color: #999;
+  margin-right: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .num_view #num_select span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .num_view #num_select span span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 0 20px;
+  width: 100%;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 5px;
 }
-header .header_wrap nav {
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div p {
+  font-size: 0.813rem;
+  color: #999;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div div {
   display: flex;
-  flex-flow: row nowrap;
 }
-header .header_wrap nav .kr_travel .kr_travel_box {
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 20px 20px 10px;
-  background: #fff;
-  position: absolute;
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div div button i {
+  font-size: 30px;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #d6d6d6;
+  background-color: #333;
 }
-header .header_wrap nav .kr_travel .kr_travel_box a {
-  margin-bottom: 10px;
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div div span {
+  padding: 10px 20px;
+  font-size: 1.25rem;
 }
-header .header_wrap nav .over_travel .over_travel_box {
-  display: flex;
-  flex-flow: row nowrap;
-  background: #fff;
-  width: 100%;
-  position: absolute;
-  padding: 20px 20px 10px;
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_room {
+  border-bottom: 1px solid #d6d6d6;
 }
-header .header_wrap nav .over_travel .over_travel_box .japan {
-  margin: 10px;
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_room h3 {
+  padding: 10px 5px;
 }
-header .header_wrap nav .over_travel .over_travel_box .japan h3 {
-  margin-bottom: 10px;
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_room .user_room_select .num_minus i {
+  background-color: #d6d6d6;
+  color: #f5f5f5;
 }
-header .header_wrap nav .over_travel .over_travel_box .japan .japan_detail {
-  display: flex;
-  flex-flow: column nowrap;
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_adult_left {
+  padding-bottom: 0;
 }
-header .header_wrap nav .over_travel .over_travel_box .japan .japan_detail a {
-  margin-bottom: 10px;
-}
-header .header_wrap nav .over_travel .over_travel_box .asia {
-  margin: 10px;
-}
-header .header_wrap nav .over_travel .over_travel_box .asia h3 {
-  margin-bottom: 10px;
-}
-header .header_wrap nav .over_travel .over_travel_box .asia .asia_detail {
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_adult_left .user_adult {
   display: flex;
   flex-flow: column nowrap;
-  padding: 10px;
+  align-items: flex-start;
 }
-header .header_wrap nav .over_travel .over_travel_box .asia .asia_detail a {
-  margin-bottom: 10px;
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_children_left {
+  border-bottom: 1px solid #d6d6d6;
 }
-header .header_wrap nav .over_travel .over_travel_box .europe_us {
-  margin: 10px;
-}
-header .header_wrap nav .over_travel .over_travel_box .europe_us h3 {
-  margin-bottom: 10px;
-}
-header .header_wrap nav .over_travel .over_travel_box .europe_us .europe_us_detail {
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_children_left .user_children {
   display: flex;
   flex-flow: column nowrap;
-  padding: 10px;
+  align-items: flex-start;
 }
-header .header_wrap nav .over_travel .over_travel_box .europe_us .europe_us_detail a {
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_children_left .user_children h3 {
+  margin-bottom: 5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_notice {
+  background-color: #f5f5f5;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_notice ul li {
+  font-size: 0.75rem;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_age {
   margin-bottom: 10px;
-}
-header .header_wrap nav .popular_search .search_container {
-  display: flex;
-  flex-flow: row nowrap;
-}
-header .header_wrap nav .popular_search .search_container .search_name {
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 10px;
-  background: #fff;
-}
-header .header_wrap nav .mypage_warp_nonmember .menu span {
-  background-image: url(../images/sprite/side_sprite1x.png);
-  background-repeat: no-repeat;
-  width: 64px;
-  height: 64px;
-}
-header .header_wrap nav .mypage_warp_nonmember .menu .mypage_img {
-  background-position-x: 0;
-}
-header .header_wrap nav .mypage_warp_nonmember .mypage_detail {
-  display: flex;
-  flex-flow: column nowrap;
-}
-header .header_wrap nav .mypage_warp_member {
   display: none;
 }
-header .header_wrap nav .mypage_warp_member .mypage_detail {
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_age .user_children_age {
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 140px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #f5f5f5;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_age .user_children_age .children_age_select {
+  width: 140px;
+  height: 160px;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-flow: column nowrap;
-}
-header .nav_wrap_m {
+  align-items: flex-start;
+  position: absolute;
+  top: -170px;
+  right: 0px;
   display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_age .user_children_age .children_age_select span {
+  font-size: 0.938rem;
+}
+main .main_container .main_wrap .search_wrap #search_frm .search_btn #search_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7323f;
+  border-radius: 10px;
+  color: #fff;
+  padding: 4px 14px;
+  width: 120px;
+  height: 48px;
+}
+main .main_bg {
+  background-image: url(https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  height: 530px;
 }/*# sourceMappingURL=main.css.map */
