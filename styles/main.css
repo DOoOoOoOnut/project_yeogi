@@ -163,7 +163,6 @@ main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_selec
   position: absolute;
   top: 55px;
   left: 0;
-  display: none;
 }
 main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div {
   display: flex;
