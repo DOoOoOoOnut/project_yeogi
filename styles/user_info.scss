@@ -48,6 +48,9 @@ main {
                     line-height: 29px;
                     font-size: $title24;
                     font-weight: $weight700;
+                    span {
+                        @extend h1;
+                    }
                 }
                 .info {
                     margin-bottom: 12px;
@@ -66,12 +69,9 @@ main {
                     }
                     
                 }
-            }
-            // 예약내역
-            .reservation {
-                .travel_reservation_history {
-                    margin-bottom: 40px;
-                    .kr_world_btn {
+                .container_btn {
+                    .wrap_btn {
+                        position: relative;
                         .btn {
                             font-weight: $weight700;
                             cursor: pointer;
@@ -79,12 +79,12 @@ main {
                             line-height: 52px;
                             padding: 0 16px;
                         }
-                        .kr {
+                        .btn:first-child {
                             position: relative;
                             margin-right: 24px;
                             color: #1273e4;
                         }
-                        .kr::after {
+                        .btn:first-child::after {
                             background-color: #1273e4;
                             content: ''; display: block;
                             height: 2px; 
@@ -92,11 +92,19 @@ main {
                             width: 100%;
                         }
                     }
-                    .kr_world_btn::after {
+                    .wrap_btn::after {
+                        position: absolute; bottom: 0; left: 0;
                         background-color: #f5f5f5;
                         content: ''; display: block;
                         height: 1px; width: 100%;
                     }
+                }
+            }
+            // 예약내역
+            .reservation {
+                .container_btn {
+                    margin-bottom: 40px;
+                    
                     section {
                         @include flex-cncf;
                         margin-top: 20px;
@@ -196,6 +204,7 @@ main {
                     height: 100vh; width: 100vw;
                     margin: 0 auto;
                     display: flex; align-items: center; justify-content: center;
+                    display: none;
                     .popup_box {
                         background-color: #fff;
                         border-radius: 10px;
@@ -240,6 +249,45 @@ main {
                                 color: #fff;
                                 font-weight: $weight600;
                             }
+                        }
+                    }
+                }
+                section {
+                    .point_details_btn {
+                        margin-top: 20px;
+                        height: 44px;
+                        ul {
+                            @include flex-rnfc;
+                            li {
+                                margin-right: 6px;
+                                button {
+                                    border: 2px solid #ededed;
+                                    padding: 8px 16px;
+                                    cursor: pointer;
+                                    border-radius: 100px;
+                                    height: 32px;
+                                    font-size: $small13;
+                                    font-weight: $weight600;
+                                }
+                            }
+                            li:first-of-type button {
+                                background-color: #1273e4;
+                                color: #fff;
+                                border: 2px solid #1273e4;
+                            }
+                        }
+                    }
+                    .point_info_text {
+                        margin-top: 20px;
+                        height: 128px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        p {
+                            color: #999;
+                            margin-bottom: 8px;
+                            font-size: $title18;
+                            font-weight: 700;
                         }
                     }
                 }

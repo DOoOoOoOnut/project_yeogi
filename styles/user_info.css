@@ -46,7 +46,7 @@ main .container .wrap {
 main .container .wrap .contents {
   margin: 0 0 96px 50px;
 }
-main .container .wrap .contents h1 {
+main .container .wrap .contents h1, main .container .wrap .contents h1 span {
   margin: 16px 0 20px;
   line-height: 29px;
   font-size: 1.5rem;
@@ -68,22 +68,22 @@ main .container .wrap .contents .info p i[class*=info], main .container .wrap .u
   margin-right: 8px;
   color: #9aa9b8;
 }
-main .container .wrap .reservation .travel_reservation_history {
-  margin-bottom: 40px;
+main .container .wrap .contents .container_btn .wrap_btn {
+  position: relative;
 }
-main .container .wrap .reservation .travel_reservation_history .kr_world_btn .btn {
+main .container .wrap .contents .container_btn .wrap_btn .btn {
   font-weight: 700;
   cursor: pointer;
   height: 52px;
   line-height: 52px;
   padding: 0 16px;
 }
-main .container .wrap .reservation .travel_reservation_history .kr_world_btn .kr {
+main .container .wrap .contents .container_btn .wrap_btn .btn:first-child {
   position: relative;
   margin-right: 24px;
   color: #1273e4;
 }
-main .container .wrap .reservation .travel_reservation_history .kr_world_btn .kr::after {
+main .container .wrap .contents .container_btn .wrap_btn .btn:first-child::after {
   background-color: #1273e4;
   content: "";
   display: block;
@@ -93,14 +93,20 @@ main .container .wrap .reservation .travel_reservation_history .kr_world_btn .kr
   left: 0;
   width: 100%;
 }
-main .container .wrap .reservation .travel_reservation_history .kr_world_btn::after {
+main .container .wrap .contents .container_btn .wrap_btn::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   background-color: #f5f5f5;
   content: "";
   display: block;
   height: 1px;
   width: 100%;
 }
-main .container .wrap .reservation .travel_reservation_history section {
+main .container .wrap .reservation .container_btn {
+  margin-bottom: 40px;
+}
+main .container .wrap .reservation .container_btn section {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -111,19 +117,19 @@ main .container .wrap .reservation .travel_reservation_history section {
   padding-left: 24px;
   height: 200px;
 }
-main .container .wrap .reservation .travel_reservation_history section em, main .container .wrap .reservation .travel_reservation_history section .user_point .box .user_point_info em span, main .container .wrap .user_point .box .user_point_info em .reservation .travel_reservation_history section span {
+main .container .wrap .reservation .container_btn section em, main .container .wrap .reservation .container_btn section .user_point .box .user_point_info em span, main .container .wrap .user_point .box .user_point_info em .reservation .container_btn section span {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 21px;
 }
-main .container .wrap .reservation .travel_reservation_history section p, main .container .wrap .reservation .travel_reservation_history section .user_point .box .point_disappear p span, main .container .wrap .user_point .box .point_disappear p .reservation .travel_reservation_history section span {
+main .container .wrap .reservation .container_btn section p, main .container .wrap .reservation .container_btn section .user_point .box .point_disappear p span, main .container .wrap .user_point .box .point_disappear p .reservation .container_btn section span {
   color: #999;
   line-height: 17px;
   margin: 4px 0 16px;
   font-size: 0.875rem;
   font-weight: 400;
 }
-main .container .wrap .reservation .travel_reservation_history section a {
+main .container .wrap .reservation .container_btn section a {
   border-radius: 8px;
   height: 40px;
   width: 120px;
@@ -195,6 +201,7 @@ main .container .wrap .user_point .point_popup {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 main .container .wrap .user_point .point_popup .popup_box {
   background-color: #fff;
@@ -245,4 +252,44 @@ main .container .wrap .user_point .point_popup .popup_box .btn .close_btn {
   line-height: 18px;
   color: #fff;
   font-weight: 600;
+}
+main .container .wrap .user_point section .point_details_btn {
+  margin-top: 20px;
+  height: 44px;
+}
+main .container .wrap .user_point section .point_details_btn ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .container .wrap .user_point section .point_details_btn ul li {
+  margin-right: 6px;
+}
+main .container .wrap .user_point section .point_details_btn ul li button {
+  border: 2px solid #ededed;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 100px;
+  height: 32px;
+  font-size: 0.813rem;
+  font-weight: 600;
+}
+main .container .wrap .user_point section .point_details_btn ul li:first-of-type button {
+  background-color: #1273e4;
+  color: #fff;
+  border: 2px solid #1273e4;
+}
+main .container .wrap .user_point section .point_info_text {
+  margin-top: 20px;
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+main .container .wrap .user_point section .point_info_text p, main .container .wrap .user_point section .point_info_text .box .point_disappear p span, main .container .wrap .user_point .box .point_disappear p section .point_info_text span {
+  color: #999;
+  margin-bottom: 8px;
+  font-size: 1.125rem;
+  font-weight: 700;
 }/*# sourceMappingURL=user_info.css.map */
