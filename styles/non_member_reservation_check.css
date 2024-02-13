@@ -21,6 +21,29 @@
   color: #fff;
 }
 
+.reservaiton_num_copy {
+  width: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 16px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.reservaiton_num_copy .copy {
+  display: none;
+  background: #333;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+.reservaiton_num_copy .copy p {
+  font-size: 0.875rem;
+  color: #fff;
+}
+
 main {
   max-width: 1400px;
   margin: 0 auto;
