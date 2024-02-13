@@ -1,0 +1,396 @@
+.address_copy {
+  width: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 16px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.address_copy .copy {
+  display: none;
+  background: #333;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+.address_copy .copy p {
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.reservaiton_num_copy {
+  width: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 16px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.reservaiton_num_copy .copy {
+  display: none;
+  background: #333;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+.reservaiton_num_copy .copy p {
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main section {
+  margin: 0 auto;
+  width: 1000px;
+}
+main section .back {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+main section .back i {
+  padding: 0 20px 30px 0;
+}
+main section .reservation_detail_wrap h1 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+main section .reservation_detail_wrap .check_in {
+  display: flex;
+  align-items: center;
+  background: #1273e4;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+main section .reservation_detail_wrap .check_in p i {
+  color: #fff;
+}
+main section .reservation_detail_wrap .check_in p span {
+  font-size: 0.813rem;
+  color: #fff;
+  padding-left: 8px;
+}
+main section .reservation_detail_wrap .room_info {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 20px 0;
+}
+main section .reservation_detail_wrap .room_info .room_img img {
+  width: 160px;
+  border-radius: 5px;
+}
+main section .reservation_detail_wrap .room_info .info {
+  width: 100%;
+  padding: 5px 0 0 15px;
+}
+main section .reservation_detail_wrap .room_info .info .room_title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+main section .reservation_detail_wrap .room_info .info .room_title h2 {
+  font-size: 1.125rem;
+  color: #333;
+  font-weight: 600;
+}
+main section .reservation_detail_wrap .room_info .info .room_title a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  padding: 9px 12px;
+  background: #ebebeb;
+  border-radius: 8px;
+}
+main section .reservation_detail_wrap .room_info .info .room_title a:hover {
+  background: #e1e1e1;
+}
+main section .reservation_detail_wrap .room_info .info .room_address {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 10px;
+}
+main section .reservation_detail_wrap .room_info .info .room_address p {
+  font-size: 0.875rem;
+  color: #999;
+}
+main section .reservation_detail_wrap .room_info .info .room_address a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1273e4;
+  padding-left: 10px;
+}
+main section .reservation_detail_wrap .room_info .info .room_address a:hover {
+  text-decoration: underline;
+}
+main section .reservation_detail_wrap .container .room_detail {
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid #f5f5f5;
+}
+main section .reservation_detail_wrap .container .room_detail .room_type {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main section .reservation_detail_wrap .container .room_detail .room_type span {
+  font-size: 0.875rem;
+  color: #999;
+  padding-bottom: 20px;
+}
+main section .reservation_detail_wrap .container .room_detail .room_type_result p {
+  font-size: 0.875rem;
+  color: #333;
+  padding-bottom: 20px;
+}
+main section .reservation_detail_wrap .container .room_detail .room_type_result p em {
+  font-size: 0.625rem;
+  color: #49627A;
+  padding: 2px 8px;
+  background: #f5f7fa;
+  border-radius: 25%;
+  margin: 0 10px 0 15px;
+}
+main section .reservation_detail_wrap .container .room_detail .room_type_result .stick {
+  padding-bottom: 50px;
+  display: flex;
+}
+main section .reservation_detail_wrap .container .room_detail .room_type_result .stick p {
+  font-size: 0.875rem;
+  color: #333;
+  padding: 0 15px;
+}
+main section .reservation_detail_wrap .container .room_detail .room_type_result .stick a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1273e4;
+}
+main section .reservation_detail_wrap .container .room_detail .room_type_result .stick a:hover {
+  text-decoration: underline;
+}
+main section .reservation_detail_wrap .container .reservation_info {
+  border-bottom: 1px solid #f5f5f5;
+}
+main section .reservation_detail_wrap .container .reservation_info h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  padding: 20px 0;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box {
+  display: flex;
+  flex-flow: row nowrap;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num span {
+  font-size: 0.875rem;
+  color: #999;
+  padding-bottom: 20px;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num .reservation_num::-moz-placeholder {
+  color: #f5f5f5;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num .reservation_num::placeholder {
+  color: #f5f5f5;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result {
+  margin-bottom: 30px;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .stick {
+  display: flex;
+  flex-flow: row nowrap;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .stick p {
+  font-size: 0.875rem;
+  color: 333;
+  padding: 0 10px 20px 15px;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .stick a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1273e4;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .stick a:hover {
+  text-decoration: underline;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result p {
+  font-size: 0.875rem;
+  color: 333;
+  padding: 0 0 20px 15px;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .safe_num {
+  font-size: 0.875rem;
+  color: 333;
+}
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .safe_num em {
+  font-size: 0.75rem;
+  color: #999;
+}
+main section .reservation_detail_wrap .container .payment_info {
+  padding: 20px 0 40px 0;
+}
+main section .reservation_detail_wrap .container .payment_info .title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main section .reservation_detail_wrap .container .payment_info .title h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  padding: 20px 0;
+}
+main section .reservation_detail_wrap .container .payment_info .title a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  background: #ebebeb;
+  padding: 9px 12px;
+  border-radius: 6px;
+}
+main section .reservation_detail_wrap .container .payment_info .title a:hover {
+  background: #e1e1e1;
+}
+main section .reservation_detail_wrap .container .payment_info .payment {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_day {
+  width: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: #f5f7fa;
+  padding: 16px 20px;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_day .payment_left {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_day .payment_left span {
+  font-size: 0.875rem;
+  color: #999;
+  padding-bottom: 20px;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_day .payment_right {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: right;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_day .payment_right span {
+  font-size: 0.875rem;
+  color: #333;
+  padding-bottom: 20px;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_price {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 16px 20px;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_price .all_price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_price .all_price .payment_left {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_price .all_price .payment_left span {
+  font-size: 0.875rem;
+  color: #999;
+  padding: 0 0 20px 0;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_price .payment_right {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .payment_price .payment_right span {
+  font-size: 0.875rem;
+  color: #333;
+  padding-bottom: 20px;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .sum_price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-top: 1px solid #ebebeb;
+  padding: 20px 0;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .sum_price .price {
+  font-size: 0.875rem;
+  color: #999;
+}
+main section .reservation_detail_wrap .container .payment_info .payment .sum_price .all {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f45858;
+}
+main section .reservation_detail_wrap .container .reservation_cancel .cancel {
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 30px 0;
+}
+main section .reservation_detail_wrap .container .reservation_cancel .cancel .title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main section .reservation_detail_wrap .container .reservation_cancel .cancel .title h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 30px;
+}
+main section .reservation_detail_wrap .container .reservation_cancel .cancel .title a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f45858;
+  background: #FFEBEB;
+  padding: 9px 12px;
+  border-radius: 6px;
+}
+main section .reservation_detail_wrap .container .reservation_cancel .cancel .title a:hover {
+  background: #ffdada;
+}
+main section .reservation_detail_wrap .container .reservation_cancel .cancel p {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f45858;
+}
+main section .reservation_detail_wrap .container .reservation_cancel .policy {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+main section .reservation_detail_wrap .container .reservation_cancel .policy p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+}
+main section .reservation_detail_wrap .container .reservation_cancel .policy a i {
+  color: #999;
+}/*# sourceMappingURL=non_member_reservation_check.css.map */

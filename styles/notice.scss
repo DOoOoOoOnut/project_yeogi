@@ -1,7 +1,7 @@
 @import 'common';
 
 main {
-    max-width: $desktop;
+    max-width: $desktop; margin: $margin0;
     section {
         width: 800px;
         margin: $margin0;
@@ -39,6 +39,7 @@ main {
                                     font-size: $defalt16;
                                     color: #333333;
                                     padding-left: 20px;
+                                    font-weight: $weight500;
                                 }
                             }
                             .right {
