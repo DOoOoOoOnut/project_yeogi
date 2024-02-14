@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="widdt=device-widdt, initial-scale=1.0">
-    <title>detail</title>
+    <title>상세페이지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/detail.css">
 </head>
 <body>
     <!-- popup -->
@@ -204,14 +207,16 @@
     </div>
     <main>
         <nav>
-            <ul class="main_menu">
-                <li><a href="#" class="move">개요</a></li>
-                <li><a href="#" class="move">서비스 및 부대시설</a></li>
-                <li><a href="#" class="move">객실</a></li>
-                <li><a href="#" class="move">위치</a></li>
-                <li><a href="#" class="move">리뷰</a></li>
-                <li><a href="#" class="move">객실선택</a></li>
-            </ul>
+            <div class="main_menu">
+                <a href="#" class="main_move">개요</a>
+                <a href="#" class="move">서비스 및 부대시설</a>
+                <a href="#" class="move">객실</a>
+                <a href="#" class="move">위치</a>
+                <a href="#" class="move">리뷰</a>
+            </div>
+            <div class="select">
+                <button type="button" id="select_room">객실선택</button>
+            </div>
         </nav>
         <section>
             <div class="room">

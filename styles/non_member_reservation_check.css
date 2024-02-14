@@ -21,8 +21,13 @@
   color: #fff;
 }
 
+<<<<<<< HEAD
+.reservation_num_copy {
+  width: 300px;
+=======
 .reservaiton_num_copy {
   width: 250px;
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
   display: flex;
   flex-flow: column nowrap;
   padding: 16px;
@@ -32,18 +37,532 @@
   top: 50%;
   transform: translateX(-50%);
 }
+<<<<<<< HEAD
+.reservation_num_copy .copy {
+=======
 .reservaiton_num_copy .copy {
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
   display: none;
   background: #333;
   border-radius: 5px;
   text-align: center;
   padding: 10px;
 }
+<<<<<<< HEAD
+.reservation_num_copy .copy p {
+=======
 .reservaiton_num_copy .copy p {
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
   font-size: 0.875rem;
   color: #fff;
 }
 
+<<<<<<< HEAD
+.purchase_information {
+  display: none;
+}
+.purchase_information .bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 950;
+  position: fixed;
+}
+.purchase_information .bg .information_container {
+  width: 600px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.purchase_information .bg .information_container .title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.purchase_information .bg .information_container .title .close_btn i {
+  width: 20px;
+}
+.purchase_information .bg .information_container .title h2 {
+  color: #333;
+  font-size: 1rem;
+  padding: 10px 0 16px 40%;
+}
+.purchase_information .bg .information_container .information_box p img {
+  width: 100%;
+  height: 100%;
+}
+.purchase_information .bg .information_container .information_box h3 {
+  font-size: 1.125rem;
+  color: #333;
+  padding: 30px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.purchase_information .bg .information_container .information_box .info .date {
+  padding: 20px 0;
+}
+.purchase_information .bg .information_container .information_box .info .date dt {
+  font-size: 0.938rem;
+  color: #49627A;
+  padding: 5px 0;
+}
+.purchase_information .bg .information_container .information_box .info .date dd {
+  font-size: 0.938rem;
+  color: #707070;
+  padding: 5px 0;
+}
+.purchase_information .bg .information_container .information_box .info .use {
+  padding: 20px 0;
+}
+.purchase_information .bg .information_container .information_box .info dt {
+  font-size: 0.938rem;
+  color: #556370;
+  padding-bottom: 5px;
+}
+.purchase_information .bg .information_container .information_box .info dd {
+  font-size: 0.938rem;
+  color: rgba(0, 0, 0, 0.4784313725);
+  padding: 5px 0;
+  line-height: 1.5;
+}
+.purchase_information .bg .information_container .information_box .info .re_reservation {
+  font-size: 1.125rem;
+  color: #fff;
+  background: #1273e4;
+  padding: 10px 20px;
+  display: block;
+  text-align: center;
+  border-radius: 6px;
+}
+.purchase_information .bg .information_container .information_box .info .re_reservation:hover {
+  opacity: 90%;
+}
+
+.proof_payment {
+  display: none;
+}
+.proof_payment .bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 950;
+  position: fixed;
+}
+.proof_payment .bg .proof {
+  width: 350px;
+  height: 305px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.proof_payment .bg .proof .title h2 {
+  font-size: 1.125rem;
+  color: #333;
+  padding: 12px 0;
+}
+.proof_payment .bg .proof .title p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+}
+.proof_payment .bg .proof a {
+  font-size: 1rem;
+  color: #fff;
+  background: #1273e4;
+  padding: 15px 20px;
+  display: block;
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+}
+.proof_payment .bg .proof a:hover {
+  opacity: 90%;
+}
+.proof_payment .bg .proof .close {
+  color: rgba(0, 0, 0, 0.5607843137);
+  background: #fff;
+}
+.proof_payment .bg .transaction_detail {
+  width: 350px;
+  height: 270px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.proof_payment .bg .transaction_detail p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 5px 0;
+}
+.proof_payment .bg .transaction_detail label {
+  padding: 20px 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.proof_payment .bg .transaction_detail label span {
+  font-size: 0.813rem;
+  color: #707070;
+  margin: 5px 0;
+}
+.proof_payment .bg .transaction_detail label #email {
+  background: #fff;
+  border: 1px solid #f7323f;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+.proof_payment .bg .transaction_detail label .error {
+  font-size: 0.75rem;
+  color: #f45858;
+}
+.proof_payment .bg .transaction_detail .send_cancel {
+  text-align: center;
+  width: 100%;
+}
+.proof_payment .bg .transaction_detail .send_cancel #cancel {
+  font-size: 1rem;
+  color: #333;
+  padding: 10px 65px;
+  background: #ebebeb;
+  border-radius: 6px;
+}
+.proof_payment .bg .transaction_detail .send_cancel #send {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.1607843137);
+  padding: 10px 65px;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+.room_policy {
+  display: none;
+}
+.room_policy .bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 950;
+  position: fixed;
+}
+.room_policy .bg .policy {
+  width: 390px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+}
+.room_policy .bg .policy .title {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 15px 10px;
+  position: sticky;
+}
+.room_policy .bg .policy .title a i {
+  width: 14px;
+}
+.room_policy .bg .policy .title h2 {
+  font-size: 1rem;
+  color: #333;
+  padding-left: 30%;
+}
+.room_policy .bg .policy .policy_container {
+  overflow-y: auto;
+  padding: 0 20px;
+  max-height: 740px;
+}
+.room_policy .bg .policy .policy_container .info p {
+  display: flex;
+  align-items: center;
+  background: #1273e4;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.room_policy .bg .policy .policy_container .info p i {
+  color: #fff;
+}
+.room_policy .bg .policy .policy_container .info p span {
+  font-size: 0.813rem;
+  color: #fff;
+  padding-left: 10px;
+}
+.room_policy .bg .policy .policy_container dl {
+  padding: 31px 24px 29px;
+}
+.room_policy .bg .policy .policy_container dl dt {
+  font-size: 0.938rem;
+  color: #556370;
+  padding: 10px 0;
+}
+.room_policy .bg .policy .policy_container dl dd {
+  font-size: 0.938rem;
+  color: rgba(0, 0, 0, 0.4784313725);
+  padding-bottom: 10px;
+}
+.room_policy .bg .policy .policy_container dl .spacing {
+  padding-bottom: 20px;
+}
+
+.reservation_check_cancel {
+  display: none;
+}
+.reservation_check_cancel .bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 950;
+  position: fixed;
+}
+.reservation_check_cancel .bg .check_cancel {
+  width: 600px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+}
+.reservation_check_cancel .bg .check_cancel .title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.reservation_check_cancel .bg .check_cancel .title h2 {
+  font-size: 1rem;
+  color: #333;
+}
+.reservation_check_cancel .bg .check_cancel .wrap {
+  max-height: 722px;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .cancel_info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .cancel_info p {
+  width: 100%;
+  background: #f45858;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .cancel_info p i {
+  color: #fff;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .cancel_info p span {
+  font-size: 0.813rem;
+  color: #fff;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container p {
+  font-size: 1.125rem;
+  color: #333;
+  font-weight: 600;
+  padding: 15px 0;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container p em {
+  font-size: 1.125rem;
+  color: #f7323f;
+  font-weight: 600;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container h3 {
+  display: block;
+  font-size: 1.125rem;
+  color: #000;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .payment_date {
+  padding: 15px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .payment_date .payment {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .payment_date .payment span {
+  font-size: 0.875rem;
+  color: #999;
+  padding-bottom: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .payment_date .date {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: right;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .payment_date .date span {
+  font-size: 0.875rem;
+  color: #333;
+  padding-bottom: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .price_coupon {
+  padding: 15px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .price_coupon .coupon {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .price_coupon .coupon span {
+  font-size: 0.875rem;
+  color: #999;
+  padding-bottom: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .price_coupon .coupon_use {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: right;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .price_coupon .coupon_use span {
+  font-size: 0.875rem;
+  color: #333;
+  padding-bottom: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .all_price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .all_price span {
+  font-size: 0.875rem;
+  color: #999;
+  padding: 10px 0;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .price_container .all_price .price {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f45858;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info {
+  background: #f45858;
+  padding: 12px 24px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 16px 0;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .payment_info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 20px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .payment_info .payment {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .payment_info .payment span {
+  font-size: 0.875rem;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .payment_info .refund {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: right;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .payment_info .refund span {
+  font-size: 0.875rem;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .return_point {
+  padding-top: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .return_point .return {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .return_point .return span {
+  font-size: 0.875rem;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .return_point .point {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: right;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .refund_info .return_point .point span {
+  font-size: 0.875rem;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .cancellation {
+  padding: 20px 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .cancellation span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #707070;
+  padding-bottom: 15px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .cancellation span em {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #f45858;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .close_progress #close {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  background: #ebebeb;
+  padding: 15px 100px;
+  border-radius: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .close_progress #close:hover {
+  opacity: 80%;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .close_progress #progress {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f45858;
+  background: #ffebeb;
+  padding: 15px 100px;
+  border-radius: 10px;
+}
+.reservation_check_cancel .bg .check_cancel .wrap .close_progress #progress:hover {
+  opacity: 80%;
+}
+
+=======
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
 main {
   max-width: 1400px;
   margin: 0 auto;

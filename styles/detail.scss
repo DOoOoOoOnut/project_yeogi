@@ -1,0 +1,39 @@
+@import 'common';
+.room_view_box {display: none;}
+.service_box {display: none;}
+.seller_box {display: none;}
+.pay_benefit {display: none;}
+main {
+    max-width: 1400px; margin: $margin0;
+    nav {
+        display: flex; flex-flow: row nowrap;
+        align-items: center;
+        .main_menu {
+            width: 100%;
+            display: flex; flex-flow: row nowrap;
+            align-items: center;
+            .main_move {
+                color: $mainColor-b;
+                border-bottom: 2px solid $mainColor-b;
+            }
+            .move {
+                color: #707070;
+            }
+            a {
+                font-size: $defalt16; font-weight: $weight500;
+                padding: 24px 16px;
+            }
+        }
+        .select {
+            width: 128px;
+            background: $mainColor-b;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: flex; justify-content: center;
+            #select_room {
+                color: #fff;
+                font-size: $subC14;
+            }
+        }
+    }
+}

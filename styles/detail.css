@@ -1,0 +1,55 @@
+.room_view_box {
+  display: none;
+}
+
+.service_box {
+  display: none;
+}
+
+.seller_box {
+  display: none;
+}
+
+.pay_benefit {
+  display: none;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main nav {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+main nav .main_menu {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+main nav .main_menu .main_move {
+  color: #1273e4;
+  border-bottom: 2px solid #1273e4;
+}
+main nav .main_menu .move {
+  color: #707070;
+}
+main nav .main_menu a {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 24px 16px;
+}
+main nav .select {
+  width: 128px;
+  background: #1273e4;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+main nav .select #select_room {
+  color: #fff;
+  font-size: 0.875rem;
+}/*# sourceMappingURL=detail.css.map */
