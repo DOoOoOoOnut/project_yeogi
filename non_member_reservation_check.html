@@ -39,7 +39,7 @@
                             <dd>· 체크인 : 02.03 토요일 14:00</dd>
                             <dd>· 체크아웃 : 02.04 일요일 11:00</dd>
                         </dl>
-                        <dl>
+                        <dl class="use">
                             <dt>숙소 이용안내</dt>
                             <dd>· 주차시설을 보유한 숙소입니다.(차량 이용시 숙소에 문의해 주세요.)</dd>
                             <dd>· 객실은 체크인 시 배정되며 사진과 다를 수 있습니다.</dd>
@@ -76,7 +76,7 @@
                 <label for="email">
                     <span>이메일</span>
                     <input type="email" name="email" id="email" placeholder="이메일을 입력하세요.">
-                    <span class="error_message"></span>
+                    <span class="error">이메일 주소를 정확히 입력해 주세요.</span>
                 </label>
                 <div class="send_cancel">
                     <button type="button" id="cancel">취소</button>
@@ -94,6 +94,9 @@
                     <h2>숙소 정보 및 정책</h2>
                 </div>
                 <div class="policy_container">
+                    <div class="info">
+                        <p><i class="fa-solid fa-circle-info"></i><span>숙소의 현재 정책 및 정보입니다. 예약 시의 정보와 상이<br>할 수 있습니다.</span></p>
+                    </div>
                     <dl>
                         <dt>주차장 정보</dt>
                         <dd>· 총 40대 주차 가능 주차 타워 보유</dd>
@@ -140,93 +143,95 @@
     <div class="reservation_check_cancel">
         <div class="bg">
             <div class="check_cancel">
-                <div title>
+                <div class="title">
                     <a href="#" class="close_btn"><i class="fa-solid fa-xmark"></i></a>
                     <h2>취소내용 확인</h2>
+                    <p></p>
                 </div>
-                <div class="cancel_container">
-                    <p><i class="fa-solid fa-circle-info"></i><span>취소 진행 전 반드시 취소 수수료의 총 환불 금액을 확인해주세요.</span></p>
-                    <h2>지금 예약 취소시 취소 수수료 <em class="price">0원</em>이 발생합니다.</h2>
-                </div>
-                <div class="price_info">
-                    <h2>결제 정보</h2>
-                    <div class="payment_date">
-                        <div class="payment">
-                            <span>결제 일시</span>
-                            <span>결제 수단</span>
+                <div class="wrap">
+                    <div class="cancel_info">
+                        <p><i class="fa-solid fa-circle-info"></i><span>취소 진행 전 반드시 취소 수수료의 총 환불 금액을 확인해주세요.</span></p>
+                    </div>
+                    <div class="price_container">
+                        <p>지금 예약 취소시 취소<br> 수수료 <em class="price">0원</em>이 발생합니다.</p>
+                        <h3>결제 정보</h3>
+                        <div class="payment_date">
+                            <div class="payment">
+                                <span>결제 일시</span>
+                                <span>결제 수단</span>
+                            </div>
+                            <div class="date">
+                                <span>2024-02-02(금)11:51</span>
+                                <span>신용/체크카드</span>
+                            </div>
                         </div>
-                        <div class="date">
-                            <span>2024-02-02(금)11:51</span>
-                            <span>신용/체크카드</span>
+                        <div class="price_coupon">
+                            <div class="coupon">
+                                <span>상품가격</span>
+                                <span>결제 시 포인트 사용</span>
+                                <span>결제 시 쿠폰 사용</span>
+                                <span>결제 시 상품권사용</span>
+                            </div>
+                            <div class="coupon_use">
+                                <span>256,500원</span>
+                                <span>-0P</span>
+                                <span>-0원</span>
+                                <span>-0원</span>
+                            </div>
+                        </div>
+                        <div class="all_price">
+                            <span>실 결제 금액</span>
+                            <span class="price">256,500원</span>
                         </div>
                     </div>
-                    <div class="price_coupon">
-                        <div class="coupon">
-                            <span>상품가격</span>
-                            <span>결제 시 포인트 사용</span>
-                            <span>결제 시 쿠폰 사용</span>
-                            <span>결제 시 상품권사용</span>
+                    <div class="refund_info">
+                        <h3>환불 예정 정보</h3>
+                        <div class="payment_info">
+                            <div class="payment">
+                                <span>결제금액</span>
+                                <span>취소 수수료 발생</span>
+                                <span>└ 상품권에서 차감</span>
+                                <span>└ 포인트에서 차감</span>
+                                <span>└ 현금에서 차감</span>
+                            </div>
+                            <div class="refund">
+                                <span>(취소)256,500원</span>
+                                <span>0원</span>
+                                <span>-0원</span>
+                                <span>-0P</span>
+                                <span>-0원</span>
+                            </div>
                         </div>
-                        <div class="coupon_use">
-                            <span>256,500원</span>
-                            <span>-0P</span>
-                            <span>-0원</span>
-                            <span>-0원</span>
-                        </div>
-                    </div>
-                    <div class="all_price">
-                        <span>실 결제 금액</span>
-                        <span>256,500원</span>
-                    </div>
-                </div>
-                <div class="refund_info">
-                    <h2>환불 예정 정보</h2>
-                    <div class="payment_info">
-                        <div class="payment">
-                            <span>결제금액</span>
-                            <span>취소 수수료 발생</span>
-                            <span>└ 상품권에서 차감</span>
-                            <span>└ 포인트에서 차감</span>
-                            <span>└ 현금에서 차감</span>
-                        </div>
-                        <div class="refund">
-                            <span>(취소)256,500원</span>
-                            <span>0원</span>
-                            <span>-0원</span>
-                            <span>-0P</span>
-                            <span>-0원</span>
+                        <div class="return_point">
+                            <div class="return">
+                                <span>포인트 환금</span>
+                                <span>상품권 환금</span>
+                                <span>환불방법</span>
+                                <span>최종 환불금액</span>
+                            </div>
+                            <div class="point">
+                                <span>0P</span>
+                                <span>0원</span>
+                                <span>신용/체크 카드 환불</span>
+                                <span>256,500원</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="return_point">
-                        <div class="return">
-                            <span>포인트 환금</span>
-                            <span>상품권 환금</span>
-                            <span>환불방법</span>
-                            <span>최종 환불금액</span>
-                        </div>
-                        <div class="point">
-                            <span>0P</span>
-                            <span>0원</span>
-                            <span>신용/체크 카드 환불</span>
-                            <span>256,500원</span>
-                        </div>
+                    <div class="cancellation">
+                        <span>· 취소 수수료가 발생활 경우 포인트 > 상품권 > 현금 순으로 차감됩니다. 실 결제금액에서<br> 현금에서 차감되는 취소 수수료를 뺀 금액이 결제 수단으로 환불 됩니다.</span>
+                        <span>· 취소 수수료는 판매가(상품가격) 기준으로 산정 됩니다.</span>
+                        <span>· 예약/결제 당시에 적용된 <em>취소/환불 규정</em>에 따라 취소 수수료가 계산됩니다.</span>
+                        <span>· 얘역/결제 시 사용한 포인트는 포인트로, 상품권은 해당 상품권의 잔액으로 복원됩니다.<br> 단, 취소수수료를 차감한 금액으로 복원될 수 있습니다. 포인트나 상품권 잔액은 취소에<br> 의한 복원 여부에상관없이 원 유효기간 등에 따라 잔액이 소멸될 수 있으니 주의 바랍니다.</span>
+                        <span>· 결제 수단이 휴대폰 결제인 경우 취소 시점에 따라 취소 수수료가 재승인 될 수 있습니다.</span>
+                        <span>· 휴대폰 전월 결제 건은 예약취소 후 예약자 본인 명의의 통장으로 환불처리 됩니다.</span>
+                        <span>· 환불은 예약 취소 후 PG사 승인 취소 기간에 따라 주말, 공휴일을 제외한 영업일 기준 최대 3~5일<br>소요 됩니다.</span>
                     </div>
-                </div>
-                <div class="cancellation">
-                    <span>· 취소 수수료가 발생활 경우 포인트 > 상품권 > 현금 순으로 차감됩니다. 실 결제금액에서 현금에<br>서 차감되는 취소 수수료를 뺀 금액이 결제 수단으로 환불 됩니다.</span>
-                    <span>· 취소 수수료는 판매가(상품가격) 기준으로 산정 됩니다.</span>
-                    <span>· 예약/결제 당시에 적용된 <em>취소/환불 규정</em>에 따라 취소 수수료가 계산됩니다.</span>
-                    <span>· 얘역/결제 시 사용한 포인트는 포인트로, 상품권은 해당 상품권의 잔액으로 복원됩니다. 단, 취소<br>수수료를 차감한 금액으로 복원될 수 있습니다. 포인트나 상품권 잔액은 취소에 의한 복원 여부에<br>상관없이 원 유효기간 등에 따라 잔액이 소멸될 수 있으니 주의 바랍니다.</span>
-                    <span>· 결제 수단이 휴대폰 결제인 경우 취소 시점에 따라 취소 수수료가 재승인 될 수 있습니다.</span>
-                    <span>· 휴대폰 전월 결제 건은 예약취소 후 예약자 본인 명의의 통장으로 환불처리 됩니다.</span>
-                    <span>· 환불은 예약 취소 후 PG사 승인 취소 기간에 따라 주말, 공휴일을 제외한 영업일 기준 최대 3~5일<br>소요 됩니다.</span>
-                </div>
-                <div class="close_progress">
-                    <button type="button" id="close">닫기</button>
-                    <button type="button" id="progress">취소 진행</button>
+                    <div class="close_progress">
+                        <button type="button" id="close">닫기</button>
+                        <button type="button" id="progress">취소 진행</button>
+                    </div>
                 </div>
             </div>
-            
         </div>
     </div>
     <main>
