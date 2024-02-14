@@ -6,10 +6,15 @@
 main {
     max-width: 1400px; margin: $margin0;
     nav {
+        max-width: 1400px;
         display: flex; flex-flow: row nowrap;
         align-items: center;
+        width: 100%;
+        position: fixed; z-index: 999;
+        background: #fff;
+        // border-bottom: 1px solid rgb(235 235 235);
         .main_menu {
-            width: 100%;
+            width: 1073px;
             display: flex; flex-flow: row nowrap;
             align-items: center;
             .main_move {
@@ -33,6 +38,91 @@ main {
             #select_room {
                 color: #fff;
                 font-size: $subC14;
+            }
+        }
+    }
+    section {
+        .room {
+            .photo {
+                display: flex; flex-flow: row nowrap;
+                align-items: center;
+                position: relative;
+                padding: 40px 0;
+                .main_photo {
+                    padding-right: 8px;
+                    img {
+                        width: 640px; height: 512px;
+                    }
+                }
+                .sub_photo {
+                    .top_photo {
+                        padding-bottom: 5px;
+                        .photo1 {
+                            padding-right: 5px;
+                            img {
+                                width: 272px; height: 252px;
+                            }
+                        }
+                        .photo2 {
+                            img {
+                                width: 272px; height: 252px;
+                            }
+                        }
+                    }
+                    .btm_photo {
+                        .photo3 {
+                            padding-right: 5px;
+                            img {
+                                width: 272px; height: 252px;
+                            }
+                        }
+                        .photo4 {
+                            img {
+                                width: 272px; height: 252px;
+                            }
+                        }
+                    }
+                }
+                .more_photo {
+                    position: absolute; right: 240px; bottom: 70px;
+                    font-size: $subC14;
+                    color: #333;
+                    background: #fff;
+                    padding: 10px 20px;
+                    border-radius: 25px;
+                    box-shadow:0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+                    i {
+                        width: 16px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .side {
+                .map {
+                    .mini_map {
+                        a {
+                            
+                        }
+                    }
+                    .adress {
+                        display: flex; flex-flow: row nowrap;
+                        padding: 20px;
+                        p {
+                            font-size: $subT15;
+                            color: #707070;
+                            line-height: 1.5;
+                        }
+                        a {
+                            font-size: $subC14;
+                            color: $mainColor-b;
+                            padding-left: 20px;
+                            i {
+                                color: $mainColor-b;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
