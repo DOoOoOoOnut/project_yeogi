@@ -310,7 +310,8 @@ main {
         //개별
         //이벤트
         .event_wrap {
-            padding:30px 0;
+            margin-top:30px;
+            margin-bottom:60px;
             .title_box {
                 @include flex-rnsc;
                 margin-bottom:15px;
@@ -368,7 +369,7 @@ main {
         }
         //국내 인기 여행지
         .kr_hot_travel_wrap {
-            padding:30px 0;
+            margin-bottom:50px;
             .box_btn {
                 position:relative;
                 div {
@@ -420,7 +421,7 @@ main {
         }
         //해외 인기 여행지
         .over_hot_travel_wrap {
-            padding:30px 0;
+            margin-bottom:50px;
             .box_btn {
                 position:relative;
                 div {
@@ -472,6 +473,7 @@ main {
         }
         //인기 추천 숙소
         .recommend_room_wrap {
+            margin-bottom:50px;
             .sub_menu_box {
                 margin-bottom:10px;
                 .sub_menu {
@@ -514,52 +516,64 @@ main {
             }
             .room_box {
                 overflow-x:hidden;
-                .room {
-                    @include flex-rnsc;
-                    width:100%;
+                .swiper-wrapper {
                     .swiper-slide {
-                        @include flex-cncf;
+                        @include flex-rnsc;
                         width:100%;
-                        .photo {
-                            margin-left:25px;
-                            width:calc(100% / 4);
-                            img {width:100%; border-radius:10px;}
-                        }
-                        .photo:first-child {margin-left:0;}
-                        .contents {
-                            .title_wrap {
-                                .type {font-size:$small11; color:#999;}
-                                .title {
-                                    .special {}
-                                    .name {font-size:$defalt16;}
-                                }
-                                .location {
-                                    .city {}
-                                    .more {font-size:$small13; color:#999;}
-                                }
-                                .review {
-                                    margin-bottom:15px;
-                                    .point_wrap {
-                                        background-color:#ffad0a;
-                                        padding:0 3px 3px 6px; border-radius:5px;
-                                        margin-right:5px;
-                                        i {font-size:$small11;}
-                                        .point {font-size:$small12;}
-                                    }
-                                    .comment {font-size:$small13; color:#999;}
-                                }
+                        .room {
+                            @include flex-cncf;
+                            width:100%;
+                            .photo {
+                                margin-left:25px;
+                                width:calc(100% / 4);
+                                img {width:100%; border-radius:10px;}
                             }
-                            .price_info {
-                                .coupon {font-size:$small12; color:#999;}
-                                .price {
-                                    .now {
-                                        font-size:$title18;
-                                        font-weight:600;
-                                        span {font-size:$subT15;}
+                            .photo:first-child {margin-left:0;}
+                            .contents {
+                                .title_wrap {
+                                    .type {
+                                        font-size:$small11; color:#999;
+                                        margin:10px 0 5px;
                                     }
-                                    .origin {
-                                        font-size:$subC14; color:#999;
-                                        text-decoration:line-through;
+                                    .title {
+                                        .special {}
+                                        .name {font-size:$defalt16; font-weight:$weight600;}
+                                    }
+                                    .location {
+                                        margin:3px 0 5px;
+                                        .city {}
+                                        .more {font-size:$small13; color:#999;}
+                                    }
+                                    .review {
+                                        margin-bottom:15px;
+                                        .point_wrap {
+                                            background-color:#ffad0a;
+                                            padding:0 1px 3px 4px; border-radius:5px;
+                                            margin-right:7px;
+                                            i {font-size:$small11;}
+                                            .point {
+                                                font-size:$small12;
+                                                font-weight:$weight600;
+                                            }
+                                        }
+                                        .comment {font-size:$small13; color:#999;}
+                                    }
+                                }
+                                .price_info {
+                                    .coupon {
+                                        font-size:$small12; color:#999;
+                                        margin-bottom:3px;
+                                    }
+                                    .price {
+                                        .now {
+                                            font-size:$title18;
+                                            font-weight:600;
+                                            span {font-size:$subT15;}
+                                        }
+                                        .origin {
+                                            font-size:$subC14; color:#999;
+                                            text-decoration:line-through;
+                                        }
                                     }
                                 }
                             }
@@ -569,11 +583,273 @@ main {
             }
         }
         //오늘 체크인 호텔 특가
-        .today_special_wrap {}
+        .today_special_wrap {
+            margin-bottom:50px;
+            .title_box {
+                @include flex-rnsc;
+                margin-bottom:15px;
+                .subj {}
+                a {
+                    i {color:$mainColor-b;}
+                }
+            }
+            .box_btn {
+                position:relative;
+                div {
+                    width:40px; display:block;
+                    i {
+                        @include flex-rncc;
+                        color:#333; background-color:#fff;
+                        width:40px; height:40px;
+                        border-radius:100%; cursor:pointer;
+                        box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
+                    }
+                }
+                .swiper-button-prev04 {
+                    position:absolute; left:-20px; top:90px; z-index:99;
+                    //js
+                    display:none;
+                }
+                .swiper-button-prev04::after {
+                    display:none;
+                }
+                .swiper-button-next04 {
+                    position:absolute; right:-20px; top:90px; z-index:99;
+                }
+                .swiper-button-next04::after {
+                    display:none;
+                }
+            }
+            .room_box {
+                overflow-x:hidden;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        @include flex-rnsc;
+                        width:100%;
+                        .room {
+                            @include flex-cncf;
+                            width:100%;
+                            .photo {
+                                margin-left:25px;
+                                width:calc(100% / 4);
+                                img {width:100%; border-radius:10px;}
+                            }
+                            .photo:first-child {margin-left:0;}
+                            .contents {
+                                .title_wrap {
+                                    .type {
+                                        font-size:$small11; color:#999;
+                                        margin:10px 0 5px;
+                                    }
+                                    .title {
+                                        .special {
+                                            font-size:$defalt16; font-weight:$weight600;
+                                            margin-right:5px;
+                                        }
+                                        .name {font-size:$defalt16; font-weight:$weight600;}
+                                    }
+                                    .location {
+                                        margin:3px 0 5px;
+                                        .city {font-size:$small13; color:#555;}
+                                        .more {font-size:$small13; color:#999;}
+                                    }
+                                    .review {
+                                        margin-bottom:15px;
+                                        .point_wrap {
+                                            background-color:#ffad0a;
+                                            padding:0 1px 3px 4px; border-radius:5px;
+                                            margin-right:7px;
+                                            i {font-size:$small11;}
+                                            .point {
+                                                font-size:$small12;
+                                                font-weight:$weight600;
+                                            }
+                                        }
+                                        .comment {font-size:$small13; color:#999;}
+                                    }
+                                }
+                                .price_info {
+                                    .coupon {
+                                        font-size:$small12; color:#999;
+                                        margin-bottom:3px;
+                                    }
+                                    .price {
+                                        .now {
+                                            font-size:$title18;
+                                            font-weight:600;
+                                            span {font-size:$subT15;}
+                                        }
+                                        .origin {
+                                            font-size:$subC14; color:#999;
+                                            text-decoration:line-through;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         //이번주 hot 인기 펜션
-        .hot_pension_wrap {}
+        .hot_pension_wrap {
+            margin-bottom:50px;
+            .title_box {
+                @include flex-rnsc;
+                margin-bottom:15px;
+                .subj {}
+                a {
+                    i {color:$mainColor-b;}
+                }
+            }
+            .box_btn {
+                position:relative;
+                div {
+                    width:40px; display:block;
+                    i {
+                        @include flex-rncc;
+                        color:#333; background-color:#fff;
+                        width:40px; height:40px;
+                        border-radius:100%; cursor:pointer;
+                        box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
+                    }
+                }
+                .swiper-button-prev05 {
+                    position:absolute; left:-20px; top:90px; z-index:99;
+                    //js
+                    display:none;
+                }
+                .swiper-button-prev05::after {
+                    display:none;
+                }
+                .swiper-button-next05 {
+                    position:absolute; right:-20px; top:90px; z-index:99;
+                }
+                .swiper-button-next05::after {
+                    display:none;
+                }
+            }
+            .room_box {
+                overflow-x:hidden;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        @include flex-rnsc;
+                        width:100%;
+                        .room {
+                            @include flex-cncf;
+                            width:100%;
+                            .photo {
+                                margin-left:25px;
+                                width:calc(100% / 4);
+                                img {width:100%; border-radius:10px;}
+                            }
+                            .photo:first-child {margin-left:0;}
+                            .contents {
+                                .title_wrap {
+                                    .type {
+                                        font-size:$small11; color:#999;
+                                        margin:10px 0 5px;
+                                    }
+                                    .title {
+                                        .special {
+                                            font-size:$defalt16; font-weight:$weight600;
+                                        }
+                                        .name {font-size:$defalt16; font-weight:$weight600;}
+                                    }
+                                    .location {
+                                        margin:3px 0 5px;
+                                        .city {font-size:$small13; color:#555;}
+                                        .more {font-size:$small13; color:#999;}
+                                    }
+                                    .review {
+                                        margin-bottom:15px;
+                                        .point_wrap {
+                                            background-color:#ffad0a;
+                                            padding:0 1px 3px 4px; border-radius:5px;
+                                            margin-right:7px;
+                                            i {font-size:$small11;}
+                                            .point {
+                                                font-size:$small12;
+                                                font-weight:$weight600;
+                                            }
+                                        }
+                                        .comment {font-size:$small13; color:#999;}
+                                    }
+                                }
+                                .price_info {
+                                    .coupon {
+                                        font-size:$small12; color:#999;
+                                        margin-bottom:3px;
+                                    }
+                                    .price {
+                                        .now {
+                                            font-size:$title18;
+                                            font-weight:600;
+                                            span {font-size:$subT15;}
+                                        }
+                                        .origin {
+                                            font-size:$subC14; color:#999;
+                                            text-decoration:line-through;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         //이번주 블랙 pick
-        .black_pick_wrap {}
+        .black_pick_wrap {
+            .title_box {
+                display:flex; flex-flow:column nowrap;
+                align-items:flex-start;
+                .subj {margin-bottom:10px;}
+                p {color:#999;}
+            }
+            .box_btn {
+                position:relative;
+                div {
+                    width:40px; display:block;
+                    i {
+                        @include flex-rncc;
+                        color:#333; background-color:#fff;
+                        width:40px; height:40px;
+                        border-radius:100%; cursor:pointer;
+                        box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
+                    }
+                }
+                .swiper-button-prev06 {
+                    position:absolute; left:-20px; top:90px; z-index:99;
+                    //js
+                    display:none;
+                }
+                .swiper-button-prev06::after {
+                    display:none;
+                }
+                .swiper-button-next06 {
+                    position:absolute; right:-20px; top:90px; z-index:99;
+                }
+                .swiper-button-next06::after {
+                    display:none;
+                }
+            }
+            .black_pick_box {
+                overflow-x:hidden;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        @include flex-rnsc;
+                        width:100%;
+                        .black_pick_detail {
+                            margin-left:25px;
+                            width:calc(100% / 4);
+                            img {width:100%;}
+                        }
+                        .black_pick_detail:first-child {margin-left:0;}
+                    }
+                }
+            }
+        }
     }
     //앱광고
     .app_bnr {}
