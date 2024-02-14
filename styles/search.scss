@@ -23,10 +23,12 @@ main {
                         font-weight: $weight600;
                         cursor: pointer;
                         i[class*=arrow] {
-                            @extend .prev;
+                            @extend .now;
                             margin-right: 10px;
                         }
+                        span {@extend .now;}
                     }
+                    .now:hover span {color: #A2A4A2; text-decoration: underline;}
                     .open {
                         position: absolute; right: 0; top: 23px;
                         background-color: $mainColor-w;
@@ -71,7 +73,7 @@ main {
                                     background-size: contain;
                                     border-radius: 20px;
                                     line-height: 190px; text-align: center;
-                                    a {
+                                    #open_map_btn {
                                         color: $mainColor-w;
                                         background-color: $mainColor-b;
                                         border-radius: 10px; width: 128px; height: 40px;
@@ -80,7 +82,7 @@ main {
                                         font-size: $subC14; font-weight: $weight600;
                                     }
                                 }
-                                .open_bg {
+                                .open_wrap {
                                     background-color: rgba(0, 0, 0, 0.5);
                                     position: fixed; width: 100%; height: 100vh;
                                     top: 0; left: 0; z-index: 99;
@@ -89,33 +91,229 @@ main {
                                         width: 95%; height: 90vh;
                                         background-color: $mainColor-w;
                                         margin: 0 auto; border-radius: 20px;
+                                        overflow: hidden;
                                         .title {
                                             padding-bottom: 20px;
-                                            .back_btn {position: relative; left: 20px; top: 20px;
-                                            font-size: 25px;}
+                                            #close_map_btn {position: relative; left: 20px; top: 20px;
+                                            font-size: 25px; cursor: pointer;}
                                             h1 {text-align: center; font-weight: $weight600;}
                                         }
                                         .contents {
                                             width: 100%;
-                                            background-color: yellow;
                                             .left {
-                                                width: 30%;
+                                                width: 40%;
                                                 display: flex;
+                                                .open_filter > div {padding: 20px 0; border-bottom: 1px solid #e9e9e9}
                                                 .open_filter {
                                                     width: 50%;
-                                                    background-color: lightgreen;
+                                                    overflow-y: scroll;
+                                                    padding: 0 20px;
+                                                    .top {
+                                                        border-bottom: 0;
+                                                        padding-bottom: 0;
+                                                        @include flex-rnsc;
+                                                        h2 {font-size: $title18; font-weight: $weight600;}
+                                                        .reset {
+                                                            font-size: $subC14; color: #d6d6d6;
+                                                            i[class$=right] {margin-right: 5px;}
+                                                            cursor: default;
+                                                        }
+                                                        .active {
+                                                            color: #333;
+                                                            cursor: pointer;
+                                                        }
+                                                    }
+                                                    .soldout {
+                                                        transform: translateX(-7px);
+                                                        #soldout_chk {}
+                                                    }
+                                                    .type {
+                                                        h3 {}
+                                                        .contents {
+                                                            label {
+                                                                display: flex; align-items: center;
+                                                                margin-bottom: 20px;
+                                                                span {display: inline-block;}
+                                                                .circle {
+                                                                    border: 1px solid #999;
+                                                                    border-radius: 50%;
+                                                                    width: 18px; height: 18px;
+                                                                    margin-right: 10px;
+                                                                    cursor: pointer;
+                                                                }
+                                                                input[type=radio] {display: none;
+                                                                }
+                                                                input:checked + .circle {
+                                                                    background-color: $mainColor-b;
+                                                                    border-color: $mainColor-b;
+                                                                    animation: popup 0.1s;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .price_range {
+                                                        h3 {
+                                                            span {
+                                                                color: #999;
+                                                                font-size: $small12;
+                                                                margin-left: 5px;
+                                                            }
+                                                        }
+                                                    }
+                                                    .taste, .discount, .rank {
+                                                        h3 {}
+                                                        .chk_wrap {
+                                                            label {
+                                                                span {
+                                                                    border: 1.5px solid #d9d9d9;
+                                                                    display: inline-block;
+                                                                    border-radius: 20px; padding: 7px 16px;
+                                                                    margin-right: 5px; margin-bottom: 10px;
+                                                                    font-size: $small13; font-weight: $weight600;
+                                                                    cursor: pointer;
+                                                                }
+                                                                span:hover {background-color: #F5F5F5;}
+                                                                input[type=checkbox]:checked + span {
+                                                                    color: $mainColor-b;
+                                                                    border-color: #BAD7F6;
+                                                                    background-color: #F2F8FF;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .reservation {
+                                                        div {transform: translateX(-7px);}
+                                                    }
+                                                    .facility {
+                                                        h3 {}
+                                                        .contents {
+                                                            dt {
+                                                                color: #9aa9b8;
+                                                                font-weight: $weight600; font-size: $subT15;
+                                                                margin-bottom: 10px;
+                                                            }
+                                                            dd {
+                                                                margin-bottom: 20px;
+                                                                label {
+                                                                    span {
+                                                                        border: 1.5px solid #d9d9d9;
+                                                                        display: inline-block;
+                                                                        border-radius: 20px; padding: 7px 16px;
+                                                                        margin-right: 5px; margin-bottom: 10px;
+                                                                        font-size: $small13; font-weight: $weight600;
+                                                                        cursor: pointer;
+                                                                    }
+                                                                    span:hover {background-color: #F5F5F5;}
+                                                                    input[type=checkbox]:checked +  span {
+                                                                        color: $mainColor-b;
+                                                                        border-color: #BAD7F6;
+                                                                        background-color: #F2F8FF;
+                                                                    }
+                                                                }
+                                                            dd:last-child {margin-bottom: 0;}
+                                                            }
+                                                        }
+                                                    }
                                                 }
                                                 .result_list {
                                                     width: 50%;
-                                                    background-color: lightgrey;
-                                                    .room {
-                                                        display: block;
-                                                        background-color: lightcoral;
+                                                    padding: 25px 20px;
+                                                    overflow: auto;
+                                                    h2 {font-size: $subC14; margin-bottom: 20px;}
+                                                    .room_container {
+                                                        .room {
+                                                            display: flex; flex-flow: row nowrap;
+                                                            justify-content: space-between;
+                                                            border-bottom: 1px solid #eee;
+                                                            padding: 25px 0;
+                                                            .photo {
+                                                                width: calc(45% - 10px); height: 230px;
+                                                                border-radius: 20px;
+                                                                background: url(../images/search/accommodation1.jpeg);
+                                                                background-size: cover;
+                                                            }
+                                                            .contents {
+                                                                width: calc(55% - 10px);
+                                                                display: flex; flex-flow: column nowrap;
+                                                                justify-content: space-between;
+                                                                .title_wrap {
+                                                                    .type {
+                                                                        font-size: 0.688rem;
+                                                                        margin-bottom: 2px;
+                                                                    }
+                                                                    .title {
+                                                                        .special {}
+                                                                        .name {
+                                                                            font-size: $title18;
+                                                                            font-weight: $weight600;
+                                                                            margin-bottom: 5px;
+                                                                        }
+                                                                    }
+                                                                    .location {
+                                                                        margin-bottom: 3px;
+                                                                        .city {
+                                                                            font-size: $small13;
+                                                                            color: #707070;
+                                                                        }
+                                                                        .more {
+                                                                            font-size: $small13;
+                                                                            color: #999;
+                                                                        }
+                                                                    }
+                                                                    .review {
+                                                                        .point_wrap {
+                                                                            font-size: $small12;
+                                                                            background-color: #ffad0a; border-radius: 5px;
+                                                                            padding: 4px;
+                                                                            font-weight: $weight600;
+                                                                            display: inline-block;
+                                                                            margin-right: 3px;
+                                                                            i[class$=star] {
+                                                                                font-size: $small12;
+                                                                                margin-right: 3px;
+                                                                            }
+                                                                        }
+                                                                        .comment {
+                                                                            color: #707070;
+                                                                            font-size: $small13;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                .price_info {
+                                                                    text-align: right;
+                                                                    .coupon {
+                                                                        font-size: $small13;
+                                                                        color: #999;
+                                                                    }
+                                                                    .price {
+                                                                        .origin {
+                                                                            display: block;
+                                                                            text-decoration: line-through;
+                                                                            color: #999; font-size: $small13;
+                                                                        }
+                                                                        .now {
+                                                                            font-size: $title20;
+                                                                            font-weight: $weight600;
+                                                                            .won {
+                                                                                @extend .now
+                                                                            }
+                                                                            .day {
+                                                                                font-size: $small13;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    .info {
+                                                                        margin-top: 5px;
+                                                                        color: $subColor-r; font-size: $small11;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
-                                            #map {
-                                                width: 70%;
+                                            .big_map {
+                                                width: 60%; 
                                                 background-color: lightcoral;
                                             }
                                         }
@@ -132,9 +330,14 @@ main {
                                 padding-bottom: 0;
                                 @include flex-rnsc;
                                 h2 {font-size: $title18; font-weight: $weight600;}
-                                a {
+                                .reset {
                                     font-size: $subC14; color: #d6d6d6;
                                     i[class$=right] {margin-right: 5px;}
+                                    cursor: default;
+                                }
+                                .active {
+                                    color: #333;
+                                    cursor: pointer;
                                 }
                             }
                             .soldout {
