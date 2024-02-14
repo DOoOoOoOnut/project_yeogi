@@ -68,7 +68,7 @@ for(let i of filter_chk){
 
 //swiper
 
-const swiperEl = document.querySelector('swiper-container')
+/* const swiperEl = document.querySelector('swiper-container')
 
 const params = {
     injectStyles: [`
@@ -98,7 +98,7 @@ const params = {
 
     Object.assign(swiperEl, params)
 
-    swiperEl.initialize();
+    swiperEl.initialize(); */
 
 
 
