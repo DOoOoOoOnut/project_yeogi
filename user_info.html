@@ -8,6 +8,180 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/user_info.css">
     <link rel="stylesheet" href="./styles/user_info2.css">
+    <style>
+    /* 내 정보관리 - checkbox */
+    .checkbox-wrapper-6 .tgl {
+        display: none;
+    }
+    .checkbox-wrapper-6 .tgl,
+    .checkbox-wrapper-6 .tgl:after,
+    .checkbox-wrapper-6 .tgl:before,
+    .checkbox-wrapper-6 .tgl *,
+    .checkbox-wrapper-6 .tgl *:after,
+    .checkbox-wrapper-6 .tgl *:before,
+    .checkbox-wrapper-6 .tgl + .tgl-btn {
+        box-sizing: border-box;
+    }
+    .checkbox-wrapper-6 .tgl::-moz-selection,
+    .checkbox-wrapper-6 .tgl:after::-moz-selection,
+    .checkbox-wrapper-6 .tgl:before::-moz-selection,
+    .checkbox-wrapper-6 .tgl *::-moz-selection,
+    .checkbox-wrapper-6 .tgl *:after::-moz-selection,
+    .checkbox-wrapper-6 .tgl *:before::-moz-selection,
+    .checkbox-wrapper-6 .tgl + .tgl-btn::-moz-selection,
+    .checkbox-wrapper-6 .tgl::selection,
+    .checkbox-wrapper-6 .tgl:after::selection,
+    .checkbox-wrapper-6 .tgl:before::selection,
+    .checkbox-wrapper-6 .tgl *::selection,
+    .checkbox-wrapper-6 .tgl *:after::selection,
+    .checkbox-wrapper-6 .tgl *:before::selection,
+    .checkbox-wrapper-6 .tgl + .tgl-btn::selection {
+        background: none;
+    }
+    .checkbox-wrapper-6 .tgl + .tgl-btn {
+        outline: 0;
+        display: block;
+        width: 51px;
+        height: 31px;
+        position: relative;
+        cursor: pointer;
+        -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+    }
+    .checkbox-wrapper-6 .tgl + .tgl-btn:after,
+    .checkbox-wrapper-6 .tgl + .tgl-btn:before {
+        position: relative;
+        display: block;
+        content: "";
+        width: 27px;
+        height: 27px;
+    }
+    .checkbox-wrapper-6 .tgl + .tgl-btn:after {
+        left: 0;
+    }
+    .checkbox-wrapper-6 .tgl + .tgl-btn:before {
+        display: none;
+    }
+    .checkbox-wrapper-6 .tgl:checked + .tgl-btn:after {
+        left: 50%;
+    }
+    .checkbox-wrapper-6 .tgl-light + .tgl-btn {
+        background: #f0f0f0;
+        border-radius: 2em;
+        padding: 2px;
+        transition: all 0.4s ease;
+    }
+    .checkbox-wrapper-6 .tgl-light + .tgl-btn:after {
+        border-radius: 50%;
+        background: #fff;
+        transition: all 0.2s ease;
+    }
+    .checkbox-wrapper-6 .tgl-light:checked + .tgl-btn {
+        background: #1273e4;
+    }
+    /* 설정 */
+    .checkbox-wrapper-4 * {
+        box-sizing: border-box;
+    }
+    .checkbox-wrapper-4 .cbx {
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        padding: 6px 8px;
+        border-radius: 6px;
+        overflow: hidden;
+        transition: all 0.2s ease;
+        display: inline-block;
+    }
+    .checkbox-wrapper-4 .cbx:not(:last-child) {
+        margin-right: 6px;
+    }
+    .checkbox-wrapper-4 .cbx span {
+        float: left;
+        vertical-align: middle;
+        transform: translate3d(0, 0, 0);
+    }
+    .checkbox-wrapper-4 .cbx span:first-child {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        transform: scale(1);
+        border: 2px solid #cccfdb;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 1px rgba(0,16,75,0.05);
+        margin-right: 5px;
+    }
+    .checkbox-wrapper-4 .cbx span:first-child svg {
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 16px;
+        stroke-dashoffset: 16px;
+        transition: all 0.3s ease;
+        transition-delay: 0.1s;
+        transform: translate3d(0, 0, 0);
+    }
+    .checkbox-wrapper-4 .cbx span:last-child {
+        padding-left: 8px;
+        line-height: 18px;
+    }
+    .checkbox-wrapper-4 .cbx:hover span:first-child {
+        border-color: #07f;
+    }
+    .checkbox-wrapper-4 .inp-cbx {
+        position: absolute;
+        visibility: hidden;
+    }
+    .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
+        background: #07f;
+        border-color: #07f;
+        animation: wave-4 0.4s ease;
+    }
+    .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {
+        stroke-dashoffset: 0;
+    }
+    .checkbox-wrapper-4 .inline-svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        user-select: none;
+    }
+    @media screen and (max-width: 640px) {
+        .checkbox-wrapper-4 .cbx {
+        width: 100%;
+        display: inline-block;
+        }
+    }
+    @-moz-keyframes wave-4 {
+        50% {
+        transform: scale(0.9);
+        }
+    }
+    @-webkit-keyframes wave-4 {
+        50% {
+        transform: scale(0.9);
+        }
+    }
+    @-o-keyframes wave-4 {
+        50% {
+        transform: scale(0.9);
+        }
+    }
+    @keyframes wave-4 {
+        50% {
+        transform: scale(0.9);
+        }
+    }
+    </style>
 </head>
 <body>
     <main>
@@ -369,7 +543,7 @@
                                             <legend class="skip">내정보 확인 양식</legend>
                                             <label for="phone_last">휴데폰 번호</label>
                                             <input type="tel" name="phone_last" class="phone_last" maxlength="4" placeholder="휴데폰 뒷자리 4개 입력하세요." autofocus>
-                                            <p>가입하신 휴데폰 번호는 undefinded 에요</p>
+                                            <p>가입하신 휴데폰 번호는 0101234**** 에요</p>
                                         </fieldset>
                                     </form>
                                     <section>
@@ -378,22 +552,28 @@
                                     </section>
                                 </div>
                             </div>
-                            <button type="button" class="completion_btn">완료</button>
+                            <div class="btn">
+                                <button type="button" class="completion_btn">완료</button>
+                            </div>
                         </div>
                     </div>
                     <div class="access_device_management">
-                        <div class="top">
-                            <p>접속 기기 관리</p>
-                            <button type="button" class="all_logout">전체 로그아웃</button>
+                        <div class="contents_logout">
+                            <div class="top">
+                                <h2>접속 기기 관리</h2>
+                                <button type="button" class="all_logout_btn">전체 로그아웃</button>
+                            </div>
+                            <p>로그인 된 모든 기기에서 로그아웃 돼요.</p>
                         </div>
-                        <p>로그인 된 모든 기기에서 로그아웃 돼요.</p>
-                    </div>
-                    <!-- 로그아웃 팝업 -->
-                    <div class="popup_logout">
-                        <p>로그인된 모든 기기와 브라우서에서 로그아웃됩니다.로그아웃 하시겠습니까?</p>
-                        <div class="btn">
-                            <button type="button" class="cancellation">취소</button>
-                            <button type="button" class="completion_btn">확인</button>
+                        <!-- 로그아웃 팝업 -->
+                        <div class="popup_bg">
+                            <div class="popup_logout">
+                                <p>로그인된 모든 기기와 브라우서에서 로그아웃됩니다.로그아웃 하시겠습니까?</p>
+                                <div class="btn">
+                                    <button type="button" class="cancellation_btn">취소</button>
+                                    <button type="button" class="completion_btn">확인</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="user_withdrawal">
@@ -403,8 +583,10 @@
                 </div>
                 <!-- 설정 -->
                 <div class="contents setting">
-                    <h1>설정</h1>
-                    <p>특가, 쿠폰 등 이벤트 정보를 빠르게 알려드릴게요.</p>
+                    <div class="top">
+                        <h1>설정</h1>
+                        <p>특가, 쿠폰 등 이벤트 정보를 빠르게 알려드릴게요.</p>
+                    </div>
                     <div class="info">
                         <p>
                             <!-- font-awesome -->
@@ -416,25 +598,60 @@
                         <form action="#" method="get" id="marketint_form">
                             <fieldset>
                                 <legend class="skip">마케팅 알림 동의 양식</legend>
-                                <div class="marketing_notifications">
-                                    <input type="checkbox" name="agree_marketing" id="marketing_consent">
-                                    <label for="marketing_consent"><a href="marketing_consent.html">마케팅 알림 수신 동의</a></label>
+                                <div class="box marketing_notifications">
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx" id="morning" class="marketing_btn" type="checkbox"/>
+                                        <label class="cbx" for="morning">
+                                            <span>
+                                                <svg width="12px" height="10px">
+                                                    <use xlink:href="#check-4"></use>
+                                                </svg>
+                                            </span>
+                                            <a href="./marketing_consent.html">마케팅 알림 수신 동의(선택)</a>
+                                        </label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
+                                    <a href=""></a>
                                 </div>
-                                <div class="letter">
+                                <div class="box letter">
                                     <img src="./images/user_info/check_and.png" alt="">
-                                    <input type="checkbox" name="agree_marketing" id="letter_consent">
-                                    <label for="letter_consent">문자</label>
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx" id="letter_btn" class="marketing_btn" type="checkbox"/>
+                                        <label class="cbx" for="letter_btn"><span>
+                                        <svg width="12px" height="10px">
+                                            <use xlink:href="#check-4"></use>
+                                        </svg></span><span>문자</span></label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="email">
+                                <div class="box email">
                                     <img src="./images/user_info/check_and.png" alt="">
-                                    <input type="checkbox" name="agree_marketing" id="email_consent">
-                                    <label for="email_consent">이메일</label>
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx" id="email_btn" class="marketing_btn" type="checkbox"/>
+                                        <label class="cbx" for="email_btn"><span>
+                                        <svg width="12px" height="10px">
+                                            <use xlink:href="#check-4"></use>
+                                        </svg></span><span>이메일</span></label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
                                 </div>
                             </fieldset>
                         </form>
                     </div>
                     <div class="btn">
-                        <button type="button" class="storage">저장</button>
+                        <button type="button" class="storage_btn">저장</button>
                     </div>
                 </div>
             </div>

@@ -193,4 +193,12 @@ main .container .contents .footer .footer_contents .box ul li {
   text-align: left;
   margin-bottom: 5.5px;
   font-size: 0.688rem;
+}
+main .container .contents .footer .footer_contents .box ul li::before {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 2px;
+  height: 2px;
+  margin-right: 10px;
 }/*# sourceMappingURL=event_best_sole.css.map */

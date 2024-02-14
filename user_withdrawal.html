@@ -5,162 +5,274 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원탈퇴 | 여기어때</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/user_withdrawal.css">
+    <style>
+    .checkbox-wrapper-4 * {
+        box-sizing: border-box;
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+    .checkbox-wrapper-4 .cbx {
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        padding: 6px 8px;
+        border-radius: 6px;
+        overflow: hidden;
+        transition: all 0.2s ease;
+        display: inline-block;
+    }
+    .checkbox-wrapper-4 .cbx:not(:last-child) {
+        margin-right: 6px;
+    }
+    .checkbox-wrapper-4 .cbx span {
+        float: left;
+        vertical-align: middle;
+        transform: translate3d(0, 0, 0);
+    }
+    .checkbox-wrapper-4 .cbx span:first-child {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        transform: scale(1);
+        border: 2px solid #cccfdb;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 1px rgba(0,16,75,0.05);
+    }
+    .checkbox-wrapper-4 .cbx span:first-child svg {
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 16px;
+        stroke-dashoffset: 16px;
+        transition: all 0.3s ease;
+        transition-delay: 0.1s;
+        transform: translate3d(0, 0, 0);
+    }
+    .checkbox-wrapper-4 .cbx span:last-child {
+        padding-left: 8px;
+        line-height: 18px;
+    }
+    .checkbox-wrapper-4 .cbx:hover span:first-child {
+        border-color: #07f;
+    }
+    .checkbox-wrapper-4 .inp-cbx {
+        position: absolute;
+        visibility: hidden;
+    }
+    .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
+        background: #07f;
+        border-color: #07f;
+        animation: wave-4 0.4s ease;
+    }
+    .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {
+        stroke-dashoffset: 0;
+    }
+    .checkbox-wrapper-4 .inline-svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        user-select: none;
+    }
+    @media screen and (max-width: 640px) {
+        .checkbox-wrapper-4 .cbx {
+        width: 100%;
+        display: inline-block;
+        }
+    }
+    @-moz-keyframes wave-4 {
+        50% {
+        transform: scale(0.9);
+        }
+    }
+    @-webkit-keyframes wave-4 {
+        50% {
+        transform: scale(0.9);
+        }
+    }
+    @-o-keyframes wave-4 {
+        50% {
+        transform: scale(0.9);
+        }
+    }
+    @keyframes wave-4 {
+        50% {
+        transform: scale(0.9);
+        }
+    }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="top">
-            <button type="button" class="close"><!-- font-awsome --><i class="fa-solid fa-arrow-left"></i></button>
-            <h1>회원탈퇴</h1>
-        </div>
-        <div class="contents">
-            <p><img src="./images/user_info/withdrawal_reasons.png" alt="탈퇴하는 이유는 무엇인가요?"></p>
-            <div class="reasons_check">
-                <form action="#" method="get" id="withdrawal_from">
+    <main>
+        <div class="container">
+            <div class="top">
+                <button type="button" class="close"><!-- font-awsome --><i class="fa-solid fa-arrow-left"></i></button>
+                <h1>회원탈퇴</h1>
+            </div>
+            <div class="wrap">
+                <p><img src="./images/user_info/withdrawal/withdrawal_reasons.png" alt="탈퇴하는 이유는 무엇인가요?"></p>
+                <div class="reasons_check">
+                    <form action="#" method="get" id="withdrawal_from">
+                        <fieldset>
+                            <legend class="skip">탈퇴 이유 양식</legend>
+                            <!-- 1. ------------------------------------------------ -->
+                            <div class="reasons">
+                                <input type="radio" name="reasons" id="disabled">
+                                <label for="disabled">사용을 잘 안하게 돼요</label>
+                            </div>
+                            <div class="contents">
+                                <textarea name="reasons_text" id="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요. 고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80"></textarea>
+                                <img src="./images/user_info/withdrawal/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
+                                <p> 여기어때에는 숙박 상품 외에도 숙소 주변 레저・티켓 구매가 가능해요! </p>
+                                <p> 볼거리와 놀거리가 풍성해진 여기어때를 더 이용해보시겠어요? </p>
+                                <button type="button"> 레저・티켓 보러가기 </button>
+                            </div>
+                            <!-- btn 누를시 -->
+                            <div class="popup">
+                                <!-- 3초 정도만 나왔다 들어가기 -->
+                                <div class="box">여기어때 앱에서 확인 가능합니다.</div>
+                            </div>
+                            <!-- 2. ---------------------------------------------- -->
+                            <div class="reasons">
+                                <input type="radio" name="reasons" id="not_lodging_want">
+                                <label for="not_lodging_want">예약하고 싶은 숙소가 없어요</label>
+                            </div>
+                            <div class="contents">
+                                <textarea name="reasons_text" id="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요. 고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80"></textarea>
+                                <img src="./images/user_info/withdrawal/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
+                                <p> 전국 2만 여개의 숙소와 레저・티켓을 최저가로 예약할 수 있어요. </p>
+                                <a href="index.html">검색하기</a>
+                            </div>
+                            <!-- 3. ---------------------------------------------- -->
+                            <div class="reasons">
+                                <input type="radio" name="reasons" id="use_difficult">
+                                <label for="use_difficult">예약, 취소, 혜택받기 등 사용이 어려워요</label>
+                            </div>
+                            <div class="contents">
+                                <textarea name="reasons_text" id="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요. 고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80"></textarea>
+                                <img src="./images/user_info/withdrawal/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
+                                <p> 예약, 취소, 사용이 어려우신가요? </p>
+                                <p> 회원님들이 궁금해 하시는 내용을 위주로 도움말과 혜택꿀팁을 정리해 보았는데 이용해보시는건 어떠세요? </p>
+                                <a href="customer_service.html"> 자주 묻는 질문 보러가기 </a>
+                                <button type="button"> 혜택꿀팁 보러가기 </button>
+                            </div>
+                            <!-- 4.---------------------------------------------- -->
+                            <div class="reasons">
+                                <input type="radio" name="reasons" id="small_benefit">
+                                <label for="small_benefit">혜택(쿠폰, 포인트)이 너무 적어요</label>
+                            </div>
+                            <div class="contents">
+                                <textarea name="reasons_text" id="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요. 고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80"></textarea>
+                                <img src="./images/user_info/withdrawal/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
+                                <p> 혹시 놓치고 있던 이벤트가 있지는 않을까요? </p>
+                                <p> 다양한 이벤트를 둘러보고 혜택을 받아보시는건 어떠세요? </p>
+                                <!-- 이벤트로 html만들면 연결하고 주석 삭제! -->
+                                <a href="#"> 이벤트 보러가기 </a>
+                                <p> 여기어때가 준비한 다양한 혜택들, 알고 계셨나요? 여기어때를 100% 활용하는 꿀팁을 구경해보시는건 어떠세요? </p>
+                                <button type="button"> 혜택꿀팁 보러가기 </button>
+                            </div>
+                            <!-- 5. ------------------------------------- -->
+                            <div class="reasons">
+                                <input type="radio" name="reasons" id="personal_information_protection">
+                                <label for="personal_information_protection">개인정보 보호를 위해 삭제할 정보가 있어요</label>
+                            </div>
+                            <div class="contents">
+                                <textarea name="reasons_text" id="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요. 고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80"></textarea>
+                                <img src="./images/user_info/withdrawal/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
+                                <p> 고객님의 사용내역은 ‘App > 더보기 > 사용내역 관리’ 에서 변경, 삭제할 수 있어요. 회원탈퇴 없이 사용내역을 삭제해 보는 건 어떠세요?</p>
+                                <p> - 삭제 가능 내용 : 예약내역, 쿠폰함, 찜한 상품, 1:1문의 </p>
+                                <button type="button"> 사용내역 관리 </button>
+                            </div>
+                            <!-- 6. -->
+                            <div class="reasons">
+                                <input type="radio" name="reasons" id="another_account">
+                                <label for="another_account">다른 계정이 있어요</label>
+                            </div>
+                            <div class="contents">
+                                <textarea name="reasons_text" id="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요. 고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80"></textarea>
+                            </div>
+                            <!-- 7. -->
+                            <div class="reasons">
+                                <input type="radio" name="reasons" id="other_comment">
+                                <label for="other_comment">기타</label>
+                            </div>
+                            <div class="contents">
+                                <textarea name="reasons_text" id="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요. 고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80"></textarea>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="btn">
+                    <button type="button" class="use_more_btn">더 써볼래요</button>
+                    <button type="button" class="next_btn">다음단계로</button>
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="box">
+                    <img src="./images/user_info/withdrawal/benefits_disappear.png" alt="이제 더 가시면.. 혜택이 영영 사라져요">
+                    <p>탈퇴하시면 지금껏 모으신 무상포인트와<br> 쿠폰들이 사라져 복구가 불가해요.</p>
+                </div>
+                <div class="benefit">
+                    <div class="point_box box">
+                        <div class="left">
+                            <p>잔여 포인트<em><span class="point">0</span>P</em></p>
+                        </div>
+                        <div class="right">
+                            <span>즉시소멸</span>
+                        </div>
+                    </div>
+                    <div class="coupon_box box">
+                        <div class="left">
+                            <p>잔여 쿠폰<em class="coupon_num">2</em></p>
+                        </div>
+                        <div class="right">
+                            <span>즉시소멸</span>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <p>
+                            <em>등록된 리뷰는 자동으로 삭제되지 않아요.</em> 탈퇴 전 개별적으로 삭제해주세요.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>계정 정보는 복구가 불가</em>하며, 동일한 아이디로 24시간 이후 재가입이 가능해요.
+                        </p>
+                    </li>
+                </ul>
+                <form action="#" method="post" id="consent_form">
                     <fieldset>
-                        <legend class="skip">탈퇴 이유 양식</legend>
-                        <!-- 1. ------------------------------------------------ -->
-                        <div class="reasons reasons1">
-                            <input type="radio" name="reasons" id="disabled">
-                            <label for="disabled">사용을 잘 안하게 돼요</label>
-                        </div>
-                        <div class="contents">
-                            <input type="text" name="reasons_text" id="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요.고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80">
-                            <img src="./images/user_info/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
-                            <p> 여기어때에는 숙박 상품 외에도 숙소 주변 레저・티켓 구매가 가능해요! </p>
-                            <p> 볼거리와 놀거리가 풍성해진 여기어때를 더 이용해보시겠어요? </p>
-                            <button type="button"> 레저・티켓 보러가기 </button>
-                        </div>
-                        <!-- btn 누를시 -->
-                        <div class="popup">
-                            <!-- 3초 정도만 나왔다 들어가기 -->
-                            <div class="box">여기어때 앱에서 확인 가능합니다.</div>
-                        </div>
-                        <!-- 2. ---------------------------------------------- -->
-                        <div class="reasons reasons2">
-                            <input type="radio" name="reasons" id="not_lodging_want">
-                            <label for="not_lodging_want">예약하고 싶은 숙소가 없어요</label>
-                        </div>
-                        <div class="contents">
-                            <input type="text" name="reasons_text" class="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요.고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80">
-                            <img src="./images/user_info/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
-                            <p> 전국 2만 여개의 숙소와 레저・티켓을 최저가로 예약할 수 있어요. </p>
-                            <a href="index.html">검색하기</a>
-                        </div>
-                        <!-- 3. ---------------------------------------------- -->
-                        <div class="reasons reasons3">
-                            <input type="radio" name="reasons" id="use_difficult">
-                            <label for="use_difficult">예약, 취소, 혜택받기 등 사용이 어려워요</label>
-                        </div>
-                        <div class="contents">
-                            <input type="text" name="reasons_text" class="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요.고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80">
-                            <img src="./images/user_info/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
-                            <p> 예약, 취소, 사용이 어려우신가요? </p>
-                            <p> 회원님들이 궁금해 하시는 내용을 위주로 도움말과 혜택꿀팁을 정리해 보았는데 이용해보시는건 어떠세요? </p>
-                            <a href="customer_service.html"> 자주 묻는 질문 보러가기 </a>
-                            <button type="button"> 혜택꿀팁 보러가기 </button>
-                        </div>
-                        <!-- btn 누를시 -->
-                        <div class="popup">
-                            <!-- 3초 정도만 나왔다 들어가기 -->
-                            <div class="box">여기어때 앱에서 확인 가능합니다.</div>
-                        </div>
-                        <!-- 4.---------------------------------------------- -->
-                        <div class="reasons reasons4">
-                            <input type="radio" name="reasons" id="small_benefit">
-                            <label for="small_benefit">혜택(쿠폰, 포인트)이 너무 적어요</label>
-                        </div>
-                        <div class="contents">
-                            <input type="text" name="reasons_text" class="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요.고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80">
-                            <img src="./images/user_info/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
-                            <p> 혹시 놓치고 있던 이벤트가 있지는 않을까요? </p>
-                            <p> 다양한 이벤트를 둘러보고 혜택을 받아보시는건 어떠세요? </p>
-                            <!-- 이벤트로 html만들면 연결하고 주석 삭제! -->
-                            <a href="#"> 이벤트 보러가기 </a>
-                            <p> 여기어때가 준비한 다양한 혜택들, 알고 계셨나요? 여기어때를 100% 활용하는 꿀팁을 구경해보시는건 어떠세요? </p>
-                            <button type="button"> 혜택꿀팁 보러가기 </button>
-                        </div>
-                        <!-- btn 누를시 -->
-                        <div class="popup">
-                            <!-- 3초 정도만 나왔다 들어가기 -->
-                            <div class="box">여기어때 앱에서 확인 가능합니다.</div>
-                        </div>
-                        <!-- 5. ------------------------------------- -->
-                        <div class="reasons reasons5">
-                            <input type="radio" name="reasons" id="personal_information_protection">
-                            <label for="personal_information_protection">개인정보 보호를 위해 삭제할 정보가 있어요</label>
-                        </div>
-                        <div class="contents">
-                            <input type="text" name="reasons_text" class="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요.고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80">
-                            <img src="./images/user_info/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
-                            <p> 고객님의 사용내역은 ‘App > 더보기 > 사용내역 관리’ 에서 변경, 삭제할 수 있어요. 회원탈퇴 없이 사용내역을 삭제해 보는 건 어떠세요?</p>
-                            <p> - 삭제 가능 내용 : 예약내역, 쿠폰함, 찜한 상품, 1:1문의 </p>
-                            <button type="button"> 사용내역 관리 </button>
-                        </div>
-                        <!-- btn 누를시 -->
-                        <div class="popup">
-                            <!-- 3초 정도만 나왔다 들어가기 -->
-                            <div class="box">여기어때 앱에서 확인 가능합니다.</div>
-                        </div>
-                        <!-- 6. -->
-                        <div class="reasons reasons5">
-                            <input type="radio" name="reasons" id="another_account">
-                            <label for="another_account">다른 계정이 있어요</label>
-                        </div>
-                        <div class="contents">
-                            <input type="text" name="reasons_text" class="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요.고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80">
-                        </div>
-                        <!-- 7. -->
-                        <div class="reasons reasons5">
-                            <input type="radio" name="reasons" id="other_comment">
-                            <label for="other_comment">기타</label>
-                        </div>
-                        <div class="contents">
-                            <input type="text" name="reasons_text" class="reasons_text" placeholder="(선택사항) 서비스 이용 중 아쉬운 점에 대해 알려주세요.고객님의 소리에 귀 기울일게요. 80자 이내" maxlength="80">
+                        <legend class="skip">동의 양식</legend>
+                        <div class="checkbox-wrapper-4">
+                            <input class="inp-cbx" id="morning" type="checkbox"/>
+                            <label class="cbx" for="morning"><span>
+                            <svg width="12px" height="10px">
+                            <use xlink:href="#check-4"></use>
+                            </svg></span><span>위 주의사항을 모두 숙지했고, 탈퇴에 동의합니다.</span></label>
+                            <svg class="inline-svg">
+                            <symbol id="check-4" viewbox="0 0 12 10">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </symbol>
+                            </svg>
                         </div>
                     </fieldset>
                 </form>
-            </div>
-            <div class="btn">
-                <button type="button" class="use_more_btn">더 써볼래요</button>
-                <button type="button" class="next_btn">다음단계로</button>
+                <div class="btn">
+                    <button type="button" class="use_more_btn">더 써볼래요</button>
+                    <button type="button" class="user_bye">진짜 안녕</button>
+                </div>
             </div>
         </div>
-        <div class="contents">
-            <div class="box">
-                <img src="./images/user_info/benefits_disappear.png" alt="이제 더 가시면.. 혜택이 영영 사라져요">
-                <p>탈퇴하시면 지금껏 모으신 무상포인트와<br> 쿠폰들이 사라져 복구가 불가해요.</p>
-            </div>
-            <div class="point_box">
-                <div class="left">
-                    <p>잔여 포인트<em><span class="point">0</span>p</em></p>
-                </div>
-                <div class="right">
-                    <span>즉시소멸</span>
-                </div>
-            </div>
-            <div class="coupon_box">
-                <div class="left">
-                    <p>잔여 쿠폰<em class="coupon_num">2</em></p>
-                </div>
-                <div class="right">
-                    <span>즉시소멸</span>
-                </div>
-            </div>
-            <p><em>등록된 리뷰는 자동으로 삭제되지 않아요.</em> 탈퇴 전 개별적으로 삭제해주세요. </p>
-            <p><em>계정 정보는 복구가 불가</em>하며, 동일한 아이디로 24시간 이후 재가입이 가능해요. </p>
-            <form action="#" method="post" id="consent_form">
-                <fieldset>
-                    <legend class="skip">동의 양식</legend>
-                    <input type="checkbox" name="user_consent" id="user_consent">
-                    <label for="user_consent">위 주의사항을 모두 숙지했고, 탈퇴에 동의합니다.</label>
-                </fieldset>
-            </form>
-            <div class="btn">
-                <button type="button" class="use_more_btn">더 써볼래요</button>
-                <button type="button" class="user_bye">진짜 안녕</button>
-            </div>
-        </div>
-    </div>
+    </main>
 </body>
 </html>

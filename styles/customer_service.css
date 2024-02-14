@@ -75,23 +75,36 @@ main .container .wrap .right .chatting_consultation p {
 }
 main .container .wrap .right .chat_container {
   position: fixed;
-  top: 200px;
+  top: 150px;
   right: 0;
   width: 400px;
   height: 600px;
   border-radius: 15px;
   border: 2px solid #f5f7fa;
 }
+main .container .wrap .right .chat_container > .top {
+  background-color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+main .container .wrap .right .chat_container > .top i[class*=left] {
+  margin: 0 10px;
+  font-size: 15px;
+}
+main .container .wrap .right .chat_container > .top h2 {
+  font-weight: 600;
+}
 main .container .wrap .right .chat_container .chat_message {
   display: flex;
   flex-direction: column;
   background-color: #f45858;
-  height: 80%;
+  height: 455px;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
   padding: 15px;
 }
 main .container .wrap .right .chat_container .chat_message .message {
@@ -115,12 +128,8 @@ main .container .wrap .right .chat_container .user_input {
   left: 0;
   height: 100px;
   background-color: #fff;
-  /* input[name=user_txt] {
-      width: calc(100% - 60px); outline: none;
-      background-color: rgba(255, 255, 255, 0.5);
-      width: 100%; height: 70%;
-      padding:0 10px; overflow-x: hidden;
-  } */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 main .container .wrap .right .chat_container .user_input #user_txt {
   width: calc(100% - 60px);
@@ -132,6 +141,7 @@ main .container .wrap .right .chat_container .user_input #user_txt {
   overflow-x: hidden;
   border: none;
   outline: none;
+  resize: none;
 }
 main .container .wrap .right .chat_container .user_input .chat_btn {
   position: absolute;
@@ -141,6 +151,7 @@ main .container .wrap .right .chat_container .user_input .chat_btn {
   color: #fff;
   width: 60px;
   height: 30px;
+  margin-bottom: 20px;
 }
 main .container .inquiry section h2 {
   margin-top: 20px;

@@ -156,13 +156,13 @@ main {
                                     margin-bottom: 5.5px;
                                     font-size: 0.688rem;
                                 }
-                                // li::before {
-                                //     content: '';
-                                //     display: block;
-                                //     background-color: #fff;
-                                //     width: 2px; height: 2px;
-                                //     margin-right: 10px;
-                                // }
+                                li::before {
+                                    content: '';
+                                    display: block;
+                                    background-color: #fff;
+                                    width: 2px; height: 2px;
+                                    margin-right: 10px;
+                                }
                             }
                             h3 {
                                 display: flex;

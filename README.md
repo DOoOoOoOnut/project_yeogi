@@ -185,3 +185,20 @@ ex) ./images/main/ _best_hotel001
 - 민아
 1. index.css 작업 : header / footer css 작업하기
 2. main.css 작업 : main css 작업하기
+
+-----------------------------------------------------------
+# 02/13 작업
+- 은지
+1. 마이페이지: 내 정보 확인 완성 / 설정 완성 /   마켓팅 수신 동의 완성 / 회원탈퇴 완성
+2. 챗GPT 디자인 수정
+3. 다른 사람들 도와주기 : footer.scss 완성
+- 일혁 
+1. 비회원 예약 상세 페이지 css 작업 완료
+2. 일반 상세페이지 css 작업 중
+- 민아
+1. index.scss 작업
+2. main.scss 작업
+- 다은
+1. search.scss 완료
+2. data 파일 만들기
+3. search.js 30% 완료

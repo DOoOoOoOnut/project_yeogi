@@ -173,6 +173,14 @@ main .container .wrap .bg .footer .footer_contents .box ul li {
   margin-bottom: 5.5px;
   font-size: 0.688rem;
 }
+main .container .wrap .bg .footer .footer_contents .box ul li::before {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 2px;
+  height: 2px;
+  margin-right: 10px;
+}
 main .container .wrap .bg .footer .footer_contents .box h3 {
   display: flex;
   align-items: center;
