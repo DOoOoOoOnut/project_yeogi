@@ -51,8 +51,10 @@ main {
                             color: $subColor-r; font-size: $small12;
                         }
                         .input_wrap {
+                            position: relative;
                             .reset {
-                                i {
+                                position: absolute; right: 10px; top: 0;
+                                i[class$=xmark] {
                                     color: #999;
                                 }
                             }
@@ -64,8 +66,10 @@ main {
                         .sub_title {}
                         .pass_num {
                             .pass_input {
+                                position: relative;
                                 .num_input {}
                                 .reset {
+                                    position: absolute; right: 10px; top: 0;
                                     i[class$=xmark] {
                                         color: #999;
                                     }

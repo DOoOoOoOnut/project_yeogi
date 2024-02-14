@@ -19,8 +19,13 @@
         }
     }
 }
+<<<<<<< HEAD
 .reservation_num_copy {
     width: 300px;
+=======
+.reservaiton_num_copy {
+    width: 250px;
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
     display: flex; flex-flow: column nowrap;
     padding: 16px;
     border-radius: 10px;
@@ -32,12 +37,17 @@
         border-radius: 5px;
         text-align: center;
         padding: 10px;
+<<<<<<< HEAD
         p {
+=======
+        p{
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
             font-size: $subC14;
             color: #fff;
         }
     }
 }
+<<<<<<< HEAD
 .purchase_information {
     display: none;
     .bg {
@@ -518,6 +528,8 @@
         }
     }
 }
+=======
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
 main {
     max-width: 1400px; margin: $margin0;
     section {

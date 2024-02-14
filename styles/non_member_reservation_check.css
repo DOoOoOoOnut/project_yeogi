@@ -21,8 +21,13 @@
   color: #fff;
 }
 
+<<<<<<< HEAD
 .reservation_num_copy {
   width: 300px;
+=======
+.reservaiton_num_copy {
+  width: 250px;
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
   display: flex;
   flex-flow: column nowrap;
   padding: 16px;
@@ -32,18 +37,27 @@
   top: 50%;
   transform: translateX(-50%);
 }
+<<<<<<< HEAD
 .reservation_num_copy .copy {
+=======
+.reservaiton_num_copy .copy {
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
   display: none;
   background: #333;
   border-radius: 5px;
   text-align: center;
   padding: 10px;
 }
+<<<<<<< HEAD
 .reservation_num_copy .copy p {
+=======
+.reservaiton_num_copy .copy p {
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
   font-size: 0.875rem;
   color: #fff;
 }
 
+<<<<<<< HEAD
 .purchase_information {
   display: none;
 }
@@ -547,6 +561,8 @@
   opacity: 80%;
 }
 
+=======
+>>>>>>> c5ceaa2264d4734420e6c854f1e275ab78388920
 main {
   max-width: 1400px;
   margin: 0 auto;
