@@ -128,7 +128,7 @@ main {
                                 padding:0 20px; width:100%;
                                 position:absolute; top:55px; left:0;
                                 //js
-                                // display:none;
+                                display:none;
                                 //공통
                                 div {
                                     display:flex; justify-content:space-between;
@@ -249,8 +249,332 @@ main {
             }
         }
         .main_bg {
-            background-image:url(https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-            background-position:center; background-size: cover;
+            // background-image:url(https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            // background-image:url(https://images.unsplash.com/photo-1638180208365-f3a3b59b52cd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            // background-image:url(https://images.unsplash.com/photo-1633839202556-cf6ec22e95f0?q=80&w=2105&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            // background-image:url(https://images.unsplash.com/photo-1596941248238-0d49dcaa4263?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-image:url(https://images.unsplash.com/photo-1682685796766-0fddd3e480de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position:center; background-size:cover;
             height:530px;
         }
+        .center_container {
+            width:1400px; margin:0 auto;
+            //공통
+            div {
+                .title_box {
+                    @include flex-rnsc;
+                    margin-bottom:15px;
+                    .subj {font-size:$title18; font-weight:$weight600;}
+                    a {
+                        i {}
+                    }
+                }
+                div {
+                    .box_btn {
+                        div {
+                            width:40px;
+                            i {
+                                @include flex-rncc;
+                                color:#333; background-color:#fff;
+                                width:40px; height:40px;
+                                border-radius:100%;
+                                box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
+                            }
+                        }
+                        .swiper-button-prev {
+                            position:absolute; left:-20px; top:90px; z-index:99;
+                        }
+                        .swiper-button-prev::after {
+                            display: none;
+                        }
+                        .swiper-button-next {
+                            position:absolute; right:-20px; top:90px; z-index:99;
+                        }
+                        .swiper-button-next::after {
+                            display: none;
+                        }
+                    }
+                    .swiper-container {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                @include flex-rnsc;
+                                a {
+                                    img {}
+                                    span {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        //개별
+        //이벤트
+        .event_wrap {
+            padding:30px 0;
+            .title_box {
+                @include flex-rnsc;
+                margin-bottom:15px;
+                .subj {}
+                a {
+                    i {color:$mainColor-b;}
+                }
+            }
+            .event_box {
+                position:relative;
+                @include flex-rnsc;
+                .box_btn {
+                    //공통
+                    div {
+                        width:40px;
+                        i {
+                            @include flex-rncc;
+                            color:#333; background-color:#fff;
+                            width:40px; height:40px;
+                            border-radius:100%;
+                            box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
+                        }
+                    }
+                    .swiper-button-prev {
+                        position:absolute; left:-20px; top:90px; z-index:99;
+                    }
+                    .swiper-button-prev::after {
+                        display: none;
+                    }
+                    .swiper-button-next {
+                        position:absolute; right:-20px; top:90px; z-index:99;
+                    }
+                    .swiper-button-next::after {
+                        display: none;
+                    }
+                }
+                .event_bnr_detail {
+                    overflow-x:hidden;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            @include flex-rnsc;
+                            a {
+                                width:calc(100% / 3);
+                                margin-left:25px;
+                                img {width:100%; border-radius:10px;}
+                            }
+                            a:first-child {margin-left:0}
+                        }
+                    }
+                }
+                .swiper-pagination {
+                    bottom:-20px;
+                }
+            }
+        }
+        //국내 인기 여행지
+        .kr_hot_travel_wrap {
+            padding:30px 0;
+            .box_btn {
+                position:relative;
+                div {
+                    width:40px;
+                    i {
+                        @include flex-rncc;
+                        color:#333; background-color:#fff;
+                        width:40px; height:40px;
+                        border-radius:100%; cursor:pointer;
+                        box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
+                    }
+                }
+                .swiper-button-prev01 {
+                    position:absolute; left:-20px; top:90px; z-index:99;
+                    //js
+                    display:none;
+                }
+                .swiper-button-prev01::after {
+                    display:none;
+                }
+                .swiper-button-next01 {
+                    position:absolute; right:-20px; top:90px; z-index:99;
+                }
+                .swiper-button-next01::after {
+                    display:none;
+                }
+            }
+            .kr_travel_box {
+                overflow-x:hidden;
+                .kr_travel_detail {
+                    .swiper-slide {
+                        @include flex-rnsc;
+                        width:100%;
+                        .kr_travel {
+                            @include flex-cncf;
+                            margin-left:25px;
+                            width:calc(100% / 6);
+                            img {width:100%; border-radius:10px;}
+                            img:hover {filter:brightness(80%);}
+                            .kr_travel_txt {
+                                font-size:$subT15;
+                                padding:12px 4px 20px;
+                            }
+                        }
+                        .kr_travel:first-child {margin-left:0}
+                    }
+                }
+            }
+        }
+        //해외 인기 여행지
+        .over_hot_travel_wrap {
+            padding:30px 0;
+            .box_btn {
+                position:relative;
+                div {
+                    width:40px;
+                    i {
+                        @include flex-rncc;
+                        color:#333; background-color:#fff;
+                        width:40px; height:40px;
+                        border-radius:100%; cursor:pointer;
+                        box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
+                    }
+                }
+                .swiper-button-prev02 {
+                    position:absolute; left:-20px; top:90px; z-index:99;
+                    //js
+                    display:none;
+                }
+                .swiper-button-prev02::after {
+                    display:none;
+                }
+                .swiper-button-next02 {
+                    position:absolute; right:-20px; top:90px; z-index:99;
+                }
+                .swiper-button-next02::after {
+                    display:none;
+                }
+            }
+            .over_travel_box {
+                overflow-x:hidden;
+                .over_travel_detail {
+                    .swiper-slide {
+                        @include flex-rnsc;
+                        width:100%;
+                        .over_travel {
+                            @include flex-cncf;
+                            margin-left:25px;
+                            width:calc(100% / 6);
+                            img {width:100%; border-radius:10px;}
+                            img:hover {filter:brightness(80%);}
+                            .over_travel_txt {
+                                font-size:$subT15;
+                                padding:12px 4px 20px;
+                            }
+                        }
+                        .over_travel:first-child {margin-left:0}
+                    }
+                }
+            }
+        }
+        //인기 추천 숙소
+        .recommend_room_wrap {
+            .sub_menu_box {
+                margin-bottom:10px;
+                .sub_menu {
+                    border:1px solid #d6d6d6;
+                    padding:6px 14px; border-radius:20px;
+                    font-size:$subC14; margin-right:4px;
+                }
+                //js
+                .menu1 {
+                    background-color:$mainColor-b; color:#fff;
+                    border:0;
+                }
+            }
+            .box_btn {
+                position:relative;
+                div {
+                    width:40px; display:block;
+                    i {
+                        @include flex-rncc;
+                        color:#333; background-color:#fff;
+                        width:40px; height:40px;
+                        border-radius:100%; cursor:pointer;
+                        box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
+                    }
+                }
+                .swiper-button-prev03 {
+                    position:absolute; left:-20px; top:90px; z-index:99;
+                    //js
+                    display:none;
+                }
+                .swiper-button-prev03::after {
+                    display:none;
+                }
+                .swiper-button-next03 {
+                    position:absolute; right:-20px; top:90px; z-index:99;
+                }
+                .swiper-button-next03::after {
+                    display:none;
+                }
+            }
+            .room_box {
+                overflow-x:hidden;
+                .room {
+                    @include flex-rnsc;
+                    width:100%;
+                    .swiper-slide {
+                        @include flex-cncf;
+                        width:100%;
+                        .photo {
+                            margin-left:25px;
+                            width:calc(100% / 4);
+                            img {width:100%; border-radius:10px;}
+                        }
+                        .photo:first-child {margin-left:0;}
+                        .contents {
+                            .title_wrap {
+                                .type {font-size:$small11; color:#999;}
+                                .title {
+                                    .special {}
+                                    .name {font-size:$defalt16;}
+                                }
+                                .location {
+                                    .city {}
+                                    .more {font-size:$small13; color:#999;}
+                                }
+                                .review {
+                                    margin-bottom:15px;
+                                    .point_wrap {
+                                        background-color:#ffad0a;
+                                        padding:0 3px 3px 6px; border-radius:5px;
+                                        margin-right:5px;
+                                        i {font-size:$small11;}
+                                        .point {font-size:$small12;}
+                                    }
+                                    .comment {font-size:$small13; color:#999;}
+                                }
+                            }
+                            .price_info {
+                                .coupon {font-size:$small12; color:#999;}
+                                .price {
+                                    .now {
+                                        font-size:$title18;
+                                        font-weight:600;
+                                        span {font-size:$subT15;}
+                                    }
+                                    .origin {
+                                        font-size:$subC14; color:#999;
+                                        text-decoration:line-through;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //오늘 체크인 호텔 특가
+        .today_special_wrap {}
+        //이번주 hot 인기 펜션
+        .hot_pension_wrap {}
+        //이번주 블랙 pick
+        .black_pick_wrap {}
     }
+    //앱광고
+    .app_bnr {}
+}
