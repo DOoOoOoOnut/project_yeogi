@@ -19,7 +19,7 @@ header {
                     display:flex; flex-flow:column nowrap; align-items:center;
                     padding:10px 0; background:#fff; top:70px;
                     position:absolute; margin-right:10px;
-                    border-radius:10px; z-index:999;
+                    border-radius:10px; z-index:9999;
                     box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
                     //js
                     display:none;
@@ -36,7 +36,7 @@ header {
                     display:flex; flex-flow:row nowrap;
                     background:#fff; top:70px;
                     position:absolute; padding:8px;
-                    border-radius:10px; z-index:999;
+                    border-radius:10px; z-index:9999;
                     box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
                     //js
                     display:none;
@@ -105,7 +105,7 @@ header {
                             display:flex; flex-flow:column nowrap;
                             align-items:center; background:#fff;
                             position:absolute; top:50px; width:100px; right:0;
-                            padding:8px 0; border-radius:10px;
+                            padding:8px 0; border-radius:10px; z-index:9999;
                             box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
                             //js
                             display:none;
