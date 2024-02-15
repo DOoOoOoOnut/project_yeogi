@@ -1,3 +1,4 @@
+export default 
 [
     {
         "pk":1,
@@ -19,7 +20,8 @@
         "latitude":37.7911114,
         "longitude":128.9210687,
         "price":363000,
-        "is_discount":true
+        "is_discount":true,
+        "img":"./images/"
     },{
         "pk":2,
         "name":"정동진 썬크루즈호텔",
@@ -30,7 +32,7 @@
         "rank":"4성급",
         "tag":["#가족여행숙소","OTT","연인추천","감성숙소","#리뷰좋은"],
         "is_parttime":false,
-        "discount_benefit":["쿠폰할인","50%페이백","무한대실","할인특가"],
+        "discount_benefit":["쿠폰할인","할인특가"],
         "facility_public":["사우나","수영장","BBQ","레스토랑"],
         "facility_inside":["와이파이","에어컨","욕실용품","객실샤워실","개인콘센트"],
         "facility_ect":["조식포함","무료주차","반려견동반"],
@@ -51,7 +53,7 @@
         "rank":"블랙",
         "tag":["OTT","연인추천","감성숙소","뷰맛집","#연박특가", "#리뷰좋은"],
         "is_parttime":false,
-        "discount_benefit":["쿠폰할인","50%페이백","무한대실","할인특가"],
+        "discount_benefit":["할인특가"],
         "facility_public":["사우나","BBQ","레스토랑","물놀이시설","공용화장실","매점"],
         "facility_inside":["스파/월풀","미니바","와이파이","에어컨","객실샤워실"],
         "facility_ect":["사우나/찜질방","객실내취사","픽업가능","캠프파이어"],

@@ -126,10 +126,10 @@
                                                         <div class="discount">
                                                             <h3>할인혜택</h3>
                                                             <div class="chk_wrap">
-                                                                <label><input type="checkbox" name="discount" class="discount_chk chk"><span>쿠폰할인</span></label>
-                                                                <label><input type="checkbox" name="discount" class="discount_chk chk"><span>50%페이백</span></label>
-                                                                <label><input type="checkbox" name="discount" class="discount_chk chk"><span>무한대실</span></label>
-                                                                <label><input type="checkbox" name="discount" class="discount_chk chk"><span>할인특가</span></label>
+                                                                <label><input type="checkbox" name="discount" class="discount_chk chk" value="쿠폰할인"><span>쿠폰할인</span></label>
+                                                                <label><input type="checkbox" name="discount" class="discount_chk chk" value="50%페이백"><span>50%페이백</span></label>
+                                                                <label><input type="checkbox" name="discount" class="discount_chk chk" value="무한대실"><span>무한대실</span></label>
+                                                                <label><input type="checkbox" name="discount" class="discount_chk chk" value="할인특가"><span>할인특가</span></label>
                                                             </div>
                                                         </div>
                                                         <div class="reservation">
@@ -279,25 +279,25 @@
                                 <div class="taste">
                                     <h3>#취향</h3>
                                     <div class="chk_wrap">
-                                        <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#가족여행숙소</span></label>
-                                        <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#스파</span></label>
-                                        <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#파티룸</span></label>
-                                        <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#OTT</span></label>
-                                        <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#연인추천</span></label>
-                                        <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#감성숙소</span></label>
-                                        <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#뷰맛집</span></label>
-                                        <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#연박특가</span></label>
-                                        <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#리뷰좋은</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#가족여행숙소"><span>#가족여행숙소</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#스파"><span>#스파</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#파티룸"><span>#파티룸</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#OTT"><span>#OTT</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#연인추천"><span>#연인추천</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#감성숙소"><span>#감성숙소</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#뷰맛집"><span>#뷰맛집</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#연박특가"><span>#연박특가</span></label>
+                                        <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#리뷰좋은"><span>#리뷰좋은</span></label>
                                         <!-- 이후 js 고려해서 추가 / 삭제 -->
                                     </div>
                                 </div>
                                 <div class="discount">
                                     <h3>할인혜택</h3>
                                     <div class="chk_wrap">
-                                        <label><input type="checkbox" name="discount" class="discount_chk chk"><span>쿠폰할인</span></label>
-                                        <label><input type="checkbox" name="discount" class="discount_chk chk"><span>50%페이백</span></label>
-                                        <label><input type="checkbox" name="discount" class="discount_chk chk"><span>무한대실</span></label>
-                                        <label><input type="checkbox" name="discount" class="discount_chk chk"><span>할인특가</span></label>
+                                        <label><input type="checkbox" name="discount" class="discount_chk chk" value="쿠폰할인"><span>쿠폰할인</span></label>
+                                        <label><input type="checkbox" name="discount" class="discount_chk chk" value="50%페이백"><span>50%페이백</span></label>
+                                        <label><input type="checkbox" name="discount" class="discount_chk chk" value="무한대실"><span>무한대실</span></label>
+                                        <label><input type="checkbox" name="discount" class="discount_chk chk" value="할인특가"><span>할인특가</span></label>
                                     </div>
                                 </div>
                                 <div class="reservation">
@@ -367,65 +367,41 @@
                         </fieldset>
                     </div>
                     <!-- 상단 우측 결과 숙소 리스트 -->
-                    <div id="room_container">
+                    <div id="room_container" class="down">
                         <swiper-container class="mySwiper page_wrap" init="false"><!-- 페이지 1 -->
                             <swiper-slide class="page">
-                                <a href="./detail.html" class="room">
-                                    <div class="photo"></div>
-                                    <div class="contents">
-                                        <div class="title_wrap">
-                                            <p class="type">호텔</p>
-                                            <h2 class="title"><em class="speical"><!-- js ★파격특가★ --></em><span class="name">세인트존스 호텔</span></h2>
-                                            <p class="location">
-                                                <span class="city">강릉시</span>
-                                                <span class="more">강릉 강문해변 앞</span>
-                                            </p>
-                                            <p class="review">
-                                                <span class="point_wrap"><i class="fa-solid fa-star"></i>9.0</span>
-                                                <span class="comment">
-                                                    6,233명 평가
-                                                </span>
-                                            </p> 
-                                        </div>
-                                        <div class="price_info">
-                                            <p class="price">
-                                                <del class="origin">352,000원</del>
-                                                <span class="coupon">쿠폰 적용시</span>
-                                                <em class="now">159,000<span class="won">원</span><span class="day">/1박</span></em>
-                                            </p>
-                                            <p class="info">이 가격으로 남은 객실 1개</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="./detail.html" class="room">
-                                    <div class="photo"></div>
-                                    <div class="contents">
-                                        <div class="title_wrap">
-                                            <p class="type">호텔</p>
-                                            <h2 class="title"><em class="speical"><!-- js ★파격특가★ --></em><span class="name">세인트존스 호텔</span></h2>
-                                            <p class="location">
-                                                <span class="city">강릉시</span>
-                                                <span class="more">강릉 강문해변 앞</span>
-                                            </p>
-                                            <p class="review">
-                                                <span class="point_wrap"><i class="fa-solid fa-star"></i>9.0</span>
-                                                <span class="comment">
-                                                    6,233명 평가
-                                                </span>
-                                            </p> 
-                                        </div>
-                                        <div class="price_info">
-                                            <p class="price">
-                                                <del class="origin">352,000원</del>
-                                                <span class="coupon">쿠폰 적용시</span>
-                                                <em class="now">159,000<span class="won">원</span><span class="day">/1박</span></em>
-                                            </p>
-                                            <p class="info">이 가격으로 남은 객실 1개</p>
-                                        </div>
-                                    </div>
-                                </a>
                                 <!-- js / 한 페이지에 room 20개 배치 -->
                             </swiper-slide>
+                            <template id="room_template">
+                                <a href="./detail.html" class="room">
+                                    <div class="photo"><img src="" alt=""></div>
+                                    <div class="contents">
+                                        <div class="title_wrap">
+                                            <p class="type">숙소타입</p>
+                                            <h2 class="title"><em class="speical"><!-- js ★파격특가★ --></em><span class="name">이름</span></h2>
+                                            <p class="location">
+                                                <span class="city">도시</span>
+                                                <span class="more">위치</span>
+                                            </p>
+                                            <p class="review">
+                                                <span class="point_wrap"><i class="fa-solid fa-star"></i>9.0</span>
+                                                <span class="comment">
+                                                    <span class="review_count">1234</span>
+                                                    명 평가
+                                                </span>
+                                            </p> 
+                                        </div>
+                                        <div class="price_info">
+                                            <p class="price">
+                                                <del class="origin"><span class="price_view">352,000</span>원</del>
+                                                <span class="coupon">쿠폰 적용시</span>
+                                                <em class="now">159,000<span class="won">원</span><span class="day">/1박</span></em>
+                                            </p>
+                                            <p class="info">이 가격으로 남은 객실 <span>1</span>개</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </template>
                             <!-- <swiper-slide>임시페이지 2</swiper-slide>
                             <swiper-slide>임시페이지 3</swiper-slide>
                             <swiper-slide>임시페이지 4</swiper-slide>
@@ -465,6 +441,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&callback=initMap"></script>
+    <script src="./data/data.js" type="module"></script>
     <script src="./script/search.js"></script>
 </body>
 </html>
