@@ -72,6 +72,7 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_b
   background-color: #eeeeee;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking {
+  display: none;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
@@ -130,6 +131,7 @@ main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .calen
   letter-spacing: 0.5px;
 }
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box {
+  display: none;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
