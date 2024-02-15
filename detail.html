@@ -207,7 +207,7 @@
     </div>
     <main>
         <nav>
-            <div class="box">
+            <div class="box1">
                 <div class="main_menu">
                     <a href="#" class="main_move">개요</a>
                     <a href="#" class="move">서비스 및 부대시설</a>
@@ -236,7 +236,7 @@
                     </div>
                     <a href="#" class="more_photo"><i class="fa-regular fa-image"></i>사진 모두 보기</a><!--폰트어썸-->
                 </div>
-                <div class="box">
+                <div class="box2">
                     <div class="contents">
                         <div class="title_wrap">
                             <div class="title">
@@ -305,7 +305,7 @@
                         </div>
                         <div class="room_type"><!--객실 선택 및 정보-->
                             <h2 class="select">객실선택</h2><!--js 선택시 변수-->
-                            <div class="box">
+                            <div class="box3">
                                 <div class="item">
                                     <a href="#" class="join_view"><img src="./images/detail/detail_third.jpeg" alt="roomimg"></a>
                                     <div class="item_type">
@@ -329,21 +329,21 @@
                                     </div>
                                 </div>
                                 <div class="is_soldout"><!--sold out-->
-                                    <p><img src="" alt=""></p>
-                                    <p>선택한 날짜의 객실은 매진되었어요</p>
-                                    <span>상단 검색창에서 날짜나 인원을 다시 설정해 보세요.</span>
+                                    <p><i class="fa-regular fa-calendar"></i></p>
+                                    <p class="soldout">선택한 날짜의 객실은 매진되었어요</p>
+                                    <p class="re_search">상단 검색창에서 날짜나 인원을 다시 설정해 보세요.</p>
                                     <a href="#" class="scedule">일정 변경</a>
                                 </div>
                             </div>
                         </div>
                         <div class="room_intro">
-                            <!--폰트어썸-->
+                            <h2>숙소 소개</h2>
+                            <i class="fa-solid fa-quote-left"></i>
                             <p>세계 자연문화유산인 제주의 아름다운 풍광을 담은 리조트로써 그 명성을 쌓아가고 있는 제주신라호텔은 1980년 개관부터 지금까지 품격과<br>
                                 문화가 있는 휴직지로서 수많은 굻직한 국제행사를 성공적으로 치러온 최고의 리조트입니다.<br> 
                                 이국적인 분위기와 최고의 시설을 선보이며 고객에게 먼저 다가가는 리조트에 특화된 서비스로 호텔에 다녀간 세계의국가수반을 비롯 많은<br>
                                 VIP들에게 크나큰 찬사를 받아 왔습니다.</p>    
-                            <!--폰트어썸-->
-                            <span>asdasd</span>
+                            <i class="fa-solid fa-quote-left fa-rotate-180"></i>
                         </div>
                         <div class="room_use">
                             <h2>숙소 이용 정보</h2>
@@ -427,28 +427,37 @@
                                 <dd>· 객실 가는 세금, 봉사료가 포함된 금액입니다</dd>
                             </dl>
                         </div>
-                        <div>
+                        <div class="cancel">
                             <h2>취소 및 환불 규정</h2>
                             <p>· 객실별 취소 정책이 상이하니 객실 상세정보에서 확인해주세요.</p>
                         </div>
                         <div class="seller_info">
                             <h2>판매자 정보</h2>
-                            <a href="#"></a><!--폰트어썸-->
+                            <a href="#" class="seller"><i class="fa-solid fa-angle-right"></i></a>
                         </div>  
                     </div>
                     <div class="side">
                         <div class="map">
                             <div class="mini_map">
-                                <a href="#"></a><!--확대??버튼??-->
-                            </div>
-                            <div class="adress">
-                                <p>제주특별자치도 서귀포시 색달동<br> 3039-3</p>
-                                <a href="#"><i class="fa-solid fa-copy"></i>주소복사</a>
+                                <a href="#" class="in_map">
+                                    <span></span>
+                                    <img class="pin" src="./images/detail/more/map_pin.png" alt="pin">
+                                    <i class="fa-solid fa-plus"></i>
+                                    <img class="naver_logo" src="./images/detail/more/naver-logo.png" alt="naver">
+                                </a>
+                                <div class="address">
+                                    <p>제주특별자치도 서귀포시 색달동<br> 3039-3</p>
+                                    <a href="#"><i class="fa-solid fa-copy"></i>주소복사</a>
+                                </div>
                             </div>
                         </div>
                         <div class="event_pay">
                             <div class="swiper-container" id="event_bnr">
-                                <div class="swiper-wrapper event">
+                                <div class="event_title">
+                                    <h2>최대 <em>5%</em> 할인</h2>
+                                    <a href="#" class="coupon_get">쿠폰받기<i class="fa-solid fa-arrow-right-to-bracket fa-rotate-90"></i></a>
+                                </div>
+                                <div class="swiper-wrapper event_slide">
                                     <a href="#" class="swiper_slide event_slide1"><img src="./images/detail/detail_event_bnr_1.png" alt="봄맞이 할인쿠폰"></a>
                                     <a href="#" class="swiper_slide event_slide2"><img src="./images/detail/detail_event_bnr_2.png" alt="전국 인기호텔 3만원 쿠폰"></a>
                                 </div>
@@ -457,12 +466,14 @@
                             <div class="pay">
                                 <div class="title">
                                     <h2>결제 혜택</h2>
-                                    <a href="#">더보기</a>
+                                    <a href="#" class="more_benefit">더보기<i class="fa-solid fa-angle-right"></i></a>
                                 </div>
-                                <p><img src="./images/detail/more/img_payment_tosspay.png" alt="토스페이">토스페이</p>
-                                <span>· 3만원 이상, 10% <em>최대 1만원 할인</em> (오전10시, 일40...</span>
-                                <span>· 2만원 이상, <em>2천원 할인 </em> (오후 4시, 일1,700명)</span>
-                                <span>· +생애 첫결제 시, <em>5천원 캐시백</em></span>
+                                <div class="pay_detail">
+                                    <p><img src="./images/detail/more/img_payment_tosspay.png" alt="토스페이">토스페이</p>
+                                    <span>· 3만원 이상, 10% <em>최대 1만원 할인</em> (오전10시...</span>
+                                    <span>· 2만원 이상, <em>2천원 할인 </em> (오후 4시, 일1,700명)</span>
+                                    <span>· +생애 첫결제 시, <em>5천원 캐시백</em></span>
+                                </div>
                             </div>
                         </div>
                     </div>

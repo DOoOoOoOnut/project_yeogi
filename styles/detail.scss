@@ -36,7 +36,7 @@ main {
         background: #fff;
         position: fixed; z-index: 999;
         width: 1400px;
-        .box {
+        .box1 {
             display: flex; flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
@@ -125,8 +125,12 @@ main {
                     }
                 }
             }
-            .box {
+            .box2 {
+                display: flex; flex-flow: row nowrap;
                 .contents {
+                    display: flex; flex-flow: column nowrap;
+                    justify-content: space-between;
+                    width: 100%;
                     .title_wrap {
                         .title {
                             .type {
@@ -298,7 +302,7 @@ main {
                                 color: #fff;
                                 line-height: 1.5;
                                 letter-spacing: 1.2px;
-                                position: absolute; left: 430px; bottom: 60px;
+                                position: absolute; left: 250px; bottom: 60px;
                             }
                             .second_img {
                                 text-align: left;
@@ -306,7 +310,7 @@ main {
                                 color: #fff;
                                 line-height: 1.5;
                                 letter-spacing: 1.2px;
-                                position: absolute; left: 430px; bottom: 60px;
+                                position: absolute; left: 250px; bottom: 60px;
                             }
                             .third_img {
                                 text-align: left;
@@ -314,18 +318,19 @@ main {
                                 color: #fff;
                                 line-height: 1.5;
                                 letter-spacing: 1.2px;
-                                position: absolute; left: 430px; bottom: 60px;
+                                position: absolute; left: 250px; bottom: 60px;
                             }
                         }
                     }
                     .room_type {
+                        border-bottom: 1px solid #ebebeb;
                         padding: 30px 0;
                         .select {
                             font-size: $title18; font-weight: $weight600;
                             color: #333;
                             padding-bottom: 20px;
                         }
-                        .box {
+                        .box3 {
                             .item {
                                 background: #F5F7FA;
                                 padding: 30px;
@@ -344,7 +349,7 @@ main {
                                     .room {
                                         font-size: $title20; font-weight: $weight700;
                                         color: #333;
-                                        padding-bottom: 10  px;
+                                        padding-bottom: 10px;
                                     }
                                     .more_info {
                                         text-align: right;
@@ -360,6 +365,7 @@ main {
                                         background: #fff;
                                         color: #fff;
                                         padding: 30px;
+                                        border-radius: 8px;
                                         .left {
                                             position: relative;
                                             i {
@@ -396,6 +402,12 @@ main {
                                     .item_info {
                                         display: flex; flex-flow: row nowrap;
                                         justify-content: space-between;
+                                        width: 100%;
+                                        background: #fff;
+                                        color: #fff;
+                                        padding: 30px;
+                                        margin-top: 10px;
+                                        border-radius: 8px;
                                         span {
                                             font-size: 0.625rem; 
                                             color: #707070;
@@ -403,10 +415,274 @@ main {
                                     }
                                 }
                             }
+                            .is_soldout {
+                                display: none;
+                                    text-align: center;
+                                    padding: 50px 60px;
+                                    background: #f5f7fa;
+                                    margin: 20px 0;
+                                    border-radius: 10px;
+                                p {
+                                    i {
+                                        font-size: 2.25rem;
+                                        color: rgb(194, 194, 194);;
+                                    }
+                                }
+                                .soldout {
+                                    font-size: $title20; font-weight: 700;
+                                    color: #707070;
+                                    padding: 10px 0;
+                                }
+                                .re_search {
+                                    font-size: $subC14;
+                                    color: #999;
+                                    padding-bottom: 30px;
+                                }
+                                .scedule {
+                                    background: #fff;
+                                    font-size: $subC14;
+                                    color: #333;
+                                    padding: 10px 35px;
+                                    border-radius: 8px;
+                                    border: 1px solid rgb(235 235 235);
+                                }
+                            }
+                        }
+                    }
+                    .room_intro {
+                        border-bottom: 1px solid #ebebeb;
+                        padding: 30px 0;
+                        h2 {
+                            font-size: $title18; font-weight: $weight700;
+                            color: #333;
+                        }
+                        i {
+                            font-size: $subC14;
+                            color: rgb(225, 225, 225);
+                            padding: 10px 0;
+                        }
+                        p {
+                            font-size: $subT15;
+                            color: #707070;
+                            line-height: 1.5;
+                        }
+                        i[class*=rotate] {
+                            display: flex;
+                        }
+                    }
+                    .room_use {
+                        border-bottom: 1px solid #ebebeb;
+                        padding: 30px 0;
+                        h2 {
+                            font-size: $title18; font-weight: $weight700;
+                            color: #333;
+                            padding-bottom: 30px;
+                        }
+                        dl {
+                            dt {
+                                font-size: $subT15; font-weight: $weight600;
+                                color: #49627A;
+                                padding: 20px 0;
+                            }
+                            dd {
+                                font-size: $subT15;
+                                color: #707070;
+                                padding: 5px;
+                                em {
+                                    font-size: $subT15;
+                                    color: $mainColor-r;
+                                }
+                                span {
+                                    font-size: $subT15; font-weight: $weight600;
+                                    color: #707070;
+                                }
+                            }
+                        }
+                    }
+                    .cancel {
+                        border-bottom: 1px solid #ebebeb;
+                        padding: 30px 0;
+                        h2 {
+                            font-size: $title18; font-weight: $weight700;
+                            color: #333;
+                            padding-bottom: 30px;
+                        }
+                        p {
+                            font-size: $subT15; font-weight: $weight600;
+                            color: #707070;
+                        }
+                    }
+                    .seller_info {
+                        border-bottom: 1px solid #ebebeb;
+                        padding: 30px 0;
+                        display: flex; flex-flow: row nowrap;
+                        align-items: center;
+                        justify-content: space-between;
+                        h2 {
+                            font-size: $title18; font-weight: $weight700;
+                            color: #333;
+                        }
+                        .seller {
+                            i {
+                                font-size: $title20;
+                                color: rgb(194, 194, 194);
+                            }
+                        }
+                    }
+                }
+                .side {
+                    width: 400px;
+                    margin: $margin0;
+                    padding-left: 50px;
+                    .map {
+                        margin-bottom: 20px;
+                        .mini_map {
+                            border: 1px solid rgb(235 235 235);
+                            border-radius: 10px;
+                            .in_map {
+                                position: relative;
+                                span {
+                                    content: ''; display: inline-block;
+                                    background-image: url(../images/detail/mini_map.png);
+                                    background-repeat: no-repeat;
+                                    background-position: right;
+                                    background-size: cover;
+                                    width: 350px; height: 140px;
+                                    border-top-left-radius: 10px;
+                                    border-top-right-radius: 10px;
+                                    position: sticky;                                    
+                                }
+                                .pin {
+                                    width: 30px;
+                                    position: absolute; right: 42%; bottom: 65px;
+                                }
+                                i{
+                                    background: #fff;
+                                    border-radius: 50%;
+                                    border: 1px solid rgb(235 235 235);
+                                    padding: 7px;
+                                    position: absolute; right: 30px; bottom: 25px;
+                                }
+                                .naver_logo {
+                                    position: absolute; right: 10px; bottom: 10px;
+                                }
+                                
+                            }
+                            .address {
+                                width: 350px;
+                                display: flex; flex-flow: row nowrap;
+                                justify-content: space-between;
+                                padding: 20px;
+                                p {
+                                    font-size: $subT15;
+                                    color: #707070;
+                                    line-height: 1.5;
+                                }
+                                a {
+                                    font-size: $subT15;
+                                    color: $mainColor-b;
+                                    i {padding-right: 5px;}
+                                }
+                            }
+                        }
+                    }
+                    .event_pay {
+                        width: 350px;
+                        border: 1px solid rgb(235 235 235);
+                        border-radius: 10px;
+                        position: fixed;
+                        #event_bnr {
+                            text-align: center;
+                            padding: 20px;
+                            .event_title {
+                                width: 300px;
+                                display: flex; flex-flow: row nowrap;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 15px 0;
+                                border-bottom: 1px solid rgb(235 235 235);
+                                h2 {
+                                    font-size: $subT15; 
+                                    color: #000;
+                                    em {
+                                        font-size: $subT15; font-weight: $weight700;
+                                        color: $mainColor-r;
+                                    }
+                                }
+                                .coupon_get {
+                                    background: $mainColor-b;
+                                    border-radius: 10px;
+                                    color: #fff;
+                                    padding: 9px 8px 9px 12px;
+                                    font-size: $small12;
+                                    i {
+                                        font-size: $small12;
+                                        margin-left: 3px;
+                                    }
+                                }
+                            }
+                            .event_slide {
+                                padding: 20px 0;
+                                border-bottom: 1px solid rgb(235 235 235);
+                                .event_slide1 {
+                                    img {
+                                        width: 300px;
+                                        border-radius: 10px;
+                                    }
+                                }
+                                .event_slide2 {
+                                    img {
+                                        display: none;
+                                        height: 120px;
+                                        border-radius: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        .pay {
+                            .title {
+                                display: flex; flex-flow: row nowrap;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 20px;
+                                h2 {
+                                    font-size: $title18; font-weight: $weight600;
+                                    color: #333;
+                                }
+                                .more_benefit {
+                                    font-size: $subC14;
+                                    color: $mainColor-b;
+                                    i {
+                                        font-size: $subC14;
+                                        color: $mainColor-b;
+                                    }
+                                }
+                            }
+                            .pay_detail {
+                                display: flex; flex-flow: column nowrap;
+                                padding: 10px 20px 20px 20px;
+                                p {
+                                    display: flex; align-items: center;
+                                    font-size: $subT15;
+                                    padding: 0 10px 20px 5px;
+                                    img {
+                                        width: 70px;
+                                    }
+                                }
+                                span {
+                                    font-size: $subT15;
+                                    line-height: 1.5;
+                                    em {
+                                        font-size: $subT15;
+                                        font-weight: $weight600;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
+
         }
     }
 }
