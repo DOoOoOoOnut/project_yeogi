@@ -133,8 +133,8 @@ main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
-  padding: 30px 10px 20px;
-  width: 820px;
+  padding: 30px 15px 20px;
+  width: 800px;
   position: absolute;
   top: 55px;
   left: 0;
@@ -142,15 +142,15 @@ main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_
   overflow-x: hidden;
 }
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail {
-  width: 1230px;
+  width: 1200px;
   position: relative;
 }
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .box_btn {
-  width: 820px;
-  padding-right: 60px;
+  width: 800px;
+  padding-right: 90px;
   position: absolute;
   top: 10px;
-  left: 20px;
+  left: 25px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -159,12 +159,11 @@ main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top {
   display: flex;
   justify-content: space-between;
-  width: 1230px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #d6d6d6;
+  width: 1150px;
+  padding-bottom: 10px;
 }
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date {
-  width: 350px;
+  width: 370px;
   padding: 10px 5px;
   display: flex;
   flex-flow: column nowrap;
@@ -184,11 +183,11 @@ main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_
 }
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr {
   width: 100%;
-  height: 45px;
+  height: 50px;
 }
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr td {
   color: #707070;
-  padding: 5px;
+  padding: 2px;
   font-size: 0.813rem;
 }
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr td:hover {
@@ -198,13 +197,24 @@ main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .redday {
   color: #f45858;
 }
+main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .start_active {
+  background-color: #1273e4;
+  color: #fff;
+  border-radius: 50%;
+}
+main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .end_active {
+  background-color: #1273e4;
+  color: #fff;
+  border-radius: 50%;
+}
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom {
   margin: 0 10px;
-  width: 100%;
+  width: 780px;
+  border-top: 1px solid #d6d6d6;
 }
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .date_reset {
   position: relative;
-  bottom: -17px;
+  bottom: -18px;
 }
 main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .date_reset i {
   font-size: 0.75rem;

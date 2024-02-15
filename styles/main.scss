@@ -99,15 +99,15 @@ main {
                                 // display:none;
                                 background-color:#fff; border-radius:10px;
                                 box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
-                                padding:30px 10px 20px; width:820px;
+                                padding:30px 15px 20px; width:800px;
                                 position:absolute; top:55px; left:0; z-index:999;
                                 overflow-x:hidden;
                                 .date_select_detail {
-                                    width:1230px;
+                                    width:1200px;
                                     position:relative;
                                     .box_btn {
-                                        width:820px; padding-right:60px;
-                                        position:absolute; top:10px; left:20px;
+                                        width:800px; padding-right:90px;
+                                        position:absolute; top:10px; left:25px;
                                         @include flex-rnsc;
                                         button {
                                             i {}
@@ -115,10 +115,9 @@ main {
                                     }
                                     .date_top {
                                         display:flex; justify-content:space-between;
-                                        width:1230px;
-                                        padding-bottom:30px; border-bottom:1px solid #d6d6d6;
+                                        width:1150px; padding-bottom:10px;
                                         .date {
-                                            width:350px; padding:10px 5px;
+                                            width:370px; padding:10px 5px;
                                             display:flex; flex-flow:column nowrap;
                                             text-align:center;
                                             h3 {margin-bottom:30px; font-family:PretendardSemiBold;}
@@ -132,9 +131,17 @@ main {
                                                 tbody {
                                                     tr {
                                                         width:100%; height:50px;
-                                                        td {color:#707070; padding:5px; font-size:$small13;}
+                                                        td {color:#707070; padding:2px; font-size:$small13;}
                                                         td:hover {background-color:#f5f5f5; border-radius:50%;}
                                                         .redday {color:$subColor-r;}
+                                                        .start_active {
+                                                            background-color:$mainColor-b; color:#fff;
+                                                            border-radius:50%;
+                                                        }
+                                                        .end_active {
+                                                            background-color:$mainColor-b; color:#fff;
+                                                            border-radius:50%;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -142,10 +149,10 @@ main {
                                     }
                                 }
                                 .date_bottom {
-                                    margin:0 10px;
-                                    width:100%;
+                                    margin:0 10px; width:780px;
+                                    border-top:1px solid #d6d6d6;
                                     .date_reset {
-                                        position:relative; bottom:-17px;
+                                        position:relative; bottom:-18px;
                                         i {font-size:$small12; color:#d6d6d6;}
                                         span {font-size:$small12; color:#d6d6d6;}
                                     }
