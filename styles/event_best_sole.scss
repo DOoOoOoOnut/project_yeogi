@@ -5,6 +5,7 @@ main {
     margin: 0 auto;
     text-align: center;
     width: 1080px;
+    background-color: #F2F2F2;
     .container {
         margin-bottom: 96px;
         position: relative; 
@@ -52,7 +53,6 @@ main {
                         position: relative;
                         .box {
                             position: relative;
-                            left: 5px;
                             height: 90px;
                             width: 20px;
                             .clock_name {
@@ -105,20 +105,22 @@ main {
                 width: 1080px;
                 right: -7px;
             }
-            .slide {
+            .swiper-container {
                 width: 1080px;
                 background-color: #F2F2F2;
-                @include flex-rnsc;
-                
-                overflow-x: hidden;
-                padding-left: 70px;
-                a {
-                    display: inline-block;
-                    background-color: #F2F2F2;
-                    
-                    img {
-                        width: 657.5px; 
-                        margin-right: 15px;
+                overflow: hidden;
+                .swiper-wrapper {
+                    @include flex-rnsc;
+                    padding-left: 70px;
+                    .swiper-slide {
+                        a {
+                            display: inline-block;
+                            background-color: #F2F2F2;
+                            img {
+                                width: 657.5px; 
+                                margin-right: 15px;
+                            }
+                        }
                     }
                 }
             }

@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>숙소 검색 결과 - 여행할 때 여기어때</title> <!-- js: 숙소 앞에 검색한 지역명 들어감 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/search.css">
     <link rel="stylesheet" href="./styles/checkbox.css">
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=r85p85z8hp"></script>
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
     <style>
@@ -194,10 +196,10 @@
                                                             </dl>
                                                         </div>
                                                     </div>
-                                                    <div class="result_list">
+                                                    <div class="\">
                                                         <h2>경주 숙소 검색 결과</h2>
                                                         <div class="room_container">
-                                                            <a href="" class="room">
+                                                            <a href="#" class="room">
                                                                 <div class="photo"></div>
                                                                 <div class="contents">
                                                                     <div class="title_wrap">
@@ -227,7 +229,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="big_map">
+                                                <div class="big_map" id="map">
                                                     <!-- 지도 API 사용 -->
                                                 </div>
                                             </div>
@@ -368,7 +370,7 @@
                     <div id="room_container">
                         <swiper-container class="mySwiper page_wrap" init="false"><!-- 페이지 1 -->
                             <swiper-slide class="page">
-                                <a href="#" class="room">
+                                <a href="./detail.html" class="room">
                                     <div class="photo"></div>
                                     <div class="contents">
                                         <div class="title_wrap">
@@ -395,7 +397,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="room">
+                                <a href="./detail.html" class="room">
                                     <div class="photo"></div>
                                     <div class="contents">
                                         <div class="title_wrap">
@@ -462,6 +464,7 @@
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&callback=initMap"></script>
     <script src="./script/search.js"></script>
 </body>
 </html>

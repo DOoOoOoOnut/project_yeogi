@@ -19,42 +19,43 @@ main {
   margin: 0 auto;
 }
 main nav {
-  max-width: 1400px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  width: 100%;
+  background: #fff;
   position: fixed;
   z-index: 999;
-  background: #fff;
+  width: 1400px;
 }
-main nav .main_menu {
-  width: 1073px;
+main nav .box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+main nav .box .main_menu {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-main nav .main_menu .main_move {
+main nav .box .main_menu .main_move {
   color: #1273e4;
   border-bottom: 2px solid #1273e4;
 }
-main nav .main_menu .move {
+main nav .box .main_menu .move {
   color: #707070;
 }
-main nav .main_menu a {
+main nav .box .main_menu a {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 24px 16px;
 }
-main nav .select {
-  width: 128px;
+main nav .box .select {
+  width: 125px;
   background: #1273e4;
-  padding: 10px 15px;
   border-radius: 8px;
-  display: flex;
-  justify-content: center;
+  padding: 10px 15px;
+  text-align: center;
 }
-main nav .select #select_room {
+main nav .box .select #select_room {
   color: #fff;
   font-size: 0.875rem;
 }
@@ -112,22 +113,294 @@ main section .room .photo .more_photo i {
   width: 16px;
   margin-right: 5px;
 }
-main section .room .side .map .adress {
+main section .room .box .contents .title_wrap .title .type {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+}
+main section .room .box .contents .title_wrap .title .type span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #49627A;
+}
+main section .room .box .contents .title_wrap .title .type img {
+  width: 59px;
+}
+main section .room .box .contents .title_wrap .hotel_name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  padding-bottom: 25px;
+}
+main section .room .box .contents .title_wrap .review_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+main section .room .box .contents .title_wrap .review_wrap .point_wrap i {
+  color: rgb(255, 173, 10);
+  padding-right: 5px;
+}
+main section .room .box .contents .title_wrap .review_wrap .point_wrap span {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 700;
+  padding-right: 5px;
+}
+main section .room .box .contents .title_wrap .review_wrap .review {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #999;
+  padding-right: 10px;
+}
+main section .room .box .contents .title_wrap .review_wrap .all_review {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1273e4;
+}
+main section .room .box .contents .review_box {
+  border-bottom: 1px solid #ebebeb;
+}
+main section .room .box .contents .review_box .thum_review {
+  display: flex;
+}
+main section .room .box .contents .review_box .thum_review .swiper-container .swiper-wrapper {
+  display: flex;
   padding: 20px;
 }
-main section .room .side .map .adress p {
+main section .room .box .contents .review_box .thum_review .swiper-container .swiper-wrapper .swiper_slide {
+  background: #FAFAFA;
+  padding: 20px 22px 20px 20px;
+  border-radius: 15px;
+  text-align: right;
+}
+main section .room .box .contents .review_box .thum_review .swiper-container .swiper-wrapper .swiper_slide i {
+  font-size: 1.5rem;
+  color: rgb(188, 196, 204);
+  padding-right: 10px;
+}
+main section .room .box .contents .review_box .thum_review .swiper-container .swiper-wrapper .swiper_slide p {
   font-size: 0.938rem;
   color: #707070;
-  line-height: 1.5;
+  padding-bottom: 10px;
 }
-main section .room .side .map .adress a {
+main section .room .box .contents .review_box .thum_review .swiper-container .swiper-wrapper .swiper_slide span {
+  font-size: 1rem;
+  color: #333;
+}
+main section .room .box .contents .review_box .thum_review .swiper-container .swiper-wrapper .swiper_slide span em {
+  font-size: 0.688rem;
+  color: #999;
+}
+main section .room .box .contents .additional_service {
+  padding: 20px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+main section .room .box .contents .additional_service .title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main section .room .box .contents .additional_service .title .additonal {
+  font-size: 1.125rem;
+  color: #333;
+}
+main section .room .box .contents .additional_service .title .more_service {
+  padding-left: 10px;
   font-size: 0.875rem;
   color: #1273e4;
-  padding-left: 20px;
 }
-main section .room .side .map .adress a i {
+main section .room .box .contents .additional_service .title .more_service i {
+  margin-left: 5px;
+}
+main section .room .box .contents .additional_service .service {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main section .room .box .contents .additional_service .service .top {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-top: 20px;
+}
+main section .room .box .contents .additional_service .service .top p {
+  display: flex;
+  padding-bottom: 10px;
+}
+main section .room .box .contents .additional_service .service .top p img {
+  width: 20px;
+}
+main section .room .box .contents .additional_service .service .top p span {
+  font-size: 0.938rem;
+  font-weight: 500;
+  color: #707070;
+  padding: 0 5px 0 10px;
+}
+main section .room .box .contents .additional_service .service .btm {
+  display: flex;
+  flex-flow: row nowrap;
+}
+main section .room .box .contents .additional_service .service .btm p {
+  display: flex;
+}
+main section .room .box .contents .additional_service .service .btm p img {
+  width: 20px;
+}
+main section .room .box .contents .additional_service .service .btm p span {
+  font-size: 0.938rem;
+  font-weight: 500;
+  color: #707070;
+  padding: 0 5px 0 10px;
+}
+main section .room .box .contents .detail_page {
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+}
+main section .room .box .contents .detail_page .label {
+  padding: 50px 0 10px 0;
+}
+main section .room .box .contents .detail_page .black {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #000;
+  padding: 0 0 10px 0;
+}
+main section .room .box .contents .detail_page h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  padding: 24px 0;
+}
+main section .room .box .contents .detail_page .img {
+  padding: 30px 0;
+  position: relative;
+}
+main section .room .box .contents .detail_page .img img {
+  width: 588px;
+  border-radius: 10px;
+}
+main section .room .box .contents .detail_page .img .first_img {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  position: absolute;
+  left: 430px;
+  bottom: 60px;
+}
+main section .room .box .contents .detail_page .img .second_img {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  position: absolute;
+  left: 430px;
+  bottom: 60px;
+}
+main section .room .box .contents .detail_page .img .third_img {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  position: absolute;
+  left: 430px;
+  bottom: 60px;
+}
+main section .room .box .contents .room_type {
+  padding: 30px 0;
+}
+main section .room .box .contents .room_type .select {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 20px;
+}
+main section .room .box .contents .room_type .box .item {
+  background: #F5F7FA;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+main section .room .box .contents .room_type .box .item .join_view img {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+}
+main section .room .box .contents .room_type .box .item .item_type {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  padding-left: 30px;
+}
+main section .room .box .contents .room_type .box .item .item_type .room {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  padding-bottom: 10 px;
+}
+main section .room .box .contents .room_type .box .item .item_type .more_info {
+  text-align: right;
   color: #1273e4;
-  padding-right: 5px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+main section .room .box .contents .room_type .box .item .item_type .item_price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  background: #fff;
+  color: #fff;
+  padding: 30px;
+}
+main section .room .box .contents .room_type .box .item .item_type .item_price .left {
+  position: relative;
+}
+main section .room .box .contents .room_type .box .item .item_type .item_price .left i {
+  color: #707070;
+  font-size: 0.75rem;
+  padding-right: 10px;
+  position: absolute;
+  left: -20px;
+  top: 2px;
+}
+main section .room .box .contents .room_type .box .item .item_type .item_price .left p {
+  font-size: 0.75rem;
+  color: #707070;
+  padding-bottom: 5px;
+}
+main section .room .box .contents .room_type .box .item .item_type .item_price .right .price {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 10px;
+}
+main section .room .box .contents .room_type .box .item .item_type .item_price .right .price em {
+  font-size: 0.938rem;
+  font-weight: 600;
+  color: #333;
+}
+main section .room .box .contents .room_type .box .item .item_type .item_price .right .item_reservation {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 9px 12px;
+  background: #1273e4;
+  border-radius: 6px;
+}
+main section .room .box .contents .room_type .box .item .item_type .item_info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+main section .room .box .contents .room_type .box .item .item_type .item_info span {
+  font-size: 0.625rem;
+  color: #707070;
 }/*# sourceMappingURL=detail.css.map */
