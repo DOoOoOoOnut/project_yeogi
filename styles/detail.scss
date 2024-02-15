@@ -1,4 +1,31 @@
 @import 'common';
+// .side {
+            //     .map {
+            //         .mini_map {
+            //             a {
+                            
+            //             }
+            //         }
+            //         .adress {
+            //             display: flex; flex-flow: row nowrap;
+            //             padding: 20px;
+            //             p {
+            //                 font-size: $subT15;
+            //                 color: #707070;
+            //                 line-height: 1.5;
+            //             }
+            //             a {
+            //                 font-size: $subC14;
+            //                 color: $mainColor-b;
+            //                 padding-left: 20px;
+            //                 i {
+            //                     color: $mainColor-b;
+            //                     padding-right: 5px;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
 .room_view_box {display: none;}
 .service_box {display: none;}
 .seller_box {display: none;}
@@ -6,38 +33,39 @@
 main {
     max-width: 1400px; margin: $margin0;
     nav {
-        max-width: 1400px;
-        display: flex; flex-flow: row nowrap;
-        align-items: center;
-        width: 100%;
-        position: fixed; z-index: 999;
         background: #fff;
-        // border-bottom: 1px solid rgb(235 235 235);
-        .main_menu {
-            width: 1073px;
+        position: fixed; z-index: 999;
+        width: 1400px;
+        .box {
             display: flex; flex-flow: row nowrap;
+            justify-content: space-between;
             align-items: center;
-            .main_move {
-                color: $mainColor-b;
-                border-bottom: 2px solid $mainColor-b;
+            border-bottom: 1px solid rgb(235 235 235);
+            .main_menu {
+                display: flex; flex-flow: row nowrap;
+                align-items: center;
+                .main_move {
+                    color: $mainColor-b;
+                    border-bottom: 2px solid $mainColor-b;
+                }
+                .move {
+                    color: #707070;
+                }
+                a {
+                    font-size: $defalt16; font-weight: $weight600;
+                    padding: 24px 16px;
+                }
             }
-            .move {
-                color: #707070;
-            }
-            a {
-                font-size: $defalt16; font-weight: $weight500;
-                padding: 24px 16px;
-            }
-        }
-        .select {
-            width: 128px;
-            background: $mainColor-b;
-            padding: 10px 15px;
-            border-radius: 8px;
-            display: flex; justify-content: center;
-            #select_room {
-                color: #fff;
-                font-size: $subC14;
+            .select {
+                width: 125px;
+                background: $mainColor-b;
+                border-radius: 8px;
+                padding: 10px 15px;
+                text-align: center;
+                #select_room {
+                    color: #fff;
+                    font-size: $subC14;
+                }
             }
         }
     }
@@ -97,28 +125,283 @@ main {
                     }
                 }
             }
-            .side {
-                .map {
-                    .mini_map {
-                        a {
-                            
+            .box {
+                .contents {
+                    .title_wrap {
+                        .title {
+                            .type {
+                                display: flex; flex-flow: row nowrap;
+                                align-items: center;
+                                span {
+                                    font-size: $defalt16; font-weight: $weight600;
+                                    color: #49627A;
+                                }
+                                img {
+                                    width: 59px;
+                                }
+                            }
+                        }
+                        .hotel_name {
+                            font-size: $title32; font-weight: $weight700;
+                            color: #333;
+                            padding-bottom: 25px;
+                        }
+                        .review_wrap {
+                            display: flex; flex-flow: row nowrap;
+                            .point_wrap {
+                                i {
+                                    color: rgb(255, 173, 10);
+                                    padding-right: 5px;
+                                }
+                                span {
+                                    font-size: $defalt16;
+                                    color: #333;
+                                    font-weight: $weight700;
+                                    padding-right: 5px;
+                                }
+                            }
+                            .review {
+                                font-size: $defalt16; font-weight: $weight700;
+                                color: #999;
+                                padding-right: 10px;
+                            }
+                            .all_review {
+                                font-size: $defalt16; font-weight: $weight600;
+                                color: $mainColor-b;
+                            }
                         }
                     }
-                    .adress {
-                        display: flex; flex-flow: row nowrap;
-                        padding: 20px;
-                        p {
-                            font-size: $subT15;
-                            color: #707070;
-                            line-height: 1.5;
+                    .review_box {
+                        border-bottom: 1px solid #ebebeb;
+                        .thum_review {
+                            display: flex;
+                            #thum_review_contents {}
+                            .swiper-container {
+                                .swiper-wrapper {
+                                    display: flex;
+                                    padding: 20px; 
+                                    .detail_review1 {}
+                                    .swiper_slide {
+                                        background: #FAFAFA;
+                                        padding: 20px 22px 20px 20px;
+                                        border-radius: 15px;
+                                        text-align: right;
+                                        i {
+                                            font-size: $title24;
+                                            color: rgb(188, 196, 204);
+                                            padding-right: 10px;
+                                        }
+                                        p {
+                                            font-size: $subT15; 
+                                            color: #707070;
+                                            padding-bottom: 10px;
+                                        }
+                                        span {
+                                            font-size: $defalt16;
+                                            color: #333;
+                                            em {
+                                                font-size: $small11;
+                                                color: #999;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .swiper_prev {
+                                i {}
+                            }
+                            .swiper_next {
+                                i {}
+                            }
                         }
-                        a {
-                            font-size: $subC14;
-                            color: $mainColor-b;
-                            padding-left: 20px;
-                            i {
+                    }
+                    .additional_service {
+                        padding: 20px 0;
+                        border-bottom: 1px solid #ebebeb;
+                        .title {
+                            display: flex; flex-flow: row nowrap;
+                            align-items: center; justify-content: space-between;
+                            .additonal {
+                                font-size: $title18;
+                                color: #333;
+                            }
+                            .more_service {
+                                padding-left: 10px;
+                                font-size: $subC14;
                                 color: $mainColor-b;
-                                padding-right: 5px;
+                                i {
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                        .service {
+                            display: flex; flex-flow: column nowrap;
+                            .top {
+                                display: flex; flex-flow: row nowrap;
+                                padding-top: 20px;
+                                p {
+                                    display: flex;
+                                    padding-bottom: 10px;
+                                    img {
+                                        width: 20px                                
+                                    }
+                                    span {
+                                        font-size: $subT15; font-weight: $weight500;
+                                        color: #707070;
+                                        padding: 0 5px 0 10px;
+                                    }
+                                }
+                            }
+                            .btm {
+                                display: flex; flex-flow: row nowrap;
+                                p {
+                                    display: flex;
+                                    img {
+                                        width: 20px
+                                    }
+                                    span {
+                                        font-size: $subT15; font-weight: $weight500;
+                                        color: #707070;
+                                        padding: 0 5px 0 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .detail_page {
+                        text-align: center;
+                        border-bottom: 1px solid #ebebeb;
+                        .label {
+                            padding: 50px 0 10px 0; 
+                            img {}
+                        }
+                        .black {
+                            font-size: $subC14; font-weight: $weight600;
+                            color: #000;
+                            padding: 0 0 10px 0;
+                        }
+                        h1 {
+                            font-size: $title24; font-weight: $weight700;
+                            color: #333;
+                            padding: 24px 0;
+                        }
+                        .img {
+                            padding: 30px 0;
+                            position: relative;
+                            img {
+                                width: 588px;
+                                border-radius: 10px;
+                            }
+                            .first_img {
+                                text-align: left;
+                                font-size: $defalt16; font-weight: $weight600;
+                                color: #fff;
+                                line-height: 1.5;
+                                letter-spacing: 1.2px;
+                                position: absolute; left: 430px; bottom: 60px;
+                            }
+                            .second_img {
+                                text-align: left;
+                                font-size: $defalt16; font-weight: $weight600;
+                                color: #fff;
+                                line-height: 1.5;
+                                letter-spacing: 1.2px;
+                                position: absolute; left: 430px; bottom: 60px;
+                            }
+                            .third_img {
+                                text-align: left;
+                                font-size: $defalt16; font-weight: $weight600;
+                                color: #fff;
+                                line-height: 1.5;
+                                letter-spacing: 1.2px;
+                                position: absolute; left: 430px; bottom: 60px;
+                            }
+                        }
+                    }
+                    .room_type {
+                        padding: 30px 0;
+                        .select {
+                            font-size: $title18; font-weight: $weight600;
+                            color: #333;
+                            padding-bottom: 20px;
+                        }
+                        .box {
+                            .item {
+                                background: #F5F7FA;
+                                padding: 30px;
+                                border-radius: 10px;
+                                display: flex; flex-flow: row nowrap;
+                                .join_view {
+                                    img {
+                                        width: 250px; height: 250px;
+                                        border-radius: 5px;
+                                    }
+                                }
+                                .item_type {
+                                    width: 100%;
+                                    display: flex; flex-flow: column nowrap;
+                                    padding-left: 30px;
+                                    .room {
+                                        font-size: $title20; font-weight: $weight700;
+                                        color: #333;
+                                        padding-bottom: 10  px;
+                                    }
+                                    .more_info {
+                                        text-align: right;
+                                        color: $mainColor-b;
+                                        font-size: $subC14; font-weight: $weight600;
+                                        padding-bottom: 20px;
+                                        i {}
+                                    }
+                                    .item_price {
+                                        display: flex; flex-flow: row nowrap;
+                                        justify-content: space-between;
+                                        width: 100%;
+                                        background: #fff;
+                                        color: #fff;
+                                        padding: 30px;
+                                        .left {
+                                            position: relative;
+                                            i {
+                                                color: #707070;
+                                                font-size: $small12;
+                                                padding-right: 10px;
+                                                position: absolute; left: -20px; top: 2px;
+                                            }
+                                            p {
+                                                font-size: $small12;
+                                                color: #707070;
+                                                padding-bottom: 5px;
+                                            }
+                                        }
+                                        .right {
+                                            .price {
+                                                font-size: $title18; font-weight: $weight600;
+                                                color: #333;
+                                                padding-bottom: 10px;
+                                                em {
+                                                    font-size: $subT15; font-weight: $weight600;
+                                                    color: #333;
+                                                }
+                                            }
+                                            .item_reservation {
+                                                font-size: $small12; font-weight: $weight600;
+                                                color: #fff;
+                                                padding: 9px 12px;
+                                                background: $mainColor-b;
+                                                border-radius: 6px;
+                                            }
+                                        }
+                                    }
+                                    .item_info {
+                                        display: flex; flex-flow: row nowrap;
+                                        justify-content: space-between;
+                                        span {
+                                            font-size: 0.625rem; 
+                                            color: #707070;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
