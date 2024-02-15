@@ -6,11 +6,12 @@
     <title>예약 확인 및 결제 - 여기어때</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/pay.css">
 </head>
 <body>
     <main>
         <section class="top">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="detail.html"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>예약 확인 및 결제</h1>
         </section>
         <section class="container">
@@ -19,22 +20,27 @@
                     <legend class="skip">결제폼</legend>
                     <div class="wrap_left">
                         <section class="user_info_box">
-                            <h2 class="contents_title">예약자 정보</h2>
+                            <h2>예약자 정보</h2>
                             <div class="user_name_detail">
                                 <h3>예약자 이름</h3>
-                                <div class="input_box">
+                                <div class="input_box_name">
                                     <input type="text" placeholder="홍길동" id="user_name">
                                     <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                                 </div>
-                                <p class="error_massage"><!-- js --></p>
+                                <p class="error_message"><!-- js --></p>
                             </div>
                             <div class="user_phone_detail">
                                 <h3>휴대폰 번호</h3>
-                                <div class="input_box">
-                                    <input type="number" placeholder="010-1234-5678" id="user_phone"><!-- value="auto_complete_phone" -->
-                                    <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
+                                <div class="input_box_num">
+                                    <div class="input_detail">
+                                        <input type="number" placeholder="010-1234-5678" id="user_phone"><!-- value="auto_complete_phone" -->
+                                        <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
+                                    </div>
+                                    <div class="confirm_num">
+                                        <button type="button">인증번호 전송</button>
+                                    </div>
                                 </div>
-                                <p class="error_massage"><!-- js --></p>
+                                <p class="error_message"><!-- js --></p>
                                 <p>개인 정보 보호를 위해 안심번호로 숙소에 전송됩니다.</p>
                             </div>
                         </section>
