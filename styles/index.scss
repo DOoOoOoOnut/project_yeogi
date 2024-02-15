@@ -14,23 +14,24 @@ header {
             .kr_travel {
                 display:flex; flex-flow:column nowrap; align-items:center;
                 h2 {margin-right:10px; padding:20px; cursor:pointer;}
+                h2:hover {color:#707070;}
                 .kr_travel_box {
                     display:flex; flex-flow:column nowrap; align-items:center;
-                    padding:20px; background:#fff; top:70px;
+                    padding:10px 0; background:#fff; top:70px;
                     position:absolute; margin-right:10px;
                     border-radius:10px; z-index:999;
                     box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
                     //js
                     display:none;
-                    a {margin-bottom:10px;}
+                    a {padding:10px 20px; text-align:center;}
+                    a:hover {background-color:#ededed; width:100%;}
                     a:last-child {margin-bottom:0;}
                 }
             }
             .over_travel {
                 display:flex; flex-flow:column nowrap; align-items:center;
-                h2 {
-                    margin-right:10px; padding:20px; cursor:pointer;
-                }
+                h2 {margin-right:10px; padding:20px; cursor:pointer;}
+                h2:hover {color:#707070;}
                 .over_travel_box {
                     display:flex; flex-flow:row nowrap;
                     background:#fff; top:70px;
@@ -53,6 +54,7 @@ header {
                         .japan_detail {
                             display:flex; flex-flow:column nowrap;
                             a {padding:8px 16px 8px 0;}
+                            a:hover {color:#707070;}
                         }
                     }
                     .asia {
@@ -64,11 +66,13 @@ header {
                                 display:flex; flex-flow:column nowrap;
                                 margin-right:20px;
                                 a {padding:8px 16px 8px 0;}
+                                a:hover {color:#707070;}
                             }
                             .right {
                                 display:flex; flex-flow:column nowrap;
                                 margin-right:4px;
                                 a {padding:8px 16px;}
+                                a:hover {color:#707070;}
                             }
                         }
                     }
@@ -78,6 +82,7 @@ header {
                         .europe_us_detail {
                             display:flex; flex-flow:column nowrap;
                             a {padding:8px 16px 8px 0;}
+                            a:hover {color:#707070;}
                         }
                     }
                 }
@@ -95,6 +100,7 @@ header {
                         align-items:center;
                         padding:10px;
                         a {}
+                        a:hover {color:#707070;}
                         .search_list {
                             display:flex; flex-flow:column nowrap;
                             align-items:center; background:#fff;
@@ -103,7 +109,8 @@ header {
                             box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
                             //js
                             display:none;
-                            a {padding:8px 16px;}
+                            a {padding:8px 16px; text-align:center;}
+                            a:hover {background-color:#ededed; width:100%;}
                         }
                     }
                     .down {
@@ -139,6 +146,7 @@ header {
                     //js
                     display:none;
                     a {padding:8px 16px;}
+                    a:hover {background-color:#ededed; width:100%;}
                 }
             }
             .mypage_warp_member {
@@ -164,9 +172,11 @@ header {
                     border-radius:10px; width:150px;
                     box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
                     //js
-                    // display:none;
+                    display:none;
                     a {padding:8px 16px;}
+                    a:hover {background-color:#ededed; width:100%;}
                     .logout {padding:8px 16px; text-align:left;}
+                    .logout:hover {background-color:#ededed; width:100%;}
                 }
             }
         }
@@ -198,4 +208,88 @@ header {
             }
         }
     }   
+}
+footer {
+    background:#fafafa;
+    .footer_wrap {
+        width:1400px; margin:$margin0;
+        padding:40px 0 64px;
+        .footer_wrap_top {
+            display:flex; flex-flow:row nowrap;
+            justify-content:space-between;
+            align-items:flex-start;
+            margin-bottom:30px;
+            .wrap_top_left {
+                width:100%;
+                P {margin-bottom:15px;}
+                p:nth-child(1) {
+                    font-size:$title18; color:#707070;
+                    font-family:PretendardSemiBold;
+                }
+                p:nth-child(2) {
+                    font-size:$subC14; color:#999;
+                    margin-bottom:30px;
+                }
+                .call {
+                    border:2px solid #ededed; background-color:#fff;
+                    border-radius:10px; padding:12px 17px;
+                    i {color:#999; margin-right:5px;}
+                    span {letter-spacing:0.8px; font-family:PretendardMedium;}
+                }
+                .call:hover {background-color:#f5f5f5;}
+            }
+            .wrap_top_right {
+                display:flex;
+                justify-content:space-between;
+                width:100%;
+                dl {
+                    dt {
+                        color:#707070; margin-bottom:15px;
+                        font-family:PretendardSemiBold;
+                    }
+                    dd {
+                        @include flex-cncf;
+                        a {
+                            font-size:$subC14;
+                            color:#999; margin-bottom:10px;
+                        }
+                        a:hover {color:#bbbbbb; text-decoration:underline;}
+                    }
+                }
+            }
+        }
+        .footer_wrap_bottom {
+            .company_box {
+                margin-bottom:30px;
+                .company_info {
+                    margin-bottom:30px;
+                    address {
+                        color:#999; font-size:$small12;
+                        line-height:1.4;
+                    }
+                }
+                .companyagree_sns {
+                    @include flex-rnsc;
+                    .agree {
+                        a {
+                            font-size:$subC14; color:#999;
+                            margin-right:10px;
+                            em {font-size:$subC14;}
+                            em:hover {color:#999; text-decoration:underline;}
+                        }
+                        a:hover {color:#bbbbbb; text-decoration:underline;}
+                    }
+                    .sns {
+                        a {
+                            margin-left:7px;
+                            i {color:#999; font-size:32px;}
+                        }
+                    }
+                }
+            }
+            .capyright {
+                p {font-size:$small12; color:#999;}
+            }
+        }
+    }
 }

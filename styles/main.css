@@ -1011,9 +1011,8 @@ main .center_container .black_pick_wrap .box_btn div i {
 main .center_container .black_pick_wrap .box_btn .swiper-button-prev06 {
   position: absolute;
   left: -20px;
-  top: 90px;
+  top: 200px;
   z-index: 99;
-  display: none;
 }
 main .center_container .black_pick_wrap .box_btn .swiper-button-prev06::after {
   display: none;
@@ -1021,7 +1020,7 @@ main .center_container .black_pick_wrap .box_btn .swiper-button-prev06::after {
 main .center_container .black_pick_wrap .box_btn .swiper-button-next06 {
   position: absolute;
   right: -20px;
-  top: 90px;
+  top: 200px;
   z-index: 99;
 }
 main .center_container .black_pick_wrap .box_btn .swiper-button-next06::after {
@@ -1043,7 +1042,42 @@ main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .swiper-
 }
 main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .swiper-slide .black_pick_detail img {
   width: 100%;
+  border-radius: 15px;
 }
 main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .swiper-slide .black_pick_detail:first-child {
   margin-left: 0;
+}
+main .app_bnr {
+  width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 50px;
+}
+main .app_bnr .app_bnr_img img {
+  width: 100%;
+  border-radius: 20px;
+}
+main .app_bnr .app_txt_box {
+  position: absolute;
+  z-index: 99;
+  top: 70px;
+  left: 50px;
+}
+main .app_bnr .app_txt_box .app_txt {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .app_bnr .app_txt_box .app_txt em {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+main .app_bnr .app_txt_box .app_txt span {
+  font-size: 0.875rem;
+  color: #999;
+  margin-bottom: 40px;
+  line-height: 1.5;
 }/*# sourceMappingURL=main.css.map */

@@ -37,7 +37,7 @@ main .container .wrap .reasons_check #withdrawal_from fieldset .reasons {
   align-items: center;
   height: 52px;
 }
-main .container .wrap .reasons_check #withdrawal_from fieldset .reasons input {
+main .container .wrap .reasons_check #withdrawal_from fieldset .reasons input[type*=radio] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -46,6 +46,12 @@ main .container .wrap .reasons_check #withdrawal_from fieldset .reasons input {
   margin-right: 8px;
   border: 1.5px solid #999;
   border-radius: 50%;
+  cursor: pointer;
+}
+main .container .wrap .reasons_check #withdrawal_from fieldset .reasons input[type*=radio]:checked {
+  border-color: #1273e4;
+  background-color: #1273e4;
+  animation: radiobox 0.3s ease-in-out;
 }
 main .container .wrap .reasons_check #withdrawal_from fieldset .contents {
   display: none;
@@ -188,4 +194,13 @@ main .container .wrap ul li::before {
   content: "•";
   display: block;
   color: #707070;
+}
+
+@keyframes radoobox {
+  0% {
+    scale: 0.2;
+  }
+  100% {
+    scale: 1;
+  }
 }/*# sourceMappingURL=user_withdrawal.css.map */

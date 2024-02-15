@@ -35,12 +35,18 @@ main {
                         .reasons {
                             @include flex-rnfc;
                             height: 52px;
-                            input {
+                            input[type*=radio] {
                                 appearance: none;
                                 width: 20px; height: 20px;
                                 margin-right: 8px;
                                 border: 1.5px solid #999;
                                 border-radius: 50%;
+                                cursor: pointer;
+                            }
+                            input[type*=radio]:checked {
+                                border-color: #1273e4;
+                                background-color: #1273e4;
+                                animation: radiobox 0.3s ease-in-out;
                             }
                         }
                         .contents {
@@ -187,3 +193,11 @@ main {
         }
     }
 }
+@keyframes radoobox {
+    0% {
+      scale: 0.2;
+    }
+    100% {
+      scale: 1;
+    }
+  }
