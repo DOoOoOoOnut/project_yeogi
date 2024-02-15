@@ -142,8 +142,9 @@ main section #result_frm .result .filter_container fieldset .top .map_container 
   text-align: center;
   font-weight: 600;
 }
-main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents {
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open >.contents {
   width: 100%;
+  display: flex;
 }
 main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left {
   width: 35%;
@@ -359,7 +360,7 @@ main section #result_frm .result .filter_container fieldset .top .map_container 
   font-size: 0.688rem;
 }
 main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .big_map {
-  width: 65%;
+  width: 100%; height:970px; 
   background-color: lightcoral;
 }
 main section #result_frm .result .filter_container fieldset .filter > div {

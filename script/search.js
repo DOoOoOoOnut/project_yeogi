@@ -102,4 +102,36 @@ const params = {
 
 
 
+//지도 api
 
+var mapOptions = {
+    center: new naver.maps.LatLng(37.70822923,128.83180095),
+    zoom: 15
+};
+
+var map = new naver.maps.Map('map', {
+    center: new naver.maps.LatLng(37.7911114,128.9210687),
+    zoom: 15
+});
+
+
+// filter에서 분류된 결과가 room_container에 출력
+// room_container에 있는 room의 갯수만큼 마커 생성
+// 생성되는 마커에 해당하는 숙소의 위도, 경도 정보 들어가야 함.
+
+// 마커를 추가할 위치의 배열
+var markerPositions = [
+    new naver.maps.LatLng(37.7911114,128.9210687),
+    new naver.maps.LatLng(37.7917805,128.90719),
+    new naver.maps.LatLng(37.7938531,128.906343)
+];
+
+// 각 위치에 마커를 생성하고 지도에 추가하는 함수
+var markers = []; // 마커를 저장할 배열
+for (var i = 0; i < markerPositions.length; i++) {
+    var marker = new naver.maps.Marker({
+        position: markerPositions[i],
+        map: map
+    });
+    markers.push(marker); // 생성된 마커를 배열에 추가
+}
