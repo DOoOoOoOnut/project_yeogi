@@ -91,7 +91,7 @@ ex) ./images/main/ _best_hotel001
 - 일혁 공지사항 (완료), 비회원예약조회 (작업중)
 - 다은 검색페이지(완료), 가입약관페이지(완료), 로그인페이지(완료) 
 - 민아
-1. header(완료)
+1. index.scss main.scss :
 (국내여행지 / 해외여행지 / 인기검색어 메뉴 추가 - 기존: 이벤트 / 고객센터 삭제
 -> 고객센터 카테고리는 마이페이지 안에 넣음)
 2. footer(완료)
@@ -187,7 +187,7 @@ ex) ./images/main/ _best_hotel001
 2. main.css 작업 : main css 작업하기
 
 -----------------------------------------------------------
-# 02/13 작업
+# 02/14 작업
 - 은지
 1. 마이페이지: 내 정보 확인 완성 / 설정 완성 /   마켓팅 수신 동의 완성 / 회원탈퇴 완성
 2. 챗GPT 디자인 수정
@@ -202,3 +202,21 @@ ex) ./images/main/ _best_hotel001
 1. search.scss 완료
 2. data 파일 만들기
 3. search.js 30% 완료
+
+-----------------------------------------------------------
+# 02/15 작업
+- 은지
+1. 팀원 도와주기 : raw.scss 작업 (html 약간 수정)
+2. event_new_year.js 완료
+3. event_best_sole.js
+- 일혁 
+1. css 상세페이지 작업중
+- 민아
+1. index.scss 작업 : hover 효과
+2. index.scss main.scss : footer.scss 작업하기
+- 다은
+1. search.js 80% 완성 : 네이버 지도 api 삽입 / js 단계 정리 / 데이터 필요한 부분 외 완료
+2. login.js 100% 완성
+3. 데이터파일 만들기 : accommodation.json 내에 기본 틀 정한 후 임시로 3개만 만들어둠
+4. search.scss 오류 해결하기
+5. 팀원 도와주기 : service_inquiry.scss
