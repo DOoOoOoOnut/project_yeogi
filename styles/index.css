@@ -313,6 +313,7 @@ header .fixed_btn {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  z-index: 9999;
 }
 header .fixed_btn .top_btn_container {
   margin-bottom: 10px;
