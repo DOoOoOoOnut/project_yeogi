@@ -820,15 +820,15 @@ main {
                     }
                 }
                 .swiper-button-prev06 {
-                    position:absolute; left:-20px; top:90px; z-index:99;
+                    position:absolute; left:-20px; top:200px; z-index:99;
                     //js
-                    display:none;
+                    // display:none;
                 }
                 .swiper-button-prev06::after {
                     display:none;
                 }
                 .swiper-button-next06 {
-                    position:absolute; right:-20px; top:90px; z-index:99;
+                    position:absolute; right:-20px; top:200px; z-index:99;
                 }
                 .swiper-button-next06::after {
                     display:none;
@@ -843,7 +843,7 @@ main {
                         .black_pick_detail {
                             margin-left:25px;
                             width:calc(100% / 4);
-                            img {width:100%;}
+                            img {width:100%; border-radius:15px;}
                         }
                         .black_pick_detail:first-child {margin-left:0;}
                     }
@@ -852,5 +852,34 @@ main {
         }
     }
     //앱광고
-    .app_bnr {}
+    .app_bnr {
+        width:1400px; margin:0 auto;
+        position:relative; margin-bottom:50px;
+        .app_bnr_img {
+            img {width:100%; border-radius:20px;}
+        }
+        .app_txt_box {
+            position:absolute; z-index:99; top:70px; left:50px;
+            .app_txt {
+                @include flex-cncf;
+                em {
+                    font-size:$title24;
+                    font-weight:$weight600;
+                    margin-bottom:20px;
+                    line-height:1.4;
+                }
+                span {
+                    font-size:$subC14;
+                    color:#999;
+                    margin-bottom:40px;
+                    line-height:1.5;
+                }
+            }
+            .app_qr {
+                .qr {
+                    svg {}
+                }
+            }
+        }
+    }
 }
