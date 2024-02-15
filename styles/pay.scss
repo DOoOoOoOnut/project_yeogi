@@ -1,2 +1,92 @@
 @import 'common';
 
+main {
+    width:1400px; margin:0 auto;
+    .top {
+        @include flex-rnfc;
+        margin:40px 0 20px;
+        a {
+            margin-right:20px;
+            i {font-size:20px;}
+        }
+        h1 {font-size:$title24; font-family:PretendardSemiBold;}
+    }
+    .container {
+        #pay_frm {
+            fieldset {
+                display:flex; justify-content:space-between;
+                .wrap_left {
+                    .user_info_box {
+                        h2 {
+                            font-size:$title18; font-family:PretendardMedium;
+                            margin:16px 0;
+                        }
+                        div {
+                            h3 {
+                                font-size:$small13; color:#707070;
+                                margin-bottom:5px;
+                            }
+                            .input_box_name {
+                                @include flex-rnsc; width:340px; height:48px;
+                                background-color:#f5f5f5; border-radius:8px;
+                                border:1.5px solid #f5f5f5;
+                                padding:0 15px;
+                                #user_name {padding-right:100px;}
+                                #user_name::placeholder {color:#bdbdbd;}
+                                .reset {
+                                    //js
+                                    display:none;
+                                    i {color:#707070;}
+                                }
+                            }
+                            // .input_box:hover {background-color:#eeeeee;}
+                            .error_border {
+                                //js
+                                border: 1.5px solid #f45858;
+                            }
+                            .error_message {
+                                color: $subColor-r; font-size:$small12;
+                                margin:5px 0 20px;
+                                //예약자 이름을 입력해주세요.
+                                //이름은 2자 이상 입력해주세요.
+                            }
+                        }
+                        .user_phone_detail {
+                            .input_box_num {
+                                @include flex-rnsc; width:340px; height:48px;
+                                .input_detail {
+                                    @include flex-rnsc; width:215px; height:48px;
+                                    background-color:#f5f5f5; border-radius:8px;
+                                    border:1.5px solid #f5f5f5; padding:0 15px;
+                                    #user_phone {}
+                                    #user_phone::placeholder {color:#bdbdbd;}
+                                    .reset {
+                                        i {color:#707070;}
+                                    }
+                                }
+                                .confirm_num {
+                                    width:115px; height:48px;
+                                    border:1.5px solid #bdbdbd;
+                                    border-radius:8px;
+                                    @include flex-rncc;
+                                    button {font-family:PretendardMedium;}
+                                }
+                                .confirm_num:hover {background-color:#eeeeee;}
+                                input::-webkit-outer-spin-button,
+                                input::-webkit-inner-spin-button {
+                                    -webkit-appearance: none;
+                                }
+                            }
+                            .error_message {
+                                color: $subColor-r; font-size:$small12;
+                                //휴대폰 번호를 입력해주세요.
+                                //휴대폰 번호를 확인해주세요.
+                            }
+                            p {font-size:$small13; color:#999;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
