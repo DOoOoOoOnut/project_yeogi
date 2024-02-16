@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/pay.css">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 <body>
     <main>
@@ -57,7 +58,7 @@
                         </section>
                         <!-- 로그인 했을시 -->
                         <section class="sale_box">
-                            <h2 class="contents_title">할인</h2>
+                            <h2>할인</h2>
                             <div class="coupon">
                                 <h3>쿠폰</h3>
                                 <div class="input_box">
@@ -147,7 +148,7 @@
                             </a>
                         </div>
                         <section class="payment_box">
-                            <h2 class="contents_title">결제 수단</h2>
+                            <h2>결제 수단</h2>
                             <div class="benefit">
                                 <em>혜택</em>
                             </div>
@@ -163,7 +164,7 @@
                                 <li><img src="#" alt="">휴대폰 결제</li>
                             </ul>
                             <div class="user_setting">
-                                <label><input type="checkbox" name="keep_paymet" id="keep_paymet"><span>이 결제수단을 다음에도 사용</span></label>
+                                <label><input type="checkbox" name="keep_paymet" id="keep_payment"><span>이 결제수단을 다음에도 사용</span></label>
                             </div>
                             <div class="benefit">
                                 <div class="benefit_kakaopay">
@@ -278,8 +279,29 @@
                                 <label><input type="checkbox" name="user_agree" class="user_agree"><span>약관 전체동의</span></label>
                                 <i class="fa-solid fa-angle-down"></i>
                             </div>
+                            <!-- js -->
                             <div class="agree_contents">
-
+                                <div class="first">
+                                    <label>
+                                        <input type="checkbox" name="user_agree" class="user_agree">
+                                        <span>숙소이용 및 취소/환불규정 동의(필수)</span>
+                                    </label>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <div class="second">
+                                    <label>
+                                        <input type="checkbox" name="user_agree" class="user_agree">
+                                        <span>개인정보 수집 및 이용 동의 (필수)</span>
+                                    </label>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <div class="third">
+                                    <label>
+                                        <input type="checkbox" name="user_agree" class="user_agree">
+                                        <span>개인정보 제3자 제공 동의 (필수)</span>
+                                    </label>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
                             </div>
                             <div class="pay_btn_box">
                                 <button type="button" id="pay_btn">401,400원 결제하기</button>

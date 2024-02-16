@@ -1,7 +1,7 @@
 @import 'common';
 
 main {
-    width:1400px; margin:0 auto; background-color:pink;
+    width:1400px; margin:0 auto;
     .top {
         @include flex-rnfc;
         margin:40px 0 20px;
@@ -17,6 +17,7 @@ main {
                 width:100%;
                 display:flex; justify-content:space-between;
                 .wrap_left {
+                    width:100%; margin-right:40px;
                     .user_info_box {
                         h2 {
                             font-size:$title18; font-family:PretendardMedium;
@@ -130,10 +131,110 @@ main {
                             p {font-size:$small13; color:#999;}
                         }
                     }
+                    //로그인 했을 시
+                    .sale_box {
+                        h2 {
+                            font-size:$title18; font-family:PretendardMedium;
+                            margin:16px 0;
+                        }
+                        .coupon {
+                            margin-bottom:15px;
+                            h3 {
+                                font-size:$small13; color:#707070;
+                                margin-bottom:5px;
+                            }
+                            .input_box {
+                                display:flex;
+                                #coupon_num {
+                                    @include flex-rnsc; width:340px; height:48px;
+                                    background-color:#f5f5f5; border-radius:8px;
+                                    border:1.5px solid #f5f5f5;
+                                    padding:0 15px; margin:0px 10px 5px 0;
+                                }
+                                #coupon_num::placeholder {color:#dfdfdf;}
+                                .amount_check {
+                                    font-family:PretendardMedium;
+                                    height:48px; padding:0 18px;
+                                    border:1.5px solid #dfdfdf;
+                                    border-radius:8px;
+                                }
+                            }
+                            p {font-size:$small12;}
+                        }
+                        .voucher {
+                            h3 {
+                                font-size:$small13; color:#707070;
+                                margin-bottom:5px;
+                            }
+                            div {
+                                display:flex;
+                                #amount_num {
+                                    @include flex-rnsc; width:340px; height:48px;
+                                    background-color:#f5f5f5; border-radius:8px;
+                                    border:1.5px solid #f5f5f5;
+                                    padding:0 15px; margin:0px 10px 5px 0;
+                                }
+                                #amount_num::placeholder {color:#dfdfdf;}
+                                .amount_check {
+                                    font-family:PretendardMedium;
+                                    height:48px; padding:0 18px;
+                                    border:1.5px solid #dfdfdf;
+                                    border-radius:8px;
+                                }
+                            }
+                        }
+                        .popup_bg {
+                            //js
+                            display:none;
+                        }
+                        .voucher_bg {
+                            //js
+                            display:none;
+                        }
+                    }
+                    //로그인 안했을 시
+                    .login_bnr {
+                        width:100%; height:80px;
+                        background-image:url(../images/pay/login_banner.svg);
+                        background-size:cover; 
+                        border-radius:12px; padding:0 32px;
+                        display:flex;
+                        a {
+                            width:100%;
+                            @include flex-rnsc;
+                            span {
+                                font-size:$title20; color:#fff;
+                                font-family:$familyMedium;
+                                em {
+                                    font-size:$title20; color:#ffdca7;
+                                    font-family:$familyMedium;
+                                }
+                            }
+                            i {font-size:$title20; color:#fff;}
+                        }
+                    }
+                    .payment_box {
+                        h2 {}
+                        .benefit {
+                            em {}
+                        }
+                        ul {
+                            li {
+                                img {}
+                            }
+                        }
+                        .user_setting {
+                            label {
+                                #keep_payment {}
+                            }
+                        }
+                        .benefit {
+                            .benefit_kakaopay {}
+                        }
+                    }
                 }
                 .wrap_right {
                     width:340px;
-                    background-color:lavender;
                     .right_top {
                         margin:0 auto; border:1px solid #ebebeb;
                         border-radius:12px; padding:0 24px; background-color:#fff;
@@ -180,14 +281,14 @@ main {
                         border-radius:12px; padding:8px 24px 24px; background-color:#fff;
                         h2 {
                             font-size:$title18; font-family:$familyBold;
-                            padding:16px 0;
+                            padding:16px 0; margin-bottom:4px;
                         }
                         .payment_amount {
                             margin-bottom:20px; border-bottom:1px solid #bdbdbd;
                             display:flex; flex-flow:column nowrap;
                             dl {
                                 @include flex-rnsc;
-                                margin-bottom:12px;
+                                margin-bottom:20px;
                                 dt {color:#999; font-size:$subC14;}
                                 dd {font-size:$subC14; color:#999;
                                     em {font-size:$subC14; font-family:$familySemiBold;}
@@ -212,10 +313,26 @@ main {
                             @include flex-rnsc;
                             label {
                                 display:flex;
-                                #user_agree {margin-right:10px;}
+                                .user_agree {margin-right:10px;}
                                 span {font-size:$subC14;}
                             }
-                            i {}
+                            i {font-size:$subC14;}
+                        }
+                        .agree_contents {
+                            //js
+                            // display:none;
+                            width:290px; 
+                            div {
+                                padding:8px;
+                                @include flex-rnsc;
+                                label {
+                                    display:flex;
+                                    .user_agree {margin-right:10px;}
+                                    span {font-size:$subC14;}
+                                }
+                                i {font-size:$subC14; color:#bdbdbd}
+                            }
+                            .third {margin-bottom:12px;}
                         }
                         .pay_btn_box {
                             background-color:$mainColor-b;
