@@ -48,11 +48,13 @@ function btnHandler(){
         newRoom.querySelector('.more').innerText = e.location
         newRoom.querySelector('.point_wrap').innerText = e.rate
         newRoom.querySelector('.review_count').innerText = e.review_count
-        newRoom.querySelector('.price_view').innerText = e.price
+        // newRoom.querySelector('.price_view').innerText = e.price
+        if(e.is_discount){
+            
+        }
         newRoom.querySelector('.now').innerText = e.price - (e.price*0.2)
-        newRoom.querySelector('.info').style.display = 'none'
-        if(e.stock < 10){
-            newRoom.querySelector('.info').style.display = 'block'
+        if(e.stock > 10){
+            newRoom.querySelector('.info').style.display = 'none'
             newRoom.querySelector('.info span').innerText = e.stock
         }
         // newRoom.querySelector('img').src = "./image~~~"
@@ -61,7 +63,7 @@ function btnHandler(){
 }
 
 function getChecked(name){
-    const checked = []; // 결과 배열 / 체크한거만 들어감
+    const checked = []; // 결과 배열 / 체크한거만 들어가게
     const inputs = document.getElementsByClassName(name)[1].getElementsByTagName('input');
     for (const input of inputs) {
         if (input.checked) checked.push(input.value);
