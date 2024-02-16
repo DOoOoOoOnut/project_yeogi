@@ -1,7 +1,11 @@
 @charset "UTF-8";
-main .container {
+main {
+  width: 1400px;
   margin: 0 auto;
-  max-width: 384px;
+}
+main .container {
+  width: 30%;
+  margin: 0 auto;
   padding: 20px 0 56px;
 }
 main .container .top {
@@ -194,6 +198,7 @@ main .container .wrap ul li::before {
   content: "•";
   display: block;
   color: #707070;
+  margin-right: 5px;
 }
 
 @keyframes radoobox {
