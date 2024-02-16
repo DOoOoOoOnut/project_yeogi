@@ -1,6 +1,7 @@
 main {
   width: 1400px;
   margin: 0 auto;
+  background-color: pink;
 }
 main .top {
   display: flex;
@@ -20,6 +21,7 @@ main .top h1 {
   font-family: PretendardSemiBold;
 }
 main .container #pay_frm fieldset {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -68,15 +70,61 @@ main .container #pay_frm fieldset .wrap_left .user_info_box div .error_message {
   font-size: 0.75rem;
   margin: 5px 0 20px;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m {
+  display: none;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m .input_box_num {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   width: 340px;
   height: 48px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  border: 1.5px solid #f5f5f5;
+  padding: 0 15px;
+  margin-bottom: 5px;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num .input_detail {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m {
+  padding-right: 80px;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m::-moz-placeholder {
+  color: #bdbdbd;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m::placeholder {
+  color: #bdbdbd;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m .input_box_num .reset i {
+  color: #707070;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m .error_border {
+  border: 1.5px solid #f45858;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m .error_message {
+  color: #f45858;
+  font-size: 0.75rem;
+  margin: 5px 0 20px;
+  display: none;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m input::-webkit-outer-spin-button,
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_m p {
+  font-size: 0.813rem;
+  color: #999;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 340px;
+  height: 48px;
+  margin-bottom: 5px;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num .input_detail {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -88,40 +136,208 @@ main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .
   border: 1.5px solid #f5f5f5;
   padding: 0 15px;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num .input_detail #user_phone::-moz-placeholder {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num .input_detail #user_phone_n {
+  width: 160px;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num .input_detail #user_phone_n::-moz-placeholder {
   color: #bdbdbd;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num .input_detail #user_phone::placeholder {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num .input_detail #user_phone_n::placeholder {
   color: #bdbdbd;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num .input_detail .reset i {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num .input_detail .reset {
+  display: none;
+}
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num .input_detail .reset i {
   color: #707070;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num .confirm_num {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num .confirm_num {
   width: 115px;
   height: 48px;
-  border: 1.5px solid #bdbdbd;
+  border: 1.5px solid #dfdfdf;
   border-radius: 8px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num .confirm_num button {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num .confirm_num button {
   font-family: PretendardMedium;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num .confirm_num:hover {
-  background-color: #eeeeee;
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num .confirm_num:hover {
+  background-color: #f5f5f5;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num input::-webkit-outer-spin-button,
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .input_box_num input::-webkit-inner-spin-button {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num input::-webkit-outer-spin-button,
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .input_box_num input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail .error_message {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n .error_message {
   color: #f45858;
   font-size: 0.75rem;
+  display: none;
 }
-main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail p {
+main .container #pay_frm fieldset .wrap_left .user_info_box .user_phone_detail_n p {
   font-size: 0.813rem;
   color: #999;
+}
+main .container #pay_frm fieldset .wrap_right {
+  width: 340px;
+  background-color: lavender;
+}
+main .container #pay_frm fieldset .wrap_right .right_top {
+  margin: 0 auto;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  padding: 0 24px;
+  background-color: #fff;
+  margin-bottom: 24px;
+}
+main .container #pay_frm fieldset .wrap_right .right_top .cancell_notice {
+  background-color: #1273e4;
+  width: 290px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .container #pay_frm fieldset .wrap_right .right_top .cancell_notice i {
+  color: #ffffff;
+  font-size: 0.875rem;
+  margin-right: 10px;
+}
+main .container #pay_frm fieldset .wrap_right .right_top .cancell_notice span {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-family: PretendardMedium;
+}
+main .container #pay_frm fieldset .wrap_right .right_top h2 {
+  font-size: 1.125rem;
+  font-family: PretendardBold;
+  padding: 16px 0;
+}
+main .container #pay_frm fieldset .wrap_right .right_top .room_img {
+  margin-bottom: 10px;
+}
+main .container #pay_frm fieldset .wrap_right .right_top .room_img img {
+  width: 100%;
+  height: 116.8px;
+  border-radius: 10px;
+}
+main .container #pay_frm fieldset .wrap_right .right_top .room_info {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .container #pay_frm fieldset .wrap_right .right_top .room_info dl {
+  display: flex;
+  flex-flow: row nowrap;
+}
+main .container #pay_frm fieldset .wrap_right .right_top .room_info dl dt {
+  color: #bdbdbd;
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+  width: 75px;
+  line-height: 1.5;
+}
+main .container #pay_frm fieldset .wrap_right .right_top .room_info dl dd {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom {
+  margin: 0 auto;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  padding: 8px 24px 24px;
+  background-color: #fff;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom h2 {
+  font-size: 1.125rem;
+  font-family: PretendardBold;
+  padding: 16px 0;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .payment_amount {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bdbdbd;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .payment_amount dl {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .payment_amount dl dt {
+  color: #999;
+  font-size: 0.875rem;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .payment_amount dl dd {
+  font-size: 0.875rem;
+  color: #999;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .payment_amount dl dd em {
+  font-size: 0.875rem;
+  font-family: PretendardSemiBold;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .all_payment {
+  margin-bottom: 30px;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .all_payment dl {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .all_payment dl dt {
+  font-size: 0.875rem;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .all_payment dl dd {
+  font-size: 1.25rem;
+  color: #f7323f;
+  font-family: PretendardBold;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree {
+  background-color: #f5f5f5;
+  width: 290px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 13px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree label {
+  display: flex;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree label #user_agree {
+  margin-right: 10px;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree label span {
+  font-size: 0.875rem;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .pay_btn_box {
+  background-color: #1273e4;
+  width: 290px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .container #pay_frm fieldset .wrap_right .right_bottom .pay_btn_box #pay_btn {
+  color: #ffffff;
+  font-family: PretendardMedium;
 }/*# sourceMappingURL=pay.css.map */

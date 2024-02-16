@@ -29,11 +29,22 @@
                                 </div>
                                 <p class="error_message"><!-- js --></p>
                             </div>
-                            <div class="user_phone_detail">
+                            <!-- 로그인했을시 -->
+                            <div class="user_phone_detail_m">
+                                <h3>휴대폰 번호</h3>
+                                <div class="input_box_num">
+                                    <input type="number" placeholder="010-1234-5678" id="user_phone_m"><!-- value="auto_complete_phone" -->
+                                    <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
+                                </div>
+                                <p class="error_message"><!-- js --></p>
+                                <p>개인 정보 보호를 위해 안심번호로 숙소에 전송됩니다.</p>
+                            </div>
+                            <!-- 로그인 안했을 시 -->
+                            <div class="user_phone_detail_n">
                                 <h3>휴대폰 번호</h3>
                                 <div class="input_box_num">
                                     <div class="input_detail">
-                                        <input type="number" placeholder="010-1234-5678" id="user_phone"><!-- value="auto_complete_phone" -->
+                                        <input type="number" placeholder="010-1234-5678" id="user_phone_n">
                                         <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                                     </div>
                                     <div class="confirm_num">
@@ -228,43 +239,50 @@
                                 <img src="./images/pay/jeju_shilla.jpg" alt="">
                             </div>
                             <div class="room_info">
-                                <span class="room_name">
-                                    <span class="title">객실</span>
-                                    <span>정원 전망 스탠다드 더블룸</span>
-                                </span>
-                                <span class="room_date">
-                                    <span class="title">일정</span>
-                                    <span><!-- 선택한 날짜 나오게하기 --></span>
-                                </span>
-                                <span class="room_name">
-                                    <span class="title">기준인원</span>
-                                    <span>2인기준, 최대 3인(유료)</span>
-                                </span>
+                                <dl>
+                                    <dt>객실</dt>
+                                    <dd>정원 전망 스탠다드 더블룸</dd>
+                                </dl>
+                                <dl>
+                                    <dt>일정</dt>
+                                    <!-- js (선택한 날짜 나오게하기) -->
+                                    <dd>03.14 (목) 14:00 ~ <br>
+                                        03.15 (금) 11:00 (1박)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>기준인원</dt>
+                                    <dd>2인기준, 최대 3인(유료)</dd>
+                                </dl>
                             </div>
                         </div>
                         <div class="right_bottom">
                             <h2>결제 금액</h2>
                             <div class="payment_amount">
-                                <div class="reservation">
-                                    <span>예약금액</span>
-                                    <span>411,400원</span>
-                                </div>
+                                <dl>
+                                    <dt>예약금액</dt>
+                                    <dd><em>411,400원</em></dd>
+                                </dl>
                                 <!-- 쿠폰적용시 나오는 부분 -->
-                                <div class="coupon_check">
-                                    <span>일반 쿠폰</span>
-                                    <span>-10,000원</span>
-                                </div>
+                                <dl>
+                                    <dt>일반 쿠폰</dt>
+                                    <dd>-10,000원</dd>
+                                </dl>
                             </div>
                             <div class="all_payment">
-                                <span>총 결제금액</span>
-                                <em>411,400원</em>
+                                <dl>
+                                    <dt>총 결제금액</dt>
+                                    <dd>401,400원</dd>
+                                </dl>
                             </div>
                             <div class="agree">
-                                <label><input type="checkbox" name="user_agree" id="user_agree"><span>약관 전체동의</span></label>
+                                <label><input type="checkbox" name="user_agree" class="user_agree"><span>약관 전체동의</span></label>
                                 <i class="fa-solid fa-angle-down"></i>
                             </div>
+                            <div class="agree_contents">
+
+                            </div>
                             <div class="pay_btn_box">
-                                <button type="button" id="pay_btn">411,400원 결제하기</button>
+                                <button type="button" id="pay_btn">401,400원 결제하기</button>
                             </div>
                         </div>
                     </div>

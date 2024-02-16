@@ -1,7 +1,7 @@
 @import 'common';
 
 main {
-    width:1400px; margin:0 auto;
+    width:1400px; margin:0 auto; background-color:pink;
     .top {
         @include flex-rnfc;
         margin:40px 0 20px;
@@ -14,6 +14,7 @@ main {
     .container {
         #pay_frm {
             fieldset {
+                width:100%;
                 display:flex; justify-content:space-between;
                 .wrap_left {
                     .user_info_box {
@@ -51,27 +52,69 @@ main {
                                 //이름은 2자 이상 입력해주세요.
                             }
                         }
-                        .user_phone_detail {
+                        //로그인 했을시
+                        .user_phone_detail_m {
+                            //js
+                            display:none;
                             .input_box_num {
                                 @include flex-rnsc; width:340px; height:48px;
+                                background-color:#f5f5f5; border-radius:8px;
+                                border:1.5px solid #f5f5f5;
+                                padding:0 15px; margin-bottom:5px;
+                                #user_phone_m {padding-right:80px;}
+                                #user_phone_m::placeholder {color:#bdbdbd;}
+                                .reset {
+                                    //js
+                                    // display:none;
+                                    i {color:#707070;}
+                                }
+                            }
+                            // .input_box:hover {background-color:#eeeeee;}
+                            .error_border {
+                                //js
+                                border: 1.5px solid #f45858;
+                            }
+                            .error_message {
+                                color: $subColor-r; font-size:$small12;
+                                margin:5px 0 20px;
+                                //js
+                                display:none;
+                                //예약자 이름을 입력해주세요.
+                                //이름은 2자 이상 입력해주세요.
+                            }
+                            input::-webkit-outer-spin-button,
+                            input::-webkit-inner-spin-button {
+                                    -webkit-appearance: none;
+                            }
+                            p {font-size:$small13; color:#999;}
+                        }
+                        //로그인 안했을시
+                        .user_phone_detail_n {
+                            //js
+                            // display:none;
+                            .input_box_num {
+                                @include flex-rnsc; width:340px; height:48px;
+                                margin-bottom:5px;
                                 .input_detail {
                                     @include flex-rnsc; width:215px; height:48px;
                                     background-color:#f5f5f5; border-radius:8px;
                                     border:1.5px solid #f5f5f5; padding:0 15px;
-                                    #user_phone {}
-                                    #user_phone::placeholder {color:#bdbdbd;}
+                                    #user_phone_n {width:160px;}
+                                    #user_phone_n::placeholder {color:#bdbdbd;}
                                     .reset {
+                                        //js
+                                        display:none;
                                         i {color:#707070;}
                                     }
                                 }
                                 .confirm_num {
                                     width:115px; height:48px;
-                                    border:1.5px solid #bdbdbd;
+                                    border:1.5px solid #dfdfdf;
                                     border-radius:8px;
                                     @include flex-rncc;
                                     button {font-family:PretendardMedium;}
                                 }
-                                .confirm_num:hover {background-color:#eeeeee;}
+                                .confirm_num:hover {background-color:#f5f5f5;}
                                 input::-webkit-outer-spin-button,
                                 input::-webkit-inner-spin-button {
                                     -webkit-appearance: none;
@@ -79,10 +122,107 @@ main {
                             }
                             .error_message {
                                 color: $subColor-r; font-size:$small12;
+                                //js
+                                display:none;
                                 //휴대폰 번호를 입력해주세요.
                                 //휴대폰 번호를 확인해주세요.
                             }
                             p {font-size:$small13; color:#999;}
+                        }
+                    }
+                }
+                .wrap_right {
+                    width:340px;
+                    background-color:lavender;
+                    .right_top {
+                        margin:0 auto; border:1px solid #ebebeb;
+                        border-radius:12px; padding:0 24px; background-color:#fff;
+                        margin-bottom:24px;
+                        .cancell_notice {
+                            background-color:$mainColor-b;
+                            width:290px; height:40px; margin-top:20px;
+                            border-radius:10px; padding:12px;
+                            @include flex-rnfc;
+                            i {color:$mainColor-w; font-size:$subC14; margin-right:10px;}
+                            span {
+                                color:$mainColor-w; font-size:$subC14;
+                                font-family:$familyMedium;
+                            }
+                        }
+                        h2 {
+                            font-size:$title18; font-family:$familyBold;
+                            padding:16px 0;
+                        }
+                        .room_img {
+                            margin-bottom:10px;
+                            img {width:100%; height:116.8px; border-radius:10px;}
+                        }
+                        .room_info {
+                            margin-bottom:20px;
+                            display:flex; flex-flow:column nowrap;
+                            dl {
+                                display:flex; flex-flow:row nowrap;
+                                dt {
+                                    color:#bdbdbd; font-size:$subC14;
+                                    margin-bottom:15px; width:75px;
+                                    line-height:1.5;
+                                }
+                                dd {
+                                    display:flex; flex-flow:column nowrap;
+                                    font-size:$subC14; margin-bottom:15px;
+                                    line-height:1.5;
+                                }
+                            }
+                        }
+                    }
+                    .right_bottom {
+                        margin:0 auto; border:1px solid #ebebeb;
+                        border-radius:12px; padding:8px 24px 24px; background-color:#fff;
+                        h2 {
+                            font-size:$title18; font-family:$familyBold;
+                            padding:16px 0;
+                        }
+                        .payment_amount {
+                            margin-bottom:20px; border-bottom:1px solid #bdbdbd;
+                            display:flex; flex-flow:column nowrap;
+                            dl {
+                                @include flex-rnsc;
+                                margin-bottom:12px;
+                                dt {color:#999; font-size:$subC14;}
+                                dd {font-size:$subC14; color:#999;
+                                    em {font-size:$subC14; font-family:$familySemiBold;}
+                                }
+                            }
+                            em {}
+                        }
+                        .all_payment {
+                            margin-bottom:30px;
+                            dl {
+                                @include flex-rnsc;
+                                margin-bottom:12px;
+                                dt {font-size:$subC14;}
+                                dd {font-size:$title20; color:$mainColor-r; font-family:$familyBold;}
+                            }
+                        }
+                        .agree {
+                            background-color:#f5f5f5;
+                            width:290px; height:40px;
+                            border-radius:10px; padding:12px;
+                            margin:13px 0;
+                            @include flex-rnsc;
+                            label {
+                                display:flex;
+                                #user_agree {margin-right:10px;}
+                                span {font-size:$subC14;}
+                            }
+                            i {}
+                        }
+                        .pay_btn_box {
+                            background-color:$mainColor-b;
+                            width:290px; height:40px;
+                            border-radius:10px; padding:12px;
+                            @include flex-rncc;
+                            #pay_btn {color:$mainColor-w; font-family:$familyMedium;}
                         }
                     }
                 }
