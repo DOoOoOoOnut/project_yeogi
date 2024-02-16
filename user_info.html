@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/user_info.css">
     <link rel="stylesheet" href="./styles/user_info2.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <style>
     /* 내 정보관리 - checkbox */
     .checkbox-wrapper-6 .tgl {
@@ -368,7 +370,7 @@
                                         <em class="coupon_name">신규회원 WELCOME 쿠폰</em>
                                         <p>
                                             <span class="lodging_category">모든 해외 숙소 카테고리</span>
-                                            <span class="max_pay_sale">300,000</span>원 이상 결제시 사용가능
+                                            <span class="max_pay_sale">300,000</span>원 이상 결제시 사용가능 <br>
                                             <span class="use_num">4</span>개의 사용조건이 있습니다. 상세를 하세요.
                                         </p>
                                     </section>
@@ -392,7 +394,7 @@
                                         <em class="coupon_name">신규회원 WELCOME 쿠폰</em>
                                         <p>
                                             <span class="lodging_category">모든 해외 숙소 카테고리</span>
-                                            <span class="max_pay_sale">300,000</span>원 이상 결제시 사용가능
+                                            <span class="max_pay_sale">300,000</span>원 이상 결제시 사용가능 <br>
                                             <span class="use_num">4</span>개의 사용조건이 있습니다. 상세를 하세요.
                                         </p>
                                     </section>
@@ -451,138 +453,159 @@
                 </div>
                 <!-- 내 정보 관리 -->
                 <div class="contents user_info">
-                    <h1>내 정보 관리</h1>
-                    <div class="info_text">
-                        <div class="left">
-                            <h2>회원 정보</h2>
-                            <p>현재 정보 수정은 여기어때 앱에서 가능해요.</p>
-                        </div>
-                        <div class="right">
-                            <img src="./images/icon/ico_21.png" alt="">
-                        </div>
-                    </div>
-                    <div class="view_user_info">
-                        <!-- 정보 안보일 때 -->
-                        <section class="top_contents">
-                            <div class="left">
-                                <!-- js 글씨 바꾸기-->
-                                <i class="fa-solid fa-lock"></i>
-                                <i class="fa-solid fa-lock-open"></i>
-                                <p>가려진 내 정보를 확인할 수 있어요!</p>
-                            </div>
-                            <div class="right">
-                                <div class="checkbox-wrapper-6">
-                                    <input class="tgl tgl-light" id="cb1-6" type="checkbox"/>
-                                    <label class="tgl-btn" for="cb1-6">
+                    <form action="#" method="post" id="user_info_from">
+                        <fieldset>
+                            <legend class="skip">유저 정보 양식</legend>
+                            <h1>내 정보 관리</h1>
+                            <div class="info_text">
+                                <div class="left">
+                                    <h2>회원 정보</h2>
+                                    <p>현재 정보 수정은 여기어때 앱에서 가능해요.</p>
                                 </div>
-                                <!-- <input type="checkbox" name="info_see" id="info_see"> -->
-                            </div>
-                        </section>
-                        <section class="user_text">
-                            <div class="nickname box">
-                                <h3>닉네임</h3>
-                                <p>나이아여행객</p>
-                            </div>
-                            <div class="user_name box">
-                                <h3>예약자 이름</h3>
-                                <p>미입력(앱에서 입력해 주세요.)</p>
-                            </div>
-                            <div class="user_phone box">
-                                <h3>휴대폰 번호</h3>
-                                <p>0101234****</p>
-                            </div>
-                            <div class="user_birthday box">
-                                <h3>생년월일</h3>
-                                <p>20**년 **일 **일</p>
-                            </div>
-                            <div class="user_gender box">
-                                <h3>성별</h3>
-                                <p>**</p>
-                            </div>
-                        </section>
-                        <!-- 정보 보일 때 -->
-                        <!-- <section class="top_contents">
-                            
-                            <p>내 정보가 보여지고 있어요</p>
-                        </section> -->
-                        <section class="user_text view">
-                            <div class="name box">
-                                <h3>닉네임</h3>
-                                <p>나이아여행객</p>
-                            </div>
-                            <div class="user_name box">
-                                <h3>예약자 이름</h3>
-                                <p>미입력(앱에서 입력해 주세요.)</p>
-                            </div>
-                            <div class="user_birthday box">
-                                <h3>생년월일</h3>
-                                <p>2001년 02일 27일</p>
-                            </div>
-                            <div class="user_phone box">
-                                <h3>휴대폰 번호</h3>
-                                <div class="phone_wrap">
-                                    <p class="prev"><input type="text"><button type="button">인증</button></p>
-                                    <p class="after"><input type="text"><button type="button">확인</button></p>
+                                <div class="right">
+                                    <img src="./images/icon/ico_21.png" alt="">
                                 </div>
                             </div>
-                            <div class="user_gender box">
-                                <h3>성별</h3>
-                                <p>여성</p>
+                            <div class="view_user_info">
+                                <!-- 정보 안보일 때 -->
+                                <section class="top_contents">
+                                    <div class="left">
+                                        <!-- js 글씨 바꾸기-->
+                                        <i class="fa-solid fa-lock"></i>
+                                        <i class="fa-solid fa-lock-open"></i>
+                                        <p>가려진 내 정보를 확인할 수 있어요!</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="checkbox-wrapper-6">
+                                            <input class="tgl tgl-light" id="cb1-6" type="checkbox"/>
+                                            <label class="tgl-btn" for="cb1-6">
+                                        </div>
+                                        <!-- <input type="checkbox" name="info_see" id="info_see"> -->
+                                    </div>
+                                </section>
+                                <section class="user_text not_view">
+                                    <div class="nickname box">
+                                        <h3>닉네임</h3>
+                                        <p><input type="text" placeholder="나이아여행객" readonly></p>
+                                    </div>
+                                    <div class="user_name box">
+                                        <h3>이메일</h3>
+                                        <p><input type="text" placeholder="s****@naver.com" readonly></p>
+                                    </div>
+                                    <div class="user_birthday box">
+                                        <h3>생년월일</h3>
+                                        <p><input type="text" placeholder="20**년 **일 **일" readonly></p>
+                                    </div>
+                                    <div class="user_gender box">
+                                        <h3>성별</h3>
+                                        <p><input type="text" placeholder="**" readonly></p>
+                                    </div>
+                                    <div class="user_phone box">
+                                        <h3>휴대폰 번호</h3>
+                                        <p><input type="text" placeholder="0101234****" readonly></p>
+                                    </div>
+                                </section>
+                                <!-- 정보 보일 때 -->
+                                <!-- <section class="top_contents">
+                                    
+                                    <p>내 정보가 보여지고 있어요</p>
+                                </section> -->
+                                <section class="user_text view">
+                                    <div class="name box">
+                                        <h3>닉네임</h3>
+                                        <p><input type="text" placeholder="나이아여행객"></p>
+                                    </div>
+                                    <div class="user_name box">
+                                        <h3>이메일</h3>
+                                        <p><input type="text" placeholder="smail@naver.com"></p>
+                                    </div>
+                                    <div class="user_birthday box">
+                                        <h3>생년월일</h3>
+                                        <p><input type="text" placeholder="2001년 02일 27일" readonly></p>
+                                    </div>
+                                    <div class="user_gender box">
+                                        <h3>성별</h3>
+                                        <p><input type="text" placeholder="여성" readonly></p>
+                                    </div>
+                                    <div class="user_phone box">
+                                        <h3>휴대폰 번호</h3>
+                                        <div class="phone_wrap">
+                                            <p class="prev">
+                                                <span class="input_wrap">
+                                                    <input type="text" placeholder="01012341234" maxlength="11">
+                                                    <button type="button" id="certified_btn">인증번호 전송</button>
+                                                </span>
+                                                <span class="error"></span>
+                                            </p>
+                                            <p class="after">
+                                                <span class="input_wrap">
+                                                    <input type="text" placeholder="인증번호 4자리" maxlength="4">
+                                                    <button type="button" id="check_btn">확인</button>
+                                                </span>
+                                                <span class="time"></span>
+                                            </p>
+                                            <span class="error"></span>
+                                            <button type="button" id="resend">인증번호 재전송</button>
+                                            <div class="btn_wrap">
+                                                <button type="button">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
-                        </section>
-                    </div>
-                    <!-- 내정보 보기 팝업 -->
-                    <div class="popup_bg">
-                        <div class="popup_use">
-                            <div class="top">
-                                <span class="close"><!-- font-awsome --><i class="fa-solid fa-xmark"></i></span>
-                                <h2>내 정보 확인</h2>
-                                <span></span>
-                            </div>
-                            <div class="text">
-                                <div class="phone_num">
-                                    <form action="#" method="post" id="user_info_from">
-                                        <fieldset>
-                                            <legend class="skip">내정보 확인 양식</legend>
-                                            <label for="phone_last">휴데폰 번호</label>
-                                            <input type="tel" name="phone_last" class="phone_last" maxlength="4" placeholder="휴데폰 뒷자리 4개 입력하세요." autofocus>
-                                            <p>가입하신 휴데폰 번호는 0101234**** 에요</p>
-                                        </fieldset>
-                                    </form>
-                                    <section>
-                                        <h3>휴데폰 번호를 잊으셨나요?</h3>
-                                        <p>휴데폰 번호는 고객센터(1670-6250)를 통해 확인 가능해요.</p>
-                                    </section>
+                            <!-- 내정보 보기 팝업 -->
+                            <div class="popup_bg">
+                                <div class="popup_use">
+                                    <div class="top">
+                                        <span class="close"><!-- font-awsome --><i class="fa-solid fa-xmark"></i></span>
+                                        <h2>내 정보 확인</h2>
+                                        <span></span>
+                                    </div>
+                                    <div class="text">
+                                        <div class="phone_num">
+                                            <div class="phone_certified">
+                                                <div class="box">
+                                                    <label for="phone_last">휴데폰 번호</label>
+                                                    <input type="tel" name="phone_last" class="phone_last" maxlength="4" placeholder="휴데폰 뒷자리 4개 입력하세요." autofocus>
+                                                    <p>가입하신 휴데폰 번호는 0101234**** 에요</p>
+                                                </div>
+                                            </div>
+                                            <section>
+                                                <h3>휴데폰 번호를 잊으셨나요?</h3>
+                                                <p>휴데폰 번호는 고객센터(1670-6250)를 통해 확인 가능해요.</p>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="button" class="completion_btn">완료</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="btn">
-                                <button type="button" class="completion_btn">완료</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="access_device_management">
-                        <div class="contents_logout">
-                            <div class="top">
-                                <h2>접속 기기 관리</h2>
-                                <button type="button" class="all_logout_btn">전체 로그아웃</button>
-                            </div>
-                            <p>로그인 된 모든 기기에서 로그아웃 돼요.</p>
-                        </div>
-                        <!-- 로그아웃 팝업 -->
-                        <div class="popup_bg">
-                            <div class="popup_logout">
-                                <p>로그인된 모든 기기와 브라우서에서 로그아웃됩니다.로그아웃 하시겠습니까?</p>
-                                <div class="btn">
-                                    <button type="button" class="cancellation_btn">취소</button>
-                                    <button type="button" class="completion_btn">확인</button>
+                            <div class="access_device_management">
+                                <div class="contents_logout">
+                                    <div class="top">
+                                        <h2>접속 기기 관리</h2>
+                                        <button type="button" class="all_logout_btn">전체 로그아웃</button>
+                                    </div>
+                                    <p>로그인 된 모든 기기에서 로그아웃 돼요.</p>
+                                </div>
+                                <!-- 로그아웃 팝업 -->
+                                <div class="popup_bg">
+                                    <div class="popup_logout">
+                                        <p>로그인된 모든 기기와 브라우서에서 로그아웃됩니다.로그아웃 하시겠습니까?</p>
+                                        <div class="btn">
+                                            <button type="button" class="cancellation_btn">취소</button>
+                                            <button type="button" class="completion_btn">확인</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="user_withdrawal">
-                        <span>더 이상 여기어때 이용을 원하지 않으신가요?</span>
-                        <a href="user_withdrawal.html">회원탈퇴</a>
-                    </div>
+                            <div class="user_withdrawal">
+                                <span>더 이상 여기어때 이용을 원하지 않으신가요?</span>
+                                <a href="user_withdrawal.html">회원탈퇴</a>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
                 <!-- 설정 -->
                 <div class="contents setting">
