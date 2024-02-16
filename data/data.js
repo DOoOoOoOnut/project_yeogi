@@ -44,6 +44,17 @@ function btnHandler(){
         const newRoom = document.importNode(roomTemplate.content, true)
         newRoom.querySelector('.type').innerText = e.type
         newRoom.querySelector('.name').innerText = e.name
+        newRoom.querySelector('.city').innerText = e.city
+        newRoom.querySelector('.more').innerText = e.location
+        newRoom.querySelector('.point_wrap').innerText = e.rate
+        newRoom.querySelector('.review_count').innerText = e.review_count
+        newRoom.querySelector('.price_view').innerText = e.price
+        newRoom.querySelector('.now').innerText = e.price - (e.price*0.2)
+        newRoom.querySelector('.info').style.display = 'none'
+        if(e.stock < 10){
+            newRoom.querySelector('.info').style.display = 'block'
+            newRoom.querySelector('.info span').innerText = e.stock
+        }
         // newRoom.querySelector('img').src = "./image~~~"
         page.appendChild(newRoom)
     }
