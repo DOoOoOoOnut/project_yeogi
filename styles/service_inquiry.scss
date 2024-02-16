@@ -1,27 +1,53 @@
 @import "common";
 
 main {
+    max-width: 1400px;
+    margin: 0 auto;
     .business_inquiry_container {
+        width: 80%;
+        margin: 0 auto;
         .business_inquiry_bg {
             .business_inquiry_top {
-                img {}
+                
+                img {width: 100%;}
                 a {
+                    display: block;
                     img {}
                 }
             }
         }
     }
     .new_inquiries_container {
+        width: 80%;
+        margin: 0 auto;
         #new_inquiries_frm {
             fieldset {
                 h1 {}
                 .new_inquiries_box {
                     .new_inquiries {
+                        margin-bottom: 5px;
+                        input {
+                            background-color: $subColor-ip;
+                            width: 100%; height: 48px;
+                            border-radius: 7px;
+                            padding: 0 20px;
+                            font-weight: $weight600;
+                        }
                         .subj {
+                            font-size: $small13;
+                            margin-bottom: 5px;
+                            display: block;
                             .essential {}
+                        }
+                        .subj::after {
+                            content: ''; display: inline-block;
+                            background-color: $subColor-r;
+                            width: 4px; height: 4px; border-radius: 50%;
+                            position: relative; top: -8px;
                         }
                         #company_name {}
                         .reset {
+                            display: none;
                             i[class$=xmark] {}
                         }
                     }
