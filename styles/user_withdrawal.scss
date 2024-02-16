@@ -1,9 +1,11 @@
 @import 'common';
 
 main {
+    width:1400px;
+    margin: 0 auto;
     .container {
+        width:30%;
         margin: 0 auto;
-        max-width: 384px;
         padding: 20px 0 56px;
         .top {
             @include flex-rnfc;
@@ -187,7 +189,7 @@ main {
                 }
                 li::before {
                     content: '•'; display: block;
-                    color: #707070;
+                    color: #707070; margin-right:5px;
                 }
             }
         }

@@ -180,7 +180,6 @@ header .header_wrap nav .popular_search .search_container .search_name .search_l
   border-radius: 10px;
   z-index: 9999;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
-  display: none;
 }
 header .header_wrap nav .popular_search .search_container .search_name .search_list a {
   padding: 8px 16px;
@@ -234,10 +233,10 @@ header .header_wrap nav .mypage_warp_nonmember .mypage_detail {
   padding: 8px 0;
   position: absolute;
   top: 60px;
+  z-index: 9999;
   border-radius: 10px;
   width: 150px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
-  display: none;
 }
 header .header_wrap nav .mypage_warp_nonmember .mypage_detail a {
   padding: 8px 16px;
