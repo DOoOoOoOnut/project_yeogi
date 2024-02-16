@@ -4,8 +4,11 @@ main {
     max-width: $desktop;
     margin: 20px auto 0;
     .container {
-        @include flex-rncc;
+        @include flex-rnsc;
         .lnb {
+            min-width: 155px;
+            align-self: flex-start;
+            background-color: #fff;
             width: 282px;
             border: 1px solid #ebebeb;
             border-radius: 12px;
@@ -19,6 +22,7 @@ main {
                     padding: 0 24px;
                     line-height: 60px;
                     button {
+                        @include flex-rnsc;
                         text-align: left;
                         width: 100%; height: 100%;
                         color: #333;
@@ -40,8 +44,9 @@ main {
         }
         .wrap {
             // 공통
-            width: 870px;
+            width: 1100px;
             .contents {
+                // js
                 margin:0 0 96px 50px;
                 h1 {
                     margin: 16px 0 20px;
@@ -102,9 +107,10 @@ main {
             }
             // 예약내역
             .reservation {
+                // js
+                // display: none;
                 .container_btn {
                     margin-bottom: 40px;
-                    
                     section {
                         @include flex-cncf;
                         margin-top: 20px;
@@ -159,6 +165,8 @@ main {
             }
             // 포인트
             .user_point {
+                // js
+                // display: none;
                 .box {
                     border-radius: 12px;
                     background-color: #f2f8ff;

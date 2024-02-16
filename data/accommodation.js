@@ -21,6 +21,7 @@ export default
         "longitude":128.9210687,
         "price":363000,
         "is_discount":true,
+        "discount_per":0.2,
         "img":"./images/"
     },{
         "pk":2,
@@ -42,7 +43,9 @@ export default
         "latitude":37.8043635,
         "longitude":128.9077159,
         "price":220000,
-        "is_discount":false
+        "is_discount":false,
+        "discount_per":0,
+        "img":"./images/"
     },{
         "pk":3,
         "name":"라카이 샌드파인",
@@ -59,10 +62,12 @@ export default
         "facility_ect":["사우나/찜질방","객실내취사","픽업가능","캠프파이어"],
         "review_count":1185,
         "is_soldout":false,
-        "stock":30,
+        "stock":8,
         "latitude":37.80604734,
         "longitude":128.90437901,
         "price":36000,
-        "is_discount":true
+        "is_discount":true,
+        "discount_per":0.3,
+        "img":"./images/"
     }
 ]
