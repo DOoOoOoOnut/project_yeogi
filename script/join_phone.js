@@ -77,3 +77,7 @@ reset_btn.forEach((t,i)=>{
         user_num[i].value = ''
     })
 })
+
+next_btn.addEventListener('click',()=>{
+    location.href = '../join_personal_info.html'
+})

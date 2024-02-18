@@ -10,6 +10,10 @@
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/service_inquiry.css">
+    <link rel="stylesheet" href="./styles/checkbox.css">
+    <style>
+        .hide {display: none;}
+    </style>
 </head>
 <body>
     <main>
@@ -18,7 +22,7 @@
                 <div class="business_inquiry_top">
                     <img src="./images/service_inquiry/business_inquiry_1.jpeg" alt="여기어때.비즈니스">
                     <img src="./images/service_inquiry/business_inquiry_2.jpeg" alt="여기어때 비즈니스란?">
-                    <a href="https://image.goodchoice.kr/images/b2b_admin_web/pdf/business_product_intro_20190514.pdf"><img src="./images/service_inquiry/business_inquiry_3.jpeg" alt="서비스 소개서"></a>
+                    <a href="https://image.goodchoice.kr/images/b2b_admin_web/pdf/business_product_intro_20190514.pdf"><img src="./images/service_inquiry/business_inquiry_3.jpeg" alt="서비스 소개서"><span class="bg"></span></a>
                 </div>
                 <div class="business_inquiry_top">
                     <img src="./images/service_inquiry/business_inquiry_4.jpeg" alt="여기어때 비즈니스 장점">
@@ -68,8 +72,25 @@
                     </div>
                     <div class="consent_use_container">
                         <div class="consent_use_agree">
-                            <label><input type="checkbox" name="user_agree" id="user_agree"><em>(필수)</em><span>개인정보 수집 및 이용 동의</span></label>
-                            <button type="button" class="more_btn"><i class="fa-solid fa-angle-down"></i></button>
+                            <div class="checkbox-wrapper-4">
+                                <input class="inp-cbx chk" id="soldout_chk_open" type="checkbox"/>
+                                <label class="cbx" for="soldout_chk_open">
+                                    <span>
+                                        <svg width="12px" height="10px">
+                                            <use xlink:href="#check-4"></use>
+                                        </svg>
+                                    </span>
+                                    <span><em>(필수)</em><span>개인정보 수집 및 이용 동의</span></span>
+                                </label>
+                                <svg class="inline-svg">
+                                    <symbol id="check-4" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </symbol>
+                                </svg>
+                            </div>
+                            <div class="btn_wrap">
+                                <button type="button" class="more_btn"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
                         </div>
                         <div class="consent_use_more">
                             <p>개인정보의 수집과 이용에 대한 안내를 드리오니, 자세히 읽은 후 동의하여 주시기 바랍니다. 개인정보의 수집∙이용 동의를 거부할 수 있으나, 동의 거부시에는 상담 서비스를 이용할 수 없습니다.</p>
@@ -103,9 +124,9 @@
                     <div class="precautions">
                         <h2>유의사항</h2>
                         <ul><!-- css할때 list-style-type 넣고 지우기 -->
-                            <li style="list-style-type: circle;">기업명 정보는 필수 입력 사항이며, 연락받으실 연락처 또는 이메일 중 한 가지만 입력하셔도 문의 접수가 가능합니다.</li>
-                            <li style="list-style-type: circle;">메모에는 개인정보가 포함되지 않도록 주의 바랍니다.</li>
-                            <li style="list-style-type: circle;">문의하실 내용이 많으신 경우 아래 메일을 이용해 주시기 바랍니다.<br>
+                            <li style="list-style-type: disc;">기업명 정보는 필수 입력 사항이며, 연락받으실 연락처 또는 이메일 중 한 가지만 입력하셔도 문의 접수가 가능합니다.</li>
+                            <li style="list-style-type: disc;">메모에는 개인정보가 포함되지 않도록 주의 바랍니다.</li>
+                            <li style="list-style-type: disc;">문의하실 내용이 많으신 경우 아래 메일을 이용해 주시기 바랍니다.<br>
                                 신규제휴 문의 메일 : biz@gccompany.co.kr</li>
                         </ul>
                     </div>
@@ -113,6 +134,7 @@
             </form>
         </section>
     </main>
+    <script src="./script/service_imquiry.js"></script>
 </body>
 
 </html>

@@ -2,37 +2,49 @@
 
 main {
     max-width: $desktop;
+    margin: 0 auto;
     section {
-        width: 400px;
+        width: 30%;
         margin: $margin0;
         padding-top: 16px;
         #agree_frm {
             fieldset {
                 h1 {
-                    font-size: $title24; font-weight: $weight600;
+                    font-size: $title24; font-family: $familyBold;
                     line-height: 29px;
                     margin-bottom: 20px;
                 }
                 .agree {
                     h2 {
-                        font-size: $title18; font-weight: $weight600;
                         background-color: #f5f5f5;
-                        padding: 15px 20px; border-radius: 10px;
+                        padding: 10px; border-radius: 10px;
                         margin-bottom: 15px;
-                        #all {
-                            margin-right: 10px;
-                        }
-                        span {
-                            font-size: $small13;
-                            color: #999;
-                            margin-left: 5px;
+                        .checkbox-wrapper-4 {
+                            label {
+                                .agree_title {
+                                    font-size: $title18; font-weight: $weight600;
+                                    em {
+                                        font-size: $small13;
+                                        color: #999;
+                                        margin-left: 5px;
+                                    }
+                                }
+                            }
                         }
                     }
                     .detail {
-                        padding: 0 20px;
+                        padding: 0 10px;
                         li {
                             @include flex-rnsc;
-                            padding: 10px 0;
+                            padding: 7px 0;
+                            .checkbox-wrapper-4 {
+                                label {
+                                    margin-right: 10px;
+                                    .agree_txt {
+                                        font-size: $subC14;
+                                    }
+                                }
+                            }
                             label {
                                 font-size: $subC14;
                                 .raw {
