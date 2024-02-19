@@ -1,0 +1,14 @@
+/* 미디어쿼리 */
+@media screen and (max-width:1399px){
+}
+@media screen and (max-width:1199px){
+    .payment_box ul li {white-space:nowrap;}
+}
+@media screen and (max-width:900px){
+    main .pay_contents #pay_frm fieldset .container {flex-flow:column nowrap;}
+    main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul {grid-template-columns:repeat(3,1fr);}
+    main .pay_contents #pay_frm fieldset .container .wrap_right {width:100%;}
+    main .pay_contents #pay_frm fieldset .container .wrap_right .right_top .room_img img {height:22vh;}
+}
+@media screen and (max-width:600px){
+}
