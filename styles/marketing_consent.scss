@@ -41,3 +41,18 @@ main {
         }
     }
 }
+@media screen and (max-width:1199px) {
+    main {
+        max-width: $notebook;
+    }
+}
+@media screen and (max-width:899px) {
+    main {
+        max-width: $tablet;
+    }
+}
+@media screen and (max-width:599px) {
+    main {
+        max-width: $phone;
+    }
+}

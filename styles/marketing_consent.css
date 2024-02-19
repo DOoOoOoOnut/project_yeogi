@@ -42,4 +42,20 @@ main .container ul li::before {
   width: 3px;
   height: 3px;
   padding-right: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  main {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 899px) {
+  main {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 599px) {
+  main {
+    max-width: 600px;
+  }
 }/*# sourceMappingURL=marketing_consent.css.map */

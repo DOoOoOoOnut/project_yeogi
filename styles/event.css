@@ -1,7 +1,11 @@
 main {
   max-width: 1400px;
   padding-top: 20px;
-  margin: 0 auto 96px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+main .container {
+  padding-bottom: 96px;
 }
 main .container h1 {
   margin: 16px 0 20px;
@@ -9,6 +13,7 @@ main .container h1 {
   font-weight: 700;
 }
 main .container nav {
+  background-color: #fff;
   position: sticky;
   top: 0;
   height: 52px;
@@ -50,13 +55,13 @@ main .container .wrap .coupon {
   margin-top: 20px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  row-gap: 25px;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  padding: 0;
 }
 main .container .wrap .coupon a {
+  margin-right: 25px;
+  margin-bottom: 30px;
   width: 30%;
   cursor: pointer;
 }
@@ -69,12 +74,12 @@ main .container .wrap .coupon a .contents {
   padding: 12px 0 20px;
 }
 main .container .wrap .coupon a .contents h2 {
-  font-weight: 700;
-  font-size: 0.9375rem;
+  font-family: PretendardBold;
+  font-size: 1.125rem;
 }
 main .container .wrap .coupon a .contents p {
   color: #999;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 main .container .wrap .not_coupon {
   display: flex;
@@ -91,4 +96,20 @@ main .container .wrap .not_coupon h2 {
 main .container .wrap .not_coupon p {
   color: #c2c2c2;
   font-size: 0.938rem;
+}
+
+@media screen and (max-width: 1199px) {
+  main {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 899px) {
+  main {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 599px) {
+  main {
+    max-width: 600px;
+  }
 }/*# sourceMappingURL=event.css.map */

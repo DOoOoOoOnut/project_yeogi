@@ -18,7 +18,6 @@ main .container {
 main .container .nav {
   position: sticky;
   top: 0;
-  width: 100vw;
   padding: 36px 0 20px;
   background-color: #fff;
   display: flex;
@@ -133,7 +132,6 @@ main .container .wrap .bg a img {
 main .container .wrap .bg .footer {
   background-color: #393939;
   color: #fff;
-  font-size: 0.688rem;
 }
 main .container .wrap .bg .footer .footer_contents {
   padding: 0 5.6% 22px 5.6%;
@@ -149,7 +147,7 @@ main .container .wrap .bg .footer .footer_contents .info {
 }
 main .container .wrap .bg .footer .footer_contents .info span {
   color: #fff;
-  font-size: 0.875rem;
+  font-size: 1rem;
   padding: 2px 10px 0 5px;
 }
 main .container .wrap .bg .footer .footer_contents .info img {
@@ -172,7 +170,7 @@ main .container .wrap .bg .footer .footer_contents .box ul li {
   color: #fff;
   text-align: left;
   margin-bottom: 5.5px;
-  font-size: 0.688rem;
+  font-size: 0.875rem;
 }
 main .container .wrap .bg .footer .footer_contents .box ul li::before {
   content: "";
@@ -189,8 +187,7 @@ main .container .wrap .bg .footer .footer_contents .box h3 {
   color: #fff;
   margin: 13px 0 8px;
   padding: 0 9px;
-  font-size: 0.802rem;
-  font-weight: 100;
+  font-size: 0.875rem;
 }
 main .container .wrap .bg .footer .footer_contents .box h3::before {
   content: "";
@@ -207,4 +204,20 @@ main .container .wrap .bg .footer .footer_contents .box h3::after {
   height: 15px;
   background-color: #fff;
   margin-left: 3px;
+}
+
+@media screen and (max-width: 1199px) {
+  main {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 899px) {
+  main {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 599px) {
+  main {
+    max-width: 600px;
+  }
 }/*# sourceMappingURL=event_new_year.css.map */

@@ -5,7 +5,6 @@ main {
     padding: 20px 0 96px;
     margin: 0 auto;
     .container {
-        max-width: 792px;
         margin: 0 auto;
         section {
             padding:16px 0 20px ;
@@ -70,6 +69,8 @@ main {
                     width: 400px; height: 600px;
                     border-radius:15px ;
                     border: 2px solid #f5f7fa;
+                    // 
+                    display: none;
                     > .top {
                         background-color: #fff;
                         border-top-left-radius:15px ;
@@ -137,8 +138,8 @@ main {
                 h2 {
                     margin-top: 20px;
                     padding: 16px 0;
-                    font-size: $title18;
-                    font-weight:$weight700 ;
+                    font-size: $title20;
+                    font-family: $familyBold;
                     
                 }
                 ul {
@@ -157,8 +158,8 @@ main {
                         color: #fff;
                         border-radius: 100px;
                         button {
-                            font-size: 0.8125rem;
-                            font-weight:$weight600;
+                            font-size: $subT15;
+                            font-family: $familySemiBold;
                         }
                     }
                     li:first-of-type {
@@ -204,13 +205,13 @@ main {
                             .box {
                                 margin-bottom: 20px;
                                 em {
-                                    font-size: 0.833rem;
+                                    font-size: $subT15;
                                     line-height: 1.375rem;
                                     color: #252525;
                                     font-weight: $weight600;
                                 }
                                 p {
-                                    font-size: 0.833rem;
+                                    font-size:$subT15;
                                     line-height: 1.375rem;
                                     color: #252525;
                                     margin: 0;
@@ -220,7 +221,7 @@ main {
                                 margin: 0;
                             }
                             p {
-                                font-size: 0.833rem;
+                                font-size: $subT15;
                                 line-height: 1.375rem;
                                 color: #252525;
                                 margin-bottom: 20px;
@@ -233,5 +234,20 @@ main {
                 }
             }
         }
+    }
+}
+@media screen and (max-width:1199px) {
+    main {
+        max-width: $notebook;
+    }
+}
+@media screen and (max-width:899px) {
+    main {
+        max-width: $tablet;
+    }
+}
+@media screen and (max-width:599px) {
+    main {
+        max-width: $phone;
     }
 }

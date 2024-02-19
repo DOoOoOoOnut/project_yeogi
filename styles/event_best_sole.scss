@@ -151,7 +151,7 @@ main {
                         border-bottom: 1px solid rgba(255,255,255,.15);
                         span {
                             color: #fff;
-                            font-size: 0.875rem;
+                            font-size: $defalt16;
                             padding: 2px 10px 0 5px;
                         }
                         img {
@@ -169,7 +169,7 @@ main {
                                 color: #fff;
                                 text-align: left;
                                 margin-bottom: 5.5px;
-                                font-size: 0.688rem;
+                                font-size: $subC14;
                             }
                             li::before {
                                 content: '';
@@ -183,5 +183,20 @@ main {
                 }
             }
         }
+    }
+}
+@media screen and (max-width:1199px) {
+    main {
+        max-width: $notebook;
+    }
+}
+@media screen and (max-width:899px) {
+    main {
+        max-width: $tablet;
+    }
+}
+@media screen and (max-width:599px) {
+    main {
+        max-width: $phone;
     }
 }

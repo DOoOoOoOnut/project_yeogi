@@ -227,3 +227,17 @@ ex) ./images/main/ _best_hotel001
 2. 폰트사이즈 확인 후 수정
 3. 폰트두께는 font-family로 적용
 4. 18일까지 수정 및 css마무리
+---------------------------------------------------------
+# 02/19 작업
+- 은지
+1. css 수정완
+2. 반응형 css 작업: event.html 제외 완
+- 일혁 
+1. 잔여 css 파일 작업 (상세페이지 팝업창)
+2. 반응형 작업 시작 (notice.html, non_member_resercation_check.html)
+- 민아
+1. pay.css 완성: 팝업 제외하고 완성
+2. 반응형 작업 하기: index.html 반응형 넣기
+- 다은
+1. 반응형 회의/ 작업 시작
+2. login.js 시작

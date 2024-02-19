@@ -188,7 +188,8 @@ main {
                     // 쿠폰 있을때
                     .wrap_contents {
                         .coupon_grid {
-                            @include flex-rwfc;
+                            display: grid;
+                            grid-template-columns: repeat(2,1fr);
                             .coupon_item {
                                 margin-right: 20px;
                                 margin-bottom: 20px;
@@ -232,7 +233,6 @@ main {
                                             color: #707070;
                                             margin-left: 8px;
                                             font-size: $small13;
-                                            font-weight: $weight400;
                                         }
                                     }
                                 }
@@ -245,12 +245,11 @@ main {
                                     p {
                                         color: #707070;
                                         margin-bottom: 12px;
-                                        font-size: $small13;
-                                        font-weight: $weight400;
+                                        font-size: $small14;
+                                        line-height: 20px;
                                         span {
                                             color: #707070;
-                                            font-size: $small13;
-                                            font-weight: $weight400;
+                                            font-size: $small14;
                                         }
                                     }
                                 }
@@ -520,6 +519,7 @@ main {
                                 }
                             }
                             .view {
+                                position: relative;
                                 .box {
                                     p {
                                         input {
@@ -551,18 +551,35 @@ main {
                                                     width: 75%;
                                                 }
                                                 button {
-                                                    background-color: #1273e4;
-                                                    text-align: center;
-                                                    width: 25%; border-radius: 10px;
-                                                    color: #fff;
+                                                    cursor: pointer;
+                                                    font-size: $subC14;
+                                                    width: 25%; 
+                                                    color:#1273e4; text-decoration:underline;
+                                                    font-family: $familySemiBold;
+                                                    text-align: right; margin-right: 15px;
                                                 }
                                             }
                                         }
-                                        .prev {
-                                            
+                                        .error {
+                                            color: $mainColor-r;
+                                        }
+                                        #resend {
+                                            float: right;
+                                            font-family: $familySemiBold;
+                                            text-decoration: underline;
+                                            font-size: $subC14; margin-right: 10px;
                                         }
                                     }
-                                } 
+                                }
+                                .btn_wrap {
+                                    button {
+                                        background-color: #1273e4;
+                                        color: #fff; border-radius: 10px;
+                                        padding: 10px;  
+                                        position: absolute; right: 0;
+                                        bottom: 0; margin:15px 10px;
+                                    }
+                                }
                             }
                         }
                         // 팝업
