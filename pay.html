@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/pay.css">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/checkbox.css">
 </head>
 <body>
     <main>
@@ -164,7 +165,23 @@
                                 <li>휴대폰 결제</li>
                             </ul>
                             <div class="user_setting">
-                                <label><input type="checkbox" name="keep_paymet" id="keep_payment"><span>이 결제수단을 다음에도 사용</span></label>
+                                <div class="checkbox-wrapper-4">
+                                    <input class="inp-cbx chk" id="keep_payment" type="checkbox"/>
+                                    <label class="cbx" for="keep_payment">
+                                        <span>
+                                            <svg width="12px" height="10px">
+                                                <use xlink:href="#check-4"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="txt">이 결제수단을 다음에도 사용</span>
+                                    </label>
+                                    <svg class="inline-svg">
+                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </symbol>
+                                    </svg>
+                                </div>
+                                <!-- <label><input type="checkbox" name="keep_paymet" id="keep_payment"><span>이 결제수단을 다음에도 사용</span></label> -->
                             </div>
                             <div class="benefit_contents">
                                 <div class="benefit_kakaopay">

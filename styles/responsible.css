@@ -1,0 +1,18 @@
+/* 메인 반응형 */
+
+html * {transition: all 1s;}
+
+/* body, html {max-width:1400px;} */
+
+@media screen and (max-width:1399px){
+    .main_container {width:1400px;}
+}
+@media screen and (max-width:1199px){
+    .main_container {width:1200px;}
+    .kr_travel {width:calc(100% / 5);}
+}
+@media screen and (max-width:900px){
+    .search_big {display:none;}
+}
+@media screen and (max-width:600px){
+}
