@@ -6,7 +6,7 @@
     <title>결제내역 확인서 - 여기어때</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/non_member_reservation_check.css">
+    <link rel="stylesheet" href="./styles/non_member_reservation_receipt.css">
 </head>
 <body>
     <main>
@@ -14,8 +14,10 @@
             <div class="container">
                 <div class="title">
                     <h1>신용 · 체크카드 매출전표</h1>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
-                    <a href="#"><i class="fa-solid fa-print"></i></a>
+                    <div class="receipt">
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="#"><i class="fa-solid fa-print"></i></a>
+                    </div>
                 </div>
                 <div class="box1">
                     <div class="order_num">
@@ -30,51 +32,47 @@
                     </div>
                 </div>
                 <div class="box2">
-                    <div class="card_info">
-                        <div class="card">
-                            <span>카드종류</span>
-                            <span>카드번호</span>
-                            <span>할부</span>
-                            <span>결제상태</span>
-                            <span>승인번호</span>
-                            <span>결제일시</span>
-                        </div>
-                        <div class="info">
-                            <span>현대</span>
-                            <span>123456780****555*</span>
-                            <span>일시불</span>
-                            <span>완료</span>
-                            <span>00600389</span>
-                            <span>2024-02-03-11:51:33</span>
-                        </div>
+                    <div class="card">
+                        <span>카드종류</span>
+                        <span>카드번호</span>
+                        <span>할부</span>
+                        <span>결제상태</span>
+                        <span>승인번호</span>
+                        <span>결제일시</span>
+                    </div>
+                    <div class="info">
+                        <span>현대</span>
+                        <span>123456780****555*</span>
+                        <span>일시불</span>
+                        <span>완료</span>
+                        <span>00600389</span>
+                        <span>2024-02-03-11:51:33</span>
                     </div>
                 </div>
                 <div class="box3">
-                    <div class="all_price">
-                        <div class="sum">
-                            <div class="all">
-                                <span>공급가액</span>
-                                <span>면세가액</span>
-                                <span>부가세</span>
-                                <span>과세제외액</span>
-                            </div>
-                            <div class="price">
-                                <span>253,500원</span>
-                                <span>0원</span>
-                                <span>3,000원</span>
-                                <span>0원</span>
-                            </div>
+                    <div class="sum">
+                        <div class="all">
+                            <span>공급가액</span>
+                            <span>면세가액</span>
+                            <span>부가세</span>
+                            <span>과세제외액</span>
                         </div>
-                        <div class="all_sum">
-                            <span class="sum">합계</span>
-                            <span class="sum_price">256,500원</span>
+                        <div class="price">
+                            <span>253,500원</span>
+                            <span>0원</span>
+                            <span>3,000원</span>
+                            <span>0원</span>
                         </div>
+                    </div>
+                    <div class="all_sum">
+                        <span class="sum">합계</span>
+                        <span class="sum_price">256,500원</span>
                     </div>
                 </div>
                 <div class="box4">
-                    <p>이용상점</p>
+                    <p class="title">이용상점</p>
                     <p>(주)여기어때컴퍼니 | 대표자명:정명훈 | 사엄자등록번호:742-86<br>-00224 | 전화:02-1670-6250 | 주소:서울특별시 강남구 봉은사로<br>479(삼성동)479타워11층</p>
-                    <p>결제서비스업체</p>
+                    <p class="title">결제서비스업체</p>
                     <p>토스페이먼츠(주) | 대표자명:김민표 | 사업자등록번호: 411-86-<br>01799 | 전화:1544-7772 | 주소:서울특별시 강남구 테헤란로 131,<br>14층 (역삼동,한국지식재산센터)</p>
                     <p>· 부가가치세법 제46조 3함에 따라 신용카드 매출전표도<br>매입세금계산서로 사용할 수 있습니다.</p>
                     <p>· 과제제외액(컵 보증금 등)은 조세특례지한법 제126조의 2에 따른<br>신용카드 등 사용금액에 대한 소득공제에서 제외됩니다.</p>
