@@ -168,6 +168,7 @@ main section .room .box2 .contents .title_wrap .review_wrap .all_review {
   color: #1273e4;
 }
 main section .room .box2 .contents .review_box {
+  padding-bottom: 30px;
   border-bottom: 1px solid #ebebeb;
 }
 main section .room .box2 .contents .review_box .thum_review {

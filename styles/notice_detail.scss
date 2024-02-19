@@ -3,7 +3,7 @@
 main {
     max-width: $desktop; margin: $margin0;
     section {
-        width: 800px;
+        width: 50%;
         margin: $margin0;
         padding-top: 50px;
         .back_page {
@@ -36,13 +36,13 @@ main {
                 font-size: $small13;
                 color: #333333;
                 line-height: 1.7;
-                letter-spacing: 1.5px;
+                letter-spacing: 1px;
             }
             .title_event {
                 font-size: 0.8333rem;
                 color: #333333;
                 font-weight: $weight600;
-                letter-spacing: 2px;
+                letter-spacing: 1px;
                 padding-top: 30px;
             }
             .prize_box {

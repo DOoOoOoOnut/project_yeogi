@@ -3,10 +3,11 @@
 main {
     max-width: $desktop; margin: $margin0;
     section {
-        width: 800px;
+        width: 100%;
         margin: $margin0;
-        padding: 20px 0 100px;
+        padding: 20px 20px 100px;
         .title {
+            width: 50%; margin: $margin0;
             padding: 16px 0 20px;
             h1 {
                 font-size: $title24; font-weight: $weight600;
@@ -22,6 +23,7 @@ main {
             .page_wrap {
                 .page {
                     li {
+                        width: 50%; margin: $margin0;
                         border-bottom: 1px solid #C2C2C2;
                         padding: 20px 0;
                         a {
@@ -33,7 +35,7 @@ main {
                                     color: $subColor-r;
                                     padding: 1.5px 4px;
                                     background: #FFEBEB;
-                                    display: inline-block;
+                                    width: max-content;
                                 }
                                 h1 {
                                     font-size: $defalt16;
@@ -65,6 +67,12 @@ main {
                     #number {
                         font-size: $small12;
                         padding: 0 10px;
+                    }
+                    .active {
+                        background: $mainColor-b;
+                        width: 32px; height: 32px;
+                        color: #fff;
+                        border-radius: 50%;
                     }
                 }
                 #next {
