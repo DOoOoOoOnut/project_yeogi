@@ -1,9 +1,11 @@
 @import 'common';
 
 main {
+    max-width:1400px; margin:0 auto;
     .main_container {
+        width:100%; margin:0 auto;
         .main_wrap {
-            width:1400px; margin:0 auto;
+            width:calc(100% - 60px); margin:0 auto;
             position:relative;
             h1 {
                 font-size:$title32;
@@ -17,312 +19,322 @@ main {
                 position:absolute; top:320px;
                 border-radius:15px;
                 #search_frm {
+                    width: 100%;
                     fieldset {
-                        .search_tap {
-                            @include flex-rnfc;
-                            border-bottom:1px solid #f5f5f5;
-                            padding:25px 20px 0;
-                            h2 {
-                                #kr_room {
-                                    padding:0 10px 18px; margin-right:20px;
-                                    color:$mainColor-r;
-                                    border-bottom:2px solid $mainColor-r;
-                                    font-weight: $weight600; letter-spacing:0.5px;
+                        width: 100%;
+                        //데스크탑 검색창
+                        .search_big {
+                            width:100%; 
+                            .search_tap {
+                                @include flex-rnfc;
+                                border-bottom:1px solid #f5f5f5;
+                                padding:25px 20px 0;
+                                h2 {
+                                    #kr_room {
+                                        padding:0 10px 18px; margin-right:20px;
+                                        color:$mainColor-r;
+                                        border-bottom:2px solid $mainColor-r;
+                                        font-weight: $weight600; letter-spacing:0.5px;
+                                    }
                                 }
-                            }
-                            h2 {
-                                #over_room {
-                                    padding:0 10px 18px;
-                                    color:#999;
-                                    // color:$mainColor-r;
-                                    // border-bottom:2px solid $mainColor-r;
-                                    // font-weight: $weight600; letter-spacing:0.5px;
-                                }
-                            }
-                        }
-                        .user_search_box {
-                            @include flex-rnsc;
-                            padding:20px;
-                            .user_search_detail {
-                                background-color:#f5f5f5;
-                                border-radius:10px;
-                                padding:4px 14px; margin-right:10px;
-                                width:450px; height:48px;
-                                position:relative;
-                                .user_search {
-                                    i {color:#999;}
-                                    #search_input {padding:10px; width:95%;}
-                                    #search_input::placeholder {color:#d9d9d9;}
-                                }
-                            }
-                            .user_search_detail:hover {background-color:#eeeeee;}
-                            .search_ranking {
-                                //js
-                                // display:none;
-                                background-color:#fff; border-radius:10px;
-                                box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
-                                padding:30px 15px 20px; width:100%;
-                                position:absolute; top:55px; left:0; z-index:999;
-                                h3 {
-                                    margin-bottom:20px; padding:0 15px;
-                                    font-weight:$weight600; color:$mainColor-r;
-                                }
-                                ol {
-                                    li {
-                                        padding:10px 15px;
-                                        display:flex; flex-flow:row nowrap;
-                                        justify-content: flex-start;
-                                        align-items:center;
-                                            em {font-weight:$weight600; width:30px;}
-                                            span {}
-                                        }
-                                    li:hover {background-color:#fafafa; width:100%; border-radius:10px;}
+                                h2 {
+                                    #over_room {
+                                        padding:0 10px 18px;
+                                        color:#999;
+                                        // color:$mainColor-r;
+                                        // border-bottom:2px solid $mainColor-r;
+                                        // font-weight: $weight600; letter-spacing:0.5px;
                                     }
                                 }
                             }
-                            .user_search_service {}
-                        }
-                        .calendar_detail {
-                            @include flex-rncc;
-                            position:relative;
-                            .calendar_date {
-                                display:flex; align-items:center;
-                                background-color:#f5f5f5;
-                                border-radius:10px;
-                                padding:4px 14px; margin-right:10px;
-                                width:400px; height:48px;
-                                i {color:#999; margin-right:10px;}
-                                span {font-weight: $weight600; letter-spacing:0.5px;}
-                            }
-                            .date_select_box {
-                                //js
-                                // display:none;
-                                background-color:#fff; border-radius:10px;
-                                box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
-                                padding:30px 15px 20px; width:800px;
-                                position:absolute; top:55px; left:0; z-index:999;
-                                overflow-x:hidden;
-                                .date_select_detail {
-                                    width:1200px;
-                                    position:relative;
-                                    .box_btn {
-                                        width:800px; padding-right:90px;
-                                        position:absolute; top:10px; left:25px;
-                                        @include flex-rnsc;
-                                        button {
-                                            i {}
-                                        }
-                                    }
-                                    .date_top {
-                                        display:flex; justify-content:space-between;
-                                        width:1150px; padding-bottom:10px;
-                                        .date {
-                                            width:370px; padding:10px 5px;
-                                            display:flex; flex-flow:column nowrap;
-                                            text-align:center;
-                                            h3 {margin-bottom:30px; font-family:PretendardSemiBold;}
-                                            table {
-                                                thead {
-                                                    margin-bottom:40px;
-                                                    tr {
-                                                        th {color:#999; padding-bottom:15px; font-size:$small13;}
-                                                    }
-                                                }
-                                                tbody {
-                                                    tr {
-                                                        width:100%; height:50px;
-                                                        td {color:#707070; padding:2px; font-size:$small13;}
-                                                        td:hover {background-color:#f5f5f5; border-radius:50%;}
-                                                        .redday {color:$subColor-r;}
-                                                        .start_active {
-                                                            background-color:$mainColor-b; color:#fff;
-                                                            border-radius:50%;
-                                                        }
-                                                        .end_active {
-                                                            background-color:$mainColor-b; color:#fff;
-                                                            border-radius:50%;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                .date_bottom {
-                                    margin:0 10px; width:780px;
-                                    border-top:1px solid #d6d6d6;
-                                    .date_reset {
-                                        position:relative; bottom:-18px;
-                                        i {font-size:$small12; color:#d6d6d6;}
-                                        span {font-size:$small12; color:#d6d6d6;}
-                                    }
-                                    .active {color:#555;}
-                                    .active:hover i {color:#999;}
-                                    .active:hover span {color:#999; text-decoration:underline;}
-                                    .user_select {
-                                        text-align:center;
-                                        .date_select_firstday {font-size:$subC14; color:#999;}
-                                        .date_select_lastday {font-size:$subC14; color:#999;}
-                                        .total_night {
-                                            font-size:$subC14; font-family:PretendardMedium;
-                                            color:#999;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .calendar_date:hover {background-color:#eeeeee;}
-                        .num_detail {
-                            @include flex-rncc;
-                            position:relative;
-                            .num_view {
-                                #num_select {
-                                    display:flex; align-items:center;
+                            .user_search_box {
+                                display:flex; flex-flow:row nowrap; align-items:center;
+                                width:100%; padding:20px;
+                                .user_search_detail {
                                     background-color:#f5f5f5;
                                     border-radius:10px;
                                     padding:4px 14px; margin-right:10px;
-                                    width:350px; height:48px;
-                                    i {color:#999; margin-right:10px;}
-                                    //공통
-                                    span {
-                                        font-weight: $weight600; letter-spacing:0.5px;
-                                        span {font-weight: $weight600; letter-spacing:0.5px;}
+                                    width:40%; height:48px;
+                                    position:relative;
+                                    .user_search {
+                                        i {color:#999;}
+                                        #search_input {padding:10px;}
+                                        #search_input::placeholder {color:#d9d9d9;}
                                     }
-                                    //개별
-                                    span {
-                                        .room_num {}
-                                    }
-                                    span {
-                                        .adult_num {}
-                                    }
-                                    span {
-                                        .children_num {}
-                                    }
-                                }
-                            }
-                            .num_view:hover #num_select {background-color:#eeeeee;}
-                            .user_select {
-                                background-color:#fff; border-radius:10px;
-                                box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
-                                padding:0 20px; width:100%; 
-                                position:absolute; top:55px; left:0; z-index:9;
-                                //js
-                                display:none;
-                                //공통
-                                div {
-                                    display:flex; justify-content:space-between;
-                                    align-items:center;
-                                    padding:10px 5px;
-                                    h3 {}
-                                    p {font-size:$small13; color:#999;}
-                                    div {
-                                        display:flex; 
-                                        button {
-                                            i {
-                                                font-size:30px; color:#fff;
-                                                border-radius:50%;
-                                                border:1px solid #f5f5f5;
-                                                background-color:#333;
+                                    .search_ranking {
+                                        //js
+                                        display:none;
+                                        background-color:#fff; border-radius:10px;
+                                        box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
+                                        padding:30px 15px 20px; width:100%;
+                                        position:absolute; top:55px; left:0; z-index:999;
+                                        h3 {
+                                            margin-bottom:20px; padding:0 15px;
+                                            font-weight:$weight600; color:$mainColor-r;
+                                        }
+                                        ol {
+                                            li {
+                                                padding:10px 15px;
+                                                display:flex; flex-flow:row nowrap;
+                                                justify-content: flex-start;
+                                                align-items:center;
+                                                    em {font-weight:$weight600; width:30px;}
+                                                    span {}
+                                                }
+                                            li:hover {
+                                                background-color:#fafafa; width:100%; border-radius:10px;
                                             }
                                         }
-                                        button:hover i {color:#f5f5f5;}
-                                        span {padding:10px 20px; font-size:1.25rem;}
                                     }
+                                    .user_search_service {}
                                 }
-                                //개별
-                                .user_room {
-                                    border-bottom:1px solid #d6d6d6;
-                                    h3 {padding:10px 5px;}
-                                    .user_room_select {
-                                        .num_minus {
-                                            i {background-color:#d6d6d6; color:#f5f5f5;}
-                                        }
-                                        .user_room_num {}
-                                        .num_plus {
-                                            i {}
-                                        }
-                                    }
-                                }
-                                .user_adult_left {
-                                    padding-bottom:0;
-                                    .user_adult {
-                                        display:flex; flex-flow:column nowrap;
-                                        align-items:flex-start;
-                                        h3 {}
-                                        p {}
-                                    }
-                                    .user_adult_select {
-                                        .num_minus {
-                                            i {}
-                                        }
-                                        .user_adult_num {}
-                                        .num_plus {
-                                            i {}
-                                        }
-                                    }
-                                }
-                                .user_children_left {
-                                    border-bottom:1px solid #d6d6d6;
-                                    .user_children {
-                                        display:flex; flex-flow:column nowrap;
-                                        align-items:flex-start;
-                                        h3 {margin-bottom:5px;}
-                                        p {}
-                                    }
-                                    .user_children_select {
-                                        .num_minus {
-                                            i {}
-                                        }
-                                        .user_children_num {}
-                                        .num_plus {
-                                            i {}
-                                        }
-                                    }
-                                }
-                                .children_notice {
-                                    background-color:#f5f5f5;
-                                    padding:15px; margin:20px 0;
-                                    border-radius:5px;
-                                    ul {
-                                        li {font-size:$small12;}
-                                    }
-                                }
-                                .children_age {
-                                    margin-bottom:10px;
-                                    //js
-                                    display:none;
-                                    .user_children_num {}
-                                    .user_children_age {
-                                        border:1px solid #f5f5f5;
-                                        border-radius:10px;
-                                        padding:10px 15px; width:140px;
-                                        @include flex-rnsc;
-                                        position:relative;
+                                .user_search_detail:hover {background-color:#eeeeee;}
+                                .calendar_detail {
+                                    @include flex-rncc;
+                                    position:relative;
+                                    width:25%; margin-right:10px;
+                                    .calendar_date {
+                                        display:flex; align-items:center;
                                         background-color:#f5f5f5;
-                                        span {}
-                                        i {}
-                                        .children_age_select {
-                                            width:140px; height:160px; overflow:auto;
-                                            background-color:#fff; border-radius:10px;
-                                            box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
-                                            display:flex; flex-flow:column nowrap;
-                                            align-items:flex-start;
-                                            position:absolute; top:-170px; right:0px;
+                                        border-radius:10px;
+                                        padding:4px 14px;
+                                        width:100%; height:48px;
+                                        i {color:#999; margin-right:10px;}
+                                        span {font-weight: $weight600; letter-spacing:0.5px;}
+                                    }
+                                    .calendar_date:hover {background-color:#eeeeee;}
+                                    .date_select_box {
+                                        //js
+                                        display:none;
+                                        background-color:#fff; border-radius:10px;
+                                        box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
+                                        padding:30px 15px 20px; width:250%;
+                                        position:absolute; top:55px; left:0; z-index:999;
+                                        overflow-x:hidden;
+                                        .date_select_detail {
+                                            width:210%;
+                                            position:relative;
+                                            .box_btn {
+                                                width:50%; padding-right:90px;
+                                                position:absolute; top:10px; left:25px;
+                                                @include flex-rnsc;
+                                                button {
+                                                    i {}
+                                                }
+                                            }
+                                            .date_top {
+                                                display:flex; justify-content:space-between;
+                                                width:1150px; padding-bottom:10px;
+                                                .date {
+                                                    width:370px; padding:10px 5px;
+                                                    display:flex; flex-flow:column nowrap;
+                                                    text-align:center;
+                                                    h3 {margin-bottom:30px; font-family:PretendardSemiBold;}
+                                                    table {
+                                                        thead {
+                                                            margin-bottom:40px;
+                                                            tr {
+                                                                th {color:#999; padding-bottom:15px; font-size:$small13;}
+                                                            }
+                                                        }
+                                                        tbody {
+                                                            tr {
+                                                                width:100%; height:50px;
+                                                                td {color:#707070; padding:2px; font-size:$small13;}
+                                                                td:hover {background-color:#f5f5f5; border-radius:50%;}
+                                                                .redday {color:$subColor-r;}
+                                                                .start_active {
+                                                                    background-color:$mainColor-b; color:#fff;
+                                                                    border-radius:50%;
+                                                                }
+                                                                .end_active {
+                                                                    background-color:$mainColor-b; color:#fff;
+                                                                    border-radius:50%;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .date_bottom {
+                                                margin:0 10px; width:780px;
+                                                border-top:1px solid #d6d6d6;
+                                                .date_reset {
+                                                    position:relative; bottom:-18px;
+                                                    i {font-size:$small12; color:#d6d6d6;}
+                                                    span {font-size:$small12; color:#d6d6d6;}
+                                                }
+                                                .active {color:#555;}
+                                                .active:hover i {color:#999;}
+                                                .active:hover span {color:#999; text-decoration:underline;}
+                                                .user_select {
+                                                    text-align:center;
+                                                    .date_select_firstday {font-size:$subC14; color:#999;}
+                                                    .date_select_lastday {font-size:$subC14; color:#999;}
+                                                    .total_night {
+                                                        font-size:$subC14; font-family:PretendardMedium;
+                                                        color:#999;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .num_detail {
+                                    @include flex-rncc;
+                                    position:relative;
+                                    width:25%; margin-right:10px;
+                                    .num_view {
+                                        width:100%;
+                                        #num_select {
+                                            display:flex; align-items:center;
+                                            background-color:#f5f5f5;
+                                            border-radius:10px; padding:4px 14px;
+                                            width:100%; height:48px;
+                                            i {color:#999; margin-right:10px;}
+                                            //공통
+                                            span {
+                                                font-weight: $weight600; letter-spacing:0.5px;
+                                                span {font-weight: $weight600; letter-spacing:0.5px;}
+                                            }
+                                        }
+                                    }
+                                    .num_view:hover #num_select {background-color:#eeeeee;}
+                                    .user_select {
+                                        background-color:#fff; border-radius:10px;
+                                        box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
+                                        padding:0 20px; width:100%;
+                                        position:absolute; top:55px; left:0; z-index:9;
+                                        //js
+                                        display:none;
+                                        //공통
+                                        div {
+                                            display:flex; justify-content:space-between;
+                                            align-items:center;
+                                            padding:10px 5px;
+                                            h3 {}
+                                            p {font-size:$small13; color:#999;}
+                                            div {
+                                                display:flex; 
+                                                button {
+                                                    i {
+                                                        font-size:30px; color:#fff;
+                                                        border-radius:50%;
+                                                        border:1px solid #f5f5f5;
+                                                        background-color:#333;
+                                                    }
+                                                }
+                                                button:hover i {color:#f5f5f5;}
+                                                span {padding:10px 20px; font-size:1.25rem;}
+                                            }
+                                        }
+                                        //개별
+                                        .user_room {
+                                            border-bottom:1px solid #d6d6d6;
+                                            h3 {padding:10px 5px;}
+                                            .user_room_select {
+                                                .num_minus {
+                                                    i {background-color:#d6d6d6; color:#f5f5f5;}
+                                                }
+                                                .user_room_num {}
+                                                .num_plus {
+                                                    i {}
+                                                }
+                                            }
+                                        }
+                                        .user_adult_left {
+                                            padding-bottom:0;
+                                            .user_adult {
+                                                display:flex; flex-flow:column nowrap;
+                                                align-items:flex-start;
+                                                h3 {}
+                                                p {}
+                                            }
+                                            .user_adult_select {
+                                                .num_minus {
+                                                    i {}
+                                                }
+                                                .user_adult_num {}
+                                                .num_plus {
+                                                    i {}
+                                                }
+                                            }
+                                        }
+                                        .user_children_left {
+                                            border-bottom:1px solid #d6d6d6;
+                                            .user_children {
+                                                display:flex; flex-flow:column nowrap;
+                                                align-items:flex-start;
+                                                h3 {margin-bottom:5px;}
+                                                p {}
+                                            }
+                                            .user_children_select {
+                                                .num_minus {
+                                                    i {}
+                                                }
+                                                .user_children_num {}
+                                                .num_plus {
+                                                    i {}
+                                                }
+                                            }
+                                        }
+                                        .children_notice {
+                                            background-color:#f5f5f5;
+                                            padding:15px; margin:20px 0;
+                                            border-radius:5px;
+                                            ul {
+                                                li {font-size:$small12;}
+                                            }
+                                        }
+                                        .children_age {
+                                            margin-bottom:10px;
                                             //js
                                             display:none;
-                                            span {font-size:$subT15;}
+                                            .user_children_num {}
+                                            .user_children_age {
+                                                border:1px solid #f5f5f5;
+                                                border-radius:10px;
+                                                padding:10px 15px; width:140px;
+                                                @include flex-rnsc;
+                                                position:relative;
+                                                background-color:#f5f5f5;
+                                                span {}
+                                                i {}
+                                                .children_age_select {
+                                                    width:140px; height:160px; overflow:auto;
+                                                    background-color:#fff; border-radius:10px;
+                                                    box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
+                                                    display:flex; flex-flow:column nowrap;
+                                                    align-items:flex-start;
+                                                    position:absolute; top:-170px; right:0px;
+                                                    //js
+                                                    display:none;
+                                                    span {font-size:$subT15;}
+                                                }
+                                            }
                                         }
+                                    }
+                                }
+                                .search_btn {
+                                    width:10%;
+                                    #search_btn {
+                                        @include flex-rncc;
+                                        background-color:$mainColor-r;
+                                        border-radius:10px; color:#fff;
+                                        padding:4px 14px; height:48px;
                                     }
                                 }
                             }
                         }
-                        .search_btn {
-                            #search_btn {
-                                @include flex-rncc;
-                                background-color:$mainColor-r;
-                                border-radius:10px; color:#fff;
-                                padding:4px 14px;
-                                width:120px; height:48px;
+                        //모바일 검색창
+                        .search_small {
+                            padding:15px; border-radius:5px;
+                            width:100%;
+                            // display:none;
+                            .user_search {
+                                i {margin-right:5px; color:#707070;}
+                                #search_input_m {}
+                                #search_input_m::placeholder {color:#999; font-family:$familyMedium;}
                             }
                         }
                     }
@@ -336,58 +348,59 @@ main {
             // background-image:url(https://images.unsplash.com/photo-1596941248238-0d49dcaa4263?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
             background-image:url(https://images.unsplash.com/photo-1682685796766-0fddd3e480de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
             background-position:center; background-size:cover;
-            height:530px;
+            height:100%;
         }
-        .center_container {
-            width:1400px; margin:0 auto;
-            //공통
+    }
+    .center_container {
+        width:calc(100% - 60px); margin:0 auto;
+        //공통
+        div {
+            .title_box {
+                @include flex-rnsc;
+                margin-bottom:15px;
+                .subj {font-size:$title18; font-weight:$weight600;}
+                a {
+                    i {}
+                }
+            }
             div {
-                .title_box {
-                    @include flex-rnsc;
-                    margin-bottom:15px;
-                    .subj {font-size:$title18; font-weight:$weight600;}
-                    a {
-                        i {}
+                .box_btn {
+                    div {
+                        width:40px;
+                        i {
+                            @include flex-rncc;
+                            color:#333; background-color:#fff;
+                            width:40px; height:40px;
+                            border-radius:100%;
+                            box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
+                        }
+                    }
+                    .swiper-button-prev {
+                        position:absolute; left:-20px; top:90px; z-index:99;
+                    }
+                    .swiper-button-prev::after {
+                        display: none;
+                    }
+                    .swiper-button-next {
+                        position:absolute; right:-20px; top:90px; z-index:99;
+                    }
+                    .swiper-button-next::after {
+                        display: none;
                     }
                 }
-                div {
-                    .box_btn {
-                        div {
-                            width:40px;
-                            i {
-                                @include flex-rncc;
-                                color:#333; background-color:#fff;
-                                width:40px; height:40px;
-                                border-radius:100%;
-                                box-shadow:0px 2px 8px rgba(0, 0, 0, 0.24);
-                            }
-                        }
-                        .swiper-button-prev {
-                            position:absolute; left:-20px; top:90px; z-index:99;
-                        }
-                        .swiper-button-prev::after {
-                            display: none;
-                        }
-                        .swiper-button-next {
-                            position:absolute; right:-20px; top:90px; z-index:99;
-                        }
-                        .swiper-button-next::after {
-                            display: none;
-                        }
-                    }
-                    .swiper-container {
-                        .swiper-wrapper {
-                            .swiper-slide {
-                                @include flex-rnsc;
-                                a {
-                                    img {}
-                                    span {}
-                                }
+                .swiper-container {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            @include flex-rnsc;
+                            a {
+                                img {}
+                                span {}
                             }
                         }
                     }
                 }
             }
+        }
         //개별
         //이벤트
         .event_wrap {
@@ -934,7 +947,7 @@ main {
     }
     //앱광고
     .app_bnr {
-        width:1400px; margin:0 auto;
+        width:calc(100% - 60px); margin:0 auto;
         position:relative; margin-bottom:50px;
         .app_bnr_img {
             img {width:100%; border-radius:20px;}

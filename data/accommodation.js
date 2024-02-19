@@ -22,7 +22,7 @@ export default
         "price":363000,
         "is_discount":true,
         "discount_per":0.2,
-        "img":"./images/"
+        "img":"accommodation1"
     },{
         "pk":2,
         "name":"정동진 썬크루즈호텔",
@@ -45,7 +45,7 @@ export default
         "price":220000,
         "is_discount":false,
         "discount_per":0,
-        "img":"./images/"
+        "img":"accommodation2"
     },{
         "pk":3,
         "name":"라카이 샌드파인",
@@ -68,6 +68,6 @@ export default
         "price":36000,
         "is_discount":true,
         "discount_per":0.3,
-        "img":"./images/"
+        "img":"accommodation3"
     }
 ]

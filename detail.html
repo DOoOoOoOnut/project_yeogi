@@ -5,8 +5,11 @@
     <meta name="viewport" content="widdt=device-widdt, initial-scale=1.0">
     <title>상세페이지</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 <body>
     <!-- popup -->
@@ -50,8 +53,8 @@
                                     <p class="swiper_slide slide20"><img src="" alt=""></p>
                                     <p class="swiper_slide slide21"><img src="" alt=""></p>
                                 </div>
-                                <div class="swiper_prev prev"><!-- 폰트어썸 --></div>
-                                <div class="swiper_next next"><!-- 폰트어썸 --></div>
+                                <div class="swiper_prev prev"><i class="fa-solid fa-angle-left"></i></div>
+                                <div class="swiper_next next"><i class="fa-solid fa-angle-right"></i></div>
                                 <div class="swiper_pagination">
                                     <p>
                                         <span>대표이미지 |</span>
@@ -493,48 +496,47 @@
                 </div>
                 <div class="real_review">
                     <div class="title">
-                        <p><i class="fa-solid fa-star"></i> 리얼리뷰 9.8 <em>417명 평가</em> · <em>417개 리뷰</em></p>
-                        <div class="filter_box">
-                            <a href="#">베스트순</a><!--폰트어썸-->
-                            <div class="filter">
-                                <ul>
-                                    <li id="best">베스트순<!--폰트어썸--></li>
-                                    <li id="new">최신순</li>
-                                    <li id="high">평점 높은순</li>
-                                    <li id="low">평점 낮은순</li>
-                                </ul>
+                        <p><i class="fa-solid fa-star"></i> 리얼리뷰 9.8 <em>417명 평가 · 417개 리뷰</em></p>
+                        <div class="filter">
+                            <p class="now"><i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i><span>추천순</span></p>
+                            <div class="open">
+                                <button type="button" class="active"><span>추천순</span><i class="fa-solid fa-check"></i></button>
+                                <button type="button"><span>평점높은순</span><i class="fa-solid fa-check"></i></button>
+                                <button type="button"><span>리뷰많은순</span><i class="fa-solid fa-check"></i></button>
+                                <button type="button"><span>낮은가격순</span><i class="fa-solid fa-check"></i></button>
+                                <button type="button"><span>높은가격순</span><i class="fa-solid fa-check"></i></button>
+                                <button type="button"><span>거리순</span><i class="fa-solid fa-check"></i></button>
                             </div>
                         </div>
                     </div>
-                    <div class="review_item">
+                    <div class="review_user">
                         <div class="user_info">
-                            <p><img src="" alt=""></p>
+                            <p><img src="./images/detail/more/ico_21.png" alt="아이콘"></p>
                             <div class="user">
-                                <span>베스트 리뷰</span>
-                                <span>피*****</span>
+                                <span class="best">베스트 리뷰</span>
+                                <span class="user_name">피*****</span>
                             </div>
                         </div>
                         <div class="photo_review">
                             <div class="score">
-                                <p><!--폰트어썸--> <em>2개월전</em></p>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><em>2개월전</em></p>
                             </div>
                             <div class="thumnail">
                                 <div class="swiper-container" id="thum_photo">
                                     <div class="swiper-wrapper photo">
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
-                                        <a href="#" class="swiper_slide"><img src="" alt=""></a>
+                                        <a href="#" class="swiper-slide"><img src="./images/detail/review/review_01.jpeg" alt="review"></a>
+                                        <a href="#" class="swiper-slide"><img src="./images/detail/review/review_02.jpeg" alt="review"></a>
+                                        <a href="#" class="swiper-slide"><img src="./images/detail/review/review_03.jpeg" alt="review"></a>
+                                        <a href="#" class="swiper-slide"><img src="./images/detail/review/review_04.jpeg" alt="review"></a>
+                                        <a href="#" class="swiper-slide"><img src="./images/detail/review/review_05.jpeg" alt="review"></a>
+                                        <a href="#" class="swiper-slide"><img src="./images/detail/review/review_06.jpeg" alt="review"></a>
+                                        <a href="#" class="swiper-slide"><img src="./images/detail/review/review_07.jpeg" alt="review"></a>
+                                        <a href="#" class="swiper-slide"><img src="./images/detail/review/review_08.jpeg" alt="review"></a>
+                                        <a href="#" class="swiper-slide"><img src="./images/detail/review/review_09.jpeg" alt="review"></a>
                                     </div>
                                 </div>
-                                <div class="swiper_prev prev"><!-- 폰트어썸 --></div>
-                                <div class="swiper_next next"><!-- 폰트어썸 --></div>
+                                <div class="swiper-prev prev"><!-- 폰트어썸 --></div>
+                                <div class="swiper-next next"><!-- 폰트어썸 --></div>
                             </div>
                             <P>[인원 추가 무료] 산 전망 스탠다드 더블 룸 객실 이용</P>
                             <div class="more_review">
@@ -555,19 +557,19 @@
                                     <a href="#">더보기</a><!--폰트어썸-->
                                 </span>
                             </div>
-                            <!--폰트어썸--><p>1명이 이 리뷰를 추천했어요</p>
+                            <p><i class="fa-solid fa-thumbs-up"></i><span>1명이 이 리뷰를 추천했어요</span></p>
                         </div>
-                        <div class="pagination">
-                            <button type="button" class="prev"><!-- 폰트어썸 --></button>
-                            <div class="num">
-                                <button type="button" class="number">1</button>
-                                <button type="button" class="number">2</button>
-                                <button type="button" class="number">3</button>
-                                <button type="button" class="number">4</button>
-                                <button type="button" class="number">5</button>
-                            </div>
-                            <button type="button" class="next"><!-- 폰트어썸 --></button>
+                    </div>
+                    <div class="pagination">
+                        <button type="button" id="prev"><i class="fa-solid fa-angle-left"></i></button>
+                        <div class="num">
+                            <button type="button" id="number">1</button>
+                            <button type="button" id="number">2</button>
+                            <button type="button" id="number">3</button>
+                            <button type="button" id="number">4</button>
+                            <button type="button" id="number">5</button>
                         </div>
+                        <button type="button" id="next"><i class="fa-solid fa-angle-right"></i></button>
                     </div>
                 </div>
                 <div class="similar_item">
@@ -575,14 +577,14 @@
                     <div class="similar">
                         <div class="swiper-container" id="room_type">
                             <a href="#" class="swiper_slide room">
-                                <p class="photo"><img src="" alt=""></p>
+                                <p class="photo"><img src="./images/detail/parnashotel.jpeg" alt="파르나스호텔제주"></p>
                                 <div class="contents">
                                     <div class="title_wrap">
                                         <p class="type">블랙·5성급·호텔</p>
                                         <h2 class="title">파르나스 호텔 제주</h2>
                                         <p class="location">서귀포터미널 차량 19분</p>
                                         <p class="review">
-                                            <span class="point_wrap"><!--폰트어썸-->9.8</span>
+                                            <span class="point_wrap"><i class="fa-solid fa-star"></i>9.8</span>
                                             <span class="comment">252명 평가</span>
                                         </p>
                                         <div class="price_info">
@@ -592,13 +594,14 @@
                                     </div>
                                 </div>
                             </a>
-                            <div class="swiper_prev prev"><!-- 폰트어썸 --></div>
-                            <div class="swiper_next next"><!-- 폰트어썸 --></div>
+                            <!-- <div class="swiper_prev prev"><i class="fa-solid fa-angle-left"></div>
+                            <div class="swiper_next next"><i class="fa-solid fa-angle-right"></div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
 </body>
 </html>

@@ -3,11 +3,13 @@ main {
   margin: 0 auto;
 }
 main section {
-  width: 800px;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px 0 100px;
+  padding: 20px 20px 100px;
 }
 main section .title {
+  width: 50%;
+  margin: 0 auto;
   padding: 16px 0 20px;
 }
 main section .title h1 {
@@ -21,6 +23,8 @@ main section .title p {
   color: #999;
 }
 main section .contents .page_wrap .page li {
+  width: 50%;
+  margin: 0 auto;
   border-bottom: 1px solid #C2C2C2;
   padding: 20px 0;
 }
@@ -37,7 +41,8 @@ main section .contents .page_wrap .page li a .left p {
   color: #f45858;
   padding: 1.5px 4px;
   background: #FFEBEB;
-  display: inline-block;
+  width: -moz-max-content;
+  width: max-content;
 }
 main section .contents .page_wrap .page li a .left h1 {
   font-size: 1rem;
@@ -67,6 +72,13 @@ main section .contents .pagination .num {
 main section .contents .pagination .num #number {
   font-size: 0.75rem;
   padding: 0 10px;
+}
+main section .contents .pagination .num .active {
+  background: #1273e4;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  border-radius: 50%;
 }
 main section .contents .pagination #next {
   font-size: 0.75rem;

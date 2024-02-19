@@ -1,5 +1,13 @@
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main .main_container {
+  width: 100%;
+  margin: 0 auto;
+}
 main .main_container .main_wrap {
-  width: 1400px;
+  width: calc(100% - 60px);
   margin: 0 auto;
   position: relative;
 }
@@ -19,7 +27,16 @@ main .main_container .main_wrap .search_wrap {
   top: 320px;
   border-radius: 15px;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_tap {
+main .main_container .main_wrap .search_wrap #search_frm {
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset {
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big {
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tap {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -27,7 +44,7 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_tap {
   border-bottom: 1px solid #f5f5f5;
   padding: 25px 20px 0;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_tap h2 #kr_room {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tap h2 #kr_room {
   padding: 0 10px 18px;
   margin-right: 20px;
   color: #f7323f;
@@ -35,43 +52,40 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_tap h2
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_tap h2 #over_room {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tap h2 #over_room {
   padding: 0 10px 18px;
   color: #999;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 20px;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail {
   background-color: #f5f5f5;
   border-radius: 10px;
   padding: 4px 14px;
   margin-right: 10px;
-  width: 450px;
+  width: 40%;
   height: 48px;
   position: relative;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail .user_search i {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search i {
   color: #999;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail .user_search #search_input {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input {
   padding: 10px;
-  width: 95%;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail .user_search #search_input::-moz-placeholder {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input::-moz-placeholder {
   color: #d9d9d9;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail .user_search #search_input::placeholder {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input::placeholder {
   color: #d9d9d9;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .user_search_detail:hover {
-  background-color: #eeeeee;
-}
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking {
+  display: none;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
@@ -82,71 +96,79 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_b
   left: 0;
   z-index: 999;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking h3 {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking h3 {
   margin-bottom: 20px;
   padding: 0 15px;
   font-weight: 600;
   color: #f7323f;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking ol li {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking ol li {
   padding: 10px 15px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking ol li em {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking ol li em {
   font-weight: 600;
   width: 30px;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .user_search_box .search_ranking ol li:hover {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking ol li:hover {
   background-color: #fafafa;
   width: 100%;
   border-radius: 10px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail:hover {
+  background-color: #eeeeee;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 25%;
+  margin-right: 10px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .calendar_date {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .calendar_date {
   display: flex;
   align-items: center;
   background-color: #f5f5f5;
   border-radius: 10px;
   padding: 4px 14px;
-  margin-right: 10px;
-  width: 400px;
+  width: 100%;
   height: 48px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .calendar_date i {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .calendar_date i {
   color: #999;
   margin-right: 10px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .calendar_date span {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .calendar_date span {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .calendar_date:hover {
+  background-color: #eeeeee;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box {
+  display: none;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
   padding: 30px 15px 20px;
-  width: 800px;
+  width: 250%;
   position: absolute;
   top: 55px;
   left: 0;
   z-index: 999;
   overflow-x: hidden;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail {
-  width: 1200px;
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail {
+  width: 210%;
   position: relative;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .box_btn {
-  width: 800px;
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .box_btn {
+  width: 50%;
   padding-right: 90px;
   position: absolute;
   top: 10px;
@@ -156,136 +178,137 @@ main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_
   justify-content: space-between;
   align-items: center;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top {
   display: flex;
   justify-content: space-between;
   width: 1150px;
   padding-bottom: 10px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date {
   width: 370px;
   padding: 10px 5px;
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date h3 {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date h3 {
   margin-bottom: 30px;
   font-family: PretendardSemiBold;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table thead {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table thead {
   margin-bottom: 40px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table thead tr th {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table thead tr th {
   color: #999;
   padding-bottom: 15px;
   font-size: 0.813rem;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr {
   width: 100%;
   height: 50px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr td {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr td {
   color: #707070;
   padding: 2px;
   font-size: 0.813rem;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr td:hover {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr td:hover {
   background-color: #f5f5f5;
   border-radius: 50%;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .redday {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .redday {
   color: #f45858;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .start_active {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .start_active {
   background-color: #1273e4;
   color: #fff;
   border-radius: 50%;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .end_active {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .end_active {
   background-color: #1273e4;
   color: #fff;
   border-radius: 50%;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom {
   margin: 0 10px;
   width: 780px;
   border-top: 1px solid #d6d6d6;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .date_reset {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .date_reset {
   position: relative;
   bottom: -18px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .date_reset i {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .date_reset i {
   font-size: 0.75rem;
   color: #d6d6d6;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .date_reset span {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .date_reset span {
   font-size: 0.75rem;
   color: #d6d6d6;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .active {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .active {
   color: #555;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .active:hover i {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .active:hover i {
   color: #999;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .active:hover span {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .active:hover span {
   color: #999;
   text-decoration: underline;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .user_select {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .user_select {
   text-align: center;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .user_select .date_select_firstday {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .user_select .date_select_firstday {
   font-size: 0.875rem;
   color: #999;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .user_select .date_select_lastday {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .user_select .date_select_lastday {
   font-size: 0.875rem;
   color: #999;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_detail .date_select_box .date_bottom .user_select .total_night {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .user_select .total_night {
   font-size: 0.875rem;
   font-family: PretendardMedium;
   color: #999;
 }
-main .main_container .main_wrap .search_wrap #search_frm .calendar_date:hover {
-  background-color: #eeeeee;
-}
-main .main_container .main_wrap .search_wrap #search_frm .num_detail {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 25%;
+  margin-right: 10px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .num_view #num_select {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view {
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view #num_select {
   display: flex;
   align-items: center;
   background-color: #f5f5f5;
   border-radius: 10px;
   padding: 4px 14px;
-  margin-right: 10px;
-  width: 350px;
+  width: 100%;
   height: 48px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .num_view #num_select i {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view #num_select i {
   color: #999;
   margin-right: 10px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .num_view #num_select span {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view #num_select span {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .num_view #num_select span span {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view #num_select span span {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .num_view:hover #num_select {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view:hover #num_select {
   background-color: #eeeeee;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
@@ -297,76 +320,76 @@ main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_selec
   z-index: 9;
   display: none;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div p {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div p {
   font-size: 0.813rem;
   color: #999;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div div {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div div {
   display: flex;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div div button i {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div div button i {
   font-size: 30px;
   color: #fff;
   border-radius: 50%;
   border: 1px solid #f5f5f5;
   background-color: #333;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div div button:hover i {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div div button:hover i {
   color: #f5f5f5;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select div div span {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div div span {
   padding: 10px 20px;
   font-size: 1.25rem;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_room {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_room {
   border-bottom: 1px solid #d6d6d6;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_room h3 {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_room h3 {
   padding: 10px 5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_room .user_room_select .num_minus i {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_room .user_room_select .num_minus i {
   background-color: #d6d6d6;
   color: #f5f5f5;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_adult_left {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_adult_left {
   padding-bottom: 0;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_adult_left .user_adult {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_adult_left .user_adult {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_children_left {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_children_left {
   border-bottom: 1px solid #d6d6d6;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_children_left .user_children {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_children_left .user_children {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .user_children_left .user_children h3 {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_children_left .user_children h3 {
   margin-bottom: 5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_notice {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_notice {
   background-color: #f5f5f5;
   padding: 15px;
   margin: 20px 0;
   border-radius: 5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_notice ul li {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_notice ul li {
   font-size: 0.75rem;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_age {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age {
   margin-bottom: 10px;
   display: none;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_age .user_children_age {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age {
   border: 1px solid #f5f5f5;
   border-radius: 10px;
   padding: 10px 15px;
@@ -378,7 +401,7 @@ main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_selec
   position: relative;
   background-color: #f5f5f5;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_age .user_children_age .children_age_select {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age .children_age_select {
   width: 140px;
   height: 160px;
   overflow: auto;
@@ -393,10 +416,13 @@ main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_selec
   right: 0px;
   display: none;
 }
-main .main_container .main_wrap .search_wrap #search_frm .num_detail .user_select .children_age .user_children_age .children_age_select span {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age .children_age_select span {
   font-size: 0.938rem;
 }
-main .main_container .main_wrap .search_wrap #search_frm .search_btn #search_btn {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .search_btn {
+  width: 10%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .search_btn #search_btn {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -405,17 +431,33 @@ main .main_container .main_wrap .search_wrap #search_frm .search_btn #search_btn
   border-radius: 10px;
   color: #fff;
   padding: 4px 14px;
-  width: 120px;
   height: 48px;
 }
-main .main_bg {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small {
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search i {
+  margin-right: 5px;
+  color: #707070;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_m::-moz-placeholder {
+  color: #999;
+  font-family: PretendardMedium;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_m::placeholder {
+  color: #999;
+  font-family: PretendardMedium;
+}
+main .main_container .main_bg {
   background-image: url(https://images.unsplash.com/photo-1682685796766-0fddd3e480de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-position: center;
   background-size: cover;
-  height: 530px;
+  height: 100%;
 }
 main .center_container {
-  width: 1400px;
+  width: calc(100% - 60px);
   margin: 0 auto;
 }
 main .center_container div .title_box {
@@ -1183,7 +1225,7 @@ main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .swiper-
   margin-left: 0;
 }
 main .app_bnr {
-  width: 1400px;
+  width: calc(100% - 60px);
   margin: 0 auto;
   position: relative;
   margin-bottom: 50px;

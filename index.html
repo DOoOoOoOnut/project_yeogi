@@ -8,276 +8,12 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/responsible.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 <body>
     <!-- 헤더 -->
-    <header>
-        <div class="header_wrap">
-            <h1><a href="./index.html"><img src="./images/icon/logo.png" alt="여기어때"></a></h1>
-            <nav>
-                <!-- <div class="kr_travel">
-                    <h2>국내 여행지</h2>
-                    <div class="kr_travel_box">
-                        <a href="search.html">경기</a>
-                        <a href="search.html">제주도</a>
-                        <a href="search.html">충남</a>
-                        <a href="search.html">인천</a>
-                        <a href="search.html">대구</a>
-                        <a href="search.html">대전</a>
-                        <a href="search.html">서울</a>
-                        <a href="search.html">경남</a>
-                        <a href="search.html">부산</a>
-                        <a href="search.html">전북</a>
-                        <a href="search.html">울산</a>
-                        <a href="search.html">광주</a>
-                        <a href="search.html">강원</a>
-                        <a href="search.html">경북</a>
-                        <a href="search.html">전남</a>
-                        <a href="search.html">충북</a>
-                        <a href="search.html">세종</a>
-                    </div>
-                </div> -->
-                <div class="over_travel">
-                    <h2>해외 여행지</h2>
-                    <div class="over_travel_box">
-                        <div class="japan">
-                            <h3>일본 추천 여행지</h3>
-                            <div class="japan_detail">
-                                <a href="#">고베</a>
-                                <a href="#">교토</a>
-                                <a href="#">기타큐슈</a>
-                                <a href="#">나고야</a>
-                                <a href="#">나리타</a>
-                                <a href="#">노보리베츠</a>
-                                <a href="#">도쿄/동경</a>
-                                <a href="#">본섬</a>
-                                <a href="#">삿포로</a>
-                                <a href="#">오사카</a>
-                                <a href="#">오타루</a>
-                                <a href="#">오키나와</a>
-                                <a href="#">요코하마</a>
-                                <a href="#">유후</a>
-                                <a href="#">하코네</a>
-                                <a href="#">후쿠오카</a>
-                            </div>
-                        </div>
-                        <div class="asia">
-                            <h3>아시아 추천 여행지</h3>
-                            <div class="asia_detail">
-                                <div class="left">
-                                    <a href="#">괌 보홀</a>
-                                    <a href="#">푸퀵 / 푸꾸옥섬</a>
-                                    <a href="#">마닐라</a>
-                                    <a href="#">앙헬레스 / 클락</a>
-                                    <a href="#">세부</a>
-                                    <a href="#">코타키나발루</a>
-                                    <a href="#">벳푸</a>
-                                    <a href="#">나트랑 / 나짱</a>
-                                    <a href="#">홍콩</a>
-                                    <a href="#">호이안</a>
-                                    <a href="#">하노이</a>
-                                    <a href="#">판티엣</a>
-                                    <a href="#">쿠알라룸푸르</a>
-                                    <a href="#">달랏</a>
-                                    <a href="#">다낭</a>
-                                    <a href="#">보라카이</a>
-                                    <a href="#">호놀룰루(HI)</a>
-                                </div>
-                                <div class="right">
-                                    <a href="#">파타야</a>
-                                    <a href="#">사이판</a>
-                                    <a href="#">로마</a>
-                                    <a href="#">꼬사무이 / 코사무이</a>
-                                    <a href="#">부다페스트</a>
-                                    <a href="#">싱가포르</a>
-                                    <a href="#">타이페이</a>
-                                    <a href="#">마카오</a>
-                                    <a href="#">푸켓</a>
-                                    <a href="#">끄라비 / 크라비</a>
-                                    <a href="#">방콕</a>
-                                    <a href="#">호치민</a>
-                                    <a href="#">발리</a>
-                                    <a href="#">치앙마이</a>
-                                    <a href="#">멜버른 / 멜번</a>
-                                    <a href="#">방콕</a>
-                                    <a href="#">시드니</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="europe_us">
-                            <h3>유럽·미국 추천 여행지</h3>
-                            <div class="europe_us_detail">
-                                <a href="#">파리</a>
-                                <a href="#">런던</a>
-                                <a href="#">인터라켄</a>
-                                <a href="#">뉴욕(NY)</a>
-                                <a href="#">로마</a>
-                                <a href="#">바르셀로나</a>
-                                <a href="#">로스엔젤레스(CA)</a>
-                                <a href="#">라스베이거느 / 라스베가스(NV)</a>
-                                <a href="#">그린델발트</a>
-                                <a href="#">프라하</a>
-                                <a href="#">비엔나 / 빈</a>
-                                <a href="#">피렌체 / 플로렌스</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popular_search">
-                    <div class="search_container">
-                        <div class="search_name">
-                            <a href="search.html">강릉</a>
-                            <div class="search_list">
-                                <a href="search.html">강릉</a>
-                                <a href="search.html">경주</a>
-                                <a href="search.html">여수</a>
-                                <a href="search.html">속초</a>
-                                <a href="search.html">부산</a>
-                                <a href="search.html">제주도</a>
-                                <a href="search.html">전주</a>
-                                <a href="search.html">서울</a>
-                                <a href="search.html">포항</a>
-                                <a href="search.html">군산</a>
-                            </div>
-                        </div>
-                        <div class="down">
-                            <i class="fa-solid fa-angle-down"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- 로그인 안했을시 -->
-                <div class="mypage_warp_nonmember">
-                    <div class="menu">
-                        <i class="fa-solid fa-bars"></i>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div class="mypage_detail">
-                        <a href="login.html">로그인/회원가입</a>
-                        <a href="non_member_reservation_check.html">비회원 예약조회</a>
-                        <a href="customer_service.html">고객센터</a>
-                    </div>
-                </div>
-                <!-- 로그인 했을시 -->
-                <div class="mypage_warp_member">
-                    <div class="menu">
-                        <i class="fa-solid fa-bars"></i>
-                        <img src="./images/icon/ico_21.png" alt="">
-                    </div>
-                    <div class="mypage_detail">
-                        <a href="#">내 정보</a>
-                        <a href="#">예약내역</a>
-                        <a href="#">고객센터</a>
-                        <button type="button" class="logout">로그아웃</button>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- 모바일 nav -->
-        <div class="nav_wrap_m">
-            <div class="nva_bg_m">
-                <!-- 로그인 안했을시 -->
-                <nav class="nav_m">
-                    <div class="top">
-                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                    <div class="mypage_warp_nonmember_m">
-                        <a href="./login.html"><img src="./images/sprite/side_sprite1x.png" alt=""></a>
-                        <div class="join_login">
-                            <a href="./login.html">
-                                <span>회원가입 / 로그인</span>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                            <p>여기어때 회원가입하고 엘리트 할인 혜택 받으세요!</p>
-                        </div>
-                        <div class="benefit_detail_m">
-                            <a href="./login.html">포인트</a>
-                            <a href="./login.html">쿠폰</a>
-                        </div>
-                        <div class="nav_detail_m">
-                            <a href="./non_member_reservation_check.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>비회원 예약조회</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="./event.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>이벤트</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="./customer_service.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>고객센터</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-                <!-- 로그인 했을시 -->
-                <nav class="nav_m">
-                    <div class="top">
-                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                    <div class="mypage_box_m">
-                        <a href="./user_info.html"><img src="./images/icon/ico_21.png" alt=""></a>
-                        <div class="mypage_detail_m">
-                            <a href="./user_info.html">
-                                <span>닉네임</span>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                            <p>5번 더 예약하면 엘리트로 등급업!</p>
-                        </div>
-                        <div class="benefit_detail_m">
-                            <a href="#">포인트</a>
-                            <a href="#">쿠폰</a>
-                        </div>
-                        <div class="nav_detail_m">
-                            <a href="#">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>예약내역</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="./event.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>이벤트</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="./customer_service.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>고객센터</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>설정</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>로그아웃</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- 고정버튼 -->
-        <div class="fixed_btn">
-            <div class="top_btn_container">
-                <button type="button" id="top_btn">
-                    <i class="fa-solid fa-angle-up"></i>
-                    <span>TOP</span>
-                </button>
-            </div>
-            <div class="customer_container">
-                <button type="button" id="customer_btn">
-                    <i class="fa-solid fa-headset"></i>
-                    <span>상담</span>
-                </button>
-            </div>
-        </div>
-    </header>
     <!-- 메인 -->
     <main>
         <!-- 메인화면 -->
@@ -288,337 +24,345 @@
                     <form action="#" method="get" id="search_frm">
                         <fieldset>
                             <legend class="skip">숙소검색창</legend>
-                            <!-- 제목 탭 구성 -->
-                            <div class="search_tap">
-                                <h2><button type="button" id="kr_room">국내 숙소</button></h2>
-                                <h2><button type="button" id="over_room">해외 숙소</button></h2>
-                            </div>
-                            <!-- 내용 탭 구성 -->
-                            <div class="user_search_box">
-                                <div class="user_search_detail">
-                                    <div class="user_search">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                        <input type="text" name="search_input" id="search_input" placeholder="여행지나 숙소를 검색해보세요" maxlength="50">
-                                    </div>
-                                    <!-- 검색창 누르면 뜨는 아래 창 -->
-                                    <div class="search_ranking">
-                                        <h3>여기어때 검색 순위</h3>
-                                        <ol>
-                                            <li><em>1</em><span>경주</span></li>
-                                            <li><em>2</em><span>강릉</span></li>
-                                            <li><em>3</em><span>속초</span></li>
-                                            <li><em>4</em><span>여수</span></li>
-                                            <li><em>5</em><span>부산</span></li>
-                                            <li><em>6</em><span>전주</span></li>
-                                            <li><em>7</em><span>춘천</span></li>
-                                            <li><em>8</em><span>제주도</span></li>
-                                            <li><em>9</em><span>포항</span></li>
-                                            <li><em>10</em><span>대전</span></li>
-                                        </ol>
-                                    </div>
-                                    <!-- 검색을 하기 시작하면 바뀌게 -->
-                                    <div class="user_search_service"></div>
+                            <div class="search_big">
+                                <!-- 제목 탭 구성 -->
+                                <div class="search_tap">
+                                    <h2><button type="button" id="kr_room">국내 숙소</button></h2>
+                                    <h2><button type="button" id="over_room">해외 숙소</button></h2>
                                 </div>
-                                <div class="calendar_detail">
-                                    <div class="calendar_date">
-                                        <i class="fa-regular fa-calendar"></i>
-                                        <span>03.12 화 - 03.13 수 (1박)</span>
+                                <!-- 내용 탭 구성 -->
+                                <div class="user_search_box">
+                                    <div class="user_search_detail">
+                                        <div class="user_search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <input type="text" name="search_input" id="search_input" placeholder="여행지나 숙소를 검색해보세요" maxlength="50">
+                                        </div>
+                                        <!-- 검색창 누르면 뜨는 아래 창 -->
+                                        <div class="search_ranking">
+                                            <h3>여기어때 검색 순위</h3>
+                                            <ol>
+                                                <li><em>1</em><span>경주</span></li>
+                                                <li><em>2</em><span>강릉</span></li>
+                                                <li><em>3</em><span>속초</span></li>
+                                                <li><em>4</em><span>여수</span></li>
+                                                <li><em>5</em><span>부산</span></li>
+                                                <li><em>6</em><span>전주</span></li>
+                                                <li><em>7</em><span>춘천</span></li>
+                                                <li><em>8</em><span>제주도</span></li>
+                                                <li><em>9</em><span>포항</span></li>
+                                                <li><em>10</em><span>대전</span></li>
+                                            </ol>
+                                        </div>
+                                        <!-- 검색을 하기 시작하면 바뀌게 -->
+                                        <div class="user_search_service"></div>
                                     </div>
-                                    <div class="date_select_box">
-                                        <div class="date_select_detail">
-                                            <div class="box_btn">
-                                                <button type="button"><i class="fa-solid fa-angle-left"></i></button>
-                                                <button type="button"><i class="fa-solid fa-angle-right"></i></button>
-                                            </div>
-                                            <div class="date_top">
-                                                <div class="date">
-                                                    <h3>2024년 3월</h3>
-                                                    <table class="3month">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col">일</th>
-                                                                <th scope="col">월</th>
-                                                                <th scope="col">화</th>
-                                                                <th scope="col">수</th>
-                                                                <th scope="col">목</th>
-                                                                <th scope="col">금</th>
-                                                                <th scope="col">토</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="redday"></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td class="redday">1</td>
-                                                                <td>2</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">3</td>
-                                                                <td>4</td>
-                                                                <td>5</td>
-                                                                <td>6</td>
-                                                                <td>7</td>
-                                                                <td>8</td>
-                                                                <td>9</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">10</td>
-                                                                <td>11</td>
-                                                                <td class="start_active">12</td>
-                                                                <td class="end_active">13</td>
-                                                                <td>14</td>
-                                                                <td>15</td>
-                                                                <td>16</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">17</td>
-                                                                <td>18</td>
-                                                                <td>19</td>
-                                                                <td>20</td>
-                                                                <td>21</td>
-                                                                <td>22</td>
-                                                                <td>23</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">24</td>
-                                                                <td>25</td>
-                                                                <td>26</td>
-                                                                <td>27</td>
-                                                                <td>28</td>
-                                                                <td>29</td>
-                                                                <td>30</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">31</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div class="date">
-                                                    <h3>2024년 4월</h3>
-                                                    <table class="4month">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col">일</th>
-                                                                <th scope="col">월</th>
-                                                                <th scope="col">화</th>
-                                                                <th scope="col">수</th>
-                                                                <th scope="col">목</th>
-                                                                <th scope="col">금</th>
-                                                                <th scope="col">토</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="redday"></td>
-                                                                <td>1</td>
-                                                                <td>2</td>
-                                                                <td>3</td>
-                                                                <td>4</td>
-                                                                <td>5</td>
-                                                                <td>6</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">7</td>
-                                                                <td>8</td>
-                                                                <td>9</td>
-                                                                <td class="redday">10</td>
-                                                                <td>11</td>
-                                                                <td>12</td>
-                                                                <td>13</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">14</td>
-                                                                <td>15</td>
-                                                                <td>16</td>
-                                                                <td>17</td>
-                                                                <td>18</td>
-                                                                <td>19</td>
-                                                                <td>20</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">21</td>
-                                                                <td>22</td>
-                                                                <td>23</td>
-                                                                <td>24</td>
-                                                                <td>25</td>
-                                                                <td>26</td>
-                                                                <td>27</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">28</td>
-                                                                <td>29</td>
-                                                                <td>30</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div class="date">
-                                                    <h3>2024년 5월</h3>
-                                                    <table class="5month">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col">일</th>
-                                                                <th scope="col">월</th>
-                                                                <th scope="col">화</th>
-                                                                <th scope="col">수</th>
-                                                                <th scope="col">목</th>
-                                                                <th scope="col">금</th>
-                                                                <th scope="col">토</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="redday"></td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>1</td>
-                                                                <td>2</td>
-                                                                <td>3</td>
-                                                                <td>4</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">5</td>
-                                                                <td class="redday">6</td>
-                                                                <td>7</td>
-                                                                <td>8</td>
-                                                                <td>9</td>
-                                                                <td>10</td>
-                                                                <td>11</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">12</td>
-                                                                <td>13</td>
-                                                                <td>14</td>
-                                                                <td class="redday">15</td>
-                                                                <td>16</td>
-                                                                <td>17</td>
-                                                                <td>18</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">19</td>
-                                                                <td>20</td>
-                                                                <td>21</td>
-                                                                <td>22</td>
-                                                                <td>23</td>
-                                                                <td>24</td>
-                                                                <td>25</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="redday">26</td>
-                                                                <td>27</td>
-                                                                <td>28</td>
-                                                                <td>29</td>
-                                                                <td>30</td>
-                                                                <td>31</td>
-                                                                <td></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
+                                    <div class="calendar_detail">
+                                        <div class="calendar_date">
+                                            <i class="fa-regular fa-calendar"></i>
+                                            <span>03.12 화 - 03.13 수 <span class="total_night">(1박)</span></span>
                                         </div>
-                                        <div class="date_bottom">
-                                            <div class="date_reset">
-                                                <i class="fa-solid fa-rotate-right"></i>
-                                                <span>일정 초기화</span>
-                                            </div>
-                                            <div class="user_select">
-                                                <span class="date_select_firstday">03.12 화</span>
-                                                <span class="date_select_lastday">- 03.13 수</span>
-                                                <span class="total_night">(1박)</span>
+                                        <div class="date_select_box">
+                                            <div class="date_select_detail">
+                                                <div class="box_btn">
+                                                    <button type="button"><i class="fa-solid fa-angle-left"></i></button>
+                                                    <button type="button"><i class="fa-solid fa-angle-right"></i></button>
+                                                </div>
+                                                <div class="date_top">
+                                                    <div class="date">
+                                                        <h3>2024년 3월</h3>
+                                                        <table class="3month">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">일</th>
+                                                                    <th scope="col">월</th>
+                                                                    <th scope="col">화</th>
+                                                                    <th scope="col">수</th>
+                                                                    <th scope="col">목</th>
+                                                                    <th scope="col">금</th>
+                                                                    <th scope="col">토</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="redday"></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td class="redday">1</td>
+                                                                    <td>2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">3</td>
+                                                                    <td>4</td>
+                                                                    <td>5</td>
+                                                                    <td>6</td>
+                                                                    <td>7</td>
+                                                                    <td>8</td>
+                                                                    <td>9</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">10</td>
+                                                                    <td>11</td>
+                                                                    <td class="start_active">12</td>
+                                                                    <td class="end_active">13</td>
+                                                                    <td>14</td>
+                                                                    <td>15</td>
+                                                                    <td>16</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">17</td>
+                                                                    <td>18</td>
+                                                                    <td>19</td>
+                                                                    <td>20</td>
+                                                                    <td>21</td>
+                                                                    <td>22</td>
+                                                                    <td>23</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">24</td>
+                                                                    <td>25</td>
+                                                                    <td>26</td>
+                                                                    <td>27</td>
+                                                                    <td>28</td>
+                                                                    <td>29</td>
+                                                                    <td>30</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">31</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="date">
+                                                        <h3>2024년 4월</h3>
+                                                        <table class="4month">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">일</th>
+                                                                    <th scope="col">월</th>
+                                                                    <th scope="col">화</th>
+                                                                    <th scope="col">수</th>
+                                                                    <th scope="col">목</th>
+                                                                    <th scope="col">금</th>
+                                                                    <th scope="col">토</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="redday"></td>
+                                                                    <td>1</td>
+                                                                    <td>2</td>
+                                                                    <td>3</td>
+                                                                    <td>4</td>
+                                                                    <td>5</td>
+                                                                    <td>6</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">7</td>
+                                                                    <td>8</td>
+                                                                    <td>9</td>
+                                                                    <td class="redday">10</td>
+                                                                    <td>11</td>
+                                                                    <td>12</td>
+                                                                    <td>13</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">14</td>
+                                                                    <td>15</td>
+                                                                    <td>16</td>
+                                                                    <td>17</td>
+                                                                    <td>18</td>
+                                                                    <td>19</td>
+                                                                    <td>20</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">21</td>
+                                                                    <td>22</td>
+                                                                    <td>23</td>
+                                                                    <td>24</td>
+                                                                    <td>25</td>
+                                                                    <td>26</td>
+                                                                    <td>27</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">28</td>
+                                                                    <td>29</td>
+                                                                    <td>30</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="date">
+                                                        <h3>2024년 5월</h3>
+                                                        <table class="5month">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">일</th>
+                                                                    <th scope="col">월</th>
+                                                                    <th scope="col">화</th>
+                                                                    <th scope="col">수</th>
+                                                                    <th scope="col">목</th>
+                                                                    <th scope="col">금</th>
+                                                                    <th scope="col">토</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="redday"></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td>1</td>
+                                                                    <td>2</td>
+                                                                    <td>3</td>
+                                                                    <td>4</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">5</td>
+                                                                    <td class="redday">6</td>
+                                                                    <td>7</td>
+                                                                    <td>8</td>
+                                                                    <td>9</td>
+                                                                    <td>10</td>
+                                                                    <td>11</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">12</td>
+                                                                    <td>13</td>
+                                                                    <td>14</td>
+                                                                    <td class="redday">15</td>
+                                                                    <td>16</td>
+                                                                    <td>17</td>
+                                                                    <td>18</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">19</td>
+                                                                    <td>20</td>
+                                                                    <td>21</td>
+                                                                    <td>22</td>
+                                                                    <td>23</td>
+                                                                    <td>24</td>
+                                                                    <td>25</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="redday">26</td>
+                                                                    <td>27</td>
+                                                                    <td>28</td>
+                                                                    <td>29</td>
+                                                                    <td>30</td>
+                                                                    <td>31</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="date_bottom">
+                                                    <div class="date_reset">
+                                                        <i class="fa-solid fa-rotate-right"></i>
+                                                        <span>일정 초기화</span>
+                                                    </div>
+                                                    <div class="user_select">
+                                                        <span class="date_select_firstday">03.12 화</span>
+                                                        <span class="date_select_lastday">- 03.13 수</span>
+                                                        <span class="total_night">(1박)</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="num_detail">
-                                    <div class="num_view">
-                                        <button type="button" id="num_select">
-                                            <i class="fa-solid fa-user-large"></i>
-                                            <span>객실 <span class="room_num">1</span></span>
-                                            <span>, 성인 <span class="adult_num">1</span></span>
-                                            <span>, 아동 <span class="children_num">0</span></span>
-                                        </button>
-                                    </div>
-                                    <div class="user_select">
-                                        <div class="user_room">
-                                            <h3>객실</h3>
-                                            <div class="user_room_select">
-                                                <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
-                                                <span class="user_room_num">1</span>
-                                                <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="user_adult_left">
-                                            <div class="user_adult">
-                                                <h3>성인</h3>
-                                                <p>객실마다 1명 이상 필수 선택</p>
-                                            </div>
-                                            <div class="user_adult_select">
-                                                <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
-                                                <span class="user_adult_num">2</span>
-                                                <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="user_children_left">
-                                            <div class="user_children">
-                                                <h3>아동</h3>
-                                                <p>만 0세 ~ 17세</p>
-                                            </div>
-                                            <div class="user_children_select">
-                                                <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
-                                                <span class="user_children_num">0</span>
-                                                <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
-                                            </div>
-                                        </div>
-                                        <!-- 아동 선택하면 나옴 -->
-                                        <div class="children_notice">
-                                            <ul>
-                                                <li>숙소별로 아동으로 간주하는 나이가 다르므로 체크인 일자 기준의 정확한 만나이를 입력해주세요.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="children_age">
-                                            <span class="user_children_num">아동1</span>
-                                            <button type="button" class="user_children_age">
-                                                <span>만 12세</span>
-                                                <i class="fa-solid fa-angle-down"></i>
-                                                <div class="children_age_select">
-                                                    <span>만 3세 미만</span>
-                                                    <span>만 3세</span>
-                                                    <span>만 4세</span>
-                                                    <span>만 5세</span>
-                                                    <span>만 6세</span>
-                                                    <span>만 7세</span>
-                                                    <span>만 8세</span>
-                                                    <span>만 9세</span>
-                                                    <span>만 10세</span>
-                                                    <span>만 11세</span>
-                                                    <span>만 12세</span>
-                                                    <span>만 13세</span>
-                                                    <span>만 14세</span>
-                                                    <span>만 15세</span>
-                                                    <span>만 16세</span>
-                                                    <span>만 17세</span>
-                                                </div>
+                                    <div class="num_detail">
+                                        <div class="num_view">
+                                            <button type="button" id="num_select">
+                                                <i class="fa-solid fa-user-large"></i>
+                                                <span>객실 <span class="room_num">1</span></span>
+                                                <span>, 성인 <span class="adult_num">1</span></span>
+                                                <span>, 아동 <span class="children_num">0</span></span>
                                             </button>
                                         </div>
+                                        <div class="user_select">
+                                            <div class="user_room">
+                                                <h3>객실</h3>
+                                                <div class="user_room_select">
+                                                    <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
+                                                    <span class="user_room_num">1</span>
+                                                    <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="user_adult_left">
+                                                <div class="user_adult">
+                                                    <h3>성인</h3>
+                                                    <p>객실마다 1명 이상 필수 선택</p>
+                                                </div>
+                                                <div class="user_adult_select">
+                                                    <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
+                                                    <span class="user_adult_num">2</span>
+                                                    <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="user_children_left">
+                                                <div class="user_children">
+                                                    <h3>아동</h3>
+                                                    <p>만 0세 ~ 17세</p>
+                                                </div>
+                                                <div class="user_children_select">
+                                                    <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
+                                                    <span class="user_children_num">0</span>
+                                                    <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
+                                                </div>
+                                            </div>
+                                            <!-- 아동 선택하면 나옴 -->
+                                            <div class="children_notice">
+                                                <ul>
+                                                    <li>숙소별로 아동으로 간주하는 나이가 다르므로 체크인 일자 기준의 정확한 만나이를 입력해주세요.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="children_age">
+                                                <span class="user_children_num">아동1</span>
+                                                <button type="button" class="user_children_age">
+                                                    <span>만 12세</span>
+                                                    <i class="fa-solid fa-angle-down"></i>
+                                                    <div class="children_age_select">
+                                                        <span>만 3세 미만</span>
+                                                        <span>만 3세</span>
+                                                        <span>만 4세</span>
+                                                        <span>만 5세</span>
+                                                        <span>만 6세</span>
+                                                        <span>만 7세</span>
+                                                        <span>만 8세</span>
+                                                        <span>만 9세</span>
+                                                        <span>만 10세</span>
+                                                        <span>만 11세</span>
+                                                        <span>만 12세</span>
+                                                        <span>만 13세</span>
+                                                        <span>만 14세</span>
+                                                        <span>만 15세</span>
+                                                        <span>만 16세</span>
+                                                        <span>만 17세</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search_btn">
+                                        <a href="search.html" id="search_btn">검색</a>
                                     </div>
                                 </div>
-                                <div class="search_btn">
-                                    <a href="search.html" id="search_btn">검색</a>
+                            </div>
+                            <div class="search_small">
+                                <div class="user_search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input type="text" name="search_input" id="search_input_m" placeholder="여행지나 숙소를 검색해보세요" maxlength="50">
                                 </div>
                             </div>
                         </fieldset>
@@ -977,70 +721,6 @@
         </section>
     </main>
     <!-- 푸터 -->
-    <footer>
-        <div class="footer_wrap">
-            <div class="footer_wrap_top">
-                <div class="wrap_top_left">
-                    <p>고객센터</p>
-                    <p>오전 9시 - 새벽 3시 운영</p>
-                    <a href="./customer_service.html" class="call">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>1670-6250</span>
-                    </a>
-                </div>
-                <div class="wrap_top_right">
-                    <dl class="company">
-                        <dt>회사</dt>
-                        <dd><a href="https://gccompany.co.kr/">회사소개</a></dd>
-                    </dl>
-                    <dl class="service">
-                        <dt>서비스</dt>
-                        <dd>
-                            <a href="./notice.html">공지사항</a>
-                            <a href="./notice.html">자주 묻는 질문</a>
-                            <a href="./service_inquiry.html">기업 출장/복지 서비스 문의</a>
-                        </dd>
-                    </dl>
-                    <dl class="benefit">
-                        <dt>혜택</dt>
-                        <dd>
-                            <a href="./footer_event.html">트립홀릭 혜택 안내</a>
-                            <a href="./footer_event.html">엘리트 혜택 안내</a>
-                            <a href="./footer_event.html">비즈니스 회원 혜택 안내</a>
-                            <a href="https://q.egiftcard.kr/couponstatus/auth">여기어때 상품권 조회</a>
-                        </dd>
-                    </dl>
-                </div>
-            </div>
-            <div class="footer_wrap_bottom">
-                <div class="company_box">
-                    <div class="company_info">
-                        <address>
-                            (주)여기어때컴퍼니<br>
-                            주소 : 서울특별시 강남구 봉은사로 479, 479타워 11층 | 대표이사 : 정명훈 | 사업자등록번호 : 742-86-00224사업자정보확인<br>
-                            전자우편주소 : help@goodchoice.kr | 통신판매번호 : 2017-서울강남-01779 | 관광사업자 등록번호 : 제1026-24호 | 전화번호 : 1670-6250 | 호스팅서비스제공자의 상호 표시 : (주)여기어때컴퍼니<br>
-                            (주)여기어때컴퍼니는 통신판매중개자로서 통신판매의 당사자가 아니며, 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.<br>
-                        </address>
-                    </div>
-                    <div class="companyagree_sns">
-                        <div class="agree">
-                            <a href="raw.html">이용약관</a>
-                            <a href="raw.html"><em>개인정보처리방침</em></a>
-                            <a href="raw.html">소비자 분쟁해결 기준</a>
-                            <a href="raw.html">콘텐츠산업진흥법에 의한 표시</a>
-                        </div>
-                        <div class="sns">
-                            <a href="https://www.facebook.com/goodchoiceofficial"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/goodchoice_official/"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="capyright">
-                    <p>Copyright GC COMPANY Corp. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
     <script>
         let slide = new Swiper('.swiper-container',{

@@ -1,42 +1,48 @@
 main {
   max-width: 1400px;
+  margin: 0 auto;
 }
 main section {
-  width: 400px;
+  width: 30%;
   margin: 0 auto;
   padding-top: 16px;
 }
 main section #agree_frm fieldset h1 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-family: PretendardBold;
   line-height: 29px;
   margin-bottom: 20px;
 }
 main section #agree_frm fieldset .agree h2 {
-  font-size: 1.125rem;
-  font-weight: 600;
   background-color: #f5f5f5;
-  padding: 15px 20px;
+  padding: 10px;
   border-radius: 10px;
   margin-bottom: 15px;
 }
-main section #agree_frm fieldset .agree h2 #all {
-  margin-right: 10px;
+main section #agree_frm fieldset .agree h2 .checkbox-wrapper-4 label .agree_title {
+  font-size: 1.125rem;
+  font-weight: 600;
 }
-main section #agree_frm fieldset .agree h2 span {
+main section #agree_frm fieldset .agree h2 .checkbox-wrapper-4 label .agree_title em {
   font-size: 0.813rem;
   color: #999;
   margin-left: 5px;
 }
 main section #agree_frm fieldset .agree .detail {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 main section #agree_frm fieldset .agree .detail li {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 7px 0;
+}
+main section #agree_frm fieldset .agree .detail li .checkbox-wrapper-4 label {
+  margin-right: 10px;
+}
+main section #agree_frm fieldset .agree .detail li .checkbox-wrapper-4 label .agree_txt {
+  font-size: 0.875rem;
 }
 main section #agree_frm fieldset .agree .detail li label {
   font-size: 0.875rem;

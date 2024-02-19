@@ -2,12 +2,15 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>숙소 검색 결과 - 여행할 때 여기어때</title> <!-- js: 숙소 앞에 검색한 지역명 들어감 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>숙소 검색 결과 - 여행할 때 여기어때</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/search.css">
+    <link rel="stylesheet" href="./styles/responsible_search.css">
     <link rel="stylesheet" href="./styles/checkbox.css">
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=r85p85z8hp"></script>
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
@@ -60,7 +63,7 @@
                             <legend class="skip">숙소 검색 필터</legend>
                             <div class="top">
                                 <div class="map_container">
-                                    <div class="prev"><a href="#" id="open_map_btn">지도 보기</a></div>
+                                    <div class="prev"><img src="./images/search/thumbnail_map.74bb1588.png" alt=""><a href="#" id="open_map_btn">지도 보기</a></div>
                                     <div class="open_wrap">
                                         <div class="open">
                                             <div class="title">
@@ -374,7 +377,7 @@
                             </swiper-slide>
                             <template id="room_template">
                                 <a href="./detail.html" class="room">
-                                    <div class="photo"><img src="" alt=""></div>
+                                    <div class="photo"><img src="./images/search/accommodation1.jpeg" alt=""></div>
                                     <div class="contents">
                                         <div class="title_wrap">
                                             <p class="type">숙소타입</p>

@@ -1,1 +1,44 @@
-/*# sourceMappingURL=join_complete.css.map */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main section {
+  width: 30%;
+  margin: 200px auto 0;
+  text-align: center;
+}
+main section .photo {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+  background-color: #007aff;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+main section .photo i[class$=check] {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 57px;
+}
+main section h1 {
+  font-size: 1.25rem;
+  font-family: PretendardBold;
+  color: #000;
+  margin-bottom: 20px;
+}
+main section p {
+  line-height: 24px;
+  color: #c2c2c2;
+  margin-bottom: 20px;
+}
+main section a {
+  display: block;
+  width: 148px;
+  height: 48px;
+  background-color: #1273e4;
+  margin: 0 auto;
+  line-height: 48px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: PretendardBold;
+}/*# sourceMappingURL=join_complete.css.map */

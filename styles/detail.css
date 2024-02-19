@@ -168,6 +168,7 @@ main section .room .box2 .contents .title_wrap .review_wrap .all_review {
   color: #1273e4;
 }
 main section .room .box2 .contents .review_box {
+  padding-bottom: 30px;
   border-bottom: 1px solid #ebebeb;
 }
 main section .room .box2 .contents .review_box .thum_review {
@@ -419,7 +420,7 @@ main section .room .box2 .contents .room_type .box3 .item .item_type .item_info 
   border-radius: 8px;
 }
 main section .room .box2 .contents .room_type .box3 .item .item_type .item_info span {
-  font-size: 0.625rem;
+  font-size: 0.813rem;
   color: #707070;
 }
 main section .room .box2 .contents .room_type .box3 .is_soldout {
@@ -730,6 +731,13 @@ main section .room .location_box p {
 main section .room .real_review {
   padding: 30px 0;
 }
+main section .room .real_review .title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  padding: 10px 0;
+}
 main section .room .real_review .title p {
   font-size: 1.125rem;
   font-weight: 600;
@@ -738,4 +746,208 @@ main section .room .real_review .title p {
 main section .room .real_review .title p i {
   font-size: 1.125rem;
   color: rgb(255, 173, 10);
+}
+main section .room .real_review .title p em {
+  padding-left: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c2c2c2;
+}
+main section .room .real_review .title .filter {
+  display: none;
+}
+main section .room .real_review .title .filter .now i {
+  font-size: 0.875rem;
+  color: #333;
+}
+main section .room .real_review .title .filter .now span {
+  font-size: 0.875rem;
+  color: #333;
+  padding-left: 5px;
+}
+main section .room .real_review .title .filter .open {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  background-color: #ffffff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+main section .room .real_review .title .filter .open .active {
+  font-size: 0.875rem;
+}
+main section .room .real_review .title .filter .open .active span {
+  color: #1273e4;
+}
+main section .room .real_review .title .filter .open .active i {
+  color: #1273e4;
+}
+main section .room .real_review .title .filter .open button {
+  width: 150px;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main section .room .real_review .title .filter .open button span {
+  font-size: 0.875rem;
+  color: #333;
+}
+main section .room .real_review .title .filter .open button i {
+  color: #333;
+}
+main section .room .real_review .review_user {
+  padding: 30px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+main section .room .real_review .review_user .user_info {
+  display: flex;
+  flex-flow: row nowrap;
+}
+main section .room .real_review .review_user .user_info p img {
+  width: 36px;
+}
+main section .room .real_review .review_user .user_info .user {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-left: 5px;
+}
+main section .room .real_review .review_user .user_info .user .best {
+  font-size: 0.813rem;
+  color: #49627A;
+  background: #f5f7fa;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+main section .room .real_review .review_user .user_info .user .user_name {
+  font-size: 0.813rem;
+  color: #333;
+}
+main section .room .real_review .review_user .photo_review {
+  padding-left: 50px;
+}
+main section .room .real_review .review_user .photo_review .score i {
+  font-size: 0.938rem;
+  color: rgb(255, 173, 10);
+}
+main section .room .real_review .review_user .photo_review .score em {
+  font-size: 0.938rem;
+  color: #333;
+  padding-left: 5px;
+}
+main section .room .real_review .review_user .photo_review .thumnail #thum_photo .photo .swiper-slide img {
+  width: 210px;
+  height: 210px;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+main section .room .real_review .review_user .photo_review p {
+  font-size: 0.875rem;
+  color: #9aa9b8;
+  padding: 20px 0;
+}
+main section .room .real_review .review_user .photo_review .more_review span {
+  font-size: 0.938rem;
+  color: #333;
+  line-height: 1.5;
+}
+main section .room .real_review .review_user .photo_review .more_review p i {
+  font-size: 0.813rem;
+  color: #707070;
+}
+main section .room .real_review .review_user .photo_review .more_review p span {
+  font-size: 0.813rem;
+  color: #707070;
+}
+main section .room .real_review .pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0;
+}
+main section .room .real_review .pagination #prev {
+  font-size: 0.75rem;
+  color: rgb(51, 51, 51);
+  padding-right: 5px;
+}
+main section .room .real_review .pagination .num {
+  display: flex;
+}
+main section .room .real_review .pagination .num #number {
+  font-size: 0.75rem;
+  padding: 0 10px;
+}
+main section .room .real_review .pagination #next {
+  font-size: 0.75rem;
+  color: rgb(51, 51, 51);
+  padding-left: 5px;
+}
+main section .room .similar_item h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+}
+main section .room .similar_item h2 {
+  font-size: 1.125rem;
+  color: #333;
+}
+main section .room .similar_item .similar #room_type .room .photo img {
+  width: 300px;
+  border-radius: 10px;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .type {
+  font-size: 0.75rem;
+  color: #707070;
+  padding: 5px 0;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 5px;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .location {
+  font-size: 0.813rem;
+  color: #999;
+  padding-bottom: 10px;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .review .point_wrap {
+  background: #ffad0a;
+  padding: 5px 6px 4px 4px;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .review .point_wrap i {
+  font-size: 0.75rem;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .review .point_wrap span {
+  font-size: 0.75rem;
+  color: #333;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .review .comment {
+  font-size: 0.875rem;
+  color: #333;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .price_info .now {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .price_info .now span {
+  font-size: 0.938rem;
+  color: #333;
+}
+main section .room .similar_item .similar #room_type .room .contents .title_wrap .price_info .origin {
+  font-size: 0.875rem;
+  color: #707070;
+  text-decoration: line-through;
 }/*# sourceMappingURL=detail.css.map */

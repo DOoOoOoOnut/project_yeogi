@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입 - 여기어때</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/join_raw.css">
+    <link rel="stylesheet" href="./styles/checkbox.css">
 </head>
 <body>
     <main>
@@ -16,30 +19,137 @@
                     <legend class="skip">약관 동의</legend>
                     <h1>초면에 실례지만,<br>약관 동의가 필요해요.</h1>
                     <div class="agree">
-                        <h2><input type="checkbox" id="all">약관 전체동의<span>선택항목 포함</span></h2>
+                        <h2>
+                            <div class="checkbox-wrapper-4">
+                                <input class="inp-cbx chk" id="agree_all" type="checkbox"/>
+                                <label class="cbx" for="agree_all">
+                                    <span>
+                                        <svg width="12px" height="10px">
+                                            <use xlink:href="#check-4"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="agree_title">약관 전체동의<em>선택항목 포함</em></span>
+                                </label>
+                                <svg class="inline-svg">
+                                    <symbol id="check-4" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </symbol>
+                                </svg>
+                            </div>
+                        </h2>
                         <ul class="detail">
                             <li>
-                                <label><input type="checkbox" name="raw" class="raw">(필수) 이용약관</label>
+                                <div class="checkbox-wrapper-4">
+                                    <input class="inp-cbx chk" id="agree_raw" type="checkbox"/>
+                                    <label class="cbx" for="agree_raw">
+                                        <span>
+                                            <svg width="12px" height="10px">
+                                                <use xlink:href="#check-4"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="agree_txt">(필수) 이용약관</span>
+                                    </label>
+                                    <svg class="inline-svg">
+                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </symbol>
+                                    </svg>
+                                </div>
                                 <a href="./raw.html"><i class="fa-solid fa-chevron-right"></i></a>
                             </li>
                             <li>
-                                <label><input type="checkbox" name="raw" class="raw">(필수) 만 14세 이상 확인</label>
+                                <div class="checkbox-wrapper-4">
+                                    <input class="inp-cbx chk" id="agree_14" type="checkbox"/>
+                                    <label class="cbx" for="agree_14">
+                                        <span>
+                                            <svg width="12px" height="10px">
+                                                <use xlink:href="#check-4"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="agree_txt">(필수) 만 14세 이상 확인</span>
+                                    </label>
+                                    <svg class="inline-svg">
+                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </symbol>
+                                    </svg>
+                                </div>
                                 <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
                             </li>
                             <li>
-                                <label><input type="checkbox" name="raw" class="raw">(필수) 개인정보 수집 및 이용 동의</label>
+                                <div class="checkbox-wrapper-4">
+                                    <input class="inp-cbx chk" id="agree_personal_required" type="checkbox"/>
+                                    <label class="cbx" for="agree_personal_required">
+                                        <span>
+                                            <svg width="12px" height="10px">
+                                                <use xlink:href="#check-4"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="agree_txt">(필수) 개인정보 수집 및 이용 동의</span>
+                                    </label>
+                                    <svg class="inline-svg">
+                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </symbol>
+                                    </svg>
+                                </div>
                                 <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
                             </li>
                             <li>
-                                <label><input type="checkbox" name="raw" class="raw">(선택) 개인정보 수집 및 이용 동의</label>
+                                <div class="checkbox-wrapper-4">
+                                    <input class="inp-cbx chk" id="agree_personal_choice" type="checkbox"/>
+                                    <label class="cbx" for="agree_personal_choice">
+                                        <span>
+                                            <svg width="12px" height="10px">
+                                                <use xlink:href="#check-4"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="agree_txt">(선택) 개인정보 수집 및 이용 동의</span>
+                                    </label>
+                                    <svg class="inline-svg">
+                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </symbol>
+                                    </svg>
+                                </div>
                                 <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
                             </li>
                             <li>
-                                <label><input type="checkbox" name="raw" class="raw">(선택) 마케팅 알림 수신 동의</label>
+                                <div class="checkbox-wrapper-4">
+                                    <input class="inp-cbx chk" id="agree_marcketing" type="checkbox"/>
+                                    <label class="cbx" for="agree_marcketing">
+                                        <span>
+                                            <svg width="12px" height="10px">
+                                                <use xlink:href="#check-4"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="agree_txt">(선택) 마케팅 알림 수신 동의</span>
+                                    </label>
+                                    <svg class="inline-svg">
+                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </symbol>
+                                    </svg>
+                                </div>
                                 <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
                             </li>
                             <li>
-                                <label><input type="checkbox" name="raw" class="raw">(선택) 위치기반 서비스 이용약관 동의</label>
+                                <div class="checkbox-wrapper-4">
+                                    <input class="inp-cbx chk" id="agree_location" type="checkbox"/>
+                                    <label class="cbx" for="agree_location">
+                                        <span>
+                                            <svg width="12px" height="10px">
+                                                <use xlink:href="#check-4"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="agree_txt">(선택) 위치기반 서비스 이용약관 동의</span>
+                                    </label>
+                                    <svg class="inline-svg">
+                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </symbol>
+                                    </svg>
+                                </div>
                                 <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
                             </li>
                         </ul>

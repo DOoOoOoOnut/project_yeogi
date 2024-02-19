@@ -48,6 +48,7 @@ function btnHandler(){
         newRoom.querySelector('.more').innerText = e.location
         newRoom.querySelector('.point_wrap').innerText = e.rate
         newRoom.querySelector('.review_count').innerText = e.review_count
+        newRoom.querySelector('.photo img').src = `./images/search/${e.img}.jpeg`
         // newRoom.querySelector('.price_view').innerText = e.price
         if(e.is_discount){
             
