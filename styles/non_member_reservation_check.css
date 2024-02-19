@@ -1,4 +1,5 @@
 .address_copy {
+  display: none !important;
   width: 250px;
   display: flex;
   flex-flow: column nowrap;
@@ -22,6 +23,7 @@
 }
 
 .reservation_num_copy {
+  display: none !important;
   width: 300px;
   display: flex;
   flex-flow: column nowrap;
@@ -44,6 +46,9 @@
   color: #fff;
 }
 
+.purchase_information {
+  display: none;
+}
 .purchase_information .bg {
   width: 100%;
   height: 100%;
@@ -53,6 +58,7 @@
   position: fixed;
 }
 .purchase_information .bg .information_container {
+  margin-top: 100px;
   width: 600px;
   max-height: 800px;
   padding: 16px;
@@ -138,15 +144,16 @@
   position: fixed;
 }
 .proof_payment .bg .proof {
+  display: none;
   width: 350px;
-  height: 305px;
+  height: 330px;
   background: #fff;
   padding: 15px;
   border-radius: 10px;
   background: #fff;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translateX(-50%);
 }
 .proof_payment .bg .proof .title h2 {
@@ -165,7 +172,7 @@
   background: #1273e4;
   padding: 15px 20px;
   display: block;
-  margin: 15px 0;
+  margin: 20px 0;
   border-radius: 6px;
   text-align: center;
 }
@@ -177,6 +184,7 @@
   background: #fff;
 }
 .proof_payment .bg .transaction_detail {
+  display: none;
   width: 350px;
   height: 270px;
   background: #fff;
@@ -270,7 +278,7 @@
 }
 .room_policy .bg .policy .policy_container {
   overflow-y: auto;
-  padding: 0 20px;
+  padding: 0 10px;
   max-height: 740px;
 }
 .room_policy .bg .policy .policy_container .info p {
@@ -290,7 +298,7 @@
   padding-left: 10px;
 }
 .room_policy .bg .policy .policy_container dl {
-  padding: 31px 24px 29px;
+  padding: 31px 10px 20px;
 }
 .room_policy .bg .policy .policy_container dl dt {
   font-size: 0.938rem;
@@ -353,7 +361,6 @@
   width: 100%;
   background: #f45858;
   padding: 10px 20px;
-  border-radius: 10px;
   margin-bottom: 20px;
 }
 .reservation_check_cancel .bg .check_cancel .wrap .cancel_info p i {
@@ -449,6 +456,7 @@
 .reservation_check_cancel .bg .check_cancel .wrap .refund_info {
   background: #f45858;
   padding: 12px 24px;
+  border-radius: 10px;
 }
 .reservation_check_cancel .bg .check_cancel .wrap .refund_info h3 {
   font-size: 1rem;
@@ -528,7 +536,7 @@
   font-weight: 600;
   color: #333;
   background: #ebebeb;
-  padding: 15px 100px;
+  padding: 15px 110px;
   border-radius: 10px;
 }
 .reservation_check_cancel .bg .check_cancel .wrap .close_progress #close:hover {
@@ -549,18 +557,26 @@
 main {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 100px;
 }
 main section {
   margin: 0 auto;
-  width: 1000px;
+  width: 100%;
 }
 main section .back {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 20px 30px 0;
+}
+main section .back h1 {
   font-size: 1.5rem;
   color: #333;
   font-weight: 600;
 }
-main section .back i {
-  padding: 0 20px 30px 0;
+main section .back p i {
+  font-size: 1.25rem;
+  padding-right: 15px;
 }
 main section .reservation_detail_wrap h1 {
   font-size: 1.5rem;
@@ -571,6 +587,9 @@ main section .reservation_detail_wrap h1 {
 main section .reservation_detail_wrap .check_in {
   display: flex;
   align-items: center;
+}
+main section .reservation_detail_wrap .check_in p {
+  width: 100%;
   background: #1273e4;
   padding: 10px 20px;
   border-radius: 10px;
@@ -607,7 +626,7 @@ main section .reservation_detail_wrap .room_info .info .room_title h2 {
   color: #333;
   font-weight: 600;
 }
-main section .reservation_detail_wrap .room_info .info .room_title a {
+main section .reservation_detail_wrap .room_info .info .room_title .inquiry {
   font-size: 0.75rem;
   font-weight: 600;
   color: #333;
@@ -615,7 +634,7 @@ main section .reservation_detail_wrap .room_info .info .room_title a {
   background: #ebebeb;
   border-radius: 8px;
 }
-main section .reservation_detail_wrap .room_info .info .room_title a:hover {
+main section .reservation_detail_wrap .room_info .info .room_title .inquiry:hover {
   background: #e1e1e1;
 }
 main section .reservation_detail_wrap .room_info .info .room_address {
@@ -628,14 +647,30 @@ main section .reservation_detail_wrap .room_info .info .room_address p {
   font-size: 0.875rem;
   color: #999;
 }
-main section .reservation_detail_wrap .room_info .info .room_address a {
+main section .reservation_detail_wrap .room_info .info .room_address .copy {
   font-size: 0.875rem;
   font-weight: 600;
   color: #1273e4;
   padding-left: 10px;
 }
-main section .reservation_detail_wrap .room_info .info .room_address a:hover {
+main section .reservation_detail_wrap .room_info .info .room_address .copy:hover {
   text-decoration: underline;
+}
+main section .reservation_detail_wrap .m_copy_ask_btn {
+  display: none;
+  width: calc(100% - 40px);
+  margin: 0 auto 20px;
+}
+main section .reservation_detail_wrap .m_copy_ask_btn button {
+  display: inline-block;
+  width: calc(50% - 5px);
+  background: #ebebeb;
+  border-radius: 10px;
+  padding: 13px;
+  font-family: PretendardSemiBold;
+}
+main section .reservation_detail_wrap .m_copy_ask_btn button i {
+  margin-right: 5px;
 }
 main section .reservation_detail_wrap .container .room_detail {
   display: flex;
@@ -773,16 +808,16 @@ main section .reservation_detail_wrap .container .payment_info .payment {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  border-top: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
 }
 main section .reservation_detail_wrap .container .payment_info .payment .payment_day {
-  width: 50%;
+  width: calc(50% - 20px);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   background: #f5f7fa;
   padding: 16px 20px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
 }
 main section .reservation_detail_wrap .container .payment_info .payment .payment_day .payment_left {
   display: flex;
@@ -804,10 +839,12 @@ main section .reservation_detail_wrap .container .payment_info .payment .payment
   padding-bottom: 20px;
 }
 main section .reservation_detail_wrap .container .payment_info .payment .payment_price {
-  width: 50%;
+  width: calc(50% - 20px);
   display: flex;
   flex-flow: column nowrap;
   padding: 16px 20px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
 }
 main section .reservation_detail_wrap .container .payment_info .payment .payment_price .all_price {
   display: flex;
