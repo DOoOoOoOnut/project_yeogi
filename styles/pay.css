@@ -363,16 +363,7 @@ main .container #pay_frm fieldset .wrap_left .payment_box ul li:first-child {
 main .container #pay_frm fieldset .wrap_left .payment_box .user_setting {
   margin-bottom: 20px;
 }
-main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment {
-  margin-right: 5px;
-}
-main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment span {
+main .container #pay_frm fieldset .wrap_left .payment_box .user_setting .checkbox-wrapper-4 label .txt {
   font-size: 0.875rem;
 }
 main .container #pay_frm fieldset .wrap_left .payment_box .benefit_contents .benefit_kakaopay .benefit_title {
@@ -686,13 +677,13 @@ main .container #pay_frm fieldset .wrap_right .right_bottom .agree {
   justify-content: space-between;
   align-items: center;
 }
-main .container #pay_frm fieldset .wrap_right .right_bottom .agree label, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label #keep_payment, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree #keep_payment, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label #keep_payment span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment .wrap_right .right_bottom .agree span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span .wrap_right .right_bottom .agree span {
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree label {
   display: flex;
 }
-main .container #pay_frm fieldset .wrap_right .right_bottom .agree label .user_agree, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label #keep_payment .user_agree, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree #keep_payment .user_agree, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label span .user_agree, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree span .user_agree, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment .wrap_right .right_bottom .agree span .user_agree, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label span span .user_agree, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span .wrap_right .right_bottom .agree span .user_agree {
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree label .user_agree {
   margin-right: 10px;
 }
-main .container #pay_frm fieldset .wrap_right .right_bottom .agree label span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label #keep_payment span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree #keep_payment span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment .wrap_right .right_bottom .agree span span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree .wrap_left .payment_box .user_setting label span span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span .wrap_right .right_bottom .agree span span {
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree label span {
   font-size: 0.875rem;
 }
 main .container #pay_frm fieldset .wrap_right .right_bottom .agree i {
@@ -708,13 +699,13 @@ main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div 
   justify-content: space-between;
   align-items: center;
 }
-main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div label, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label #keep_payment, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree_contents div #keep_payment, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree_contents div span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label #keep_payment span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment .wrap_right .right_bottom .agree_contents div span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span .wrap_right .right_bottom .agree_contents div span {
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div label {
   display: flex;
 }
-main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div label .user_agree, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label #keep_payment .user_agree, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree_contents div #keep_payment .user_agree, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label span .user_agree, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree_contents div span .user_agree, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment .wrap_right .right_bottom .agree_contents div span .user_agree, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label span span .user_agree, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span .wrap_right .right_bottom .agree_contents div span .user_agree {
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div label .user_agree {
   margin-right: 10px;
 }
-main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div label span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label #keep_payment span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree_contents div #keep_payment span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label .wrap_right .right_bottom .agree_contents div span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label #keep_payment .wrap_right .right_bottom .agree_contents div span span, main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div .wrap_left .payment_box .user_setting label span span span, main .container #pay_frm fieldset .wrap_left .payment_box .user_setting label span .wrap_right .right_bottom .agree_contents div span span {
+main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div label span {
   font-size: 0.875rem;
 }
 main .container #pay_frm fieldset .wrap_right .right_bottom .agree_contents div i {

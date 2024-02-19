@@ -309,17 +309,22 @@ main {
                         }
                         .user_setting {
                             margin-bottom:20px;
-                            label {
-                                @include flex-rnfc;
-                                #keep_payment {
-                                    margin-right: 5px;
-                                    @extend label;
-                                }
-                                span {
-                                    font-size:$subC14;
-                                    @extend label;
+                            .checkbox-wrapper-4 {
+                                label {
+                                    .txt {font-size:$subC14;}
                                 }
                             }
+                            // label {
+                            //     @include flex-rnfc;
+                            //     #keep_payment {
+                            //         margin-right: 5px;
+                            //         @extend label;
+                            //     }
+                            //     span {
+                            //         font-size:$subC14;
+                            //         @extend label;
+                            //     }
+                            // }
                         }
                         .benefit_contents {
                             .benefit_kakaopay {
