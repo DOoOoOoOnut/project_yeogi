@@ -4,7 +4,7 @@ main {
   padding: 40px 0 96px;
 }
 main .business_inquiry_container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto 50px;
 }
 main .business_inquiry_container .business_inquiry_bg .business_inquiry_top {
@@ -25,7 +25,7 @@ main .business_inquiry_container .business_inquiry_bg .business_inquiry_top a sp
   background-color: #e4e4e4;
 }
 main .new_inquiries_container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   padding: 0 30px 0;
 }
@@ -100,14 +100,14 @@ main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container
   display: flex;
   justify-content: space-between;
 }
-main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree label .user_agree {
-  display: none;
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree label .agreement {
+  display: flex;
 }
-main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree label em {
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree label .agreement em {
   font-size: 0.875rem;
   color: #f7323f;
 }
-main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree label span {
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree label .agreement span {
   font-size: 0.875rem;
 }
 main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree .more_btn i[class*=angle] {
@@ -123,7 +123,7 @@ main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container
 }
 main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more .personal_info, main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more th, main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more td {
   border: 1px solid #bdbdbd;
-  padding: 15px;
+  padding: 10px;
 }
 main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more .personal_info {
   width: 100%;
