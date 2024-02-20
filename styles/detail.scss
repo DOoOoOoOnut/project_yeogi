@@ -1,6 +1,6 @@
 @import 'common';
 .room_view_box {
-    display: none;
+    // display: none;
     .bg {
         width: 100%; height: 100%;
         background:rgba(0, 0, 0, 0.3);
@@ -9,7 +9,7 @@
         .container {
             width: 1400px; margin: $margin0;
             background: #fff;
-            position: absolute; left: 50%; top: 30%;
+            position: absolute; left: 50%; top: 10%;
             transform: translateX(-50%); z-index: 9999;
             border-radius: 10px;
             .title {
@@ -47,7 +47,18 @@
                 }
                 .all_view {
                     .all_detail {
-                        
+                        #view_container {
+                            .view_box {
+                                .swiper-slide {display: none;}
+                                .main_slide {
+                                    width: 100%;
+                                    text-align: center;
+                                    img {
+                                        height: 390px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -355,7 +366,7 @@
     }
 }
 #map_popup {
-    // display: none;
+    display: none;
     .bg {
         width: 100%; height: 100%;
         background:rgba(0, 0, 0, 0.3);
@@ -1121,6 +1132,7 @@ main {
                 }
             }
             .real_review {
+                max-width: 1400px; max-width: $margin0;
                 padding: 30px 0;
                 .title {
                     display: flex; flex-flow: row nowrap;
@@ -1188,15 +1200,13 @@ main {
                     }
                 }
                 .review_user {
-                    padding: 30px 0;
                     display: flex; flex-flow: row nowrap;
+                    padding: 30px 0;
                     border-bottom: 1px solid rgb(235 235 235);
                     .user_info {
-                        display: flex; flex-flow: row nowrap;
                         p {
                             img {
                                 width: 36px;
-                                
                             }
                         }
                         .user {
@@ -1231,9 +1241,12 @@ main {
                         .thumnail {
                             .swiper-container {}
                             #thum_photo {
-                                .swiper-wrapper {}
+                                .swiper-wrapper {
+                                }
                                 .photo {
-                                    .swiper-slide {
+                                    .swiper-slide {}
+                                    .view_slide {
+                                        
                                         img {
                                             width: 210px; height: 210px;
                                             border-radius: 10px;
