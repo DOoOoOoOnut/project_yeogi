@@ -97,42 +97,23 @@
                                                         </div>
                                                         <div class="type">
                                                             <h3>숙소유형</h3>
-                                                            <div class="contents">
-                                                                <label><input type="radio" value="all" name="type" class="chk"><span class="circle"></span>전체</label>
-                                                                <label><input type="radio" value="motel" name="type" class="chk"><span class="circle"></span>모텔</label>
-                                                                <label><input type="radio" value="hotel_resort" name="type" class="chk"><span class="circle"></span>호텔·리조트</label>
-                                                                <label><input type="radio" value="pension" name="type" class="chk"><span class="circle"></span>펜션</label>
-                                                                <label><input type="radio" value="home_villa" name="type" class="chk"><span class="circle"></span>홈&빌라</label>
-                                                                <label><input type="radio" value="camping" name="type" class="chk"><span class="circle"></span>캠핑</label>
-                                                                <label><input type="radio" value="guest_korean" name="type" class="chk"><span class="circle"></span>게하·한옥</label>
+                                                            <div class="contents" id="type_list">
+                                                                <template id="type_template"><label><input type="radio" name="type" class="chk" value="{{type_name}}"><span class="circle"></span>{{type_name}}</label></template>
                                                             </div>
                                                         </div>
                                                         <div class="price_range">
                                                             <h3>가격<span>1박 기준</span></h3>
-                                                            <!-- js -->
                                                         </div>
                                                         <div class="taste">
                                                             <h3>#취향</h3>
-                                                            <div class="chk_wrap">
-                                                                <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#가족여행숙소</span></label>
-                                                                <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#스파</span></label>
-                                                                <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#파티룸</span></label>
-                                                                <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#OTT</span></label>
-                                                                <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#연인추천</span></label>
-                                                                <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#감성숙소</span></label>
-                                                                <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#뷰맛집</span></label>
-                                                                <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#연박특가</span></label>
-                                                                <label><input type="checkbox" name="user_taste" class="user_taste chk"><span>#리뷰좋은</span></label>
-                                                                <!-- 이후 js 고려해서 추가 / 삭제 -->
+                                                            <div class="chk_wrap" id="taste_list">
+                                                                <template id="taste_template"><label><input type="checkbox" name="user_taste" class="user_taste chk" value="{{taste_name}}">{{taste_name}}</label></template>
                                                             </div>
                                                         </div>
                                                         <div class="discount">
                                                             <h3>할인혜택</h3>
-                                                            <div class="chk_wrap">
-                                                                <label><input type="checkbox" name="discount" class="discount_chk chk" value="쿠폰할인"><span>쿠폰할인</span></label>
-                                                                <label><input type="checkbox" name="discount" class="discount_chk chk" value="50%페이백"><span>50%페이백</span></label>
-                                                                <label><input type="checkbox" name="discount" class="discount_chk chk" value="무한대실"><span>무한대실</span></label>
-                                                                <label><input type="checkbox" name="discount" class="discount_chk chk" value="할인특가"><span>할인특가</span></label>
+                                                            <div class="chk_wrap" id="discount_list">
+                                                                <template id="discount_template"><label><input type="checkbox" name="discount" class="discount_chk chk" value="{{discount_name}}">{{discount_name}}</label></template>
                                                             </div>
                                                         </div>
                                                         <div class="reservation">
@@ -157,44 +138,23 @@
                                                         <div class="rank">
                                                             <h3>등급</h3>
                                                             <div class="chk_wrap">
-                                                                <label><input type="checkbox" name="rank" class="rank_chk chk"><span>5성급</span></label>
-                                                                <label><input type="checkbox" name="rank" class="rank_chk chk"><span>4성급</span></label>
-                                                                <label><input type="checkbox" name="rank" class="rank_chk chk"><span>블랙</span></label>
-                                                                <label><input type="checkbox" name="rank" class="rank_chk chk"><span>풀빌라</span></label>
+                                                                <template id="rank_template"><label><input type="checkbox" name="rank" class="rank_chk chk" value="{{rank_name}}"><span>{{rank_name}}</span></label></template>
                                                             </div>
                                                         </div>
                                                         <div class="facility">
                                                             <h3>시설</h3>
                                                             <dl class="contents">
                                                                 <dt>공용시설</dt>
-                                                                <dd class="public">
-                                                                    <label><input type="checkbox" name="public_facility" class="public_chk chk"><span>사우나</span></label>
-                                                                    <label><input type="checkbox" name="public_facility" class="public_chk chk"><span>수영장</span></label>
-                                                                    <label><input type="checkbox" name="public_facility" class="public_chk chk"><span>BBQ</span></label>
-                                                                    <label><input type="checkbox" name="public_facility" class="public_chk chk"><span>레스토랑</span></label>
-                                                                    <label><input type="checkbox" name="public_facility" class="public_chk chk"><span>피트니스</span></label>
-                                                                    <label><input type="checkbox" name="public_facility" class="public_chk chk"><span>물놀이시설</span></label>
+                                                                <dd class="public" id="public_list">
+                                                                    <template id="public_template"><label><input type="checkbox" name="public_facility" class="public_chk chk" value="{{public_name}}"><span>{{public_name}}</span></label></template>
                                                                 </dd>
                                                                 <dt>객실 내 시설</dt>
-                                                                <dd class="inside">
-                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk chk"><span>스파/월풀</span></label>
-                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk chk"><span>객실스파</span></label>
-                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk chk"><span>미니바</span></label>
-                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk chk"><span>와이파이</span></label>
-                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk chk"><span>에어컨</span></label>
-                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk chk"><span>욕실용품</span></label>
-                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk chk"><span>객실샤워실</span></label>
-                                                                    <label><input type="checkbox" name="inside_facility" class="inside_chk chk"><span>개인콘센트</span></label>
+                                                                <dd class="inside" id="inside_list">
+                                                                    <template id="inside_template"><label><input type="checkbox" name="inside_facility" class="inside_chk chk" value="{{inside_name}}"><span>{{inside_name}}</span></label></template>
                                                                 </dd>
                                                                 <dt>기타시설</dt>
-                                                                <dd class="ect">
-                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk chk"><span>조식포함</span></label>
-                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk chk"><span>무료주차</span></label>
-                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk chk"><span>반려견동반</span></label>
-                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk chk"><span>사우나/찜질방</span></label>
-                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk chk"><span>객실내취사</span></label>
-                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk chk"><span>픽업가능</span></label>
-                                                                    <label><input type="checkbox" name="ect_facility" class="ect_chk chk"><span>캠프파이어</span></label>
+                                                                <dd class="etc" id="etc_list">
+                                                                    <template id="etc_template"><label><input type="checkbox" name="ect_facility" class="ect_chk chk" value="{{etc_name}}"><span>{{etc_name}}</span></label></template>
                                                                 </dd>
                                                             </dl>
                                                         </div>
@@ -446,7 +406,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&callback=initMap"></script>
-    <script src="./data/data.js" type="module"></script>
+    <script src="./data/data.js"></script>
     <script src="./script/search.js"></script>
 </body>
 </html>

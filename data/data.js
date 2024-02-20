@@ -1,5 +1,11 @@
 import data from "./accommodation.js"
 
+/* 
+1. html 태그 템플릿으로 묶고 아래부분 수정
+2. 빈 배열부터 함수까지 하나의 함수로 묶기
+*/
+
+
 // type 걸러주는 필터
 function getAccommodationsByType(type){
     return data.filter(
@@ -59,32 +65,145 @@ function getAccommodationsByFacilityEcts(facility_ects) {
 }
 
 
-// search.js 에 넣을 내용
-// 파일 연결이 잘 안돼서 남겨뒀음 곧 가져가겠습니다
-
 //버튼을 누르면 필터에 맞는 결과만 출력
 const discount_chk = document.querySelectorAll('.discount_chk') 
-const tag_check = document.querySelectorAll('.user_taste')
-console.log(discount_chk, tag_check)
+// const tag_check = document.querySelectorAll('.user_taste')
+console.log(discount_chk)
 
 for(let discount_btn of discount_chk){
     discount_btn.addEventListener('change',btnHandler)
 }
 
-for(let tag_btn of tag_check){
+/* for(let tag_btn of tag_check){
     tag_btn.addEventListener('change',btnHandler)
+} */
+
+// 필터 버튼 배열
+const Types = [
+    '전체', '모텔', '호텔·리조트', '펜션', '홈&빌라', '캠핑', '게하·한옥'
+]
+const Tastes = [
+    '#가족여행숙소', '#스파', '#파티룸', '#OTT', '#연인추천', '#감성숙소', '#뷰맛집', '#연박특가', '#리뷰좋은'
+]
+const Discounts = [
+    '쿠폰할인', '50%페이백', '무한대실', '할인특가'
+]
+const Ranks = [
+    '5성급', '4성급', '블랙', '풀빌라'
+]
+const Publics = [
+    "사우나","수영장","BBQ","레스토랑","피트니스","물놀이시설","공용샤워실","공용화장실","매점"
+]
+const Insides = [
+    "스파/월풀","객실스파","미니바","와이파이","에어컨","욕실용품","객실샤워실","개인콘센트"
+]
+const Etcs = [
+    "조식포함","무료주차","반려견동반","사우나/찜질방","객실내취사","픽업가능","캠프파이어"
+]
+
+
+const newTypeEls = []
+const newTasteEls = []
+const newDiscountEls = []
+const newRankEls = []
+const newPublicEls = []
+const newInsideEls = []
+const newEtcEls = []
+
+
+// 필터 버튼 추가하는 함수
+function appendTasteChkBtn(){
+    const tasteTemplate = document.querySelector('#taste_template')
+    const tasteListEl = document.querySelector('#taste_list')
+    for(const taste of Tastes){
+        const newEl = document.importNode(tasteTemplate.content, true)// imporNode() 기준이 되는 엘리먼트
+        newTasteEls.push(newEl)
+        newEl.innerHTML.replace('{{taste_name}}',taste)
+        newEl.addEventListener('click',filterHandler)
+        tasteListEl.appendChild(newEl)
+    }
+}
+function appendTypeChkBtn(){
+    const TypeTemplate = document.querySelector('#type_template')
+    const typeListEl = document.querySelector('#type_list')
+    for(const type of Types){
+        const newEl = document.importNode(TypeTemplate.content, true)
+        newTypeEls.push(newEl)
+        newEl.innerHTML.replace('{{type_name}}',type)
+        newEl.addEventListener('click',filterHandler)
+        typeListEl.appendChild(newEl)
+    }
+}
+function appendDiscountChkBtn(){
+    const DiscountsTemplate = document.querySelector('#discount_template')
+    const discountsListEl = document.querySelector('#discount_list')
+    for(const discount of Discounts){
+        const newEl = document.importNode(DiscountsTemplate.content, true)
+        newDiscountEls.push(newEl)
+        newEl.innerHTML.replace('{{discount_name}}',discount)
+        newEl.addEventListener('click',filterHandler)
+        discountsListEl.appendChild(newEl)
+    }
+}
+function appendRankChkBtn(){
+    const RanksTemplate = document.querySelector('#rank_template')
+    const rankListEl = document.querySelector('#rank_list')
+    for(const rank of Ranks){
+        const newEl = document.importNode(RanksTemplate.content, true)
+        newRankEls.push(newEl)
+        newEl.innerHTML.replace('{{rank_name}}',rank)
+        newEl.addEventListener('click',filterHandler)
+        rankListEl.appendChild(newEl)
+    }
+}
+function appendPublicChkBtn(){
+    const PublicTemplate = document.querySelector('#public_template')
+    const publicsListEl = document.querySelector('#public_list')
+    for(const pub of Publics){
+        const newEl = document.importNode(PublicTemplate.content, true)
+        newPublicEls.push(newEl)
+        newEl.innerHTML.replace('{{public_name}}',pub)
+        newEl.addEventListener('click',filterHandler)
+        publicsListEl.appendChild(newEl)
+    }
+}
+function appendInsideChkBtn(){
+    const InsideTemplate = document.querySelector('#inside_template')
+    const insideListEl = document.querySelector('#inside_list')
+    for(const inside of Insides){
+        const newEl = document.importNode(InsideTemplate.content, true)
+        newInsideEls.push(newEl)
+        newEl.innerHTML.replace('{{inside_name}}',inside)
+        newEl.addEventListener('click',filterHandler)
+        insideListEl.appendChild(newEl)
+    }
+}
+function appendEtcsChkBtn(){
+    const EtcTemplate = document.querySelector('#etc_template')
+    const etcListEl = document.querySelector('#etc_list')
+    for(const etc of Etcs){
+        const newEl = document.importNode(EtcTemplate.content, true)
+        newInsideEls.push(newEl)
+        newEl.innerHTML.replace('{{etc_name}}',etc)
+        newEl.addEventListener('click',filterHandler)
+        etcListEl.appendChild(newEl)
+    }
 }
 
 
 
+/* appendTasteChkBtn()
+appendTypeChkBtn()
+appendDiscountChkBtn()
+appendRankChkBtn()
+appendPublicChkBtn()
+appendInsideChkBtn()
+appendEtcsChkBtn()
+ */
 
 
 
-
-
-
-
-function btnHandler(){ 
+function filterHandler(){ 
     // 1. 사용자가 무엇을 선택했는지 name으로 확인해 배열로 가져온다.
     let checkedArray = getChecked('discount')
     let checkedArray_tag = getChecked('user_taste')
@@ -106,6 +225,7 @@ function btnHandler(){
         newRoom.querySelector('.point_view').innerText = `${e.rate}.${Math.floor(Math.random() * 9)}` 
         newRoom.querySelector('.review_count').innerText = (e.review_count).toLocaleString('ko-kr')
         newRoom.querySelector('.photo img').src = `./images/search/accommodation${e.pk}.jpg`
+        console.log(`./images/search/accommodation${e.pk}.jpg`)
         // newRoom.querySelector('.price_view').innerText = e.price
         if(e.is_discount){
             newRoom.querySelector('.price_view').innerText = (e.price).toLocaleString('ko-kr')
@@ -120,7 +240,7 @@ function btnHandler(){
         }
         page.appendChild(newRoom)
     }
-    for(let e of data_tag){
+    /* for(let e of data_tag){
         const newRoom = document.importNode(roomTemplate.content, true)
         newRoom.querySelector('.type').innerText = e.type
         newRoom.querySelector('.name').innerText = e.name
@@ -142,7 +262,7 @@ function btnHandler(){
         }
         // newRoom.querySelector('img').src = "./image~~~"
         page.appendChild(newRoom)
-    }
+    } */
 }
 
 // 체크된거 확인 함수
