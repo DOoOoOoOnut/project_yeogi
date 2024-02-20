@@ -1,14 +1,307 @@
+.coupon_popup {
+  display: none;
+}
+.coupon_popup .popup_bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 999;
+  position: fixed;
+}
+.coupon_popup .popup_bg .coupon_check_popup {
+  width: 375px;
+  height: 60vh;
+  padding: 0 20px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 10px;
+}
+.coupon_popup .popup_bg .coupon_check_popup .detail_top {
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  position: sticky;
+}
+.coupon_popup .popup_bg .coupon_check_popup .detail_top .close {
+  position: absolute;
+  left: 0;
+}
+.coupon_popup .popup_bg .coupon_check_popup .detail_top .close i {
+  font-size: 1.25rem;
+}
+.coupon_popup .popup_bg .coupon_check_popup .detail_top em {
+  font-family: PretendardMedium;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .detail_title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .detail_title span {
+  font-size: 1.125rem;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .detail_title span em {
+  font-size: 1.125rem;
+  font-family: PretendardBold;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .none {
+  border: 1px solid #eeeeee;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .none label {
+  display: flex;
+  padding: 18px;
+  cursor: pointer;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .none label #coupon_none {
+  display: none;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .none label .circle {
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .none label span {
+  font-size: 0.875rem;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .none label input:checked + .circle {
+  background-color: #1273e4;
+  border-color: #1273e4;
+  animation: popup 0.1s;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .discount {
+  border: 1px solid #eeeeee;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .discount label {
+  display: flex;
+  padding: 18px;
+  cursor: pointer;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .discount label #discount_none {
+  display: none;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .discount label .circle {
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .discount label span {
+  display: block;
+  font-size: 0.875rem;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .discount label span em {
+  display: block;
+  margin-bottom: 5px;
+  font-family: PretendardBold;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .discount label span span {
+  font-size: 0.875rem;
+  margin-bottom: 5px;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .discount label span span:last-child {
+  margin-bottom: 0;
+  color: #999;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .discount label input:checked + .circle {
+  background-color: #1273e4;
+  border-color: #1273e4;
+  animation: popup 0.1s;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_contents .active {
+  background-color: #ecf4fd;
+  border: 1.5px solid #b7d5f6;
+  color: #1273e4;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .plus_coupon {
+  margin-top: 30px;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_txt {
+  text-align: center;
+  padding: 30px 0;
+}
+.coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_txt span {
+  font-size: 0.875rem;
+  color: #bdbdbd;
+}
+.coupon_popup .popup_bg .coupon_check_popup .detail_bottom {
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+.coupon_popup .popup_bg .coupon_check_popup .detail_bottom .apply_btn {
+  background-color: #1273e4;
+  color: #ffffff;
+  font-family: PretendardMedium;
+  font-size: 1.125rem;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+.coupon_popup .popup_bg .coupon_check_popup .detail_bottom .apply_btn .coupon_value {
+  color: #ffffff;
+  font-family: PretendardMedium;
+}
+.coupon_popup .popup_bg .coupon_check_popup .detail_bottom .apply_btn:hover {
+  background-color: #0e6edb;
+}
+
+.voucher_popup {
+  display: none;
+}
+.voucher_popup .voucher_bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 999;
+  position: fixed;
+}
+.voucher_popup .voucher_bg .voucher_check_popup {
+  width: 375px;
+  height: 60vh;
+  padding: 0 20px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 10px;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .detail_top {
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  position: sticky;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .detail_top .close {
+  position: absolute;
+  left: 0;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .detail_top .close i {
+  font-size: 1.25rem;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .detail_top em {
+  font-family: PretendardMedium;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail h3 {
+  font-size: 0.813rem;
+  color: #707070;
+  margin-bottom: 8px;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box {
+  display: flex;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  border: 1.5px solid #f5f5f5;
+  width: 70%;
+  padding: 0 15px;
+  margin: 0px 10px 5px 0;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box #discount_num {
+  width: 100%;
+  height: 48px;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box #discount_num::-moz-placeholder {
+  color: #dfdfdf;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box #discount_num::placeholder {
+  color: #dfdfdf;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box .reset {
+  display: none;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box .reset i {
+  color: #707070;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box input::-webkit-outer-spin-button,
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .amount_check {
+  font-family: PretendardMedium;
+  height: 48px;
+  padding: 0 18px;
+  border: 1.5px solid #dfdfdf;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .amount_check:hover {
+  background-color: #f5f5f5;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .popup_massage p {
+  font-size: 0.75rem;
+  color: #999;
+  padding: 2px 0;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .popup_massage .error_message {
+  display: none;
+  color: #f45858;
+  font-size: 0.75rem;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .detail_bottom {
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .detail_bottom .apply_btn {
+  background-color: #1273e4;
+  font-size: 1.125rem;
+  color: #ffffff;
+  font-family: PretendardMedium;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .detail_bottom .apply_btn .coupon_value {
+  color: #ffffff;
+  font-family: PretendardMedium;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .detail_bottom .apply_btn:hover {
+  background-color: #0e6edb;
+}
+
 main {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 40px;
 }
 main .top {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 40px 0 20px;
+  padding: 40px 0 20px;
 }
 main .top a {
   margin-right: 20px;
@@ -26,12 +319,11 @@ main .pay_contents #pay_frm fieldset .container {
   justify-content: space-between;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left {
-  width: 70%;
-  margin-right: 40px;
+  width: calc(100% - 400px); /* margin-right:40px; */
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box h2 {
   font-size: 1.125rem;
-  font-family: PretendardSemiBold;
+  font-family: PretendardBold;
   margin: 16px 0;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div h3 {
@@ -65,6 +357,9 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .i
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name .reset i {
   color: #707070;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name:hover {
+  background-color: #eeeeee;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .error_border {
   border: 1.5px solid #f45858;
@@ -100,8 +395,14 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m::placeholder {
   color: #bdbdbd;
 }
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num .reset {
+  display: none;
+}
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num .reset i {
   color: #707070;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num:hover {
+  background-color: #eeeeee;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .error_border {
   border: 1.5px solid #f45858;
@@ -181,6 +482,9 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_n .input_box_num input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_n .input_box_num:hover {
+  background-color: #eeeeee;
+}
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_n .error_message {
   color: #f45858;
   font-size: 0.75rem;
@@ -195,7 +499,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box {
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box h2 {
   font-size: 1.125rem;
-  font-family: PretendardSemiBold;
+  font-family: PretendardBold;
   margin: 16px 0;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .coupon {
@@ -219,6 +523,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .coupon .in
   background-color: #f5f5f5;
   border-radius: 8px;
   border: 1.5px solid #f5f5f5;
+  cursor: no-drop;
   padding: 0 15px;
   margin: 0px 10px 5px 0;
 }
@@ -234,6 +539,10 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .coupon .in
   padding: 0 18px;
   border: 1.5px solid #dfdfdf;
   border-radius: 8px;
+  white-space: nowrap;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .coupon .input_box .amount_check:hover {
+  background-color: #f5f5f5;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .coupon p {
   font-size: 0.75rem;
@@ -260,6 +569,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .voucher di
   background-color: #f5f5f5;
   border-radius: 8px;
   border: 1.5px solid #f5f5f5;
+  cursor: no-drop;
   padding: 0 15px;
   margin: 0px 10px 5px 0;
 }
@@ -275,16 +585,10 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .voucher di
   padding: 0 18px;
   border: 1.5px solid #dfdfdf;
   border-radius: 8px;
+  white-space: nowrap;
 }
-main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .popup_bg {
-  display: none;
-}
-main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .popup_bg .coupon_check_popup {
-  width: 50%;
-  position: absolute;
-}
-main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .voucher_bg {
-  display: none;
+main .pay_contents #pay_frm fieldset .container .wrap_left .sale_box .voucher div .amount_check:hover {
+  background-color: #f5f5f5;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .login_bnr {
   width: 100%;
@@ -319,13 +623,16 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .login_bnr a i {
   font-size: 1.25rem;
   color: #fff;
 }
+main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box {
+  border-bottom: 1px solid #ebebeb;
+}
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box h2 {
   font-size: 1.125rem;
-  font-family: PretendardSemiBold;
+  font-family: PretendardBold;
   margin: 25px 0;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit em {
-  background-color: #f7323f;
+  background-color: #f45858;
   color: #ffffff;
   padding: 4px 10px;
   border-radius: 30px;
@@ -339,11 +646,11 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul {
   grid-template-columns: repeat(5, 1fr);
   justify-content: space-between;
   margin: 8px 0 16px;
-  width: calc(100% + 6px);
+  width: 100%;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul li {
   border: 1px solid #ebebeb;
-  padding: 10px;
+  padding: 10px 5px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -352,6 +659,8 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul li {
   border-radius: 10px;
   margin: 5px;
   cursor: pointer;
+  font-size: 0.875rem;
+  font-family: PretendardMedium;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul li img {
   width: 70px;
@@ -367,6 +676,9 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .user_se
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .user_setting .checkbox-wrapper-4 label .txt {
   font-size: 0.875rem;
 }
+main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents {
+  padding: 0 5px;
+}
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_kakaopay .benefit_title {
   display: flex;
   flex-flow: row nowrap;
@@ -376,7 +688,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_kakaopay .benefit_title em {
   font-size: 0.688rem;
-  color: #f7323f;
+  color: #f45858;
   background-color: #ffebeb;
   padding: 3px 6px 4px;
   border-radius: 3px;
@@ -391,7 +703,6 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit
   background-color: #f5f7fa;
   border-radius: 5px;
   padding: 18px 14px 20px;
-  margin-bottom: 20px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_kakaopay .benefit_info p {
   font-size: 0.813rem;
@@ -402,8 +713,9 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit
   font-family: PretendardSemiBold;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_more_btn {
-  padding: 15px 0;
-  border-bottom: 1px solid #ebebeb;
+  padding: 15px 0 18px;
+  cursor: pointer;
+  display: inline-block;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_more_btn span {
   font-size: 0.875rem;
@@ -415,6 +727,13 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit
   font-size: 0.875rem;
   color: #1273e4;
 }
+main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_more_btn:hover {
+  text-decoration: underline;
+  color: #1273e4;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_more .benefit_tosspay {
+  margin-top: 20px;
+}
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_more .benefit_tosspay .benefit_title {
   display: flex;
   flex-flow: row nowrap;
@@ -424,7 +743,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_more .benefit_tosspay .benefit_title em {
   font-size: 0.688rem;
-  color: #f7323f;
+  color: #f45858;
   background-color: #ffebeb;
   padding: 3px 6px 4px;
   border-radius: 3px;
@@ -461,7 +780,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_more .benefit_card .benefit_title em {
   font-size: 0.688rem;
-  color: #f7323f;
+  color: #f45858;
   background-color: #ffebeb;
   padding: 3px 6px 4px;
   border-radius: 3px;
@@ -476,7 +795,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit
   background-color: #f5f7fa;
   border-radius: 5px;
   padding: 18px 14px 20px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box .benefit_contents .benefit_more .benefit_card .benefit_info p {
   font-size: 0.813rem;
@@ -497,16 +816,16 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .elite_box {
 main .pay_contents #pay_frm fieldset .container .wrap_left .elite_box .contents_title {
   margin: 16px 0;
   font-size: 1.125rem;
-  font-family: PretendardMedium;
+  font-family: PretendardBold;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .elite_box .contents_title em {
   font-size: 1.125rem;
   color: #6763e0;
-  font-family: PretendardMedium;
+  font-family: PretendardBold;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .elite_box .contents_title .name {
   font-size: 1.125rem;
-  font-family: PretendardMedium;
+  font-family: PretendardBold;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .elite_box .elite_stage span {
   background: #fafafa;
@@ -542,7 +861,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .elite_box .elite_spe
   color: #6763e0;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right {
-  width: 26%;
+  width: 340px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_top {
   margin: 0 auto;
@@ -580,12 +899,17 @@ main .pay_contents #pay_frm fieldset .container .wrap_right .right_top h2 {
   padding: 16px 0;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_top .room_img {
+  width: 290px;
   margin-bottom: 10px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_top .room_img img {
   width: 100%;
   height: 16vh;
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_top .room_info {
   margin-bottom: 20px;
@@ -663,7 +987,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .all_p
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .all_payment dl dd {
   font-size: 1.25rem;
-  color: #f7323f;
+  color: #f45858;
   font-family: PretendardBold;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .agree {
@@ -689,6 +1013,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .agree
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .agree i {
   font-size: 0.875rem;
+  cursor: pointer;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .agree_contents {
   width: 100%;
@@ -712,6 +1037,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .agree
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .agree_contents .agree_detail i {
   font-size: 0.875rem;
   color: #bdbdbd;
+  cursor: pointer;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .agree_contents .third {
   margin-bottom: 12px;
@@ -719,7 +1045,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .agree
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .pay_btn_box {
   background-color: #1273e4;
   width: 100%;
-  height: 40px;
+  height: 50px;
   border-radius: 10px;
   padding: 12px;
   display: flex;
@@ -730,4 +1056,16 @@ main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .pay_b
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .pay_btn_box #pay_btn {
   color: #ffffff;
   font-family: PretendardMedium;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .pay_btn_box:hover {
+  background-color: #0e6edb;
+}
+
+@keyframes popup {
+  0% {
+    scale: 0.2;
+  }
+  100% {
+    scale: 1;
+  }
 }/*# sourceMappingURL=pay.css.map */
