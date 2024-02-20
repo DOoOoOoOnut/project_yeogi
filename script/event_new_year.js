@@ -11,7 +11,7 @@ close_btn[0].addEventListener('click', ()=>{
     window.location.href = '../event.html'
 })
 coupon_down.addEventListener('click',()=>{
-    window.location.href = '../user_info.html'
+    window.location.href = '../user_info.html?run_script=true'
 })
 popup_btn.addEventListener('click', ()=>{
     popup.style.display = 'block';

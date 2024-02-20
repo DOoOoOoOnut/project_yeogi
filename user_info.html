@@ -193,19 +193,19 @@
             <nav class="lnb">
                 <ul>
                     <li>
-                        <button type="button">예약 내역<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                        <button type="button" class="tap_title">예약 내역<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
                     </li>
                     <li>
-                        <button type="button">포인트<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                        <button type="button" class="tap_title">포인트<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
                     </li>
                     <li>
-                        <button type="button">쿠폰<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                        <button type="button" class="tap_title">쿠폰<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
                     </li>
                     <li>
-                        <button type="button">내 정보 관리<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                        <button type="button" class="tap_title">내 정보 관리<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
                     </li>
                     <li>
-                        <button type="button">설정<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                        <button type="button" class="tap_title">설정<!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
                     </li>
                 </ul>
             </nav>
@@ -223,8 +223,8 @@
                     </div>
                     <div class="travel_reservation_history container_btn">
                         <div class="kr_world_btn wrap_btn">
-                            <button type="button" class="btn kr">국내숙소</button>
-                            <button type="button" class="btn world">해외숙소</button>
+                            <button type="button" class="btn world_btn">국내숙소</button>
+                            <button type="button" class="btn world_btn">해외숙소</button>
                         </div>
                         <section>
                             <em>예정된 여행이 없습니다.</em>
@@ -247,7 +247,9 @@
                             <p>
                                 내 포인트
                                 <!-- font-awesome -->
-                                <i class="fa-solid fa-circle-info"></i>
+                                <button type="button" class="info_btn">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
                             </p>
                             <em><span class="point"><!-- js -->0</span> P</em>
                         </div>
@@ -272,10 +274,10 @@
                     <section>
                         <nav class="point_details_btn">
                             <ul>
-                                <li><button type="button" class="point_details_all">전체</button></li>
-                                <li><button type="button" class="point_details_save">적립</button></li>
-                                <li><button type="button" class="point_details_use">사용</button></li>
-                                <li><button type="button" class="point_details_disapper">소멸</button></li>
+                                <li><button type="button" class="point_details all">전체</button></li>
+                                <li><button type="button" class="point_details save">적립</button></li>
+                                <li><button type="button" class="point_details use">사용</button></li>
+                                <li><button type="button" class="point_details disapper">소멸</button></li>
                             </ul>
                         </nav>
                         <div class="point_info_text">
@@ -291,7 +293,7 @@
                             <p><span class="coupon_day">7</span>일 이내 소멸예정 쿠폰 <span class="coupon_num">0</span>장</p>
                         </div>
                         <div class="right">
-                            <button type="button">쿠폰등록</button>
+                            <button type="button" class="coupon_btn">쿠폰등록</button>
                             <div class="popup_bg">
                                 <div class="contents">
                                     <div class="top">
@@ -403,7 +405,7 @@
                                 </div>
                             </div>
                             <div class="popup_bg">
-                                <div class="popup_coupon">
+                                <div class="popup_coupon contents">
                                     <div class="top">
                                         <span class="close"><!-- font_awesome --><i class="fa-solid fa-xmark"></i></span>
                                         <span>사용 조건 상세</span>
@@ -480,7 +482,6 @@
                                             <input class="tgl tgl-light" id="cb1-6" type="checkbox"/>
                                             <label class="tgl-btn" for="cb1-6">
                                         </div>
-                                        <!-- <input type="checkbox" name="info_see" id="info_see"> -->
                                     </div>
                                 </section>
                                 <section class="user_text not_view">
@@ -551,7 +552,7 @@
                             </div>
                             <!-- 내정보 보기 팝업 -->
                             <div class="popup_bg">
-                                <div class="popup_use">
+                                <div class="popup_use contents">
                                     <div class="top">
                                         <span class="close"><!-- font-awsome --><i class="fa-solid fa-xmark"></i></span>
                                         <h2>내 정보 확인</h2>
@@ -587,7 +588,7 @@
                                 </div>
                                 <!-- 로그아웃 팝업 -->
                                 <div class="popup_bg">
-                                    <div class="popup_logout">
+                                    <div class="popup_logout contents">
                                         <p>로그인된 모든 기기와 브라우서에서 로그아웃됩니다.로그아웃 하시겠습니까?</p>
                                         <div class="btn">
                                             <button type="button" class="cancellation_btn">취소</button>
@@ -679,5 +680,6 @@
             </div>
         </div>
     </main>
+    <script src="./script/user_info.js"></script>
 </body>
 </html>

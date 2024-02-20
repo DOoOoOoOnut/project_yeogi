@@ -39,7 +39,6 @@ main .container .wrap .coupon > .top .right > .popup_bg {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  display: none;
 }
 main .container .wrap .coupon > .top .right > .popup_bg .contents {
   min-height: 400px;
@@ -253,13 +252,12 @@ main .container .wrap .coupon .contents_coupon .wrap_contents .coupon_grid .coup
 main .container .wrap .coupon .contents_coupon .wrap_contents .coupon_grid .coupon_item section:nth-child(2) p, main .container .wrap .coupon > .top .contents_coupon .wrap_contents .coupon_grid .coupon_item section:nth-child(2) .left p span, main .container .wrap .coupon > .top .left p .contents_coupon .wrap_contents .coupon_grid .coupon_item section:nth-child(2) span, main .container .wrap .coupon .contents_coupon .wrap_contents .coupon_grid .coupon_item section:nth-child(2) .coupon_fillter .left p span, main .container .wrap .coupon .contents_coupon .coupon_fillter .left p .wrap_contents .coupon_grid .coupon_item section:nth-child(2) span {
   color: #707070;
   margin-bottom: 12px;
-  font-size: 0.813rem;
-  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 20px;
 }
 main .container .wrap .coupon .contents_coupon .wrap_contents .coupon_grid .coupon_item section:nth-child(2) p span, main .container .wrap .coupon > .top .left p .contents_coupon .wrap_contents .coupon_grid .coupon_item section:nth-child(2) span span, main .container .wrap .coupon .contents_coupon .coupon_fillter .left p .wrap_contents .coupon_grid .coupon_item section:nth-child(2) span span {
   color: #707070;
-  font-size: 0.813rem;
-  font-weight: 400;
+  font-size: 0.875rem;
 }
 main .container .wrap .coupon .contents_coupon .wrap_contents .coupon_grid .coupon_item button {
   color: #999;

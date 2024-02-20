@@ -11,6 +11,9 @@ main .container {
   align-items: center;
 }
 main .container .lnb {
+  position: sticky;
+  top: 24px;
+  left: 0;
   min-width: 155px;
   align-self: flex-start;
   background-color: #fff;
@@ -47,11 +50,11 @@ main .container .lnb ul li button i[class*=right] {
   float: right;
   color: #c2c2c2;
 }
+main .container .lnb ul li .active {
+  color: #1273e4;
+}
 main .container .lnb ul li:last-child {
   border-bottom: 0;
-}
-main .container .lnb ul li:first-of-type button {
-  color: #1273e4;
 }
 main .container .wrap {
   width: 1100px;
@@ -91,13 +94,13 @@ main .container .wrap .contents .container_btn .wrap_btn .btn {
   height: 52px;
   line-height: 52px;
   padding: 0 16px;
-}
-main .container .wrap .contents .container_btn .wrap_btn .btn:first-child {
-  position: relative;
   margin-right: 24px;
+}
+main .container .wrap .contents .container_btn .wrap_btn .btn.active_contents {
+  position: relative;
   color: #1273e4;
 }
-main .container .wrap .contents .container_btn .wrap_btn .btn:first-child::after {
+main .container .wrap .contents .container_btn .wrap_btn .btn.active_contents::after {
   background-color: #1273e4;
   content: "";
   display: block;
@@ -181,9 +184,11 @@ main .container .wrap .user_point .box .user_point_info p, main .container .wrap
   font-family: PretendardSemiBold;
   color: #1273e4;
 }
-main .container .wrap .user_point .box .user_point_info p i[class*=info], main .container .wrap .user_point .box .point_disappear p .user_point_info span i[class*=info] {
-  font-size: 15px;
+main .container .wrap .user_point .box .user_point_info p button, main .container .wrap .user_point .box .point_disappear p .user_point_info span button {
   float: right;
+}
+main .container .wrap .user_point .box .user_point_info p button i[class*=info], main .container .wrap .user_point .box .point_disappear p .user_point_info span button i[class*=info] {
+  font-size: 15px;
   cursor: pointer;
   color: rgb(183, 213, 246);
 }
@@ -212,7 +217,6 @@ main .container .wrap .user_point .point_popup {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none;
 }
 main .container .wrap .user_point .point_popup .popup_box {
   background-color: #fff;
@@ -284,7 +288,7 @@ main .container .wrap .user_point section .point_details_btn ul li button {
   font-size: 0.813rem;
   font-family: PretendardSemiBold;
 }
-main .container .wrap .user_point section .point_details_btn ul li:first-of-type button {
+main .container .wrap .user_point section .point_details_btn ul li button.active_point {
   background-color: #1273e4;
   color: #fff;
   border: 2px solid #1273e4;

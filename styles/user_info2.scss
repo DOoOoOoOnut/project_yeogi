@@ -6,7 +6,6 @@ main {
             // 쿠폰
             .coupon {
                 // js
-                // display: none;
                 > .top {
                     margin-bottom: 20px;
                     @include flex-rnsc;
@@ -42,7 +41,6 @@ main {
                             display:flex; flex-flow:column;
                             justify-content: center;
                             // js
-                            display: none;
                             .contents {
                                 min-height: 400px;
                                 max-height: 800px;
@@ -245,11 +243,11 @@ main {
                                     p {
                                         color: #707070;
                                         margin-bottom: 12px;
-                                        font-size: $small14;
+                                        font-size: $subC14;
                                         line-height: 20px;
                                         span {
                                             color: #707070;
-                                            font-size: $small14;
+                                            font-size: $subC14;
                                         }
                                     }
                                 }
