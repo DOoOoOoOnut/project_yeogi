@@ -4,7 +4,7 @@ export default
         "pk":1,
         "name":"세인트존스 호텔",
         "type":"호텔·리조트",
-        "city":"강릉",
+        "city":"강릉시",
         "location":"강릉 강문해변 앞",
         "rate":9,
         "rank":"4성급",
@@ -21,13 +21,12 @@ export default
         "longitude":128.9210687,
         "price":363000,
         "is_discount":true,
-        "discount_per":0.2,
-        "img":"accommodation1"
+        "discount_per":0.2
     },{
         "pk":2,
         "name":"정동진 썬크루즈호텔",
         "type":"호텔·리조트",
-        "city":"강릉",
+        "city":"강릉시",
         "location":"정동진역 차량 5분",
         "rate":9,
         "rank":"4성급",
@@ -44,13 +43,12 @@ export default
         "longitude":128.9077159,
         "price":220000,
         "is_discount":false,
-        "discount_per":0,
-        "img":"accommodation2"
+        "discount_per":0
     },{
         "pk":3,
         "name":"라카이 샌드파인",
         "type":"호텔·리조트",
-        "city":"강릉",
+        "city":"강릉시",
         "location":"경포해변 도보 5분",
         "rate":4,
         "rank":"블랙",
@@ -67,7 +65,6 @@ export default
         "longitude":128.90437901,
         "price":36000,
         "is_discount":true,
-        "discount_per":0.3,
-        "img":"accommodation3"
+        "discount_per":0.3
     }
 ]
