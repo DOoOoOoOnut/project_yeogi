@@ -1,19 +1,26 @@
 @charset "UTF-8";
 main {
   max-width: 1400px;
-  margin: 40px auto 96px;
+  margin: 0 auto;
   text-align: center;
-  width: 1080px;
+  padding: 40px 0;
+}
+main .trip_holic_bg {
+  width: 60%;
+  margin: 0 auto;
 }
 main .trip_holic_bg img {
+  width: 100%;
   display: inline-block;
   vertical-align: middle;
 }
 main .trip_holic_notice {
+  width: 60%;
+  margin: 0 auto;
   background-color: #393939;
   color: #fff;
   font-size: 0.688rem;
-  padding: 0 5.6% 22px 5.6%;
+  padding: 0 22px 22px 22px;
   text-align: left;
 }
 main .trip_holic_notice p {
@@ -57,7 +64,6 @@ main .trip_holic_notice .notice_more .box h1 {
   text-align: left;
   margin: 13px 0 8px;
   padding: 0 11px;
-  font-weight: lighter;
 }
 main .trip_holic_notice .notice_more .box h1::before {
   content: "";
@@ -87,16 +93,13 @@ main .trip_holic_notice .notice_more .box ul li {
   color: #fff;
   text-align: left;
   margin-bottom: 5.5px;
-  font-weight: lighter;
   padding: 0 11px;
 }
 main .trip_holic_notice .notice_more .box ul li ol li {
   color: #fff;
-  font-weight: lighter;
 }
 main .trip_holic_notice .notice_more .box ul li a {
   color: #fff;
-  font-weight: lighter;
 }
 main .trip_holic_notice .notice_more .box ul > li::before {
   content: "·";

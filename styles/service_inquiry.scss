@@ -5,7 +5,7 @@ main {
     margin: 0 auto;
     padding: 40px 0 96px;
     .business_inquiry_container {
-        width: 80%;
+        width:70%;
         margin: 0 auto 50px;
         .business_inquiry_bg {
             .business_inquiry_top {
@@ -23,7 +23,7 @@ main {
         }
     }
     .new_inquiries_container {
-        width: 80%;
+        width:70%;
         margin: 0 auto;
         padding: 0 30px 0;
         #new_inquiries_frm {
@@ -84,11 +84,13 @@ main {
                     .consent_use_agree {
                         display: flex; justify-content: space-between;
                         label {
-                            .user_agree {display: none;}
-                            em {
-                                font-size: $subC14; color: $mainColor-r;
+                            .agreement {
+                                display:flex;
+                                em {
+                                    font-size: $subC14; color: $mainColor-r;
+                                }
+                                span {font-size: $subC14;}
                             }
-                            span {font-size: $subC14;}
                         }
                         .more_btn {
                             i[class*=angle] {color: #bdbdbd;}
@@ -99,7 +101,7 @@ main {
                         width: 100%;
                         p {color: #707070; font-size: $subC14; margin-bottom: 20px;}
                         .personal_info, th, td {
-                            border: 1px solid #bdbdbd; padding: 15px;
+                            border: 1px solid #bdbdbd; padding: 10px;
                         }
                         .personal_info {
                             width: 100%;

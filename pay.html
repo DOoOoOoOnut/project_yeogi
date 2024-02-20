@@ -7,324 +7,407 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/pay.css">
+    <link rel="stylesheet" href="./styles/responsible_pay.css">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/checkbox.css">
 </head>
 <body>
+    <!-- 쿠폰 조회 누르면 나오는 팝업 -->
+    <div class="coupon_popup">
+        <div class="popup_bg">
+            <div class="coupon_check_popup">
+                <div class="detail_top">
+                    <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+                    <em>쿠폰 적용</em>
+                </div>
+                <div class="coupon_detail">
+                    <div class="general_coupon">
+                        <div class="detail_title">
+                            <span>일반쿠폰 <em>1장</em></span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="coupon_contents">
+                            <div class="none">
+                                <label>
+                                    <input type="radio" name="coupon" id="coupon_none">
+                                    <span class="circle"></span>
+                                    <span>적용안함</span>
+                                </label>
+                            </div>
+                            <div class="discount">
+                                <label>
+                                    <input type="radio" name="coupon" id="discount_none">
+                                    <span class="circle"></span>
+                                    <span>
+                                        <em>10% (10,000원)</em>
+                                        <span>신규회원 WELOCME 쿠폰</span>
+                                        <span>2024.2.8 18:37 까지 사용가능</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="plus_coupon">
+                            <div class="detail_title">
+                                <span>더하기 쿠폰 <em>0장</em></span>
+                            </div>
+                        </div>
+                        <div class="coupon_txt">
+                            <span>사용 가능한 쿠폰이 없습니다.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail_bottom">
+                    <button type="button" class="apply_btn"><span class="coupon_value">0</span>원 적용하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 잔액 확인 누르면 나오는 팝업 -->
+    <div class="voucher_popup">
+        <div class="voucher_bg">
+            <div class="voucher_check_popup">
+                <div class="detail_top">
+                    <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+                    <em>상품권 적용</em>
+                </div>
+                <div class="voucher_detail">
+                    <h3>상품권 번호</h3>
+                    <div class="input_box">
+                        <span class="num_box">
+                            <input type="number" placeholder="공백 없이 입력하세요" id="discount_num" maxlength="16">
+                            <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
+                        </span>
+                        <button type="button" class="amount_check">잔액 확인</button>
+                    </div>
+                    <div class="popup_massage">
+                        <p>유효 및 잔액 확인이 완료되면 자동계산/적용됩니다.</p>
+                        <p class="error_massage"><!-- js --></p>
+                    </div>
+                </div>
+                <div class="detail_bottom">
+                    <button type="button" class="apply_btn">0원 적용하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 메인시작 -->
     <main>
         <section class="top">
             <a href="detail.html"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>예약 확인 및 결제</h1>
         </section>
-        <section class="container">
+        <section class="pay_contents">
             <form action="#" method="post" id="pay_frm">
                 <fieldset>
                     <legend class="skip">결제폼</legend>
-                    <div class="wrap_left">
-                        <section class="user_info_box">
-                            <h2>예약자 정보</h2>
-                            <div class="user_name_detail">
-                                <h3>예약자 이름</h3>
-                                <div class="input_box_name">
-                                    <input type="text" placeholder="홍길동" id="user_name">
-                                    <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
-                                </div>
-                                <p class="error_message"><!-- js --></p>
-                            </div>
-                            <!-- 로그인했을시 -->
-                            <div class="user_phone_detail_m">
-                                <h3>휴대폰 번호</h3>
-                                <div class="input_box_num">
-                                    <input type="number" placeholder="010-1234-5678" id="user_phone_m"><!-- value="auto_complete_phone" -->
-                                    <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
-                                </div>
-                                <p class="error_message"><!-- js --></p>
-                                <p>개인 정보 보호를 위해 안심번호로 숙소에 전송됩니다.</p>
-                            </div>
-                            <!-- 로그인 안했을 시 -->
-                            <div class="user_phone_detail_n">
-                                <h3>휴대폰 번호</h3>
-                                <div class="input_box_num">
-                                    <div class="input_detail">
-                                        <input type="number" placeholder="010-1234-5678" id="user_phone_n">
+                    <div class="container">
+                        <div class="wrap_left">
+                            <section class="user_info_box">
+                                <h2>예약자 정보</h2>
+                                <div class="user_name_detail">
+                                    <h3>예약자 이름</h3>
+                                    <div class="input_box_name">
+                                        <input type="text" placeholder="홍길동" id="user_name">
                                         <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                                     </div>
-                                    <div class="confirm_num">
-                                        <button type="button">인증번호 전송</button>
+                                    <p class="error_message"><!-- js --></p>
+                                </div>
+                                <!-- 로그인했을시 -->
+                                <div class="user_phone_detail_m">
+                                    <h3>휴대폰 번호</h3>
+                                    <div class="input_box_num">
+                                        <input type="number" placeholder="010-1234-5678" id="user_phone_m"><!-- value="auto_complete_phone" -->
+                                        <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                                     </div>
+                                    <p class="error_message"><!-- js --></p>
+                                    <p>개인 정보 보호를 위해 안심번호로 숙소에 전송됩니다.</p>
                                 </div>
-                                <p class="error_message"><!-- js --></p>
-                                <p>개인 정보 보호를 위해 안심번호로 숙소에 전송됩니다.</p>
-                            </div>
-                        </section>
-                        <!-- 로그인 했을시 -->
-                        <section class="sale_box">
-                            <h2>할인</h2>
-                            <div class="coupon">
-                                <h3>쿠폰</h3>
-                                <div class="input_box">
-                                    <input type="number" placeholder="0" id="coupon_num" readonly>
-                                    <button type="button" class="amount_check">쿠폰 조회</button>
-                                </div>
-                                <p>사용가능한 쿠폰 1장</p>
-                            </div>
-                            <div class="voucher">
-                                <h3>상품권</h3>
-                                <div class="input_box">
-                                    <input type="number" placeholder="0" id="amount_num" readonly>
-                                    <button type="button" class="amount_check">잔액 확인</button>
-                                </div>
-                            </div>
-                            <!-- 쿠폰 조회 누르면 나오는 팝업 -->
-                            <div class="popup_bg">
-                                <div class="coupon_check_popup">
-                                    <div class="detail_top">
-                                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
-                                        <em>쿠폰 적용</em>
-                                    </div>
-                                    <div class="coupon_detail">
-                                        <div class="general_coupon">
-                                            <div class="detail_title">
-                                                <span>일반쿠폰 <em>1장</em></span>
-                                                <i class="fa-solid fa-angle-down"></i>
-                                            </div>
-                                            <div class="none">
-                                                <label><input type="radio" name="coupon_none" id="coupon_none"><span>적용안함</span></label>
-                                            </div>
-                                            <div class="discount">
-                                                <label>
-                                                    <input type="radio" name="discount_none" id="discount_none">
-                                                    <span>
-                                                        <em>10% (10,000원)</em>
-                                                        신규회원 WELOCME 쿠폰
-                                                        <span>2024.2.8 18:37 까지 사용가능</span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="plus_coupon">
-                                                <div class="detail_title">
-                                                    <span>더하기 쿠폰 <em>0장</em></span>
-                                                </div>
-                                            </div>
-                                            <div class="coupon_txt">
-                                                <span>사용 가능한 쿠폰이 없습니다.</span>
-                                            </div>
+                                <!-- 로그인 안했을 시 -->
+                                <div class="user_phone_detail_n">
+                                    <h3>휴대폰 번호</h3>
+                                    <div class="input_box_num">
+                                        <div class="input_detail">
+                                            <input type="number" placeholder="010-1234-5678" id="user_phone_n">
+                                            <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
+                                        </div>
+                                        <div class="confirm_num">
+                                            <button type="button">인증번호 전송</button>
                                         </div>
                                     </div>
-                                    <div class="detail_bottom">
-                                        <button type="button" class="apply_btn"><span class="coupon_value">0</span>원 적용하기</button>
+                                    <p class="error_message"><!-- js --></p>
+                                    <p>개인 정보 보호를 위해 안심번호로 숙소에 전송됩니다.</p>
+                                </div>
+                            </section>
+                            <!-- 로그인 했을시 -->
+                            <section class="sale_box">
+                                <h2>할인</h2>
+                                <div class="coupon">
+                                    <h3>쿠폰</h3>
+                                    <div class="input_box">
+                                        <input type="number" placeholder="0" id="coupon_num" readonly>
+                                        <button type="button" class="amount_check">쿠폰 조회</button>
+                                    </div>
+                                    <p>사용가능한 쿠폰 1장</p>
+                                </div>
+                                <div class="voucher">
+                                    <h3>상품권</h3>
+                                    <div class="input_box">
+                                        <input type="number" placeholder="0" id="amount_num" readonly>
+                                        <button type="button" class="amount_check">잔액 확인</button>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- 잔액 확인 누르면 나오는 팝업 -->
-                            <div class="voucher_bg">
-                                <div class="voucher_check_popup">
-                                    <div class="detail_top">
-                                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
-                                        <em>상품권 적용</em>
-                                    </div>
-                                    <div class="voucher_detail">
-                                        <h3>상품권 번호</h3>
-                                        <div class="input_box">
-                                            <span class="num_box">
-                                                <input type="text" placeholder="공백 없이 입력하세요" id="discount_num" maxlength="16">
-                                                <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
+                            </section>
+                            <!-- 로그인 안했을시 -->
+                            <section class="login_bnr">
+                                <a href="./login.html"><!-- bg넣기 -->
+                                    <span><em>로그인</em> 하시면 <em>할인 수단</em>을 이용할 수 있습니다.</span>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </section>
+                            <section class="payment_box">
+                                <h2>결제 수단</h2>
+                                <div class="benefit">
+                                    <em>혜택</em>
+                                </div>
+                                <ul>
+                                    <li><img src="./images/pay/kakao.png" alt="카카오페이"></li>
+                                    <li><img src="./images/pay/tosspay.png" alt="토스페이"></li>
+                                    <li>신용/체크 카드</li>
+                                    <li><img src="./images/pay/kbpay.png" alt="KB pay"></li>
+                                    <li>간편 계좌 이체</li>
+                                    <li><img src="./images/pay/npay2.png" alt="네이버페이"></li>
+                                    <li><img src="./images/pay/payco.png" alt="페이코"></li>
+                                    <li>법인 카드</li>
+                                    <li>휴대폰 결제</li>
+                                </ul>
+                                <div class="user_setting">
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx chk" id="keep_payment" type="checkbox"/>
+                                        <label class="cbx" for="keep_payment">
+                                            <span>
+                                                <svg width="12px" height="10px">
+                                                    <use xlink:href="#check-4"></use>
+                                                </svg>
                                             </span>
-                                            <button type="button" class="amount_check">잔액 확인</button>
-                                            <p>유효 및 잔액 확인이 완료되면 자동계산/적용됩니다.</p>
-                                            <p class="error_massage"><!-- js --></p>
+                                            <span class="txt">이 결제수단을 다음에도 사용</span>
+                                        </label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
+                                    <!-- <label><input type="checkbox" name="keep_paymet" id="keep_payment"><span>이 결제수단을 다음에도 사용</span></label> -->
+                                </div>
+                                <div class="benefit_contents">
+                                    <div class="benefit_kakaopay">
+                                        <div class="benefit_title">
+                                            <em>혜택</em>
+                                            <span>카카오페이</span>
+                                        </div>
+                                        <div class="benefit_info">
+                                            <p>호텔/펜션 - 7만원 이상, 10% 할인 (일 850명)<br>
+                                                <em>호텔/펜션 - 7만원 이상, 10% 할인 (일 850명)</em><br>
+                                                모텔 - 2만원 이상, <em>2천원 할인</em> (일 850명)
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="detail_bottom">
-                                        <button type="button" class="apply_btn">0원 적용하기</button>
+                                    <!-- 기존에는 숨겨져 있음 -->
+                                    <div class="benefit_more">
+                                        <div class="benefit_tosspay">
+                                            <div class="benefit_title">
+                                                <em>혜택</em>
+                                                <span>토스페이</span>
+                                            </div>
+                                            <div class="benefit_info">
+                                                <p>3만원 이상, 10% <em>최대 1만원 할인</em>(오전10시, 일400명)<br>
+                                                    2만원 이상, <em>2천원 할인</em> (오후 4시, 일1,700명)<br>
+                                                    +생애 첫결제 시, <em>5천원 캐시백</em>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="benefit_card">
+                                            <div class="benefit_title">
+                                                <em>혜택</em>
+                                                <span>신용/체크 카드</span>
+                                            </div>
+                                            <div class="benefit_info">
+                                                <p>국내숙소 - 7만원 이상, <em>5천원 할인</em><br>
+                                                    우리 (일 90명), 롯데 (일 160명)
+                                                </p>
+                                            </div>
+                                            <div class="benefit_info">
+                                                <p>국내숙소 - 현대카드 M포인트 10% 사용, 0.5% 적립<br>
+                                                    <em>최대 5,000P 사용가능</em>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 버튼을 누르면 가려져있던 위에 내용이 나오게 -->
+                                    <div class="benefit_more_btn">
+                                        <span>모든 혜택 보기</span><i class="fa-solid fa-angle-up"></i>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
-                        <!-- 로그인 안했을시 -->
-                        <div class="login_bnr">
-                            <a href="./login.html"><!-- bg넣기 -->
-                                <span><em>로그인</em> 하시면 <em>할인 수단</em>을 이용할 수 있습니다.</span>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
+                            </section>
+                            <section class="elite_box">
+                                <h2 class="contents_title"><em>5번</em> 더 예약하면 <span class="name">닉네임</span>님도 엘리트!</h2>
+                                <div class="elite_stage">
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                </div>
+                                <div class="elite_special">
+                                    <i class="fa-solid fa-gift"></i><p>엘리트 회원은 <em>평생 10% 추가할인</em></p>
+                                </div>
+                            </section>
                         </div>
-                        <section class="payment_box">
-                            <h2>결제 수단</h2>
-                            <div class="benefit">
-                                <em>혜택</em>
+                        <div class="wrap_right">
+                            <div class="right_top">
+                                <div class="cancell_notice">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>24년 2월 13일 23:59까지 무료취소</span>
+                                </div>
+                                <h2>제주신라호텔</h2>
+                                <div class="room_img">
+                                    <img src="./images/pay/jeju_shilla.jpg" alt="">
+                                </div>
+                                <div class="room_info">
+                                    <dl>
+                                        <dt>객실</dt>
+                                        <dd>정원 전망 스탠다드 더블룸</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>일정</dt>
+                                        <!-- js (선택한 날짜 나오게하기) -->
+                                        <dd>03.14 (목) 14:00 ~ <br>
+                                            03.15 (금) 11:00 (1박)</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>기준인원</dt>
+                                        <dd>2인기준, 최대 3인(유료)</dd>
+                                    </dl>
+                                </div>
                             </div>
-                            <ul>
-                                <li><img src="./images/pay/kakao.png" alt="카카오페이"></li>
-                                <li><img src="./images/pay/tosspay.png" alt="토스페이"></li>
-                                <li>신용/체크 카드</li>
-                                <li><img src="./images/pay/kbpay.png" alt="KB pay"></li>
-                                <li>간편 계좌 이체</li>
-                                <li><img src="./images/pay/npay2.png" alt="네이버페이"></li>
-                                <li><img src="./images/pay/payco.png" alt="페이코"></li>
-                                <li>법인 카드</li>
-                                <li>휴대폰 결제</li>
-                            </ul>
-                            <div class="user_setting">
-                                <div class="checkbox-wrapper-4">
-                                    <input class="inp-cbx chk" id="keep_payment" type="checkbox"/>
-                                    <label class="cbx" for="keep_payment">
-                                        <span>
-                                            <svg width="12px" height="10px">
-                                                <use xlink:href="#check-4"></use>
+                            <div class="right_bottom">
+                                <h2>결제 금액</h2>
+                                <div class="payment_amount">
+                                    <dl>
+                                        <dt>예약금액</dt>
+                                        <dd><em>411,400원</em></dd>
+                                    </dl>
+                                    <!-- 쿠폰적용시 나오는 부분 -->
+                                    <dl>
+                                        <dt>일반 쿠폰</dt>
+                                        <dd>-10,000원</dd>
+                                    </dl>
+                                </div>
+                                <div class="all_payment">
+                                    <dl>
+                                        <dt>총 결제금액</dt>
+                                        <dd>401,400원</dd>
+                                    </dl>
+                                </div>
+                                <div class="agree">
+                                    <!-- <label><input type="checkbox" name="user_agree" class="user_agree"><span>약관 전체동의</span></label> -->
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx chk" id="user_agree" type="checkbox"/>
+                                        <label class="cbx" for="user_agree">
+                                            <span>
+                                                <svg width="12px" height="10px">
+                                                    <use xlink:href="#check-4"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="txt">약관 전체동의</span>
+                                        </label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
+                                    <div class="more_btn">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                </div>
+                                <!-- js -->
+                                <div class="agree_contents">
+                                    <div class="first agree_detail">
+                                        <!-- <label>
+                                            <input type="checkbox" name="user_agree" class="user_agree">
+                                            <span>숙소이용 및 취소/환불규정 동의(필수)</span>
+                                        </label> -->
+                                        <div class="checkbox-wrapper-4">
+                                            <input class="inp-cbx chk" id="user_agree1" type="checkbox"/>
+                                            <label class="cbx" for="user_agree1">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check-4"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="txt">숙소이용 및 취소/환불규정 동의(필수)</span>
+                                            </label>
+                                            <svg class="inline-svg">
+                                                <symbol id="check-4" viewbox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </symbol>
                                             </svg>
-                                        </span>
-                                        <span class="txt">이 결제수단을 다음에도 사용</span>
-                                    </label>
-                                    <svg class="inline-svg">
-                                        <symbol id="check-4" viewbox="0 0 12 10">
-                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                        </symbol>
-                                    </svg>
-                                </div>
-                                <!-- <label><input type="checkbox" name="keep_paymet" id="keep_payment"><span>이 결제수단을 다음에도 사용</span></label> -->
-                            </div>
-                            <div class="benefit_contents">
-                                <div class="benefit_kakaopay">
-                                    <div class="benefit_title">
-                                        <em>혜택</em>
-                                        <span>카카오페이</span>
+                                        </div>
+                                        <i class="fa-solid fa-angle-right"></i>
                                     </div>
-                                    <div class="benefit_info">
-                                        <p>호텔/펜션 - 7만원 이상, 10% 할인 (일 850명)<br>
-                                            <em>호텔/펜션 - 7만원 이상, 10% 할인 (일 850명)</em><br>
-                                            모텔 - 2만원 이상, <em>2천원 할인</em> (일 850명)
-                                        </p>
+                                    <div class="second agree_detail">
+                                        <!-- <label>
+                                            <input type="checkbox" name="user_agree" class="user_agree">
+                                            <span>개인정보 수집 및 이용 동의 (필수)</span>
+                                        </label> -->
+                                        <div class="checkbox-wrapper-4">
+                                            <input class="inp-cbx chk" id="user_agree2" type="checkbox"/>
+                                            <label class="cbx" for="user_agree2">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check-4"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="txt">개인정보 수집 및 이용 동의 (필수)</span>
+                                            </label>
+                                            <svg class="inline-svg">
+                                                <symbol id="check-4" viewbox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </symbol>
+                                            </svg>
+                                        </div>
+                                        <i class="fa-solid fa-angle-right"></i>
                                     </div>
-                                </div>
-                                <!-- 기존에는 숨겨져 있음 -->
-                                <div class="benefit_more">
-                                    <div class="benefit_tosspay">
-                                        <div class="benefit_title">
-                                            <em>혜택</em>
-                                            <span>토스페이</span>
+                                    <div class="third agree_detail">
+                                        <!-- <label>
+                                            <input type="checkbox" name="user_agree" class="user_agree">
+                                            <span>개인정보 제3자 제공 동의 (필수)</span>
+                                        </label> -->
+                                        <div class="checkbox-wrapper-4">
+                                            <input class="inp-cbx chk" id="user_agree3" type="checkbox"/>
+                                            <label class="cbx" for="user_agree3">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check-4"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="txt">개인정보 제3자 제공 동의 (필수)</span>
+                                            </label>
+                                            <svg class="inline-svg">
+                                                <symbol id="check-4" viewbox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </symbol>
+                                            </svg>
                                         </div>
-                                        <div class="benefit_info">
-                                            <p>3만원 이상, 10% <em>최대 1만원 할인</em>(오전10시, 일400명)<br>
-                                                2만원 이상, <em>2천원 할인</em> (오후 4시, 일1,700명)<br>
-                                                +생애 첫결제 시, <em>5천원 캐시백</em>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="benefit_card">
-                                        <div class="benefit_title">
-                                            <em>혜택</em>
-                                            <span>신용/체크 카드</span>
-                                        </div>
-                                        <div class="benefit_info">
-                                            <p>국내숙소 - 7만원 이상, <em>5천원 할인</em><br>
-                                                우리 (일 90명), 롯데 (일 160명)
-                                            </p>
-                                        </div>
-                                        <div class="benefit_info">
-                                            <p>국내숙소 - 현대카드 M포인트 10% 사용, 0.5% 적립<br>
-                                                <em>최대 5,000P 사용가능</em>
-                                            </p>
-                                        </div>
+                                        <i class="fa-solid fa-angle-right"></i>
                                     </div>
                                 </div>
-                                <!-- 버튼을 누르면 가려져있던 위에 내용이 나오게 -->
-                                <div class="benefit_more_btn">
-                                    <span>모든 혜택 보기</span><i class="fa-solid fa-angle-up"></i>
+                                <div class="pay_btn_box">
+                                    <button type="button" id="pay_btn">401,400원 결제하기</button>
                                 </div>
                             </div>
-                        </section>
-                        <section class="elite_box">
-                            <h2 class="contents_title"><em>5번</em> 더 예약하면 <span class="name">닉네임</span>님도 엘리트!</h2>
-                            <div class="elite_stage">
-                                <span>1</span>
-                                <span>2</span>
-                                <span>3</span>
-                                <span>4</span>
-                                <span>5</span>
-                            </div>
-                            <div class="elite_special">
-                                <i class="fa-solid fa-gift"></i><p>엘리트 회원은 <em>평생 10% 추가할인</em></p>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="wrap_right">
-                        <div class="right_top">
-                            <div class="cancell_notice">
-                                <i class="fa-solid fa-circle-info"></i>
-                                <span>24년 2월 13일 23:59까지 무료취소</span>
-                            </div>
-                            <h2>제주신라호텔</h2>
-                            <div class="room_img">
-                                <img src="./images/pay/jeju_shilla.jpg" alt="">
-                            </div>
-                            <div class="room_info">
-                                <dl>
-                                    <dt>객실</dt>
-                                    <dd>정원 전망 스탠다드 더블룸</dd>
-                                </dl>
-                                <dl>
-                                    <dt>일정</dt>
-                                    <!-- js (선택한 날짜 나오게하기) -->
-                                    <dd>03.14 (목) 14:00 ~ <br>
-                                        03.15 (금) 11:00 (1박)</dd>
-                                </dl>
-                                <dl>
-                                    <dt>기준인원</dt>
-                                    <dd>2인기준, 최대 3인(유료)</dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div class="right_bottom">
-                            <h2>결제 금액</h2>
-                            <div class="payment_amount">
-                                <dl>
-                                    <dt>예약금액</dt>
-                                    <dd><em>411,400원</em></dd>
-                                </dl>
-                                <!-- 쿠폰적용시 나오는 부분 -->
-                                <dl>
-                                    <dt>일반 쿠폰</dt>
-                                    <dd>-10,000원</dd>
-                                </dl>
-                            </div>
-                            <div class="all_payment">
-                                <dl>
-                                    <dt>총 결제금액</dt>
-                                    <dd>401,400원</dd>
-                                </dl>
-                            </div>
-                            <div class="agree">
-                                <label><input type="checkbox" name="user_agree" class="user_agree"><span>약관 전체동의</span></label>
-                                <i class="fa-solid fa-angle-down"></i>
-                            </div>
-                            <!-- js -->
-                            <div class="agree_contents">
-                                <div class="first">
-                                    <label>
-                                        <input type="checkbox" name="user_agree" class="user_agree">
-                                        <span>숙소이용 및 취소/환불규정 동의(필수)</span>
-                                    </label>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </div>
-                                <div class="second">
-                                    <label>
-                                        <input type="checkbox" name="user_agree" class="user_agree">
-                                        <span>개인정보 수집 및 이용 동의 (필수)</span>
-                                    </label>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </div>
-                                <div class="third">
-                                    <label>
-                                        <input type="checkbox" name="user_agree" class="user_agree">
-                                        <span>개인정보 제3자 제공 동의 (필수)</span>
-                                    </label>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </div>
-                            </div>
-                            <div class="pay_btn_box">
-                                <button type="button" id="pay_btn">401,400원 결제하기</button>
-                            </div>
-                        </div>
+                        </div>    
                     </div>
                 </fieldset>
             </form>

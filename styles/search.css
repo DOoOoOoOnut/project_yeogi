@@ -4,7 +4,7 @@ main {
   padding: 0 30px;
 }
 main section {
-  /* max-width: 1400px; */
+  width: 100%;
   margin: 0 auto;
   padding-top: 30px;
 }
@@ -43,6 +43,7 @@ main section #result_frm .search_top .filter .open {
   border-radius: 10px;
   padding: 5px 20px;
 }
+main section #result_frm {width: 100%;}
 main section #result_frm .search_top .filter .open button {
   width: 150px;
   padding: 10px 0;
@@ -66,14 +67,16 @@ main section #result_frm .search_top .filter .open .active i[class$=check] {
   display: block;
 }
 main section #result_frm .result {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 main section #result_frm .result input {
   display: none;
 }
 main section #result_frm .result .filter_container {
-  width: calc(25% - 20px);
+  width: calc(25% - 20px); margin-right: 50px;
 }
 main section #result_frm .result .filter_container div h3 {
   font-weight: 600;
@@ -332,6 +335,10 @@ main section #result_frm .result .filter_container fieldset .top .map_container 
   display: inline-block;
   margin-right: 3px;
 }
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .review .point_wrap .point_view {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
 main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .review .point_wrap i[class$=star] {
   font-size: 0.75rem;
   margin-right: 3px;
@@ -502,14 +509,13 @@ main section #result_frm .result #room_container .page_wrap .page .room {
   border-bottom: 1px solid #eee;
 }
 main section #result_frm .result #room_container .page_wrap .page .room .photo {
-  width: calc(45% - 10px); 
+  width: calc(45% - 10px);
   height: 240px; overflow: hidden; border-radius: 20px;
-  /* border-radius: 20px; */
-  /* background: url(../images/search/accommodation1.jpeg);
-  background-size: cover; */
 }
 main section #result_frm .result #room_container .page_wrap .page .room .photo img {
-  height: 240px; border-radius: 20px;
+  width: 100%; height: 240px; 
+  object-fit: cover;
+  object-position: center;
 }
 main section #result_frm .result #room_container .page_wrap .page .room .contents {
   width: calc(55% - 10px);
@@ -541,10 +547,18 @@ main section #result_frm .result #room_container .page_wrap .page .room .content
   font-size: 0.75rem;
   background-color: #ffad0a;
   border-radius: 5px;
-  padding: 4px;
+  padding: 4px 6px;
   font-weight: 600;
   display: inline-block;
   margin-right: 3px;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .review .point_wrap .point_view {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .review .comment .review_count {
+  color: #707070;
+  font-size: 0.813rem;
 }
 main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .review .point_wrap i[class$=star] {
   font-size: 0.75rem;
@@ -567,6 +581,11 @@ main section #result_frm .result #room_container .page_wrap .page .room .content
   color: #999;
   font-size: 0.813rem;
 }
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .origin .price_view {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.813rem;
+}
 main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now, main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .won {
   font-size: 1.25rem;
   font-weight: 600;
@@ -576,6 +595,10 @@ main section #result_frm .result #room_container .page_wrap .page .room .content
 }
 main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .info {
   margin-top: 5px;
+  color: #f45858;
+  font-size: 0.688rem;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .info span {
   color: #f45858;
   font-size: 0.688rem;
 }
@@ -605,6 +628,9 @@ main section #result_frm .theme_keyword dd a {
   font-size: 0.875rem;
   font-weight: 600;
 }
+
+main section #result_frm .m_map_btn_wrap {}
+main section #result_frm .m_map_btn_wrap .m_map_btn {}
 
 @keyframes popup {
   0% {

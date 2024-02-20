@@ -1,21 +1,22 @@
 @import 'common';
 
 main {
-    max-width:$desktop;
-    margin: 40px auto 96px;
-    text-align: center;
-    width: 1080px;
+    max-width:1400px; margin:0 auto;
+    text-align:center; padding:40px 0;
     .trip_holic_bg {
+        width:60%; margin:0 auto;
         img {
+            width:100%;
             display: inline-block;
             vertical-align: middle;
         }
     }
     .trip_holic_notice {
+        width:60%; margin:0 auto;
         background-color: #393939;
         color: #fff;
         font-size: 0.688rem;
-        padding:0 5.6% 22px 5.6%;
+        padding:0 22px 22px 22px;
         text-align: left;
         p {
             color: #fff;
@@ -55,7 +56,6 @@ main {
                     text-align: left;
                     margin:13px 0 8px;
                     padding: 0 11px;
-                    font-weight: lighter;
                 }
                 h1::before {
                     content: '';
@@ -79,17 +79,14 @@ main {
                         color: #fff;
                         text-align: left;
                         margin-bottom: 5.5px;
-                        font-weight: lighter;
                         padding:0 11px ;
                         ol {
                             li {
                                 color: #fff;
-                                font-weight: lighter;
                             }
                         }
                         a {
                             color: #fff;
-                            font-weight: lighter;
                         }
                     }
                     > li::before {
@@ -97,7 +94,6 @@ main {
                         display: block;
                         color: #fff;
                         margin-right: 10px;
-                        
                     }
                 }
             }
