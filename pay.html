@@ -12,6 +12,85 @@
     <link rel="stylesheet" href="./styles/checkbox.css">
 </head>
 <body>
+    <!-- 쿠폰 조회 누르면 나오는 팝업 -->
+    <div class="coupon_popup">
+        <div class="popup_bg">
+            <div class="coupon_check_popup">
+                <div class="detail_top">
+                    <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+                    <em>쿠폰 적용</em>
+                </div>
+                <div class="coupon_detail">
+                    <div class="general_coupon">
+                        <div class="detail_title">
+                            <span>일반쿠폰 <em>1장</em></span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="coupon_contents">
+                            <div class="none">
+                                <label>
+                                    <input type="radio" name="coupon" id="coupon_none">
+                                    <span class="circle"></span>
+                                    <span>적용안함</span>
+                                </label>
+                            </div>
+                            <div class="discount">
+                                <label>
+                                    <input type="radio" name="coupon" id="discount_none">
+                                    <span class="circle"></span>
+                                    <span>
+                                        <em>10% (10,000원)</em>
+                                        <span>신규회원 WELOCME 쿠폰</span>
+                                        <span>2024.2.8 18:37 까지 사용가능</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="plus_coupon">
+                            <div class="detail_title">
+                                <span>더하기 쿠폰 <em>0장</em></span>
+                            </div>
+                        </div>
+                        <div class="coupon_txt">
+                            <span>사용 가능한 쿠폰이 없습니다.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail_bottom">
+                    <button type="button" class="apply_btn"><span class="coupon_value">0</span>원 적용하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 잔액 확인 누르면 나오는 팝업 -->
+    <div class="voucher_popup">
+        <div class="voucher_bg">
+            <div class="voucher_check_popup">
+                <div class="detail_top">
+                    <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+                    <em>상품권 적용</em>
+                </div>
+                <div class="voucher_detail">
+                    <h3>상품권 번호</h3>
+                    <div class="input_box">
+                        <span class="num_box">
+                            <input type="number" placeholder="공백 없이 입력하세요" id="discount_num" maxlength="16">
+                            <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
+                        </span>
+                        <button type="button" class="amount_check">잔액 확인</button>
+                    </div>
+                    <div class="popup_massage">
+                        <p>유효 및 잔액 확인이 완료되면 자동계산/적용됩니다.</p>
+                        <p class="error_massage"><!-- js --></p>
+                    </div>
+                </div>
+                <div class="detail_bottom">
+                    <button type="button" class="apply_btn">0원 적용하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 메인시작 -->
     <main>
         <section class="top">
             <a href="detail.html"><i class="fa-solid fa-arrow-left"></i></a>
@@ -77,79 +156,14 @@
                                         <button type="button" class="amount_check">잔액 확인</button>
                                     </div>
                                 </div>
-                                <!-- 쿠폰 조회 누르면 나오는 팝업 -->
-                                <div class="popup_bg">
-                                    <div class="coupon_check_popup">
-                                        <div class="detail_top">
-                                            <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
-                                            <em>쿠폰 적용</em>
-                                        </div>
-                                        <div class="coupon_detail">
-                                            <div class="general_coupon">
-                                                <div class="detail_title">
-                                                    <span>일반쿠폰 <em>1장</em></span>
-                                                    <i class="fa-solid fa-angle-down"></i>
-                                                </div>
-                                                <div class="none">
-                                                    <label><input type="radio" name="coupon_none" id="coupon_none"><span>적용안함</span></label>
-                                                </div>
-                                                <div class="discount">
-                                                    <label>
-                                                        <input type="radio" name="discount_none" id="discount_none">
-                                                        <span>
-                                                            <em>10% (10,000원)</em>
-                                                            신규회원 WELOCME 쿠폰
-                                                            <span>2024.2.8 18:37 까지 사용가능</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="plus_coupon">
-                                                    <div class="detail_title">
-                                                        <span>더하기 쿠폰 <em>0장</em></span>
-                                                    </div>
-                                                </div>
-                                                <div class="coupon_txt">
-                                                    <span>사용 가능한 쿠폰이 없습니다.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="detail_bottom">
-                                            <button type="button" class="apply_btn"><span class="coupon_value">0</span>원 적용하기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 잔액 확인 누르면 나오는 팝업 -->
-                                <div class="voucher_bg">
-                                    <div class="voucher_check_popup">
-                                        <div class="detail_top">
-                                            <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
-                                            <em>상품권 적용</em>
-                                        </div>
-                                        <div class="voucher_detail">
-                                            <h3>상품권 번호</h3>
-                                            <div class="input_box">
-                                                <span class="num_box">
-                                                    <input type="text" placeholder="공백 없이 입력하세요" id="discount_num" maxlength="16">
-                                                    <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
-                                                </span>
-                                                <button type="button" class="amount_check">잔액 확인</button>
-                                                <p>유효 및 잔액 확인이 완료되면 자동계산/적용됩니다.</p>
-                                                <p class="error_massage"><!-- js --></p>
-                                            </div>
-                                        </div>
-                                        <div class="detail_bottom">
-                                            <button type="button" class="apply_btn">0원 적용하기</button>
-                                        </div>
-                                    </div>
-                                </div>
                             </section>
                             <!-- 로그인 안했을시 -->
-                            <div class="login_bnr">
+                            <section class="login_bnr">
                                 <a href="./login.html"><!-- bg넣기 -->
                                     <span><em>로그인</em> 하시면 <em>할인 수단</em>을 이용할 수 있습니다.</span>
                                     <i class="fa-solid fa-angle-right"></i>
                                 </a>
-                            </div>
+                            </section>
                             <section class="payment_box">
                                 <h2>결제 수단</h2>
                                 <div class="benefit">
@@ -298,8 +312,8 @@
                                 <div class="agree">
                                     <!-- <label><input type="checkbox" name="user_agree" class="user_agree"><span>약관 전체동의</span></label> -->
                                     <div class="checkbox-wrapper-4">
-                                        <input class="inp-cbx chk" id="keep_payment" type="checkbox"/>
-                                        <label class="cbx" for="keep_payment">
+                                        <input class="inp-cbx chk" id="user_agree" type="checkbox"/>
+                                        <label class="cbx" for="user_agree">
                                             <span>
                                                 <svg width="12px" height="10px">
                                                     <use xlink:href="#check-4"></use>
@@ -313,6 +327,9 @@
                                             </symbol>
                                         </svg>
                                     </div>
+                                    <div class="more_btn">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </div>
                                 </div>
                                 <!-- js -->
                                 <div class="agree_contents">
@@ -322,8 +339,8 @@
                                             <span>숙소이용 및 취소/환불규정 동의(필수)</span>
                                         </label> -->
                                         <div class="checkbox-wrapper-4">
-                                            <input class="inp-cbx chk" id="keep_payment" type="checkbox"/>
-                                            <label class="cbx" for="keep_payment">
+                                            <input class="inp-cbx chk" id="user_agree1" type="checkbox"/>
+                                            <label class="cbx" for="user_agree1">
                                                 <span>
                                                     <svg width="12px" height="10px">
                                                         <use xlink:href="#check-4"></use>
@@ -345,8 +362,8 @@
                                             <span>개인정보 수집 및 이용 동의 (필수)</span>
                                         </label> -->
                                         <div class="checkbox-wrapper-4">
-                                            <input class="inp-cbx chk" id="keep_payment" type="checkbox"/>
-                                            <label class="cbx" for="keep_payment">
+                                            <input class="inp-cbx chk" id="user_agree2" type="checkbox"/>
+                                            <label class="cbx" for="user_agree2">
                                                 <span>
                                                     <svg width="12px" height="10px">
                                                         <use xlink:href="#check-4"></use>
@@ -368,8 +385,8 @@
                                             <span>개인정보 제3자 제공 동의 (필수)</span>
                                         </label> -->
                                         <div class="checkbox-wrapper-4">
-                                            <input class="inp-cbx chk" id="keep_payment" type="checkbox"/>
-                                            <label class="cbx" for="keep_payment">
+                                            <input class="inp-cbx chk" id="user_agree3" type="checkbox"/>
+                                            <label class="cbx" for="user_agree3">
                                                 <span>
                                                     <svg width="12px" height="10px">
                                                         <use xlink:href="#check-4"></use>
