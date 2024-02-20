@@ -120,7 +120,7 @@ var map = new naver.maps.Map('map', {
 // 생성되는 마커에 해당하는 숙소의 위도, 경도 정보 들어가야 함.
 
 // 마커를 추가할 위치의 배열
-var markerPositions = [
+let markerPositions = [
     new naver.maps.LatLng(37.7911114,128.9210687),
     new naver.maps.LatLng(37.7917805,128.90719),
     new naver.maps.LatLng(37.7938531,128.906343)
