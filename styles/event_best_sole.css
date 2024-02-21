@@ -1,13 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
 main {
-  max-width: 1400px;
+  max-width: 1080px;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   margin: 0 auto;
   text-align: center;
-  width: 1080px;
-  background-color: #F2F2F2;
 }
 main .container {
+  background-color: #F2F2F2;
   margin-bottom: 96px;
   position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .nav {
   position: sticky;
@@ -28,20 +41,38 @@ main .container .nav .close i[class*=arrow] {
 }
 main .container .nav span {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-family: PretendardBold;
 }
 main .container .contents {
   transform: translateX(-50%);
   left: 50%;
   position: relative;
   display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .contents .top {
   position: relative;
   top: 4px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+main .container .contents .top img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .contents .time {
-  width: 1080px;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   position: relative;
   top: 0;
   left: 50%;
@@ -51,6 +82,10 @@ main .container .contents .time {
   padding: 49px 0;
 }
 main .container .contents .time .center {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   position: relative;
   text-align: center;
   display: flex;
@@ -67,13 +102,14 @@ main .container .contents .time .center .clock {
 }
 main .container .contents .time .center .clock .box {
   position: relative;
-  height: 90px;
-  width: 20px;
+  max-height: 90px;
+  max-width: 20px;
+  margin: auto;
+  height: auto;
 }
 main .container .contents .time .center .clock .box .clock_name {
-  position: absolute;
-  right: -65px;
-  top: -30px;
+  position: relative;
+  top: -65px;
   transform: translateX(50%);
   text-align: center;
   color: #fff;
@@ -82,7 +118,7 @@ main .container .contents .time .center .clock .box .clock_name {
   background-color: transparent;
 }
 main .container .contents .time .center .clock .box .display {
-  position: absolute;
+  position: relative;
   left: 5px;
   width: 10px;
   height: 10px;
@@ -91,7 +127,7 @@ main .container .contents .time .center .clock .box .display {
   border-radius: 50%;
 }
 main .container .contents .time .center .clock .box .clock_top {
-  top: 27px;
+  top: 13px;
 }
 main .container .contents .time .center .clock .box .clock_bottom {
   bottom: 27px;
@@ -101,6 +137,10 @@ main .container .contents .time .center .clock ul {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .contents .time .center .clock ul li {
   font-size: 4.375rem;
@@ -116,13 +156,41 @@ main .container .contents .time .center .clock ul li {
   overflow: hidden;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
+main .container .contents .time .center .day .box .clock_name {
+  right: -70px;
+}
+main .container .contents .time .center .day .box .display {
+  background-color: #ff7574;
+}
+main .container .contents .time .center .hours .box .clock_name {
+  right: -67px;
+}
+main .container .contents .time .center .minutes .box .clock_name {
+  right: -60px;
+}
+main .container .contents .time .center .seoonds .box .clock_name {
+  right: -55px;
+}
 main .container .contents .photo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   background: #F2F2F2;
   width: 1080px;
   right: -7px;
 }
+main .container .contents .photo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
 main .container .contents .swiper-container {
-  width: 1080px;
+  max-width: 1080px;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   background-color: #F2F2F2;
   overflow: hidden;
 }
@@ -132,6 +200,10 @@ main .container .contents .swiper-container .swiper-wrapper {
   justify-content: space-between;
   align-items: center;
   padding-left: 70px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .contents .swiper-container .swiper-wrapper .swiper-slide a {
   display: inline-block;
@@ -142,6 +214,10 @@ main .container .contents .swiper-container .swiper-wrapper .swiper-slide a img 
   margin-right: 15px;
 }
 main .container .contents .coupon {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   position: relative;
   background-color: #F2F2F2;
   padding-top: 30px;
@@ -154,14 +230,32 @@ main .container .contents .coupon a {
 main .container .contents .coupon img {
   display: inline-block;
   vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .contents .footer {
   background-color: #393939;
   color: #fff;
   font-size: 0.688rem;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+main .container .contents .footer img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .contents .footer .footer_contents {
   padding: 0 5.6% 22px 5.6%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .contents .footer .footer_contents .info {
   display: flex;
@@ -207,16 +301,14 @@ main .container .contents .footer .footer_contents .box ul li::before {
 
 @media screen and (max-width: 1199px) {
   main {
+    margin: 0 auto;
     max-width: 1200px;
   }
-}
-@media screen and (max-width: 899px) {
-  main {
-    max-width: 900px;
+  main .container {
+    width: 100%;
+    margin: 0 auto;
   }
-}
-@media screen and (max-width: 599px) {
-  main {
-    max-width: 600px;
+  main .container time {
+    max-width: 540px;
   }
 }/*# sourceMappingURL=event_best_sole.css.map */

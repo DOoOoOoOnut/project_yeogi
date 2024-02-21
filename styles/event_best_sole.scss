@@ -1,14 +1,25 @@
 @import 'common';
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
 main {
-    max-width:$desktop;
+    max-width:1080px;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     margin: 0 auto;
     text-align: center;
-    width: 1080px;
-    background-color: #F2F2F2;
     .container {
+        background-color: #F2F2F2;
         margin-bottom: 96px;
         position: relative; 
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
         .nav {
             position: sticky; top: 0; width: 100vw;
             padding: 36px 0 20px;
@@ -26,7 +37,7 @@ main {
                 }
             }
             span {
-                font-size: $title24; font-weight: $weight700;
+                font-size: $title24; font-family: $familyBold;
             }
         }
         .contents {
@@ -34,17 +45,39 @@ main {
             left: 50%;
             position: relative;
             display: inline-block;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
             .top {
                 position: relative; top: 4px;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                }
             }
             .time {
-                width: 1080px;
+                margin: 0 auto;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
                 position: relative;
                 top: 0; left: 50%; transform: translate(-50%);
                 text-align: center;
                 background-color: #ff7574;
                 padding: 49px 0;
                 .center {
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
                     position: relative;
                     text-align: center;
                     @include flex-rncc;
@@ -53,11 +86,13 @@ main {
                         position: relative;
                         .box {
                             position: relative;
-                            height: 90px;
-                            width: 20px;
+                            max-height: 90px;
+                            max-width: 20px;
+                            margin: auto;
+                            height: auto;
                             .clock_name {
-                                position: absolute;
-                                right: -65px; top: -30px;
+                                position: relative;
+                                top: -65px;
                                 transform: translateX(50%);
                                 text-align: center;
                                 color: #fff;
@@ -66,7 +101,7 @@ main {
                                 background-color: transparent;
                             }
                             .display {
-                                position: absolute;
+                                position: relative;
                                 left: 5px;
                                 width: 10px;
                                 height: 10px;
@@ -75,7 +110,7 @@ main {
                                 border-radius: 50%
                             }
                             .clock_top {
-                                top: 27px
+                                top: 13px
                             }
                             .clock_bottom {
                                 bottom: 27px;
@@ -83,6 +118,10 @@ main {
                         }
                         ul {
                             @include flex-rncc;
+                            max-width: 100%;
+                            max-height: 100%;
+                            width: auto;
+                            height: auto;
                             li {
                                 font-size: 4.375rem;
                                 color: #fff;
@@ -98,20 +137,57 @@ main {
                             }
                         }
                     }
+                    .day {
+                        .box {
+                            .clock_name {right: -70px; }
+                            .display {background-color:#ff7574 ;}
+                        }
+                    }
+                    .hours {
+                        .box {
+                            .clock_name {right: -67px; }
+                        }
+                    }
+                    .minutes {
+                        .box {
+                            .clock_name {right: -60px; }
+                        }
+                    }
+                    .seoonds {
+                        .box {
+                            .clock_name {right: -55px; }
+                        }
+                    }
                 }
             }
             .photo {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
                 background: #F2F2F2;
                 width: 1080px;
                 right: -7px;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                }
             }
             .swiper-container {
-                width: 1080px;
+                max-width: 1080px;
+                max-height: 100%;
+                width: auto; height: auto;
                 background-color: #F2F2F2;
                 overflow: hidden;
                 .swiper-wrapper {
                     @include flex-rnsc;
                     padding-left: 70px;
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
                     .swiper-slide {
                         a {
                             display: inline-block;
@@ -125,6 +201,10 @@ main {
                 }
             }
             .coupon {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
                 position: relative;
                 background-color: #F2F2F2;
                 padding-top: 30px;
@@ -136,14 +216,32 @@ main {
                 img {
                     display: inline-block;
                     vertical-align: middle;
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
                 }
             }
             .footer {
                 background-color: #393939;
                 color: #fff;
                 font-size: 0.688rem;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                }
                 .footer_contents {
                     padding:0 5.6% 22px 5.6%;
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
                     .info {
                         @include flex-rnfc;
                         padding: 18px 5.5px;
@@ -187,16 +285,14 @@ main {
 }
 @media screen and (max-width:1199px) {
     main {
+        margin: 0 auto;
         max-width: $notebook;
-    }
-}
-@media screen and (max-width:899px) {
-    main {
-        max-width: $tablet;
-    }
-}
-@media screen and (max-width:599px) {
-    main {
-        max-width: $phone;
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            time {
+                max-width: 540px;
+            }
+        }
     }
 }

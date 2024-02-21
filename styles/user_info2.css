@@ -115,6 +115,10 @@ main .container .wrap .coupon > .top .right > .popup_bg .contents .text #coupon_
 main .container .wrap .coupon > .top .right > .popup_bg .contents .text #coupon_code fieldset input::placeholder {
   color: #c2c2c2;
 }
+main .container .wrap .coupon > .top .right > .popup_bg .contents .text #coupon_code fieldset .active_input {
+  outline: 1px solid #333;
+  background-color: #fff;
+}
 main .container .wrap .coupon > .top .right > .popup_bg .contents .btn {
   position: sticky;
   bottom: 0;
@@ -170,11 +174,11 @@ main .container .wrap .coupon .contents_coupon .coupon_fillter .fillter_now .fil
   border-radius: 8px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.0784313725);
   padding: 8px 0;
+  z-index: 99;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  display: none;
 }
 main .container .wrap .coupon .contents_coupon .coupon_fillter .fillter_now .fillter_option button {
   display: flex;
@@ -192,11 +196,11 @@ main .container .wrap .coupon .contents_coupon .coupon_fillter .fillter_now .fil
 main .container .wrap .coupon .contents_coupon .coupon_fillter .fillter_now .fillter_option button i[class*=check] {
   display: none;
 }
-main .container .wrap .coupon .contents_coupon .coupon_fillter .fillter_now .fillter_option button:nth-child(2) {
+main .container .wrap .coupon .contents_coupon .coupon_fillter .fillter_now .fillter_option .active_filter {
   color: #1273e4;
   font-weight: 700;
 }
-main .container .wrap .coupon .contents_coupon .coupon_fillter .fillter_now .fillter_option button:nth-child(2) i[class*=check] {
+main .container .wrap .coupon .contents_coupon .coupon_fillter .fillter_now .fillter_option .active_filter i[class*=check] {
   display: block;
   font-size: 16px;
 }

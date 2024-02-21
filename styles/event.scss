@@ -45,15 +45,16 @@ main {
         .wrap {
             .coupon {
                 margin-top: 20px;
-                @include flex-rwsc;
-                padding: 0;
+                display: grid; 
+                row-gap: 20px;
+                column-gap: 24px;
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 20px; 
+                padding: 0 40px; 
+                padding: 0 40px;
                 a {
-                    margin-right: 25px;
-                    margin-bottom: 30px;
-                    width: 30%;
                     cursor: pointer;
                     .photo {
-                        
                         img {
                             width: 100%; height: auto;
                             border-radius: 12px;
@@ -88,16 +89,47 @@ main {
         }
     }
 }
+
 @media screen and (max-width:1199px) {
     main {
         max-width: $notebook;
+        .container {
+            .wrap {
+                .coupon {
+                    grid-template-columns: repeat(2, 1fr); 
+                    .contents{
+                        padding: 12px 0 20px;
+                        h2 {
+                            font-family: $familyBold;
+                            font-size: $defalt16 !important;
+                        }
+                        p {
+                            color: #999;
+                            font-size: $subC14
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (max-width:899px) {
     main {
+        padding: 0;
         max-width: $tablet;
         .container {
-            .wrap {
+            nav {
+                ul {
+                    li {
+                        margin-right: 15px;
+                        cursor: pointer;
+                        .btn {
+                            font-size: $subC14;
+                            font-weight: $weight700;
+                            color: #70706F;
+                        }
+                    }
+                }
             }
         }
     }
@@ -105,5 +137,24 @@ main {
 @media screen and (max-width:599px) {
     main {
         max-width: $phone;
+        .container {
+            
+            .wrap {
+                .coupon {
+                    grid-template-columns: repeat(1, 1fr); 
+                    .contents{
+                        padding: 7px 0 10px;
+                        h2 {
+                            font-family: $familyBold;
+                            font-size: $defalt16 !important;
+                        }
+                        p {
+                            color: #999;
+                            font-size: $subC14
+                        }
+                    }
+                }
+            }
+        }
     }
 }

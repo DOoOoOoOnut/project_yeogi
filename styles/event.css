@@ -53,16 +53,16 @@ main .container nav ul li .hot_btn::after {
 }
 main .container .wrap .coupon {
   margin-top: 20px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
+  display: grid;
+  row-gap: 20px;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 40px;
+  padding: 0 40px;
 }
 main .container .wrap .coupon a {
-  margin-right: 25px;
-  margin-bottom: 30px;
-  width: 30%;
   cursor: pointer;
 }
 main .container .wrap .coupon a .photo img {
@@ -102,14 +102,52 @@ main .container .wrap .not_coupon p {
   main {
     max-width: 1200px;
   }
+  main .container .wrap .coupon {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .container .wrap .coupon .contents {
+    padding: 12px 0 20px;
+  }
+  main .container .wrap .coupon .contents h2 {
+    font-family: PretendardBold;
+    font-size: 1rem !important;
+  }
+  main .container .wrap .coupon .contents p {
+    color: #999;
+    font-size: 0.875rem;
+  }
 }
 @media screen and (max-width: 899px) {
   main {
+    padding: 0;
     max-width: 900px;
+  }
+  main .container nav ul li {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  main .container nav ul li .btn {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #70706F;
   }
 }
 @media screen and (max-width: 599px) {
   main {
     max-width: 600px;
+  }
+  main .container .wrap .coupon {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  main .container .wrap .coupon .contents {
+    padding: 7px 0 10px;
+  }
+  main .container .wrap .coupon .contents h2 {
+    font-family: PretendardBold;
+    font-size: 1rem !important;
+  }
+  main .container .wrap .coupon .contents p {
+    color: #999;
+    font-size: 0.875rem;
   }
 }/*# sourceMappingURL=event.css.map */

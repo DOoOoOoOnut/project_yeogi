@@ -254,7 +254,7 @@ main .container .wrap .user_point .point_popup .popup_box ul li::before {
 main .container .wrap .user_point .point_popup .popup_box .btn {
   margin: 20px;
 }
-main .container .wrap .user_point .point_popup .popup_box .btn .close_btn {
+main .container .wrap .user_point .point_popup .popup_box .btn .close {
   box-sizing: border-box;
   cursor: pointer;
   padding: 0 18px;
