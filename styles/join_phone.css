@@ -17,6 +17,7 @@ main section #phone_frm fieldset .title h1 {
 }
 main section #phone_frm fieldset .title p {
   color: #999;
+  line-height: 24px;
 }
 main section #phone_frm fieldset .contents {
   margin-bottom: 5px;
@@ -44,6 +45,13 @@ main section #phone_frm fieldset .contents .input_wrap .num_input {
   padding: 0 20px;
   font-weight: 600;
 }
+main section #phone_frm fieldset .contents .input_wrap .num_input:hover {
+  background-color: #ededed;
+}
+main section #phone_frm fieldset .contents .input_wrap .num_input:focus {
+  border: 1px solid #000;
+  background-color: #fff;
+}
 main section #phone_frm fieldset .contents .input_wrap .num_input::-moz-placeholder {
   color: #bdbdbd;
   font-weight: 300;
@@ -52,12 +60,19 @@ main section #phone_frm fieldset .contents .input_wrap .num_input::placeholder {
   color: #bdbdbd;
   font-weight: 300;
 }
+main section #phone_frm fieldset .contents .input_wrap .reset i[class$=xmark] {
+  color: #999;
+}
+main section #phone_frm fieldset .contents .before {
+  margin-bottom: 25px;
+}
 main section #phone_frm fieldset .contents .before .error {
   color: #f45858;
   font-size: 0.75rem;
 }
 main section #phone_frm fieldset .contents .before .input_wrap {
   position: relative;
+  margin-bottom: 5px;
 }
 main section #phone_frm fieldset .contents .before .input_wrap .reset {
   position: absolute;
@@ -70,16 +85,22 @@ main section #phone_frm fieldset .contents .before .input_wrap .reset i[class$=x
 main section #phone_frm fieldset .after {
   display: none;
 }
-main section #phone_frm fieldset .after .pass_num .pass_input {
+main section #phone_frm fieldset .after .input_wrap .pass_input {
   position: relative;
 }
-main section #phone_frm fieldset .after .pass_num .pass_input .reset {
+main section #phone_frm fieldset .after .input_wrap .pass_input .num_input {
+  margin-bottom: 5px;
+}
+main section #phone_frm fieldset .after .input_wrap .pass_input .reset {
   position: absolute;
   right: 10px;
   top: 0;
 }
-main section #phone_frm fieldset .after .pass_num .pass_input .reset i[class$=xmark] {
-  color: #999;
+main section #phone_frm fieldset .after .input_wrap .pass_input .time {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  color: #f7323f;
 }
 main section #phone_frm fieldset .after #resend {
   color: #999;

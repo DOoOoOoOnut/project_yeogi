@@ -16,7 +16,7 @@ main {
                         font-weight: $weight700;
                         margin-bottom: 5px;
                     }
-                    p {color: #999;}
+                    p {color: #999; line-height: 24px;}
                 }
                 .contents {
                     margin-bottom: 5px;
@@ -40,12 +40,24 @@ main {
                             padding: 0 20px;
                             font-weight: $weight600;
                         }
+                        .num_input:hover {
+                            background-color: #ededed;
+                        }
+                        .num_input:focus {
+                            border: 1px solid #000;
+                            background-color: #fff;
+                        }
                         .num_input::placeholder {color: #bdbdbd; font-weight: 300;}
-                        .reset {}
+                        .reset {
+                            i[class$=xmark] {
+                                color: #999;
+                            }
+                        }
                         .active_input {}
                         
                     }
                     .before {
+                        margin-bottom: 25px;
                         .sub_title {}
                         .sub_title::after{}
                         .error {
@@ -53,6 +65,7 @@ main {
                         }
                         .input_wrap {
                             position: relative;
+                            margin-bottom: 5px;
                             .reset {
                                 position: absolute; right: 10px; top: 0;
                                 i[class$=xmark] {
@@ -65,18 +78,20 @@ main {
                     .after {
                         display: none;
                         .sub_title {}
-                        .pass_num {
+                        .input_wrap {
                             .pass_input {
                                 position: relative;
-                                .num_input {}
+                                .num_input {
+                                    margin-bottom: 5px;
+                                }
                                 .reset {
                                     position: absolute; right: 10px; top: 0;
-                                    i[class$=xmark] {
-                                        color: #999;
-                                    }
+                                }
+                                .time {
+                                    position: absolute; right: 20px; top: 0px;
+                                    color: $mainColor-r;
                                 }
                             }
-                            .time {}
                         }
                         .error {}
                         #resend {

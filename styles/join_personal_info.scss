@@ -44,6 +44,13 @@ main {
                                 padding: 0 20px;
                                 font-weight: $weight600;
                             }
+                            input:hover {
+                                background-color: #ededed;
+                            }
+                            input:focus {
+                                border: 1px solid #000;
+                                background-color: #fff;
+                            }
                             input::placeholder {color: #bdbdbd; font-weight: 300;}
                             .reset_btn {
                                 i[class$=xmark] {color: #999;}

@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 main {
   max-width: 1400px;
   margin: 0 auto;
@@ -435,8 +439,8 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small {
   padding: 15px;
-  border-radius: 5px;
   width: 100%;
+  display: none;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search i {
   margin-right: 5px;
@@ -452,9 +456,14 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small 
 }
 main .main_container .main_bg {
   background-image: url(https://images.unsplash.com/photo-1682685796766-0fddd3e480de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 530px;
   background-position: center;
   background-size: cover;
-  height: 100%;
 }
 main .center_container {
   width: calc(100% - 60px);
@@ -489,7 +498,6 @@ main .center_container div div .box_btn div i {
 main .center_container div div .box_btn .swiper-button-prev {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container div div .box_btn .swiper-button-prev::after {
@@ -498,13 +506,12 @@ main .center_container div div .box_btn .swiper-button-prev::after {
 main .center_container div div .box_btn .swiper-button-next {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container div div .box_btn .swiper-button-next::after {
   display: none;
 }
-main .center_container div div .swiper-container .swiper-wrapper .swiper-slide {
+main .center_container div div .swiper-container .swiper-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -531,6 +538,9 @@ main .center_container .event_wrap .event_box {
   justify-content: space-between;
   align-items: center;
 }
+main .center_container .event_wrap .event_box .box_btn {
+  display: none;
+}
 main .center_container .event_wrap .event_box .box_btn div {
   width: 40px;
 }
@@ -549,7 +559,6 @@ main .center_container .event_wrap .event_box .box_btn div i {
 main .center_container .event_wrap .event_box .box_btn .swiper-button-prev {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .event_wrap .event_box .box_btn .swiper-button-prev::after {
@@ -558,7 +567,6 @@ main .center_container .event_wrap .event_box .box_btn .swiper-button-prev::afte
 main .center_container .event_wrap .event_box .box_btn .swiper-button-next {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .event_wrap .event_box .box_btn .swiper-button-next::after {
@@ -567,31 +575,33 @@ main .center_container .event_wrap .event_box .box_btn .swiper-button-next::afte
 main .center_container .event_wrap .event_box .event_bnr_detail {
   overflow-x: hidden;
 }
-main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper .swiper-slide {
+main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
-main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper .swiper-slide a {
+main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper a {
   width: 33.3333333333%;
-  margin-left: 25px;
 }
-main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper .swiper-slide a img {
+main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper a img {
   width: 100%;
   border-radius: 10px;
-}
-main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper .swiper-slide a:first-child {
-  margin-left: 0;
 }
 main .center_container .event_wrap .event_box .swiper-pagination {
   bottom: -20px;
 }
+main .center_container .event_wrap .event_box:hover .box_btn {
+  display: block;
+}
 main .center_container .kr_hot_travel_wrap {
   margin-bottom: 50px;
+  position: relative;
 }
 main .center_container .kr_hot_travel_wrap .box_btn {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 40%;
 }
 main .center_container .kr_hot_travel_wrap .box_btn div {
   width: 40px;
@@ -612,9 +622,7 @@ main .center_container .kr_hot_travel_wrap .box_btn div i {
 main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-prev01 {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
-  display: none;
 }
 main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-prev01::after {
   display: none;
@@ -622,7 +630,6 @@ main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-prev01::after
 main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-next01 {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-next01::after {
@@ -631,40 +638,43 @@ main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-next01::after
 main .center_container .kr_hot_travel_wrap .kr_travel_box {
   overflow-x: hidden;
 }
-main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .swiper-slide {
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .swiper-slide .kr_travel {
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  margin-left: 25px;
   width: 16.6666666667%;
+  min-width: 156px;
 }
-main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .swiper-slide .kr_travel img {
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel img {
   width: 100%;
   border-radius: 10px;
 }
-main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .swiper-slide .kr_travel img:hover {
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel img:hover {
   filter: brightness(80%);
 }
-main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .swiper-slide .kr_travel .kr_travel_txt {
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel .kr_travel_txt {
   font-size: 0.938rem;
   padding: 12px 4px 20px;
 }
-main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .swiper-slide .kr_travel:first-child {
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel:first-child {
   margin-left: 0;
 }
 main .center_container .over_hot_travel_wrap {
   margin-bottom: 50px;
+  position: relative;
 }
 main .center_container .over_hot_travel_wrap .box_btn {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 40%;
 }
 main .center_container .over_hot_travel_wrap .box_btn div {
   width: 40px;
@@ -685,9 +695,7 @@ main .center_container .over_hot_travel_wrap .box_btn div i {
 main .center_container .over_hot_travel_wrap .box_btn .swiper-button-prev02 {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
-  display: none;
 }
 main .center_container .over_hot_travel_wrap .box_btn .swiper-button-prev02::after {
   display: none;
@@ -695,7 +703,6 @@ main .center_container .over_hot_travel_wrap .box_btn .swiper-button-prev02::aft
 main .center_container .over_hot_travel_wrap .box_btn .swiper-button-next02 {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .over_hot_travel_wrap .box_btn .swiper-button-next02::after {
@@ -704,37 +711,35 @@ main .center_container .over_hot_travel_wrap .box_btn .swiper-button-next02::aft
 main .center_container .over_hot_travel_wrap .over_travel_box {
   overflow-x: hidden;
 }
-main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .swiper-slide {
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .swiper-slide .over_travel {
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .over_travel {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  margin-left: 25px;
+  min-width: 156px;
   width: 16.6666666667%;
 }
-main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .swiper-slide .over_travel img {
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .over_travel img {
   width: 100%;
   border-radius: 10px;
 }
-main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .swiper-slide .over_travel img:hover {
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .over_travel img:hover {
   filter: brightness(80%);
 }
-main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .swiper-slide .over_travel .over_travel_txt {
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .over_travel .over_travel_txt {
   font-size: 0.938rem;
   padding: 12px 4px 20px;
 }
-main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .swiper-slide .over_travel:first-child {
-  margin-left: 0;
-}
 main .center_container .recommend_room_wrap {
   margin-bottom: 50px;
+  position: relative;
 }
 main .center_container .recommend_room_wrap .sub_menu_box {
   margin-bottom: 10px;
@@ -745,6 +750,7 @@ main .center_container .recommend_room_wrap .sub_menu_box .sub_menu {
   border-radius: 20px;
   font-size: 0.875rem;
   margin-right: 4px;
+  font-family: PretendardMedium;
 }
 main .center_container .recommend_room_wrap .sub_menu_box .menu1 {
   background-color: #1273e4;
@@ -752,7 +758,9 @@ main .center_container .recommend_room_wrap .sub_menu_box .menu1 {
   border: 0;
 }
 main .center_container .recommend_room_wrap .box_btn {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 35%;
 }
 main .center_container .recommend_room_wrap .box_btn div {
   width: 40px;
@@ -774,9 +782,7 @@ main .center_container .recommend_room_wrap .box_btn div i {
 main .center_container .recommend_room_wrap .box_btn .swiper-button-prev03 {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
-  display: none;
 }
 main .center_container .recommend_room_wrap .box_btn .swiper-button-prev03::after {
   display: none;
@@ -784,7 +790,6 @@ main .center_container .recommend_room_wrap .box_btn .swiper-button-prev03::afte
 main .center_container .recommend_room_wrap .box_btn .swiper-button-next03 {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .recommend_room_wrap .box_btn .swiper-button-next03::after {
@@ -793,86 +798,83 @@ main .center_container .recommend_room_wrap .box_btn .swiper-button-next03::afte
 main .center_container .recommend_room_wrap .room_box {
   overflow-x: hidden;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
+  min-width: 240px;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .photo {
   width: 100%;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .photo {
-  margin-left: 25px;
-  width: 25%;
-}
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .photo img {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .photo img {
   width: 100%;
   border-radius: 10px;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .photo:first-child {
-  margin-left: 0;
-}
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .type {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .type {
   font-size: 0.688rem;
   color: #999;
   margin: 10px 0 5px;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .title .name {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .name {
   font-size: 1rem;
   font-weight: 600;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .location {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location {
   margin: 3px 0 5px;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .location .more {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .more {
   font-size: 0.813rem;
   color: #999;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review {
   margin-bottom: 15px;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .point_wrap {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap {
   background-color: #ffad0a;
   padding: 0 1px 3px 4px;
   border-radius: 5px;
   margin-right: 7px;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .point_wrap i {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap i {
   font-size: 0.688rem;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .point_wrap .point {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point {
   font-size: 0.75rem;
   font-weight: 600;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .comment {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .comment {
   font-size: 0.813rem;
   color: #999;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .coupon {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .price_info .coupon {
   font-size: 0.75rem;
   color: #999;
   margin-bottom: 3px;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .price .now {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now {
   font-size: 1.125rem;
   font-weight: 600;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .price .now span {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now span {
   font-size: 0.938rem;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .price .origin {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .price_info .price .origin {
   font-size: 0.875rem;
   color: #999;
   text-decoration: line-through;
 }
 main .center_container .today_special_wrap {
   margin-bottom: 50px;
+  position: relative;
 }
 main .center_container .today_special_wrap .title_box {
   display: flex;
@@ -885,7 +887,9 @@ main .center_container .today_special_wrap .title_box a i {
   color: #1273e4;
 }
 main .center_container .today_special_wrap .box_btn {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 28%;
 }
 main .center_container .today_special_wrap .box_btn div {
   width: 40px;
@@ -907,9 +911,7 @@ main .center_container .today_special_wrap .box_btn div i {
 main .center_container .today_special_wrap .box_btn .swiper-button-prev04 {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
-  display: none;
 }
 main .center_container .today_special_wrap .box_btn .swiper-button-prev04::after {
   display: none;
@@ -917,7 +919,6 @@ main .center_container .today_special_wrap .box_btn .swiper-button-prev04::after
 main .center_container .today_special_wrap .box_btn .swiper-button-next04 {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .today_special_wrap .box_btn .swiper-button-next04::after {
@@ -926,95 +927,92 @@ main .center_container .today_special_wrap .box_btn .swiper-button-next04::after
 main .center_container .today_special_wrap .room_box {
   overflow-x: hidden;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide {
+main .center_container .today_special_wrap .room_box .swiper-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
+  min-width: 240px;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .photo {
   width: 100%;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .photo {
-  margin-left: 25px;
-  width: 25%;
-}
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .photo img {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .photo img {
   width: 100%;
   border-radius: 10px;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .photo:first-child {
-  margin-left: 0;
-}
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .type {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .type {
   font-size: 0.688rem;
   color: #999;
   margin: 10px 0 5px;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .title .special {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .special {
   font-size: 1rem;
   font-weight: 600;
   margin-right: 5px;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .title .name {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .name {
   font-size: 1rem;
   font-weight: 600;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .location {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location {
   margin: 3px 0 5px;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .location .city {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .city {
   font-size: 0.813rem;
   color: #555;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .location .more {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .more {
   font-size: 0.813rem;
   color: #999;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review {
   margin-bottom: 15px;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .point_wrap {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap {
   background-color: #ffad0a;
   padding: 0 1px 3px 4px;
   border-radius: 5px;
   margin-right: 7px;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .point_wrap i {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap i {
   font-size: 0.688rem;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .point_wrap .point {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point {
   font-size: 0.75rem;
   font-weight: 600;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .comment {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .comment {
   font-size: 0.813rem;
   color: #999;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .coupon {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .price_info .coupon {
   font-size: 0.75rem;
   color: #999;
   margin-bottom: 3px;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .price .now {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now {
   font-size: 1.125rem;
   font-weight: 600;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .price .now span {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now span {
   font-size: 0.938rem;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .price .origin {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .price_info .price .origin {
   font-size: 0.875rem;
   color: #999;
   text-decoration: line-through;
 }
 main .center_container .hot_pension_wrap {
   margin-bottom: 50px;
+  position: relative;
 }
 main .center_container .hot_pension_wrap .title_box {
   display: flex;
@@ -1027,7 +1025,9 @@ main .center_container .hot_pension_wrap .title_box a i {
   color: #1273e4;
 }
 main .center_container .hot_pension_wrap .box_btn {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 28%;
 }
 main .center_container .hot_pension_wrap .box_btn div {
   width: 40px;
@@ -1049,9 +1049,7 @@ main .center_container .hot_pension_wrap .box_btn div i {
 main .center_container .hot_pension_wrap .box_btn .swiper-button-prev05 {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
-  display: none;
 }
 main .center_container .hot_pension_wrap .box_btn .swiper-button-prev05::after {
   display: none;
@@ -1059,7 +1057,6 @@ main .center_container .hot_pension_wrap .box_btn .swiper-button-prev05::after {
 main .center_container .hot_pension_wrap .box_btn .swiper-button-next05 {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .hot_pension_wrap .box_btn .swiper-button-next05::after {
@@ -1068,91 +1065,90 @@ main .center_container .hot_pension_wrap .box_btn .swiper-button-next05::after {
 main .center_container .hot_pension_wrap .room_box {
   overflow-x: hidden;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
+  min-width: 240px;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .photo {
   width: 100%;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .photo {
-  margin-left: 25px;
-  width: 25%;
-}
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .photo img {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .photo img {
   width: 100%;
   border-radius: 10px;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .photo:first-child {
-  margin-left: 0;
-}
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .type {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .type {
   font-size: 0.688rem;
   color: #999;
   margin: 10px 0 5px;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .title .special {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .special {
   font-size: 1rem;
   font-weight: 600;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .title .name {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .name {
   font-size: 1rem;
   font-weight: 600;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .location {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location {
   margin: 3px 0 5px;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .location .city {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .city {
   font-size: 0.813rem;
   color: #555;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .location .more {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .more {
   font-size: 0.813rem;
   color: #999;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review {
   margin-bottom: 15px;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .point_wrap {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap {
   background-color: #ffad0a;
   padding: 0 1px 3px 4px;
   border-radius: 5px;
   margin-right: 7px;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .point_wrap i {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap i {
   font-size: 0.688rem;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .point_wrap .point {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point {
   font-size: 0.75rem;
   font-weight: 600;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .title_wrap .review .comment {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .comment {
   font-size: 0.813rem;
   color: #999;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .coupon {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .price_info .coupon {
   font-size: 0.75rem;
   color: #999;
   margin-bottom: 3px;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .price .now {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now {
   font-size: 1.125rem;
   font-weight: 600;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .price .now span {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now span {
   font-size: 0.938rem;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .swiper-slide .room .contents .price_info .price .origin {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .price_info .price .origin {
   font-size: 0.875rem;
   color: #999;
   text-decoration: line-through;
+}
+main .center_container .black_pick_wrap {
+  position: relative;
 }
 main .center_container .black_pick_wrap .title_box {
   display: flex;
@@ -1166,7 +1162,9 @@ main .center_container .black_pick_wrap .title_box p {
   color: #999;
 }
 main .center_container .black_pick_wrap .box_btn {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 50%;
 }
 main .center_container .black_pick_wrap .box_btn div {
   width: 40px;
@@ -1188,7 +1186,6 @@ main .center_container .black_pick_wrap .box_btn div i {
 main .center_container .black_pick_wrap .box_btn .swiper-button-prev06 {
   position: absolute;
   left: -20px;
-  top: 200px;
   z-index: 99;
 }
 main .center_container .black_pick_wrap .box_btn .swiper-button-prev06::after {
@@ -1197,7 +1194,6 @@ main .center_container .black_pick_wrap .box_btn .swiper-button-prev06::after {
 main .center_container .black_pick_wrap .box_btn .swiper-button-next06 {
   position: absolute;
   right: -20px;
-  top: 200px;
   z-index: 99;
 }
 main .center_container .black_pick_wrap .box_btn .swiper-button-next06::after {
@@ -1205,24 +1201,21 @@ main .center_container .black_pick_wrap .box_btn .swiper-button-next06::after {
 }
 main .center_container .black_pick_wrap .black_pick_box {
   overflow-x: hidden;
+  margin-bottom: 20px;
 }
-main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .swiper-slide {
+main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .swiper-slide .black_pick_detail {
-  margin-left: 25px;
+main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .black_pick_detail {
   width: 25%;
 }
-main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .swiper-slide .black_pick_detail img {
+main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .black_pick_detail img {
   width: 100%;
   border-radius: 15px;
-}
-main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .swiper-slide .black_pick_detail:first-child {
-  margin-left: 0;
 }
 main .app_bnr {
   width: calc(100% - 60px);
@@ -1233,11 +1226,14 @@ main .app_bnr {
 main .app_bnr .app_bnr_img img {
   width: 100%;
   border-radius: 20px;
+  height: 344px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .app_bnr .app_txt_box {
   position: absolute;
   z-index: 99;
-  top: 70px;
+  top: 40px;
   left: 50px;
 }
 main .app_bnr .app_txt_box .app_txt {

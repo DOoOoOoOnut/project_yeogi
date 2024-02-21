@@ -22,7 +22,7 @@ main {
                         .checkbox-wrapper-4 {
                             label {
                                 .agree_title {
-                                    font-size: $title18; font-weight: $weight600;
+                                    font-size: $title18; font-family: $familyBold;
                                     em {
                                         font-size: $small13;
                                         color: #999;
@@ -63,11 +63,16 @@ main {
                     background-color: #fafafa;
                     margin-top: 20px;
                     #next_btn {
-                        font-size: $title18; font-weight: $weight600;
+                        font-size: $title18; font-family: $familyBold;
                         color: #d6d6d6;
                         display: block;
-                        text-align: $text-c;
+                        text-align: $text-c; border-radius: 10px;
                         width: 100%; height: 56px;
+                        cursor: not-allowed;
+                    }
+                    .active {
+                        color:#fff !important; background-color: $mainColor-b;
+                        cursor: pointer !important;
                     }
                 }
             }
