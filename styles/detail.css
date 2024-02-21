@@ -706,18 +706,21 @@ main section .room .box2 .contents .review_box .thum_review {
   position: relative;
 }
 main section .room .box2 .contents .review_box .thum_review #thum_review_contents {
-  width: 100%;
+  width: calc(100% - 400px);
   overflow: hidden;
 }
 main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper {
   display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   padding: 20px;
 }
 main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review {
   background: #FAFAFA;
-  padding: 20px 22px 20px 20px;
+  padding: 20px 0;
   border-radius: 15px;
-  text-align: right;
+  text-align: center;
+  height: 150px;
 }
 main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review i {
   font-size: 1.5rem;
@@ -734,54 +737,6 @@ main section .room .box2 .contents .review_box .thum_review #thum_review_content
   color: #333;
 }
 main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review span em {
-  font-size: 0.688rem;
-  color: #999;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review2 {
-  background: #FAFAFA;
-  padding: 20px 22px 20px 20px;
-  border-radius: 15px;
-  text-align: right;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review2 i {
-  font-size: 1.5rem;
-  color: rgb(188, 196, 204);
-  padding-right: 10px;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review2 p {
-  font-size: 0.938rem;
-  color: #707070;
-  padding-bottom: 10px;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review2 span {
-  font-size: 1rem;
-  color: #333;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review2 span em {
-  font-size: 0.688rem;
-  color: #999;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review3 {
-  background: #FAFAFA;
-  padding: 20px 22px 20px 20px;
-  border-radius: 15px;
-  text-align: right;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review3 i {
-  font-size: 1.5rem;
-  color: rgb(188, 196, 204);
-  padding-right: 10px;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review3 p {
-  font-size: 0.938rem;
-  color: #707070;
-  padding-bottom: 10px;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review3 span {
-  font-size: 1rem;
-  color: #333;
-}
-main section .room .box2 .contents .review_box .thum_review #thum_review_contents .swiper-wrapper .detail_review3 span em {
   font-size: 0.688rem;
   color: #999;
 }
@@ -802,6 +757,7 @@ main section .room .box2 .contents .review_box .thum_review .swiper-button-prev0
   position: absolute;
   left: 12px;
   top: 10px;
+  z-index: 999;
 }
 main section .room .box2 .contents .review_box .thum_review .swiper-button-prev02::after {
   display: none;
@@ -826,6 +782,18 @@ main section .room .box2 .contents .review_box .thum_review .swiper-button-next0
   position: absolute;
   left: 15px;
   top: 10px;
+  z-index: 999;
+}
+main section .room .box2 .contents .review_box .thum_review::after {
+  content: "";
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(-90deg, white, transparent);
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 950;
 }
 main section .room .box2 .contents .additional_service {
   padding: 20px 0;
@@ -1466,6 +1434,7 @@ main section .room .real_review .title .filter .open button i {
   color: #333;
 }
 main section .room .real_review .review_user {
+  max-width: 1400px;
   display: flex;
   flex-flow: row nowrap;
   padding: 30px 0;
@@ -1496,6 +1465,7 @@ main section .room .real_review .review_user .user_info .user .user_name {
   color: #333;
 }
 main section .room .real_review .review_user .photo_review {
+  width: 1300px;
   padding-left: 50px;
 }
 main section .room .real_review .review_user .photo_review .score i {
@@ -1507,11 +1477,75 @@ main section .room .real_review .review_user .photo_review .score em {
   color: #333;
   padding-left: 5px;
 }
+main section .room .real_review .review_user .photo_review .thumnail {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+main section .room .real_review .review_user .photo_review .thumnail #thum_photo {
+  width: calc(100% - 1000px);
+  overflow: hidden;
+}
 main section .room .real_review .review_user .photo_review .thumnail #thum_photo .photo .view_slide img {
   width: 210px;
   height: 210px;
   border-radius: 10px;
   margin-left: 15px;
+}
+main section .room .real_review .review_user .photo_review .thumnail .thumnail::after {
+  content: "";
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(-90deg, white, transparent);
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 950;
+}
+main section .room .real_review .review_user .photo_review .thumnail .swiper-button-prev03 {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 1%;
+  top: 105px;
+  z-index: 999;
+}
+main section .room .real_review .review_user .photo_review .thumnail .swiper-button-prev03 i {
+  color: #000;
+  font-size: 1.25rem;
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  z-index: 999;
+}
+main section .room .real_review .review_user .photo_review .thumnail .swiper-button-prev03::after {
+  display: none;
+}
+main section .room .real_review .review_user .photo_review .thumnail .swiper-button-next03::after {
+  display: none;
+}
+main section .room .real_review .review_user .photo_review .thumnail .swiper-button-next03 {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 1%;
+  top: 100px;
+  z-index: 999;
+}
+main section .room .real_review .review_user .photo_review .thumnail .swiper-button-next03 i {
+  color: #000;
+  font-size: 1.25rem;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  z-index: 999;
 }
 main section .room .real_review .review_user .photo_review p {
   font-size: 0.875rem;
