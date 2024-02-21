@@ -1,5 +1,6 @@
 @import 'common';
 
+body {overflow-x: hidden;}
 main {
     max-width:1400px; margin:0 auto;
     .main_container {
@@ -328,9 +329,8 @@ main {
                         }
                         //모바일 검색창
                         .search_small {
-                            padding:15px; border-radius:5px;
-                            width:100%;
-                            // display:none;
+                            padding:15px; width:100%;
+                            display:none;
                             .user_search {
                                 i {margin-right:5px; color:#707070;}
                                 #search_input_m {}
@@ -347,8 +347,9 @@ main {
             // background-image:url(https://images.unsplash.com/photo-1633839202556-cf6ec22e95f0?q=80&w=2105&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
             // background-image:url(https://images.unsplash.com/photo-1596941248238-0d49dcaa4263?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
             background-image:url(https://images.unsplash.com/photo-1682685796766-0fddd3e480de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            position:absolute; z-index:-1; top:0; left:0;
+            width:100%; height:530px;
             background-position:center; background-size:cover;
-            height:100%;
         }
     }
     .center_container {
@@ -376,13 +377,13 @@ main {
                         }
                     }
                     .swiper-button-prev {
-                        position:absolute; left:-20px; top:90px; z-index:99;
+                        position:absolute; left:-20px; z-index:99;
                     }
                     .swiper-button-prev::after {
                         display: none;
                     }
                     .swiper-button-next {
-                        position:absolute; right:-20px; top:90px; z-index:99;
+                        position:absolute; right:-20px; z-index:99;
                     }
                     .swiper-button-next::after {
                         display: none;
@@ -390,8 +391,8 @@ main {
                 }
                 .swiper-container {
                     .swiper-wrapper {
+                        @include flex-rnsc;
                         .swiper-slide {
-                            @include flex-rnsc;
                             a {
                                 img {}
                                 span {}
@@ -418,7 +419,7 @@ main {
                 position:relative;
                 @include flex-rnsc;
                 .box_btn {
-                    //공통
+                    display:none;
                     div {
                         width:40px;
                         i {
@@ -430,13 +431,13 @@ main {
                         }
                     }
                     .swiper-button-prev {
-                        position:absolute; left:-20px; top:90px; z-index:99;
+                        position:absolute; left:-20px; z-index:99;
                     }
                     .swiper-button-prev::after {
                         display: none;
                     }
                     .swiper-button-next {
-                        position:absolute; right:-20px; top:90px; z-index:99;
+                        position:absolute; right:-20px; z-index:99;
                     }
                     .swiper-button-next::after {
                         display: none;
@@ -445,27 +446,24 @@ main {
                 .event_bnr_detail {
                     overflow-x:hidden;
                     .swiper-wrapper {
-                        .swiper-slide {
-                            @include flex-rnsc;
-                            a {
-                                width:calc(100% / 3);
-                                margin-left:25px;
-                                img {width:100%; border-radius:10px;}
-                            }
-                            a:first-child {margin-left:0}
+                        @include flex-rnsc;
+                        a {
+                            width:calc(100% / 3);
+                            img {width:100%; border-radius:10px;}
                         }
                     }
                 }
-                .swiper-pagination {
-                    bottom:-20px;
-                }
+                .swiper-pagination {bottom:-20px;}
             }
+            .event_box:hover .box_btn {display:block;}
         }
         //국내 인기 여행지
         .kr_hot_travel_wrap {
             margin-bottom:50px;
+            position:relative;
             .box_btn {
-                position:relative;
+                width:100%;
+                position:absolute; top:40%;
                 div {
                     width:40px;
                     i {
@@ -477,15 +475,15 @@ main {
                     }
                 }
                 .swiper-button-prev01 {
-                    position:absolute; left:-20px; top:90px; z-index:99;
+                    position:absolute; left:-20px; z-index:99;
                     //js
-                    display:none;
+                    // display:none;
                 }
                 .swiper-button-prev01::after {
                     display:none;
                 }
                 .swiper-button-next01 {
-                    position:absolute; right:-20px; top:90px; z-index:99;
+                    position:absolute; right:-20px; z-index:99;
                 }
                 .swiper-button-next01::after {
                     display:none;
@@ -494,30 +492,30 @@ main {
             .kr_travel_box {
                 overflow-x:hidden;
                 .kr_travel_detail {
-                    .swiper-slide {
-                        @include flex-rnsc;
-                        width:100%;
-                        .kr_travel {
-                            @include flex-cncf;
-                            margin-left:25px;
-                            width:calc(100% / 6);
-                            img {width:100%; border-radius:10px;}
-                            img:hover {filter:brightness(80%);}
-                            .kr_travel_txt {
-                                font-size:$subT15;
-                                padding:12px 4px 20px;
-                            }
+                    @include flex-rnsc;
+                    width:100%;
+                    .kr_travel {
+                        @include flex-cncf;
+                        width:calc(100% / 6);
+                        min-width:156px;
+                        img {width:100%; border-radius:10px;}
+                        img:hover {filter:brightness(80%);}
+                        .kr_travel_txt {
+                            font-size:$subT15;
+                            padding:12px 4px 20px;
                         }
-                        .kr_travel:first-child {margin-left:0}
                     }
+                    .kr_travel:first-child {margin-left:0}
                 }
             }
         }
         //해외 인기 여행지
         .over_hot_travel_wrap {
             margin-bottom:50px;
+            position:relative;
             .box_btn {
-                position:relative;
+                width:100%;
+                position:absolute; top:40%;
                 div {
                     width:40px;
                     i {
@@ -529,15 +527,15 @@ main {
                     }
                 }
                 .swiper-button-prev02 {
-                    position:absolute; left:-20px; top:90px; z-index:99;
+                    position:absolute; left:-20px; z-index:99;
                     //js
-                    display:none;
+                    // display:none;
                 }
                 .swiper-button-prev02::after {
                     display:none;
                 }
                 .swiper-button-next02 {
-                    position:absolute; right:-20px; top:90px; z-index:99;
+                    position:absolute; right:-20px; z-index:99;
                 }
                 .swiper-button-next02::after {
                     display:none;
@@ -546,34 +544,32 @@ main {
             .over_travel_box {
                 overflow-x:hidden;
                 .over_travel_detail {
-                    .swiper-slide {
-                        @include flex-rnsc;
-                        width:100%;
-                        .over_travel {
-                            @include flex-cncf;
-                            margin-left:25px;
-                            width:calc(100% / 6);
-                            img {width:100%; border-radius:10px;}
-                            img:hover {filter:brightness(80%);}
-                            .over_travel_txt {
-                                font-size:$subT15;
-                                padding:12px 4px 20px;
-                            }
+                    @include flex-rnsc;
+                    width:100%;
+                    .over_travel {
+                        @include flex-cncf;
+                        min-width:156px;
+                        width:calc(100% / 6);
+                        img {width:100%; border-radius:10px;}
+                        img:hover {filter:brightness(80%);}
+                        .over_travel_txt {
+                            font-size:$subT15;
+                            padding:12px 4px 20px;
                         }
-                        .over_travel:first-child {margin-left:0}
                     }
                 }
             }
         }
         //인기 추천 숙소
         .recommend_room_wrap {
-            margin-bottom:50px;
+            margin-bottom:50px; position:relative;
             .sub_menu_box {
                 margin-bottom:10px;
                 .sub_menu {
                     border:1px solid #d6d6d6;
                     padding:6px 14px; border-radius:20px;
                     font-size:$subC14; margin-right:4px;
+                    font-family:$familyMedium;
                 }
                 //js
                 .menu1 {
@@ -582,7 +578,8 @@ main {
                 }
             }
             .box_btn {
-                position:relative;
+                width:100%;
+                position:absolute; top:35%;
                 div {
                     width:40px; display:block;
                     i {
@@ -594,15 +591,15 @@ main {
                     }
                 }
                 .swiper-button-prev03 {
-                    position:absolute; left:-20px; top:90px; z-index:99;
+                    position:absolute; left:-20px; z-index:99;
                     //js
-                    display:none;
+                    // display:none;
                 }
                 .swiper-button-prev03::after {
                     display:none;
                 }
                 .swiper-button-next03 {
-                    position:absolute; right:-20px; top:90px; z-index:99;
+                    position:absolute; right:-20px; z-index:99;
                 }
                 .swiper-button-next03::after {
                     display:none;
@@ -611,63 +608,58 @@ main {
             .room_box {
                 overflow-x:hidden;
                 .swiper-wrapper {
-                    .swiper-slide {
-                        @include flex-rnsc;
-                        width:100%;
-                        .room {
-                            @include flex-cncf;
+                    @include flex-rnsc;
+                    width:100%;
+                    .room {
+                        @include flex-cncf; min-width:240px;
+                        .photo {
                             width:100%;
-                            .photo {
-                                margin-left:25px;
-                                width:calc(100% / 4);
-                                img {width:100%; border-radius:10px;}
-                            }
-                            .photo:first-child {margin-left:0;}
-                            .contents {
-                                .title_wrap {
-                                    .type {
-                                        font-size:$small11; color:#999;
-                                        margin:10px 0 5px;
-                                    }
-                                    .title {
-                                        .special {}
-                                        .name {font-size:$defalt16; font-weight:$weight600;}
-                                    }
-                                    .location {
-                                        margin:3px 0 5px;
-                                        .city {}
-                                        .more {font-size:$small13; color:#999;}
-                                    }
-                                    .review {
-                                        margin-bottom:15px;
-                                        .point_wrap {
-                                            background-color:#ffad0a;
-                                            padding:0 1px 3px 4px; border-radius:5px;
-                                            margin-right:7px;
-                                            i {font-size:$small11;}
-                                            .point {
-                                                font-size:$small12;
-                                                font-weight:$weight600;
-                                            }
-                                        }
-                                        .comment {font-size:$small13; color:#999;}
-                                    }
+                            img {width:100%; border-radius:10px;}
+                        }
+                        .contents {
+                            .title_wrap {
+                                .type {
+                                    font-size:$small11; color:#999;
+                                    margin:10px 0 5px;
                                 }
-                                .price_info {
-                                    .coupon {
-                                        font-size:$small12; color:#999;
-                                        margin-bottom:3px;
+                                .title {
+                                    .special {}
+                                    .name {font-size:$defalt16; font-weight:$weight600;}
+                                }
+                                .location {
+                                    margin:3px 0 5px;
+                                    .city {}
+                                    .more {font-size:$small13; color:#999;}
+                                }
+                                .review {
+                                    margin-bottom:15px;
+                                    .point_wrap {
+                                        background-color:#ffad0a;
+                                        padding:0 1px 3px 4px; border-radius:5px;
+                                        margin-right:7px;
+                                        i {font-size:$small11;}
+                                        .point {
+                                            font-size:$small12;
+                                            font-weight:$weight600;
+                                        }
                                     }
-                                    .price {
-                                        .now {
-                                            font-size:$title18;
-                                            font-weight:600;
-                                            span {font-size:$subT15;}
-                                        }
-                                        .origin {
-                                            font-size:$subC14; color:#999;
-                                            text-decoration:line-through;
-                                        }
+                                    .comment {font-size:$small13; color:#999;}
+                                }
+                            }
+                            .price_info {
+                                .coupon {
+                                    font-size:$small12; color:#999;
+                                    margin-bottom:3px;
+                                }
+                                .price {
+                                    .now {
+                                        font-size:$title18;
+                                        font-weight:600;
+                                        span {font-size:$subT15;}
+                                    }
+                                    .origin {
+                                        font-size:$subC14; color:#999;
+                                        text-decoration:line-through;
                                     }
                                 }
                             }
@@ -678,7 +670,7 @@ main {
         }
         //오늘 체크인 호텔 특가
         .today_special_wrap {
-            margin-bottom:50px;
+            margin-bottom:50px; position:relative;
             .title_box {
                 @include flex-rnsc;
                 margin-bottom:15px;
@@ -688,7 +680,8 @@ main {
                 }
             }
             .box_btn {
-                position:relative;
+                width:100%;
+                position:absolute; top:28%;
                 div {
                     width:40px; display:block;
                     i {
@@ -700,15 +693,15 @@ main {
                     }
                 }
                 .swiper-button-prev04 {
-                    position:absolute; left:-20px; top:90px; z-index:99;
+                    position:absolute; left:-20px; z-index:99;
                     //js
-                    display:none;
+                    // display:none;
                 }
                 .swiper-button-prev04::after {
                     display:none;
                 }
                 .swiper-button-next04 {
-                    position:absolute; right:-20px; top:90px; z-index:99;
+                    position:absolute; right:-20px; z-index:99;
                 }
                 .swiper-button-next04::after {
                     display:none;
@@ -717,66 +710,61 @@ main {
             .room_box {
                 overflow-x:hidden;
                 .swiper-wrapper {
-                    .swiper-slide {
-                        @include flex-rnsc;
-                        width:100%;
-                        .room {
-                            @include flex-cncf;
+                    @include flex-rnsc;
+                    width:100%;
+                    .room {
+                        @include flex-cncf; min-width:240px;
+                        .photo {
                             width:100%;
-                            .photo {
-                                margin-left:25px;
-                                width:calc(100% / 4);
-                                img {width:100%; border-radius:10px;}
-                            }
-                            .photo:first-child {margin-left:0;}
-                            .contents {
-                                .title_wrap {
-                                    .type {
-                                        font-size:$small11; color:#999;
-                                        margin:10px 0 5px;
-                                    }
-                                    .title {
-                                        .special {
-                                            font-size:$defalt16; font-weight:$weight600;
-                                            margin-right:5px;
-                                        }
-                                        .name {font-size:$defalt16; font-weight:$weight600;}
-                                    }
-                                    .location {
-                                        margin:3px 0 5px;
-                                        .city {font-size:$small13; color:#555;}
-                                        .more {font-size:$small13; color:#999;}
-                                    }
-                                    .review {
-                                        margin-bottom:15px;
-                                        .point_wrap {
-                                            background-color:#ffad0a;
-                                            padding:0 1px 3px 4px; border-radius:5px;
-                                            margin-right:7px;
-                                            i {font-size:$small11;}
-                                            .point {
-                                                font-size:$small12;
-                                                font-weight:$weight600;
-                                            }
-                                        }
-                                        .comment {font-size:$small13; color:#999;}
-                                    }
+                            img {width:100%; border-radius:10px;}
+                        }
+                        .contents {
+                            .title_wrap {
+                                .type {
+                                    font-size:$small11; color:#999;
+                                    margin:10px 0 5px;
                                 }
-                                .price_info {
-                                    .coupon {
-                                        font-size:$small12; color:#999;
-                                        margin-bottom:3px;
+                                .title {
+                                    .special {
+                                        font-size:$defalt16; font-weight:$weight600;
+                                        margin-right:5px;
                                     }
-                                    .price {
-                                        .now {
-                                            font-size:$title18;
-                                            font-weight:600;
-                                            span {font-size:$subT15;}
+                                    .name {font-size:$defalt16; font-weight:$weight600;}
+                                }
+                                .location {
+                                    margin:3px 0 5px;
+                                    .city {font-size:$small13; color:#555;}
+                                    .more {font-size:$small13; color:#999;}
+                                }
+                                .review {
+                                    margin-bottom:15px;
+                                    .point_wrap {
+                                        background-color:#ffad0a;
+                                        padding:0 1px 3px 4px; border-radius:5px;
+                                        margin-right:7px;
+                                        i {font-size:$small11;}
+                                        .point {
+                                            font-size:$small12;
+                                            font-weight:$weight600;
                                         }
-                                        .origin {
-                                            font-size:$subC14; color:#999;
-                                            text-decoration:line-through;
-                                        }
+                                    }
+                                    .comment {font-size:$small13; color:#999;}
+                                }
+                            }
+                            .price_info {
+                                .coupon {
+                                    font-size:$small12; color:#999;
+                                    margin-bottom:3px;
+                                }
+                                .price {
+                                    .now {
+                                        font-size:$title18;
+                                        font-weight:600;
+                                        span {font-size:$subT15;}
+                                    }
+                                    .origin {
+                                        font-size:$subC14; color:#999;
+                                        text-decoration:line-through;
                                     }
                                 }
                             }
@@ -787,7 +775,7 @@ main {
         }
         //이번주 hot 인기 펜션
         .hot_pension_wrap {
-            margin-bottom:50px;
+            margin-bottom:50px; position:relative;
             .title_box {
                 @include flex-rnsc;
                 margin-bottom:15px;
@@ -797,7 +785,8 @@ main {
                 }
             }
             .box_btn {
-                position:relative;
+                width:100%;
+                position:absolute; top:28%;
                 div {
                     width:40px; display:block;
                     i {
@@ -809,15 +798,15 @@ main {
                     }
                 }
                 .swiper-button-prev05 {
-                    position:absolute; left:-20px; top:90px; z-index:99;
+                    position:absolute; left:-20px; z-index:99;
                     //js
-                    display:none;
+                    // display:none;
                 }
                 .swiper-button-prev05::after {
                     display:none;
                 }
                 .swiper-button-next05 {
-                    position:absolute; right:-20px; top:90px; z-index:99;
+                    position:absolute; right:-20px; z-index:99;
                 }
                 .swiper-button-next05::after {
                     display:none;
@@ -826,65 +815,60 @@ main {
             .room_box {
                 overflow-x:hidden;
                 .swiper-wrapper {
-                    .swiper-slide {
-                        @include flex-rnsc;
-                        width:100%;
-                        .room {
-                            @include flex-cncf;
+                    @include flex-rnsc;
+                    width:100%;
+                    .room {
+                        @include flex-cncf; min-width:240px;
+                        .photo {
                             width:100%;
-                            .photo {
-                                margin-left:25px;
-                                width:calc(100% / 4);
-                                img {width:100%; border-radius:10px;}
-                            }
-                            .photo:first-child {margin-left:0;}
-                            .contents {
-                                .title_wrap {
-                                    .type {
-                                        font-size:$small11; color:#999;
-                                        margin:10px 0 5px;
-                                    }
-                                    .title {
-                                        .special {
-                                            font-size:$defalt16; font-weight:$weight600;
-                                        }
-                                        .name {font-size:$defalt16; font-weight:$weight600;}
-                                    }
-                                    .location {
-                                        margin:3px 0 5px;
-                                        .city {font-size:$small13; color:#555;}
-                                        .more {font-size:$small13; color:#999;}
-                                    }
-                                    .review {
-                                        margin-bottom:15px;
-                                        .point_wrap {
-                                            background-color:#ffad0a;
-                                            padding:0 1px 3px 4px; border-radius:5px;
-                                            margin-right:7px;
-                                            i {font-size:$small11;}
-                                            .point {
-                                                font-size:$small12;
-                                                font-weight:$weight600;
-                                            }
-                                        }
-                                        .comment {font-size:$small13; color:#999;}
-                                    }
+                            img {width:100%; border-radius:10px;}
+                        }
+                        .contents {
+                            .title_wrap {
+                                .type {
+                                    font-size:$small11; color:#999;
+                                    margin:10px 0 5px;
                                 }
-                                .price_info {
-                                    .coupon {
-                                        font-size:$small12; color:#999;
-                                        margin-bottom:3px;
+                                .title {
+                                    .special {
+                                        font-size:$defalt16; font-weight:$weight600;
                                     }
-                                    .price {
-                                        .now {
-                                            font-size:$title18;
-                                            font-weight:600;
-                                            span {font-size:$subT15;}
+                                    .name {font-size:$defalt16; font-weight:$weight600;}
+                                }
+                                .location {
+                                    margin:3px 0 5px;
+                                    .city {font-size:$small13; color:#555;}
+                                    .more {font-size:$small13; color:#999;}
+                                }
+                                .review {
+                                    margin-bottom:15px;
+                                    .point_wrap {
+                                        background-color:#ffad0a;
+                                        padding:0 1px 3px 4px; border-radius:5px;
+                                        margin-right:7px;
+                                        i {font-size:$small11;}
+                                        .point {
+                                            font-size:$small12;
+                                            font-weight:$weight600;
                                         }
-                                        .origin {
-                                            font-size:$subC14; color:#999;
-                                            text-decoration:line-through;
-                                        }
+                                    }
+                                    .comment {font-size:$small13; color:#999;}
+                                }
+                            }
+                            .price_info {
+                                .coupon {
+                                    font-size:$small12; color:#999;
+                                    margin-bottom:3px;
+                                }
+                                .price {
+                                    .now {
+                                        font-size:$title18;
+                                        font-weight:600;
+                                        span {font-size:$subT15;}
+                                    }
+                                    .origin {
+                                        font-size:$subC14; color:#999;
+                                        text-decoration:line-through;
                                     }
                                 }
                             }
@@ -895,6 +879,7 @@ main {
         }
         //이번주 블랙 pick
         .black_pick_wrap {
+            position:relative; 
             .title_box {
                 display:flex; flex-flow:column nowrap;
                 align-items:flex-start;
@@ -902,7 +887,8 @@ main {
                 p {color:#999;}
             }
             .box_btn {
-                position:relative;
+                width:100%;
+                position:absolute; top:50%;
                 div {
                     width:40px; display:block;
                     i {
@@ -914,7 +900,7 @@ main {
                     }
                 }
                 .swiper-button-prev06 {
-                    position:absolute; left:-20px; top:200px; z-index:99;
+                    position:absolute; left:-20px; z-index:99;
                     //js
                     // display:none;
                 }
@@ -922,24 +908,20 @@ main {
                     display:none;
                 }
                 .swiper-button-next06 {
-                    position:absolute; right:-20px; top:200px; z-index:99;
+                    position:absolute; right:-20px; z-index:99;
                 }
                 .swiper-button-next06::after {
                     display:none;
                 }
             }
             .black_pick_box {
-                overflow-x:hidden;
+                overflow-x:hidden; margin-bottom:20px;
                 .swiper-wrapper {
-                    .swiper-slide {
-                        @include flex-rnsc;
-                        width:100%;
-                        .black_pick_detail {
-                            margin-left:25px;
-                            width:calc(100% / 4);
-                            img {width:100%; border-radius:15px;}
-                        }
-                        .black_pick_detail:first-child {margin-left:0;}
+                    @include flex-rnsc;
+                    width:100%;
+                    .black_pick_detail {
+                        width:calc(100% / 4);
+                        img {width:100%; border-radius:15px;}
                     }
                 }
             }
@@ -950,10 +932,10 @@ main {
         width:calc(100% - 60px); margin:0 auto;
         position:relative; margin-bottom:50px;
         .app_bnr_img {
-            img {width:100%; border-radius:20px;}
+            img {width:100%; border-radius:20px; height:344px; object-fit:cover;}
         }
         .app_txt_box {
-            position:absolute; z-index:99; top:70px; left:50px;
+            position:absolute; z-index:99; top:40px; left:50px;
             .app_txt {
                 @include flex-cncf;
                 em {
