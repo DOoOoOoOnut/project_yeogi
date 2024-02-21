@@ -72,94 +72,96 @@
                                             </div>
                                             <div class="contents">
                                                 <div class="left">
-                                                    <div class="open_filter">
-                                                        <div class="top">
-                                                            <h2>필터</h2>
-                                                            <a href="#" class="reset"><i class="fa-solid fa-rotate-right"></i>초기화</a>
-                                                        </div>
-                                                        <div class="soldout">
-                                                            <div class="checkbox-wrapper-4">
-                                                                <input class="inp-cbx chk" id="soldout_chk_open" type="checkbox"/>
-                                                                <label class="cbx" for="soldout_chk_open">
-                                                                    <span>
-                                                                        <svg width="12px" height="10px">
-                                                                            <use xlink:href="#check-4"></use>
-                                                                        </svg>
-                                                                    </span>
-                                                                    <span>매진 숙소 제외</span>
-                                                                </label>
-                                                                <svg class="inline-svg">
-                                                                    <symbol id="check-4" viewbox="0 0 12 10">
-                                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                                                    </symbol>
-                                                                </svg>
+                                                    <!-- <template id="filter_template">
+                                                        <div class="open_filter">
+                                                            <div class="top">
+                                                                <h2>필터</h2>
+                                                                <a href="#" class="reset"><i class="fa-solid fa-rotate-right"></i>초기화</a>
+                                                            </div>
+                                                            <div class="soldout">
+                                                                <div class="checkbox-wrapper-4">
+                                                                    <input class="inp-cbx chk" id="soldout_chk_open" type="checkbox"/>
+                                                                    <label class="cbx" for="soldout_chk_open">
+                                                                        <span>
+                                                                            <svg width="12px" height="10px">
+                                                                                <use xlink:href="#check-4"></use>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>매진 숙소 제외</span>
+                                                                    </label>
+                                                                    <svg class="inline-svg">
+                                                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                                        </symbol>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                            <div class="type">
+                                                                <h3>숙소유형</h3>
+                                                                <div class="contents" id="type_list">
+                                                                    <template id="type_template"><label><input type="radio" name="type" class="chk" value="{{type_name}}"><span class="circle"></span>{{type_name}}</label></template>
+                                                                </div>
+                                                            </div>
+                                                            <div class="price_range">
+                                                                <h3>가격<span>1박 기준</span></h3>
+                                                            </div>
+                                                            <div class="taste">
+                                                                <h3>#취향</h3>
+                                                                <div class="chk_wrap" id="taste_list">
+                                                                    <template id="taste_template"><label><input type="checkbox" name="user_taste" class="user_taste chk" value="{{taste_name}}">{{taste_name}}</label></template>
+                                                                </div>
+                                                            </div>
+                                                            <div class="discount">
+                                                                <h3>할인혜택</h3>
+                                                                <div class="chk_wrap" id="discount_list">
+                                                                    <template id="discount_template"><label><input type="checkbox" name="discount" class="discount_chk chk" value="{{discount_name}}">{{discount_name}}</label></template>
+                                                                </div>
+                                                            </div>
+                                                            <div class="reservation">
+                                                                <h3>예약유형</h3>
+                                                                <div class="checkbox-wrapper-4">
+                                                                    <input class="inp-cbx chk" id="reservaiton_type_open" type="checkbox"/>
+                                                                    <label class="cbx chk" for="reservaiton_type_open">
+                                                                        <span>
+                                                                            <svg width="12px" height="10px">
+                                                                                <use xlink:href="#check-4"></use>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>대실 예약</span>
+                                                                    </label>
+                                                                    <svg class="inline-svg">
+                                                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                                        </symbol>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rank">
+                                                                <h3>등급</h3>
+                                                                <div class="chk_wrap">
+                                                                    <template id="rank_template"><label><input type="checkbox" name="rank" class="rank_chk chk" value="{{rank_name}}"><span>{{rank_name}}</span></label></template>
+                                                                </div>
+                                                            </div>
+                                                            <div class="facility">
+                                                                <h3>시설</h3>
+                                                                <dl class="contents">
+                                                                    <dt>공용시설</dt>
+                                                                    <dd class="public" id="public_list">
+                                                                        <template id="public_template"><label><input type="checkbox" name="public_facility" class="public_chk chk" value="{{public_name}}"><span>{{public_name}}</span></label></template>
+                                                                    </dd>
+                                                                    <dt>객실 내 시설</dt>
+                                                                    <dd class="inside" id="inside_list">
+                                                                        <template id="inside_template"><label><input type="checkbox" name="inside_facility" class="inside_chk chk" value="{{inside_name}}"><span>{{inside_name}}</span></label></template>
+                                                                    </dd>
+                                                                    <dt>기타시설</dt>
+                                                                    <dd class="etc" id="etc_list">
+                                                                        <template id="etc_template"><label><input type="checkbox" name="ect_facility" class="ect_chk chk" value="{{etc_name}}"><span>{{etc_name}}</span></label></template>
+                                                                    </dd>
+                                                                </dl>
                                                             </div>
                                                         </div>
-                                                        <div class="type">
-                                                            <h3>숙소유형</h3>
-                                                            <div class="contents" id="type_list">
-                                                                <template id="type_template"><label><input type="radio" name="type" class="chk" value="{{type_name}}"><span class="circle"></span>{{type_name}}</label></template>
-                                                            </div>
-                                                        </div>
-                                                        <div class="price_range">
-                                                            <h3>가격<span>1박 기준</span></h3>
-                                                        </div>
-                                                        <div class="taste">
-                                                            <h3>#취향</h3>
-                                                            <div class="chk_wrap" id="taste_list">
-                                                                <template id="taste_template"><label><input type="checkbox" name="user_taste" class="user_taste chk" value="{{taste_name}}">{{taste_name}}</label></template>
-                                                            </div>
-                                                        </div>
-                                                        <div class="discount">
-                                                            <h3>할인혜택</h3>
-                                                            <div class="chk_wrap" id="discount_list">
-                                                                <template id="discount_template"><label><input type="checkbox" name="discount" class="discount_chk chk" value="{{discount_name}}">{{discount_name}}</label></template>
-                                                            </div>
-                                                        </div>
-                                                        <div class="reservation">
-                                                            <h3>예약유형</h3>
-                                                            <div class="checkbox-wrapper-4">
-                                                                <input class="inp-cbx chk" id="reservaiton_type_open" type="checkbox"/>
-                                                                <label class="cbx chk" for="reservaiton_type_open">
-                                                                    <span>
-                                                                        <svg width="12px" height="10px">
-                                                                            <use xlink:href="#check-4"></use>
-                                                                        </svg>
-                                                                    </span>
-                                                                    <span>대실 예약</span>
-                                                                </label>
-                                                                <svg class="inline-svg">
-                                                                    <symbol id="check-4" viewbox="0 0 12 10">
-                                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                                                    </symbol>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                        <div class="rank">
-                                                            <h3>등급</h3>
-                                                            <div class="chk_wrap">
-                                                                <template id="rank_template"><label><input type="checkbox" name="rank" class="rank_chk chk" value="{{rank_name}}"><span>{{rank_name}}</span></label></template>
-                                                            </div>
-                                                        </div>
-                                                        <div class="facility">
-                                                            <h3>시설</h3>
-                                                            <dl class="contents">
-                                                                <dt>공용시설</dt>
-                                                                <dd class="public" id="public_list">
-                                                                    <template id="public_template"><label><input type="checkbox" name="public_facility" class="public_chk chk" value="{{public_name}}"><span>{{public_name}}</span></label></template>
-                                                                </dd>
-                                                                <dt>객실 내 시설</dt>
-                                                                <dd class="inside" id="inside_list">
-                                                                    <template id="inside_template"><label><input type="checkbox" name="inside_facility" class="inside_chk chk" value="{{inside_name}}"><span>{{inside_name}}</span></label></template>
-                                                                </dd>
-                                                                <dt>기타시설</dt>
-                                                                <dd class="etc" id="etc_list">
-                                                                    <template id="etc_template"><label><input type="checkbox" name="ect_facility" class="ect_chk chk" value="{{etc_name}}"><span>{{etc_name}}</span></label></template>
-                                                                </dd>
-                                                            </dl>
-                                                        </div>
-                                                    </div>
-                                                    <div class="\">
+                                                    </template> -->
+                                                    <div class="room_container">
                                                         <h2>경주 숙소 검색 결과</h2>
                                                         <div class="room_container">
                                                             <a href="#" class="room">
@@ -200,7 +202,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="filter">
+                            <!-- <div class="filter">
                                 <div class="top">
                                     <h2>필터</h2>
                                     <a href="#" class="reset"><i class="fa-solid fa-rotate-right"></i>초기화</a>
@@ -237,7 +239,6 @@
                                 </div>
                                 <div class="price_range">
                                     <h3>가격<span>1박 기준</span></h3>
-                                    <!-- js -->
                                 </div>
                                 <div class="taste">
                                     <h3>#취향</h3>
@@ -251,7 +252,6 @@
                                         <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#뷰맛집"><span>#뷰맛집</span></label>
                                         <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#연박특가"><span>#연박특가</span></label>
                                         <label><input type="checkbox" name="user_taste" class="user_taste chk" value="#리뷰좋은"><span>#리뷰좋은</span></label>
-                                        <!-- 이후 js 고려해서 추가 / 삭제 -->
                                     </div>
                                 </div>
                                 <div class="discount">
@@ -326,7 +326,96 @@
                                         </dd>
                                     </dl>
                                 </div>
-                            </div>
+                            </div> -->
+                            <template id="filter_template">
+                                <div class="open_filter">
+                                    <div class="top">
+                                        <h2>필터</h2>
+                                        <a href="#" class="reset"><i class="fa-solid fa-rotate-right"></i>초기화</a>
+                                    </div>
+                                    <div class="soldout">
+                                        <div class="checkbox-wrapper-4">
+                                            <input class="inp-cbx chk" id="soldout_chk_open" type="checkbox"/>
+                                            <label class="cbx" for="soldout_chk_open">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check-4"></use>
+                                                    </svg>
+                                                </span>
+                                                <span>매진 숙소 제외</span>
+                                            </label>
+                                            <svg class="inline-svg">
+                                                <symbol id="check-4" viewbox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </symbol>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="type">
+                                        <h3>숙소유형</h3>
+                                        <div class="contents" id="type_list">
+                                            <template id="type_template"><label><input type="radio" name="type" class="chk" value="{{type_name}}"><span class="circle"></span>{{type_name}}</label></template>
+                                        </div>
+                                    </div>
+                                    <div class="price_range">
+                                        <h3>가격<span>1박 기준</span></h3>
+                                    </div>
+                                    <div class="taste">
+                                        <h3>#취향</h3>
+                                        <div class="chk_wrap" id="taste_list">
+                                            <template id="taste_template"><label><input type="checkbox" name="user_taste" class="user_taste chk" value="{{taste_name}}">{{taste_name}}</label></template>
+                                        </div>
+                                    </div>
+                                    <div class="discount">
+                                        <h3>할인혜택</h3>
+                                        <div class="chk_wrap" id="discount_list">
+                                            <template id="discount_template"><label><input type="checkbox" name="discount" class="discount_chk chk" value="{{discount_name}}">{{discount_name}}</label></template>
+                                        </div>
+                                    </div>
+                                    <div class="reservation">
+                                        <h3>예약유형</h3>
+                                        <div class="checkbox-wrapper-4">
+                                            <input class="inp-cbx chk" id="reservaiton_type_open" type="checkbox"/>
+                                            <label class="cbx chk" for="reservaiton_type_open">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check-4"></use>
+                                                    </svg>
+                                                </span>
+                                                <span>대실 예약</span>
+                                            </label>
+                                            <svg class="inline-svg">
+                                                <symbol id="check-4" viewbox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </symbol>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rank">
+                                        <h3>등급</h3>
+                                        <div class="chk_wrap">
+                                            <template id="rank_template"><label><input type="checkbox" name="rank" class="rank_chk chk" value="{{rank_name}}"><span>{{rank_name}}</span></label></template>
+                                        </div>
+                                    </div>
+                                    <div class="facility">
+                                        <h3>시설</h3>
+                                        <dl class="contents">
+                                            <dt>공용시설</dt>
+                                            <dd class="public" id="public_list">
+                                                <template id="public_template"><label><input type="checkbox" name="public_facility" class="public_chk chk" value="{{public_name}}"><span>{{public_name}}</span></label></template>
+                                            </dd>
+                                            <dt>객실 내 시설</dt>
+                                            <dd class="inside" id="inside_list">
+                                                <template id="inside_template"><label><input type="checkbox" name="inside_facility" class="inside_chk chk" value="{{inside_name}}"><span>{{inside_name}}</span></label></template>
+                                            </dd>
+                                            <dt>기타시설</dt>
+                                            <dd class="etc" id="etc_list">
+                                                <template id="etc_template"><label><input type="checkbox" name="ect_facility" class="ect_chk chk" value="{{etc_name}}"><span>{{etc_name}}</span></label></template>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </template>    
                         </fieldset>
                     </div>
                     <!-- 상단 우측 결과 숙소 리스트 -->
