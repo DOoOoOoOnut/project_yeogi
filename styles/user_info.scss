@@ -90,11 +90,11 @@ main {
                             padding: 0 16px;
                             margin-right: 24px;
                         }
-                        .btn.active_contents {
+                        .btn.active {
                             position: relative;
                             color: #1273e4;
                         }
-                        .btn.active_contents::after {
+                        .btn.active::after {
                             background-color: #1273e4;
                             content: ''; display: block;
                             height: 2px; 
@@ -276,7 +276,7 @@ main {
                                     font-size: $small13;
                                     font-family: $familySemiBold;
                                 }
-                                button.active_point {
+                                button.active {
                                     background-color: #1273e4;
                                     color: #fff;
                                     border: 2px solid #1273e4;

@@ -13,14 +13,16 @@ const popup_contents = document.querySelectorAll('.popup_bg > .contents')
 const coupon_code_input = document.querySelector('.coupon_code_input')
 const wrap_contents = document.querySelector('.wrap_contents')
 const coupon_zero = document.querySelector('.coupon_zero')
-const fillter_btn = document.querySelector('#fillter_btn')
-const fillter_option= document.querySelector('.fillter_option')
-const fillter_option_btn = document.querySelectorAll('.fillter_option > button')
+const filter_btn = document.querySelector('#filter_btn')
+const filter_option= document.querySelector('.filter_option')
+const filter_now = document.querySelector('#filter_btn span')
+const filter_option_btn = document.querySelectorAll('.filter_option > button')
 
 console.log(tap_contents,tap_title,contents_btn)
 console.log(info_btn, point_popup,close_btn,point_details_btn)
 console.log(coupon_btn,popup_bg, popup_contents)
-console.log(coupon_code_input,wrap_contents,coupon_zero,fillter_option,fillter_option_btn,fillter_btn)
+console.log(coupon_code_input,wrap_contents,coupon_zero,filter_option,filter_option_btn,filter_btn)
+console.log(filter_now)
 
 tap_contents.forEach((t,i)=>{
     t.style.display = 'none'
@@ -28,39 +30,18 @@ tap_contents.forEach((t,i)=>{
 
 tap_contents[0].style.display = 'block'
 tap_title[0].classList.add('active')
-contents_btn[0].classList.add('active_contents')
-contents_btn[2].classList.add('active_contents')
-point_details_btn[0].classList.add('active_point')
-fillter_option_btn[1].classList.add('active_filter')
+contents_btn[0].classList.add('active')
+contents_btn[2].classList.add('active')
+point_details_btn[0].classList.add('active')
+filter_option_btn[1].classList.add('active')
 
-
-// nav
-let hide = ()=>{
-    for(let i of tap_title){
+// active remove
+let hide = (name)=>{
+    for(let i of name){
         i.classList.remove('active')
     }
 }
 
-// 예약
-let contents_hide = ()=>{
-    for(let i of contents_btn){
-        i.classList.remove('active_contents')
-    }
-}
-
-// 포인트
-let hide_point = ()=>{
-    for(let i of point_details_btn){
-        i.classList.remove('active_point')
-    }
-}
-
-// 쿠폰 필터
-let hide_fillter = ()=>{
-    for(let i of fillter_option_btn){
-        i.classList.remove('active_filter')
-    }
-}
 
 // contents
 let not_contents = ()=>{
@@ -72,7 +53,7 @@ let not_contents = ()=>{
 // nav
 tap_title.forEach((t,i)=>{
     t.addEventListener('click',()=>{
-        hide()
+        hide(tap_title)
         t.classList.add('active')
         not_contents()
         tap_contents[i].style.display= 'block'
@@ -82,8 +63,8 @@ tap_title.forEach((t,i)=>{
 // 예약
 for(let i of contents_btn){
     i.addEventListener('click', ()=>{
-        contents_hide()
-        i.classList.add('active_contents')
+        hide(contents_btn)
+        i.classList.add('active')
     })
 }
 
@@ -105,8 +86,8 @@ close_btn[0].addEventListener('click', ()=>{
 
 for(let i of point_details_btn){
     i.addEventListener('click', ()=>{
-        hide_point()
-        i.classList.add('active_point')
+        hide(point_details_btn)
+        i.classList.add('active')
     })
 }
 
@@ -123,12 +104,12 @@ close_btn[1].addEventListener('click',()=>{
 
 // 쿠폰 input
 coupon_code_input.addEventListener('click',()=>{
-    coupon_code_input.classList.add('active_input')
+    coupon_code_input.classList.add('active')
 })
 
 body.addEventListener('click', function(event) {
     if (event.target !== coupon_code_input) {
-        coupon_code_input.classList.remove('active_input')
+        coupon_code_input.classList.remove('active')
     }
 })
 
@@ -153,24 +134,28 @@ for(let i=2; i<8; i++){
 }
 
 // 필터
-fillter_option.style.display = 'none'
-fillter_btn.addEventListener('click',()=>{
-    if(fillter_option.style.display === 'none'){
-        fillter_option.style.display = 'block'
-    }else{fillter_option.style.display = 'none'}
+filter_option.style.display = 'none'
+
+filter_btn.addEventListener('click',function(event){
+    event.stopPropagation(); 
+    if(filter_option.style.display === 'none'){
+        filter_option.style.display = 'flex'
+    }else{filter_option.style.display = 'none'}
 })
+
 body.addEventListener('click',function(event){
-    if(event.target !== fillter_btn){
-        fillter_option.style.display = 'none'
+    if (event.target !== filter_btn && !filter_option.contains(event.target)) {
+        filter_option.style.display = 'none';
     }
 })
 
-for(let i of fillter_option_btn){
-    i.addEventListener('click', function(event){
-        hide_fillter()
-        i.classList.add('active_filter')
-        // event.stopPropagation();
-        fillter_btn.innerText = this.innerText;
+for(let i of filter_option_btn){
+    i.addEventListener('click', function(){
+        hide(filter_option_btn)
+        i.classList.add('active')
+        filter_now.innerText = this.innerText;
+        filter_option.style.display = 'none';
+        console.log('.')
     })
 }
 
@@ -185,6 +170,6 @@ window.onload = ()=>{
 const coupon_start = ()=>{
     not_contents()
     tap_contents[2].style.display= 'block'
-    hide()
+    hide(tap_title)
     tap_title[2].classList.add('active')
 }
