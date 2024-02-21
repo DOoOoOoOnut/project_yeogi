@@ -8,7 +8,6 @@ const notice = document.querySelector('.title p')
 const reset_btn = document.querySelectorAll('.reset');
 const resend_btn = document.querySelector('#resend')
 console.log(user_num,error,reset_btn);
-let back 
 
 // 입력창
 for(let i of user_num){
@@ -67,10 +66,10 @@ reset_btn.forEach((t,i)=>{
     })
 })
 
+
 next_btn.addEventListener('click',()=>{
     location.href = '../join_personal_info.html'
 })
-
 
 // 인증번호 재전송 버튼
 
@@ -78,7 +77,7 @@ resend_btn.addEventListener('click',()=>{
     alert('인증번호가 전송되었습니다')
 })
 
-user_num.forEach((input) => {
+/* user_num.forEach((input) => {
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter' || event.keyCode === 13) {
             if (input === user_num[0]) {
@@ -90,4 +89,4 @@ user_num.forEach((input) => {
             event.preventDefault();
         }
     });
-});
+}); */
