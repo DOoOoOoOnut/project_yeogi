@@ -562,7 +562,7 @@ main {
         }
         //인기 추천 숙소
         .recommend_room_wrap {
-            margin-bottom:50px;
+            margin-bottom:50px; position:relative;
             .sub_menu_box {
                 margin-bottom:10px;
                 .sub_menu {
@@ -578,7 +578,8 @@ main {
                 }
             }
             .box_btn {
-                position:relative;
+                width:100%;
+                position:absolute; top:35%;
                 div {
                     width:40px; display:block;
                     i {
@@ -590,15 +591,15 @@ main {
                     }
                 }
                 .swiper-button-prev03 {
-                    position:absolute; left:-20px; top:90px; z-index:99;
+                    position:absolute; left:-20px; z-index:99;
                     //js
-                    display:none;
+                    // display:none;
                 }
                 .swiper-button-prev03::after {
                     display:none;
                 }
                 .swiper-button-next03 {
-                    position:absolute; right:-20px; top:90px; z-index:99;
+                    position:absolute; right:-20px; z-index:99;
                 }
                 .swiper-button-next03::after {
                     display:none;
@@ -669,7 +670,7 @@ main {
         }
         //오늘 체크인 호텔 특가
         .today_special_wrap {
-            margin-bottom:50px;
+            margin-bottom:50px; position:relative;
             .title_box {
                 @include flex-rnsc;
                 margin-bottom:15px;
@@ -679,7 +680,8 @@ main {
                 }
             }
             .box_btn {
-                position:relative;
+                width:100%;
+                position:absolute; top:28%;
                 div {
                     width:40px; display:block;
                     i {
@@ -691,15 +693,15 @@ main {
                     }
                 }
                 .swiper-button-prev04 {
-                    position:absolute; left:-20px; top:90px; z-index:99;
+                    position:absolute; left:-20px; z-index:99;
                     //js
-                    display:none;
+                    // display:none;
                 }
                 .swiper-button-prev04::after {
                     display:none;
                 }
                 .swiper-button-next04 {
-                    position:absolute; right:-20px; top:90px; z-index:99;
+                    position:absolute; right:-20px; z-index:99;
                 }
                 .swiper-button-next04::after {
                     display:none;
@@ -773,7 +775,7 @@ main {
         }
         //이번주 hot 인기 펜션
         .hot_pension_wrap {
-            margin-bottom:50px;
+            margin-bottom:50px; position:relative;
             .title_box {
                 @include flex-rnsc;
                 margin-bottom:15px;
@@ -783,7 +785,8 @@ main {
                 }
             }
             .box_btn {
-                position:relative;
+                width:100%;
+                position:absolute; top:28%;
                 div {
                     width:40px; display:block;
                     i {
@@ -795,15 +798,15 @@ main {
                     }
                 }
                 .swiper-button-prev05 {
-                    position:absolute; left:-20px; top:90px; z-index:99;
+                    position:absolute; left:-20px; z-index:99;
                     //js
-                    display:none;
+                    // display:none;
                 }
                 .swiper-button-prev05::after {
                     display:none;
                 }
                 .swiper-button-next05 {
-                    position:absolute; right:-20px; top:90px; z-index:99;
+                    position:absolute; right:-20px; z-index:99;
                 }
                 .swiper-button-next05::after {
                     display:none;
@@ -815,10 +818,9 @@ main {
                     @include flex-rnsc;
                     width:100%;
                     .room {
-                        @include flex-cncf;
-                        width:100%; min-width:240px;
+                        @include flex-cncf; min-width:240px;
                         .photo {
-                            width:100%
+                            width:100%;
                             img {width:100%; border-radius:10px;}
                         }
                         .contents {
@@ -918,7 +920,6 @@ main {
                     @include flex-rnsc;
                     width:100%;
                     .black_pick_detail {
-                        // margin-left:25px;
                         width:calc(100% / 4);
                         img {width:100%; border-radius:15px;}
                     }

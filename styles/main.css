@@ -739,6 +739,7 @@ main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detai
 }
 main .center_container .recommend_room_wrap {
   margin-bottom: 50px;
+  position: relative;
 }
 main .center_container .recommend_room_wrap .sub_menu_box {
   margin-bottom: 10px;
@@ -757,7 +758,9 @@ main .center_container .recommend_room_wrap .sub_menu_box .menu1 {
   border: 0;
 }
 main .center_container .recommend_room_wrap .box_btn {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 35%;
 }
 main .center_container .recommend_room_wrap .box_btn div {
   width: 40px;
@@ -779,9 +782,7 @@ main .center_container .recommend_room_wrap .box_btn div i {
 main .center_container .recommend_room_wrap .box_btn .swiper-button-prev03 {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
-  display: none;
 }
 main .center_container .recommend_room_wrap .box_btn .swiper-button-prev03::after {
   display: none;
@@ -789,7 +790,6 @@ main .center_container .recommend_room_wrap .box_btn .swiper-button-prev03::afte
 main .center_container .recommend_room_wrap .box_btn .swiper-button-next03 {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .recommend_room_wrap .box_btn .swiper-button-next03::after {
@@ -874,6 +874,7 @@ main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .con
 }
 main .center_container .today_special_wrap {
   margin-bottom: 50px;
+  position: relative;
 }
 main .center_container .today_special_wrap .title_box {
   display: flex;
@@ -886,7 +887,9 @@ main .center_container .today_special_wrap .title_box a i {
   color: #1273e4;
 }
 main .center_container .today_special_wrap .box_btn {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 28%;
 }
 main .center_container .today_special_wrap .box_btn div {
   width: 40px;
@@ -908,9 +911,7 @@ main .center_container .today_special_wrap .box_btn div i {
 main .center_container .today_special_wrap .box_btn .swiper-button-prev04 {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
-  display: none;
 }
 main .center_container .today_special_wrap .box_btn .swiper-button-prev04::after {
   display: none;
@@ -918,7 +919,6 @@ main .center_container .today_special_wrap .box_btn .swiper-button-prev04::after
 main .center_container .today_special_wrap .box_btn .swiper-button-next04 {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .today_special_wrap .box_btn .swiper-button-next04::after {
@@ -1012,6 +1012,7 @@ main .center_container .today_special_wrap .room_box .swiper-wrapper .room .cont
 }
 main .center_container .hot_pension_wrap {
   margin-bottom: 50px;
+  position: relative;
 }
 main .center_container .hot_pension_wrap .title_box {
   display: flex;
@@ -1024,7 +1025,9 @@ main .center_container .hot_pension_wrap .title_box a i {
   color: #1273e4;
 }
 main .center_container .hot_pension_wrap .box_btn {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 28%;
 }
 main .center_container .hot_pension_wrap .box_btn div {
   width: 40px;
@@ -1046,9 +1049,7 @@ main .center_container .hot_pension_wrap .box_btn div i {
 main .center_container .hot_pension_wrap .box_btn .swiper-button-prev05 {
   position: absolute;
   left: -20px;
-  top: 90px;
   z-index: 99;
-  display: none;
 }
 main .center_container .hot_pension_wrap .box_btn .swiper-button-prev05::after {
   display: none;
@@ -1056,7 +1057,6 @@ main .center_container .hot_pension_wrap .box_btn .swiper-button-prev05::after {
 main .center_container .hot_pension_wrap .box_btn .swiper-button-next05 {
   position: absolute;
   right: -20px;
-  top: 90px;
   z-index: 99;
 }
 main .center_container .hot_pension_wrap .box_btn .swiper-button-next05::after {
@@ -1077,13 +1077,14 @@ main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
   min-width: 240px;
 }
 main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .photo {
-  width: 100% img;
-  width-width: 100%;
-  width-border-radius: 10px;
+  width: 100%;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .photo img {
+  width: 100%;
+  border-radius: 10px;
 }
 main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .type {
   font-size: 0.688rem;

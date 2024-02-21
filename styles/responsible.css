@@ -27,6 +27,7 @@
     main .center_container {width: calc(100% - 40px);}
     main .center_container .event_wrap .event_box .event_bnr_detail {overflow-x:visible;}
     main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper a {min-height:96px;}
+    main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .black_pick_detail {min-width:240px;}
     main .center_container .event_wrap .event_box:hover .box_btn {display: none;}
     .box_btn {display:none;}
     main .app_bnr {width: calc(100% - 40px);}

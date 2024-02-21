@@ -203,7 +203,7 @@ let swiper06 = new Swiper('.swiper-container06', {
     breakpoints: {
         // 화면 너비가 800 이상일 때(min-width 기준)
         600: {
-            slidesPerView: 3.5,
+            slidesPerView: 4,
             spaceBetween: 10,
         },
         900: {
