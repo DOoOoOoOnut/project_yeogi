@@ -440,7 +440,7 @@ main section #result_frm .result .filter_container fieldset .filter .price_range
   font-size: 0.75rem;
   margin-left: 5px;
 }
-main section #result_frm .result .filter_container fieldset .filter .taste .chk_wrap label span, main section #result_frm .result .filter_container fieldset .filter .discount .chk_wrap label span, main section #result_frm .result .filter_container fieldset .filter .rank .chk_wrap label span {
+main section #result_frm .result .filter_container fieldset .filter .taste .chk_wrap label span, main section #result_frm .result .filter_container fieldset .filter .discount .chk_wrap label span, main section #result_frm .result .filter_container fieldset .filter .rank .chk_wrap label {
   border: 1.5px solid #d9d9d9;
   display: inline-block;
   border-radius: 20px;
@@ -451,7 +451,7 @@ main section #result_frm .result .filter_container fieldset .filter .taste .chk_
   font-weight: 600;
   cursor: pointer;
 }
-main section #result_frm .result .filter_container fieldset .filter .taste .chk_wrap label span:hover, main section #result_frm .result .filter_container fieldset .filter .discount .chk_wrap label span:hover, main section #result_frm .result .filter_container fieldset .filter .rank .chk_wrap label span:hover {
+main section #result_frm .result .filter_container fieldset .filter .taste .chk_wrap label span:hover, main section #result_frm .result .filter_container fieldset .filter .discount .chk_wrap label span:hover, main section #result_frm .result .filter_container fieldset .filter .rank .chk_wrap label:hover {
   background-color: #F5F5F5;
 }
 main section #result_frm .result .filter_container fieldset .filter .taste .chk_wrap label input[type=checkbox]:checked + span, main section #result_frm .result .filter_container fieldset .filter .discount .chk_wrap label input[type=checkbox]:checked + span, main section #result_frm .result .filter_container fieldset .filter .rank .chk_wrap label input[type=checkbox]:checked + span {
