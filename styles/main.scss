@@ -564,17 +564,39 @@ main {
         .recommend_room_wrap {
             margin-bottom:50px; position:relative;
             .sub_menu_box {
-                margin-bottom:10px;
-                .sub_menu {
-                    border:1px solid #d6d6d6;
-                    padding:6px 14px; border-radius:20px;
-                    font-size:$subC14; margin-right:4px;
-                    font-family:$familyMedium;
+                margin-bottom:10px; width:100%;
+                display:flex;
+                justify-content:space-between;
+                align-items:flex-start;
+                .sub_menu_list  {
+                    display:flex;
+                    overflow-x:hidden; 
+                    white-space:nowrap;
+                    .sub_menu {
+                        border:1px solid #d6d6d6;
+                        padding:6px 14px; border-radius:20px;
+                        font-size:$subC14; margin:0px 4px 5px 0;
+                        font-family:$familyMedium; cursor:pointer;
+                    }
+                    //js 클릭시 활성화
+                    .menu1 {
+                        background-color:$mainColor-b; color:#fff;
+                        border:0;
+                    }
                 }
-                //js
-                .menu1 {
-                    background-color:$mainColor-b; color:#fff;
-                    border:0;
+                //작아지면 나오게
+                .more_btn {
+                    display:none;
+                    position:relative; z-index:99; right:0;
+                    cursor:pointer;
+                    i {
+                        @include flex-rncc;
+                        color:#333; background-color:#fff;
+                        width:30px; height:30px;
+                        border-radius:100%; cursor:pointer;
+                        border:1px solid #eeeeee;
+                        font-size:13px;
+                    }
                 }
             }
             .box_btn {

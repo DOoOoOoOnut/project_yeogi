@@ -185,7 +185,6 @@ let swiper05 = new Swiper('.swiper-container05', {
     },
 })
 
-let swiperContainer06 = document.querySelector('.swiper-container06')
 let swiper06 = new Swiper('.swiper-container06', {
     // loop: true,
     // 한 번에 보여줄 슬라이드 수
