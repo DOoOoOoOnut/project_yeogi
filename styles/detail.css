@@ -1247,15 +1247,9 @@ main section .room .box2 .side .event_pay #event_bnr .event_title .coupon_get i 
 }
 main section .room .box2 .side .event_pay #event_bnr .event_slide {
   padding: 20px 0;
-  border-bottom: 1px solid rgb(235, 235, 235);
 }
-main section .room .box2 .side .event_pay #event_bnr .event_slide .event_slide1 img {
+main section .room .box2 .side .event_pay #event_bnr .event_slide .event_slide img {
   width: 300px;
-  border-radius: 10px;
-}
-main section .room .box2 .side .event_pay #event_bnr .event_slide .event_slide2 img {
-  display: none;
-  height: 120px;
   border-radius: 10px;
 }
 main section .room .box2 .side .event_pay .pay .title {
@@ -1287,7 +1281,7 @@ main section .room .box2 .side .event_pay .pay .pay_detail p {
   display: flex;
   align-items: center;
   font-size: 0.938rem;
-  padding: 0 10px 20px 5px;
+  padding: 0 10px 0 5px;
 }
 main section .room .box2 .side .event_pay .pay .pay_detail p img {
   width: 70px;
@@ -1334,7 +1328,7 @@ main section .room .location_box .zoom_in img {
 main section .room .location_box .zoom_out {
   position: absolute;
   right: 1%;
-  top: 19%;
+  top: 18.5%;
 }
 main section .room .location_box .zoom_out img {
   background: #fff;
@@ -1494,6 +1488,17 @@ main section .room .real_review .review_user .photo_review .thumnail #thum_photo
   height: 210px;
   border-radius: 10px;
   margin-left: 15px;
+}
+main section .room .real_review .review_user .photo_review .thumnail #thum_photo::after {
+  content: "";
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(-90deg, white, transparent);
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 950;
 }
 main section .room .real_review .review_user .photo_review .thumnail .thumnail::after {
   content: "";
