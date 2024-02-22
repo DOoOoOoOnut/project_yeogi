@@ -651,7 +651,7 @@ main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_
   justify-content: center;
   align-items: flex-start;
   width: 16.6666666667%;
-  min-width: 156px;
+  min-width: 100px;
 }
 main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel img {
   width: 100%;
@@ -723,7 +723,7 @@ main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detai
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  min-width: 156px;
+  min-width: 100px;
   width: 16.6666666667%;
 }
 main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .over_travel img {
@@ -743,19 +743,50 @@ main .center_container .recommend_room_wrap {
 }
 main .center_container .recommend_room_wrap .sub_menu_box {
   margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-main .center_container .recommend_room_wrap .sub_menu_box .sub_menu {
+main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list {
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list .sub_menu {
   border: 1px solid #d6d6d6;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.875rem;
-  margin-right: 4px;
+  margin: 0px 4px 5px 0;
   font-family: PretendardMedium;
+  cursor: pointer;
 }
-main .center_container .recommend_room_wrap .sub_menu_box .menu1 {
+main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list .menu1 {
   background-color: #1273e4;
   color: #fff;
   border: 0;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .more_btn {
+  display: none;
+  position: relative;
+  z-index: 99;
+  right: 0;
+  cursor: pointer;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .more_btn i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 1px solid #eeeeee;
+  font-size: 13px;
 }
 main .center_container .recommend_room_wrap .box_btn {
   width: 100%;

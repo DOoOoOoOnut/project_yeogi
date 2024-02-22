@@ -1,0 +1,20 @@
+html * {transition: all 0.1s;}
+
+@media screen and (max-width:1399px){
+
+}
+@media screen and (max-width:1199px){
+    
+}
+@media screen and (max-width:900px){
+    h2 a {font-size: 0.813rem;}
+    main section .raw_container .raw_c .title {
+        flex-flow: column wrap; align-items: flex-start;}
+    main section .raw_container .raw_c .title .right p {width: 10%;}
+    main section .raw_container .raw_c .title .right .period {
+        width: 90%;
+    }
+}
+@media screen and (max-width:600px){
+
+}

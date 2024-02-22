@@ -14,8 +14,8 @@ main section .raw_tab {
   border-bottom: 1px solid #f2f8ff;
 }
 main section .raw_tab h2, main section .raw_tab .raw_container .raw_c .contents li .prev h2 span, main section .raw_container .raw_c .contents li .prev h2 .raw_tab span {
-  margin-right: 8px;
-  padding: 16px;
+  margin-right: 15px;
+  padding: 16px 10px;
 }
 main section .raw_tab h2 a, main section .raw_tab .raw_container .raw_c .contents li .prev h2 span a, main section .raw_container .raw_c .contents li .prev h2 .raw_tab span a {
   font-weight: 700;
@@ -109,6 +109,7 @@ main section .raw_container .raw_c .contents li .prev p i [class*=down] {
   color: #999;
 }
 main section .raw_container .raw_c .contents li .open {
+  display: none;
   padding: 20px 16px;
   background-color: #fafafa;
   overflow: hidden;

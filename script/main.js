@@ -6,7 +6,7 @@ let swiper = new Swiper('.swiper-container', {
     // 한 번에 보여줄 슬라이드 수
     slidesPerView: 2,
     // 슬라이드 사이의 간격
-    spaceBetween: 10,
+    spaceBetween: 15,
     // 한 번에 넘길 슬라이드 수
     slidesPerGroup: 1, 
     loop: true,
@@ -185,7 +185,6 @@ let swiper05 = new Swiper('.swiper-container05', {
     },
 })
 
-let swiperContainer06 = document.querySelector('.swiper-container06')
 let swiper06 = new Swiper('.swiper-container06', {
     // loop: true,
     // 한 번에 보여줄 슬라이드 수

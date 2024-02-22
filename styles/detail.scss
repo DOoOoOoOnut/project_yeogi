@@ -633,13 +633,13 @@ main {
                             display: flex; flex-flow: row nowrap;
                             position: relative;
                             #thum_review_contents {
-                                width: calc(100% - 400px);
                                 overflow: hidden;
                                 .swiper-wrapper {
                                     display: flex; flex-flow: row nowrap;
                                     align-items: center;
                                     padding: 20px; 
                                     .detail_review {
+                                        width: calc(100% - 400px);
                                         background: #FAFAFA;
                                         padding: 20px 0;
                                         border-radius: 15px;
@@ -671,7 +671,7 @@ main {
                                 background: #fff;
                                 border-radius: 50%;
                                 box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
-                                position: absolute; left: 1%; top: 105px;
+                                position: absolute; left: 1%; top: 100px;
                                 z-index: 999;
                                 i {
                                     color: #000;
@@ -826,6 +826,7 @@ main {
                                 background: #F5F7FA;
                                 padding: 30px;
                                 border-radius: 10px;
+                                margin-bottom: 20px;
                                 display: flex; flex-flow: row nowrap;
                                 .join_view {
                                     img {
@@ -950,9 +951,10 @@ main {
                         i {
                             font-size: $subC14;
                             color: rgb(225, 225, 225);
-                            padding: 10px 0;
+                            padding: 10px 0 10px 30px;
                         }
                         p {
+                            display: flex; justify-content: center;
                             font-size: $subT15;
                             color: #707070;
                             line-height: 1.5;
@@ -1327,7 +1329,7 @@ main {
                         }
                     }
                     .photo_review {
-                        width: 1300px;
+                        width: 90%;
                         padding-left: 50px;
                         .score {
                             i {
@@ -1341,10 +1343,10 @@ main {
                             }
                         }
                         .thumnail {
+                            width: 100%;
                             display: flex; flex-flow: row nowrap;
                             position: relative;
                             #thum_photo {
-                                width: calc(100% - 1000px);
                                 overflow: hidden;
                                 .photo {
                                     .view_slide {
@@ -1369,7 +1371,7 @@ main {
                                 background: #fff;
                                 border-radius: 50%;
                                 box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
-                                position: absolute; left: 1%; top: 105px;
+                                position: absolute; left: 1%; top: 120px;
                                 z-index: 999;
                                 i {
                                     color: #000;
@@ -1385,7 +1387,7 @@ main {
                                 background: #fff;
                                 border-radius: 50%;
                                 box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
-                                position: absolute; right: 1%; top: 100px;
+                                position: absolute; right: 1%; top: 120px;
                                 z-index: 999;
                                 i {
                                     color: #000;
@@ -1401,7 +1403,7 @@ main {
                             padding: 20px 0;
                         }
                         .more_review {
-                            width: 900px;
+                            width: 100%;
                             span {
                                 font-size: $subT15;
                                 color: #333;
@@ -1454,80 +1456,108 @@ main {
                     font-size: $title18; font-weight: $weight600;
                     color: #333;
                 }
-            }.similar_item {
-                h2 {
-                    font-size: $title18;
-                    color: #333;
-                }
                 .similar {
-                    .swiper-container {}
+                    display: flex; flex-flow: row nowrap;
+                    position: relative;
                     #room_type {
-                        .swiper_slide {}
-                        .room {
-                            .photo {
-                                img {
-                                    width: 300px;
-                                    border-radius: 10px;
+                        overflow: hidden;
+                        .various_room {
+                            .room {
+                                margin: 30px 0;
+                                .th_photo {
+                                    img {
+                                        width: 100%;
+                                        border-radius: 10px;
+                                    }
                                 }
-                            }
-                            .contents {
-                                .title_wrap {
-                                    .type {
-                                        font-size: $small12;
-                                        color: #707070;
-                                        padding: 5px 0;
-                                    }
-                                    .title {
-                                        font-size: $defalt16; font-weight: $weight600;
-                                        color: #333;
-                                        padding-bottom: 5px;
-                                    }
-                                    .location {
-                                        font-size: $small13;
-                                        color: #999;
-                                        padding-bottom: 10px;
-                                    }
-                                    .review {
-                                        
-                                        .point_wrap {
-                                            background: #ffad0a;
-                                            padding: 5px 6px 4px 4px;
-                                            border-radius: 5px;
-                                            display: flex; flex-flow: row nowrap;
-                                            align-items: center;
-                                            display: inline-block;
-                                            margin-bottom: 30px;
-                                            i {
-                                                font-size: $small12;
-                                            }
-                                            span {
-                                                font-size: $small12;
-                                                color: #333;
-                                            }
-                                        }
-                                        .comment {
-                                            font-size: $subC14;
-                                            color: #333;
-                                            
-                                        }
-                                    }
-                                    .price_info {
-                                        .now {
-                                            font-size: $title18; font-weight: $weight600;
-                                            color: #333;
-                                            span {
-                                                font-size: $subT15; 
-                                                color: #333;
-                                            }
-                                        }
-                                        .origin {
-                                            font-size: $subC14;
+                                .contents {
+                                    .title_wrap {
+                                        .type {
+                                            font-size: $small12;
                                             color: #707070;
-                                            text-decoration: line-through;
+                                            padding: 5px 0;
+                                        }
+                                        .title {
+                                            font-size: $defalt16; font-weight: $weight600;
+                                            color: #333;
+                                            padding-bottom: 5px;
+                                        }
+                                        .location {
+                                            font-size: $small13;
+                                            color: #999;
+                                            padding-bottom: 10px;
+                                        }
+                                        .review {
+                                            .point_wrap {
+                                                background: #ffad0a;
+                                                padding: 5px 6px 4px 4px;
+                                                border-radius: 5px;
+                                                display: flex; flex-flow: row nowrap;
+                                                align-items: center;
+                                                display: inline-block;
+                                                margin-bottom: 30px;
+                                                i {
+                                                    font-size: $small12;
+                                                }
+                                                span {
+                                                    font-size: $small12;
+                                                    color: #333;
+                                                }
+                                            }
+                                            .comment {
+                                                font-size: $subC14;
+                                                color: #333;
+                                                
+                                            }
+                                        }
+                                        .price_info {
+                                            .now {
+                                                font-size: $title18; font-weight: $weight600;
+                                                color: #333;
+                                                span {
+                                                    font-size: $subT15; 
+                                                    color: #333;
+                                                }
+                                            }
+                                            .origin {
+                                                font-size: $subC14;
+                                                color: #707070;
+                                                text-decoration: line-through;
+                                            }
                                         }
                                     }
                                 }
                             }
+                        }
+                    }
+                    .swiper-button-prev04 {
+                        width: 40px; height: 40px;
+                        background: #fff;
+                        border-radius: 50%;
+                        box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
+                        position: absolute; left: 0%; top: 120px;
+                        z-index: 999;
+                        i {
+                            color: #000;
+                            font-size: $title20;
+                            position: absolute; left: 12px; top: 10px;
+                            z-index: 999;
+                        }
+                    }
+                    .swiper-button-prev04::after {display: none;}
+                    .swiper-button-next04::after {display: none;}
+                    .swiper-button-next04 {
+                        width: 40px; height: 40px;
+                        background: #fff;
+                        border-radius: 50%;
+                        box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
+                        position: absolute; right: 0%; top: 120px;
+                        z-index: 999;
+                        i {
+                            color: #000;
+                            font-size: $title20;
+                            position: absolute; left: 15px; top: 10px;
+                            z-index: 999;
                         }
                     }
                 }
