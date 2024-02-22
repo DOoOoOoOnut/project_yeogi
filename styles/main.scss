@@ -497,7 +497,7 @@ main {
                     .kr_travel {
                         @include flex-cncf;
                         width:calc(100% / 6);
-                        min-width:156px;
+                        min-width:100px;
                         img {width:100%; border-radius:10px;}
                         img:hover {filter:brightness(80%);}
                         .kr_travel_txt {
@@ -548,7 +548,7 @@ main {
                     width:100%;
                     .over_travel {
                         @include flex-cncf;
-                        min-width:156px;
+                        min-width:100px;
                         width:calc(100% / 6);
                         img {width:100%; border-radius:10px;}
                         img:hover {filter:brightness(80%);}
