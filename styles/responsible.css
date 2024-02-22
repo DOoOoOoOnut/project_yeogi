@@ -35,7 +35,6 @@
     main .app_bnr {width: calc(100% - 40px);}
 }
 @media screen and (max-width:750px){
-    main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list {}
     main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list::after {
         content: ''; display:inline-block;
         width:150px; height:100%;
