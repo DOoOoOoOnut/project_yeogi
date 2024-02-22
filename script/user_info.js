@@ -5,15 +5,24 @@ const tap_title = document.querySelectorAll('.tap_title')
 const contents_btn = document.querySelectorAll('.wrap_btn > .btn')
 const info_btn = document.querySelector('.info_btn')
 const point_popup = document.querySelector('.point_popup')
-const close_btn = document.querySelector('.close_btn')
+const close_btn = document.querySelectorAll('.close')
 const point_details_btn = document.querySelectorAll('.point_details')
 const coupon_btn = document.querySelector('.coupon_btn')
 const popup_bg = document.querySelectorAll('.popup_bg')
 const popup_contents = document.querySelectorAll('.popup_bg > .contents')
+const coupon_code_input = document.querySelector('.coupon_code_input')
+const wrap_contents = document.querySelector('.wrap_contents')
+const coupon_zero = document.querySelector('.coupon_zero')
+const filter_btn = document.querySelector('#filter_btn')
+const filter_option= document.querySelector('.filter_option')
+const filter_now = document.querySelector('#filter_btn span')
+const filter_option_btn = document.querySelectorAll('.filter_option > button')
 
 console.log(tap_contents,tap_title,contents_btn)
 console.log(info_btn, point_popup,close_btn,point_details_btn)
 console.log(coupon_btn,popup_bg, popup_contents)
+console.log(coupon_code_input,wrap_contents,coupon_zero,filter_option,filter_option_btn,filter_btn)
+console.log(filter_now)
 
 tap_contents.forEach((t,i)=>{
     t.style.display = 'none'
@@ -21,31 +30,18 @@ tap_contents.forEach((t,i)=>{
 
 tap_contents[0].style.display = 'block'
 tap_title[0].classList.add('active')
-contents_btn[0].classList.add('active_contents')
-contents_btn[2].classList.add('active_contents')
-point_details_btn[0].classList.add('active_point')
+contents_btn[0].classList.add('active')
+contents_btn[2].classList.add('active')
+point_details_btn[0].classList.add('active')
+filter_option_btn[1].classList.add('active')
 
-
-// nav
-let hide = ()=>{
-    for(let i of tap_title){
+// active remove
+let hide = (name)=>{
+    for(let i of name){
         i.classList.remove('active')
     }
 }
 
-// 예약
-let contents_hide = ()=>{
-    for(let i of contents_btn){
-        i.classList.remove('active_contents')
-    }
-}
-
-// 포인트
-let hide_point = ()=>{
-    for(let i of point_details_btn){
-        i.classList.remove('active_point')
-    }
-}
 
 // contents
 let not_contents = ()=>{
@@ -57,7 +53,7 @@ let not_contents = ()=>{
 // nav
 tap_title.forEach((t,i)=>{
     t.addEventListener('click',()=>{
-        hide()
+        hide(tap_title)
         t.classList.add('active')
         not_contents()
         tap_contents[i].style.display= 'block'
@@ -67,8 +63,8 @@ tap_title.forEach((t,i)=>{
 // 예약
 for(let i of contents_btn){
     i.addEventListener('click', ()=>{
-        contents_hide()
-        i.classList.add('active_contents')
+        hide(contents_btn)
+        i.classList.add('active')
     })
 }
 
@@ -84,54 +80,96 @@ point_popup.addEventListener('click',function(event){
         point_popup.style.display = 'none';
     }
 })
-close_btn.addEventListener('click', ()=>{
+close_btn[0].addEventListener('click', ()=>{
     point_popup.style.display = 'none'
 })
 
 for(let i of point_details_btn){
     i.addEventListener('click', ()=>{
-        hide_point()
-        i.classList.add('active_point')
+        hide(point_details_btn)
+        i.classList.add('active')
     })
 }
 
-// 쿠폰
+// 쿠폰 popup
+popup_bg[0].style.display = 'none'
+
 coupon_btn.addEventListener('click',()=>{
     popup_bg[0].style.display = 'flex'
 })
 
-let popup_open = ()=>{
-    for(let i of popup_bg){
-        popup_bg[i].style.display = 'none'
-    }
-}
-popup_open()
-popup_bg[i].addEventListener('click',()=>{
-    if(i === 0){
-        popup_bg[i].style.display = 'flex';
-    }else{
-        popup_bg[i].style.display = 'none';
-    }
-})
-
-
-popup_bg[0].addEventListener('click', ()=>{
+close_btn[1].addEventListener('click',()=>{
     popup_bg[0].style.display = 'none'
 })
 
-// 이벤트
-document.addEventListener('DOMContentLoaded', (event) => {
-    const query = new URLSearchParams(window.location.search)
-    const runScriptParam = query.get('run_script')
+// 쿠폰 input
+coupon_code_input.addEventListener('click',()=>{
+    coupon_code_input.classList.add('active')
+})
 
-    if (runScriptParam === 'true') {
-        run_script()
+body.addEventListener('click', function(event) {
+    if (event.target !== coupon_code_input) {
+        coupon_code_input.classList.remove('active')
     }
 })
-function run_script(){
-    tap_contents.forEach((t,i)=>{
-        t.style.display = 'none'
+
+let coupon_contents = ()=>{
+    wrap_contents.style.display = 'none'
+    coupon_zero.style.display = 'none'
+}
+
+coupon_contents()
+wrap_contents.style.display = 'block'
+
+
+for(let i=2; i<8; i++){
+    contents_btn[i].addEventListener('click',()=>{
+        coupon_contents()
+        if(i==2 || i==4){
+            wrap_contents.style.display = 'block'
+        }else{
+            coupon_zero.style.display = 'block'
+        }
     })
-    
-    tap_contents[2].style.display = 'block'
+}
+
+// 필터
+filter_option.style.display = 'none'
+
+filter_btn.addEventListener('click',function(event){
+    event.stopPropagation(); 
+    if(filter_option.style.display === 'none'){
+        filter_option.style.display = 'flex'
+    }else{filter_option.style.display = 'none'}
+})
+
+body.addEventListener('click',function(event){
+    if (event.target !== filter_btn && !filter_option.contains(event.target)) {
+        filter_option.style.display = 'none';
+    }
+})
+
+for(let i of filter_option_btn){
+    i.addEventListener('click', function(){
+        hide(filter_option_btn)
+        i.classList.add('active')
+        filter_now.innerText = this.innerText;
+        filter_option.style.display = 'none';
+        console.log('.')
+    })
+}
+
+
+// 링크 다른데서 타고 올 때
+window.onload = ()=>{
+    const query = new URLSearchParams(window.location.search)
+    const url_coupon = query.get('coupon')
+    if(url_coupon == 'coupon'){coupon_start()}
+}
+
+const coupon_start = ()=>{
+    not_contents()
+    tap_contents[2].style.display= 'block'
+    hide(tap_title)
+    tap_title[2].classList.add('active')
 }

@@ -55,6 +55,13 @@ main section #join_personal_frm fieldset .contents .user_info > div .user_input 
   padding: 0 20px;
   font-weight: 600;
 }
+main section #join_personal_frm fieldset .contents .user_info > div .user_input input:hover {
+  background-color: #ededed;
+}
+main section #join_personal_frm fieldset .contents .user_info > div .user_input input:focus {
+  border: 1px solid #000;
+  background-color: #fff;
+}
 main section #join_personal_frm fieldset .contents .user_info > div .user_input input::-moz-placeholder {
   color: #bdbdbd;
   font-weight: 300;

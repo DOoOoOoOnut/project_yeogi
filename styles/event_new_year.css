@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: width 0.3s;
+  transition: all 0.3s;
 }
 
 img {
@@ -12,15 +12,20 @@ img {
 }
 
 main {
-  max-width: 1400px;
+  max-width: 1080px;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   margin: 0 auto;
   text-align: center;
-  width: 1080px;
-  background-color: #F2F2F2;
 }
 main .container {
   margin-bottom: 96px;
   position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .nav {
   width: 100vw;
@@ -45,26 +50,41 @@ main .container .nav span {
 }
 main .container .wrap {
   text-align: center;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   margin: 0 auto;
 }
 main .container .wrap .bg {
   font-size: 0;
   text-decoration: none;
   margin: 0 auto;
+  background-color: #F2F2F2;
 }
 main .container .wrap .bg .photo {
   display: inline-block;
   vertical-align: top;
   font-size: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .wrap .bg .photo img {
+  background-color: #F2F2F2;
   vertical-align: top;
   margin-right: 0;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .wrap .bg .popup {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   margin: 0;
   display: inline-block;
   text-decoration: none;
@@ -72,7 +92,9 @@ main .container .wrap .bg .popup {
   vertical-align: top;
 }
 main .container .wrap .bg .popup .all_doun {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
   cursor: pointer;
   display: inline-block;
@@ -80,8 +102,10 @@ main .container .wrap .bg .popup .all_doun {
   z-index: 1;
 }
 main .container .wrap .bg .popup .all_doun img {
-  width: 100%;
-  height: 100%;
+  max-width: 100% !important;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   display: inline-block;
   vertical-align: middle;
 }
@@ -142,20 +166,41 @@ main .container .wrap .bg a {
   display: block;
   text-decoration: none;
   outline: none;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .wrap .bg a img {
   display: inline-block;
   vertical-align: middle;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .wrap .bg .footer {
-  background-color: #393939;
   color: #fff;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+main .container .wrap .bg .footer img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
 }
 main .container .wrap .bg .footer .footer_contents {
+  background-color: #393939;
   padding: 0 5.6% 22px 5.6%;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 main .container .wrap .bg .footer .footer_contents .info {
   display: flex;
@@ -232,8 +277,9 @@ main .container .wrap .bg .footer .footer_contents .box h3::after {
     margin: 0 auto;
     max-width: 1200px;
   }
-  main img {
-    max-width: 80%;
+  main .container {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 899px) {
@@ -241,8 +287,8 @@ main .container .wrap .bg .footer .footer_contents .box h3::after {
     margin: 0 auto;
     max-width: 900px;
   }
-  main img {
-    max-width: 60%;
+  main .container {
+    width: 100%;
   }
 }
 @media screen and (max-width: 599px) {
@@ -250,7 +296,10 @@ main .container .wrap .bg .footer .footer_contents .box h3::after {
     margin: 0 auto;
     max-width: 600px;
   }
-  main img {
-    max-width: 40%;
+  main .footer .footer_contents .box h3 {
+    font-size: 0.813rem;
+  }
+  main .footer .footer_contents .box li {
+    font-size: 0.688rem;
   }
 }/*# sourceMappingURL=event_new_year.css.map */

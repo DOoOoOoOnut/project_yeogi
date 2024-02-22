@@ -1,0 +1,169 @@
+@import 'common';
+@media screen and (max-width:899px) {
+    main {
+        margin: 0 auto;
+        max-width: $tablet;
+        .container {
+            width: 100%;
+            .contents {
+                .time {
+                    .center {
+                        .clock {
+                            .box {
+                                max-height: 90px;
+                                max-width: 15px;
+                                .clock_name {
+                                    top: -62px;
+                                    transform: translateX(50%);
+                                    color: #fff;
+                                    font-size: $subT15;
+                                }
+                                .display {
+                                    left: 5px;
+                                    width: 7px;
+                                    height: 7px;
+                                }
+                                .clock_top {
+                                    top: 10px
+                                }
+                                .clock_bottom {
+                                    bottom: 25px;
+                                }
+                            }
+                            ul {
+                                li {
+                                    font-size: 3.375rem;
+                                    width: 55px;
+                                    height: 85px;
+                                    line-height: 85px;
+                                }
+                            }
+                        }
+                        .day {
+                            .box {
+                                .clock_name {right: -63px; }
+                            }
+                        }
+                        .hours {
+                            .box {
+                                .clock_name {right: -58px; }
+                            }
+                        }
+                        .minutes {
+                            .box {
+                                .clock_name {right: -50px; }
+                            }
+                        }
+                        .seoonds {
+                            .box {
+                                .clock_name {right: -48px; }
+                            }
+                        }
+                    }
+                }
+                .swiper-container {
+                    .swiper-wrapper {
+                        padding-left:30px ;
+                        .swiper-slide {
+                            a {
+                                img {
+                                    width: 500px; 
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:599px) {
+    main {
+        margin: 0 auto;
+        max-width: $phone;
+        .container {
+            width: 100%;
+            .contents {
+                .time {
+                    .center {
+                        .clock {
+                            .box {
+                                max-height: 90px;
+                                max-width: 15px;
+                                .clock_name {
+                                    top: -43px;
+                                    transform: translateX(50%);
+                                    color: #fff;
+                                    font-size: $small13;
+                                }
+                                .display {
+                                    left: 5px;
+                                    width: 7px;
+                                    height: 7px;
+                                }
+                                .clock_top {
+                                    top: 10px
+                                }
+                                .clock_bottom {
+                                    bottom: 25px;
+                                }
+                            }
+                            ul {
+                                li {
+                                    font-size: 2.375rem;
+                                    width: 40px;
+                                    height: 60px;
+                                    line-height: 60px;
+                                }
+                            }
+                        }
+                        .day {
+                            .box {
+                                .clock_name {right: -51px; }
+                            }
+                        }
+                        .hours {
+                            .box {
+                                .clock_name {right: -46px; }
+                            }
+                        }
+                        .minutes {
+                            .box {
+                                .clock_name {right: -40px; }
+                            }
+                        }
+                        .seoonds {
+                            .box {
+                                .clock_name {right: -37px; }
+                            }
+                        }
+                    }
+                }
+                .swiper-container {
+                    .swiper-wrapper {
+                        padding-left:40px ;
+                        .swiper-slide {
+                            a {
+                                img {
+                                    width: 300px; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            .footer_contents {
+                .box {
+                    h3 {
+                        font-size: $small13;
+                    }
+                    li {font-size: $small11;}
+                }
+            }
+        }
+    }
+}

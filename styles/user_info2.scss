@@ -100,6 +100,10 @@ main {
                                             input::placeholder {
                                                 color: #c2c2c2;
                                             }
+                                            .active {
+                                                outline:1px solid #333;
+                                                background-color: #fff;
+                                            }
                                         }
                                     }
                                 }
@@ -123,7 +127,7 @@ main {
                 }
                 .contents_coupon {
                     margin-right: 20px;
-                    .coupon_fillter {
+                    .coupon_filter {
                         @include flex-rnsc;
                         margin-top: 20px;
                         .left {
@@ -137,29 +141,31 @@ main {
                                 }
                             }
                         }
-                        .fillter_now {
+                        .filter_now {
                             position: relative;
-                            font-size: $subC14;
-                            font-weight: $weight500;
+                            padding: 6px 0 20px;
                             > button {
-                                @extend .fillter_now;
-                                font-weight: $weight600;
+                                @extend .filter_now;
                                 cursor: pointer;
+                                span {
+                                    font-size: $subC14;
+                                    font-family: $familySemiBold;
+                                }
                                 i[class*=right] {
                                     margin-top: 4px;
-                                    font-size: 16px;
+                                    font-size: 12px;
                                 }
                             }
-                            .fillter_option {
+                            .filter_option {
+                                z-index: 999;
                                 position: absolute; right: 0;
                                 width: 168px; background-color: #fff;
                                 border-radius: 8px;
                                 box-shadow: 0 2px 16px #00000014;
                                 padding: 8px 0;
                                 @include flex-cncf;
-                                // 
-                                display: none;
                                 button {
+                                    z-index: 99;
                                     @include flex-rnsc;
                                     width: 100%;
                                     color: #000c;
@@ -167,12 +173,12 @@ main {
                                     padding: 0 16px;
                                     line-height: 22px;
                                     font-size: $subC14;
-                                    font-weight: $weight500;
+                                    font-weight: $weight700;
                                     i[class*=check] {
                                         display: none;
                                     }
                                 }
-                                button:nth-child(2) {
+                                .active {
                                     color: #1273e4;
                                     font-weight: $weight700;
                                     i[class*=check] {
@@ -262,7 +268,7 @@ main {
                                     }
                                 }
                                 a {
-                                    position: absolute; bottom: 24px; right: 24px;
+                                    position: absolute; bottom: 13px; right: 24px;
                                     padding: 0 14px;
                                     width: auto; background-color: #f2f8ff;
                                     color: #1273e4; border-radius: 8px;

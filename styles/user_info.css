@@ -96,11 +96,11 @@ main .container .wrap .contents .container_btn .wrap_btn .btn {
   padding: 0 16px;
   margin-right: 24px;
 }
-main .container .wrap .contents .container_btn .wrap_btn .btn.active_contents {
+main .container .wrap .contents .container_btn .wrap_btn .btn.active {
   position: relative;
   color: #1273e4;
 }
-main .container .wrap .contents .container_btn .wrap_btn .btn.active_contents::after {
+main .container .wrap .contents .container_btn .wrap_btn .btn.active::after {
   background-color: #1273e4;
   content: "";
   display: block;
@@ -254,7 +254,7 @@ main .container .wrap .user_point .point_popup .popup_box ul li::before {
 main .container .wrap .user_point .point_popup .popup_box .btn {
   margin: 20px;
 }
-main .container .wrap .user_point .point_popup .popup_box .btn .close_btn {
+main .container .wrap .user_point .point_popup .popup_box .btn .close {
   box-sizing: border-box;
   cursor: pointer;
   padding: 0 18px;
@@ -288,7 +288,7 @@ main .container .wrap .user_point section .point_details_btn ul li button {
   font-size: 0.813rem;
   font-family: PretendardSemiBold;
 }
-main .container .wrap .user_point section .point_details_btn ul li button.active_point {
+main .container .wrap .user_point section .point_details_btn ul li button.active {
   background-color: #1273e4;
   color: #fff;
   border: 2px solid #1273e4;

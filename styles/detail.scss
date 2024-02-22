@@ -1,6 +1,6 @@
 @import 'common';
 .room_view_box {
-    // display: none;
+    display: none;
     .bg {
         width: 100%; height: 100%;
         background:rgba(0, 0, 0, 0.3);
@@ -47,14 +47,59 @@
                 }
                 .all_view {
                     .all_detail {
+                        overflow: hidden;
                         #view_container {
-                            .view_box {
-                                .swiper-slide {display: none;}
+                            position: relative;
+                            .view_box1 {
+                                .swiper-slide {
+                                    text-align: center;
+                                    img {
+                                        height: 390px;
+                                    }
+                                }
                                 .main_slide {
                                     width: 100%;
                                     text-align: center;
                                     img {
                                         height: 390px;
+                                    }
+                                }
+                            }
+                            .swiper-button-prev {
+                                width: 40px; height: 40px;
+                                background: #fff;
+                                border-radius: 50%;
+                                box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
+                                position: absolute; left: 1%; top: 35%;
+                                i {
+                                    font-size: $title20;
+                                    position: absolute; left: 12px; top: 10px;
+                                }
+                            }
+                            .swiper-button-prev::after {display: none;}
+                            .swiper-button-next::after {display: none;}
+                            .swiper-button-next {
+                                width: 40px; height: 40px;
+                                background: #fff;
+                                border-radius: 50%;
+                                box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
+                                position: absolute; right: 1%; top: 35%;
+                                i {
+                                    color: #000;
+                                    font-size: $title20;
+                                    position: absolute; left: 15px; top: 10px;
+                                }
+                            }
+                            .swiper-pagination {}
+                            .sub_photo {
+                                .view_box2 {
+                                    padding: 12px;
+                                    width: 8%;
+                                    .swiper-slide {
+                                        img {
+                                            width: 100px; height: 100px;
+                                            border-radius: 10px;
+                                        }
                                     }
                                 }
                             }
@@ -469,7 +514,7 @@ main {
                         border-bottom-left-radius: 10px;
                     }
                     img:hover {
-                        opacity: 80%;
+                        filter: brightness(90%);
                     }
                 }
                 
@@ -482,7 +527,7 @@ main {
                                 width: 323px; height: 286px;
                             }
                             img:hover {
-                                opacity: 80%;
+                                filter: brightness(90%);
                             }
                         }
                         .photo2 {
@@ -491,7 +536,7 @@ main {
                                 border-top-right-radius: 10px;
                             }
                             img:hover {
-                                opacity: 80%;
+                                filter: brightness(90%);
                             }
                         }
                     }
@@ -502,7 +547,7 @@ main {
                                 width: 323px; height: 286px;
                             }
                             img:hover {
-                                opacity: 80%;
+                                filter: brightness(90%);
                             }
                         }
                         .photo4 {
@@ -511,7 +556,7 @@ main {
                                 border-bottom-right-radius: 10px;
                             }
                             img:hover {
-                                opacity: 80%;
+                                filter: brightness(90%);
                             }
                         }
                     }
@@ -531,11 +576,12 @@ main {
                 }
             }
             .box2 {
+                max-width: 1400px;
                 display: flex; flex-flow: row nowrap;
                 .contents {
+                    width: calc(100% - 400px);
                     display: flex; flex-flow: column nowrap;
-                    justify-content: space-between;
-                    width: 100%;
+                    justify-content: space-between; 
                     .title_wrap {
                         .title {
                             .type {
@@ -584,18 +630,21 @@ main {
                         padding-bottom: 30px;
                         border-bottom: 1px solid #ebebeb;
                         .thum_review {
-                            display: flex;
-                            #thum_review_contents {}
-                            .swiper-container {
+                            display: flex; flex-flow: row nowrap;
+                            position: relative;
+                            #thum_review_contents {
+                                width: calc(100% - 400px);
+                                overflow: hidden;
                                 .swiper-wrapper {
-                                    display: flex;
+                                    display: flex; flex-flow: row nowrap;
+                                    align-items: center;
                                     padding: 20px; 
-                                    .detail_review1 {}
-                                    .swiper_slide {
+                                    .detail_review {
                                         background: #FAFAFA;
-                                        padding: 20px 22px 20px 20px;
+                                        padding: 20px 0;
                                         border-radius: 15px;
-                                        text-align: right;
+                                        text-align: center;
+                                        height: 150px;
                                         i {
                                             font-size: $title24;
                                             color: rgb(188, 196, 204);
@@ -617,13 +666,44 @@ main {
                                     }
                                 }
                             }
-                            .swiper_prev {
-                                i {}
+                            .swiper-button-prev02 {
+                                width: 40px; height: 40px;
+                                background: #fff;
+                                border-radius: 50%;
+                                box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
+                                position: absolute; left: 1%; top: 105px;
+                                z-index: 999;
+                                i {
+                                    color: #000;
+                                    font-size: $title20;
+                                    position: absolute; left: 12px; top: 10px;
+                                    z-index: 999;
+                                }
                             }
-                            .swiper_next {
-                                i {}
+                            .swiper-button-prev02::after {display: none;}
+                            .swiper-button-next02::after {display: none;}
+                            .swiper-button-next02 {
+                                width: 40px; height: 40px;
+                                background: #fff;
+                                border-radius: 50%;
+                                box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
+                                position: absolute; right: 1%; top: 100px;
+                                z-index: 999;
+                                i {
+                                    color: #000;
+                                    font-size: $title20;
+                                    position: absolute; left: 15px; top: 10px;
+                                    z-index: 999;
+                                }
                             }
                         }
+                        .thum_review::after {
+                            content: ''; display: inline-block;
+                            width: 200px; height: 100%;
+                            background: linear-gradient(-90deg, white, transparent);
+                            position: absolute; right: 0; top: 20px;
+                            z-index: 950;
+                        }    
                     }
                     .additional_service {
                         padding: 20px 0;
@@ -649,14 +729,15 @@ main {
                             .top {
                                 display: flex; flex-flow: row nowrap;
                                 padding-top: 20px;
-                                p {
-                                    display: flex;
+                                .icon {
+                                    display: flex; flex-flow: row nowrap;
+                                    align-items: center;
                                     padding-bottom: 10px;
                                     img {
-                                        width: 20px                                
+                                        width: 25px;                              
                                     }
                                     span {
-                                        font-size: $subT15; font-weight: $weight500;
+                                        font-size: $title18; font-weight: $weight500;
                                         color: #707070;
                                         padding: 0 5px 0 10px;
                                     }
@@ -664,13 +745,14 @@ main {
                             }
                             .btm {
                                 display: flex; flex-flow: row nowrap;
-                                p {
-                                    display: flex;
+                                .icon {
+                                    display: flex; flex-flow: row nowrap;
+                                    align-items: center;
                                     img {
-                                        width: 20px
+                                        width: 25px
                                     }
                                     span {
-                                        font-size: $subT15; font-weight: $weight500;
+                                        font-size: $title18; font-weight: $weight500;
                                         color: #707070;
                                         padding: 0 5px 0 10px;
                                     }
@@ -1091,6 +1173,7 @@ main {
                 }
             }
             .location_box {
+                position: relative;
                 .location {
                     font-size: $title18; font-weight: $weight600;
                     color: #333;
@@ -1108,6 +1191,21 @@ main {
                         a {
                             @extend #map;
                         }
+                    }    
+                }
+                .zoom_in {
+                    position: absolute; right: 1%; top: 15%;
+                    img {
+                        background: #fff;
+                        border: 1px solid #707070;
+                        border-bottom: none;
+                    }
+                }
+                .zoom_out {
+                    position: absolute; right: 1%; top: 19%;
+                    img {
+                        background: #fff;
+                        border: 1px solid #707070;
                     }
                 }
                 .location_info {
@@ -1132,7 +1230,7 @@ main {
                 }
             }
             .real_review {
-                max-width: 1400px; max-width: $margin0;
+                max-width: 1400px; margin: $margin0;
                 padding: 30px 0;
                 .title {
                     display: flex; flex-flow: row nowrap;
@@ -1200,10 +1298,12 @@ main {
                     }
                 }
                 .review_user {
+                    max-width: 1400px;
                     display: flex; flex-flow: row nowrap;
                     padding: 30px 0;
                     border-bottom: 1px solid rgb(235 235 235);
                     .user_info {
+                        display: flex; flex-flow: row nowrap;
                         p {
                             img {
                                 width: 36px;
@@ -1213,6 +1313,7 @@ main {
                             display: flex; flex-flow: column nowrap;
                             padding-left: 5px;
                             .best {
+                                width: 75px;
                                 font-size: $small13;
                                 color: #49627A;
                                 background: #f5f7fa;
@@ -1226,6 +1327,7 @@ main {
                         }
                     }
                     .photo_review {
+                        width: 1300px;
                         padding-left: 50px;
                         .score {
                             i {
@@ -1239,14 +1341,14 @@ main {
                             }
                         }
                         .thumnail {
-                            .swiper-container {}
+                            display: flex; flex-flow: row nowrap;
+                            position: relative;
                             #thum_photo {
-                                .swiper-wrapper {
-                                }
+                                width: calc(100% - 1000px);
+                                overflow: hidden;
                                 .photo {
-                                    .swiper-slide {}
                                     .view_slide {
-                                        
+                                        // width: calc(100% - 200px);
                                         img {
                                             width: 210px; height: 210px;
                                             border-radius: 10px;
@@ -1255,8 +1357,43 @@ main {
                                     }
                                 }
                             }
-                            .swiper_prev {}
-                            .swiper_prev {}
+                        .thumnail::after {
+                            content: ''; display: inline-block;
+                            width: 200px; height: 100%;
+                            background: linear-gradient(-90deg, white, transparent);
+                            position: absolute; right: 0; top: 20px;
+                            z-index: 950;
+                        }
+                            .swiper-button-prev03 {
+                                width: 40px; height: 40px;
+                                background: #fff;
+                                border-radius: 50%;
+                                box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
+                                position: absolute; left: 1%; top: 105px;
+                                z-index: 999;
+                                i {
+                                    color: #000;
+                                    font-size: $title20;
+                                    position: absolute; left: 12px; top: 10px;
+                                    z-index: 999;
+                                }
+                            }
+                            .swiper-button-prev03::after {display: none;}
+                            .swiper-button-next03::after {display: none;}
+                            .swiper-button-next03 {
+                                width: 40px; height: 40px;
+                                background: #fff;
+                                border-radius: 50%;
+                                box-shadow:0px 2px 8px rgba(0, 0, 0, 0.5);
+                                position: absolute; right: 1%; top: 100px;
+                                z-index: 999;
+                                i {
+                                    color: #000;
+                                    font-size: $title20;
+                                    position: absolute; left: 15px; top: 10px;
+                                    z-index: 999;
+                                }
+                            }
                         }
                         p {
                             font-size: $subC14;
@@ -1264,6 +1401,7 @@ main {
                             padding: 20px 0;
                         }
                         .more_review {
+                            width: 900px;
                             span {
                                 font-size: $subT15;
                                 color: #333;
@@ -1297,6 +1435,12 @@ main {
                             font-size: $small12;
                             padding: 0 10px;
                         }
+                        .active {
+                            background: $mainColor-b;
+                            width: 32px; height: 32px;
+                            color: #fff;
+                            border-radius: 50%;
+                        }
                     }
                     #next {
                         font-size: 0.75rem;
@@ -1304,7 +1448,6 @@ main {
                         padding-left: 5px;
                     }
                 }
-                
             }
             .similar_item {
                 h2 {

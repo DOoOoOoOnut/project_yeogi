@@ -10,8 +10,9 @@ popup.style.display = 'none';
 close_btn[0].addEventListener('click', ()=>{
     window.location.href = '../event.html'
 })
+// 마이페이지 -> 쿠폰함 
 coupon_down.addEventListener('click',()=>{
-    window.location.href = '../user_info.html?run_script=true'
+    window.location.href = '../user_info.html?coupon=coupon'
 })
 popup_btn.addEventListener('click', ()=>{
     popup.style.display = 'block';
@@ -19,6 +20,7 @@ popup_btn.addEventListener('click', ()=>{
 })
 close_btn[1].addEventListener('click',()=>{
     popup.style.display = 'none';
+    body.style.overflow = 'auto'
 })
 popup.addEventListener('click', function(event) {
     if (event.target === this) {
