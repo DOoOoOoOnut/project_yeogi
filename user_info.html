@@ -66,9 +66,9 @@
     .checkbox-wrapper-6 .tgl + .tgl-btn:before {
         display: none;
     }
-    .checkbox-wrapper-6 .tgl:checked + .tgl-btn:after {
+    /* .checkbox-wrapper-6 .tgl:checked + .tgl-btn:after {
         left: 50%;
-    }
+    } */
     .checkbox-wrapper-6 .tgl-light + .tgl-btn {
         background: #f0f0f0;
         border-radius: 2em;
@@ -80,9 +80,9 @@
         background: #fff;
         transition: all 0.2s ease;
     }
-    .checkbox-wrapper-6 .tgl-light:checked + .tgl-btn {
+    /* .checkbox-wrapper-6 .tgl-light:checked + .tgl-btn {
         background: #1273e4;
-    }
+    } */
     /* 설정 */
     .checkbox-wrapper-4 * {
         box-sizing: border-box;
@@ -307,6 +307,10 @@
                                                 <legend class="skip">쿠폰 코드 양식</legend>
                                                 <label for="coupon_code_input">쿠폰코드</label>
                                                 <input type="text" name="coupon_code_input" class="coupon_code_input" placeholder="쿠폰 코드는 공백없이 입력하세요." >
+                                                <button type="button" class="text_delete">
+                                                    <i class="fa-solid fa-circle-xmark"></i>
+                                                </button>
+                                                <span class="error_message"></span>
                                             </fieldset>
                                         </form>
                                     </div>
@@ -376,7 +380,7 @@
                                             <span class="use_num">4</span>개의 사용조건이 있습니다. 상세를 하세요.
                                         </p>
                                     </section>
-                                    <button type="button" id="use_info">상세조건 상세 <!-- font_awesome --><i class="fa-solid fa-angle-right"></i></button>
+                                    <button type="button" class="use_info">상세조건 상세 <!-- font_awesome --><i class="fa-solid fa-angle-right"></i></button>
                                     <a href="./index.html">홈으로</a>
                                 </div>
                                 <div class="coupon_item">
@@ -400,7 +404,7 @@
                                             <span class="use_num">4</span>개의 사용조건이 있습니다. 상세를 하세요.
                                         </p>
                                     </section>
-                                    <button type="button" id="use_info">상세조건 상세 <!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
+                                    <button type="button" class="use_info">상세조건 상세 <!-- font_awesome --><i class="fa-solid fa-chevron-right"></i></button>
                                     <a href="./index.html">홈으로</a>
                                 </div>
                             </div>
@@ -473,9 +477,9 @@
                                 <section class="top_contents">
                                     <div class="left">
                                         <!-- js 글씨 바꾸기-->
-                                        <i class="fa-solid fa-lock"></i>
-                                        <i class="fa-solid fa-lock-open"></i>
-                                        <p>가려진 내 정보를 확인할 수 있어요!</p>
+                                        <i class="fa-solid fa-lock lock"></i>
+                                        <i class="fa-solid fa-lock-open lock_open"></i>
+                                        <p class="view_contents">가려진 내 정보를 확인할 수 있어요!</p>
                                     </div>
                                     <div class="right">
                                         <div class="checkbox-wrapper-6">
@@ -532,7 +536,7 @@
                                                     <input type="text" placeholder="01012341234" maxlength="11">
                                                     <button type="button" id="certified_btn">인증번호 전송</button>
                                                 </span>
-                                                <span class="error"></span>
+                                                <span class="error_message"></span>
                                             </p>
                                             <p class="after">
                                                 <span class="input_wrap">
@@ -541,7 +545,7 @@
                                                 </span>
                                                 <span class="time"></span>
                                             </p>
-                                            <span class="error"></span>
+                                            <span class="error_message"></span>
                                             <button type="button" id="resend">인증번호 재전송</button>
                                         </div>
                                     </div>
@@ -563,7 +567,11 @@
                                             <div class="phone_certified">
                                                 <div class="box">
                                                     <label for="phone_last">휴데폰 번호</label>
-                                                    <input type="tel" name="phone_last" class="phone_last" maxlength="4" placeholder="휴데폰 뒷자리 4개 입력하세요." autofocus>
+                                                    <input type="tel" name="phone_last" class="phone_last" maxlength="4" placeholder="휴데폰 뒷자리 4개 입력하세요." autofocus oninput="this.value = this.value.replace(/[^\d]/g, '');">
+                                                    <button type="button" class="text_delete">
+                                                        <i class="fa-solid fa-circle-xmark"></i>
+                                                    </button>
+                                                    <span class="error_message"></span>
                                                     <p>가입하신 휴데폰 번호는 0101234**** 에요</p>
                                                 </div>
                                             </div>
@@ -675,6 +683,16 @@
                     </div>
                     <div class="btn">
                         <button type="button" class="storage_btn">저장</button>
+                        <div class="popup_bg">
+                            <div class="contents">
+                                <h2>마케팅 알림 수신정보가 수정되었어요.</h2>
+                                <ul>
+                                    <li>일시 : <span class="year">2024</span>년 <span class="month">02</span>월 <span>day</span>일</li>
+                                    <li>수신거절 : <span class="receive">문자 이메일</span></li>
+                                    <li>수신동의 : <span class="acceptance">-</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
