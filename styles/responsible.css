@@ -24,6 +24,7 @@
     main .main_container .main_wrap .search_wrap {top:150px; border-radius:10px;}
     main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big {display:none;}
     main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small {display:block;}
+    main .search_popup {display:block;}
     main .center_container {width: calc(100% - 40px);}
     main .center_container .event_wrap .event_box .event_bnr_detail {overflow-x:visible;}
     main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper a {min-height:96px;}

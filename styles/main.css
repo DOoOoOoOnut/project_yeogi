@@ -6,6 +6,65 @@ main {
   max-width: 1400px;
   margin: 0 auto;
 }
+main .search_popup {
+  display: none;
+}
+main .search_popup #search_frm_m {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 999;
+  position: fixed;
+}
+main .search_popup #search_frm_m fieldset .search_m {
+  width: 100%;
+  padding: 15px 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fafafa;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_top_m {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_top_m .close_btn {
+  position: absolute;
+  left: 20px;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_top_m .close_btn .close {
+  font-size: 22px;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 0 20px;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul li {
+  padding: 15px 30px;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul li span {
+  font-size: 0.875rem;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul li:first-child {
+  border-bottom: 2px solid #1273e4;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul li:first-child span {
+  color: #1273e4;
+  font-family: PretendardBold;
+}
+main .search_popup #search_frm_m fieldset .search_m .search_center_m .search_box_m .search_before {
+  background-color: #fff;
+}
 main .main_container {
   width: 100%;
   margin: 0 auto;
@@ -40,7 +99,7 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset {
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big {
   width: 100%;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tap {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -48,7 +107,7 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .s
   border-bottom: 1px solid #f5f5f5;
   padding: 25px 20px 0;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tap h2 #kr_room {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab h2 #kr_room {
   padding: 0 10px 18px;
   margin-right: 20px;
   color: #f7323f;
@@ -56,7 +115,7 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .s
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tap h2 #over_room {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab h2 #over_room {
   padding: 0 10px 18px;
   color: #999;
 }
