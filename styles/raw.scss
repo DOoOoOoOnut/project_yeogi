@@ -12,8 +12,8 @@ main {
             height: 52px;
             border-bottom: 1px solid #f2f8ff;
             h2 {
-                margin-right: 8px;
-                padding: 16px;
+                margin-right: 15px;
+                padding: 16px 10px;
                 a {
                     font-weight: $weight700;
                     color: #70706E;
@@ -97,6 +97,7 @@ main {
                             }
                         }
                         .open {
+                            display: none;
                             padding: 20px 16px;
                             background-color: #fafafa;
                             overflow: hidden;
