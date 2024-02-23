@@ -1,5 +1,42 @@
 /* import data from "./accommodation.js" */
 
+const calendar_date = document.querySelector('.calendar_date')
+const date_select_box = document.querySelector('.date_select_box')
+const user_search = document.querySelector('.user_search')
+const search_ranking = document.querySelector('.search_ranking')
+const num_view = document.querySelector('.num_view')
+const user_select = document.querySelector('.user_select')
+let hover = true
+console.log(calendar_date,date_select_box,user_search,search_ranking,num_select,user_select)
+
+// calendar_date.addEventListener('mouseover',()=>{
+//     hover = !hover
+//     console.log(hover)
+//     if(hover === false){
+//         calendar_date.style.backgroundColor = '#eeeeee';
+//     }else{
+//         calendar_date.style.backgroundColor = '#f5f5f5';
+//     }
+// })
+user_search.addEventListener('click',()=>{
+    search_ranking.style.display = 'block'
+})
+calendar_date.addEventListener('click',()=>{
+    calendar_date.classList.add('input_active')
+    date_select_box.style.display = 'block'
+})
+num_view.addEventListener('click',()=>{
+    num_view.classList.add('input_active')
+    user_select.style.display = 'block'
+})
+calendar_date.addEventListener('mouseover',()=>{
+    calendar_date.classList.add('hover')
+})
+calendar_date.addEventListener('mouseout',()=>{
+    calendar_date.classList.remove('hover')
+})
+
+//스와이퍼
 //이벤트
 let swiperContainer = document.querySelector('.swiper-container')
 let swiper = new Swiper('.swiper-container', {

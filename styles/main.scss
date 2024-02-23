@@ -486,15 +486,23 @@ main {
                                 display:flex; flex-flow:row nowrap; align-items:center;
                                 width:100%; padding:20px;
                                 .user_search_detail {
-                                    background-color:#f5f5f5;
-                                    border-radius:10px;
-                                    padding:4px 14px; margin-right:10px;
-                                    width:40%; height:48px;
                                     position:relative;
+                                    width:40%;
                                     .user_search {
-                                        i {color:#999;}
-                                        #search_input {padding:10px;}
+                                        margin-right:10px;
+                                        i {color:#999; position:absolute; top:15px; left:15px;}
+                                        #search_input {
+                                        background-color:#f5f5f5;
+                                        border-radius:10px;
+                                        padding:4px 14px 4px 40px;
+                                        width:100%; height:48px;
+                                        }
                                         #search_input::placeholder {color:#d9d9d9;}
+                                        #search_input:hover {background-color:#eeeeee; border-radius:10px;}
+                                        #search_input:focus {
+                                            border:1px solid #000;
+                                            background-color:#fff; width:100%;
+                                        }
                                     }
                                     .search_ranking {
                                         //js
@@ -523,7 +531,6 @@ main {
                                     }
                                     .user_search_service {}
                                 }
-                                .user_search_detail:hover {background-color:#eeeeee;}
                                 .calendar_detail {
                                     @include flex-rncc;
                                     position:relative;
@@ -537,7 +544,11 @@ main {
                                         i {color:#999; margin-right:10px;}
                                         span {font-weight: $weight600; letter-spacing:0.5px;}
                                     }
-                                    .calendar_date:hover {background-color:#eeeeee;}
+                                    // .calendar_date:hover {background-color:#eeeeee;}
+                                    .hover {background-color:#eeeeee;}
+                                    .input_active {
+                                        border:1px solid #000; background-color:#fff;
+                                    }
                                     .date_select_box {
                                         //js
                                         display:none;
