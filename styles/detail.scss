@@ -461,55 +461,65 @@
     }
 }
 main {
-    max-width: 1400px; margin: $margin0;
-    nav {
-        background: #fff;
-        position: fixed; z-index: 999;
-        width: 1400px;
-        .box1 {
-            display: flex; flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
+    .tab_menu {
+        width: 100%; margin: $margin0;
+        nav {
+            width: 100%;
+            margin: $margin0;
+            background: #fff;
+            position: fixed; z-index: 999;
             border-bottom: 1px solid rgb(235 235 235);
-            .main_menu {
+            .box1 {
+                max-width: 1400px; margin: 0 auto;
                 display: flex; flex-flow: row nowrap;
+                justify-content: space-between;
                 align-items: center;
-                .main_move {
-                    color: $mainColor-b;
-                    border-bottom: 2px solid $mainColor-b;
+                padding: 0 40px;
+                .main_menu {
+                    display: flex; flex-flow: row nowrap;
+                    align-items: center;
+                    .main_move {
+                        color: $mainColor-b;
+                        border-bottom: 2px solid $mainColor-b;
+                    }
+                    .move {
+                        color: #707070;
+                    }
+                    a {
+                        font-size: $defalt16; font-weight: $weight600;
+                        padding: 24px 16px;
+                    }
                 }
-                .move {
-                    color: #707070;
-                }
-                a {
-                    font-size: $defalt16; font-weight: $weight600;
-                    padding: 24px 16px;
-                }
-            }
-            .select {
-                width: 125px;
-                background: $mainColor-b;
-                border-radius: 8px;
-                padding: 10px 15px;
-                text-align: center;
-                #select_room {
-                    color: #fff;
-                    font-size: $subC14;
+                .select {
+                    width: 125px;
+                    background: $mainColor-b;
+                    border-radius: 8px;
+                    padding: 10px 15px;
+                    text-align: center;
+                    #select_room {
+                        color: #fff;
+                        font-size: $subC14;
+                    }
                 }
             }
         }
     }
     section {
+        max-width: 1400px; margin: $margin0;
+        padding: 0 40px;
         .room {
+            width: 100%;
             .photo {
+                width: 100%;
                 display: flex; flex-flow: row nowrap;
                 align-items: center;
                 position: relative;
                 padding: 40px 0;
                 .main_photo {
+                    width: 100%;
                     padding-right: 8px;
                     img {
-                        width: 737px; height: 581px;
+                        width: 100%; height: auto;
                         border-top-left-radius: 10px;
                         border-bottom-left-radius: 10px;
                     }
@@ -517,14 +527,15 @@ main {
                         filter: brightness(90%);
                     }
                 }
-                
                 .sub_photo {
+                    width: 100%;
                     .top_photo {
                         padding-bottom: 5px;
+                        display: flex;
                         .photo1 {
                             padding-right: 5px;
                             img {
-                                width: 323px; height: 286px;
+                                width: 100%; height: auto;
                             }
                             img:hover {
                                 filter: brightness(90%);
@@ -532,7 +543,7 @@ main {
                         }
                         .photo2 {
                             img {
-                                width: 323px; height: 286px;
+                                width: 100%; height: auto;
                                 border-top-right-radius: 10px;
                             }
                             img:hover {
@@ -541,10 +552,11 @@ main {
                         }
                     }
                     .btm_photo {
+                        display: flex;
                         .photo3 {
                             padding-right: 5px;
                             img {
-                                width: 323px; height: 286px;
+                                width: 100%; height: auto;
                             }
                             img:hover {
                                 filter: brightness(90%);
@@ -552,7 +564,7 @@ main {
                         }
                         .photo4 {
                             img {
-                                width: 323px; height: 286px;
+                                width: 100%; height: auto;
                                 border-bottom-right-radius: 10px;
                             }
                             img:hover {
@@ -576,14 +588,16 @@ main {
                 }
             }
             .box2 {
-                max-width: 1400px;
+                width: 100%;
                 display: flex; flex-flow: row nowrap;
                 .contents {
                     width: calc(100% - 400px);
                     display: flex; flex-flow: column nowrap;
                     justify-content: space-between; 
                     .title_wrap {
+                        width: 100%;
                         .title {
+                            width: 100%;
                             .type {
                                 display: flex; flex-flow: row nowrap;
                                 align-items: center;
@@ -623,6 +637,26 @@ main {
                             .all_review {
                                 font-size: $defalt16; font-weight: $weight600;
                                 color: $mainColor-b;
+                            }
+                        }
+                    }
+                    .comments {
+                        display: none;
+                        padding: 15px 0;
+                        .title {
+                            display: flex; flex-flow: row nowrap;
+                            justify-content: space-between;
+                            .address {
+                                font-size: $defalt16;
+                                color: #333;
+                                i {
+                                    font-size: $defalt16; color: #333;
+                                    padding-right: 10px;
+                                }
+                            }
+                            .mini_map_view {
+                                font-size: $defalt16; 
+                                color: #1273e4;
                             }
                         }
                     }
@@ -708,6 +742,7 @@ main {
                     .additional_service {
                         padding: 20px 0;
                         border-bottom: 1px solid #ebebeb;
+                        position: relative;
                         .title {
                             display: flex; flex-flow: row nowrap;
                             align-items: center; justify-content: space-between;
@@ -737,7 +772,7 @@ main {
                                         width: 25px;                              
                                     }
                                     span {
-                                        font-size: $title18; font-weight: $weight500;
+                                        font-size: $subC14; font-weight: $weight500;
                                         color: #707070;
                                         padding: 0 5px 0 10px;
                                     }
@@ -752,7 +787,7 @@ main {
                                         width: 25px
                                     }
                                     span {
-                                        font-size: $title18; font-weight: $weight500;
+                                        font-size: $subC14; font-weight: $weight500;
                                         color: #707070;
                                         padding: 0 5px 0 10px;
                                     }
@@ -822,6 +857,7 @@ main {
                             padding-bottom: 20px;
                         }
                         .box3 {
+                            width: 100%;
                             .item {
                                 background: #F5F7FA;
                                 padding: 30px;
@@ -873,6 +909,7 @@ main {
                                             }
                                         }
                                         .right {
+                                            display: flex; flex-flow: column nowrap;
                                             .price {
                                                 font-size: $title18; font-weight: $weight600;
                                                 color: #333;
@@ -883,9 +920,10 @@ main {
                                                 }
                                             }
                                             .item_reservation {
+                                                display: inline-block;
                                                 font-size: $small12; font-weight: $weight600;
                                                 color: #fff;
-                                                padding: 9px 12px;
+                                                
                                                 background: $mainColor-b;
                                                 border-radius: 6px;
                                             }
@@ -1024,9 +1062,10 @@ main {
                     }
                 }
                 .side {
-                    width: 400px;
+                    width: 100%;
                     margin: $margin0;
                     padding-left: 50px;
+                    position: relative; z-index: 900;
                     .map {
                         margin-bottom: 20px;
                         .mini_map {
@@ -1083,60 +1122,58 @@ main {
                         width: 350px;
                         border: 1px solid rgb(235 235 235);
                         border-radius: 10px;
-                        #event_bnr {
-                            text-align: center;
+                        .event_title {
+                            display: flex; flex-flow: row nowrap;
+                            justify-content: space-between;
+                            align-items: center;
                             padding: 20px;
-                            .event_title {
-                                width: 300px;
-                                display: flex; flex-flow: row nowrap;
-                                justify-content: space-between;
-                                align-items: center;
-                                padding: 15px 0;
-                                border-bottom: 1px solid rgb(235 235 235);
-                                h2 {
-                                    font-size: $subT15; 
-                                    color: #000;
-                                    em {
-                                        font-size: $subT15; font-weight: $weight700;
-                                        color: $mainColor-r;
-                                    }
-                                }
-                                .coupon_get {
-                                    background: $mainColor-b;
-                                    border-radius: 10px;
-                                    color: #fff;
-                                    padding: 9px 8px 9px 12px;
-                                    font-size: $small12;
-                                    i {
-                                        font-size: $small12;
-                                        margin-left: 3px;
-                                    }
+                            border-bottom: 1px solid rgb(235 235 235);
+                            h2 {
+                                font-size: $subT15; 
+                                color: #000;
+                                em {
+                                    font-size: $subT15; font-weight: $weight700;
+                                    color: $mainColor-r;
                                 }
                             }
+                            .coupon_get {
+                                background: $mainColor-b;
+                                border-radius: 10px;
+                                color: #fff;
+                                padding: 9px 8px 9px 12px;
+                                font-size: $small12;
+                                i {
+                                    font-size: $small12;
+                                    margin-left: 3px;
+                                }
+                            }
+                        }
+                        #event_bnr {
+                            padding: 15px 10px;
+                            overflow-x: hidden;
+                            position: relative;
+                            background: #fff;
                             .event_slide {
-                                padding: 20px 0;
-                                border-bottom: 1px solid rgb(235 235 235);
-                                .event_slide1 {
+                                .event_slide {
                                     img {
-                                        width: 300px;
+                                        width: 100%;
                                         border-radius: 10px;
+                                        margin-bottom: 10px;
+                                        
                                     }
                                 }
-                                .event_slide2 {
-                                    img {
-                                        display: none;
-                                        height: 120px;
-                                        border-radius: 10px;
-                                    }
+                                .swiper-pagination {
+                                    position: absolute; left: 0; top: 0;
                                 }
                             }
                         }
                         .pay {
+                            border-top: 1px solid rgb(235 235 235);
+                            padding: 15px;
                             .title {
                                 display: flex; flex-flow: row nowrap;
                                 align-items: center;
                                 justify-content: space-between;
-                                padding: 20px;
                                 h2 {
                                     font-size: $title18; font-weight: $weight600;
                                     color: #333;
@@ -1359,13 +1396,6 @@ main {
                                     }
                                 }
                             }
-                        .thumnail::after {
-                            content: ''; display: inline-block;
-                            width: 200px; height: 100%;
-                            background: linear-gradient(-90deg, white, transparent);
-                            position: absolute; right: 0; top: 20px;
-                            z-index: 950;
-                        }
                             .swiper-button-prev03 {
                                 width: 40px; height: 40px;
                                 background: #fff;
@@ -1450,6 +1480,13 @@ main {
                         padding-left: 5px;
                     }
                 }
+            }
+            .thumnail::after {
+                content: ''; display: inline-block;
+                width: 200px; height: 100%;
+                background: linear-gradient(-90deg, white, transparent);
+                position: absolute; right: 0; top: 20px;
+                z-index: 950;
             }
             .similar_item {
                 h2 {
