@@ -16,6 +16,307 @@
     <!-- 헤더 -->
     <!-- 메인 -->
     <main>
+        <!-- popup -->
+        <div class="main_popup">
+            <form action="#" method="get" id="search_frm_m">
+                <fieldset>
+                    <legend class="skip">숙소검색창 모바일버전</legend>
+                    <!-- 위치 검색창 팝업 -->
+                    <div class="search_popup">
+                        <div class="search_popup_bg">
+                            <div class="travel_search">
+                                <div class="back_btn">
+                                    <button type="button" class="back"><i class="fa-solid fa-arrow-left"></i></button>
+                                </div>
+                                <div class="user_search_detail">
+                                    <div class="user_search_box_m">
+                                        <div class="user_search">
+                                            <span class="left">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <input type="text" name="search_input" id="search_input" placeholder="여행지나 숙소를 검색해보세요" maxlength="50">
+                                            </span>
+                                            <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- 검색창 누르면 뜨는 아래 창 -->
+                                    <div class="search_ranking">
+                                        <h3>여기어때 검색 순위</h3>
+                                        <ol>
+                                            <li><em>1</em><span>경주</span></li>
+                                            <li><em>2</em><span>강릉</span></li>
+                                            <li><em>3</em><span>속초</span></li>
+                                            <li><em>4</em><span>여수</span></li>
+                                            <li><em>5</em><span>부산</span></li>
+                                            <li><em>6</em><span>전주</span></li>
+                                            <li><em>7</em><span>춘천</span></li>
+                                            <li><em>8</em><span>제주도</span></li>
+                                            <li><em>9</em><span>포항</span></li>
+                                            <li><em>10</em><span>대전</span></li>
+                                        </ol>
+                                    </div>
+                                    <!-- 검색을 하기 시작하면 바뀌게 -->
+                                    <div class="user_search_service"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 모바일 검색창 팝업 -->
+                    <div class="search_popup_m">
+                        <div class="popup_bg">
+                            <div class="search_m">
+                                <!-- 헤더 -->
+                                <div class="search_top_m">
+                                    <div class="close_btn">
+                                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
+                                    <div class="search_tab_m">
+                                        <ul>
+                                            <li><span>국내</span></li>
+                                            <li><span>해외</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 검색내용 -->
+                                <div class="search_center_m">
+                                    <!-- 숙소검색 -->
+                                    <div class="search_box_m">
+                                        <!-- 클릭 전 -->
+                                        <div class="search_before">
+                                            <span>
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <span>여행지나 숙소를 검색해보세요</span>
+                                            </span>
+                                            <button type="button" class="change">변경</button>
+                                        </div>
+                                        <!-- 클릭 후 -->
+                                        <div class="search_after">
+                                            <h2>어디로 떠나시나요?</h2>
+                                            <div class="user_search_detail_m">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <span>여행지나 숙소를 검색해보세요</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 날짜검색 -->
+                                    <div class="calendar_detail_m">
+                                        <!-- 클릭전 -->
+                                        <div class="calendar_date_m">
+                                            <span>
+                                                <i class="fa-regular fa-calendar"></i>
+                                                <span>03.12 화 - 03.13 수 <span class="total_night">(1박)</span></span>
+                                            </span>
+                                            <button type="button" class="change">변경</button>
+                                        </div>
+                                        <!-- 클릭 후 -->
+                                        <div class="date_select_box_m">
+                                            <div class="date_select_detail_m">
+                                                <div class="date_top_m">
+                                                    <h2>날짜를 선택해 주세요.</h2>
+                                                    <ul>
+                                                        <li><span>일</span></li>
+                                                        <li><span>월</span></li>
+                                                        <li><span>화</span></li>
+                                                        <li><span>수</span></li>
+                                                        <li><span>목</span></li>
+                                                        <li><span>금</span></li>
+                                                        <li><span>토</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="date_select">
+                                                    <div class="date">
+                                                        <h3>2024년 3월</h3>
+                                                        <div class="day_box">
+                                                            <ul>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li><button type="button" class="day redday">1</button></li>
+                                                                <li><button type="button" class="day">2</button></li>
+                                                                <li><button type="button" class="day redday">3</button></li>
+                                                                <li><button type="button" class="day">4</button></li>
+                                                                <li><button type="button" class="day">5</button></li>
+                                                                <li><button type="button" class="day">6</button></li>
+                                                                <li><button type="button" class="day">7</button></li>
+                                                                <li><button type="button" class="day">8</button></li>
+                                                                <li><button type="button" class="day">9</button></li>
+                                                                <li><button type="button" class="day redday">10</button></li>
+                                                                <li><button type="button" class="day">11</button></li>
+                                                                <li><button type="button" class="day">12</button></li>
+                                                                <li><button type="button" class="day">13</button></li>
+                                                                <li><button type="button" class="day">14</button></li>
+                                                                <li><button type="button" class="day">15</button></li>
+                                                                <li><button type="button" class="day">16</button></li>
+                                                                <li><button type="button" class="day redday">17</button></li>
+                                                                <li><button type="button" class="day">18</button></li>
+                                                                <li><button type="button" class="day">19</button></li>
+                                                                <li><button type="button" class="day">20</button></li>
+                                                                <li><button type="button" class="day">21</button></li>
+                                                                <li><button type="button" class="day">22</button></li>
+                                                                <li><button type="button" class="day">23</button></li>
+                                                                <li><button type="button" class="day redday">24</button></li>
+                                                                <li><button type="button" class="day">25</button></li>
+                                                                <li><button type="button" class="day">26</button></li>
+                                                                <li><button type="button" class="day">27</button></li>
+                                                                <li><button type="button" class="day">28</button></li>
+                                                                <li><button type="button" class="day">29</button></li>
+                                                                <li><button type="button" class="day">30</button></li>
+                                                                <li><button type="button" class="day redday">31</button></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="date">
+                                                        <h3>2024년 4월</h3>
+                                                        <div class="day_box">
+                                                            <ul>
+                                                                <li></li>
+                                                                <li><button type="button" class="day">1</button></li>
+                                                                <li><button type="button" class="day">2</button></li>
+                                                                <li><button type="button" class="day">3</button></li>
+                                                                <li><button type="button" class="day">4</button></li>
+                                                                <li><button type="button" class="day">5</button></li>
+                                                                <li><button type="button" class="day">6</button></li>
+                                                                <li><button type="button" class="day redday">7</button></li>
+                                                                <li><button type="button" class="day">8</button></li>
+                                                                <li><button type="button" class="day">9</button></li>
+                                                                <li><button type="button" class="day">10</button></li>
+                                                                <li><button type="button" class="day">11</button></li>
+                                                                <li><button type="button" class="day">12</button></li>
+                                                                <li><button type="button" class="day">13</button></li>
+                                                                <li><button type="button" class="day redday">14</button></li>
+                                                                <li><button type="button" class="day">15</button></li>
+                                                                <li><button type="button" class="day">16</button></li>
+                                                                <li><button type="button" class="day">17</button></li>
+                                                                <li><button type="button" class="day">18</button></li>
+                                                                <li><button type="button" class="day">19</button></li>
+                                                                <li><button type="button" class="day">20</button></li>
+                                                                <li><button type="button" class="day redday">21</button></li>
+                                                                <li><button type="button" class="day">22</button></li>
+                                                                <li><button type="button" class="day">23</button></li>
+                                                                <li><button type="button" class="day">24</button></li>
+                                                                <li><button type="button" class="day">25</button></li>
+                                                                <li><button type="button" class="day">26</button></li>
+                                                                <li><button type="button" class="day">27</button></li>
+                                                                <li><button type="button" class="day redday">28</button></li>
+                                                                <li><button type="button" class="day">29</button></li>
+                                                                <li><button type="button" class="day">30</button></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                                <li></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="date_bottom_m">
+                                                    <div class="date_reset">
+                                                        <i class="fa-solid fa-rotate-right"></i>
+                                                        <span>일정 초기화</span>
+                                                    </div>
+                                                    <div class="user_select">
+                                                        <span class="select"><span class="total_night">1</span>박 적용</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 인원선택 -->
+                                    <div class="num_detail_m">
+                                        <!-- 클릭전 -->
+                                        <div class="num_view_m">
+                                            <span>
+                                                <i class="fa-solid fa-user-large"></i>
+                                                <span>
+                                                    객실 <span class="room_num">1</span>,
+                                                    성인 <span class="adult_num">2</span>,
+                                                    아동 <span class="children_num">0</span>
+                                                </span>
+                                            </span>
+                                            <button type="button" class="change">변경</button>
+                                        </div>
+                                        <!-- 클릭후 -->
+                                        <div class="user_select">
+                                            <h2>인원을 설정해주세요.</h2>
+                                            <div class="user_room">
+                                                <h3>객실</h3>
+                                                <div class="user_room_select">
+                                                    <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
+                                                    <span class="user_room_num">1</span>
+                                                    <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="user_adult_left">
+                                                <div class="user_adult">
+                                                    <h3>성인</h3>
+                                                    <p>객실마다 1명 이상 필수 선택</p>
+                                                </div>
+                                                <div class="user_adult_select">
+                                                    <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
+                                                    <span class="user_adult_num">2</span>
+                                                    <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="user_children_left">
+                                                <div class="user_children">
+                                                    <h3>아동</h3>
+                                                    <p>만 0세 ~ 17세</p>
+                                                </div>
+                                                <div class="user_children_select">
+                                                    <button type="button" class="num_minus"><i class="fa-solid fa-circle-minus"></i></button>
+                                                    <span class="user_children_num">0</span>
+                                                    <button type="button" class="num_plus"><i class="fa-solid fa-circle-plus"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="children_notice">
+                                                <ul>
+                                                    <li>숙소별로 아동으로 간주하는 나이가 다르므로 체크인 일자 기준의 정확한 만나이를 입력해주세요.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="children_age">
+                                                <span class="user_children_num">아동1</span>
+                                                <button type="button" class="user_children_age">
+                                                    <span>만 12세</span>
+                                                    <i class="fa-solid fa-angle-down"></i>
+                                                    <div class="children_age_select">
+                                                        <span>만 3세 미만</span>
+                                                        <span>만 3세</span>
+                                                        <span>만 4세</span>
+                                                        <span>만 5세</span>
+                                                        <span>만 6세</span>
+                                                        <span>만 7세</span>
+                                                        <span>만 8세</span>
+                                                        <span>만 9세</span>
+                                                        <span>만 10세</span>
+                                                        <span>만 11세</span>
+                                                        <span>만 12세</span>
+                                                        <span>만 13세</span>
+                                                        <span>만 14세</span>
+                                                        <span>만 15세</span>
+                                                        <span>만 16세</span>
+                                                        <span>만 17세</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 검색버튼 -->
+                                <div class="search_bottom_m">
+                                    <a href="search.html" id="search_btn_m">검색</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
         <!-- 메인화면 -->
         <section class="main_container">
             <div class="main_wrap">
@@ -26,7 +327,7 @@
                             <legend class="skip">숙소검색창</legend>
                             <div class="search_big">
                                 <!-- 제목 탭 구성 -->
-                                <div class="search_tap">
+                                <div class="search_tab">
                                     <h2><button type="button" id="kr_room">국내 숙소</button></h2>
                                     <h2><button type="button" id="over_room">해외 숙소</button></h2>
                                 </div>
@@ -359,6 +660,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- 모바일 버전 -->
                             <div class="search_small">
                                 <div class="user_search">
                                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -382,7 +684,7 @@
                 <div class="event_box">
                     <div class="box_btn">
                         <div class="swiper-button-prev"><i class="fa-solid fa-angle-left"></i></div>
-                        <div class="swiper-button-next" class="right_btn"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="swiper-button-next"><i class="fa-solid fa-angle-right"></i></div>
                     </div>
                     <div class="event_bnr_detail swiper-container">
                         <div class="event_bnr swiper-wrapper">

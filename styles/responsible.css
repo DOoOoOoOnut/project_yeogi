@@ -17,6 +17,8 @@
 }
 @media screen and (max-width:900px){
     main {max-width:900px;}
+    main .main_popup #search_frm_m fieldset .search_popup {display:block;}
+    main .main_popup #search_frm_m fieldset .search_popup_m {display:block;}
     main .main_container {height:100%;}
     main .main_container .main_wrap {width: calc(100% - 40px);}
     main .main_container .main_wrap h1 {font-size:1.5rem; top:60px; letter-spacing:1px;}

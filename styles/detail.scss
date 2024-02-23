@@ -1154,7 +1154,13 @@ main {
                             position: relative;
                             background: #fff;
                             .event_slide {
+<<<<<<< HEAD
                                 .event_slide {
+=======
+                                padding: 20px 0;
+                                .event_slide {
+                                    
+>>>>>>> 0e632e8351477ceb81e0a9722f6555081017fe27
                                     img {
                                         width: 100%;
                                         border-radius: 10px;
@@ -1162,9 +1168,12 @@ main {
                                         
                                     }
                                 }
+<<<<<<< HEAD
                                 .swiper-pagination {
                                     position: absolute; left: 0; top: 0;
                                 }
+=======
+>>>>>>> 0e632e8351477ceb81e0a9722f6555081017fe27
                             }
                         }
                         .pay {
@@ -1193,7 +1202,7 @@ main {
                                 p {
                                     display: flex; align-items: center;
                                     font-size: $subT15;
-                                    padding: 0 10px 20px 5px;
+                                    padding: 0 10px 0 5px;
                                     img {
                                         width: 70px;
                                     }
@@ -1241,7 +1250,7 @@ main {
                     }
                 }
                 .zoom_out {
-                    position: absolute; right: 1%; top: 19%;
+                    position: absolute; right: 1%; top: 18.5%;
                     img {
                         background: #fff;
                         border: 1px solid #707070;
@@ -1396,6 +1405,23 @@ main {
                                     }
                                 }
                             }
+<<<<<<< HEAD
+=======
+                            #thum_photo::after {
+                                content: ''; display: inline-block;
+                                width: 200px; height: 100%;
+                                background: linear-gradient(-90deg, white, transparent);
+                                position: absolute; right: 0; top: 20px;
+                                z-index: 950;
+                            }
+                        .thumnail::after {
+                            content: ''; display: inline-block;
+                            width: 200px; height: 100%;
+                            background: linear-gradient(-90deg, white, transparent);
+                            position: absolute; right: 0; top: 20px;
+                            z-index: 950;
+                        }
+>>>>>>> 0e632e8351477ceb81e0a9722f6555081017fe27
                             .swiper-button-prev03 {
                                 width: 40px; height: 40px;
                                 background: #fff;

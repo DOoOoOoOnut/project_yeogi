@@ -1,5 +1,5 @@
 @import 'common';
- 
+
 main {
     .container {
         .wrap {
@@ -76,6 +76,7 @@ main {
                                     padding: 0 20px 96px;
                                     overflow-y: auto;
                                     #coupon_code {
+                                        position: relative;
                                         padding: 12px 0 32px;
                                         fieldset {
                                             @include flex-cncf;
@@ -95,14 +96,36 @@ main {
                                                 height: 48px;
                                                 width: 100%;
                                                 padding: 0 18px;
-                                                
                                             }
                                             input::placeholder {
                                                 color: #c2c2c2;
                                             }
+                                            input:hover {
+                                                background-color: #ededed;
+                                            }
+                                            input:focus {
+                                                background-color: #fff;
+                                            }
                                             .active {
                                                 outline:1px solid #333;
                                                 background-color: #fff;
+                                            }
+                                            .error_input {
+                                                border: 1px solid #f45858;
+                                            }
+                                            .text_delete {
+                                                position: absolute; top:51px; right:13px;
+                                                cursor: pointer;
+                                                i[class*=xmark] {
+                                                    color:#c2c2c2;
+                                                    font-size: 16px;
+                                                }
+                                            }
+                                            .error_message {
+                                                color: #f45858;
+                                                margin: 4px 0;
+                                                font-size:$subC14 ;
+                                                display: block;
                                             }
                                         }
                                     }
@@ -119,6 +142,11 @@ main {
                                         border-radius: 10px;
                                         width: 100%; height: 48px;
                                         line-height: 19px;
+                                    }
+                                    button.active {
+                                        background-color: #1273e4;
+                                        color: #fff;
+                                        cursor: pointer;
                                     }
                                 }
                             }
@@ -257,7 +285,7 @@ main {
                                         }
                                     }
                                 }
-                                button {
+                                .use_info {
                                     color: #999;
                                     cursor: pointer;
                                     font-size: $subC14;
@@ -286,7 +314,6 @@ main {
                             display:flex; flex-flow:column;
                             justify-content: center; align-items: center;
                             // js
-                            display: none;
                             .popup_coupon {
                                 min-height: 400px; width: 375px;
                                 max-height: 800px;
@@ -476,14 +503,21 @@ main {
                                         color: #fff; text-align: center;
                                         line-height: 27px;
                                     }
-                                    i[class*=open] {
-                                        display: none;
-                                    }
                                     p {
                                         color: #49627a;
                                         font-size: $subC14;
                                         font-weight: $weight600;
                                         align-self: center;
+                                    }
+                                }
+                                > .right {
+                                    .checkbox-wrapper-6 {
+                                        .tgl-btn.active::after {
+                                            left: 48%;
+                                        }
+                                        .tgl-btn.active {
+                                            background: #1273e4;
+                                        }
                                     }
                                 }
                             }
@@ -501,17 +535,21 @@ main {
                                         font-size: $small13;
                                         font-weight: $weight600;
                                     }
-                                    p {
-                                        background-color: #fafafa;
-                                        border: 1.5px solid #fafafa;
+                                    p { 
                                         height: 48px;
-                                        border-radius: 8px;
-                                        line-height: 48px;
-                                        color: #d6d6d6;
                                         input {
+                                            border-radius: 8px;
+                                            line-height: 48px;
+                                            color: #d6d6d6;
+                                            background-color: #fafafa;
+                                            border: 1.5px solid #fafafa;
                                             padding: 0 18px;
                                             width: 100%; height: 100%;
                                         }
+                                    }
+                                    .active {
+                                        outline:1px solid #333;
+                                        background-color: #fff;
                                     }
                                 }
                             }
@@ -531,6 +569,28 @@ main {
                                         }
                                     }
                                 }
+                                .nickname {
+                                    p {
+                                        input:hover {
+                                            background-color: #ededed;
+                                        }
+                                        input:focus {
+                                            outline: 1px solid #333;
+                                            background-color: #fff;
+                                        }
+                                    }
+                                }
+                                .user_email {
+                                    p {
+                                        input:hover {
+                                            background-color: #ededed;
+                                        }
+                                        input:focus {
+                                            outline: 1px solid #333;
+                                            background-color: #fff;
+                                        }
+                                    }
+                                }
                                 .user_birthday {
                                     p {
                                         input {
@@ -546,32 +606,81 @@ main {
                                 .user_phone {
                                     .phone_wrap {
                                         p {
-                                            margin-bottom: 10px;
+                                            background:transparent ;
+                                            margin-bottom: 20px;
                                             padding: 0;
+                                            border: 0;
                                             .input_wrap {
                                                 display: flex;
                                                 width: 100%; height: 100%;
+                                                position: relative;
                                                 input {
-                                                    width: 75%;
+                                                    background-color: #fafafa;
+                                                    border: 1.5px solid #fafafa;
+                                                    height: 48px;
+                                                    border-radius: 8px;
+                                                    line-height: 48px;
+                                                    width: 100%;
                                                 }
+                                                input:hover {
+                                                    background-color: #ededed;
+                                                }
+                                                input:focus {
+                                                    background-color: #fff;
+                                                }
+                                                .active {
+                                                    outline:1px solid #333;
+                                                    background-color: #fff;
+                                                    color: #333;
+                                                }
+                                                .error_input {border: 1px solid #f45858;}
                                                 button {
-                                                    cursor: pointer;
+                                                    position: absolute; bottom: 8px; right: 0;
+                                                    transform: translateY(-50%);
+                                                    cursor: pointer; width: 120px;
                                                     font-size: $subC14;
-                                                    width: 25%; 
-                                                    color:#1273e4; text-decoration:underline;
+                                                    color:#1273e4; 
                                                     font-family: $familySemiBold;
+                                                    text-align: right; margin-right: 15px;
+                                                }
+                                                span {
+                                                    position: absolute; bottom: 5px; right: 0;
+                                                    transform: translateY(-50%); width: 120px;
+                                                    color: #f7323f; font-family: $familySemiBold;
                                                     text-align: right; margin-right: 15px;
                                                 }
                                             }
                                         }
-                                        .error {
-                                            color: $mainColor-r;
+                                        p:last-of-type {margin-bottom: 10px;}
+                                        .error_message {
+                                            color: #f45858;
+                                            margin: 4px 0;
+                                            font-size:$subC14 ;
+                                            display: block;
                                         }
                                         #resend {
                                             float: right;
                                             font-family: $familySemiBold;
                                             text-decoration: underline;
                                             font-size: $subC14; margin-right: 10px;
+                                            margin-bottom: 20px;
+                                        }
+                                        #check_btn {
+                                            cursor: not-allowed;
+                                            color: #d6d6d6;
+                                            background-color: #fafafa;
+                                            border-radius: 10px;
+                                            height: 56px; 
+                                            padding: 0 20px;
+                                            width: 100%;
+                                            font-size: $title18;
+                                            font-weight: $weight600;
+                                        }
+                                        #check_btn.active {
+                                            outline: none;
+                                            background-color: #1273e4;
+                                            color: #fff;
+                                            cursor: pointer;
                                         }
                                     }
                                 }
@@ -594,7 +703,6 @@ main {
                             display:flex; flex-flow:column;
                             justify-content: center; align-items: center;
                             // js
-                            display: none;
                             .popup_use {
                                 min-height: 400px;
                                 max-height: 800px;
@@ -634,6 +742,7 @@ main {
                                             margin-top: 12px;
                                             .box {
                                                 display: flex; flex-flow: column nowrap;
+                                                position: relative;
                                                 label {
                                                     padding-top: 4px;
                                                     color: #707070;
@@ -648,6 +757,33 @@ main {
                                                     border-radius: 8px;
                                                     height: 48px;
                                                     padding: 0 18px;
+                                                }
+                                                input:hover {
+                                                    background-color: #ededed;
+                                                }
+                                                input:focus {
+                                                    background-color: #fff;
+                                                }
+                                                .active {
+                                                    outline:1px solid #333;
+                                                    background-color: #fff;
+                                                }
+                                                .error_input {
+                                                    border: 1px solid #f45858;
+                                                }
+                                                .text_delete {
+                                                    position: absolute; top:40px; right:13px;
+                                                    cursor: pointer;
+                                                    i[class*=xmark] {
+                                                        color:#c2c2c2;
+                                                        font-size: 16px;
+                                                    }
+                                                }
+                                                .error_message {
+                                                    color: #f45858;
+                                                    margin: 4px 0;
+                                                    font-size:$subC14 ;
+                                                    display: block;
                                                 }
                                                 p {
                                                     margin-top: 4px;
@@ -699,6 +835,11 @@ main {
                                         font-size: $title18;
                                         font-weight: $weight600;
                                     }
+                                    .active {
+                                        background-color: #1273e4;
+                                        color: #fff;
+                                        cursor: pointer;
+                                    }
                                 }
                             }
                         }
@@ -736,7 +877,6 @@ main {
                         display:flex; flex-flow:column;
                         justify-content: center; align-items: center;
                         // js
-                        display: none;
                         .popup_logout {
                             background-color: #fff;
                             border-radius: 10px;
@@ -837,6 +977,65 @@ main {
                         color: #fff; cursor: pointer;
                         font-size: $subC14;
                         font-weight: $weight600;
+                    }
+                    .popup_bg {
+                            background:rgba(0,0,0,0.48);
+                            position:fixed; left:0; top:0; z-index:999;
+                            width:100%; height:100vh;
+                            display:flex; flex-flow:column;
+                            justify-content: center;
+                        .contents {
+                                background-color: #fff;
+                                width: 335px; padding-top: 16px;
+                                border-radius: 10px;
+                                box-shadow: 0 2px 16px #00000014;
+                                overflow-y: hidden;
+                                margin: 0 auto;
+                                padding: 0 20px;
+                            h2 {
+                                color: #333;
+                                line-height: 21px;
+                                margin: 12px 0 8px;
+                                font-size: $title18;
+                                font-family: $familyBold;
+                            }
+                            ul {
+                                padding: 8px 20px 4px;
+                                max-height: 355px;
+                                overflow-y: auto;
+                                li {
+                                    display: flex; align-items: center;
+                                    color: #707070;
+                                    padding: 4px 0 2px;
+                                    line-height: 24px;
+                                    font-family: $familyMedium;
+                                    span {
+                                        color: #707070;
+                                        padding: 4px 0 2px;
+                                        line-height: 24px;
+                                        font-family: $familyMedium;
+                                        margin-left: 5px;
+                                    }
+                                }
+                                li::before {
+                                    content: '•';
+                                    color: #9aa9b8;
+                                    display: block;
+                                    width: 12px;
+                                }
+                            }
+                            .completion_btn {
+                                margin: 20px 0;
+                                cursor: pointer;
+                                height: 48px; 
+                                color: #fff;
+                                background-color: #1273e4;
+                                border-radius: 10px;
+                                padding: 0 18px;
+                                width: 100%;
+                                font-weight: $weight600;
+                            }
+                        }
                     }
                 }
             }
