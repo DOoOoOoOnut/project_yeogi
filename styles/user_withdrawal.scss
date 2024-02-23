@@ -8,8 +8,10 @@ main {
         margin: 0 auto;
         padding: 20px 0 56px;
         .top {
+            background-color: #fff;
+            position: sticky; top: 0;
             @include flex-rnfc;
-            margin: 16px 0 20px;
+            padding: 16px 0 20px;
             .close {
                 cursor: pointer;
                 height: 29px;
@@ -92,14 +94,13 @@ main {
                             }
                         }
                         .popup {
-                            // js 
-                            display: none;
                             position: fixed; top: 50%; left: 50%;
-                            background-color: rgba(0,0,0,0.6);
-                            padding: 12px;
-                            border-radius: 8px;
+                            background-color: #000000a3;
+                            padding: 8px 20px; 
+                            border-radius: 6px;
                             .box {
                                 color: #fff;
+                                font-size: $subT15;
                             }
                         }
                     }
@@ -115,7 +116,7 @@ main {
                     font-weight: $weight600;
                     border-radius: 10px;
                 }
-                .use_more_btn {
+                .close {
                     margin-right: 8px;
                     background-color:#ebebeb ;
                 }
@@ -124,10 +125,16 @@ main {
                     background-color: #fafafa;
                     cursor: not-allowed;
                 }
+                
                 .user_bye {
                     color: #d6d6d6;
                     background-color: #fafafa;
                     cursor: not-allowed;
+                }
+                .active {
+                    color: #fff;
+                    background-color: #1273e4;
+                    cursor: pointer;
                 }
             }
             .box {
@@ -198,8 +205,6 @@ main {
                 width:100%; height:100vh;
                 display:flex; flex-flow:column;
                 justify-content: center; align-items: center;
-                // js
-                display: none;
                 .popup_contents {
                     padding-top: 16px;
                     width: 335px;
@@ -233,7 +238,7 @@ main {
                             font-weight: $weight600;
                             height: 48px;
                         }
-                        .cancellation_btn {
+                        .close {
                             margin-right: 8px;
                             background-color: #ebebeb;
                         }

@@ -12,6 +12,7 @@ const coupon_btn = document.querySelector('.coupon_btn')
 const popup_bg = document.querySelectorAll('.popup_bg')
 const popup_contents = document.querySelectorAll('.popup_bg > .contents')
 const coupon_code_input = document.querySelector('.coupon_code_input')
+const certified_btn =document.querySelector('#certified_btn')
 const completion_btn = document.querySelectorAll('.completion_btn')
 const text_delete = document.querySelectorAll('.text_delete')
 const wrap_contents = document.querySelector('.wrap_contents')
@@ -32,20 +33,22 @@ const lock_open = document.querySelector('.lock_open')
 const view_contents = document.querySelector('.view_contents')
 const prev = document.querySelector('.prev')
 const after = document.querySelector('.after')
-const resend = document.querySelector('#resend')
+const resend_btn = document.querySelector('#resend')
 const user_phone_input = document.querySelectorAll('.input_wrap input')
 const user_phone_btn = document.querySelectorAll('.input_wrap button')
 const view_input = document.querySelectorAll('.box p input')
+const check_btn = document.querySelector('#check_btn')
+const countdown = document.querySelector('.countdown')
+const modify_btn = document.querySelector('.modify_btn')
+const all_logout_btn = document.querySelector('.all_logout_btn')
+const cancellation_btn = document.querySelector('.cancellation_btn')
+const storage_btn = document.querySelector('.storage_btn')
+const marketing_all = document.querySelector('#morning')
+const letter_btn = document.querySelector('#letter_btn')
+const email_btn = document.querySelector('#email_btn')
+const receive = document.querySelector('.receive')
+const acceptance = document.querySelector('.acceptance')
 
-console.log(tap_contents,tap_title,contents_btn)
-console.log(info_btn, point_popup,close_btn,point_details_btn)
-console.log(coupon_btn,popup_bg, popup_contents)
-console.log(coupon_code_input,wrap_contents,coupon_zero,filter_option,filter_option_btn,filter_btn)
-console.log(filter_now,completion_btn, error_message,text_delete,use_info)
-console.log(checkbox,not_view,view)
-console.log(phone_last)
-console.log(tgl_light,tgl_btn,lock,lock_open,view_contents)
-console.log(prev,after,resend, user_phone_input,view_input)
 
 tap_contents.forEach((t,i)=>{
     t.style.display = 'none'
@@ -135,6 +138,8 @@ close_btn[1].addEventListener('click',()=>{
 // 쿠폰 input 클릭하면 활성화
 coupon_code_input.addEventListener('click',function(){
     coupon_code_input.classList.add('active')
+    coupon_code_input.classList.add('no_hover')
+    hide_error(coupon_code_input)
 })
 // 다른 곳 클릭하면 다시 비활성화 
 document.addEventListener('click', function(event) {
@@ -228,7 +233,6 @@ for(let i of filter_option_btn){
         i.classList.add('active')
         filter_now.innerText = this.innerText;
         filter_option.style.display = 'none';
-        console.log('.')
     })
 }
 
@@ -264,7 +268,6 @@ lock.style.display = 'block'
 checkbox.addEventListener('click',()=>{
     if(lock.style.display === 'block'){
         popup_bg[2].style.display = 'flex'
-        checkbox.style.display = 'none'
     }else{
         hide_view()
         not_view.style.display = 'grid'
@@ -289,6 +292,7 @@ close_btn[3].addEventListener('click',()=>{
 //휴데폰 input 클릭하면 활성화
 phone_last.addEventListener('click',function(){
     phone_last.classList.add('active')
+    hide_error(phone_last)
 })
 // 다른 곳 클릭하면 다시 비활성화 
 document.addEventListener('click', function(event) {
@@ -345,18 +349,22 @@ completion_btn[1].addEventListener('click',function(event){
         view_contents.innerHTML = '내 정보가 보여지고 있어요'
         hide_lock()
         lock_open.style.display = 'block'
+        checkbox.style.display = 'none'
     }
 })
 
 let hide_after = ()=>{
     after.style.display = 'none'
-    resend.style.display = 'none'
+    resend_btn.style.display = 'none'
+    check_btn.style.display = 'none'
 }
 
 let view_after = ()=>{
     after.style.display = 'block'
-    resend.style.display = 'bolck'
+    resend_btn.style.display = 'block'
+    check_btn.style.display = 'block'
 }
+
 hide_after()
 
 
@@ -364,39 +372,199 @@ hide_after()
 user_phone_input.forEach((t,i)=>{
     t.addEventListener('click',function(){
         t.classList.add('active')
+        hide_error(t)
     })
     // 다른 곳 클릭하면 다시 비활성화
-})
-
-for(let i of user_phone_input){
-    i.addEventListener('click',function(){
-        i.classList.add('active')
-        user_phone_btn.classList.add('hide')
-    })
-    // 다른 곳 클릭하면 다시 비활성화 
     document.addEventListener('click', function(event) {
-        if (event.target !== i) {
-            i.classList.remove('active')
-            user_phone_btn.classList.remove('hide')
+        if (event.target !== t) {
+            t.classList.remove('active')
         }
     })
-}
-/////////////////여기까지 하는중
+})
+
 
 // 휴데폰 010부터 시작
-phone_last.addEventListener('input',function(){
-    // 숫자 하나라도 쓰면 text_delete 활성화
+certified_btn.style.display = 'none'
+
+user_phone_input[0].addEventListener('input',function(e){
+    const phone_rule = /^010\d{8}$/;
+    const phone_input_value = this.value;
     if(this.value.length > 0){
-        text_delete[1].style.display = 'block';
-    }else{text_delete[1].style.display = 'none';}
+        certified_btn.style.display = 'block'
+    }else{certified_btn.style.display = 'none'}
     // 숫자 다 쓰면 버튼 활성화
-    if(this.value.length > 3){
-        completion_btn[1].classList.add('active')
-        completion_btn[1].disabled = false;
+    if(this.value.length > 10){
+        certified_btn.disabled = false;
     // 입력 값이 공백 일 때
     }else{
-        hide_one(completion_btn[1])
-        completion_btn[1].disabled = true;
+        certified_btn.disabled = true;
+    }
+    if(phone_rule.test(phone_input_value)){
+        // 인증번호 전송 활성화
+        certified_btn.addEventListener('click',()=>{
+            view_after()
+            hide_error(user_phone_input[0])
+            certified_btn.style.display = 'none';
+            error_message[1].innerHTML = ''
+            // 이전에 실행 중인 타이머가 있다면 중지
+            clearInterval(timerId);
+            // 1초마다 시간을 업데이트하는 타이머 시작
+            timerId = setInterval(updateTimer, 1000);
+        })
+    }else{
+        error_message[1].innerText = '휴대폰 번호를 확인해주세요.';
+        user_phone_input[0].classList.add('error_input')
+    }
+})
+
+user_phone_input[1].addEventListener('input',function(){
+    // 숫자 다 쓰면 버튼 활성화
+    if(this.value.length > 3){
+        check_btn.disabled = false;
+        check_btn.classList.add('active')
+    // 입력 값이 공백 일 때
+    }else{
+        check_btn.disabled = true;
+        hide_one(check_btn)
+    }
+})
+
+resend_btn.addEventListener('click',()=>{
+    alert('인증번호가 전송되었습니다.')
+    // 이전에 실행 중인 타이머가 있다면 중지
+    clearInterval(timerId);
+     // 시간 초기화
+    minutes = 3;
+    seconds = 0;
+    countdown.textContent = `${minutes}:00`;
+    // 1초마다 타이머 업데이트 함수 호출
+    const timer = setInterval(updateTimer, 1000);
+})
+
+let minutes = 3;
+let seconds = 0;
+// 타이머 ID 저장 변수
+let timerId; 
+
+// 타이머 업데이트 함수
+function updateTimer() {
+    if (minutes >= 0 && seconds >= 0) {
+        countdown.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        if (seconds === 0) {
+            minutes--;
+            seconds = 59;
+        } else {
+            seconds--;
+        }
+    } else {
+        // 타이머가 종료되면 메시지 표시
+        clearInterval(timer);
+        countdown.textContent = "시간 종료";
+    }
+}
+
+check_btn.addEventListener('click',()=>{
+    hide_after()
+    alert('저장되었습니다.')
+})
+
+modify_btn.addEventListener('click',()=>{
+    alert('완료되었습니다.')
+    hide_view()
+    not_view.style.display = 'grid'
+    hide_one(tgl_btn)
+    popup_bg[2].style.display = 'none'
+    view_contents.innerHTML = '가려진 내 정보를 확인할 수 있어요!'
+    hide_lock()
+    lock.style.display = 'block'
+    checkbox.style.display = 'block'
+})
+
+popup_bg[3].style.display = 'none'
+all_logout_btn.addEventListener('click', ()=>{
+    popup_bg[3].style.display = 'flex'
+})
+cancellation_btn.addEventListener('click',()=>{
+    popup_bg[3].style.display = 'none'
+})
+completion_btn[2].addEventListener('click',()=>{
+    window.location.href = '../index.html'
+})
+
+// 설정 popup
+popup_bg[4].style.display = 'none'
+storage_btn.addEventListener('click',()=>{
+    popup_bg[4].style.display = 'flex'
+})
+completion_btn[3].addEventListener('click',()=>{
+    popup_bg[4].style.display = 'none'
+})
+
+// 마케팅 알림 수신 동의 체크박스 요소를 저장할 배열
+const all_checkbox = [letter_btn, email_btn];
+
+// 전체버튼
+marketing_all.addEventListener('click',()=>{
+    // 전체버튼이 체크되면 버튼2와 버튼3도 체크됩니다.
+    if (marketing_all.checked) {
+        letter_btn.checked = true;
+        email_btn.checked = true;
+    } else {
+        // 전체버튼이 체크 해제되면 버튼2와 버튼3도 체크 해제됩니다.
+        letter_btn.checked = false;
+        email_btn.checked = false;
+    }
+})
+
+
+function updata_marketing(){
+    // 이메일,문자 체크박스 클릭 상태
+    const email_check = email_btn.checked
+    const letter_check = letter_btn.checked
+    
+    // 전체 체크박스가 선택된 경우
+    if(email_check && letter_check){
+        acceptance.textContent = '이메일, 문자'
+        receive.textContent = '-'
+    }else if(email_check){
+        acceptance.textContent = '이메일'
+        receive.textContent = '문자'
+    }else if(letter_check){
+        acceptance.textContent = '문자'
+        receive.textContent = '이메일'
+    }else{
+        acceptance.textContent = '-'
+        receive.textContent = '이메일, 문자'
+    }
+}
+
+
+// 체크박스 이벤트 핸들러 등록
+marketing_all.addEventListener('click', updata_marketing);
+email_btn.addEventListener('click', updata_marketing);
+letter_btn.addEventListener('click', updata_marketing);
+
+// 개별 체크박스 클릭 이벤트 처리
+all_checkbox.forEach(function(checkbox) {
+    checkbox.addEventListener('click', function() {
+        // 모든 체크박스가 체크되지 않은 상태이면, 전체버튼 체크박스의 체크를 해제합니다.
+        if (!letter_btn.checked && !email_btn.checked) {
+            marketing_all.checked = false;
+        }
+    });
+});
+
+letter_btn.addEventListener('click',()=>{
+    // 하나라도 체크되어 있으면 전체버튼을 체크합니다.
+    if(letter_btn.checked || email_btn.checked){
+        marketing_all.checked = true;
+    }
+})
+
+email_btn.addEventListener('click',()=>{
+    // 하나라도 체크되어 있으면 전체버튼을 체크합니다.
+    if(letter_btn.checked || email_btn.checked){
+        marketing_all.checked = true;
     }
 })
 
@@ -405,7 +573,9 @@ phone_last.addEventListener('input',function(){
 window.onload = ()=>{
     const query = new URLSearchParams(window.location.search)
     const url_coupon = query.get('coupon')
+    const url_info = query.get('info')
     if(url_coupon == 'coupon'){coupon_start()}
+    if(url_info == 'info'){info_start()}
 }
 
 const coupon_start = ()=>{
@@ -413,4 +583,10 @@ const coupon_start = ()=>{
     tap_contents[2].style.display= 'block'
     hide(tap_title)
     tap_title[2].classList.add('active')
+}
+const info_start = ()=>{
+    not_contents()
+    tap_contents[3].style.display= 'block'
+    hide(tap_title)
+    tap_title[3].classList.add('active')
 }
