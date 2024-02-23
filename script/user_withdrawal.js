@@ -10,9 +10,7 @@ const user_bye_btn = document.querySelector('.user_bye')
 const popup_bg = document.querySelector('.popup_bg')
 const completion_btn = document.querySelector('.completion_btn')
 
-console.log(tap_contents,radiobox,popup_btn,close_btn)
-console.log(checkbox,user_bye_btn,completion_btn)
-console.log(popup_bg)
+
 
 tap_contents[1].style.display = 'none'
 
