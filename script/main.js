@@ -5,6 +5,7 @@ const date_select_box = document.querySelector('.date_select_box')
 const user_search = document.querySelector('.user_search')
 const search_ranking = document.querySelector('.search_ranking')
 const num_view = document.querySelector('.num_view')
+const num_select = document.querySelector('#num_select')
 const user_select = document.querySelector('.user_select')
 let hover = true
 console.log(calendar_date,date_select_box,user_search,search_ranking,num_select,user_select)
@@ -21,14 +22,36 @@ console.log(calendar_date,date_select_box,user_search,search_ranking,num_select,
 user_search.addEventListener('click',()=>{
     search_ranking.style.display = 'block'
 })
+
 calendar_date.addEventListener('click',()=>{
     calendar_date.classList.add('input_active')
     date_select_box.style.display = 'block'
 })
-num_view.addEventListener('click',()=>{
-    num_view.classList.add('input_active')
+
+// 다른 곳 클릭하면 다시 비활성화 
+document.addEventListener('click', function(event) {
+    if (event.target !== calendar_date) {
+        calendar_date.classList.remove('input_active')
+        date_select_box.style.display = 'none'
+    }
+})
+
+num_select.addEventListener('click',()=>{
+    num_select.classList.add('input_active')
     user_select.style.display = 'block'
 })
+num_view.addEventListener('mouseover',()=>{
+    hover = !hover
+    console.log(hover)
+    if(hover === false){
+        num_view.style.backgroundColor = '#eeeeee';
+        num_view.style.borderRadius = '10px';
+    }else{
+        num_view.style.backgroundColor = '#f5f5f5';
+        num_view.style.borderRadius = '10px';
+    }
+})
+
 calendar_date.addEventListener('mouseover',()=>{
     calendar_date.classList.add('hover')
 })
