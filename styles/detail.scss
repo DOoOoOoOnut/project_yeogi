@@ -1115,17 +1115,10 @@ main {
                             }
                             .event_slide {
                                 padding: 20px 0;
-                                border-bottom: 1px solid rgb(235 235 235);
-                                .event_slide1 {
+                                .event_slide {
+                                    
                                     img {
                                         width: 300px;
-                                        border-radius: 10px;
-                                    }
-                                }
-                                .event_slide2 {
-                                    img {
-                                        display: none;
-                                        height: 120px;
                                         border-radius: 10px;
                                     }
                                 }
@@ -1156,7 +1149,7 @@ main {
                                 p {
                                     display: flex; align-items: center;
                                     font-size: $subT15;
-                                    padding: 0 10px 20px 5px;
+                                    padding: 0 10px 0 5px;
                                     img {
                                         width: 70px;
                                     }
@@ -1204,7 +1197,7 @@ main {
                     }
                 }
                 .zoom_out {
-                    position: absolute; right: 1%; top: 19%;
+                    position: absolute; right: 1%; top: 18.5%;
                     img {
                         background: #fff;
                         border: 1px solid #707070;
@@ -1358,6 +1351,13 @@ main {
                                         }
                                     }
                                 }
+                            }
+                            #thum_photo::after {
+                                content: ''; display: inline-block;
+                                width: 200px; height: 100%;
+                                background: linear-gradient(-90deg, white, transparent);
+                                position: absolute; right: 0; top: 20px;
+                                z-index: 950;
                             }
                         .thumnail::after {
                             content: ''; display: inline-block;

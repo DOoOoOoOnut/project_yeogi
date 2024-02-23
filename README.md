@@ -280,5 +280,4 @@ ex) ./images/main/ _best_hotel001
 1. 상세페이지, 이용약관 반응형 시작
 - 민아
 1. 데이터베이스 작성하기
-2. index js 시작 (index 서브메뉴 필터기능 넣기)
-3. index 반응형 완성하기
+2. index 반응형 완성하기
