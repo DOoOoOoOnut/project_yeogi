@@ -30,16 +30,16 @@
                                 </div>
                                 <div class="user_search_detail">
                                     <div class="user_search_box_m">
-                                        <div class="user_search">
+                                        <div class="user_search_m">
                                             <span class="left">
                                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                                <input type="text" name="search_input" id="search_input" placeholder="여행지나 숙소를 검색해보세요" maxlength="50">
+                                                <input type="text" name="search_input_m" id="search_input" placeholder="여행지나 숙소를 검색해보세요" maxlength="50">
                                             </span>
                                             <button type="button" class="reset"><i class="fa-solid fa-circle-xmark"></i></button>
                                         </div>
                                     </div>
                                     <!-- 검색창 누르면 뜨는 아래 창 -->
-                                    <div class="search_ranking">
+                                    <div class="search_ranking_m">
                                         <h3>여기어때 검색 순위</h3>
                                         <ol>
                                             <li><em>1</em><span>경주</span></li>
@@ -355,7 +355,9 @@
                                             </ol>
                                         </div>
                                         <!-- 검색을 하기 시작하면 바뀌게 -->
-                                        <div class="user_search_service"></div>
+                                        <div class="search_results">
+                                            <ul></ul>
+                                        </div>
                                     </div>
                                     <div class="calendar_detail">
                                         <div class="calendar_date">
@@ -993,5 +995,6 @@
     <!-- 푸터 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
     <script src="./script/main.js"></script>
+    <script src="./script/main_swiper.js"></script>
 </body>
 </html>

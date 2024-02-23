@@ -44,14 +44,14 @@ main {
                                     box-shadow:0px 2px 16px rgba(0, 0, 0, 0.1);
                                     //js 스크롤 시작하면 border-bottom 생기기
                                     // border-bottom:1px solid #eee;
-                                    .user_search {
+                                    .user_search_m {
                                         @include flex-rnsc; border-radius:8px;
                                         background-color:#f5f5f5;
                                         margin:5px 0; height:48px; padding:4px 14px;
                                         .left {
                                             i {color:#999; margin-right:5px;}
-                                            #search_input {}
-                                            #search_input::placeholder {
+                                            #search_input_m {}
+                                            #search_input_m::placeholder {
                                                 color:#d6d6d6; font-family:$familyMedium;
                                             }
                                         }
@@ -62,7 +62,7 @@ main {
                                         }
                                     }
                                 }
-                                .search_ranking {
+                                .search_ranking_m {
                                     background-color:#fff; height:100vh; overflow-y:auto; padding:0 0 200px;
                                     h3 {font-family:$familySemiBold; padding:10px 20px;}
                                     ol {
@@ -439,6 +439,8 @@ main {
     //메인 내용 시작
     .main_container {
         width:100%; margin:0 auto;
+        ::-webkit-scrollbar {width:7px; height:7px;}/*스크롤바 크기*/
+        ::-webkit-scrollbar-thumb {background-color:#d9d9d9; border-radius:5px;}/*스크롤 드래그바*/
         .main_wrap {
             width:calc(100% - 60px); margin:0 auto;
             position:relative;
@@ -509,19 +511,21 @@ main {
                                         display:none;
                                         background-color:#fff; border-radius:10px;
                                         box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
-                                        padding:30px 15px 20px; width:100%;
+                                        padding:30px 15px 20px; width:100%; height:320px;
                                         position:absolute; top:55px; left:0; z-index:999;
+                                        overflow-y:scroll;
                                         h3 {
                                             margin-bottom:20px; padding:0 15px;
-                                            font-weight:$weight600; color:$mainColor-r;
+                                            font-family:$familyBold; color:$mainColor-r;
                                         }
                                         ol {
+                                            
                                             li {
-                                                padding:10px 15px;
+                                                padding:12px 15px;
                                                 display:flex; flex-flow:row nowrap;
                                                 justify-content: flex-start;
                                                 align-items:center;
-                                                    em {font-weight:$weight600; width:30px;}
+                                                    em {font-family:$familySemiBold; width:30px;}
                                                     span {}
                                                 }
                                             li:hover {
@@ -529,7 +533,7 @@ main {
                                             }
                                         }
                                     }
-                                    .user_search_service {}
+                                    .search_results {display:none}
                                 }
                                 .calendar_detail {
                                     @include flex-rncc;
