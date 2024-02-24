@@ -280,5 +280,17 @@ ex) ./images/main/ _best_hotel001
 1. 상세페이지, 이용약관 반응형 시작
 - 민아
 1. 데이터베이스 작성하기
-2. index js 시작 (index 서브메뉴 필터기능 넣기)
-3. index 반응형 완성하기
+2. index 반응형 완성하기
+--------------------------
+# 02/23 작업
+- 은지
+1. user_info.js 완료
+2. user_withdrawal_last.js 완료
+3. user_withdrawal.js 완료
+4. event.js 완료
+- 일혁 
+1. 이용 약관 반응형 페이지
+2. 상세페이지 반응형 페이지
+- 민아
+1. index 반응형 완성하기
+2. js 시작:index.js 만들기

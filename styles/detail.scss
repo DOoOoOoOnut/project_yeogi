@@ -501,77 +501,48 @@ main {
     }
     section {
         .room {
-            .photo {
-                display: flex; flex-flow: row nowrap;
-                align-items: center;
-                position: relative;
-                padding: 40px 0;
-                .main_photo {
-                    padding-right: 8px;
-                    img {
-                        width: 737px; height: 581px;
-                        border-top-left-radius: 10px;
-                        border-bottom-left-radius: 10px;
-                    }
-                    img:hover {
-                        filter: brightness(90%);
-                    }
-                }
-                
-                .sub_photo {
-                    .top_photo {
-                        padding-bottom: 5px;
-                        .photo1 {
-                            padding-right: 5px;
-                            img {
-                                width: 323px; height: 286px;
-                            }
-                            img:hover {
-                                filter: brightness(90%);
-                            }
-                        }
-                        .photo2 {
-                            img {
-                                width: 323px; height: 286px;
-                                border-top-right-radius: 10px;
-                            }
-                            img:hover {
-                                filter: brightness(90%);
-                            }
+            .photo_wrap {
+                max-width:1400px;
+                overflow:hidden;
+                margin:30px auto;
+                .photo_container {
+                    display:flex;
+                    .left {
+                        width:calc(100% - 400px); height:500px;
+                        img {
+                            width:100%;
                         }
                     }
-                    .btm_photo {
-                        .photo3 {
-                            padding-right: 5px;
+                    .right {
+                        width:500px; height:500px;
+                        display:grid;
+                        grid-template-areas:
+                            'item1 item2'
+                            'item3 item4';
+                        grid-template-rows:repeat(2, 0.5fr);
+                        .box {
+                            overflow:hidden;
                             img {
-                                width: 323px; height: 286px;
-                            }
-                            img:hover {
-                                filter: brightness(90%);
+                                width:100%;
                             }
                         }
-                        .photo4 {
-                            img {
-                                width: 323px; height: 286px;
-                                border-bottom-right-radius: 10px;
-                            }
-                            img:hover {
-                                filter: brightness(90%);
-                            }
-                        }
+                        .box1 {grid-area:item1}
+                        .box2 {grid-area:item2}
+                        .box3 {grid-area:item3}
+                        .box4 {grid-area:item4}
                     }
-                }
-                .more_photo {
-                    position: absolute; right: 5%; bottom: 12%;
-                    font-size: $subC14;
-                    color: #333;
-                    background: #fff;
-                    padding: 10px 20px;
-                    border-radius: 25px;
-                    box-shadow:0px 0px 10px 2px rgba(0, 0, 0, 0.5);
-                    i {
-                        width: 16px;
-                        margin-right: 5px;
+                    .more_photo {
+                        position: absolute; right: 5%; bottom: 12%;
+                        font-size: $subC14;
+                        color: #333;
+                        background: #fff;
+                        padding: 10px 20px;
+                        border-radius: 25px;
+                        box-shadow:0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+                        i {
+                            width: 16px;
+                            margin-right: 5px;
+                        }
                     }
                 }
             }
@@ -1115,17 +1086,10 @@ main {
                             }
                             .event_slide {
                                 padding: 20px 0;
-                                border-bottom: 1px solid rgb(235 235 235);
-                                .event_slide1 {
+                                .event_slide {
+                                    
                                     img {
                                         width: 300px;
-                                        border-radius: 10px;
-                                    }
-                                }
-                                .event_slide2 {
-                                    img {
-                                        display: none;
-                                        height: 120px;
                                         border-radius: 10px;
                                     }
                                 }
@@ -1156,7 +1120,7 @@ main {
                                 p {
                                     display: flex; align-items: center;
                                     font-size: $subT15;
-                                    padding: 0 10px 20px 5px;
+                                    padding: 0 10px 0 5px;
                                     img {
                                         width: 70px;
                                     }
@@ -1204,7 +1168,7 @@ main {
                     }
                 }
                 .zoom_out {
-                    position: absolute; right: 1%; top: 19%;
+                    position: absolute; right: 1%; top: 18.5%;
                     img {
                         background: #fff;
                         border: 1px solid #707070;
@@ -1358,6 +1322,13 @@ main {
                                         }
                                     }
                                 }
+                            }
+                            #thum_photo::after {
+                                content: ''; display: inline-block;
+                                width: 200px; height: 100%;
+                                background: linear-gradient(-90deg, white, transparent);
+                                position: absolute; right: 0; top: 20px;
+                                z-index: 950;
                             }
                         .thumnail::after {
                             content: ''; display: inline-block;

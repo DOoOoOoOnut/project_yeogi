@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/detail.css">
+    <link rel="stylesheet" href="./styles/responsible_detail.css">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=r85p85z8hp"></script>
 </head>
@@ -56,7 +57,6 @@
                                 </div>
                                 <div class="swiper-button-prev"><i class="fa-solid fa-angle-left"></i></div>
                                 <div class="swiper-button-next"><i class="fa-solid fa-angle-right"></i></div>
-                                <div class="swiper-pagination"></div>
                                 <div class="swiper-container1 sub_photo">
                                     <div class="swiper-wrapper view_box2">
                                         <p class="swiper-slide slide0"><img src="./images/detail/slide01.jpeg" alt=""></p>
@@ -248,35 +248,35 @@
         </div>
     </div>
     <main>
-        <nav>
-            <div class="box1">
-                <div class="main_menu">
-                    <a href="#" class="main_move">개요</a>
-                    <a href="#" class="move">서비스 및 부대시설</a>
-                    <a href="#" class="move">객실</a>
-                    <a href="#" class="move">위치</a>
-                    <a href="#" class="move">리뷰</a>
+        <div class="tab_menu">
+            <nav>
+                <div class="box1">
+                    <div class="main_menu">
+                        <a href="#" class="main_move">개요</a>
+                        <a href="#" class="move">서비스 및 부대시설</a>
+                        <a href="#" class="move">객실</a>
+                        <a href="#" class="move">위치</a>
+                        <a href="#" class="move">리뷰</a>
+                    </div>
+                    <div class="select">
+                        <button type="button" id="select_room">객실선택</button>
+                    </div>
                 </div>
-                <div class="select">
-                    <button type="button" id="select_room">객실선택</button>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
         <section>
             <div class="room">
-                <div class="photo"><!--js 선택시 변수-->
-                    <a href="#" class="main_photo"><img src="./images/detail/detail_main_jejudo.png" alt="신라호텔 뷰"></a>
-                    <div class="sub_photo">
-                        <div class="top_photo">
-                            <a href="#" class="photo1"><img src="./images/detail/detail_main_1.png" alt="객실 뷰"></a>
-                            <a href="#" class="photo2"><img src="./images/detail/detail_main_2.png" alt="객실 뷰"></a>
+                <div class="photo_wrap">
+                    <div class="photo_container">
+                        <a href="#" class="left"><img src="./images/detail/detail_main_jejudo.png" alt="신라호텔 뷰"></a>
+                        <div class="right">
+                            <a href="#" class="box box1"><img src="./images/detail/detail_main_1.png" alt="객실 뷰"></a>
+                            <a href="#" class="box box2"><img src="./images/detail/detail_main_2.png" alt="객실 뷰"></a>
+                            <a href="#" class="box box3"><img src="./images/detail/detail_main_3.png" alt="객실 뷰"></a>
+                            <a href="#" class="box box4"><img src="./images/detail/detail_main_4.png" alt="객실 뷰"></a>
                         </div>
-                        <div class="btm_photo">
-                            <a href="#" class="photo3"><img src="./images/detail/detail_main_3.png" alt="객실 뷰"></a>
-                            <a href="#" class="photo4"><img src="./images/detail/detail_main_4.png" alt="객실 뷰"></a>
-                        </div>
+                        <a href="#" class="more_photo"><i class="fa-regular fa-image"></i>사진 모두 보기</a><!--폰트어썸-->
                     </div>
-                    <a href="#" class="more_photo"><i class="fa-regular fa-image"></i>사진 모두 보기</a><!--폰트어썸-->
                 </div>
                 <div class="box2">
                     <div class="contents">
@@ -289,6 +289,12 @@
                                 <p class="point_wrap"><i class="fa-solid fa-star"></i><span>9.0</span></p>
                                 <p class="review">417명 평가</p>
                                 <button type="button" class="all_review">리뷰보기</button>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="title">
+                                <p class="address"><i class="fa-solid fa-location-dot"></i>제주특별자치도 서귀포시 색달동 3039-3</p>
+                                <a href="#" class="mini_map_view">지도보기</a>
                             </div>
                         </div>
                         <div class="review_box">
@@ -566,16 +572,16 @@
                             </div>
                         </div>
                         <div class="event_pay">
+                            <div class="event_title">
+                                <h2>최대 <em>5%</em> 할인</h2>
+                                <a href="#" class="coupon_get">쿠폰받기<i class="fa-solid fa-arrow-right-to-bracket fa-rotate-90"></i></a>
+                            </div>
                             <div class="swiper-container" id="event_bnr">
-                                <div class="event_title">
-                                    <h2>최대 <em>5%</em> 할인</h2>
-                                    <a href="#" class="coupon_get">쿠폰받기<i class="fa-solid fa-arrow-right-to-bracket fa-rotate-90"></i></a>
-                                </div>
                                 <div class="swiper-wrapper event_slide">
-                                    <a href="#" class="swiper_slide event_slide1"><img src="./images/detail/detail_event_bnr_1.png" alt="봄맞이 할인쿠폰"></a>
-                                    <a href="#" class="swiper_slide event_slide2"><img src="./images/detail/detail_event_bnr_2.png" alt="전국 인기호텔 3만원 쿠폰"></a>
+                                    <div class="swiper-slide event_slide"><a href="#"><img src="./images/detail/detail_event_bnr_1.png" alt="봄맞이 할인쿠폰"></a></div>
+                                    <div class="swiper-slide event_slide"><a href="#"><img src="./images/detail/detail_event_bnr_2.png" alt="전국 인기호텔 3만원 쿠폰"></a></div>
                                 </div>
-                                <div class="swiper_pagination"></div>
+                                <div class="swiper-pagination"></div>
                             </div>
                             <div class="pay">
                                 <div class="title">

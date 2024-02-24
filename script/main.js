@@ -1,190 +1,97 @@
 import { getAccommodationsByType } from '/data/data.js';
 
-//이벤트
-let swiperContainer = document.querySelector('.swiper-container')
-let swiper = new Swiper('.swiper-container', {
-    // 한 번에 보여줄 슬라이드 수
-    slidesPerView: 2,
-    // 슬라이드 사이의 간격
-    spaceBetween: 15,
-    // 한 번에 넘길 슬라이드 수
-    slidesPerGroup: 1, 
-    loop: true,
-    autoplay:{delay:3000,},
-    centeredSlides : true,
-    pagination: {
-        el: '.swiper-pagination',
-        type:'bullets',
-        clickable:true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        // 윈도우 화면 너비가 800 이상일 때(min-width 기준)
-        900: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            slidesPerGroup: 3,
-            centeredSlides : false,
-        },
-        // 화면 너비가 1200px 이상일 때
-        1200: {
-        slidesPerView: 3,
-        spaceBetween: 25,
-        slidesPerGroup: 3,
-        centeredSlides : false,
-        }
-    },
+const userSearch = document.querySelector('.user_search')
+const searchInput = document.querySelector('.search_input')
+const searchRanking = document.querySelector('.search_ranking')
+const calendarDate = document.querySelector('.calendar_date')
+const dateSelectBox = document.querySelector('.date_select_box')
+const numView = document.querySelector('.num_view')
+const numSelect = document.querySelector('#num_select')
+const userSelect = document.querySelector('.user_select')
+let hover = true
+console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
+
+userSearch.addEventListener('click',()=>{
+    searchRanking.style.display = 'block'
 })
 
-// 브라우저 창 크기에 따라 .swiper-container의 너비를 조정하는 함수
-function adjustSliderWidth() {
-    const windowWidth = window.innerWidth;
-    const isDesktop = windowWidth >= 900;
-    swiperContainer.style.width = isDesktop ? '180%' : '100%';
-}
-// 페이지 로드 및 창 크기 변경 시 .swiper-container의 너비 조정 함수 호출
-window.addEventListener('load', adjustSliderWidth);
-window.addEventListener('resize', adjustSliderWidth);
+//
+window.addEventListener('load', function() {
+    const searchInput = document.getElementById('search_input');
+    const searchResults = document.querySelector('.search_results');
+    console.log(searchInput,searchResults)
 
-//아래 슬라이드
-let swiperContainer01 = document.querySelector('.swiper-container01')
-let swiper01 = new Swiper('.swiper-container01', {
-    // 한 번에 보여줄 슬라이드 수
-    slidesPerView: 5,
-    // 슬라이드 사이의 간격
-    spaceBetween: 10,
-    // 한 번에 넘길 슬라이드 수
-    slidesPerGroup: 6,  
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".swiper-button-next01",
-        prevEl: ".swiper-button-prev01",
-    },
-    breakpoints: {
-        // 윈도우 화면 너비가 800 이상일 때(min-width 기준)
-        900: {
-            slidesPerView: 6,
-            spaceBetween: 20,
-        },
-        // 화면 너비가 1200px 이상일 때
-        1200: {
-        slidesPerView: 6,
-        spaceBetween: 25,
+    searchInput.addEventListener('input', function(){
+        const searchQuery = this.value.toLowerCase();
+        console.log(searchQuery)
+        if (searchQuery.length === 0) {
+            searchResults.innerHTML = ''; // 입력값이 없을 때 검색 결과 초기화
+            return;
         }
-    },
+
+        // 여기서 실제 검색 로직을 수행하고 결과를 동적으로 생성합니다.
+        const fakeSearchResults = ['경주', '강릉', '속초', '여수', '부산', '전주', '춘천', '제주도', '포항', '대전'];
+        const filteredResults = fakeSearchResults.filter(result => result.toLowerCase().includes(searchQuery));
+        
+        // 검색 결과를 표시합니다.
+        renderResults(filteredResults);
+        console.log(fakeSearchResults,filteredResults)
+    });
+
+    function renderResults(results) {
+        searchResults.innerHTML = ''; // 검색 결과 초기화
+        results.forEach(result => {
+            const li = document.createElement('li');
+            li.textContent = result;
+            li.addEventListener('click', function() {
+                searchInput.value = result;
+                searchResults.innerHTML = ''; // 검색 결과 클릭 시 초기화
+            });
+            searchResults.appendChild(li);
+            console.log(li)
+        });
+    }
+});
+
+//
+
+calendarDate.addEventListener('click',()=>{
+    calendarDate.classList.add('input_active')
+    dateSelectBox.style.display = 'block'
 })
 
-let swiperContainer02 = document.querySelector('.swiper-container02')
-let swiper02 = new Swiper('.swiper-container02', {
-    // 한 번에 보여줄 슬라이드 수
-    slidesPerView: 5,
-    // 슬라이드 사이의 간격
-    spaceBetween: 10,
-    // 한 번에 넘길 슬라이드 수
-    slidesPerGroup: 6,   
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".swiper-button-next02",
-        prevEl: ".swiper-button-prev02",
-    },
-    breakpoints: {
-        // 윈도우 화면 너비가 800 이상일 때(min-width 기준)
-        900: {
-            slidesPerView: 6,
-            spaceBetween: 20,
-        },
-        // 화면 너비가 1200px 이상일 때
-        1200: {
-        slidesPerView: 6,
-        spaceBetween: 25,
-        }
-    },
+// 다른 곳 클릭하면 다시 비활성화 
+document.addEventListener('click', function(event) {
+    if (event.target !== calendarDate) {
+        calendarDate.classList.remove('input_active')
+        dateSelectBox.style.display = 'none'
+    }
 })
 
-let swiperContainer03 = document.querySelector('.swiper-container03')
-let swiper03 = new Swiper('.swiper-container03', {
-    // 한 번에 보여줄 슬라이드 수
-    slidesPerView: 3.5,
-    // 슬라이드 사이의 간격
-    spaceBetween: 10,
-    // 한 번에 넘길 슬라이드 수
-    slidesPerGroup: 4,
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".swiper-button-next03",
-        prevEl: ".swiper-button-prev03",
-    },
-    breakpoints: {
-        // 화면 너비가 800 이상일 때(min-width 기준)
-        900: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        // 화면 너비가 1200px 이상일 때
-        1200: {
-        slidesPerView: 4,
-        spaceBetween: 25,
-        }
-    },
+numView.addEventListener('click',()=>{
+    numSelect.classList.add('input_active')
+    userSelect.style.display = 'block'
+})
+numView.addEventListener('mouseover',()=>{
+    hover = !hover
+    console.log(hover)
+    if(hover === false){
+        numView.style.backgroundColor = '#eeeeee';
+        numView.style.borderRadius = '10px';
+    }else{
+        numView.style.backgroundColor = '#f5f5f5';
+        numView.style.borderRadius = '10px';
+    }
 })
 
-let swiperContainer04 = document.querySelector('.swiper-container04')
-let swiper04 = new Swiper('.swiper-container04', {
-    // 한 번에 보여줄 슬라이드 수
-    slidesPerView: 3.5,
-    // 슬라이드 사이의 간격
-    spaceBetween: 10,
-    // 한 번에 넘길 슬라이드 수
-    slidesPerGroup: 4,
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".swiper-button-next04",
-        prevEl: ".swiper-button-prev04",
-    },
-    breakpoints: {
-        // 화면 너비가 800 이상일 때(min-width 기준)
-        900: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        // 화면 너비가 1200px 이상일 때
-        1200: {
-        slidesPerView: 4,
-        spaceBetween: 25,
-        }
-    },
+calendarDate.addEventListener('mouseover',()=>{
+    calendarDate.classList.add('hover')
+})
+calendarDate.addEventListener('mouseout',()=>{
+    calendarDate.classList.remove('hover')
 })
 
-let swiperContainer05 = document.querySelector('.swiper-container05')
-let swiper05 = new Swiper('.swiper-container05', {
-    // 한 번에 보여줄 슬라이드 수
-    slidesPerView: 3.5,
-    // 슬라이드 사이의 간격
-    spaceBetween: 10,
-    // 한 번에 넘길 슬라이드 수
-    slidesPerGroup: 4,
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".swiper-button-next05",
-        prevEl: ".swiper-button-prev05",
-    },
-    breakpoints: {
-        // 화면 너비가 800 이상일 때(min-width 기준)
-        900: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        // 화면 너비가 1200px 이상일 때
-        1200: {
-        slidesPerView: 4,
-        spaceBetween: 25,
-        }
-    },
-})
-
+<<<<<<< HEAD
 let swiper06 = new Swiper('.swiper-container06', {
     // loop: true,
     // 한 번에 보여줄 슬라이드 수
@@ -221,6 +128,37 @@ let swiper06 = new Swiper('.swiper-container06', {
 function selectType(type){
     const data = getAccommodationsByType(type)
     const room_container = document.querySelector('#room_container')
+=======
+// 데이터 삽입
+
+/* function getAccommodationsByType(type){
+    return data.filter(
+        e => e.type === type)
+}
+
+const type_chk = document.querySelectorAll('.sub_menu') 
+
+for(let menu_btn of type_chk){
+    menu_btn.addEventListener('change',filterHandler)
+}
+
+function getChecked(name){
+    const checked = []; // 결과 배열 / 체크한거만 들어가게
+    const inputs = document.getElementsByClassName(name)[1].getElementsByTagName('input');
+    for (const input of inputs) {
+        if (input.checked) checked.push(input.value);
+    }
+    return checked
+}
+
+function filterHandler(){ 
+    // 1. 사용자가 무엇을 선택했는지 name으로 확인해 배열로 가져온다.
+    let checkedArray = getChecked('type')
+    // 2. 위에서 가져온 배열로 데이터를 불러온다.
+    const data = getAccommodationsByType(checkedArray)
+    console.log(data);
+    // 3. 위에서 불러온 데이터를 화면에 표시한다.
+>>>>>>> d373b7696888c3cd7d52a7ff3f2fc544243cb2b6
     const roomTemplate = document.querySelector('#room_template')
     console.log(data)
     room_container.innerHTML = ''

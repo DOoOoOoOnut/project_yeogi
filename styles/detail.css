@@ -568,65 +568,47 @@ main nav .box1 .select #select_room {
   color: #fff;
   font-size: 0.875rem;
 }
-main section .room .photo {
+main section .room .photo_wrap {
+  max-width: 1400px;
+  overflow: hidden;
+  margin: 30px auto;
+}
+main section .room .photo_wrap .photo_container {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  position: relative;
-  padding: 40px 0;
 }
-main section .room .photo .main_photo {
-  padding-right: 8px;
+main section .room .photo_wrap .photo_container .left {
+  width: calc(100% - 400px);
+  height: 500px;
 }
-main section .room .photo .main_photo img {
-  width: 737px;
-  height: 581px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+main section .room .photo_wrap .photo_container .left img {
+  width: 100%;
 }
-main section .room .photo .main_photo img:hover {
-  filter: brightness(90%);
+main section .room .photo_wrap .photo_container .right {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-areas: "item1 item2" "item3 item4";
+  grid-template-rows: repeat(2, 0.5fr);
 }
-main section .room .photo .sub_photo .top_photo {
-  padding-bottom: 5px;
+main section .room .photo_wrap .photo_container .right .box {
+  overflow: hidden;
 }
-main section .room .photo .sub_photo .top_photo .photo1 {
-  padding-right: 5px;
+main section .room .photo_wrap .photo_container .right .box img {
+  width: 100%;
 }
-main section .room .photo .sub_photo .top_photo .photo1 img {
-  width: 323px;
-  height: 286px;
+main section .room .photo_wrap .photo_container .right .box1 {
+  grid-area: item1;
 }
-main section .room .photo .sub_photo .top_photo .photo1 img:hover {
-  filter: brightness(90%);
+main section .room .photo_wrap .photo_container .right .box2 {
+  grid-area: item2;
 }
-main section .room .photo .sub_photo .top_photo .photo2 img {
-  width: 323px;
-  height: 286px;
-  border-top-right-radius: 10px;
+main section .room .photo_wrap .photo_container .right .box3 {
+  grid-area: item3;
 }
-main section .room .photo .sub_photo .top_photo .photo2 img:hover {
-  filter: brightness(90%);
+main section .room .photo_wrap .photo_container .right .box4 {
+  grid-area: item4;
 }
-main section .room .photo .sub_photo .btm_photo .photo3 {
-  padding-right: 5px;
-}
-main section .room .photo .sub_photo .btm_photo .photo3 img {
-  width: 323px;
-  height: 286px;
-}
-main section .room .photo .sub_photo .btm_photo .photo3 img:hover {
-  filter: brightness(90%);
-}
-main section .room .photo .sub_photo .btm_photo .photo4 img {
-  width: 323px;
-  height: 286px;
-  border-bottom-right-radius: 10px;
-}
-main section .room .photo .sub_photo .btm_photo .photo4 img:hover {
-  filter: brightness(90%);
-}
-main section .room .photo .more_photo {
+main section .room .photo_wrap .photo_container .more_photo {
   position: absolute;
   right: 5%;
   bottom: 12%;
@@ -637,7 +619,7 @@ main section .room .photo .more_photo {
   border-radius: 25px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
 }
-main section .room .photo .more_photo i {
+main section .room .photo_wrap .photo_container .more_photo i {
   width: 16px;
   margin-right: 5px;
 }
@@ -1247,15 +1229,9 @@ main section .room .box2 .side .event_pay #event_bnr .event_title .coupon_get i 
 }
 main section .room .box2 .side .event_pay #event_bnr .event_slide {
   padding: 20px 0;
-  border-bottom: 1px solid rgb(235, 235, 235);
 }
-main section .room .box2 .side .event_pay #event_bnr .event_slide .event_slide1 img {
+main section .room .box2 .side .event_pay #event_bnr .event_slide .event_slide img {
   width: 300px;
-  border-radius: 10px;
-}
-main section .room .box2 .side .event_pay #event_bnr .event_slide .event_slide2 img {
-  display: none;
-  height: 120px;
   border-radius: 10px;
 }
 main section .room .box2 .side .event_pay .pay .title {
@@ -1287,7 +1263,7 @@ main section .room .box2 .side .event_pay .pay .pay_detail p {
   display: flex;
   align-items: center;
   font-size: 0.938rem;
-  padding: 0 10px 20px 5px;
+  padding: 0 10px 0 5px;
 }
 main section .room .box2 .side .event_pay .pay .pay_detail p img {
   width: 70px;
@@ -1334,7 +1310,7 @@ main section .room .location_box .zoom_in img {
 main section .room .location_box .zoom_out {
   position: absolute;
   right: 1%;
-  top: 19%;
+  top: 18.5%;
 }
 main section .room .location_box .zoom_out img {
   background: #fff;
@@ -1494,6 +1470,17 @@ main section .room .real_review .review_user .photo_review .thumnail #thum_photo
   height: 210px;
   border-radius: 10px;
   margin-left: 15px;
+}
+main section .room .real_review .review_user .photo_review .thumnail #thum_photo::after {
+  content: "";
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(-90deg, white, transparent);
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 950;
 }
 main section .room .real_review .review_user .photo_review .thumnail .thumnail::after {
   content: "";

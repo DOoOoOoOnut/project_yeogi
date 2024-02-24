@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   overflow-x: hidden;
 }
@@ -6,10 +7,122 @@ main {
   max-width: 1400px;
   margin: 0 auto;
 }
-main .search_popup {
+main .main_popup {
+  display: none;
+  /* 스크롤 디자인 */
+  /*스크롤바 크기*/
+  /*스크롤 드래그바*/
+}
+main .main_popup ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+main .main_popup ::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup {
   display: none;
 }
-main .search_popup #search_frm_m {
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 9999;
+  position: fixed;
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search {
+  width: 100%;
+  padding: 15px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fafafa;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .back_btn {
+  height: 72px;
+  padding: 12px 20px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .back_btn .back i {
+  font-size: 1.25rem;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail {
+  width: 100%;
+  height: 100vh;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m {
+  background-color: #fff;
+  padding: 30px 20px 12px;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  margin: 5px 0;
+  height: 48px;
+  padding: 4px 14px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .left i {
+  color: #999;
+  margin-right: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .left #search_input_m::-moz-placeholder {
+  color: #d6d6d6;
+  font-family: PretendardMedium;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .left #search_input_m::placeholder {
+  color: #d6d6d6;
+  font-family: PretendardMedium;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .reset {
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .reset i {
+  color: #999;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m {
+  background-color: #fff;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 0 0 200px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m h3 {
+  font-family: PretendardSemiBold;
+  padding: 10px 20px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m ol {
+  padding: 0 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m ol li {
+  padding: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m ol li em {
+  font-weight: 600;
+  width: 30px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m ol li:hover {
+  background-color: #fafafa;
+  width: 100%;
+  border-radius: 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m {
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
@@ -17,57 +130,483 @@ main .search_popup #search_frm_m {
   z-index: 999;
   position: fixed;
 }
-main .search_popup #search_frm_m fieldset .search_m {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m {
   width: 100%;
-  padding: 15px 20px;
+  height: 100vh;
+  padding: 10px 0;
   position: absolute;
   left: 0;
   top: 0;
   background: #fafafa;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_top_m {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_top_m .close_btn {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .close_btn {
   position: absolute;
   left: 20px;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_top_m .close_btn .close {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .close_btn .close {
   font-size: 22px;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m {
-  border-bottom: 1px solid #d9d9d9;
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m {
+  border-bottom: 1px solid #eeeeee;
   padding: 0 20px;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul li {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li {
   padding: 15px 30px;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul li span {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li span {
   font-size: 0.875rem;
+  white-space: nowrap;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul li:first-child {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li:first-child {
   border-bottom: 2px solid #1273e4;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_top_m .search_tab_m ul li:first-child span {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li:first-child span {
   color: #1273e4;
   font-family: PretendardBold;
 }
-main .search_popup #search_frm_m fieldset .search_m .search_center_m .search_box_m .search_before {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before {
   background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  padding: 4px 14px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before span i {
+  color: #999;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before span span {
+  padding: 10px 5px;
+  color: #d6d6d6;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before .change {
+  color: #1273e4;
+  font-size: 0.875rem;
+  font-family: PretendardSemiBold;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before .change:hover {
+  background-color: #f5f5f5;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 8px 20px 20px;
+  width: 100%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after h2 {
+  font-size: 1.25rem;
+  font-family: PretendardBold;
+  padding: 16px 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after .user_search_detail_m {
+  padding: 15px 20px 15px 16px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  margin: 5px 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after .user_search_detail_m i {
+  color: #999;
+  margin-right: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after .user_search_detail_m span {
+  color: #c2c2c2;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  padding: 4px 14px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m span i {
+  margin-right: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m span span {
+  padding: 10px 0;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m .change {
+  color: #1273e4;
+  font-size: 0.875rem;
+  font-family: PretendardSemiBold;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m .change:hover {
+  background-color: #f5f5f5;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m {
+  width: 100%;
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m {
+  width: 93%;
+  border-radius: 16px;
+  position: absolute;
+  z-index: 999;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 200px);
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m {
+  border-bottom: 1px solid #eeeeee;
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m h2 {
+  font-size: 1.125rem;
+  font-family: PretendardBold;
+  padding: 20px 20px 16px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m ul {
+  max-width: 288px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m ul li {
+  padding: 10px 13px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m ul li span {
+  font-size: 0.875rem;
+  color: #999;
+  font-family: PretendardMedium;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select {
+  width: 100%;
+  padding: 10px 5px;
+  height: 75%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date {
+  width: 80%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 288px;
+  max-width: 288px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date h3 {
+  margin: 5px 0 25px 10px;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul li {
+  margin-bottom: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul li .day {
+  color: #707070;
+  padding: 10px 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul li .redday {
+  color: #f45858;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul li .day:hover {
+  background-color: #f5f5f5;
+  width: 40px;
+  border-radius: 50%;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #eeeeee;
+  width: 93%;
+  height: 80px;
+  position: fixed;
+  bottom: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 2px 16px 0 rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .date_reset {
+  cursor: pointer;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .date_reset i {
+  font-size: 0.875rem;
+  color: #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .date_reset span {
+  font-size: 0.875rem;
+  color: #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .user_select {
+  background-color: #1273e4;
+  border-radius: 10px;
+  width: 144px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .user_select .select {
+  font-family: PretendardMedium;
+  color: #fff;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .user_select .select .total_night {
+  font-family: PretendardMedium;
+  color: #fff;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  padding: 4px 14px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m span i {
+  margin-right: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m span span {
+  padding: 10px 0;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m .change {
+  color: #1273e4;
+  font-size: 0.875rem;
+  font-family: PretendardSemiBold;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m .change:hover {
+  background-color: #f5f5f5;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select {
+  display: none;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 8px 20px 20px;
+  width: 100%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select h2 {
+  font-size: 1.25rem;
+  font-family: PretendardBold;
+  padding: 16px 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div h3 {
+  font-family: PretendardMedium;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div p {
+  font-size: 0.813rem;
+  color: #999;
+  margin-top: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div div {
+  display: flex;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div div button i {
+  font-size: 30px;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
+  background-color: #333;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div div button:hover i {
+  color: #f5f5f5;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div div span {
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  font-family: PretendardBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_room {
+  border-bottom: 1px solid #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_room h3 {
+  padding: 10px 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_room .user_room_select .num_minus i {
+  background-color: #d6d6d6;
+  color: #f5f5f5;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_adult_left {
+  padding-bottom: 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_adult_left .user_adult {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_children_left {
+  border-bottom: 1px solid #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_children_left .user_children {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_notice {
+  background-color: #f5f5f5;
+  padding: 15px;
+  margin: 20px 0 10px;
+  border-radius: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_notice ul li {
+  font-size: 0.75rem;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age {
+  margin-bottom: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age .user_children_age {
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 140px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #f5f5f5;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age .user_children_age .children_age_select {
+  width: 140px;
+  height: 160px;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  position: absolute;
+  top: -170px;
+  right: 0px;
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age .user_children_age .children_age_select span {
+  font-size: 0.938rem;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_bottom_m {
+  width: 100%;
+  height: 106px;
+  padding: 0 20px 16px 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_bottom_m #search_btn_m {
+  background-color: #1273e4;
+  padding: 16px 20px;
+  color: #fff;
+  width: 100%;
+  height: 56px;
+  font-size: 1.125rem;
+  font-family: PretendardSemiBold;
+  border-radius: 10px;
+  text-align: center;
 }
 main .main_container {
   width: 100%;
   margin: 0 auto;
+  /*스크롤바 크기*/
+  /*스크롤 드래그바*/
+}
+main .main_container ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+main .main_container ::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 5px;
 }
 main .main_container .main_wrap {
   width: calc(100% - 60px);
@@ -127,25 +666,39 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   padding: 20px;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail {
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  padding: 4px 14px;
-  margin-right: 10px;
-  width: 40%;
-  height: 48px;
   position: relative;
+  width: 40%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search {
+  margin-right: 10px;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search i {
   color: #999;
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input {
-  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 4px 14px 4px 40px;
+  width: 100%;
+  height: 48px;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input::-moz-placeholder {
   color: #d9d9d9;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input::placeholder {
   color: #d9d9d9;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input:hover {
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input:focus {
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 100%;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking {
   display: none;
@@ -154,26 +707,28 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
   padding: 30px 15px 20px;
   width: 100%;
+  height: 320px;
   position: absolute;
   top: 55px;
   left: 0;
   z-index: 999;
+  overflow-y: scroll;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking h3 {
   margin-bottom: 20px;
   padding: 0 15px;
-  font-weight: 600;
+  font-family: PretendardBold;
   color: #f7323f;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking ol li {
-  padding: 10px 15px;
+  padding: 12px 15px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking ol li em {
-  font-weight: 600;
+  font-family: PretendardSemiBold;
   width: 30px;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking ol li:hover {
@@ -181,8 +736,8 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   width: 100%;
   border-radius: 10px;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail:hover {
-  background-color: #eeeeee;
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_results {
+  display: none;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail {
   display: flex;
@@ -201,6 +756,7 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   padding: 4px 14px;
   width: 100%;
   height: 48px;
+  cursor: pointer;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .calendar_date i {
   color: #999;
@@ -210,8 +766,12 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .calendar_date:hover {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .hover {
   background-color: #eeeeee;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .input_active {
+  border: 1px solid #000;
+  background-color: #fff;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box {
   display: none;
@@ -367,6 +927,10 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view #num_select span span {
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view .input_active {
+  border: 1px solid #000;
+  background-color: #fff;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view:hover #num_select {
   background-color: #eeeeee;

@@ -135,11 +135,11 @@
                                 <img src="./images/user_info/withdrawal/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
                                 <p> 여기어때에는 숙박 상품 외에도 숙소 주변 레저・티켓 구매가 가능해요! </p>
                                 <p> 볼거리와 놀거리가 풍성해진 여기어때를 더 이용해보시겠어요? </p>
-                                <button type="button"> 레저・티켓 보러가기 </button>
+                                <button type="button" class="popup_btn"> 레저・티켓 보러가기 </button>
                             </div>
                             <!-- btn 누를시 -->
                             <div class="popup">
-                                <!-- 3초 정도만 나왔다 들어가기 -->
+                                <!-- 1초 정도만 나왔다 들어가기 -->
                                 <div class="box">여기어때 앱에서 확인 가능합니다.</div>
                             </div>
                             <!-- 2. ---------------------------------------------- -->
@@ -164,7 +164,7 @@
                                 <p> 예약, 취소, 사용이 어려우신가요? </p>
                                 <p> 회원님들이 궁금해 하시는 내용을 위주로 도움말과 혜택꿀팁을 정리해 보았는데 이용해보시는건 어떠세요? </p>
                                 <a href="customer_service.html"> 자주 묻는 질문 보러가기 </a>
-                                <button type="button"> 혜택꿀팁 보러가기 </button>
+                                <button type="button" class="popup_btn"> 혜택꿀팁 보러가기 </button>
                             </div>
                             <!-- 4.---------------------------------------------- -->
                             <div class="reasons">
@@ -177,9 +177,9 @@
                                 <p> 혹시 놓치고 있던 이벤트가 있지는 않을까요? </p>
                                 <p> 다양한 이벤트를 둘러보고 혜택을 받아보시는건 어떠세요? </p>
                                 <!-- 이벤트로 html만들면 연결하고 주석 삭제! -->
-                                <a href="#"> 이벤트 보러가기 </a>
+                                <a href="./event.html"> 이벤트 보러가기 </a>
                                 <p> 여기어때가 준비한 다양한 혜택들, 알고 계셨나요? 여기어때를 100% 활용하는 꿀팁을 구경해보시는건 어떠세요? </p>
-                                <button type="button"> 혜택꿀팁 보러가기 </button>
+                                <button type="button" class="popup_btn"> 혜택꿀팁 보러가기 </button>
                             </div>
                             <!-- 5. ------------------------------------- -->
                             <div class="reasons">
@@ -191,7 +191,7 @@
                                 <img src="./images/user_info/withdrawal/recommend.png" alt="잠깐 이렇게 해보시면 어때요?">
                                 <p> 고객님의 사용내역은 ‘App > 더보기 > 사용내역 관리’ 에서 변경, 삭제할 수 있어요. 회원탈퇴 없이 사용내역을 삭제해 보는 건 어떠세요?</p>
                                 <p> - 삭제 가능 내용 : 예약내역, 쿠폰함, 찜한 상품, 1:1문의 </p>
-                                <button type="button"> 사용내역 관리 </button>
+                                <button type="button" class="popup_btn"> 사용내역 관리 </button>
                             </div>
                             <!-- 6. -->
                             <div class="reasons">
@@ -213,7 +213,7 @@
                     </form>
                 </div>
                 <div class="btn">
-                    <button type="button" class="use_more_btn">더 써볼래요</button>
+                    <button type="button" class="close">더 써볼래요</button>
                     <button type="button" class="next_btn">다음단계로</button>
                 </div>
             </div>
@@ -270,7 +270,7 @@
                     </fieldset>
                 </form>
                 <div class="btn">
-                    <button type="button" class="use_more_btn">더 써볼래요</button>
+                    <button type="button" class="close">더 써볼래요</button>
                     <button type="button" class="user_bye">진짜 안녕</button>
                 </div>
                 <div class="popup_bg">
@@ -278,7 +278,7 @@
                         <h2>회원 탈퇴</h2>
                         <p>회원 탈퇴 시 계정 정보 및 보유 중인 무상 포인트와 쿠폰은 삭제되어 복구가 불가해요. <br>정말로 탈퇴하시겠어요?</p>
                         <div class="btn_wrap">
-                            <button type="button" class="cancellation_btn">더 써볼래요</button>
+                            <button type="button" class="close">더 써볼래요</button>
                             <button type="button" class="completion_btn">떠날래요</button>
                         </div>
                     </div>
@@ -286,5 +286,6 @@
             </div>
         </div>
     </main>
+    <script src="./script/user_withdrawal.js"></script>
 </body>
 </html>
