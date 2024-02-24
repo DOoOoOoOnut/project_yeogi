@@ -523,131 +523,92 @@
   border: 1px solid #707070;
 }
 
-main .tab_menu {
-  width: 100%;
+main {
+  max-width: 1400px;
   margin: 0 auto;
 }
-main .tab_menu nav {
-  width: 100%;
-  margin: 0 auto;
+main nav {
   background: #fff;
   position: fixed;
   z-index: 999;
-  border-bottom: 1px solid rgb(235, 235, 235);
+  width: 1400px;
 }
-main .tab_menu nav .box1 {
-  max-width: 1400px;
-  margin: 0 auto;
+main nav .box1 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  border-bottom: 1px solid rgb(235, 235, 235);
 }
-main .tab_menu nav .box1 .main_menu {
+main nav .box1 .main_menu {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-main .tab_menu nav .box1 .main_menu .main_move {
+main nav .box1 .main_menu .main_move {
   color: #1273e4;
   border-bottom: 2px solid #1273e4;
 }
-main .tab_menu nav .box1 .main_menu .move {
+main nav .box1 .main_menu .move {
   color: #707070;
 }
-main .tab_menu nav .box1 .main_menu a {
+main nav .box1 .main_menu a {
   font-size: 1rem;
   font-weight: 600;
   padding: 24px 16px;
 }
-main .tab_menu nav .box1 .select {
+main nav .box1 .select {
   width: 125px;
   background: #1273e4;
   border-radius: 8px;
   padding: 10px 15px;
   text-align: center;
 }
-main .tab_menu nav .box1 .select #select_room {
+main nav .box1 .select #select_room {
   color: #fff;
   font-size: 0.875rem;
 }
-main section {
+main section .room .photo_wrap {
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px;
+  overflow: hidden;
+  margin: 30px auto;
 }
-main section .room {
-  width: 100%;
-}
-main section .room .photo {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  position: relative;
-  padding: 40px 0;
-}
-main section .room .photo .main_photo {
-  width: 100%;
-  padding-right: 8px;
-}
-main section .room .photo .main_photo img {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-main section .room .photo .main_photo img:hover {
-  filter: brightness(90%);
-}
-main section .room .photo .sub_photo {
-  width: 100%;
-}
-main section .room .photo .sub_photo .top_photo {
-  padding-bottom: 5px;
+main section .room .photo_wrap .photo_container {
   display: flex;
 }
-main section .room .photo .sub_photo .top_photo .photo1 {
-  padding-right: 5px;
+main section .room .photo_wrap .photo_container .left {
+  width: calc(100% - 400px);
+  height: 500px;
 }
-main section .room .photo .sub_photo .top_photo .photo1 img {
+main section .room .photo_wrap .photo_container .left img {
   width: 100%;
-  height: auto;
 }
-main section .room .photo .sub_photo .top_photo .photo1 img:hover {
-  filter: brightness(90%);
+main section .room .photo_wrap .photo_container .right {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-areas: "item1 item2" "item3 item4";
+  grid-template-rows: repeat(2, 0.5fr);
 }
-main section .room .photo .sub_photo .top_photo .photo2 img {
+main section .room .photo_wrap .photo_container .right .box {
+  overflow: hidden;
+}
+main section .room .photo_wrap .photo_container .right .box img {
   width: 100%;
-  height: auto;
-  border-top-right-radius: 10px;
 }
-main section .room .photo .sub_photo .top_photo .photo2 img:hover {
-  filter: brightness(90%);
+main section .room .photo_wrap .photo_container .right .box1 {
+  grid-area: item1;
 }
-main section .room .photo .sub_photo .btm_photo {
-  display: flex;
+main section .room .photo_wrap .photo_container .right .box2 {
+  grid-area: item2;
 }
-main section .room .photo .sub_photo .btm_photo .photo3 {
-  padding-right: 5px;
+main section .room .photo_wrap .photo_container .right .box3 {
+  grid-area: item3;
 }
-main section .room .photo .sub_photo .btm_photo .photo3 img {
-  width: 100%;
-  height: auto;
+main section .room .photo_wrap .photo_container .right .box4 {
+  grid-area: item4;
 }
-main section .room .photo .sub_photo .btm_photo .photo3 img:hover {
-  filter: brightness(90%);
-}
-main section .room .photo .sub_photo .btm_photo .photo4 img {
-  width: 100%;
-  height: auto;
-  border-bottom-right-radius: 10px;
-}
-main section .room .photo .sub_photo .btm_photo .photo4 img:hover {
-  filter: brightness(90%);
-}
-main section .room .photo .more_photo {
+main section .room .photo_wrap .photo_container .more_photo {
   position: absolute;
   right: 5%;
   bottom: 12%;
@@ -658,12 +619,12 @@ main section .room .photo .more_photo {
   border-radius: 25px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
 }
-main section .room .photo .more_photo i {
+main section .room .photo_wrap .photo_container .more_photo i {
   width: 16px;
   margin-right: 5px;
 }
 main section .room .box2 {
-  width: 100%;
+  max-width: 1400px;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -672,12 +633,6 @@ main section .room .box2 .contents {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-}
-main section .room .box2 .contents .title_wrap {
-  width: 100%;
-}
-main section .room .box2 .contents .title_wrap .title {
-  width: 100%;
 }
 main section .room .box2 .contents .title_wrap .title .type {
   display: flex;
@@ -721,28 +676,6 @@ main section .room .box2 .contents .title_wrap .review_wrap .review {
 main section .room .box2 .contents .title_wrap .review_wrap .all_review {
   font-size: 1rem;
   font-weight: 600;
-  color: #1273e4;
-}
-main section .room .box2 .contents .comments {
-  display: none;
-  padding: 15px 0;
-}
-main section .room .box2 .contents .comments .title {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-main section .room .box2 .contents .comments .title .address {
-  font-size: 1rem;
-  color: #707070;
-}
-main section .room .box2 .contents .comments .title .address i {
-  font-size: 1rem;
-  color: #707070;
-  padding-right: 10px;
-}
-main section .room .box2 .contents .comments .title .mini_map_view {
-  font-size: 1rem;
   color: #1273e4;
 }
 main section .room .box2 .contents .review_box {
@@ -847,7 +780,6 @@ main section .room .box2 .contents .review_box .thum_review::after {
 main section .room .box2 .contents .additional_service {
   padding: 20px 0;
   border-bottom: 1px solid #ebebeb;
-  position: relative;
 }
 main section .room .box2 .contents .additional_service .title {
   display: flex;
@@ -886,7 +818,7 @@ main section .room .box2 .contents .additional_service .service .top .icon img {
   width: 25px;
 }
 main section .room .box2 .contents .additional_service .service .top .icon span {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #707070;
   padding: 0 5px 0 10px;
@@ -904,7 +836,7 @@ main section .room .box2 .contents .additional_service .service .btm .icon img {
   width: 25px;
 }
 main section .room .box2 .contents .additional_service .service .btm .icon span {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #707070;
   padding: 0 5px 0 10px;
@@ -982,9 +914,6 @@ main section .room .box2 .contents .room_type .select {
   color: #333;
   padding-bottom: 20px;
 }
-main section .room .box2 .contents .room_type .box3 {
-  width: 100%;
-}
 main section .room .box2 .contents .room_type .box3 .item {
   background: #F5F7FA;
   padding: 30px;
@@ -1043,10 +972,6 @@ main section .room .box2 .contents .room_type .box3 .item .item_type .item_price
   color: #707070;
   padding-bottom: 5px;
 }
-main section .room .box2 .contents .room_type .box3 .item .item_type .item_price .right {
-  display: flex;
-  flex-flow: column nowrap;
-}
 main section .room .box2 .contents .room_type .box3 .item .item_type .item_price .right .price {
   font-size: 1.125rem;
   font-weight: 600;
@@ -1059,10 +984,10 @@ main section .room .box2 .contents .room_type .box3 .item .item_type .item_price
   color: #333;
 }
 main section .room .box2 .contents .room_type .box3 .item .item_type .item_price .right .item_reservation {
-  display: inline-block;
   font-size: 0.75rem;
   font-weight: 600;
   color: #fff;
+  padding: 9px 12px;
   background: #1273e4;
   border-radius: 6px;
 }
@@ -1198,11 +1123,9 @@ main section .room .box2 .contents .seller_info .seller i {
   color: rgb(194, 194, 194);
 }
 main section .room .box2 .side {
-  width: 100%;
+  width: 400px;
   margin: 0 auto;
   padding-left: 50px;
-  position: relative;
-  z-index: 900;
 }
 main section .room .box2 .side .map {
   margin-bottom: 20px;
@@ -1271,70 +1194,52 @@ main section .room .box2 .side .event_pay {
   border: 1px solid rgb(235, 235, 235);
   border-radius: 10px;
 }
-main section .room .box2 .side .event_pay .event_title {
+main section .room .box2 .side .event_pay #event_bnr {
+  text-align: center;
+  padding: 20px;
+}
+main section .room .box2 .side .event_pay #event_bnr .event_title {
+  width: 300px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px 0;
   border-bottom: 1px solid rgb(235, 235, 235);
 }
-main section .room .box2 .side .event_pay .event_title h2 {
+main section .room .box2 .side .event_pay #event_bnr .event_title h2 {
   font-size: 0.938rem;
   color: #000;
 }
-main section .room .box2 .side .event_pay .event_title h2 em {
+main section .room .box2 .side .event_pay #event_bnr .event_title h2 em {
   font-size: 0.938rem;
   font-weight: 700;
   color: #f7323f;
 }
-main section .room .box2 .side .event_pay .event_title .coupon_get {
+main section .room .box2 .side .event_pay #event_bnr .event_title .coupon_get {
   background: #1273e4;
   border-radius: 10px;
   color: #fff;
   padding: 9px 8px 9px 12px;
   font-size: 0.75rem;
 }
-main section .room .box2 .side .event_pay .event_title .coupon_get i {
+main section .room .box2 .side .event_pay #event_bnr .event_title .coupon_get i {
   font-size: 0.75rem;
   margin-left: 3px;
 }
-<<<<<<< HEAD
-main section .room .box2 .side .event_pay #event_bnr {
-  padding: 15px 10px;
-  overflow-x: hidden;
-  position: relative;
-  background: #fff;
-}
-main section .room .box2 .side .event_pay #event_bnr .event_slide .event_slide img {
-  width: 100%;
-=======
 main section .room .box2 .side .event_pay #event_bnr .event_slide {
   padding: 20px 0;
 }
 main section .room .box2 .side .event_pay #event_bnr .event_slide .event_slide img {
   width: 300px;
->>>>>>> 0e632e8351477ceb81e0a9722f6555081017fe27
   border-radius: 10px;
-  margin-bottom: 10px;
 }
-<<<<<<< HEAD
-main section .room .box2 .side .event_pay #event_bnr .event_slide .swiper-pagination {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-main section .room .box2 .side .event_pay .pay {
-  border-top: 1px solid rgb(235, 235, 235);
-  padding: 15px;
-}
-=======
->>>>>>> 0e632e8351477ceb81e0a9722f6555081017fe27
 main section .room .box2 .side .event_pay .pay .title {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
 }
 main section .room .box2 .side .event_pay .pay .title h2 {
   font-size: 1.125rem;
@@ -1566,8 +1471,6 @@ main section .room .real_review .review_user .photo_review .thumnail #thum_photo
   border-radius: 10px;
   margin-left: 15px;
 }
-<<<<<<< HEAD
-=======
 main section .room .real_review .review_user .photo_review .thumnail #thum_photo::after {
   content: "";
   display: inline-block;
@@ -1590,7 +1493,6 @@ main section .room .real_review .review_user .photo_review .thumnail .thumnail::
   top: 20px;
   z-index: 950;
 }
->>>>>>> 0e632e8351477ceb81e0a9722f6555081017fe27
 main section .room .real_review .review_user .photo_review .thumnail .swiper-button-prev03 {
   width: 40px;
   height: 40px;
@@ -1686,17 +1588,6 @@ main section .room .real_review .pagination #next {
   font-size: 0.75rem;
   color: rgb(51, 51, 51);
   padding-left: 5px;
-}
-main section .room .thumnail::after {
-  content: "";
-  display: inline-block;
-  width: 200px;
-  height: 100%;
-  background: linear-gradient(-90deg, white, transparent);
-  position: absolute;
-  right: 0;
-  top: 20px;
-  z-index: 950;
 }
 main section .room .similar_item h2 {
   font-size: 1.125rem;

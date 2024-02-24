@@ -461,143 +461,100 @@
     }
 }
 main {
-    .tab_menu {
-        width: 100%; margin: $margin0;
-        nav {
-            width: 100%;
-            margin: $margin0;
-            background: #fff;
-            position: fixed; z-index: 999;
+    max-width: 1400px; margin: $margin0;
+    nav {
+        background: #fff;
+        position: fixed; z-index: 999;
+        width: 1400px;
+        .box1 {
+            display: flex; flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid rgb(235 235 235);
-            .box1 {
-                max-width: 1400px; margin: 0 auto;
+            .main_menu {
                 display: flex; flex-flow: row nowrap;
-                justify-content: space-between;
                 align-items: center;
-                padding: 0 40px;
-                .main_menu {
-                    display: flex; flex-flow: row nowrap;
-                    align-items: center;
-                    .main_move {
-                        color: $mainColor-b;
-                        border-bottom: 2px solid $mainColor-b;
-                    }
-                    .move {
-                        color: #707070;
-                    }
-                    a {
-                        font-size: $defalt16; font-weight: $weight600;
-                        padding: 24px 16px;
-                    }
+                .main_move {
+                    color: $mainColor-b;
+                    border-bottom: 2px solid $mainColor-b;
                 }
-                .select {
-                    width: 125px;
-                    background: $mainColor-b;
-                    border-radius: 8px;
-                    padding: 10px 15px;
-                    text-align: center;
-                    #select_room {
-                        color: #fff;
-                        font-size: $subC14;
-                    }
+                .move {
+                    color: #707070;
+                }
+                a {
+                    font-size: $defalt16; font-weight: $weight600;
+                    padding: 24px 16px;
+                }
+            }
+            .select {
+                width: 125px;
+                background: $mainColor-b;
+                border-radius: 8px;
+                padding: 10px 15px;
+                text-align: center;
+                #select_room {
+                    color: #fff;
+                    font-size: $subC14;
                 }
             }
         }
     }
     section {
-        max-width: 1400px; margin: $margin0;
-        padding: 0 40px;
         .room {
-            width: 100%;
-            .photo {
-                width: 100%;
-                display: flex; flex-flow: row nowrap;
-                align-items: center;
-                position: relative;
-                padding: 40px 0;
-                .main_photo {
-                    width: 100%;
-                    padding-right: 8px;
-                    img {
-                        width: 100%; height: auto;
-                        border-top-left-radius: 10px;
-                        border-bottom-left-radius: 10px;
-                    }
-                    img:hover {
-                        filter: brightness(90%);
-                    }
-                }
-                .sub_photo {
-                    width: 100%;
-                    .top_photo {
-                        padding-bottom: 5px;
-                        display: flex;
-                        .photo1 {
-                            padding-right: 5px;
-                            img {
-                                width: 100%; height: auto;
-                            }
-                            img:hover {
-                                filter: brightness(90%);
-                            }
-                        }
-                        .photo2 {
-                            img {
-                                width: 100%; height: auto;
-                                border-top-right-radius: 10px;
-                            }
-                            img:hover {
-                                filter: brightness(90%);
-                            }
+            .photo_wrap {
+                max-width:1400px;
+                overflow:hidden;
+                margin:30px auto;
+                .photo_container {
+                    display:flex;
+                    .left {
+                        width:calc(100% - 400px); height:500px;
+                        img {
+                            width:100%;
                         }
                     }
-                    .btm_photo {
-                        display: flex;
-                        .photo3 {
-                            padding-right: 5px;
+                    .right {
+                        width:500px; height:500px;
+                        display:grid;
+                        grid-template-areas:
+                            'item1 item2'
+                            'item3 item4';
+                        grid-template-rows:repeat(2, 0.5fr);
+                        .box {
+                            overflow:hidden;
                             img {
-                                width: 100%; height: auto;
-                            }
-                            img:hover {
-                                filter: brightness(90%);
+                                width:100%;
                             }
                         }
-                        .photo4 {
-                            img {
-                                width: 100%; height: auto;
-                                border-bottom-right-radius: 10px;
-                            }
-                            img:hover {
-                                filter: brightness(90%);
-                            }
-                        }
+                        .box1 {grid-area:item1}
+                        .box2 {grid-area:item2}
+                        .box3 {grid-area:item3}
+                        .box4 {grid-area:item4}
                     }
-                }
-                .more_photo {
-                    position: absolute; right: 5%; bottom: 12%;
-                    font-size: $subC14;
-                    color: #333;
-                    background: #fff;
-                    padding: 10px 20px;
-                    border-radius: 25px;
-                    box-shadow:0px 0px 10px 2px rgba(0, 0, 0, 0.5);
-                    i {
-                        width: 16px;
-                        margin-right: 5px;
+                    .more_photo {
+                        position: absolute; right: 5%; bottom: 12%;
+                        font-size: $subC14;
+                        color: #333;
+                        background: #fff;
+                        padding: 10px 20px;
+                        border-radius: 25px;
+                        box-shadow:0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+                        i {
+                            width: 16px;
+                            margin-right: 5px;
+                        }
                     }
                 }
             }
             .box2 {
-                width: 100%;
+                max-width: 1400px;
                 display: flex; flex-flow: row nowrap;
                 .contents {
                     width: calc(100% - 400px);
                     display: flex; flex-flow: column nowrap;
                     justify-content: space-between; 
                     .title_wrap {
-                        width: 100%;
                         .title {
-                            width: 100%;
                             .type {
                                 display: flex; flex-flow: row nowrap;
                                 align-items: center;
@@ -637,26 +594,6 @@ main {
                             .all_review {
                                 font-size: $defalt16; font-weight: $weight600;
                                 color: $mainColor-b;
-                            }
-                        }
-                    }
-                    .comments {
-                        display: none;
-                        padding: 15px 0;
-                        .title {
-                            display: flex; flex-flow: row nowrap;
-                            justify-content: space-between;
-                            .address {
-                                font-size: $defalt16;
-                                color: #333;
-                                i {
-                                    font-size: $defalt16; color: #333;
-                                    padding-right: 10px;
-                                }
-                            }
-                            .mini_map_view {
-                                font-size: $defalt16; 
-                                color: #1273e4;
                             }
                         }
                     }
@@ -742,7 +679,6 @@ main {
                     .additional_service {
                         padding: 20px 0;
                         border-bottom: 1px solid #ebebeb;
-                        position: relative;
                         .title {
                             display: flex; flex-flow: row nowrap;
                             align-items: center; justify-content: space-between;
@@ -772,7 +708,7 @@ main {
                                         width: 25px;                              
                                     }
                                     span {
-                                        font-size: $subC14; font-weight: $weight500;
+                                        font-size: $title18; font-weight: $weight500;
                                         color: #707070;
                                         padding: 0 5px 0 10px;
                                     }
@@ -787,7 +723,7 @@ main {
                                         width: 25px
                                     }
                                     span {
-                                        font-size: $subC14; font-weight: $weight500;
+                                        font-size: $title18; font-weight: $weight500;
                                         color: #707070;
                                         padding: 0 5px 0 10px;
                                     }
@@ -857,7 +793,6 @@ main {
                             padding-bottom: 20px;
                         }
                         .box3 {
-                            width: 100%;
                             .item {
                                 background: #F5F7FA;
                                 padding: 30px;
@@ -909,7 +844,6 @@ main {
                                             }
                                         }
                                         .right {
-                                            display: flex; flex-flow: column nowrap;
                                             .price {
                                                 font-size: $title18; font-weight: $weight600;
                                                 color: #333;
@@ -920,10 +854,9 @@ main {
                                                 }
                                             }
                                             .item_reservation {
-                                                display: inline-block;
                                                 font-size: $small12; font-weight: $weight600;
                                                 color: #fff;
-                                                
+                                                padding: 9px 12px;
                                                 background: $mainColor-b;
                                                 border-radius: 6px;
                                             }
@@ -1062,10 +995,9 @@ main {
                     }
                 }
                 .side {
-                    width: 100%;
+                    width: 400px;
                     margin: $margin0;
                     padding-left: 50px;
-                    position: relative; z-index: 900;
                     .map {
                         margin-bottom: 20px;
                         .mini_map {
@@ -1122,67 +1054,53 @@ main {
                         width: 350px;
                         border: 1px solid rgb(235 235 235);
                         border-radius: 10px;
-                        .event_title {
-                            display: flex; flex-flow: row nowrap;
-                            justify-content: space-between;
-                            align-items: center;
-                            padding: 20px;
-                            border-bottom: 1px solid rgb(235 235 235);
-                            h2 {
-                                font-size: $subT15; 
-                                color: #000;
-                                em {
-                                    font-size: $subT15; font-weight: $weight700;
-                                    color: $mainColor-r;
-                                }
-                            }
-                            .coupon_get {
-                                background: $mainColor-b;
-                                border-radius: 10px;
-                                color: #fff;
-                                padding: 9px 8px 9px 12px;
-                                font-size: $small12;
-                                i {
-                                    font-size: $small12;
-                                    margin-left: 3px;
-                                }
-                            }
-                        }
                         #event_bnr {
-                            padding: 15px 10px;
-                            overflow-x: hidden;
-                            position: relative;
-                            background: #fff;
+                            text-align: center;
+                            padding: 20px;
+                            .event_title {
+                                width: 300px;
+                                display: flex; flex-flow: row nowrap;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 15px 0;
+                                border-bottom: 1px solid rgb(235 235 235);
+                                h2 {
+                                    font-size: $subT15; 
+                                    color: #000;
+                                    em {
+                                        font-size: $subT15; font-weight: $weight700;
+                                        color: $mainColor-r;
+                                    }
+                                }
+                                .coupon_get {
+                                    background: $mainColor-b;
+                                    border-radius: 10px;
+                                    color: #fff;
+                                    padding: 9px 8px 9px 12px;
+                                    font-size: $small12;
+                                    i {
+                                        font-size: $small12;
+                                        margin-left: 3px;
+                                    }
+                                }
+                            }
                             .event_slide {
-<<<<<<< HEAD
-                                .event_slide {
-=======
                                 padding: 20px 0;
                                 .event_slide {
                                     
->>>>>>> 0e632e8351477ceb81e0a9722f6555081017fe27
                                     img {
-                                        width: 100%;
+                                        width: 300px;
                                         border-radius: 10px;
-                                        margin-bottom: 10px;
-                                        
                                     }
                                 }
-<<<<<<< HEAD
-                                .swiper-pagination {
-                                    position: absolute; left: 0; top: 0;
-                                }
-=======
->>>>>>> 0e632e8351477ceb81e0a9722f6555081017fe27
                             }
                         }
                         .pay {
-                            border-top: 1px solid rgb(235 235 235);
-                            padding: 15px;
                             .title {
                                 display: flex; flex-flow: row nowrap;
                                 align-items: center;
                                 justify-content: space-between;
+                                padding: 20px;
                                 h2 {
                                     font-size: $title18; font-weight: $weight600;
                                     color: #333;
@@ -1405,8 +1323,6 @@ main {
                                     }
                                 }
                             }
-<<<<<<< HEAD
-=======
                             #thum_photo::after {
                                 content: ''; display: inline-block;
                                 width: 200px; height: 100%;
@@ -1421,7 +1337,6 @@ main {
                             position: absolute; right: 0; top: 20px;
                             z-index: 950;
                         }
->>>>>>> 0e632e8351477ceb81e0a9722f6555081017fe27
                             .swiper-button-prev03 {
                                 width: 40px; height: 40px;
                                 background: #fff;
@@ -1506,13 +1421,6 @@ main {
                         padding-left: 5px;
                     }
                 }
-            }
-            .thumnail::after {
-                content: ''; display: inline-block;
-                width: 200px; height: 100%;
-                background: linear-gradient(-90deg, white, transparent);
-                position: absolute; right: 0; top: 20px;
-                z-index: 950;
             }
             .similar_item {
                 h2 {
