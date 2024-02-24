@@ -1,7 +1,7 @@
 import data from "./accommodation.js"
 
 // type 걸러주는 필터
-export function getAccommodationsByType(types, src){
+export function getAccommodationsByType(types, src = data){
     return src.filter(
         e => types.every(
             type => e.type === type
@@ -13,7 +13,7 @@ export function getAccommodationsByType(types, src){
 }
 
 // 할인혜택 걸러주는 필터
-export function getAccommodationsByDiscountBenefits(benefits, src) { // 
+export function getAccommodationsByDiscountBenefits(benefits, src = data) { // 
     return src.filter( // data 배열에 있는 object를 하나씩 e 매개변수에 넣어주고 true를 반환하는 값만 추가
         e => benefits.every( // benefits 배열에 있는 문자열을 benefit에 가져올건데 모든 원소에서 true가 return되면 결과로 true를 리턴
             benefit => e.discount_benefit.includes(benefit) // discount_benefit 안에 benefit이 있는지 확인
@@ -21,7 +21,7 @@ export function getAccommodationsByDiscountBenefits(benefits, src) { //
     );
 }
 // #취향 걸러주는 필터
-export function getAccommodationsByTags(tags, src) {
+export function getAccommodationsByTags(tags, src = data) {
     return src.filter(
         e => tags.every(
             tag => e.tag.includes(tag)
@@ -29,7 +29,7 @@ export function getAccommodationsByTags(tags, src) {
     );
 }
 // 등급 걸러주는 필터
-export function getAccommodationsByRanks(ranks, src) { 
+export function getAccommodationsByRanks(ranks, src = data) { 
     return src.filter( 
         e => ranks.every(
             rank => e.rank === rank
@@ -37,7 +37,7 @@ export function getAccommodationsByRanks(ranks, src) {
     );
 }
 // 공용시설 필터
-export function getAccommodationsByFacilityPublics(facility_publics, src) { 
+export function getAccommodationsByFacilityPublics(facility_publics, src = data) { 
     return src.filter( 
         e => facility_publics.every(
             facility_public => e.facility_public.includes(facility_public)
@@ -45,7 +45,7 @@ export function getAccommodationsByFacilityPublics(facility_publics, src) {
     );
 }
 // 객실 내 시설 필터
-export function getAccommodationsByFacilityInsides(facility_insides, src) { 
+export function getAccommodationsByFacilityInsides(facility_insides, src = data) { 
     return src.filter( 
         e => facility_insides.every(
             facility_inside => e.facility_inside.includes(facility_inside)
@@ -53,7 +53,7 @@ export function getAccommodationsByFacilityInsides(facility_insides, src) {
     );
 }
 // 기타시설 필터
-export function getAccommodationsByFacilityEtcs(facility_etcs, src) { 
+export function getAccommodationsByFacilityEtcs(facility_etcs, src = data) { 
     return src.filter( 
         e => facility_etcs.every(
             facility_etc => e.facility_etc.includes(facility_etc)

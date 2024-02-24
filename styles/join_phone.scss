@@ -33,6 +33,7 @@ main {
                         position: relative; top: -8px;
                     }
                     .input_wrap {
+                        position: relative;
                         .num_input {
                             background-color: $subColor-ip;
                             width: 100%; height: 48px;
@@ -44,11 +45,12 @@ main {
                             background-color: #ededed;
                         }
                         .num_input:focus {
-                            border: 1px solid #000;
+                            border: 1.5px solid #000;
                             background-color: #fff;
                         }
                         .num_input::placeholder {color: #bdbdbd; font-weight: 300;}
                         .reset {
+                            position: absolute;
                             i[class$=xmark] {
                                 color: #999;
                             }
@@ -64,10 +66,9 @@ main {
                             color: $subColor-r; font-size: $small12;
                         }
                         .input_wrap {
-                            position: relative;
                             margin-bottom: 5px;
                             .reset {
-                                position: absolute; right: 10px; top: 0;
+                                left: 370px; top: 0;
                                 i[class$=xmark] {
                                     color: #999;
                                 }
@@ -80,16 +81,16 @@ main {
                         .sub_title {}
                         .input_wrap {
                             .pass_input {
-                                position: relative;
                                 .num_input {
                                     margin-bottom: 5px;
                                 }
                                 .reset {
-                                    position: absolute; right: 10px; top: 0;
+                                    right: 10px; top: 0;
                                 }
                                 .time {
                                     position: absolute; right: 20px; top: 0px;
                                     color: $mainColor-r;
+                                    font-size: $small13;
                                 }
                             }
                         }

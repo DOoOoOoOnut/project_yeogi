@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/responsible.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
@@ -885,14 +887,14 @@
                 </div>
                 <div class="sub_menu_box">
                     <ul class="sub_menu_list">
-                        <li class="sub_menu menu1">전체</li>
-                        <li class="sub_menu menu2">모텔</li>
-                        <li class="sub_menu menu3">호텔.리조트</li>
-                        <li class="sub_menu menu4">펜션.풀빌라</li>
-                        <li class="sub_menu menu5">프리미엄 블랙</li>
-                        <li class="sub_menu menu6">캠핑.글램핑</li>
-                        <li class="sub_menu menu7">홈&빌라</li>
-                        <li class="sub_menu menu8">게하.한옥</li>
+                        <li class="sub_menu menu1" onclick="selectType(['전체'])">전체</li>
+                        <li class="sub_menu menu2" onclick="selectType(['모텔'])">모텔</li>
+                        <li class="sub_menu menu3" onclick="selectType(['호텔·리조트'])">호텔·리조트</li>
+                        <li class="sub_menu menu4" onclick="selectType(['펜션'])">펜션·풀빌라</li>
+                        <li class="sub_menu menu5" onclick="selectType(['블랙'])">프리미엄 블랙</li>
+                        <li class="sub_menu menu6" onclick="selectType(['캠핑'])">캠핑·글램핑</li>
+                        <li class="sub_menu menu7" onclick="selectType(['홈&빌라'])">홈&빌라</li>
+                        <li class="sub_menu menu8" onclick="selectType(['게하·한옥'])">게하·한옥</li>
                     </ul>
                     <!-- js -->
                     <div class="more_btn">
@@ -904,7 +906,9 @@
                     <div class="swiper-button-next03"><i class="fa-solid fa-angle-right"></i></div>
                 </div>
                 <div class="room_box swiper-container03">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" id="room_container"> 
+                    </div>
+                    <template id="room_template">
                         <a href="#" class="room swiper-slide">
                             <div class="photo"><img src="./images/main/thumnail_best_motel001.jpeg" alt=""></div>
                             <div class="contents">
@@ -915,7 +919,7 @@
                                     <p class="review">
                                         <span class="point_wrap">
                                             <i class="fa-solid fa-star"></i>
-                                            <em class="point">9.5</em>
+                                            <em class="point_view">9.5</em>
                                         </span>
                                         <span class="comment">9,155명 평가</span>
                                     </p>
@@ -929,7 +933,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </template>
                 </div>
             </div>
             <!-- 오늘 체크인 호텔 특가 -->
@@ -1063,6 +1067,6 @@
     </main>
     <!-- 푸터 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
-    <script src="./script/main.js"></script>
+    <script src="./script/main.js" type="module"></script>
 </body>
 </html>

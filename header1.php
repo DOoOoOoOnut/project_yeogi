@@ -2,30 +2,13 @@
         <div class="header_wrap">
             <h1><a href="./index.html"><img src="./images/icon/logo.png" alt="여기어때"></a></h1>
             <nav>
-                <!-- <div class="kr_travel">
-                    <h2>국내 여행지</h2>
-                    <div class="kr_travel_box">
-                        <a href="search.html">경기</a>
-                        <a href="search.html">제주도</a>
-                        <a href="search.html">충남</a>
-                        <a href="search.html">인천</a>
-                        <a href="search.html">대구</a>
-                        <a href="search.html">대전</a>
-                        <a href="search.html">서울</a>
-                        <a href="search.html">경남</a>
-                        <a href="search.html">부산</a>
-                        <a href="search.html">전북</a>
-                        <a href="search.html">울산</a>
-                        <a href="search.html">광주</a>
-                        <a href="search.html">강원</a>
-                        <a href="search.html">경북</a>
-                        <a href="search.html">전남</a>
-                        <a href="search.html">충북</a>
-                        <a href="search.html">세종</a>
-                    </div>
-                </div> -->
                 <div class="over_travel">
-                    <h2>해외 여행지</h2>
+                    <div class="prev">
+                        <h2>해외 여행지</h2>
+                        <div class="down">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
                     <div class="over_travel_box">
                         <div class="japan">
                             <h3>일본 추천 여행지</h3>
@@ -135,8 +118,11 @@
                 <!-- 로그인 안했을시 -->
                 <div class="mypage_warp_nonmember">
                     <div class="menu">
-                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-bars m_menu_btn"></i>
                         <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="m_menu">
+                        <i class="fa-solid fa-bars menu_btn"></i>
                     </div>
                     <div class="mypage_detail">
                         <a href="login.html">로그인/회원가입</a>
@@ -145,7 +131,7 @@
                     </div>
                 </div>
                 <!-- 로그인 했을시 -->
-                <div class="mypage_warp_member">
+                <!-- <div class="mypage_warp_member">
                     <div class="menu">
                         <i class="fa-solid fa-bars"></i>
                         <img src="./images/icon/ico_21.png" alt="">
@@ -156,25 +142,27 @@
                         <a href="#">고객센터</a>
                         <button type="button" class="logout">로그아웃</button>
                     </div>
-                </div>
+                </div> -->
             </nav>
         </div>
         <!-- 모바일 nav -->
         <div class="nav_wrap_m">
-            <div class="nva_bg_m">
+            <div class="nav_bg_m">
                 <!-- 로그인 안했을시 -->
                 <nav class="nav_m">
                     <div class="top">
                         <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
                     </div>
                     <div class="mypage_warp_nonmember_m">
-                        <a href="./login.html"><img src="./images/sprite/side_sprite1x.png" alt=""></a>
-                        <div class="join_login">
-                            <a href="./login.html">
-                                <span>회원가입 / 로그인</span>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                            <p>여기어때 회원가입하고 엘리트 할인 혜택 받으세요!</p>
+                        <div class="user">
+                            <a href="./login.html" class="user_photo"></a>
+                            <div class="join_login">
+                                <a href="./login.html" class="go_login">
+                                    <span>회원가입 / 로그인</span>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                                <p>여기어때 회원가입하고 엘리트 할인 혜택 받으세요!</p>
+                            </div>
                         </div>
                         <div class="benefit_detail_m">
                             <a href="./login.html">포인트</a>
@@ -182,25 +170,37 @@
                         </div>
                         <div class="nav_detail_m">
                             <a href="./non_member_reservation_check.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>비회원 예약조회</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span class="left">
+                                    <span class="sprite sp1"></span>
+                                    <span class="menu">비회원 예약조회</span>
+                                </span>
+                                <span class="more">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </span>
                             </a>
                             <a href="./event.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>이벤트</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span class="left">
+                                    <span class="sprite sp2"></span>
+                                    <span class="menu">이벤트</span>
+                                </span>
+                                <span class="more">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </span>
                             </a>
                             <a href="./customer_service.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>고객센터</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
+                                <span class="left">
+                                    <span class="sprite sp3"></span>
+                                    <span class="menu">고객센터</span>
+                                </span>
+                                <span class="more">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
                 </nav>
                 <!-- 로그인 했을시 -->
-                <nav class="nav_m">
+                <!-- <nav class="nav_m">
                     <div class="top">
                         <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
                     </div>
@@ -245,7 +245,7 @@
                             </a>
                         </div>
                     </div>
-                </nav>
+                </nav> -->
             </div>
         </div>
         <!-- 고정버튼 -->
