@@ -1,0 +1,269 @@
+@import 'common';
+
+main {
+    max-width: $desktop;
+    margin: $margin0;
+    section {
+        width: 100%;
+        margin: $margin0;
+        padding-top: 30px;
+        #result_frm {
+            .search_top {
+                display: flex; flex-flow: row nowrap;
+                justify-content: space-between; align-items: flex-end;
+                margin-bottom: 10px;
+                h1 {
+                    font-size: $title24;
+                    font-weight: $weight600;
+                }
+            }
+            .result {
+                display: flex; justify-content: space-between;
+                input {display: none;}
+                .filter_container {
+                    width: calc(25% - 20px);
+                    // 전체선택자
+                    div {
+                        h3 {font-weight: $weight600; margin-bottom: 25px;}
+                        .contents {font-size: $subT15;}
+                    }
+                    fieldset {
+                        .top{
+                            margin-bottom: 30px;
+                            .map_container {
+                                margin-top: 25px;
+                                .prev {
+                                    width: 100%; min-width: 230px;
+                                    position: relative;
+                                    img {
+                                        width: 100%; border-radius: 20px; display: block;
+                                    }
+                                    #open_map_btn {
+                                        color: #ffffff;
+                                        background-color: #1273e4;
+                                        border-radius: 10px;
+                                        width: 40%;
+                                        padding: 2px 0;
+                                        line-height: 40px;
+                                        text-align: center;
+                                        display: inline-block;
+                                        font-size: 0.875rem;
+                                        font-weight: 600;
+                                        position: absolute; left: 30%; bottom: 40%;
+                                    }
+                                }
+                                .open_wrap {
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    position: fixed; width: 100%; height: 100vh;
+                                    top: 0; left: 0; z-index: 99;
+                                    display: flex; flex-flow: column nowrap; justify-content: center;
+                                    .open {
+                                        width: 95%; height: 90vh;
+                                        background-color: $mainColor-w;
+                                        margin: 0 auto; border-radius: 20px;
+                                        overflow: hidden;
+                                        .title {
+                                            padding-bottom: 20px;
+                                            #close_map_btn {position: relative; left: 20px; top: 20px;
+                                            font-size: 25px; cursor: pointer;}
+                                            h1 {text-align: center; font-weight: $weight600;}
+                                        }
+                                        .contents {
+                                            width: 100%;
+                                            .left {
+                                                width: 40%;
+                                                display: flex;
+                                                .open_filter > div {
+                                                    padding: 20px 0;
+                                                    border-bottom: 1px solid #e9e9e9;
+                                                }
+                                                #map_filter {}
+                                                .map_room_container {
+                                                    h2 {}
+                                                    #map_room_result {}
+                                                }
+                                            }
+                                            #map {width: 60%; }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        #main_filter > div {padding: 20px 0; border-bottom: 1px solid #e9e9e9}
+                        #main_filter {
+                            position: sticky; top: 0;
+                        }
+                        #filter_template {
+                            .top {
+                                display: flex;
+                                h2 {font-size: $title18; font-weight: $weight600;}
+                                .reset {
+                                    cursor: default;
+                                    font-size: $subC14; color: #d6d6d6;
+                                    i[class$=right] {margin-right: 5px;}
+                                }
+                                .active {
+                                    color: #333;
+                                    cursor: pointer;
+                                }
+                            }
+                            .soldout {
+                                transform: translateX(-7px);
+                                #soldout_chk {}
+                            }
+                            .type {
+                                h3 {}
+                                #type_list {}
+                                #type_template {
+                                    label {
+                                        .type_chk {}
+                                        .circle {
+                                            border: 1px solid #999;
+                                            border-radius: 50%;
+                                            width: 18px; height: 18px;
+                                            margin-right: 10px;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                            }
+                            .price_range {
+                                h3 {
+                                    span {}
+                                }
+                            }
+                            .taste {
+                                h3 {}
+                                #tag_list {}
+                                #tag_template {
+                                    label {
+                                        .user_tag {}
+                                    }
+                                }
+                            }
+                            .discount {
+                                h3 {}
+                                #discount_list {}
+                                #discount_template {
+                                    label {
+                                        .discount_chk {}
+                                    }
+                                }
+                            }
+                            .reservation {
+                                h3 {}
+                            }
+                            .rank {
+                                h3 {}
+                                #rank_list {}
+                                #rank_template {
+                                    label {
+                                        .rank_chk {
+                                            span {}
+                                        }
+                                    }
+                                }
+                            }
+                            .facility {
+                                h3 {}
+                                .contents {
+                                    // 공통선택자
+                                    dt {}
+                                    dd {}
+                                    #public_list {}
+                                    #public_template {
+                                        label {
+                                            .public_chk {}
+                                            span {}
+                                        }
+                                    }
+                                    #inside_list {}
+                                    #inside_template {
+                                        label {
+                                            .inside_chk {}
+                                            span {}
+                                        }
+                                    }
+                                    #etc_list {}
+                                    #etc_template {
+                                        label {
+                                            .ect_chk {}
+                                            span {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #room_container {
+                    .page_wrap {
+                        .page {}
+                        #room_template {
+                            .room {
+                                .photo {
+                                    img {}
+                                }
+                                .contents {
+                                    .title_wrap {
+                                        .type {}
+                                        .title {
+                                            .special {}
+                                            .name {}
+                                        }
+                                        .location {
+                                            .city {}
+                                            .more {}
+                                        }
+                                        .review {
+                                            .point_wrap {
+                                                i[class$=star] {}
+                                                .point_view {}
+                                            }
+                                            .comment {
+                                                .review_count {}
+                                            }
+                                        }
+                                    }
+                                    .price_info {
+                                        .price {
+                                            .origin {
+                                                .price_view {}
+                                            }
+                                            .coupon {}
+                                            .now {
+                                                .day {}
+                                            }
+                                        }
+                                        .info {
+                                            span {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .m_map_btn_wrap {
+                .m_map_btn {}
+            }
+            .theme_keyword {
+                width: 100%; margin-top: 60px;
+                dt {font-size: $title18; font-weight: $weight600; margin-bottom: 20px;}
+                dd {
+                    @include flex-rwsc; margin-bottom: 30px;
+                    a {width:calc(100% / 4); margin-bottom: 15px; color: $mainColor-b; font-size: $subC14; font-weight: $weight600;}
+                }
+                .theme {}
+                .keyword {}
+
+            }
+        }
+    }
+}
+
+@keyframes popup {
+    0% {scale: 0.2;}
+    100% {scale: 1;}
+}
