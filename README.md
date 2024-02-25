@@ -294,3 +294,8 @@ ex) ./images/main/ _best_hotel001
 - 민아
 1. index 반응형 완성하기
 2. js 시작:index.js 만들기
+--------------------------
+# 02/25 작업
+- 은지
+1. customer_service.js : aip연동 문제 해결
+2. 데이터베이스

@@ -9,7 +9,7 @@
   z-index: 9970;
   position: fixed;
 }
-.room_view_box .bg .container {
+.room_view_box .bg .imgcontainer {
   width: 1400px;
   margin: 0 auto;
   background: #fff;
@@ -20,61 +20,61 @@
   z-index: 9999;
   border-radius: 10px;
 }
-.room_view_box .bg .container .title {
+.room_view_box .bg .imgcontainer .title {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   padding: 20px;
 }
-.room_view_box .bg .container .title .close_btn i {
+.room_view_box .bg .imgcontainer .title .close_btn i {
   font-size: 1.25rem;
   color: #333;
 }
-.room_view_box .bg .container .title h2 {
+.room_view_box .bg .imgcontainer .title h2 {
   margin: 0 auto;
   font-size: 1rem;
   font-weight: 600;
   color: #333;
 }
-.room_view_box .bg .container .all_menu .select_box {
+.room_view_box .bg .imgcontainer .all_menu .select_box {
   padding: 0 20px;
   border-bottom: 1px solid #eee;
   display: flex;
   flex-flow: row nowrap;
 }
-.room_view_box .bg .container .all_menu .select_box .all {
+.room_view_box .bg .imgcontainer .all_menu .select_box .all {
   font-size: 1rem;
   font-weight: 600;
   color: #1273e4;
   padding: 20px 15px;
   border-bottom: 2px solid #1273e4;
 }
-.room_view_box .bg .container .all_menu .select_box .each {
+.room_view_box .bg .imgcontainer .all_menu .select_box .each {
   font-size: 1rem;
   font-weight: 600;
   color: #707070;
   padding: 20px 15px;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail {
   overflow: hidden;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container {
   position: relative;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .view_box1 .swiper-slide {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .view_box1 .swiper-slide {
   text-align: center;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .view_box1 .swiper-slide img {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .view_box1 .swiper-slide img {
   height: 390px;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .view_box1 .main_slide {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .view_box1 .main_slide {
   width: 100%;
   text-align: center;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .view_box1 .main_slide img {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .view_box1 .main_slide img {
   height: 390px;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .swiper-button-prev {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .swiper-button-prev {
   width: 40px;
   height: 40px;
   background: #fff;
@@ -84,19 +84,19 @@
   left: 1%;
   top: 35%;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .swiper-button-prev i {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .swiper-button-prev i {
   font-size: 1.25rem;
   position: absolute;
   left: 12px;
   top: 10px;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .swiper-button-prev::after {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .swiper-button-prev::after {
   display: none;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .swiper-button-next::after {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .swiper-button-next::after {
   display: none;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .swiper-button-next {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .swiper-button-next {
   width: 40px;
   height: 40px;
   background: #fff;
@@ -106,18 +106,18 @@
   right: 1%;
   top: 35%;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .swiper-button-next i {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .swiper-button-next i {
   color: #000;
   font-size: 1.25rem;
   position: absolute;
   left: 15px;
   top: 10px;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .sub_photo .view_box2 {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .sub_photo .view_box2 {
   padding: 12px;
   width: 8%;
 }
-.room_view_box .bg .container .all_menu .all_view .all_detail #view_container .sub_photo .view_box2 .swiper-slide img {
+.room_view_box .bg .imgcontainer .all_menu .all_view .all_detail #view_container .sub_photo .view_box2 .swiper-slide img {
   width: 100px;
   height: 100px;
   border-radius: 10px;
@@ -502,6 +502,7 @@
   width: 1200px;
   height: 512px;
   background: #1273e4;
+  border-radius: 10px;
 }
 #map_popup .bg .map_view .zoom_in {
   position: absolute;
@@ -527,64 +528,76 @@ main {
   max-width: 1400px;
   margin: 0 auto;
 }
-main nav {
+main .tab_menu {
+  width: 100%;
+}
+main .tab_menu nav {
+  width: 100%;
   background: #fff;
   position: fixed;
   z-index: 999;
-  width: 1400px;
+  border-bottom: 1px solid rgb(235, 235, 235);
 }
-main nav .box1 {
+main .tab_menu nav .box1 {
+  padding: 0 40px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgb(235, 235, 235);
 }
-main nav .box1 .main_menu {
+main .tab_menu nav .box1 .main_menu {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-main nav .box1 .main_menu .main_move {
+main .tab_menu nav .box1 .main_menu .main_move {
   color: #1273e4;
   border-bottom: 2px solid #1273e4;
 }
-main nav .box1 .main_menu .move {
+main .tab_menu nav .box1 .main_menu .move {
   color: #707070;
 }
-main nav .box1 .main_menu a {
+main .tab_menu nav .box1 .main_menu a {
   font-size: 1rem;
   font-weight: 600;
   padding: 24px 16px;
 }
-main nav .box1 .select {
+main .tab_menu nav .box1 .select {
   width: 125px;
   background: #1273e4;
   border-radius: 8px;
   padding: 10px 15px;
   text-align: center;
 }
-main nav .box1 .select #select_room {
+main .tab_menu nav .box1 .select #select_room {
   color: #fff;
   font-size: 0.875rem;
 }
-main section .room .photo_wrap {
+main section {
+  padding: 0 40px;
+}
+main section .room {
   max-width: 1400px;
+}
+main section .room .photo_wrap {
   overflow: hidden;
   margin: 30px auto;
+  position: relative;
 }
 main section .room .photo_wrap .photo_container {
+  width: 100%;
   display: flex;
 }
 main section .room .photo_wrap .photo_container .left {
-  width: calc(100% - 400px);
+  width: calc(100% - 500px);
   height: 500px;
 }
 main section .room .photo_wrap .photo_container .left img {
   width: 100%;
+  padding: 5px;
 }
 main section .room .photo_wrap .photo_container .right {
-  width: 500px;
+  width: calc(100% - 600px);
   height: 500px;
   display: grid;
   grid-template-areas: "item1 item2" "item3 item4";
@@ -595,6 +608,7 @@ main section .room .photo_wrap .photo_container .right .box {
 }
 main section .room .photo_wrap .photo_container .right .box img {
   width: 100%;
+  padding: 5px;
 }
 main section .room .photo_wrap .photo_container .right .box1 {
   grid-area: item1;
@@ -624,7 +638,7 @@ main section .room .photo_wrap .photo_container .more_photo i {
   margin-right: 5px;
 }
 main section .room .box2 {
-  max-width: 1400px;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -677,6 +691,25 @@ main section .room .box2 .contents .title_wrap .review_wrap .all_review {
   font-size: 1rem;
   font-weight: 600;
   color: #1273e4;
+}
+main section .room .box2 .contents .comments {
+  display: none;
+  padding: 20px 0;
+}
+main section .room .box2 .contents .comments .title {
+  display: flex;
+  justify-content: space-between;
+}
+main section .room .box2 .contents .comments .title .address {
+  font-weight: 600;
+  color: #707070;
+}
+main section .room .box2 .contents .comments .title .address i {
+  padding-right: 10px;
+}
+main section .room .box2 .contents .comments .title .mini_map_view {
+  color: #1273e4;
+  font-weight: 600;
 }
 main section .room .box2 .contents .review_box {
   padding-bottom: 30px;
@@ -815,10 +848,10 @@ main section .room .box2 .contents .additional_service .service .top .icon {
   padding-bottom: 10px;
 }
 main section .room .box2 .contents .additional_service .service .top .icon img {
-  width: 25px;
+  width: 20px;
 }
 main section .room .box2 .contents .additional_service .service .top .icon span {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #707070;
   padding: 0 5px 0 10px;
@@ -833,10 +866,10 @@ main section .room .box2 .contents .additional_service .service .btm .icon {
   align-items: center;
 }
 main section .room .box2 .contents .additional_service .service .btm .icon img {
-  width: 25px;
+  width: 20px;
 }
 main section .room .box2 .contents .additional_service .service .btm .icon span {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #707070;
   padding: 0 5px 0 10px;
@@ -1197,6 +1230,7 @@ main section .room .box2 .side .event_pay {
 main section .room .box2 .side .event_pay #event_bnr {
   text-align: center;
   padding: 20px;
+  position: relative;
 }
 main section .room .box2 .side .event_pay #event_bnr .event_title {
   width: 300px;
@@ -1233,6 +1267,10 @@ main section .room .box2 .side .event_pay #event_bnr .event_slide {
 main section .room .box2 .side .event_pay #event_bnr .event_slide .event_slide img {
   width: 300px;
   border-radius: 10px;
+}
+main section .room .box2 .side .event_pay #event_bnr .page {
+  width: 100%;
+  position: absolute;
 }
 main section .room .box2 .side .event_pay .pay .title {
   display: flex;

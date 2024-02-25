@@ -1,3 +1,14 @@
+const photo01 = document.querySelector ('.left') 
+const photo02 = document.querySelector ('.box')
+const allphoto = document.querySelector ('.more_photo')
+const view = document.querySelector ('.room_view_box')
+
+console.log (photo01, photo02, allphoto, view)
+
+allphoto.addEventListener ('click', ()=>{
+    view.computedStyleMap.display = 'block'
+})
+
 // 첫 번째 지도 초기화
 var map1 = new naver.maps.Map('map1', {
     center: new naver.maps.LatLng(37.5665, 126.9780),
@@ -143,8 +154,36 @@ let swiper05 = new Swiper('#event_bnr', {
     loop : true,
     autoplay :{delay:2000,},
     pagination: {
-        el: '#event_bnr .swiper-pagination',
+        el: '#event_bnr .page',
         type:'bullets',
         clickable:true,
     },
 })
+
+var mapOptions = {
+    center: new naver.maps.LatLng(33.2471631, 126.4079553), // 지도의 초기 중심 좌표
+    zoom: 15// 지도의 초기 확대 레벨
+};
+
+var map = new naver.maps.Map('map2', mapOptions); // 지도 생성
+
+var markerOptions = {
+    position: new naver.maps.LatLng(33.2471631, 126.4079553), // 마커의 위치
+    map: map2 // 마커를 표시할 지도 객체
+};
+
+var marker = new naver.maps.Marker(markerOptions); // 마커 생성
+
+var mapOptions = {
+    center: new naver.maps.LatLng(33.2471631, 126.4079553), // 지도의 초기 중심 좌표
+    zoom: 15// 지도의 초기 확대 레벨
+};
+
+var map = new naver.maps.Map('map1', mapOptions); // 지도 생성
+
+var markerOptions = {
+    position: new naver.maps.LatLng(33.2471631, 126.4079553), // 마커의 위치
+    map: map1 // 마커를 표시할 지도 객체
+};
+
+var marker = new naver.maps.Marker(markerOptions); // 마커 생성

@@ -1,11 +1,20 @@
 @import "common";
+.chat_on_off {display: none !important;
+    transform:translateY(-30px);
+}
+.chat_show {animation: chatShow 0.5s both;}
+@keyframes chat_show{
+    0% {transform: translateY(10px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
 
 main {
     max-width:$desktop ;
     padding: 20px 0 96px;
     margin: 0 auto;
     .container {
-        margin: 0 auto;
+        margin: 0 20px;
         section {
             padding:16px 0 20px ;
             h1 {
@@ -162,7 +171,7 @@ main {
                             font-family: $familySemiBold;
                         }
                     }
-                    li:first-of-type {
+                    .active {
                         button {
                             color: #fff;
                         }
@@ -170,7 +179,7 @@ main {
                     }
                 }
             }
-            .box {
+            .contents_wrap {
                 ul {
                     width: 100%;
                     overflow: hidden;
@@ -194,8 +203,11 @@ main {
                                 }
                             }
                             .right {
-                                color: #c2c2c2;
-                                font-size: 12px;
+                                i[class*=down]{
+                                    color: #c2c2c2;
+                                    font-size: 12px;
+                                }
+                                .rotate {transform: rotate(180deg);}
                             }
                         }
                         .contents {
@@ -239,15 +251,24 @@ main {
 @media screen and (max-width:1199px) {
     main {
         max-width: $notebook;
+        .container {
+            max-width: 50%;
+            margin: 0 auto;
+        }
     }
 }
 @media screen and (max-width:899px) {
     main {
         max-width: $tablet;
+        .container {
+            max-width: 100%;
+            margin: 0 20px;
+        }
     }
 }
 @media screen and (max-width:599px) {
     main {
         max-width: $phone;
+        
     }
 }

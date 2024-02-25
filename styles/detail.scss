@@ -6,7 +6,7 @@
         background:rgba(0, 0, 0, 0.3);
         position: relative; z-index: 9970;
         position: fixed;
-        .container {
+        .imgcontainer {
             width: 1400px; margin: $margin0;
             background: #fff;
             position: absolute; left: 50%; top: 10%;
@@ -90,7 +90,6 @@
                                     position: absolute; left: 15px; top: 10px;
                                 }
                             }
-                            .swiper-pagination {}
                             .sub_photo {
                                 .view_box2 {
                                     padding: 12px;
@@ -441,6 +440,7 @@
             #map1 {
                 width: 1200px; height: 512px;
                 background: #1273e4;
+                border-radius: 10px;
             }
             .zoom_in {
                 position: absolute; right: 1%; top: 12%;
@@ -462,59 +462,67 @@
 }
 main {
     max-width: 1400px; margin: $margin0;
-    nav {
-        background: #fff;
-        position: fixed; z-index: 999;
-        width: 1400px;
-        .box1 {
-            display: flex; flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
+    .tab_menu {
+        width: 100%;
+        nav {
+            width: 100%;
+            background: #fff;
+            position: fixed; z-index: 999;
             border-bottom: 1px solid rgb(235 235 235);
-            .main_menu {
+            .box1 {
+                padding: 0 40px;
                 display: flex; flex-flow: row nowrap;
+                justify-content: space-between;
                 align-items: center;
-                .main_move {
-                    color: $mainColor-b;
-                    border-bottom: 2px solid $mainColor-b;
+                .main_menu {
+                    display: flex; flex-flow: row nowrap;
+                    align-items: center;
+                    .main_move {
+                        color: $mainColor-b;
+                        border-bottom: 2px solid $mainColor-b;
+                    }
+                    .move {
+                        color: #707070;
+                    }
+                    a {
+                        font-size: $defalt16; font-weight: $weight600;
+                        padding: 24px 16px;
+                    }
                 }
-                .move {
-                    color: #707070;
-                }
-                a {
-                    font-size: $defalt16; font-weight: $weight600;
-                    padding: 24px 16px;
-                }
-            }
-            .select {
-                width: 125px;
-                background: $mainColor-b;
-                border-radius: 8px;
-                padding: 10px 15px;
-                text-align: center;
-                #select_room {
-                    color: #fff;
-                    font-size: $subC14;
+                .select {
+                    width: 125px;
+                    background: $mainColor-b;
+                    border-radius: 8px;
+                    padding: 10px 15px;
+                    text-align: center;
+                    #select_room {
+                        color: #fff;
+                        font-size: $subC14;
+                    }
                 }
             }
         }
     }
     section {
+        padding: 0 40px;
         .room {
+            max-width:1400px;
             .photo_wrap {
-                max-width:1400px;
                 overflow:hidden;
                 margin:30px auto;
+                position: relative;
                 .photo_container {
+                    width: 100%;
                     display:flex;
                     .left {
-                        width:calc(100% - 400px); height:500px;
+                        width:calc(100% - 500px); height:500px;
                         img {
-                            width:100%;
+                            width: 100%;
+                            padding: 5px;
                         }
                     }
                     .right {
-                        width:500px; height:500px;
+                        width:calc(100% - 600px); height:500px;
                         display:grid;
                         grid-template-areas:
                             'item1 item2'
@@ -524,12 +532,13 @@ main {
                             overflow:hidden;
                             img {
                                 width:100%;
+                                padding: 5px;
                             }
                         }
-                        .box1 {grid-area:item1}
-                        .box2 {grid-area:item2}
-                        .box3 {grid-area:item3}
-                        .box4 {grid-area:item4}
+                        .box1 {grid-area:item1;}
+                        .box2 {grid-area:item2;}
+                        .box3 {grid-area:item3;}
+                        .box4 {grid-area:item4;}
                     }
                     .more_photo {
                         position: absolute; right: 5%; bottom: 12%;
@@ -547,7 +556,7 @@ main {
                 }
             }
             .box2 {
-                max-width: 1400px;
+                width: 100%;
                 display: flex; flex-flow: row nowrap;
                 .contents {
                     width: calc(100% - 400px);
@@ -594,6 +603,25 @@ main {
                             .all_review {
                                 font-size: $defalt16; font-weight: $weight600;
                                 color: $mainColor-b;
+                            }
+                        }
+                    }
+                    .comments {
+                        display: none;
+                        padding: 20px 0;
+                        .title {
+                            display: flex; 
+                            justify-content: space-between;
+                            .address {
+                                font-weight: $weight600;
+                                color: #707070;
+                                i {
+                                    padding-right: 10px;
+                                }
+                            }
+                            .mini_map_view {
+                                color: #1273e4;
+                                font-weight: $weight600;
                             }
                         }
                     }
@@ -705,10 +733,10 @@ main {
                                     align-items: center;
                                     padding-bottom: 10px;
                                     img {
-                                        width: 25px;                              
+                                        width: 20px;                              
                                     }
                                     span {
-                                        font-size: $title18; font-weight: $weight500;
+                                        font-size: $defalt16; font-weight: $weight500;
                                         color: #707070;
                                         padding: 0 5px 0 10px;
                                     }
@@ -720,10 +748,10 @@ main {
                                     display: flex; flex-flow: row nowrap;
                                     align-items: center;
                                     img {
-                                        width: 25px
+                                        width: 20px
                                     }
                                     span {
-                                        font-size: $title18; font-weight: $weight500;
+                                        font-size: $defalt16; font-weight: $weight500;
                                         color: #707070;
                                         padding: 0 5px 0 10px;
                                     }
@@ -1057,6 +1085,7 @@ main {
                         #event_bnr {
                             text-align: center;
                             padding: 20px;
+                            position: relative;
                             .event_title {
                                 width: 300px;
                                 display: flex; flex-flow: row nowrap;
@@ -1093,6 +1122,10 @@ main {
                                         border-radius: 10px;
                                     }
                                 }
+                            }
+                            .page {
+                                width: 100%; 
+                                position: absolute;    
                             }
                         }
                         .pay {
