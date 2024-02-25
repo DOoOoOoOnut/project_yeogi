@@ -43,7 +43,6 @@ const mNavOpen = document.querySelector('.mypage_warp_nonmember .m_menu')
 const mNavClose = document.querySelector('.nav_m .top .close')
 const mNav = document.querySelector('.nav_wrap_m')
 
-// mNav.style.display = 'none'
 
 mNavOpen.addEventListener('click',()=>{
     mNav.classList.add('show')
@@ -53,3 +52,13 @@ mNavClose.addEventListener('click',()=>{
 })
 
 
+const chatCloseBtn = document.querySelector('#chat_close_btn')
+const chatContainer = document.querySelector('.chat_container')
+const chatOpenBtn = document.querySelector('#customer_btn')
+
+chatOpenBtn.addEventListener('click',()=>{
+    chatContainer.classList.add('show')
+})
+chatCloseBtn.addEventListener('click',()=>{
+    chatContainer.classList.remove('show')
+})
