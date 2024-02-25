@@ -466,6 +466,65 @@ header .fixed_btn .customer_container #customer_btn span {
   color: #fff;
   letter-spacing: 1px;
 }
+header .chat_container {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  right: -100%;
+  bottom: 200px;
+  width: 350px;
+  height: 500px;
+  transition: right 0.5s;
+}
+header .chat_container .top {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+header .chat_container .top .catchprize {
+  margin-right: 10px;
+}
+header .chat_container .chat_wrap {
+  padding: 20px;
+}
+header .chat_container .chat_wrap .chat_box {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  align-items: flex-start;
+  background-color: #feebec;
+  border-radius: 10px;
+  height: 410px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+header .chat_container .chat_wrap .chat_box li {
+  color: #fff;
+  background-color: #1273e4;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+header .chat_container .chat_wrap .send_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .chat_container .chat_wrap .send_wrap #user_send_message {
+  display: block;
+  width: 85%;
+  background-color: #feebec;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+header .chat_container .chat_wrap .send_wrap .chat_send_btn {
+  display: block;
+}
+header .show {
+  right: 30px;
+}
 
 @media screen and (max-width: 900px) {
   header {
