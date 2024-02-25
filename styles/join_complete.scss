@@ -3,8 +3,9 @@
 main {
     max-width: $desktop;
     margin: 0 auto;
+    padding-bottom: 10vh;
     section {
-        width: 30%;
+        width: 400px;
         margin: 200px auto 0;
         text-align: center;
         .photo {

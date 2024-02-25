@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이메일로 시작하기 - 여기어때</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/checkbox.css">
 </head>
 <body>
     <main>
@@ -19,18 +23,34 @@
                             <div class="id_pw">
                                 <div id="user_id_wrap">
                                     <h2>이메일</h2>
-                                    <p><input type="text" placeholder="abc#gccompany.co.kr" id="user_id"></p>
+                                    <p><input type="text" placeholder="abc@gccompany.co.kr" id="user_id"><i class="fa-solid fa-circle-xmark"></i></p>
                                     <p class="error_massage"></p>
                                 </div>
                                 <div id="user_pw_wrap">
                                     <h2>비밀번호</h2>
-                                    <p><input type="password" placeholder="비밀번호를 입력하세요" id="user_pw"></p>
+                                    <p><input type="password" placeholder="비밀번호를 입력하세요" id="user_pw"><i class="fa-solid fa-circle-xmark"></i></p>
                                     <p class="error_massage"></p>
                                 </div>
                             </div>
                             <div class="user_setting">
                                 <div class="keep_reset">
-                                    <label><input type="checkbox" name="keep_login" id="keep_login"><span>로그인 유지</span></label>
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx chk" id="keep_chk" type="checkbox"/>
+                                        <label class="cbx" for="keep_chk">
+                                            <span>
+                                                <svg width="12px" height="10px">
+                                                    <use xlink:href="#check-4"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="agree_title">로그인 유지</span>
+                                        </label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
+                                    <!-- <label><input type="checkbox" name="keep_login" id="keep_login"><span>로그인 유지</span></label> -->
                                     <a href="#" class="pw_reset">비밀번호 재설정</a>
                                 </div>
                                 <p class="notice">
@@ -40,16 +60,17 @@
                             </div>
                         </div>
                         <div class="btn_wrap">
-                            <button type="button" id="login_btn">로그인</button>
+                            <button type="button" id="login_btn" disabled>로그인</button>
                         </div>
                     </fieldset>
                 </form>
             </div>
             <div class="join">
                 <p>계정이 없으신가요?</p>
-                <a href="./join_raw.html" class="go_join">이메일로 회원가입</a>
+                <a href="./join_law.html" class="go_join">이메일로 회원가입</a>
             </div>
         </section>
     </main>
+    <script src="./script/login.js"></script>
 </body>
 </html>

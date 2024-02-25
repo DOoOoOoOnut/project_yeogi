@@ -285,7 +285,7 @@ class OpenFilter {
             newRoom.querySelector('.name').innerText = e.name
             newRoom.querySelector('.city').innerText = e.city
             newRoom.querySelector('.more').innerText = e.location
-            newRoom.querySelector('.point_view').innerText = `${e.rate}.${Math.floor(Math.random() * 9)}` 
+            newRoom.querySelector('.point_view').innerText = e.rate 
             newRoom.querySelector('.review_count').innerText = (e.review_count).toLocaleString('ko-kr')
             newRoom.querySelector('.photo img').src = `./images/search/accommodation${e.pk}.jpg`
             // newRoom.querySelector('.price_view').innerText = e.price

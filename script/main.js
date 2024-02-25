@@ -1,4 +1,4 @@
-/* import data from "./accommodation.js" */
+import { getAccommodationsByType } from '/data/data.js';
 
 const userSearch = document.querySelector('.user_search')
 const searchInput = document.querySelector('.search_input')
@@ -91,6 +91,44 @@ calendarDate.addEventListener('mouseout',()=>{
     calendarDate.classList.remove('hover')
 })
 
+<<<<<<< HEAD
+let swiper06 = new Swiper('.swiper-container06', {
+    // loop: true,
+    // 한 번에 보여줄 슬라이드 수
+    slidesPerView: 2,
+    // 슬라이드 사이의 간격
+    spaceBetween: 10,
+    // 한 번에 넘길 슬라이드 수
+    slidesPerGroup: 4,
+    // autoplay: {delay: 2000,},   
+    centeredSlides: false,
+    navigation: {
+        nextEl: ".swiper-button-next06",
+        prevEl: ".swiper-button-prev06",
+    },
+    breakpoints: {
+        // 화면 너비가 800 이상일 때(min-width 기준)
+        600: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
+        900: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        // 화면 너비가 1200px 이상일 때
+        1200: {
+        slidesPerView: 4,
+        spaceBetween: 25,
+        }
+    },
+})
+
+
+function selectType(type){
+    const data = getAccommodationsByType(type)
+    const room_container = document.querySelector('#room_container')
+=======
 // 데이터 삽입
 
 /* function getAccommodationsByType(type){
@@ -120,20 +158,19 @@ function filterHandler(){
     const data = getAccommodationsByType(checkedArray)
     console.log(data);
     // 3. 위에서 불러온 데이터를 화면에 표시한다.
+>>>>>>> d373b7696888c3cd7d52a7ff3f2fc544243cb2b6
     const roomTemplate = document.querySelector('#room_template')
-    const template_box = document.querySelector('.template_box')
-    console.log(template_box)
-    template_box.innerHTML = ''
+    console.log(data)
+    room_container.innerHTML = ''
     for(let e of data){
         const newRoom = document.importNode(roomTemplate.content, true)
         newRoom.querySelector('.type').innerText = e.type
         newRoom.querySelector('.name').innerText = e.name
         newRoom.querySelector('.city').innerText = e.city
         newRoom.querySelector('.more').innerText = e.location
-        newRoom.querySelector('.point_view').innerText = `${e.rate}.${Math.floor(Math.random() * 9)}` 
+        newRoom.querySelector('.point_view').innerText = e.rate 
         newRoom.querySelector('.review_count').innerText = (e.review_count).toLocaleString('ko-kr')
         newRoom.querySelector('.photo img').src = `./images/search/accommodation${e.pk}.jpg`
-        console.log(`./images/search/accommodation${e.pk}.jpg`)
         // newRoom.querySelector('.price_view').innerText = e.price
         if(e.is_discount){
             newRoom.querySelector('.price_view').innerText = (e.price).toLocaleString('ko-kr')
@@ -146,6 +183,8 @@ function filterHandler(){
             newRoom.querySelector('.info').style.display = 'none'
             newRoom.querySelector('.info span').innerText = e.stock
         }
-        template_box.appendChild(newRoom)
+        room_container.appendChild(newRoom)
     }
-} */
+}
+
+window.selectType = selectType

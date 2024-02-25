@@ -1,9 +1,10 @@
 main {
   max-width: 1400px;
   margin: 0 auto;
+  padding-bottom: 10vh;
 }
 main section {
-  width: 30%;
+  width: 400px;
   margin: 200px auto 0;
   text-align: center;
 }

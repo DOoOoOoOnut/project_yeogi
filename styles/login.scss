@@ -2,6 +2,7 @@
 
 main {
     max-width: $desktop;
+    margin: 0 auto;
     .login_container {
         margin: $margin0;
         width: 400px;
@@ -18,6 +19,7 @@ main {
                         .id_pw {
                             margin-bottom: 20px;
                             div {
+                                margin-bottom: 20px;
                                 h2 {
                                     font-size: $small13;
                                     margin-bottom: 5px;
@@ -29,19 +31,32 @@ main {
                                     position: relative; top: -8px;
                                 }
                                 p {
+                                    position: relative;
                                     input {
                                         background-color: $subColor-ip;
                                         width: 100%; height: 48px;
                                         border-radius: 10px;
                                         padding: 0 20px;
                                     }
+                                    input:hover {
+                                        background-color: #ededed;
+                                    }
+                                    input:focus {
+                                        border: 1.5px solid #000;
+                                        background-color: #fff;
+                                    }
                                     input::placeholder {
                                         color: #bdbdbd;
                                     }
+                                    i[class$=xmark] {
+                                        color: #999;
+                                        position: absolute; right: 20px; top: 16px;
+                                    }
                                 }
                                 .error_massage {
+                                    margin-top: 7px;
                                     color: $subColor-r;
-                                    margin-bottom: 20px;
+                                    font-size: $small12
                                 }
                             }
                         }
@@ -94,6 +109,8 @@ main {
                             background-color: $subColor-btn;
                             color: #d6d6d6;
                             font-size: 1.125rem; font-weight: $weight600;
+                            cursor: not-allowed;
+                            border-radius: 10px;
                         }
                     }
                 }
