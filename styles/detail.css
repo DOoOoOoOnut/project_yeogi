@@ -345,7 +345,7 @@ html, body {
   background: #fff;
   position: absolute;
   left: 50%;
-  top: 30%;
+  top: 20%;
   transform: translateX(-50%);
   z-index: 9999;
   border-radius: 10px;
@@ -598,18 +598,15 @@ main section .room .photo_wrap .photo_container {
   display: flex;
 }
 main section .room .photo_wrap .photo_container .main_ph {
+  overflow: hidden;
   width: calc(100% - 500px);
   height: 500px;
-}
-main section .room .photo_wrap .photo_container .main_ph img {
-  width: 100%;
-  padding: 5px;
-}
-main section .room .photo_wrap .photo_container .main_ph img:hover {
-  filter: brightness(80%);
+  background-image: url(../images/detail/detail_main_jejudo.png);
+  background-size: cover;
+  margin-right: 5px;
 }
 main section .room .photo_wrap .photo_container .sub_ph {
-  width: calc(100% - 600px);
+  width: 500px;
   height: 500px;
   display: grid;
   grid-template-areas: "item1 item2" "item3 item4";
@@ -620,19 +617,21 @@ main section .room .photo_wrap .photo_container .sub_ph .box {
 }
 main section .room .photo_wrap .photo_container .sub_ph .box img {
   width: 100%;
-  padding: 5px;
 }
 main section .room .photo_wrap .photo_container .sub_ph .box img:hover {
   filter: brightness(80%);
 }
 main section .room .photo_wrap .photo_container .sub_ph .box1 {
   grid-area: item1;
+  margin: 0 5px 5px 0;
 }
 main section .room .photo_wrap .photo_container .sub_ph .box2 {
   grid-area: item2;
+  margin-bottom: 5px;
 }
 main section .room .photo_wrap .photo_container .sub_ph .box3 {
   grid-area: item3;
+  margin-right: 5px;
 }
 main section .room .photo_wrap .photo_container .sub_ph .box4 {
   grid-area: item4;
@@ -1208,25 +1207,25 @@ main section .room .box2 .side .map .mini_map #in_map span {
 main section .room .box2 .side .map .mini_map #in_map .pin {
   width: 30px;
   position: absolute;
-  right: 42%;
-  bottom: 65px;
+  left: 160px;
+  bottom: 80px;
 }
-main section .room .box2 .side .map .mini_map #in_map i {
+main section .room .box2 .side .map .mini_map #in_map #zoom i {
   background: #fff;
   border-radius: 50%;
   border: 1px solid rgb(235, 235, 235);
   padding: 7px;
   position: absolute;
-  right: 30px;
-  bottom: 25px;
+  left: 300px;
+  bottom: 40px;
 }
-main section .room .box2 .side .map .mini_map #in_map i:hover {
+main section .room .box2 .side .map .mini_map #in_map #zoom i:hover {
   filter: brightness(95%);
 }
 main section .room .box2 .side .map .mini_map #in_map .naver_logo {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  left: 300px;
+  bottom: 28px;
 }
 main section .room .box2 .side .map .mini_map .address {
   width: 350px;
