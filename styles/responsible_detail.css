@@ -1,7 +1,6 @@
 html * {transition: all 0.1s;}
 
 @media screen and (max-width:1399px){
-    main section .room .photo_wrap {width:calc(100% - 30px)}
 
 }
 @media screen and (max-width:1199px){
@@ -25,9 +24,6 @@ html * {transition: all 0.1s;}
     }
 }   
 @media screen and (max-width:1100px){
-    main section .room .box2 .content {
-        
-    }
     main section .room .box2 .contents .additional_service .service {
         display: none;
     }
@@ -41,12 +37,11 @@ html * {transition: all 0.1s;}
         display: none;
     }
     main section .room .box2 .side {
-        display: none;
+        display: nonegit ;
     }
 }
 
 @media screen and (max-width:900px){
-    .photo_wrap .photo_container .left img {width:200%;}
     .review_box {
         display: none;
     }
