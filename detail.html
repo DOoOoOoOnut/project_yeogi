@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/detail.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/responsible_detail.css">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=r85p85z8hp"></script>
@@ -22,6 +24,7 @@
     </style>
 </head>
 <body>
+    <?php include("./header1.php") ?>
     <!-- popup -->
     <!-- 사진 더보기 -->
     <div class="room_view_box">
@@ -887,7 +890,9 @@
             </div>
         </section>
     </main>
+    <?php include("./footer.php") ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
     <script src="./script/detail.js"></script>
+    <script src="./script/header.js"></script>
 </body>
 </html>
