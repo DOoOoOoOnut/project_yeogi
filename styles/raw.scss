@@ -1,37 +1,40 @@
 @import 'common';
 
+.rotate {transform: rotate(180deg);}
 main {
     section {
         max-width: $desktop;
         margin: 0 auto 96px;
         padding: 20px 0 0 23px;
-        .raw_tab {
+        .swiper-container {
             position: relative;
             margin: 0 40px;
             @include flex-rnfc;
             height: 52px;
             border-bottom: 1px solid #f2f8ff;
-            .slider-container {
-                display: flex;
+            .swiper-wrapper {
+                display: flex; justify-content: flex-start;
                 transition: transform 0.5s ease;
-                h2 {
+                .swiper-slide {
                     margin-right: 15px;
                     padding: 16px 10px;
-                    a {
-                        font-weight: $weight700;
+                    width: fit-content;
+                    button {
+                        cursor: pointer;
                         color: #70706E;
                         font-weight: $weight500;
                     }
-                }
-                h2:first-of-type a {
-                    color:#1273e4;
-                    font-weight: $weight700;
-                }
-                span {
-                    position: absolute;
-                    width: 87px; height: 2px;
-                    left: 0; bottom: 0;
-                    background-color:#1273e4;
+                    button.active {
+                        color:#1273e4;
+                        font-weight: $weight700;
+                    }
+                    button.active::after {
+                        background-color: #1273e4;
+                        content: ''; display: block;
+                        height: 2px; 
+                        position: absolute; bottom: 0; left: 0;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -168,7 +171,6 @@ main {
                     }
                 }
                 p {
-                    margin-bottom: 20px;
                     color: #000000B8;
                 }
             }

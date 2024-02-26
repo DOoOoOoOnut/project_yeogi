@@ -572,12 +572,30 @@ email_btn.addEventListener('click',()=>{
 // 링크 다른데서 타고 올 때
 window.onload = ()=>{
     const query = new URLSearchParams(window.location.search)
+    const url_reservation = query.get('reservation')
+    const url_point = query.get('point')
     const url_coupon = query.get('coupon')
     const url_info = query.get('info')
+    const url_setting = query.get('setting')
+    if(url_coupon == 'reservation'){reservation_start()}
     if(url_coupon == 'coupon'){coupon_start()}
+    if(url_point == 'point'){point_start()}
     if(url_info == 'info'){info_start()}
+    if(url_setting == 'setting'){setting_start()}
 }
 
+const reservation_start = ()=>{
+    not_contents()
+    tap_contents[0].style.display= 'block'
+    hide(tap_title)
+    tap_title[0].classList.add('active')
+}
+const point_start = ()=>{
+    not_contents()
+    tap_contents[1].style.display= 'block'
+    hide(tap_title)
+    tap_title[1].classList.add('active')
+}
 const coupon_start = ()=>{
     not_contents()
     tap_contents[2].style.display= 'block'
@@ -589,4 +607,10 @@ const info_start = ()=>{
     tap_contents[3].style.display= 'block'
     hide(tap_title)
     tap_title[3].classList.add('active')
+}
+const setting_start = ()=>{
+    not_contents()
+    tap_contents[4].style.display= 'block'
+    hide(tap_title)
+    tap_title[4].classList.add('active')
 }

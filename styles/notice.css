@@ -1,3 +1,7 @@
+* {
+  transition: all 0.3s;
+}
+
 main {
   max-width: 1400px;
   margin: 0 auto;
@@ -61,7 +65,8 @@ main section .contents .pagination {
   align-items: center;
   margin: 35px 0;
 }
-main section .contents .pagination #prev {
+main section .contents .pagination .prev_btn {
+  width: 32px;
   font-size: 0.75rem;
   color: rgb(51, 51, 51);
   padding-right: 5px;
@@ -69,9 +74,12 @@ main section .contents .pagination #prev {
 main section .contents .pagination .num {
   display: flex;
 }
-main section .contents .pagination .num #number {
+main section .contents .pagination .num .number {
+  width: 32px;
   font-size: 0.75rem;
   padding: 0 10px;
+  color: #000;
+  font-weight: 600;
 }
 main section .contents .pagination .num .active {
   background: #1273e4;
@@ -80,8 +88,15 @@ main section .contents .pagination .num .active {
   color: #fff;
   border-radius: 50%;
 }
-main section .contents .pagination #next {
+main section .contents .pagination .next_btn {
   font-size: 0.75rem;
   color: rgb(51, 51, 51);
   padding-left: 5px;
+  width: 32px;
+}
+main section .prev_contents .pagination .prev_btn {
+  color: rgb(214, 214, 214);
+}
+main section .next_contents .pagination .next_btn {
+  color: rgb(214, 214, 214);
 }/*# sourceMappingURL=notice.css.map */

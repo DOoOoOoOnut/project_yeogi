@@ -1,9 +1,13 @@
+.rotate {
+  transform: rotate(180deg);
+}
+
 main section {
   max-width: 1400px;
   margin: 0 auto 96px;
   padding: 20px 0 0 23px;
 }
-main section .raw_tab {
+main section .swiper-container {
   position: relative;
   margin: 0 40px;
   display: flex;
@@ -13,30 +17,35 @@ main section .raw_tab {
   height: 52px;
   border-bottom: 1px solid #f2f8ff;
 }
-main section .raw_tab .slider-container {
+main section .swiper-container .swiper-wrapper {
   display: flex;
+  justify-content: flex-start;
   transition: transform 0.5s ease;
 }
-main section .raw_tab .slider-container h2, main section .raw_tab .slider-container .raw_container .raw_c .contents li .prev h2 span, main section .raw_container .raw_c .contents li .prev h2 .raw_tab .slider-container span {
+main section .swiper-container .swiper-wrapper .swiper-slide {
   margin-right: 15px;
   padding: 16px 10px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-main section .raw_tab .slider-container h2 a, main section .raw_tab .slider-container .raw_container .raw_c .contents li .prev h2 span a, main section .raw_container .raw_c .contents li .prev h2 .raw_tab .slider-container span a {
-  font-weight: 700;
+main section .swiper-container .swiper-wrapper .swiper-slide button {
+  cursor: pointer;
   color: #70706E;
   font-weight: 500;
 }
-main section .raw_tab .slider-container h2:first-of-type a, main section .raw_tab .slider-container .raw_container .raw_c .contents li .prev h2 span:first-of-type a, main section .raw_container .raw_c .contents li .prev h2 .raw_tab .slider-container span:first-of-type a {
+main section .swiper-container .swiper-wrapper .swiper-slide button.active {
   color: #1273e4;
   font-weight: 700;
 }
-main section .raw_tab .slider-container span {
-  position: absolute;
-  width: 87px;
-  height: 2px;
-  left: 0;
-  bottom: 0;
+main section .swiper-container .swiper-wrapper .swiper-slide button.active::after {
   background-color: #1273e4;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 main section .raw_container .raw_c {
   padding: 23px 40px 0;
@@ -171,7 +180,6 @@ main section .raw_container .personal_info .major_container .major_info tbody tr
   line-height: 24px;
 }
 main section .raw_container .personal_info p {
-  margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.7215686275);
 }
 main section .raw_container .raws li {

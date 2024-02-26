@@ -1,4 +1,4 @@
-    <header>
+<header>
         <div class="header_wrap">
             <h1><a href="./index.html"><img src="./images/icon/logo.png" alt="여기어때"></a></h1>
             <nav>
@@ -131,18 +131,18 @@
                     </div>
                 </div>
                 <!-- 로그인 했을시 -->
-                <!-- <div class="mypage_warp_member">
+                <div class="mypage_warp_member">
                     <div class="menu">
                         <i class="fa-solid fa-bars"></i>
                         <img src="./images/icon/ico_21.png" alt="">
                     </div>
                     <div class="mypage_detail">
-                        <a href="#">내 정보</a>
-                        <a href="#">예약내역</a>
-                        <a href="#">고객센터</a>
+                        <button type="button" class="link_info">내 정보</button>
+                        <button type="button" class="link_reservation">예약내역</button>
+                        <button type="button" class="link_customer_service">고객센터</button>
                         <button type="button" class="logout">로그아웃</button>
                     </div>
-                </div> -->
+                </div>
             </nav>
         </div>
         <!-- 모바일 nav -->
@@ -165,8 +165,8 @@
                             </div>
                         </div>
                         <div class="benefit_detail_m">
-                            <a href="./login.html">포인트</a>
-                            <a href="./login.html">쿠폰</a>
+                            <button type="button" class="link_point">포인트</button>
+                            <button type="button" class="link_coupon">쿠폰</button>
                         </div>
                         <div class="nav_detail_m">
                             <a href="./non_member_reservation_check.html">
@@ -200,52 +200,71 @@
                     </div>
                 </nav>
                 <!-- 로그인 했을시 -->
-                <!-- <nav class="nav_m">
-                    <div class="top">
-                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
+                <nav class="nav_m">
                     <div class="mypage_box_m">
-                        <a href="./user_info.html"><img src="./images/icon/ico_21.png" alt=""></a>
-                        <div class="mypage_detail_m">
-                            <a href="./user_info.html">
-                                <span>닉네임</span>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                            <p>5번 더 예약하면 엘리트로 등급업!</p>
+                        <div class="user">
+                            <button type="button" class="link_info"></button>
+                            <div class="mypage_detail_m">
+                                <button type="button" class="link_info">
+                                    <span>나이아여행객</span>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                                <p>5번 더 예약하면 엘리트로 등급업!</p>
+                            </div>
                         </div>
                         <div class="benefit_detail_m">
-                            <a href="#">포인트</a>
-                            <a href="#">쿠폰</a>
+                            <button type="button" class="link_point">포인트</button>
+                            <button type="button" class="link_coupon">쿠폰</button>
                         </div>
                         <div class="nav_detail_m">
-                            <a href="#">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>예약내역</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="./event.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>이벤트</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="./customer_service.html">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>고객센터</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>설정</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                                <span>로그아웃</span>
-                                <img src="./images/sprite/side_sprite1x.png" alt="">
-                            </a>
+                            <button type="button" class="link_reservation">
+                                <span class="left">
+                                    <span class="sprite sp1"></span>
+                                    <span class="menu">예약내역</span>
+                                </span>
+                                <span class="more">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </span>
+                            </button>
+                            <button type="button" class="link_event">
+                                <span class="left">
+                                    <span class="sprite sp2"></span>
+                                    <span class="menu">이벤트</span>
+                                </span>
+                                <span class="more">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </span>
+                            </button>
+                            <button type="button" class="link_customer_service">
+                                <span class="left">
+                                    <span class="sprite sp3"></span>
+                                    <span class="menu">고객센터</span>
+                                </span>
+                                <span class="more">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </span>
+                            </button>
+                            <button type="button" class="link_setting">
+                                <span class="left">
+                                    <span class="sprite sp4"></span>
+                                    <span class="menu">설정</span>
+                                </span>
+                                <span class="more">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </span>
+                            </button>
+                            <button type="button" class="logout">
+                                <span class="left">
+                                    <span class="sprite sp5"></span>
+                                    <span class="menu">로그아웃</span>
+                                </span>
+                                <span class="more">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </span>
+                            </button>
                         </div>
                     </div>
-                </nav> -->
+                </nav>
             </div>
         </div>
         <!-- 고정버튼 -->
@@ -263,5 +282,20 @@
                 </button>
             </div>
         </div>
-        
+        <!-- 상담창 -->
+        <div class="chat_container">
+            <div class="top">
+                <img src="./images/chat_catchprize.png" alt="" class="catchprize">
+                <button type="button" id="chat_close_btn"><img src="./images/chat_close.png" alt=""></button>
+            </div>
+            <div class="chat_wrap">
+                <div class="chat_box">
+                    <!-- 채팅 -->
+                </div>
+                <div class="send_wrap">
+                    <input type="text" id="user_send_message">
+                    <button type="button" id="chat_send_btn"><img src="./images/chat_send_btn.png" alt=""></button>
+                </div>
+            </div>
+        </div>
     </header>

@@ -1,5 +1,8 @@
 @import 'common';
 
+* {
+    transition: all 0.3s;
+}
 main {
     max-width: $desktop; margin: $margin0;
     section {
@@ -57,16 +60,20 @@ main {
             .pagination {
                 @include flex-rncc;
                 margin: 35px 0;
-                #prev {
+                .prev_btn {
+                    width: 32px;
                     font-size: 0.75rem;
                     color: rgb(51, 51, 51);
                     padding-right: 5px;
                 }
                 .num {
                     display: flex;
-                    #number {
+                    .number {
+                        width: 32px;
                         font-size: $small12;
                         padding: 0 10px;
+                        color: #000;
+                        font-weight: 600;
                     }
                     .active {
                         background: $mainColor-b;
@@ -75,10 +82,25 @@ main {
                         border-radius: 50%;
                     }
                 }
-                #next {
+                .next_btn {
                     font-size: 0.75rem;
                     color: rgb(51, 51, 51);
                     padding-left: 5px;
+                    width: 32px;
+                }
+            }
+        }
+        .prev_contents {
+            .pagination {
+                .prev_btn{
+                    color: rgb(214, 214, 214);
+                }
+            }
+        }
+        .next_contents {
+            .pagination {
+                .next_btn{
+                    color: rgb(214, 214, 214);
                 }
             }
         }
