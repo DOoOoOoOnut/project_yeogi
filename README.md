@@ -297,5 +297,19 @@ ex) ./images/main/ _best_hotel001
 --------------------------
 # 02/25 작업
 - 은지
-1. customer_service.js : aip연동 문제 해결
+1. customer_service.js : aip연동 문제 해결하기
 2. 데이터베이스
+--------------------------
+# 02/26 작업
+- 은지
+1. ai 완성(header.js,customer_service.js,chat.js): 해결 apikey:새로발급
+2. 다른사람 도와주기 다은언니 header
+    - 링크연동, css로그인 했을 때, js수정
+3. 다른사람 도와주기 일혁오빠 raw,notice: 
+    - raw.html, css수정 및 js
+    - 서비스문의(service_inquiry.js)
+4. 다른사람 도와주기 민아언니 service_inquiry
+    -  서비스문의(service_inquiry.js)
+- 민아
+1. index.html js 작업
+2. pay.html js 작업

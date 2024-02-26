@@ -42,6 +42,10 @@ main {
                             padding: 0 20px;
                             font-weight: $weight600;
                         }
+                        .active {
+                            background-color: #fff;
+                            outline: 1px solid #000;
+                        }
                         input::placeholder {color: #bdbdbd; font-weight: 300;}
                         .subj {
                             font-size: $small13; font-family: $familySemiBold;
@@ -129,6 +133,13 @@ main {
                         display: block; width: 100%; padding: 20px 0;
                         // background-color: $subColor-btn;
                         color: #d6d6d6; font-weight: $weight600;
+                        border-radius: 10px;
+                        cursor: not-allowed;
+                    }
+                    .active {
+                        background-color: $mainColor-b;
+                        color: #fff;
+                        cursor: pointer;
                     }
                 }
                 .precautions {

@@ -45,6 +45,10 @@ main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .ne
   padding: 0 20px;
   font-weight: 600;
 }
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries .active {
+  background-color: #fff;
+  outline: 1px solid #000;
+}
 main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries input::-moz-placeholder {
   color: #bdbdbd;
   font-weight: 300;
@@ -152,6 +156,13 @@ main .new_inquiries_container #new_inquiries_frm fieldset .inquire .inquire_btn 
   padding: 20px 0;
   color: #d6d6d6;
   font-weight: 600;
+  border-radius: 10px;
+  cursor: not-allowed;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .inquire .active {
+  background-color: #1273e4;
+  color: #fff;
+  cursor: pointer;
 }
 main .new_inquiries_container #new_inquiries_frm fieldset .precautions {
   margin-top: 30px;
