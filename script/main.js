@@ -15,8 +15,15 @@ userSearch.addEventListener('click',()=>{
     searchRanking.style.display = 'block'
 })
 
+// 다른 곳 클릭하면 다시 비활성화 
+// document.addEventListener('click', function(search) {
+//     if (search.target !== userSearch) {
+//         searchRanking.style.display = 'none'
+//     }
+// })
+
 //
-window.addEventListener('load', function() {
+/* window.addEventListener('load', function() {
     const searchInput = document.getElementById('search_input');
     const searchResults = document.querySelector('.search_results');
     console.log(searchInput,searchResults)
@@ -51,7 +58,7 @@ window.addEventListener('load', function() {
             console.log(li)
         });
     }
-});
+}); */
 
 //
 
@@ -90,101 +97,3 @@ calendarDate.addEventListener('mouseover',()=>{
 calendarDate.addEventListener('mouseout',()=>{
     calendarDate.classList.remove('hover')
 })
-
-<<<<<<< HEAD
-let swiper06 = new Swiper('.swiper-container06', {
-    // loop: true,
-    // 한 번에 보여줄 슬라이드 수
-    slidesPerView: 2,
-    // 슬라이드 사이의 간격
-    spaceBetween: 10,
-    // 한 번에 넘길 슬라이드 수
-    slidesPerGroup: 4,
-    // autoplay: {delay: 2000,},   
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".swiper-button-next06",
-        prevEl: ".swiper-button-prev06",
-    },
-    breakpoints: {
-        // 화면 너비가 800 이상일 때(min-width 기준)
-        600: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-        },
-        900: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        // 화면 너비가 1200px 이상일 때
-        1200: {
-        slidesPerView: 4,
-        spaceBetween: 25,
-        }
-    },
-})
-
-
-function selectType(type){
-    const data = getAccommodationsByType(type)
-    const room_container = document.querySelector('#room_container')
-=======
-// 데이터 삽입
-
-/* function getAccommodationsByType(type){
-    return data.filter(
-        e => e.type === type)
-}
-
-const type_chk = document.querySelectorAll('.sub_menu') 
-
-for(let menu_btn of type_chk){
-    menu_btn.addEventListener('change',filterHandler)
-}
-
-function getChecked(name){
-    const checked = []; // 결과 배열 / 체크한거만 들어가게
-    const inputs = document.getElementsByClassName(name)[1].getElementsByTagName('input');
-    for (const input of inputs) {
-        if (input.checked) checked.push(input.value);
-    }
-    return checked
-}
-
-function filterHandler(){ 
-    // 1. 사용자가 무엇을 선택했는지 name으로 확인해 배열로 가져온다.
-    let checkedArray = getChecked('type')
-    // 2. 위에서 가져온 배열로 데이터를 불러온다.
-    const data = getAccommodationsByType(checkedArray)
-    console.log(data);
-    // 3. 위에서 불러온 데이터를 화면에 표시한다.
->>>>>>> d373b7696888c3cd7d52a7ff3f2fc544243cb2b6
-    const roomTemplate = document.querySelector('#room_template')
-    console.log(data)
-    room_container.innerHTML = ''
-    for(let e of data){
-        const newRoom = document.importNode(roomTemplate.content, true)
-        newRoom.querySelector('.type').innerText = e.type
-        newRoom.querySelector('.name').innerText = e.name
-        newRoom.querySelector('.city').innerText = e.city
-        newRoom.querySelector('.more').innerText = e.location
-        newRoom.querySelector('.point_view').innerText = e.rate 
-        newRoom.querySelector('.review_count').innerText = (e.review_count).toLocaleString('ko-kr')
-        newRoom.querySelector('.photo img').src = `./images/search/accommodation${e.pk}.jpg`
-        // newRoom.querySelector('.price_view').innerText = e.price
-        if(e.is_discount){
-            newRoom.querySelector('.price_view').innerText = (e.price).toLocaleString('ko-kr')
-        }else {
-            newRoom.querySelector('.origin').style.display = 'none'
-            newRoom.querySelector('.coupon').style.display = 'none'
-        }
-        newRoom.querySelector('.now').innerText = `${(e.price - (e.price*0.2)).toLocaleString('ko-kr')}원`
-        if(e.stock > 10){
-            newRoom.querySelector('.info').style.display = 'none'
-            newRoom.querySelector('.info span').innerText = e.stock
-        }
-        room_container.appendChild(newRoom)
-    }
-}
-
-window.selectType = selectType

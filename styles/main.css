@@ -1501,7 +1501,7 @@ main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .con
 main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap i {
   font-size: 0.688rem;
 }
-main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point {
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point_view {
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -1639,7 +1639,7 @@ main .center_container .today_special_wrap .room_box .swiper-wrapper .room .cont
 main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap i {
   font-size: 0.688rem;
 }
-main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point {
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point_view {
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -1776,7 +1776,7 @@ main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .conten
 main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap i {
   font-size: 0.688rem;
 }
-main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point {
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point_view {
   font-size: 0.75rem;
   font-weight: 600;
 }
