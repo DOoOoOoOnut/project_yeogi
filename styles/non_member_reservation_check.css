@@ -1,9 +1,7 @@
 .address_copy {
-  display: none !important;
-  width: 250px;
+  display: none;
   display: flex;
   flex-flow: column nowrap;
-  padding: 16px;
   border-radius: 10px;
   position: absolute;
   left: 50%;
@@ -12,6 +10,7 @@
 }
 .address_copy .copy {
   display: none;
+  width: 250px;
   background: #333;
   border-radius: 5px;
   text-align: center;
@@ -647,13 +646,13 @@ main section .reservation_detail_wrap .room_info .info .room_address p {
   font-size: 0.875rem;
   color: #999;
 }
-main section .reservation_detail_wrap .room_info .info .room_address .copy {
+main section .reservation_detail_wrap .room_info .info .room_address #copy {
   font-size: 0.875rem;
   font-weight: 600;
   color: #1273e4;
   padding-left: 10px;
 }
-main section .reservation_detail_wrap .room_info .info .room_address .copy:hover {
+main section .reservation_detail_wrap .room_info .info .room_address #copy:hover {
   text-decoration: underline;
 }
 main section .reservation_detail_wrap .m_copy_ask_btn {
@@ -661,7 +660,7 @@ main section .reservation_detail_wrap .m_copy_ask_btn {
   width: calc(100% - 40px);
   margin: 0 auto 20px;
 }
-main section .reservation_detail_wrap .m_copy_ask_btn button {
+main section .reservation_detail_wrap .m_copy_ask_btn #m_copy {
   display: inline-block;
   width: calc(50% - 5px);
   background: #ebebeb;
@@ -669,7 +668,7 @@ main section .reservation_detail_wrap .m_copy_ask_btn button {
   padding: 13px;
   font-family: PretendardSemiBold;
 }
-main section .reservation_detail_wrap .m_copy_ask_btn button i {
+main section .reservation_detail_wrap .m_copy_ask_btn #m_copy i {
   margin-right: 5px;
 }
 main section .reservation_detail_wrap .container .room_detail {

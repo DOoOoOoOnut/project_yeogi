@@ -1,3 +1,18 @@
+
+var prevScrollPos = window.pageYOffset;
+
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+        document.querySelector("nav").classList.add("visible");
+    } else {
+        document.querySelector("nav").classList.remove("visible");
+    }
+
+    prevScrollPos = currentScrollPos;
+}
+
 // 포토 썸네일
 
 const photo_bg = document.querySelector ('.room_view_box .bg')

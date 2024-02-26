@@ -1,15 +1,14 @@
 @import 'common';
 
 .address_copy {
-    display: none !important;
-    width: 250px;
+    display: none;
     display: flex; flex-flow: column nowrap;
-    padding: 16px;
     border-radius: 10px;
     position: absolute; left: 50%; top: 50%;
     transform: translateX(-50%);
     .copy {
         display: none;
+        width: 250px;
         background: #333;
         border-radius: 5px;
         text-align: center;
@@ -609,12 +608,12 @@ main {
                             font-size: $subC14;
                             color: #999;
                         }
-                        .copy {
+                        #copy {
                             font-size: $subC14; font-weight: $weight600;
                             color: $mainColor-b;
                             padding-left: 10px;
                         }
-                        .copy:hover {
+                        #copy:hover {
                             text-decoration: underline;
                         }
                     }
@@ -624,7 +623,7 @@ main {
                 display: none;
                 width: calc(100% - 40px);
                 margin: 0 auto 20px;
-                button {
+                #m_copy {
                     display: inline-block;
                     width: calc(50% - 5px);
                     background: #ebebeb;

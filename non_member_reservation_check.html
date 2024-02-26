@@ -257,13 +257,13 @@
                         </div>
                         <div class="room_address">
                             <p>제주특별자치도 서귀포시 색달동 3039-3</p>
-                            <a href="#" class="copy"><i class="fa-solid fa-copy"></i> 주소 복사</a>
+                            <button id="copy"><i class="fa-solid fa-copy"></i> 주소 복사</button>
                         </div>
                     </div>
                 </div>
                 <div class="m_copy_ask_btn">
-                    <button type="button" class="m_copy"><i class="fa-solid fa-copy"></i>주소 복사</button>
-                    <button type="button" class="m_inquiry"><i class="fa-solid fa-phone"></i>숙소 문의</button>
+                    <button type="button" id="m_copy"><i class="fa-solid fa-copy"></i>주소 복사</button>
+                    <button type="button" id="m_inquiry"><i class="fa-solid fa-phone"></i>숙소 문의</button>
                 </div>
                 <div class="container">
                     <div class="room_detail">
@@ -354,5 +354,6 @@
     </main>
     <?php include("./footer.php") ?>
     <script src="./script/header.js"></script>
+    <script src="./script/non_member_reservation_check.js"></script>
 </body>
 </html>
