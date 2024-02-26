@@ -48,6 +48,7 @@
 }
 .coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .detail_title span {
   font-size: 1.125rem;
+  cursor: context-menu;
 }
 .coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .detail_title span em {
   font-size: 1.125rem;
@@ -160,6 +161,7 @@
 }
 .coupon_popup .popup_bg .coupon_check_popup .detail_bottom .apply_btn .coupon_value {
   color: #ffffff;
+  font-size: 1.125rem;
   font-family: PretendardMedium;
 }
 .coupon_popup .popup_bg .coupon_check_popup .detail_bottom .apply_btn:hover {
@@ -220,16 +222,17 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  border: 1.5px solid #f5f5f5;
   width: 70%;
-  padding: 0 15px;
-  margin: 0px 10px 5px 0;
+  position: relative;
 }
 .voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box #discount_num {
   width: 100%;
   height: 48px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  border: 1.5px solid #f5f5f5;
+  padding: 0 15px;
+  margin: 0px 10px 5px 0;
 }
 .voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box #discount_num::-moz-placeholder {
   color: #dfdfdf;
@@ -237,11 +240,22 @@
 .voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box #discount_num::placeholder {
   color: #dfdfdf;
 }
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box #discount_num:hover {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box #discount_num:focus {
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 100%;
+}
 .voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box .reset {
   display: none;
+  position: absolute;
+  right: 25px;
 }
 .voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box .reset i {
-  color: #707070;
+  color: #bdbdbd;
 }
 .voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box input::-webkit-outer-spin-button,
 .voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box input::-webkit-inner-spin-button {
@@ -337,14 +351,14 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .i
   justify-content: space-between;
   align-items: center;
   width: 340px;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name #user_name {
+  width: 340px;
   height: 48px;
   background-color: #f5f5f5;
   border-radius: 8px;
   border: 1.5px solid #f5f5f5;
   padding: 0 15px;
-}
-main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name #user_name {
-  padding-right: 100px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name #user_name::-moz-placeholder {
   color: #bdbdbd;
@@ -352,14 +366,22 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .i
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name #user_name::placeholder {
   color: #bdbdbd;
 }
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name #user_name:hover {
+  background-color: #eeeeee;
+  border-radius: 8px;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name #user_name:focus {
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 100%;
+}
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name .reset {
   display: none;
+  position: relative;
+  right: 30px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name .reset i {
-  color: #707070;
-}
-main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name:hover {
-  background-color: #eeeeee;
+  color: #bdbdbd;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .error_border {
   border: 1.5px solid #f45858;
@@ -379,15 +401,15 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_
   justify-content: space-between;
   align-items: center;
   width: 340px;
+  margin-bottom: 5px;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m {
+  width: 340px;
   height: 48px;
   background-color: #f5f5f5;
   border-radius: 8px;
   border: 1.5px solid #f5f5f5;
   padding: 0 15px;
-  margin-bottom: 5px;
-}
-main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m {
-  padding-right: 80px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m::-moz-placeholder {
   color: #bdbdbd;
@@ -395,14 +417,22 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m::placeholder {
   color: #bdbdbd;
 }
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m:hover {
+  background-color: #eeeeee;
+  border-radius: 8px;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m:focus {
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 100%;
+}
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num .reset {
   display: none;
+  position: relative;
+  right: 30px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num .reset i {
-  color: #707070;
-}
-main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num:hover {
-  background-color: #eeeeee;
+  color: #bdbdbd;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .error_border {
   border: 1.5px solid #f45858;
@@ -665,7 +695,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul li {
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul li img {
   width: 70px;
 }
-main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul li:first-child {
+main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul .benefit_active {
   background-color: #ecf4fd;
   border: 1.5px solid #b7d5f6;
   color: #1273e4;
@@ -971,6 +1001,9 @@ main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .payme
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .payment_amount dl dd em {
   font-size: 0.875rem;
   font-family: PretendardSemiBold;
+}
+main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .payment_amount .coupon_amount {
+  display: none;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom .all_payment {
   margin-bottom: 30px;

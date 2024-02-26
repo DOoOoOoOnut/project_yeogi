@@ -158,6 +158,8 @@ header {
                     // display:none;
                     a {padding:8px 16px;}
                     a:hover {background-color:#ededed; width:100%;}
+                    button {padding:8px 16px;}
+                    button:hover {background-color:#ededed; width:100%;}
                 }
             }
             .mypage_warp_member {
@@ -184,16 +186,14 @@ header {
                     box-shadow:0px 2px 16px rgba(0, 0, 0, 0.08);
                     //js
                     display:none;
-                    a {padding:8px 16px;}
-                    a:hover {background-color:#ededed; width:100%;}
-                    .logout {padding:8px 16px; text-align:left;}
-                    .logout:hover {background-color:#ededed; width:100%;}
+                    button {padding:8px 16px; text-align:left;}
+                    button:hover {background-color:#ededed; width:100%;}
                 }
             }
         }
     }
     .nav_wrap_m {
-        position: fixed; top: 0; right: -100%;
+        position: fixed; top: 0; right: 0;
         width: 100%; height: 100vh; z-index: 99999;
         background-color: #fff;
         padding: 30px;
@@ -207,6 +207,8 @@ header {
                     }
                 }
                 .mypage_warp_nonmember_m {
+                    // js
+                    display: none;
                     .user {
                         display: flex; align-items: center;
                         margin-bottom: 30px;
@@ -236,7 +238,7 @@ header {
                         border-radius: 10px;
                         border: 1px solid #ebebeb;
                         margin-bottom: 30px;
-                        a {
+                        button {
                             display: block; width: 50%;
                             color: #999; font-size: $subC14;
                             padding: 15px 0;
@@ -263,6 +265,71 @@ header {
                                 .sp1 {background-position: 48px 0px;}
                                 .sp2 {background-position: 48px -24px;}
                                 .sp3 {background-position: 0px -174px;}
+                                .menu {font-family: $familySemiBold;}
+                            }
+                            .more {
+                                i[class*=angle] {
+                                    color: #bdbdbd;
+                                }
+                            }
+                        }
+                    }
+                }
+                .mypage_box_m {
+                    .user {
+                        display: flex; align-items: center;
+                        margin-bottom: 30px;
+                        > .link_info {
+                            height: 64px; width: 64px;
+                            background: url(../images/icon/ico_21.png);
+                            background-size: contain;
+                            margin-right: 20px;
+                        }
+                        .mypage_detail_m {
+                            .link_info {
+                                span {font-size: $title20; font-family: $familyBold;}
+                                i[class$=right] {
+                                    color: #bdbdbd;
+                                }
+                            }
+                            p {
+                                font-size: $subC14; font-family: $familyBold;
+                                background-color: #eeebff;
+                                color: #6763e0;
+                                margin-top: 10px;
+                                padding: 3px; border-radius: 5px;
+                            }
+                        }
+                    }
+                    .benefit_detail_m {
+                        display: flex; text-align: center;
+                        border-radius: 10px;
+                        border: 1px solid #ebebeb;
+                        margin-bottom: 30px;
+                        button {
+                            display: block; width: 50%;
+                            color: #999; font-size: $subC14;
+                            padding: 15px 0;
+                        }
+                    }
+                    .nav_detail_m {
+                        button {
+                            display: flex;
+                            justify-content: space-between; align-items: center;
+                            padding: 20px 0; width: 100%;
+                            .left {
+                                .sprite {
+                                    display: inline-block;
+                                    width: 24px; height: 24px;
+                                    background: url(../images/sprite/side_sprite1x.png);
+                                    position: relative; bottom: -5px;
+                                    margin-right: 10px;
+                                }
+                                .sp1 {background-position: 48px 0px;}
+                                .sp2 {background-position: 48px -24px;}
+                                .sp3 {background-position: 0px -175px;}
+                                .sp4 {background-position: -50px -175px;}
+                                .sp5 {background-position: -26px -175px;}
                                 .menu {font-family: $familySemiBold;}
                             }
                             .more {
@@ -308,6 +375,7 @@ header {
         right: -100%; bottom: 200px;
         width: 350px; height: 500px;
         transition: right 0.5s;
+        z-index: 999;
         .top {
             position: absolute; right: 0; top: -50px;
             .catchprize {margin-right: 10px;}
@@ -318,14 +386,25 @@ header {
         .chat_wrap {
             padding: 20px;
             .chat_box {
-                display: flex; flex-flow: column-reverse nowrap; align-items: flex-start;
+                display: flex; flex-flow: column wrap; align-items: flex-start;
                 background-color: #feebec; border-radius: 10px;
                 height: 410px;
                 margin-bottom: 10px;
                 padding: 20px;
-                li {
-                    color: #fff; background-color: $mainColor-b;
-                    width: max-content; padding: 10px 15px; border-radius: 20px;
+                overflow-x: hidden;
+                .message {
+                    max-width: 80%; width: max-content; padding: 10px 15px; border-radius: 20px;
+                    margin-bottom: 10px; 
+                }
+                .ai_message {
+                    align-self: flex-start;
+                    background-color: #F7323F;
+                    color: #fff;
+                }
+                .user_message {
+                    background-color:#fff;
+                    color: #5A5858;
+                    align-self: flex-end;
                 }
             }
             .send_wrap {

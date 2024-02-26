@@ -1,5 +1,6 @@
 //스와이퍼
 //이벤트
+let swiperContainer = document.querySelector('.swiper-container')
 let swiper = new Swiper('.swiper-container', {
     // 한 번에 보여줄 슬라이드 수
     slidesPerView: 2,
@@ -38,16 +39,17 @@ let swiper = new Swiper('.swiper-container', {
 })
 
 // 브라우저 창 크기에 따라 .swiper-container의 너비를 조정하는 함수
-// function adjustSliderWidth() {
-//     const windowWidth = window.innerWidth;
-//     const isDesktop = windowWidth >= 900;
-//     swiperContainer.style.width = isDesktop ? '180%' : '100%';
-// }
+function adjustSliderWidth() {
+    const windowWidth = window.innerWidth;
+    const isDesktop = windowWidth >= 900;
+    swiperContainer.style.width = isDesktop ? '180%' : '100%';
+}
 // 페이지 로드 및 창 크기 변경 시 .swiper-container의 너비 조정 함수 호출
-// window.addEventListener('load', adjustSliderWidth);
-// window.addEventListener('resize', adjustSliderWidth);
+window.addEventListener('load', adjustSliderWidth);
+window.addEventListener('resize', adjustSliderWidth);
 
 //아래 슬라이드
+let swiperContainer01 = document.querySelector('.swiper-container01')
 let swiper01 = new Swiper('.swiper-container01', {
     // 한 번에 보여줄 슬라이드 수
     slidesPerView: 5,
@@ -74,6 +76,7 @@ let swiper01 = new Swiper('.swiper-container01', {
     },
 })
 
+let swiperContainer02 = document.querySelector('.swiper-container02')
 let swiper02 = new Swiper('.swiper-container02', {
     // 한 번에 보여줄 슬라이드 수
     slidesPerView: 5,
@@ -100,6 +103,7 @@ let swiper02 = new Swiper('.swiper-container02', {
     },
 })
 
+let swiperContainer03 = document.querySelector('.swiper-container03')
 let swiper03 = new Swiper('.swiper-container03', {
     // 한 번에 보여줄 슬라이드 수
     slidesPerView: 3.5,
@@ -126,6 +130,7 @@ let swiper03 = new Swiper('.swiper-container03', {
     },
 })
 
+let swiperContainer04 = document.querySelector('.swiper-container04')
 let swiper04 = new Swiper('.swiper-container04', {
     // 한 번에 보여줄 슬라이드 수
     slidesPerView: 3.5,
@@ -152,6 +157,7 @@ let swiper04 = new Swiper('.swiper-container04', {
     },
 })
 
+let swiperContainer05 = document.querySelector('.swiper-container05')
 let swiper05 = new Swiper('.swiper-container05', {
     // 한 번에 보여줄 슬라이드 수
     slidesPerView: 3.5,

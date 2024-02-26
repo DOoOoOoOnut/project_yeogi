@@ -43,22 +43,70 @@ const mNavOpen = document.querySelector('.mypage_warp_nonmember .m_menu')
 const mNavClose = document.querySelector('.nav_m .top .close')
 const mNav = document.querySelector('.nav_wrap_m')
 
-
+mNav.style.display = 'none'
 mNavOpen.addEventListener('click',()=>{
-    mNav.classList.add('show')
+    mNav.style.display = 'block'
 })
 mNavClose.addEventListener('click',()=>{
-    mNav.classList.remove('show')
+    mNav.style.display = 'none'
 })
 
 
-const chatCloseBtn = document.querySelector('#chat_close_btn')
-const chatContainer = document.querySelector('.chat_container')
-const chatOpenBtn = document.querySelector('#customer_btn')
+customer_btn.addEventListener('click',()=>{
+    chat_container.classList.add('show')
+})
+chat_close_btn.addEventListener('click',()=>{
+    chat_container.classList.remove('show')
+})
 
-chatOpenBtn.addEventListener('click',()=>{
-    chatContainer.classList.add('show')
+const mypage_box_m =document.querySelector('.mypage_box_m')
+const mypage_warp_nonmember_m = document.querySelector('.mypage_warp_nonmember_m')
+
+
+const link_info = document.querySelectorAll('.link_info')
+const link_reservation = document.querySelectorAll('.link_reservation')
+const link_customer_service = document.querySelectorAll('.link_customer_service')
+const link_point = document.querySelectorAll('.link_point')
+const link_coupon = document.querySelectorAll('.link_coupon')
+const link_event = document.querySelector('.link_event')
+const link_setting = document.querySelector('.link_setting')
+const logout = document.querySelectorAll('.logout')
+console.log(logout,mypage_box_m,mypage_warp_nonmember_m)
+
+
+for(let i of link_info){
+    i.addEventListener('click',()=>{
+        window.location.href = '../user_info.html?info=info'
+    })
+}
+for(let i of link_reservation){
+    i.addEventListener('click',()=>{
+        window.location.href = '../user_info.html?reservation=reservation'
+    })
+}
+for(let i of link_customer_service){
+    i.addEventListener('click',()=>{
+        window.location.href = '../customer_service.html'
+    })
+}
+for(let i of link_point){
+    i.addEventListener('click',()=>{
+        window.location.href = '../user_info.html?point=point'
+    })
+}
+for(let i of link_coupon){
+    i.addEventListener('click',()=>{
+        window.location.href = '../user_info.html?coupon=coupon'
+    })
+}
+link_event.addEventListener('click',()=>{
+    window.location.href = '../event.html'
 })
-chatCloseBtn.addEventListener('click',()=>{
-    chatContainer.classList.remove('show')
+link_setting.addEventListener('click',()=>{
+    window.location.href = '../user_info.html?setting=setting'
 })
+logout[1].addEventListener('click',()=>{
+    mypage_box_m.style.display = 'none'
+    mypage_warp_nonmember_m.style.display = 'block'
+})
+
