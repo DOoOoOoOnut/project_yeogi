@@ -1,5 +1,108 @@
-const reset_btn = document.querySelectorAll('.reset')
-const user_name = document.querySelector('.user_name')
+const user_name = document.querySelector('#user_name');
+const reset_btn = document.querySelector('.input_box_name .reset');
+const error_message = document.querySelector('.error_message');
+
+user_name.addEventListener('input', () => {
+    // 입력이 시작되면 숨겨놨던 reset 클래스가 보여짐
+    reset_btn.style.display = 'block';
+
+    // 내용이 입력되면 error_border 클래스와 error_message 추가하고 에러 메시지 설정
+    if (user_name.value.length === 0) {
+        user_name.classList.add('error_border');
+        error_message.textContent = '예약자 이름을 입력해주세요.';
+    } else if (user_name.value.length < 2) {
+        user_name.classList.add('error_border');
+        error_message.textContent = '이름은 2자 이상 입력해주세요.';
+    } else {
+        // 입력이 제대로 됐을 때는 클래스 제거 및 에러 메시지 초기화
+        user_name.classList.remove('error_border');
+        error_message.textContent = '';
+    }
+});
+
+// x 버튼 누르면 작성 문구 초기화 및 error_border와 error_messag 추가
+reset_btn.addEventListener('click', () => {
+    user_name.value = '';
+    reset_btn.style.display = 'none';
+    user_name.classList.add('error_border');
+    error_message.textContent = '예약자 이름을 입력해주세요.';
+    user_name.focus();
+});
+
+/* //로그인 안했을 시
+const user_phone_n = document.querySelector('#user_phone_n');
+const reset_btn_n = document.querySelector('.input_box_num .reset');
+const error_message_n = document.querySelector('.user_phone_detail_n .error_message');
+
+user_phone_n.addEventListener('input', () => {
+    // 입력이 시작되면 숨겨놨던 reset 클래스가 보여짐
+    reset_btn_n.style.display = 'block';
+
+    // 내용이 입력되면 error_border 클래스와 error_message 클래스를 추가하고 에러 메시지 설정
+    if (user_phone_n.value.length === 0) {
+        user_phone_n.classList.add('error_border');
+        error_message_n.textContent = '휴대폰 번호를 입력해주세요.';
+    } else {
+        // 입력이 제대로 됐을 때는 클래스 제거 및 에러 메시지 초기화
+        user_phone_n.classList.remove('error_border');
+        error_message_n.textContent = '';
+    }
+}); 
+x 버튼 누르면 작성 문구 초기화 및 error_border 클래스와 error_message 클래스 추가/제거
+reset_btn_n.addEventListener('click', () => {
+    user_phone_n.value = '';
+    reset_btn_n.style.display = 'none';
+    user_phone_n.classList.remove('error_border');
+    error_message_n.textContent = '';
+}); */
+
+
+//핸드폰번호
+
+const user_phone_m = document.querySelector('#user_phone_m');
+const reset_btn_m = document.querySelector('.user_phone_detail_m .reset');
+const error_message_m = document.querySelector('.user_phone_detail_m .error_message');
+
+// 숫자만 입력 가능하도록 설정
+user_phone_m.addEventListener('input', () => {
+    // 입력값이 변경되면 reset 버튼이 보이도록 함
+    reset_btn_m.style.display = 'block';
+
+    // 입력값에서 숫자만 추출
+    let phoneNumber = user_phone_m.value.replace(/\D/g, '');
+
+    // 숫자는 총 11자리까지만 입력 가능하도록 설정
+    if (phoneNumber.length > 11) {
+        phoneNumber = phoneNumber.slice(0, 11);
+    }
+
+    // 입력된 값을 다시 설정
+    user_phone_m.value = phoneNumber;
+
+    // 입력값이 유효한지 확인하여 에러 메시지 표시
+    if (!phoneNumber.startsWith('010')) {
+        user_phone_m.classList.add('error_border');
+        error_message_m.style.display = 'block';
+        error_message_m.textContent = '휴대폰 번호를 확인해주세요.';
+    } else if (phoneNumber.length < 11) {
+        user_phone_m.classList.add('error_border');
+        error_message_m.style.display = 'block';
+        error_message_m.textContent = '휴대폰 번호를 입력해주세요.';
+    } else {
+        user_phone_m.classList.remove('error_border');
+        error_message_m.style.display = 'none';
+    }
+});
+
+// reset 버튼 클릭 시 입력 내용 초기화 및 에러 메시지 표시
+reset_btn_m.addEventListener('click', () => {
+    user_phone_m.value = '';
+    reset_btn_m.style.display = 'none';
+    user_phone_m.classList.add('error_border');
+    error_message_m.style.display = 'block';
+    error_message_m.textContent = '휴대폰 번호를 입력해주세요.';
+    user_phone_m.focus();
+});
 
 //쿠폰조회 팝업
 const c_amount_check = document.querySelector('.coupon .amount_check')
@@ -33,16 +136,15 @@ none.addEventListener('click',()=>{
     discount.classList.remove('active')
     coupon_value.innerHTML = '0'
 })
-let coupon_contents_status = true //현재 상태 변수(false==숨김)
+let coupon_contents_status = false //현재 상태 변수(false==숨김)
 detail_title.addEventListener('click',function(){
-    console.log('..')
     if(coupon_contents_status == true){
         coupon_contents_status = !coupon_contents_status
         coupon_contents.style.display = 'block';
-        c_down.style.transform = 'scaleY(-1)';
+        c_down.style.transform = 'scaleY(1)';
     }else{
         coupon_contents.style.display = 'none';
-        c_down.style.transform = 'scaleY(1)';
+        c_down.style.transform = 'scaleY(-1)';
         coupon_contents_status = !coupon_contents_status
     }
 })
@@ -68,31 +170,22 @@ const payment_box = document.querySelector('.payment_box')
 const list = payment_box.querySelectorAll('li')
 console.log(list)
 
-list[0].classList.add('benefit_active')
-list.forEach((t,i)=>{
-    console.log(t,i)
-    for(let l of list){l.classList.remove('benefit_active')}
-        t.addEventListener('click',()=>{
-            t.classList.add('benefit_active')
-        })
-})
+// 초기로 첫 번째 li에는 benefit_active 클래스 추가
+list[0].classList.add('benefit_active');
 
-// for(let l of list){
-//     l.addEventListener('click',()=>{
-//         l.
-//     })
-// }
-//탭 제목 클릭시 클릭한 대상에만 디자인 적용하기
+list.forEach((li, index) => {
+    li.addEventListener('click', () => {
+        // 클릭된 li에 benefit_active 클래스 추가
+        li.classList.add('benefit_active');
 
-/* //기본 활성화
-list[0].classList.add('benefit_active')
-//클릭시 클릭한 대상에만 디자인 적용하기
-for(let i=0; i<=list.length; i++){
-    console.log(list[i])
-    if(i<1){
-        list[i].classList.add('benefit_active')
-    }
-} */
+        // 다른 li에는 benefit_active 클래스 제거
+        list.forEach((otherLi) => {
+            if (otherLi !== li) {
+                otherLi.classList.remove('benefit_active');
+            }
+        });
+    });
+});
 
 // 모두 선택 체크하면 나머지도 체크상태로 변경
 const chkboxes = document.querySelectorAll('.checkbox-wrapper-4 .chk');
@@ -154,17 +247,35 @@ benefit_more_btn.addEventListener('click',function(){
     }
 })
 
-// x 버튼 누르면 작성 문구 초기화
-/* reset_btn.forEach((t,i)=>{
-    t.style.display = 'none'
-    t.addEventListener('click',()=>{
-        user_name[i].value = ''
-        t.style.display = 'none'
-    })
-})
+const voucher_detail = document.querySelector('.voucher_detail')
+const discount_num = document.querySelector('#discount_num');
+const reset_btn_v = voucher_detail.querySelector('.reset');
+const amount_check_btn = voucher_detail.querySelector('.amount_check');
+const error_massage_v = voucher_detail.querySelector('.popup_massage .error_massage');
 
-user_name.forEach((t,i)=>{
-    t.addEventListener('input',()=>{
-        reset_btn[i].style.display = 'block'
-    })
-}) */
+// discount_num에 숫자만 입력 가능하도록 설정
+discount_num.addEventListener('input', () => {
+    let inputText = discount_num.value.replace(/\D/g, ''); // 숫자 이외의 문자 모두 제거
+    inputText = inputText.slice(0, 16); // 최대 16자리까지 입력 허용
+    discount_num.value = inputText;
+    reset_btn_v.style.display = 'block'
+});
+
+// reset 버튼 클릭 시 입력 내용 초기화
+reset_btn_v.addEventListener('click', () => {
+    discount_num.value = ''; // 입력된 숫자 초기화
+});
+
+// amount_check_btn 버튼 클릭 시 에러 메시지 표시 및 클래스 추가
+amount_check_btn.addEventListener('click', () => {
+    if (discount_num.value.length !== 16) { // 숫자가 16자리가 아닌 경우
+        console.log(error_massage_v)
+        error_massage_v.style.display = 'block';
+        error_massage_v.innerHTML = '상품권 번호 형식이 올바르지 않습니다.<br>다시 입력해주세요.';
+        discount_num.classList.add('error_border');
+    } else {
+        // 형식이 올바른 경우
+        error_massage_v.style.display = 'none';
+        discount_num.classList.remove('error_border');
+    }
+});

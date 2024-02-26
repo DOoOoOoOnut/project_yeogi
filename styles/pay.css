@@ -138,7 +138,7 @@
 }
 .coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_txt {
   text-align: center;
-  padding: 30px 0;
+  padding: 10px 0;
 }
 .coupon_popup .popup_bg .coupon_check_popup .coupon_detail .general_coupon .coupon_txt span {
   font-size: 0.875rem;
@@ -245,9 +245,12 @@
   border-radius: 8px;
 }
 .voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box #discount_num:focus {
-  border: 1px solid #000;
+  border: 1.5px solid #000;
   background-color: #fff;
   width: 100%;
+}
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box .error_border {
+  border: 1.5px solid #f45858 !important;
 }
 .voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .input_box .num_box .reset {
   display: none;
@@ -277,7 +280,7 @@
   color: #999;
   padding: 2px 0;
 }
-.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .popup_massage .error_message {
+.voucher_popup .voucher_bg .voucher_check_popup .voucher_detail .popup_massage .error_massage {
   display: none;
   color: #f45858;
   font-size: 0.75rem;
@@ -351,6 +354,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .i
   justify-content: space-between;
   align-items: center;
   width: 340px;
+  position: relative;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name #user_name {
   width: 340px;
@@ -371,20 +375,20 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .i
   border-radius: 8px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name #user_name:focus {
-  border: 1px solid #000;
+  border: 1.5px solid #000;
   background-color: #fff;
   width: 100%;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name .reset {
   display: none;
-  position: relative;
-  right: 30px;
+  position: absolute;
+  right: 15px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .input_box_name .reset i {
   color: #bdbdbd;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .error_border {
-  border: 1.5px solid #f45858;
+  border: 1.5px solid #f45858 !important;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box div .error_message {
   color: #f45858;
@@ -402,6 +406,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_
   align-items: center;
   width: 340px;
   margin-bottom: 5px;
+  position: relative;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m {
   width: 340px;
@@ -422,25 +427,25 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_
   border-radius: 8px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num #user_phone_m:focus {
-  border: 1px solid #000;
+  border: 1.5px solid #000;
   background-color: #fff;
   width: 100%;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num .reset {
   display: none;
-  position: relative;
-  right: 30px;
+  position: absolute;
+  right: 15px;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .input_box_num .reset i {
   color: #bdbdbd;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .error_border {
-  border: 1.5px solid #f45858;
+  border: 1.5px solid #f45858 !important;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m .error_message {
   color: #f45858;
   font-size: 0.75rem;
-  margin: 5px 0 20px;
+  margin: 5px 0;
   display: none;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .user_info_box .user_phone_detail_m input::-webkit-outer-spin-button,
@@ -679,7 +684,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul {
   width: 100%;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul li {
-  border: 1px solid #ebebeb;
+  border: 1.5px solid #ebebeb;
   padding: 10px 5px;
   display: flex;
   flex-flow: row nowrap;
@@ -690,7 +695,7 @@ main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul li {
   margin: 5px;
   cursor: pointer;
   font-size: 0.875rem;
-  font-family: PretendardMedium;
+  font-family: PretendardSemiBold;
 }
 main .pay_contents #pay_frm fieldset .container .wrap_left .payment_box ul li img {
   width: 70px;
