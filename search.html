@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./styles/responsible_search.css">
     <link rel="stylesheet" href="./styles/checkbox.css">
     <link rel="stylesheet" href="./styles/search2.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=r85p85z8hp"></script>
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
@@ -21,6 +23,7 @@
     </style>
 </head>
 <body>
+    <?php include("./header1.php") ?>
     <main>
         <section>
             <form action="#" method="get" id="result_frm">
@@ -234,11 +237,13 @@
             </form>
         </section>
     </main>
+    <?php include("./footer.php") ?>
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&callback=initMap"></script>
     <!-- <script src="./data/data.js" type="module"></script> -->
     <script src="./script/search.js" type="module"></script>
+    <script src="./script/header.js"></script>
 </body>
 </html>

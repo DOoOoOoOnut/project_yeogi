@@ -5,7 +5,8 @@
 header {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 30px;
+  background-color: #fff;
 }
 header .header_wrap {
   width: 100%;
@@ -506,7 +507,7 @@ header .show {
 }
 header .fixed_btn {
   position: fixed;
-  bottom: 100px;
+  bottom: 50px;
   right: 30px;
   display: flex;
   flex-flow: column nowrap;

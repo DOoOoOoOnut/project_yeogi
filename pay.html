@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/pay.css">
     <link rel="stylesheet" href="./styles/responsible_pay.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/checkbox.css">
 </head>
 <body>
+    <?php include("./header1.php") ?>
     <!-- 쿠폰 조회 누르면 나오는 팝업 -->
     <div class="coupon_popup">
         <div class="popup_bg">
@@ -413,6 +416,8 @@
             </form>
         </section>
     </main>
+    <?php include("./footer.php") ?>
     <script src="./script/pay.js"></script>
+    <script src="./script/header.js"></script>
 </body>
 </html>
