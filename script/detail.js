@@ -7,6 +7,20 @@ const allphoto = document.querySelector ('.more_photo')
 const view = document.querySelector ('.room_view_box')
 const imgcontainer = document.querySelector ('.imgcontainer')
 
+
+// const body_all_a = document.querySelectorAll ('body a')
+// // console.log(body_all_a)
+
+
+// for(let j of body_all_a){
+//     // console.log(j)
+//     j.addEventListener('click',(e)=>{
+//         e.preventDefault()
+//     })
+// }
+
+
+
 console.log (photo01, photo02, allphoto, view, photo_bg, imgcontainer)
 
 photo_bg.style.display = 'none'
@@ -87,9 +101,10 @@ console.log (service_container, service_bg, more_service)
 service_bg.style.display = 'none'
 service_container.style.display = 'none'
 
-more_service.addEventListener ('click',function(){
+more_service.addEventListener ('click',function(e){
     service_bg.style.display = 'flex'
     service_container.style.display = 'block'
+    e.preventDefault ()
 })
 
 //결제혜택안내
@@ -103,9 +118,10 @@ console.log (more_benefit, pay_benefit_bg, pay_benefit_container)
 pay_benefit_bg.style.display = 'none'
 pay_benefit_container.style.display = 'none'
 
-more_benefit.addEventListener('click',function(){
+more_benefit.addEventListener('click',function(e){
     pay_benefit_bg.style.display = 'flex'
     pay_benefit_container.style.display = 'block'
+    e.preventDefault()
 })
 //지도
 //side 지도보기
@@ -119,14 +135,16 @@ console.log (in_map, map_popup_bg, map_pop, plus)
 map_popup_bg.style.display = 'none'
 map_pop.style.display = 'none'
 
-in_map.addEventListener('click', function(){
+in_map.addEventListener('click', function(e){
     map_popup_bg.style.display = 'flex'
     map_pop.style.display = 'block'
+    e.preventDefault ()
 })
 
-plus.addEventListener('click', function(){
+plus.addEventListener('click', function(e){
     map_popup_bg.style.display = 'flex'
     map_pop.style.display = 'block'
+    e.preventDefault ()
 })
 
 // 판매자 정보
@@ -140,9 +158,10 @@ console.log (seller_wrap_bg, seller_box, seller)
 seller_wrap_bg.style.display = 'none'
 seller_box.style.display = 'none'
 
-seller.addEventListener('click', function(){
+seller.addEventListener('click', function(e){
     seller_wrap_bg.style.display = 'flex'
     seller_box.style.display = 'block'
+    e.preventDefault()
 })
 
 

@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/detail.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/responsible_detail.css">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=r85p85z8hp"></script>
@@ -22,6 +24,7 @@
     </style>
 </head>
 <body>
+    <?php include("./header1.php") ?>
     <!-- popup -->
     <!-- 사진 더보기 -->
     <div class="room_view_box">
@@ -250,7 +253,7 @@
             <div class="room">
                 <div class="photo_wrap">
                     <div class="photo_container">
-                        <a href="#" class="main_ph"><img src="./images/detail/detail_main_jejudo.png" alt="신라호텔 뷰"></a>
+                        <a href="#" class="main_ph"></a>
                         <div class="sub_ph">
                             <a href="#" class="box box1"><img src="./images/detail/detail_main_1.png" alt="객실 뷰"></a>
                             <a href="#" class="box box2"><img src="./images/detail/detail_main_2.png" alt="객실 뷰"></a>
@@ -379,7 +382,7 @@
                                             </div>
                                             <div class="right">
                                                 <p class="price">387,200<em>원</em></p>
-                                                <a href="#" class="item_reservation">객실 예약</a>
+                                                <a href="./pay.html" class="item_reservation">객실 예약</a>
                                             </div>
                                         </div>
                                         <div class="item_info">
@@ -401,7 +404,7 @@
                                             </div>
                                             <div class="right">
                                                 <p class="price">387,200<em>원</em></p>
-                                                <a href="#" class="item_reservation">객실 예약</a>
+                                                <a href="./pay.html" class="item_reservation">객실 예약</a>
                                             </div>
                                         </div>
                                         <div class="item_info">
@@ -423,7 +426,7 @@
                                             </div>
                                             <div class="right">
                                                 <p class="price">387,200<em>원</em></p>
-                                                <a href="#" class="item_reservation">객실 예약</a>
+                                                <a href="./pay.html" class="item_reservation">객실 예약</a>
                                             </div>
                                         </div>
                                         <div class="item_info">
@@ -543,15 +546,15 @@
                     <div class="side">
                         <div class="map">
                             <div class="mini_map">
-                                <button type="button" id="in_map">
+                                <a type="button" id="in_map">
                                     <span></span>
                                     <img class="pin" src="./images/detail/more/map_pin.png" alt="pin">
-                                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                                    <button type="button" id="zoom"><i class="fa-solid fa-plus"></i></button>
                                     <img class="naver_logo" src="./images/detail/more/naver-logo.png" alt="naver">
-                                </button>
+                                </a>
                                 <div class="address">
                                     <p>제주특별자치도 서귀포시 색달동<br> 3039-3</p>
-                                    <a href="#" class="add_copy"><i class="fa-solid fa-copy"></i>주소복사</a>
+                                    <a href="javascript:void(0)" class="add_copy"><i class="fa-solid fa-copy"></i>주소복사</a>
                                 </div>
                             </div>
                         </div>
@@ -887,7 +890,9 @@
             </div>
         </section>
     </main>
+    <?php include("./footer.php") ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
     <script src="./script/detail.js"></script>
+    <script src="./script/header.js"></script>
 </body>
 </html>
