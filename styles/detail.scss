@@ -510,6 +510,7 @@ main {
             align-items: center;
             background: #fff;
             border-bottom: 1px solid rgb(235 235 235);
+            padding: 0 80px;
             .main_menu {
                 width: calc(100% - 135px);
                 display: flex; flex-flow: row nowrap;
@@ -521,6 +522,7 @@ main {
                 .move {
                     color: #707070;
                 }
+                .active {color:$mainColor-b ;}
                 a {
                     font-size: $defalt16; font-weight: $weight600;
                     padding: 24px 16px;

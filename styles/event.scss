@@ -30,6 +30,7 @@ main {
                         font-size: $defalt16;
                         font-weight: $weight700;
                         color: #70706F;
+                        white-space: nowrap;
                     }
                     .active::after {
                         content: ''; display: block;

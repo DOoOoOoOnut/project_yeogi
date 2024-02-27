@@ -1,12 +1,46 @@
 // 메뉴 클릭
+const body = document.querySelector('html, body')
 const move = document.querySelectorAll ('.main_menu > .move')
-const title1 = document.querySelector ('.room')
-const title2 = document.querySelector ('.additional')
-const title3 = document.querySelector ('.room_type')
-const title4 = document.querySelector ('.location_box')
-const title5 = document.querySelector ('.real_review')
-console.log (move, title1, title2, title3, title4, title5)
+const link_contents = document.querySelectorAll('.link_contents')
+// const title1 = document.querySelector ('.room')
+// const title2 = document.querySelector ('.additional')
+// const title3 = document.querySelector ('.room_type')
+// const title4 = document.querySelector ('.location_box')
+// const title5 = document.querySelector ('.real_review')
+// console.log (move, link_contents)
 
+move[0].classList.add('active');
+
+// 버튼 누르면 스크롤 이동
+window.addEventListener('scroll', () => {
+    move.forEach((obj, idx) => {
+        if (body.scrollTop >= link_contents[idx].offsetTop - 100) {
+            move_remove();
+            hide()
+            obj.classList.add('main_move');
+            obj.classList.add('active');
+        }
+    });
+});
+
+const move_remove = () => {
+    for (let i of move) {
+        i.classList.remove('main_move');
+    }
+}
+const hide = () => {
+    for (let i of move) {
+        i.classList.remove('active');
+    }
+}
+
+move.forEach((t, i) => {
+    t.addEventListener('click', (e) => {
+        console.log(t)
+        e.preventDefault();
+        window.scrollTo(0, link_contents[i].offsetTop - 50);
+    });
+});
 
 
 

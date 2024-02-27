@@ -134,3 +134,63 @@ more_btn.addEventListener('click',()=>{
     sub_menu_list.classList.toggle('active')
     i_rotate.classList.toggle('rotate');
 })
+
+
+// 객실 인원 증가 감소 
+// const person_wrap = document.querySelectorAll('.person_wrap')
+const num_minus_room = document.querySelectorAll('.user_room_select .num_minus')
+const num_minus_adult = document.querySelectorAll('.user_adult_select .num_minus')
+const num_minus_child = document.querySelectorAll('.user_children_select .num_minus')
+const num_plus_room = document.querySelectorAll('.user_room_select .num_plus')
+const num_plus_adult = document.querySelectorAll('.user_adult_select .num_plus')
+const num_plus_child = document.querySelectorAll('.user_children_select .num_plus')
+const children_age = document.querySelector('.children_age')
+let room_count = 1
+let adult_count = 2
+let child_count = 0
+
+//성인, 아이, 객실 증가용 
+num_plus_adult.forEach(function(t,i){
+    t.addEventListener('click',function(){
+        adult_count++
+        this.previousElementSibling.innerHTML = adult_count
+    })
+})
+num_plus_child.forEach(function(t,i){
+    t.addEventListener('click',function(){
+        child_count++
+        this.previousElementSibling.innerHTML = child_count
+        // children_age.style.display = 'block'
+    })
+})
+num_plus_room.forEach(function(t,i){
+    t.addEventListener('click',function(){
+        room_count++
+        this.previousElementSibling.innerHTML = room_count
+    })
+})
+//성인, 아이, 객실 감소용
+num_minus_adult.forEach(function(t,i){
+    t.addEventListener('click',function(){
+        if(adult_count > 1){
+            adult_count--
+            this.nextElementSibling.innerHTML = adult_count
+        }
+    })
+})
+num_minus_child.forEach(function(t,i){
+    t.addEventListener('click',function(){
+        if(child_count > 0){
+            child_count--
+            this.nextElementSibling.innerHTML = child_count
+        }
+    })
+})
+num_minus_room.forEach(function(t,i){
+    t.addEventListener('click',function(){
+        if(room_count > 1){
+            room_count--
+            this.nextElementSibling.innerHTML = room_count
+        }
+    })
+})

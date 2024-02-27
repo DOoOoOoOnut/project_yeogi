@@ -37,6 +37,7 @@ main .container nav ul li .btn {
   font-size: 1rem;
   font-weight: 700;
   color: #70706F;
+  white-space: nowrap;
 }
 main .container nav ul li .active::after {
   content: "";
