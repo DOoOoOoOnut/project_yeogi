@@ -1,0 +1,179 @@
+main {
+    width:1200px; margin:0 auto;
+}
+main .search_top {
+    padding:20px 0;
+    display:flex; justify-content: space-between;
+}
+main .search_top h1,
+main .search_top h1 * {font-size:24px; font-weight:600;}
+main .search_top h1 .title {}
+main .search_top h1 .num {}
+/* ----------------상단 추천순 필터 보기 */
+main .search_top .search_opt_list {position:relative;}
+main .search_top .search_opt_list > a {}
+main .search_top .search_opt_list > a:hover {
+    text-decoration: underline; color:#666;
+}
+main .search_top .search_opt_list > .list {
+    display:flex; flex-flow:column nowrap;
+    position:absolute; right:0; top:25px;
+    width:170px; padding:16px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    z-index:800;
+}
+main .search_top .search_opt_list > .list > a {
+    padding-bottom:15px;
+}
+main .search_top .search_opt_list > .list > a.active {color:#1273e4;}
+main .search_top .search_opt_list > .list > a:last-child {padding:0;}
+/* ---------------------검색결과 전체 search_container */
+main .search_container {
+    display:flex; justify-content: space-between;
+}
+main .search_container aside {
+    width:288px;
+    height: max-content;
+    position:sticky; top:20px;
+}
+main .search_container aside .map {
+    width:100%; height:170px; text-align: center;
+    background:url(../images/search/thumbnail_map.74bb1588.png);  border-radius:10px;
+    padding-top:60px; margin-bottom:30px;
+}
+main .search_container aside .map .map_view {
+    background:#1273e4; color:#fff;
+    border-radius:10px;
+    display:inline-block; padding:10px 40px;
+}
+/* ----------------------검색 결과 좌측 aside 내용 전체(맵 제외) */
+main .search_container aside .filter_top {
+    display:flex; justify-content: space-between;
+    margin-bottom:20px;
+}
+main .search_container aside .filter_top h2 {font-weight: 600;}
+main .search_container aside .filter_top .filter_reset {}
+main .search_container aside #filterFrm {}
+/* 매진숙소제외 */
+main .search_container aside #filterFrm .del {}
+main .search_container aside #filterFrm .del .cdx {padding:0;}
+/* 숙소 유형부터 ~ */
+main .search_container aside #filterFrm h2 {
+    font-weight: 600;
+    margin:10px 0; padding:10px 0; border-top:1px solid #ddd;
+}
+main .search_container aside #filterFrm h2 span {}
+main .search_container aside #filterFrm ul[class$=list] {}
+main .search_container aside #filterFrm ul[class$=list] li {padding:10px 0;}
+main .search_container aside #filterFrm ul[class$=list] li input[name$=list] {display:none;}
+main .search_container aside #filterFrm ul[class$=list] li input[name$=list]:checked + label::before {
+    content:''; background:#1273e4;
+}
+main .search_container aside #filterFrm ul[class$=list] li label {cursor:pointer; display:flex; align-items: center;}
+main .search_container aside #filterFrm ul[class$=list] li label::before {
+    content:''; background:#fff;  width:15px; height:15px;
+    border-radius:15px; display:inline-block;
+    border:1px solid #eee;
+}
+main .search_container aside #filterFrm ul[class$=list] li label span {padding-left:5px;}
+main .search_container aside #filterFrm div.price {}
+main .search_container aside #filterFrm div[class$=tag] {}
+main .search_container aside #filterFrm div[class$=tag] .hash {}
+main .search_container aside #filterFrm div[class$=tag] .hash a {
+    display:inline-block; padding:7px 15px; font-size:13px;
+    background:#fff; border:1px solid #ddd; border-radius:15px;
+    margin-bottom:5px;
+}
+main .search_container aside #filterFrm div[class$=tag] .hash a:hover {
+    background:#eee;
+}
+main .search_container aside #filterFrm div[class$=tag] .more {}
+/* ----------------------검색 결과 우측 내용 container */
+main .search_container .container {
+    width:calc(100% - (288px + 25px));
+}
+main .search_container .container .item {margin-bottom:20px;}
+main .search_container .container .item > a {
+    display:grid;
+    grid-auto-columns: 396px calc(100% - (396px + 20px));
+    justify-content: space-between;
+    grid-template-areas:
+        'photo contents'
+        'opt opt';
+}
+/* 사진, 내용, 옵션 정보 틀 * 3 */
+main .search_container .container .item > a .photo {
+    grid-area:photo;
+    height:240px;
+    border-radius: 20px;
+    background-image:url(../images/search/tnrqkrvptmxk_cntjrvus_20240131165458.png), url(../images/search/accommodation1.jpg);
+    background-repeat: no-repeat;
+    background-size:40px, cover;
+    background-position: 10px 10px, center;
+}
+main .search_container .container .item > a .photo:hover {
+    filter:brightness(90%)
+}
+main .search_container .container .item > a .contents {
+    grid-area:contents; position:relative;
+}
+main .search_container .container .item > a .contents > * {
+    line-height:1.5;
+}
+main .search_container .container .item > a .option {
+    grid-area:opt;
+    font-size:10px; line-height:25px;
+    background:#eee; display:inline-block;
+    padding-left:10px;
+    margin-top: 20px;
+    height: 25px;
+}
+/* ----------------contents 내용들 */
+main .search_container .container .item > a .contents .hotel {
+    font-size:11px;
+}
+main .search_container .container .item > a .contents h2 {
+    font-size:18px; font-weight:600;
+}
+main .search_container .container .item > a .contents .address {
+    font-size:13px;
+}
+main .search_container .container .item > a .contents .review {
+    font-size:13px;
+}
+main .search_container .container .item > a .contents .review > * {
+    display: inline-block;
+}
+main .search_container .container .item > a .contents .review .score {
+    font-size:13px;
+    background-color:rgb(255 173 10); font-weight:600; 
+    padding:5px; border-radius: 5px;
+}
+main .search_container .container .item > a .contents .review .score i {font-size:13px;}
+main .search_container .container .item > a .contents .review .score_detail {
+    font-size:13px;
+}
+main .search_container .container .item > a .contents .price {
+    display:flex; flex-flow:column nowrap; text-align:right;
+    position:absolute; right:0; bottom:20px;
+}
+main .search_container .container .item > a .contents .price del {
+    text-decoration: line-through; color:#666;
+}
+main .search_container .container .item > a .contents .price .result {}
+main .search_container .container .item > a .contents .price .result span {color:#666;}
+main .search_container .container .item > a .contents .price .result .price_total {
+    font-size:20px; font-weight:600;
+}
+
+/* ------반응형 */
+@media screen and (max-width:1200px){
+    main {width:100%; padding:0 15px;}
+    main .search_container aside {display:none;}
+    main .search_container .container {width:100%;}
+    main .search_container .container .item > a {
+        grid-auto-columns: 40% calc(100% - (40% + 20px));
+    }
+}

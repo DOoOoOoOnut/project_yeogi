@@ -561,8 +561,10 @@ main nav .box1 {
   top: 0;
   background: #fff;
   border-bottom: 1px solid rgb(235, 235, 235);
+  padding: 0 290px;
 }
 main nav .box1 .main_menu {
+  width: 1400px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -941,8 +943,9 @@ main section .room .box2 .contents .detail_page .img .first_img {
   line-height: 1.5;
   letter-spacing: 1.2px;
   position: absolute;
-  left: 250px;
+  left: 30%;
   bottom: 80px;
+  transform: translateX(-50%);
 }
 main section .room .box2 .contents .detail_page .img .second_img {
   height: 588px;
@@ -953,8 +956,9 @@ main section .room .box2 .contents .detail_page .img .second_img {
   line-height: 1.5;
   letter-spacing: 1.2px;
   position: absolute;
-  left: 250px;
-  bottom: -70%;
+  left: 30%;
+  top: 85%;
+  transform: translateX(-50%);
 }
 main section .room .box2 .contents .detail_page .img .third_img {
   height: 588px;
@@ -965,8 +969,9 @@ main section .room .box2 .contents .detail_page .img .third_img {
   line-height: 1.5;
   letter-spacing: 1.2px;
   position: absolute;
-  left: 250px;
-  bottom: -70%;
+  left: 30%;
+  top: 85%;
+  transform: translateX(-50%);
 }
 main section .room .box2 .contents .room_type {
   border-bottom: 1px solid #ebebeb;
