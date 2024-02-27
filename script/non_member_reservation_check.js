@@ -63,6 +63,19 @@ paymentview.addEventListener('click', function(e){
     e.preventDefault()
 })
 
+// const email = document.querySelector ('#email')
+// const send = document.querySelector ('#send')
+// const send_01 = document.querySelector ('#send_01')
+// console.log (email, send, send_01)
+// send_01.style.display = 'none'
+
+// send.addEventListener ('click',function(){
+//     send.style.display = 'none'
+//     send_01.style.display = 'flex'
+//     window.location.href ='./non_member_reservation_receipt.html'
+// })
+
+
 //예약취소
 
 const reservation_check_cancel_bg = document.querySelector('.reservation_check_cancel .bg')
@@ -83,6 +96,7 @@ progress.addEventListener('click', function(e){
     reservation_check_cancel_bg.style.display = 'none'
     check_cancel.style.display = 'none'
     window.alert('취소가 되었습니다. 2~3일내에 영업점으로 환불이 완료됩니다.')
+    window.location.href ='./index.html'
 })
 
 // 방 정책

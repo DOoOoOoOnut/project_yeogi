@@ -125,11 +125,12 @@ main {
                             border: 1px solid #ebebeb;
                         }
                         #resend_num {
-                            background: #FAFAFA;
+                            text-align: center;
+                            background: $mainColor-b;
                             padding: 15px 20px;
                             border-radius: 10px;
                             font-size: $defalt16;
-                            color: #D6D6D6;
+                            color: #fff;
                         }
                     }
                 }

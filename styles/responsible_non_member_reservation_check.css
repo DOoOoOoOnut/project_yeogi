@@ -58,7 +58,7 @@ html * {transition: all 0.1s;}
     }
     .room_img img {
         width: 100% !important;
-        height: 150px;
+        height: auto;
     }
     .m_copy_ask_btn {display: block !important; }
     .inquiry {display: none;}

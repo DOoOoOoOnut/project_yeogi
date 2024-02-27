@@ -140,11 +140,12 @@ main section #reservation fieldset label .resend #resend_renum:hover {
   border: 1px solid #ebebeb;
 }
 main section #reservation fieldset label .resend #resend_num {
-  background: #FAFAFA;
+  text-align: center;
+  background: #1273e4;
   padding: 15px 20px;
   border-radius: 10px;
   font-size: 1rem;
-  color: #D6D6D6;
+  color: #fff;
 }
 main section #reservation .certified {
   display: flex;

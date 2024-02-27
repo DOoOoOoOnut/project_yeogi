@@ -217,6 +217,7 @@
 .proof_payment .bg .proof_container .transaction_detail .send_cancel {
   text-align: center;
   width: 100%;
+  display: flex;
 }
 .proof_payment .bg .proof_container .transaction_detail .send_cancel #cancel {
   font-size: 1rem;
@@ -224,12 +225,21 @@
   padding: 10px 65px;
   background: #ebebeb;
   border-radius: 6px;
+  margin-right: 3px;
 }
 .proof_payment .bg .proof_container .transaction_detail .send_cancel #send {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.1607843137);
   padding: 10px 65px;
   background: #fafafa;
+  border-radius: 6px;
+}
+.proof_payment .bg .proof_container .transaction_detail .send_cancel #send_01 {
+  display: none;
+  font-size: 1rem;
+  color: #fff;
+  padding: 10px 65px;
+  background: #1273e4;
   border-radius: 6px;
 }
 
@@ -317,7 +327,7 @@
 }
 .reservation_check_cancel .bg .check_cancel {
   display: none;
-  width: 620px;
+  width: 600px;
   background: #fff;
   padding: 15px;
   border-radius: 10px;
@@ -528,8 +538,10 @@
 }
 .reservation_check_cancel .bg .check_cancel .wrap .close_progress {
   display: flex;
+  width: 100%;
 }
 .reservation_check_cancel .bg .check_cancel .wrap .close_progress #close {
+  width: 50%;
   font-size: 1.125rem;
   font-weight: 600;
   color: #333;
@@ -542,11 +554,12 @@
   opacity: 80%;
 }
 .reservation_check_cancel .bg .check_cancel .wrap .close_progress #progress {
+  width: 50%;
   font-size: 1.125rem;
   font-weight: 600;
   color: #f45858;
   background: #ffebeb;
-  padding: 15px 100px;
+  padding: 15px 80px;
   border-radius: 10px;
 }
 .reservation_check_cancel .bg .check_cancel .wrap .close_progress #progress:hover {

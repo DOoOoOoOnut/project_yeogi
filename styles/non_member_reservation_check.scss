@@ -209,18 +209,28 @@
                 .send_cancel {
                     text-align: center;
                     width: 100%;
+                    display: flex;
                     #cancel {
                         font-size: $defalt16;
                         color: #333;
                         padding: 10px 65px;
                         background: #ebebeb;
                         border-radius: 6px;
+                        margin-right: 3px;
                     }
                     #send {
                         font-size: $defalt16;
                         color: #00000029;
                         padding: 10px 65px;
                         background: #fafafa;
+                        border-radius: 6px;
+                    }
+                    #send_01 {
+                        display: none;
+                        font-size: $defalt16;
+                        color: #fff;
+                        padding: 10px 65px;
+                        background: $mainColor-b;
                         border-radius: 6px;
                     }
                 }
@@ -311,7 +321,7 @@
         position: fixed;
         .check_cancel {
             display: none;
-            width: 620px;
+            width: 600px;
             background: #fff;
             padding: 15px;
             border-radius: 10px;
@@ -502,7 +512,10 @@
                 }
                 .close_progress {
                     display: flex;
+                    width: 100%;
                     #close {
+                        width: 50%;
+                        
                         font-size: $title18; font-weight: $weight600;
                         color: #333;
                         background: #ebebeb;
@@ -514,10 +527,11 @@
                         opacity: 80%;
                     }
                     #progress {
+                        width: 50%;
                         font-size: $title18; font-weight: $weight600;
                         color: $subColor-r;
                         background: #ffebeb;
-                        padding: 15px 100px;
+                        padding: 15px 80px;
                         border-radius: 10px;
                     }
                     #progress:hover {
