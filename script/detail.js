@@ -98,9 +98,10 @@ console.log (coupon_box, coupon_bg, coupon_get)
 coupon_bg.style.display = 'none'
 coupon_box.style.display = 'none'
 
-coupon_get.addEventListener ('click',function(){
+coupon_get.addEventListener ('click',function(e){
     coupon_bg.style.display = 'flex'
     coupon_box.style.display = 'block'
+    e.preventDefault()
 })
 
 // 부대시설
