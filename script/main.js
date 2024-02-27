@@ -14,9 +14,19 @@ const search_popup = document.querySelector('.search_popup')
 const travel_search = document.querySelector('.travel_search')
 const back_btn = document.querySelector('.close_btn')
 const room_btn = document.querySelectorAll('.room_btn')
+const room_btn_m = document.querySelectorAll('.room_btn_m')
+const more_btn = document.querySelector('.more_btn')
+const sub_menu_list = document.querySelector('.sub_menu_list')
+const i_rotate = document.querySelector('.more_btn i[class*=down]')
 let hover = true
 // console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
-console.log(room_btn)
+console.log(sub_menu_list,i_rotate)
+
+let hide = (name)=>{
+    for(let i of name){
+        i.classList.remove('active')
+    }
+}
 
 userSearch.addEventListener('click',()=>{
     searchRanking.style.display = 'block'
@@ -111,4 +121,26 @@ calendarDate.addEventListener('mouseover',()=>{
 })
 calendarDate.addEventListener('mouseout',()=>{
     calendarDate.classList.remove('hover')
+})
+
+room_btn[0].classList.add('active')
+room_btn_m[0].classList.add('active')
+
+
+for(let i of room_btn){
+    i.addEventListener('click',()=>{
+        hide(room_btn)
+        i.classList.add('active')
+    })
+}
+for(let i of room_btn_m){
+    i.addEventListener('click',()=>{
+        hide(room_btn_m)
+        i.classList.add('active')
+    })
+}
+
+more_btn.addEventListener('click',()=>{
+    sub_menu_list.classList.toggle('active')
+    i_rotate.classList.toggle('rotate');
 })

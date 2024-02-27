@@ -112,7 +112,7 @@ main {
                                     border-bottom:1px solid #eeeeee; padding:0 20px;
                                     ul {
                                         @include flex-rncc; gap:30px;
-                                        .room_btn {
+                                        .room_btn_m {
                                             padding:15px 30px;
                                             span {font-size:$subC14; white-space:nowrap;}
                                         }
@@ -1015,7 +1015,7 @@ main {
                 justify-content:space-between;
                 align-items:flex-start;
                 .sub_menu_list  {
-                    display:flex;
+                    display:flex; flex-flow: row nowrap;
                     overflow-x:hidden; 
                     white-space:nowrap;
                     .sub_menu {
@@ -1030,6 +1030,7 @@ main {
                         border:0;
                     }
                 }
+                .active {flex-flow: row wrap;}
                 //작아지면 나오게
                 .more_btn {
                     display:none;
@@ -1043,6 +1044,7 @@ main {
                         border:1px solid #eeeeee;
                         font-size:13px;
                     }
+                    .rotate {transform: rotate(180deg);}
                 }
             }
             .box_btn {
