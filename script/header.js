@@ -4,8 +4,20 @@ const overTravelBtn = document.querySelector('.over_travel .prev')
 const overTravelBox = document.querySelector('.over_travel_box')
 const popular_search = document.querySelector('.popular_search')
 const popular_search_list = document.querySelector('.popular_search .search_list')
+const top_btn = document.querySelector('.top_btn')
+const top_btn_m = document.querySelector('.top_btn_m')
+const link_container = document.querySelector('.link_container')
 
-console.log(popular_search)
+
+// top버튼
+top_btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo(0, link_container.offsetTop - 50);
+});
+top_btn_m.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo(0, link_container.offsetTop - 50);
+});
 
 openMenu.classList.add('hide')
 menuBtn.addEventListener('click',()=>{
