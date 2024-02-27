@@ -28,7 +28,7 @@
     </div>
     <!-- 구매정보 -->
     <div class="purchase_information">
-        <div class="bg">asdasdasdasdasdasdasd
+        <div class="bg">
             <div class="information_container">
                 <div class="title">
                     <a href="./non_member_reservation_check.html" class="close_btn"><i class="fa-solid fa-xmark"></i></a>
@@ -57,7 +57,7 @@
                             <dd>· 호텔은 예약 직후 1시간이내에는 취소가 가능합니다.(단 예약 시점이 체크인 시간을 이미<br>넘긴 경우엔 15분 이내에만 취소 가능합니다.)</dd>
                             <dd>· 예약 직후 1시간 이내라 하더라도 입실(체크인) 시간 경과 시 취소/환불 불가합니다.</dd>
                         </dl>
-                        <a href="#" class="re_reservation">다시 예약하기</a>
+                        <a href="search.html" class="re_reservation">다시 예약하기</a>
                     </div>
                 </div>
             </div>
@@ -66,25 +66,27 @@
     <!-- 결제 증빙 보기 -->
     <div class="proof_payment">
         <div class="bg">
-            <div class="proof">
-                <div class="title">
-                    <h2>결제 증빙 보기</h2>
-                    <p>*거래내역서는 예약 확정 후 제공돼요.</p>
+            <div class="proof_container">
+                <div class="proof">
+                    <div class="title">
+                        <h2>결제 증빙 보기</h2>
+                        <p>*거래내역서는 예약 확정 후 제공돼요.</p>
+                    </div>
+                    <a href="#" class="receipt">영수증 보기</a>
+                    <a href="#" class="transaction">거래내역서 받기</a>
+                    <a href="./non_member_reservation_check.html" class="close">닫기</a>
                 </div>
-                <a href="#" class="receipt">영수증 보기</a>
-                <a href="#" class="transaction">거래내역서 받기</a>
-                <a href="./non_member_reservation_check.html" class="close">닫기</a>
-            </div>
-            <div class="transaction_detail">
-                <p>거래내역서를 받을 이메일 주소를<br>정확히 입력해 주세요.</p>
-                <label for="email">
-                    <span>이메일</span>
-                    <input type="email" name="email" id="email" placeholder="이메일을 입력하세요.">
-                    <span class="error">이메일 주소를 정확히 입력해 주세요.</span>
-                </label>
-                <div class="send_cancel">
-                    <a href="./non_member_reservation_check.html" type="button" id="cancel">취소</a>
-                    <button type="button" id="send">확인</button>
+                <div class="transaction_detail">
+                    <p>거래내역서를 받을 이메일 주소를<br>정확히 입력해 주세요.</p>
+                    <label for="email">
+                        <span>이메일</span>
+                        <input type="email" name="email" id="email" placeholder="이메일을 입력하세요.">
+                        <span class="error">이메일 주소를 정확히 입력해 주세요.</span>
+                    </label>
+                    <div class="send_cancel">
+                        <a href="./non_member_reservation_check.html" type="button" id="cancel">취소</a>
+                        <button type="button" id="send">확인</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -257,13 +259,13 @@
                         </div>
                         <div class="room_address">
                             <p>제주특별자치도 서귀포시 색달동 3039-3</p>
-                            <a href="#" class="copy"><i class="fa-solid fa-copy"></i> 주소 복사</a>
+                            <button id="copy"><i class="fa-solid fa-copy"></i> 주소 복사</button>
                         </div>
                     </div>
                 </div>
                 <div class="m_copy_ask_btn">
-                    <button type="button" class="m_copy"><i class="fa-solid fa-copy"></i>주소 복사</button>
-                    <button type="button" class="m_inquiry"><i class="fa-solid fa-phone"></i>숙소 문의</button>
+                    <button type="button" id="m_copy"><i class="fa-solid fa-copy"></i>주소 복사</button>
+                    <button type="button" id="m_inquiry"><i class="fa-solid fa-phone"></i>숙소 문의</button>
                 </div>
                 <div class="container">
                     <div class="room_detail">
@@ -275,7 +277,7 @@
                             <p><em>숙박</em>2024.02.03 (토) 14:00 ~ 2024.02.04 (일) 11:00</p>
                             <div class="stick">
                                 <p>산 전망 스탠다드 더블 룸</p>
-                                <a href="#">구매 정보 ></a>
+                                <a href="#" class="purchase">구매 정보 ></a>
                             </div>
                         </div>
                     </div>
@@ -290,7 +292,7 @@
                             <div class="reservation_num_result">
                                 <div class="stick">
                                     <p>2402021701730EYE1</p>
-                                    <a href="#"><i class="fa-solid fa-copy"></i> 예약번호 복사</a>
+                                    <a href="#" class="reservation"><i class="fa-solid fa-copy"></i> 예약번호 복사</a>
                                 </div>
                                 <p>햄버거</p>
                                 <p class="safe_num">0504-4003-2108<br><em>휴대폰 번호 010-1234-5678 은 안심 번호로 숙소에 전달되며, 퇴실 후 7일간 보관됩니다 </em></p>
@@ -300,7 +302,7 @@
                     <div class="payment_info">
                         <div class="title">
                             <h2>결제 정보</h2>
-                            <a href="#">결제 증빙 보기</a>
+                            <a href="#" class="paymentview">결제 증빙 보기</a>
                         </div>
                         <div class="payment">
                             <div class="payment_day">
@@ -339,13 +341,13 @@
                         <div class="cancel">
                             <div class="title">
                                 <h2>예약 취소</h2>
-                                <a href="#">예약취소</a>
+                                <a href="#" class="reser_cancel">예약취소</a>
                             </div>
                             <p>2024년 02월 02일 23:59 까지 무료 취소 가능합니다.</p>
                         </div>
                         <div class="policy">
                             <p>산 전망 스탠다드 더블 룸 정책</p>
-                            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+                            <a href="#" class="policy_click"><i class="fa-solid fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -354,5 +356,6 @@
     </main>
     <?php include("./footer.php") ?>
     <script src="./script/header.js"></script>
+    <script src="./script/non_member_reservation_check.js"></script>
 </body>
 </html>

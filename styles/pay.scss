@@ -104,7 +104,7 @@
                         }
                     }
                     .coupon_txt {
-                        text-align:center; padding:30px 0;
+                        text-align:center; padding:10px 0;
                         span {font-size:$subC14; color:#bdbdbd;}
                     }
                 }
@@ -168,8 +168,12 @@
                         #discount_num::placeholder {color:#dfdfdf;}
                         #discount_num:hover {background-color:#f5f5f5; border-radius:8px;}
                         #discount_num:focus {
-                            border:1px solid #000;
+                            border:1.5px solid #000;
                             background-color:#fff; width:100%;
+                        }
+                        .error_border {
+                            //js
+                            border: 1.5px solid #f45858 !important;
                         }
                         .reset {
                             // js
@@ -192,7 +196,7 @@
                 }
                 .popup_massage {
                     p {font-size:$small12; color:#999; padding:2px 0;}
-                    .error_message {
+                    .error_massage {
                         //js
                         display:none;
                         color:$subColor-r; font-size:$small12;
@@ -245,6 +249,7 @@ main {
                                 }
                                 .input_box_name {
                                     @include flex-rnsc; width:340px;
+                                    position:relative;
                                     #user_name {
                                         width:340px; height:48px;
                                         background-color:#f5f5f5; border-radius:8px;
@@ -254,19 +259,19 @@ main {
                                     #user_name::placeholder {color:#bdbdbd;}
                                     #user_name:hover {background-color:#eeeeee; border-radius:8px;}
                                     #user_name:focus {
-                                        border:1px solid #000;
+                                        border:1.5px solid #000;
                                         background-color:#fff; width:100%;
                                     }
                                     .reset {
                                         //js
                                         display:none;
-                                        position:relative; right:30px;
+                                        position:absolute; right:15px;
                                         i {color:#bdbdbd;}
                                     }
                                 }
                                 .error_border {
                                     //js
-                                    border: 1.5px solid #f45858;
+                                    border: 1.5px solid #f45858 !important;
                                 }
                                 .error_message {
                                     color: $subColor-r; font-size:$small12;
@@ -283,7 +288,7 @@ main {
                                 // display:none;
                                 .input_box_num {
                                     @include flex-rnsc; width:340px;
-                                    margin-bottom:5px;
+                                    margin-bottom:5px; position:relative;
                                     #user_phone_m {
                                         width:340px; height:48px;
                                         background-color:#f5f5f5; border-radius:8px;
@@ -293,27 +298,27 @@ main {
                                     #user_phone_m::placeholder {color:#bdbdbd;}
                                     #user_phone_m:hover {background-color:#eeeeee; border-radius:8px;}
                                     #user_phone_m:focus {
-                                        border:1px solid #000;
+                                        border:1.5px solid #000;
                                         background-color:#fff; width:100%;
                                     }
                                     .reset {
                                         //js
                                         display:none;
-                                        position:relative; right:30px;
+                                        position:absolute; right:15px;
                                         i {color:#bdbdbd;}
                                     }
                                 }
                                 .error_border {
                                     //js
-                                    border: 1.5px solid #f45858;
+                                    border: 1.5px solid #f45858 !important;
                                 }
                                 .error_message {
                                     color: $subColor-r; font-size:$small12;
-                                    margin:5px 0 20px;
+                                    margin:5px 0;
                                     //js
                                     display:none;
-                                    //예약자 이름을 입력해주세요.
-                                    //이름은 2자 이상 입력해주세요.
+                                    //휴대폰 번호를 입력해주세요.
+                                    //휴대폰 번호를 확인해주세요.
                                 }
                                 input::-webkit-outer-spin-button,
                                 input::-webkit-inner-spin-button {
@@ -451,7 +456,8 @@ main {
                             border-bottom:1px solid #ebebeb;
                             h2 {
                                 font-size:$title18; font-family:$familyBold;
-                                margin:25px 0;}
+                                margin:25px 0;
+                            }
                             .benefit {
                                 em {
                                     background-color:$subColor-r; color:$mainColor-w;
@@ -467,10 +473,10 @@ main {
                                 margin:8px 0 16px;
                                 width:100%;
                                 li {
-                                    border:1px solid #ebebeb; padding:10px 5px;
+                                    border:1.5px solid #ebebeb; padding:10px 5px;
                                     @include flex-rncc; text-align:center;
                                     border-radius:10px; margin:5px; cursor:pointer;
-                                    font-size:$subC14; font-family:$familyMedium;
+                                    font-size:$subC14; font-family:$familySemiBold;
                                     img {width:70px;}
                                 }
                                 //js 클릭시 활성화

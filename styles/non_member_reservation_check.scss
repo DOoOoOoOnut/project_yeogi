@@ -1,15 +1,12 @@
 @import 'common';
 
 .address_copy {
-    display: none !important;
     width: 250px;
     display: flex; flex-flow: column nowrap;
-    padding: 16px;
     border-radius: 10px;
     position: absolute; left: 50%; top: 50%;
     transform: translateX(-50%);
     .copy {
-        display: none;
         background: #333;
         border-radius: 5px;
         text-align: center;
@@ -21,15 +18,13 @@
     }
 }
 .reservation_num_copy {
-    display: none !important;
     width: 300px;
     display: flex; flex-flow: column nowrap;
     padding: 16px;
     border-radius: 10px;
-    position: absolute; left: 50%; top: 50%;
+    position: absolute; left: 50%; top: 60%;
     transform: translateX(-50%);
     .copy {
-        display: none;
         background: #333;
         border-radius: 5px;
         text-align: center;
@@ -41,8 +36,8 @@
     }
 }
 .purchase_information {
-    display: none;
     .bg {
+        display: none;
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.3);
@@ -50,6 +45,7 @@
         z-index: 950;
         position: fixed;
         .information_container {
+            display: none;
             margin-top: 100px;
             width: 600px; max-height: 800px;
             padding: 16px;
@@ -130,110 +126,111 @@
     }
 }
 .proof_payment {
-    display: none;
     .bg {
+        display: none;
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.3);
         position: relative;
         z-index: 950;
         position: fixed;
-        .proof {
+        .proof_container {
             display: none;
-            width: 350px; height: 330px;
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            background: #fff;
-            position: absolute; left: 50%; top: 40%;
-            transform: translateX(-50%);
-            .title {
-                h2 {
-                    font-size: $title18;
-                    color: #333;
-                    padding: 12px 0;
+            .proof {
+                width: 350px; height: 330px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                background: #fff;
+                position: absolute; left: 50%; top: 40%;
+                transform: translateX(-50%);
+                .title {
+                    h2 {
+                        font-size: $title18;
+                        color: #333;
+                        padding: 12px 0;
+                    }
+                    p {
+                        font-size: $defalt16;
+                        color: #000000CC;
+                        padding: 10px 0;
+                    }
                 }
+                a {
+                    font-size: $defalt16;
+                    color: #fff;
+                    background: $mainColor-b;
+                    padding: 15px 20px;
+                    display: block;
+                    margin: 20px 0;
+                    border-radius: 6px;
+                    text-align: center;
+                }
+                a:hover {
+                    opacity: 90%;
+                }
+                .close {
+                    color: #0000008F;
+                    background: #fff;
+                }
+            }
+            .transaction_detail {
+                width: 350px; height: 270px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                background: #fff;
+                position: absolute; left: 50%; top: 50%;
+                transform: translateX(-50%);
                 p {
                     font-size: $defalt16;
                     color: #000000CC;
-                    padding: 10px 0;
+                    padding: 5px 0;
                 }
-            }
-            a {
-                font-size: $defalt16;
-                color: #fff;
-                background: $mainColor-b;
-                padding: 15px 20px;
-                display: block;
-                margin: 20px 0;
-                border-radius: 6px;
-                text-align: center;
-            }
-            a:hover {
-                opacity: 90%;
-            }
-            .close {
-                color: #0000008F;
-                background: #fff;
-            }
-        }
-        .transaction_detail {
-            display: none;
-            width: 350px; height: 270px;
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            background: #fff;
-            position: absolute; left: 50%; top: 50%;
-            transform: translateX(-50%);
-            p {
-                font-size: $defalt16;
-                color: #000000CC;
-                padding: 5px 0;
-            }
-            label {
-                padding: 20px 0;
-                display: flex; flex-flow: column nowrap;
-                span {
-                    font-size: $small13;
-                    color: #707070;
-                    margin: 5px 0;
+                label {
+                    padding: 20px 0;
+                    display: flex; flex-flow: column nowrap;
+                    span {
+                        font-size: $small13;
+                        color: #707070;
+                        margin: 5px 0;
+                    }
+                    #email {
+                        background: #fff;
+                        border: 1px solid #f7323f;
+                        padding: 10px 20px;
+                        border-radius: 6px;
+                    }
+                    .error {
+                        font-size: $small12;
+                        color: $subColor-r;
+                    }
                 }
-                #email {
-                    background: #fff;
-                    border: 1px solid #f7323f;
-                    padding: 10px 20px;
-                    border-radius: 6px;
-                }
-                .error {
-                    font-size: $small12;
-                    color: $subColor-r;
-                }
-            }
-            .send_cancel {
-                text-align: center;
-                width: 100%;
-                #cancel {
-                    font-size: $defalt16;
-                    color: #333;
-                    padding: 10px 65px;
-                    background: #ebebeb;
-                    border-radius: 6px;
-                }
-                #send {
-                    font-size: $defalt16;
-                    color: #00000029;
-                    padding: 10px 65px;
-                    background: #fafafa;
-                    border-radius: 6px;
+                .send_cancel {
+                    text-align: center;
+                    width: 100%;
+                    #cancel {
+                        font-size: $defalt16;
+                        color: #333;
+                        padding: 10px 65px;
+                        background: #ebebeb;
+                        border-radius: 6px;
+                    }
+                    #send {
+                        font-size: $defalt16;
+                        color: #00000029;
+                        padding: 10px 65px;
+                        background: #fafafa;
+                        border-radius: 6px;
+                    }
                 }
             }
         }
     }
 }
 .room_policy {
-    display: none;
     .bg {
+        display: none;
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.3);
@@ -241,6 +238,7 @@
         z-index: 950;
         position: fixed;
         .policy {
+            display: none;
             width: 390px;
             background: #fff;
             padding: 10px;
@@ -303,8 +301,8 @@
     }
 }
 .reservation_check_cancel {
-    display: none;
     .bg {
+        display: none;
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.3);
@@ -312,7 +310,8 @@
         z-index: 950;
         position: fixed;
         .check_cancel {
-            width: 600px;
+            display: none;
+            width: 620px;
             background: #fff;
             padding: 15px;
             border-radius: 10px;
@@ -340,12 +339,15 @@
                     align-items: center; 
                     justify-content: center;
                     p {
+                        display: flex; flex-flow: row nowrap;
+                        align-items: center; 
                         width: 100%;
                         background: $subColor-r;
                         padding: 10px 20px;
                         margin-bottom: 20px;
                         i {
                             color: #fff;
+                            margin-right: 5px;
                         }
                         span {
                             font-size: $small13;
@@ -499,12 +501,14 @@
                     }
                 }
                 .close_progress {
+                    display: flex;
                     #close {
                         font-size: $title18; font-weight: $weight600;
                         color: #333;
                         background: #ebebeb;
                         padding: 15px 110px;
                         border-radius: 10px;
+                        margin-right: 5px;
                     }
                     #close:hover {
                         opacity: 80%;
@@ -609,12 +613,12 @@ main {
                             font-size: $subC14;
                             color: #999;
                         }
-                        .copy {
+                        #copy {
                             font-size: $subC14; font-weight: $weight600;
                             color: $mainColor-b;
                             padding-left: 10px;
                         }
-                        .copy:hover {
+                        #copy:hover {
                             text-decoration: underline;
                         }
                     }
@@ -624,7 +628,7 @@ main {
                 display: none;
                 width: calc(100% - 40px);
                 margin: 0 auto 20px;
-                button {
+                #m_copy {
                     display: inline-block;
                     width: calc(50% - 5px);
                     background: #ebebeb;
@@ -634,6 +638,13 @@ main {
                     i {
                         margin-right: 5px
                     }
+                }
+                #m_inquiry {
+                    width: calc(50% - 5px);
+                    background: #ebebeb;
+                    border-radius: 10px;
+                    padding: 13px;
+                    font-family: $familySemiBold;
                 }
             }
             .container {
@@ -670,11 +681,11 @@ main {
                                 color: #333;
                                 padding: 0 15px;
                             }
-                            a {
+                            .purchase {
                                 font-size: $subC14; font-weight: $weight600;
                                 color: $mainColor-b;
                             }
-                            a:hover {
+                            .purchase:hover {
                                 text-decoration: underline;
                             }
                         }
@@ -709,11 +720,11 @@ main {
                                     color: 333;
                                     padding: 0 10px 20px 15px;
                                 }
-                                a {
+                                .reservation {
                                     font-size: $subC14; font-weight: $weight600;
                                     color: $mainColor-b;
                                 }
-                                a:hover {
+                                .reservation:hover {
                                     text-decoration: underline;
                                 }
                             }
@@ -744,14 +755,14 @@ main {
                             color: #333;
                             padding: 20px 0;
                         }
-                        a {
+                        .paymentview {
                             font-size: $small12; font-weight: $weight600;
                             color: #333;
                             background: #ebebeb;
                             padding: 9px 12px;
                             border-radius: 6px;
                         }
-                        a:hover {
+                        .paymentview:hover {
                             background: #e1e1e1;
                         }
                     }
@@ -844,14 +855,14 @@ main {
                                 color: #333;
                                 padding-bottom: 30px;
                             }
-                            a {
+                            .reser_cancel {
                                 font-size: $small12; font-weight: 600;
                                 color: $subColor-r;
                                 background: #FFEBEB;
                                 padding: 9px 12px;
                                 border-radius: 6px;
                             }
-                            a:hover {
+                            .reser_cancel:hover {
                                 background: #ffdada;
                             }
                         }
@@ -868,7 +879,7 @@ main {
                             font-size: $title18; font-weight: $weight600;
                             color: #333;
                         }
-                        a {
+                        .policy_click {
                             i {
                                 color: #999;
                             }

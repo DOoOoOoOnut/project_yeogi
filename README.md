@@ -313,3 +313,7 @@ ex) ./images/main/ _best_hotel001
 - 민아
 1. index.html js 작업
 2. pay.html js 작업
+
+- 일혁 
+1. 상세페이지 완성
+2. 비회원예약내역상세 페이지 완성

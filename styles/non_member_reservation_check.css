@@ -1,9 +1,7 @@
 .address_copy {
-  display: none !important;
   width: 250px;
   display: flex;
   flex-flow: column nowrap;
-  padding: 16px;
   border-radius: 10px;
   position: absolute;
   left: 50%;
@@ -11,7 +9,6 @@
   transform: translateX(-50%);
 }
 .address_copy .copy {
-  display: none;
   background: #333;
   border-radius: 5px;
   text-align: center;
@@ -23,7 +20,6 @@
 }
 
 .reservation_num_copy {
-  display: none !important;
   width: 300px;
   display: flex;
   flex-flow: column nowrap;
@@ -31,11 +27,10 @@
   border-radius: 10px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 60%;
   transform: translateX(-50%);
 }
 .reservation_num_copy .copy {
-  display: none;
   background: #333;
   border-radius: 5px;
   text-align: center;
@@ -46,10 +41,8 @@
   color: #fff;
 }
 
-.purchase_information {
-  display: none;
-}
 .purchase_information .bg {
+  display: none;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
@@ -58,6 +51,7 @@
   position: fixed;
 }
 .purchase_information .bg .information_container {
+  display: none;
   margin-top: 100px;
   width: 600px;
   max-height: 800px;
@@ -132,10 +126,8 @@
   opacity: 90%;
 }
 
-.proof_payment {
-  display: none;
-}
 .proof_payment .bg {
+  display: none;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
@@ -143,8 +135,10 @@
   z-index: 950;
   position: fixed;
 }
-.proof_payment .bg .proof {
+.proof_payment .bg .proof_container {
   display: none;
+}
+.proof_payment .bg .proof_container .proof {
   width: 350px;
   height: 330px;
   background: #fff;
@@ -156,17 +150,17 @@
   top: 40%;
   transform: translateX(-50%);
 }
-.proof_payment .bg .proof .title h2 {
+.proof_payment .bg .proof_container .proof .title h2 {
   font-size: 1.125rem;
   color: #333;
   padding: 12px 0;
 }
-.proof_payment .bg .proof .title p {
+.proof_payment .bg .proof_container .proof .title p {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.8);
   padding: 10px 0;
 }
-.proof_payment .bg .proof a {
+.proof_payment .bg .proof_container .proof a {
   font-size: 1rem;
   color: #fff;
   background: #1273e4;
@@ -176,15 +170,14 @@
   border-radius: 6px;
   text-align: center;
 }
-.proof_payment .bg .proof a:hover {
+.proof_payment .bg .proof_container .proof a:hover {
   opacity: 90%;
 }
-.proof_payment .bg .proof .close {
+.proof_payment .bg .proof_container .proof .close {
   color: rgba(0, 0, 0, 0.5607843137);
   background: #fff;
 }
-.proof_payment .bg .transaction_detail {
-  display: none;
+.proof_payment .bg .proof_container .transaction_detail {
   width: 350px;
   height: 270px;
   background: #fff;
@@ -196,43 +189,43 @@
   top: 50%;
   transform: translateX(-50%);
 }
-.proof_payment .bg .transaction_detail p {
+.proof_payment .bg .proof_container .transaction_detail p {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.8);
   padding: 5px 0;
 }
-.proof_payment .bg .transaction_detail label {
+.proof_payment .bg .proof_container .transaction_detail label {
   padding: 20px 0;
   display: flex;
   flex-flow: column nowrap;
 }
-.proof_payment .bg .transaction_detail label span {
+.proof_payment .bg .proof_container .transaction_detail label span {
   font-size: 0.813rem;
   color: #707070;
   margin: 5px 0;
 }
-.proof_payment .bg .transaction_detail label #email {
+.proof_payment .bg .proof_container .transaction_detail label #email {
   background: #fff;
   border: 1px solid #f7323f;
   padding: 10px 20px;
   border-radius: 6px;
 }
-.proof_payment .bg .transaction_detail label .error {
+.proof_payment .bg .proof_container .transaction_detail label .error {
   font-size: 0.75rem;
   color: #f45858;
 }
-.proof_payment .bg .transaction_detail .send_cancel {
+.proof_payment .bg .proof_container .transaction_detail .send_cancel {
   text-align: center;
   width: 100%;
 }
-.proof_payment .bg .transaction_detail .send_cancel #cancel {
+.proof_payment .bg .proof_container .transaction_detail .send_cancel #cancel {
   font-size: 1rem;
   color: #333;
   padding: 10px 65px;
   background: #ebebeb;
   border-radius: 6px;
 }
-.proof_payment .bg .transaction_detail .send_cancel #send {
+.proof_payment .bg .proof_container .transaction_detail .send_cancel #send {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.1607843137);
   padding: 10px 65px;
@@ -240,10 +233,8 @@
   border-radius: 6px;
 }
 
-.room_policy {
-  display: none;
-}
 .room_policy .bg {
+  display: none;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
@@ -252,6 +243,7 @@
   position: fixed;
 }
 .room_policy .bg .policy {
+  display: none;
   width: 390px;
   background: #fff;
   padding: 10px;
@@ -314,10 +306,8 @@
   padding-bottom: 20px;
 }
 
-.reservation_check_cancel {
-  display: none;
-}
 .reservation_check_cancel .bg {
+  display: none;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
@@ -326,7 +316,8 @@
   position: fixed;
 }
 .reservation_check_cancel .bg .check_cancel {
-  width: 600px;
+  display: none;
+  width: 620px;
   background: #fff;
   padding: 15px;
   border-radius: 10px;
@@ -358,6 +349,9 @@
   justify-content: center;
 }
 .reservation_check_cancel .bg .check_cancel .wrap .cancel_info p {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   width: 100%;
   background: #f45858;
   padding: 10px 20px;
@@ -365,6 +359,7 @@
 }
 .reservation_check_cancel .bg .check_cancel .wrap .cancel_info p i {
   color: #fff;
+  margin-right: 5px;
 }
 .reservation_check_cancel .bg .check_cancel .wrap .cancel_info p span {
   font-size: 0.813rem;
@@ -531,6 +526,9 @@
   font-weight: 500;
   color: #f45858;
 }
+.reservation_check_cancel .bg .check_cancel .wrap .close_progress {
+  display: flex;
+}
 .reservation_check_cancel .bg .check_cancel .wrap .close_progress #close {
   font-size: 1.125rem;
   font-weight: 600;
@@ -538,6 +536,7 @@
   background: #ebebeb;
   padding: 15px 110px;
   border-radius: 10px;
+  margin-right: 5px;
 }
 .reservation_check_cancel .bg .check_cancel .wrap .close_progress #close:hover {
   opacity: 80%;
@@ -647,13 +646,13 @@ main section .reservation_detail_wrap .room_info .info .room_address p {
   font-size: 0.875rem;
   color: #999;
 }
-main section .reservation_detail_wrap .room_info .info .room_address .copy {
+main section .reservation_detail_wrap .room_info .info .room_address #copy {
   font-size: 0.875rem;
   font-weight: 600;
   color: #1273e4;
   padding-left: 10px;
 }
-main section .reservation_detail_wrap .room_info .info .room_address .copy:hover {
+main section .reservation_detail_wrap .room_info .info .room_address #copy:hover {
   text-decoration: underline;
 }
 main section .reservation_detail_wrap .m_copy_ask_btn {
@@ -661,7 +660,7 @@ main section .reservation_detail_wrap .m_copy_ask_btn {
   width: calc(100% - 40px);
   margin: 0 auto 20px;
 }
-main section .reservation_detail_wrap .m_copy_ask_btn button {
+main section .reservation_detail_wrap .m_copy_ask_btn #m_copy {
   display: inline-block;
   width: calc(50% - 5px);
   background: #ebebeb;
@@ -669,8 +668,15 @@ main section .reservation_detail_wrap .m_copy_ask_btn button {
   padding: 13px;
   font-family: PretendardSemiBold;
 }
-main section .reservation_detail_wrap .m_copy_ask_btn button i {
+main section .reservation_detail_wrap .m_copy_ask_btn #m_copy i {
   margin-right: 5px;
+}
+main section .reservation_detail_wrap .m_copy_ask_btn #m_inquiry {
+  width: calc(50% - 5px);
+  background: #ebebeb;
+  border-radius: 10px;
+  padding: 13px;
+  font-family: PretendardSemiBold;
 }
 main section .reservation_detail_wrap .container .room_detail {
   display: flex;
@@ -708,12 +714,12 @@ main section .reservation_detail_wrap .container .room_detail .room_type_result 
   color: #333;
   padding: 0 15px;
 }
-main section .reservation_detail_wrap .container .room_detail .room_type_result .stick a {
+main section .reservation_detail_wrap .container .room_detail .room_type_result .stick .purchase {
   font-size: 0.875rem;
   font-weight: 600;
   color: #1273e4;
 }
-main section .reservation_detail_wrap .container .room_detail .room_type_result .stick a:hover {
+main section .reservation_detail_wrap .container .room_detail .room_type_result .stick .purchase:hover {
   text-decoration: underline;
 }
 main section .reservation_detail_wrap .container .reservation_info {
@@ -756,12 +762,12 @@ main section .reservation_detail_wrap .container .reservation_info .reservation_
   color: 333;
   padding: 0 10px 20px 15px;
 }
-main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .stick a {
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .stick .reservation {
   font-size: 0.875rem;
   font-weight: 600;
   color: #1273e4;
 }
-main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .stick a:hover {
+main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result .stick .reservation:hover {
   text-decoration: underline;
 }
 main section .reservation_detail_wrap .container .reservation_info .reservation_box .reservation_num_result p {
@@ -792,7 +798,7 @@ main section .reservation_detail_wrap .container .payment_info .title h2 {
   color: #333;
   padding: 20px 0;
 }
-main section .reservation_detail_wrap .container .payment_info .title a {
+main section .reservation_detail_wrap .container .payment_info .title .paymentview {
   font-size: 0.75rem;
   font-weight: 600;
   color: #333;
@@ -800,7 +806,7 @@ main section .reservation_detail_wrap .container .payment_info .title a {
   padding: 9px 12px;
   border-radius: 6px;
 }
-main section .reservation_detail_wrap .container .payment_info .title a:hover {
+main section .reservation_detail_wrap .container .payment_info .title .paymentview:hover {
   background: #e1e1e1;
 }
 main section .reservation_detail_wrap .container .payment_info .payment {
@@ -903,7 +909,7 @@ main section .reservation_detail_wrap .container .reservation_cancel .cancel .ti
   color: #333;
   padding-bottom: 30px;
 }
-main section .reservation_detail_wrap .container .reservation_cancel .cancel .title a {
+main section .reservation_detail_wrap .container .reservation_cancel .cancel .title .reser_cancel {
   font-size: 0.75rem;
   font-weight: 600;
   color: #f45858;
@@ -911,7 +917,7 @@ main section .reservation_detail_wrap .container .reservation_cancel .cancel .ti
   padding: 9px 12px;
   border-radius: 6px;
 }
-main section .reservation_detail_wrap .container .reservation_cancel .cancel .title a:hover {
+main section .reservation_detail_wrap .container .reservation_cancel .cancel .title .reser_cancel:hover {
   background: #ffdada;
 }
 main section .reservation_detail_wrap .container .reservation_cancel .cancel p {
@@ -930,6 +936,6 @@ main section .reservation_detail_wrap .container .reservation_cancel .policy p {
   font-weight: 600;
   color: #333;
 }
-main section .reservation_detail_wrap .container .reservation_cancel .policy a i {
+main section .reservation_detail_wrap .container .reservation_cancel .policy .policy_click i {
   color: #999;
 }/*# sourceMappingURL=non_member_reservation_check.css.map */
