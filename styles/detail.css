@@ -561,7 +561,7 @@ main nav .box1 {
   top: 0;
   background: #fff;
   border-bottom: 1px solid rgb(235, 235, 235);
-  padding: 0 290px;
+  padding: 0 80px;
 }
 main nav .box1 .main_menu {
   width: 1400px;
@@ -575,6 +575,9 @@ main nav .box1 .main_menu .main_move {
 }
 main nav .box1 .main_menu .move {
   color: #707070;
+}
+main nav .box1 .main_menu .active {
+  color: #1273e4;
 }
 main nav .box1 .main_menu a {
   font-size: 1rem;
