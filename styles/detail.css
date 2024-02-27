@@ -549,6 +549,9 @@ html, body {
 
 main nav {
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 main nav .box1 {
   width: 100%;
@@ -556,15 +559,11 @@ main nav .box1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  z-index: 999;
-  top: 0;
   background: #fff;
   border-bottom: 1px solid rgb(235, 235, 235);
-  padding: 0 290px;
 }
 main nav .box1 .main_menu {
-  width: 1400px;
+  width: calc(100% - 135px);
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -583,7 +582,7 @@ main nav .box1 .main_menu a {
   margin-right: 30px;
 }
 main nav .box1 .select {
-  width: 125px;
+  width: 135px;
   background: #1273e4;
   border-radius: 8px;
   padding: 10px 15px;
@@ -888,6 +887,7 @@ main section .room .box2 .contents .additional_service .service .top .icon span 
   font-weight: 500;
   color: #707070;
   padding: 0 5px 0 10px;
+  white-space: nowrap;
 }
 main section .room .box2 .contents .additional_service .service .btm {
   display: flex;
