@@ -169,7 +169,7 @@
                             <button type="button" class="link_coupon">쿠폰</button>
                         </div>
                         <div class="nav_detail_m">
-                            <a href="./non_member_reservation_check.html">
+                            <a href="./Non_member_reservation.html">
                                 <span class="left">
                                     <span class="sprite sp1"></span>
                                     <span class="menu">비회원 예약조회</span>

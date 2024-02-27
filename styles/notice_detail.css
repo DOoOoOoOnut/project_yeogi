@@ -32,6 +32,9 @@ main section .title .day {
   font-size: 0.813rem;
   color: #C2C2C2;
 }
+main section .contents {
+  margin-bottom: 50px;
+}
 main section .contents p {
   font-size: 0.813rem;
   color: #333333;

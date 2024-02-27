@@ -68,3 +68,14 @@ new_inquiries_input.forEach(input => {
         }
     });
 });
+
+
+// 문의하기 클릭후 윈도우창 열리고 메인페이지로 넘어가기
+
+const inquire_btn = document.querySelector ('.inquire_btn')
+console.log (inquire_btn)
+
+inquire_btn.addEventListener('click',function(){
+    window.alert('접수가 완료 되었습니다.')
+    window.location.href ='./index.html'
+})

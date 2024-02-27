@@ -32,11 +32,13 @@ main {
             }
         }
         .contents {
+            margin-bottom: 50px;
             p {
                 font-size: $small13;
                 color: #333333;
                 line-height: 1.7;
                 letter-spacing: 1px;
+                
             }
             .title_event {
                 font-size: 0.8333rem;
