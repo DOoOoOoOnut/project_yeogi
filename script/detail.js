@@ -2,12 +2,17 @@
 const body = document.querySelector('html, body')
 const move = document.querySelectorAll ('.main_menu > .move')
 const link_contents = document.querySelectorAll('.link_contents')
-// const title1 = document.querySelector ('.room')
-// const title2 = document.querySelector ('.additional')
-// const title3 = document.querySelector ('.room_type')
-// const title4 = document.querySelector ('.location_box')
-// const title5 = document.querySelector ('.real_review')
-// console.log (move, link_contents)
+const num_btn = document.querySelectorAll('.number ')
+const select_room = document.querySelector('#select_room')
+console.log(select_room)
+
+num_btn[0].classList.add('active')
+for(let i of num_btn){
+    i.addEventListener('click',()=>{
+        hide(num_btn)
+        i.classList.add('active')
+    })
+}
 
 move[0].classList.add('active');
 
@@ -16,7 +21,7 @@ window.addEventListener('scroll', () => {
     move.forEach((obj, idx) => {
         if (body.scrollTop >= link_contents[idx].offsetTop - 100) {
             move_remove();
-            hide()
+            hide(move)
             obj.classList.add('main_move');
             obj.classList.add('active');
         }
@@ -28,21 +33,23 @@ const move_remove = () => {
         i.classList.remove('main_move');
     }
 }
-const hide = () => {
-    for (let i of move) {
+const hide = (name) => {
+    for (let i of name) {
         i.classList.remove('active');
     }
 }
 
 move.forEach((t, i) => {
     t.addEventListener('click', (e) => {
-        console.log(t)
         e.preventDefault();
         window.scrollTo(0, link_contents[i].offsetTop - 50);
     });
 });
 
-
+select_room.addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.scrollTo(0, link_contents[2].offsetTop - 50);
+})
 
 // 포토 썸네일
 
@@ -53,17 +60,6 @@ const allphoto = document.querySelector ('.more_photo')
 const view = document.querySelector ('.room_view_box')
 const imgcontainer = document.querySelector ('.imgcontainer')
 
-
-// const body_all_a = document.querySelectorAll ('body a')
-// // console.log(body_all_a)
-
-
-// for(let j of body_all_a){
-//     // console.log(j)
-//     j.addEventListener('click',(e)=>{
-//         e.preventDefault()
-//     })
-// }
 
 
 

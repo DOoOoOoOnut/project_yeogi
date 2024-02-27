@@ -1655,7 +1655,7 @@ main section .room .real_review .pagination #prev {
 main section .room .real_review .pagination .num {
   display: flex;
 }
-main section .room .real_review .pagination .num #number {
+main section .room .real_review .pagination .num .number {
   font-size: 0.75rem;
   padding: 0 10px;
 }
