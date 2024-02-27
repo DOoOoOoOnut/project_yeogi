@@ -1,4 +1,4 @@
-<header>
+    <header>
         <div class="header_wrap">
             <h1><a href="./index.html"><img src="./images/icon/logo.png" alt="여기어때"></a></h1>
             <nav>
@@ -270,13 +270,13 @@
         <!-- 고정버튼 -->
         <div class="fixed_btn">
             <div class="top_btn_container">
-                <button type="button" id="top_btn">
+                <button type="button" class="top_btn">
                     <i class="fa-solid fa-angle-up"></i>
                     <span>TOP</span>
                 </button>
             </div>
             <div class="customer_container">
-                <button type="button" id="customer_btn">
+                <button type="button" class="customer_btn">
                     <i class="fa-solid fa-headset"></i>
                     <span>상담</span>
                 </button>
@@ -284,13 +284,13 @@
         </div>
         <!-- 고정버튼 모바일 -->
         <div class="fixed_btn_m">
-            <div class="top_btn_container">
-                <button type="button" id="top_btn">
+            <div class="top_btn_container_m">
+                <button type="button" class="top_btn_m">
                     <i class="fa-solid fa-angle-up"></i>
                 </button>
             </div>
-            <div class="customer_container">
-                <button type="button" id="customer_btn">
+            <div class="customer_container_m">
+                <button type="button" class="customer_btn_m">
                     <i class="fa-solid fa-headset"></i>
                 </button>
             </div>

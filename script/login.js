@@ -5,6 +5,8 @@ const userId = document.querySelector('#user_id')
 const userPw = document.querySelector('#user_pw')
 const loginBtn = document.querySelector('#login_btn')
 const resetBtn = document.querySelectorAll('i[class$=xmark]')
+const mypage_warp_nonmember = document.querySelector('.mypage_warp_nonmember')
+const mypage_warp_member = document.querySelector('.mypage_warp_member')
 
 console.log(error, userId, userPw)
 
@@ -92,4 +94,6 @@ updateLoginButton();
 loginBtn.addEventListener('click',()=>{
     alert('로그인 완료되었습니다')
     location.href = './index.html'
+    mypage_warp_member.style.display = 'block'
+    mypage_warp_nonmember.style.display = 'none'
 })
