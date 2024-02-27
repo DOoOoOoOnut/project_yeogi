@@ -165,17 +165,17 @@ main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .sea
   align-items: center;
   gap: 30px;
 }
-main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul .room_btn {
   padding: 15px 30px;
 }
-main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li span {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul .room_btn span {
   font-size: 0.875rem;
   white-space: nowrap;
 }
-main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li:first-child {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul .active {
   border-bottom: 2px solid #1273e4;
 }
-main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li:first-child span {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul .active span {
   color: #1273e4;
   font-family: PretendardBold;
 }
@@ -648,17 +648,16 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .s
   border-bottom: 1px solid #f5f5f5;
   padding: 25px 20px 0;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab h2 #kr_room {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab h2 .room_btn {
   padding: 0 10px 18px;
   margin-right: 20px;
-  color: #f7323f;
-  border-bottom: 2px solid #f7323f;
+  color: #999;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab h2 #over_room {
-  padding: 0 10px 18px;
-  color: #999;
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab h2 .active {
+  color: #f7323f;
+  border-bottom: 2px solid #f7323f;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box {
   display: flex;

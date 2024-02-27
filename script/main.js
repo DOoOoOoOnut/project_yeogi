@@ -13,9 +13,10 @@ const main_popup = document.querySelector('.main_popup')
 const search_popup = document.querySelector('.search_popup')
 const travel_search = document.querySelector('.travel_search')
 const back_btn = document.querySelector('.close_btn')
+const room_btn = document.querySelectorAll('.room_btn')
 let hover = true
 // console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
-console.log(back_btn)
+console.log(room_btn)
 
 userSearch.addEventListener('click',()=>{
     searchRanking.style.display = 'block'
