@@ -63,17 +63,6 @@ paymentview.addEventListener('click', function(e){
     e.preventDefault()
 })
 
-// const email = document.querySelector ('#email')
-// const send = document.querySelector ('#send')
-// const send_01 = document.querySelector ('#send_01')
-// console.log (email, send, send_01)
-// send_01.style.display = 'none'
-
-// send.addEventListener ('click',function(){
-//     send.style.display = 'none'
-//     send_01.style.display = 'flex'
-//     window.location.href ='./non_member_reservation_receipt.html'
-// })
 
 
 //예약취소
@@ -111,4 +100,25 @@ policy_click.addEventListener('click', function(e){
     room_policy_bg.style.display = 'flex'
     policy.style.display = 'block'
     e.preventDefault()
+})
+
+const email = document.querySelector ('#email')
+const send = document.querySelector ('#send')
+console.log (email, send)
+
+
+email.addEventListener('input',function(){
+    // 숫자 다 쓰면 버튼 활성화
+    if(this.value.length > 0){
+        send.classList.add('active')
+        send.disabled = false;
+    // 입력 값이 공백 일 때
+    }else{
+        send.classList.remove('active')
+        send.disabled = true;
+    }
+})
+
+send.addEventListener ('click',function(){
+    window.location.href ='./non_member_reservation_receipt.html'
 })

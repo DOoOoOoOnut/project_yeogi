@@ -225,13 +225,9 @@
                         background: #fafafa;
                         border-radius: 6px;
                     }
-                    #send_01 {
-                        display: none;
-                        font-size: $defalt16;
-                        color: #fff;
-                        padding: 10px 65px;
-                        background: $mainColor-b;
-                        border-radius: 6px;
+                    button.active {
+                        color: #fff !important;
+                        background: $mainColor-b !important;
                     }
                 }
             }

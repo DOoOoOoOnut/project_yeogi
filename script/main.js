@@ -12,7 +12,7 @@ const search_small = document.querySelector('.search_small')
 const main_popup = document.querySelector('.main_popup')
 const search_popup = document.querySelector('.search_popup')
 const travel_search = document.querySelector('.travel_search')
-const back_btn = document.querySelector('.back_btn')
+const back_btn = document.querySelector('.close_btn')
 let hover = true
 // console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
 console.log(back_btn)

@@ -234,13 +234,9 @@
   background: #fafafa;
   border-radius: 6px;
 }
-.proof_payment .bg .proof_container .transaction_detail .send_cancel #send_01 {
-  display: none;
-  font-size: 1rem;
-  color: #fff;
-  padding: 10px 65px;
-  background: #1273e4;
-  border-radius: 6px;
+.proof_payment .bg .proof_container .transaction_detail .send_cancel button.active {
+  color: #fff !important;
+  background: #1273e4 !important;
 }
 
 .room_policy .bg {
