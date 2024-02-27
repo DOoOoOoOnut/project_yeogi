@@ -501,17 +501,18 @@ html, body {scroll-behavior:smooth;}
 main {
     nav {
         width: 100%;
+        position: sticky;
+        top: 0; z-index: 999;
         .box1 {
             width: 100%;
             padding: 0 40px;
             display: flex; justify-content: space-between;
             align-items: center;
-            position: fixed; z-index: 999; top: 0;
             background: #fff;
             border-bottom: 1px solid rgb(235 235 235);
             padding: 0 80px;
             .main_menu {
-                width: 1400px;
+                width: calc(100% - 135px);
                 display: flex; flex-flow: row nowrap;
                 align-items: center;
                 .main_move {
@@ -529,7 +530,7 @@ main {
                 }
             }
             .select {
-                width: 125px;
+                width: 135px;
                 background: $mainColor-b;
                 border-radius: 8px;
                 padding: 10px 15px;
@@ -785,6 +786,7 @@ main {
                                         font-size: $defalt16; font-weight: $weight500;
                                         color: #707070;
                                         padding: 0 5px 0 10px;
+                                        white-space: nowrap;
                                     }
                                 }
                             }

@@ -43,6 +43,7 @@ move.forEach((t, i) => {
 });
 
 
+
 // 포토 썸네일
 
 const photo_bg = document.querySelector ('.room_view_box .bg')
