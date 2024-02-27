@@ -33,7 +33,6 @@ main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg {
   position: relative;
   z-index: 9999;
   position: fixed;
-  display: none;
 }
 main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search {
   width: 100%;
@@ -227,6 +226,7 @@ main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .sea
   border-radius: 16px;
   padding: 8px 20px 20px;
   width: 100%;
+  margin-bottom: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
   display: none;
 }
@@ -942,7 +942,7 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   border-radius: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
   padding: 0 20px;
-  width: 100%;
+  width: 300px;
   position: absolute;
   top: 55px;
   left: 0;
@@ -1071,14 +1071,14 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small 
   margin-right: 5px;
   color: #707070;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_m {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_mobile {
   cursor: pointer;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_m::-moz-placeholder {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_mobile::-moz-placeholder {
   color: #999;
   font-family: PretendardMedium;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_m::placeholder {
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_mobile::placeholder {
   color: #999;
   font-family: PretendardMedium;
 }

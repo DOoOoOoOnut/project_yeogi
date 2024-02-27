@@ -2,9 +2,10 @@ const menuBtn = document.querySelector('.menu')
 const openMenu = document.querySelector('.mypage_detail')
 const overTravelBtn = document.querySelector('.over_travel .prev')
 const overTravelBox = document.querySelector('.over_travel_box')
+const popular_search = document.querySelector('.popular_search')
+const popular_search_list = document.querySelector('.popular_search .search_list')
 
-console.log(menuBtn,openMenu)
-
+console.log(popular_search)
 
 openMenu.classList.add('hide')
 menuBtn.addEventListener('click',()=>{
@@ -12,24 +13,39 @@ menuBtn.addEventListener('click',()=>{
 })
 
 let isMouseOver = false;
-
-overTravelBtn.addEventListener('mouseenter', () => {
-    overTravelBox.style.display = 'flex';
-    isMouseOver = true; 
+// 해외 여행지 클릭 시 팝업
+let overblean = false
+overTravelBtn.addEventListener('click', () => {
+    overblean  = !overblean
+    if(overblean){
+        overTravelBox.style.display = 'flex';
+    }else{
+        overTravelBox.style.display = 'none';
+    }
+});
+// 강릉 여행지 클릭 시 팝업
+let krblean = false
+popular_search.addEventListener('click', () => {
+    krblean  = !krblean
+    if(krblean){
+        popular_search_list.style.display = 'flex';
+    }else{
+        popular_search_list.style.display = 'none';
+    }
 });
 
-overTravelBox.addEventListener('mouseenter', () => {
+/* overTravelBox.addEventListener('mouseenter', () => {
     isMouseOver = true;
-});
+}); */
 
-overTravelBtn.addEventListener('mouseleave', () => {
+/* overTravelBtn.addEventListener('mouseleave', () => {
     setTimeout(() => {
         if (!isMouseOver) {
             overTravelBox.style.display = 'none';
         }
     }, 10);
-});
-
+}); */
+/* 
 overTravelBox.addEventListener('mouseleave', () => {
     isMouseOver = false;
     setTimeout(() => {
@@ -37,11 +53,12 @@ overTravelBox.addEventListener('mouseleave', () => {
             overTravelBox.style.display = 'none';
         }
     }, 10);
-});
+}); */
 
 const mNavOpen = document.querySelector('.mypage_warp_nonmember .m_menu')
 const mNavClose = document.querySelector('.nav_m .top .close')
 const mNav = document.querySelector('.nav_wrap_m')
+
 
 mNav.style.display = 'none'
 mNavOpen.addEventListener('click',()=>{
