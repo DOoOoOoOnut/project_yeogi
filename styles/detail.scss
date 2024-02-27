@@ -498,7 +498,7 @@ html, body {scroll-behavior:smooth;}
     }
 }
 main {
-    max-width: 1400px; margin: $margin0;
+    
     nav {
         width: 100%;
         .box1 {
@@ -539,6 +539,7 @@ main {
         }
     }
     section {
+        margin: $margin0;
         max-width:1400px;
         padding: 0 40px;
         .room {
@@ -579,7 +580,7 @@ main {
                         .box4 {grid-area:item4;}
                     }
                     .more_photo {
-                        position: absolute; right: 5%; bottom: 12%;
+                        position: absolute; right: 5%; bottom: 6%;
                         font-size: $subC14;
                         color: #333;
                         background: #fff;
