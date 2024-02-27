@@ -2,6 +2,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+.room_view_box {
+  width: 100%;
+  height: 100%;
+}
 .room_view_box .bg {
   display: none;
   width: 100%;
@@ -9,6 +13,7 @@ html, body {
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 9970;
+  top: 0;
   position: fixed;
 }
 .room_view_box .bg .imgcontainer {
@@ -190,6 +195,7 @@ html, body {
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 9970;
+  top: 0;
   position: fixed;
 }
 .coupon_service .bg .coupon_box {
@@ -241,6 +247,7 @@ html, body {
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 9970;
+  top: 0;
   position: fixed;
 }
 .service_wrap .bg .service_container {
@@ -337,6 +344,7 @@ html, body {
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 9970;
+  top: 0;
   position: fixed;
 }
 .seller_wrap .bg .seller_box {
@@ -396,6 +404,7 @@ html, body {
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 9970;
+  top: 0;
   position: fixed;
 }
 .pay_benefit .bg .pay_benefit_container {
@@ -501,6 +510,7 @@ html, body {
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 9970;
+  top: 0;
   position: fixed;
 }
 #map_popup .bg .map_view {

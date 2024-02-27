@@ -1,18 +1,4 @@
 
-var prevScrollPos = window.pageYOffset;
-
-window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-
-    if (prevScrollPos > currentScrollPos) {
-        document.querySelector("nav").classList.add("visible");
-    } else {
-        document.querySelector("nav").classList.remove("visible");
-    }
-
-    prevScrollPos = currentScrollPos;
-}
-
 // 포토 썸네일
 
 const photo_bg = document.querySelector ('.room_view_box .bg')
@@ -157,6 +143,16 @@ in_map.addEventListener('click', function(e){
 })
 
 plus.addEventListener('click', function(e){
+    map_popup_bg.style.display = 'flex'
+    map_pop.style.display = 'block'
+    e.preventDefault ()
+})
+
+//반응형 지도보기
+
+const mini_map_view = document.querySelector ('.mini_map_view')
+
+mini_map_view.addEventListener ('click', function(e){
     map_popup_bg.style.display = 'flex'
     map_pop.style.display = 'block'
     e.preventDefault ()
