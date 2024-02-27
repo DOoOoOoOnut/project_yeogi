@@ -71,6 +71,7 @@ html * {transition: all 0.1s;}
 }
 
 @media screen and (max-width:900px){
+    nav {display: none;}
     .review_box {
         display: none;
     }
@@ -83,8 +84,15 @@ html * {transition: all 0.1s;}
         width: 800px; height: 100%;
         background: linear-gradient(-90deg, white, transparent);
         position: absolute; right: -100px; top: 20px;
-        
     }
+    main section .room .real_review .review_user {
+        flex-flow: column nowrap;
+    }
+    main section .room .real_review .review_user .photo_review {
+        padding-left: 0;
+    }
+    
+main section .room .box2 .contents .detail_page .img img {width: 100%; height: auto;}
 }
 
 @media screen and (max-width:600px){

@@ -509,7 +509,9 @@ main {
             position: fixed; z-index: 999; top: 0;
             background: #fff;
             border-bottom: 1px solid rgb(235 235 235);
+            padding: 0 290px;
             .main_menu {
+                width: 1400px;
                 display: flex; flex-flow: row nowrap;
                 align-items: center;
                 .main_move {
@@ -833,7 +835,8 @@ main {
                                 color: #fff;
                                 line-height: 1.5;
                                 letter-spacing: 1.2px;
-                                position: absolute; left: 250px; bottom: 80px;
+                                position: absolute; left: 30%; bottom: 80px;
+                                transform: translateX(-50%);
                             }
                             .second_img {
                                 height: 588px;
@@ -842,7 +845,8 @@ main {
                                 color: #fff;
                                 line-height: 1.5;
                                 letter-spacing: 1.2px;
-                                position: absolute; left: 250px; bottom: -70%;
+                                position: absolute; left: 30%; top: 85%;
+                                transform: translateX(-50%);
                             }
                             .third_img {
                                 height: 588px;
@@ -851,7 +855,8 @@ main {
                                 color: #fff;
                                 line-height: 1.5;
                                 letter-spacing: 1.2px;
-                                position: absolute; left: 250px; bottom: -70%;
+                                position: absolute; left: 30%; top: 85%;
+                                transform: translateX(-50%);
                             }
                         }
                     }

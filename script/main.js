@@ -18,8 +18,20 @@ const search_popup_back = document.querySelector('.search_popup .back')
 const user_search_detail_m = document.querySelector('.user_search_detail_m')
 const travel_search = document.querySelector('.travel_search')
 const back_btn = document.querySelector('.close_btn')
+const room_btn = document.querySelectorAll('.room_btn')
+const room_btn_m = document.querySelectorAll('.room_btn_m')
+const more_btn = document.querySelector('.more_btn')
+const sub_menu_list = document.querySelector('.sub_menu_list')
+const i_rotate = document.querySelector('.more_btn i[class*=down]')
 let hover = true
+// console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
+console.log(sub_menu_list,i_rotate)
 
+let hide = (name)=>{
+    for(let i of name){
+        i.classList.remove('active')
+    }
+}
 
 // 국내 숙소 검색 영역
 userSearch.addEventListener('click',()=>{
@@ -58,53 +70,6 @@ back_btn.addEventListener('click',()=>{
     main_popup.style.display = 'none'
 })
 
-// 다른 곳 클릭하면 다시 비활성화 
-// document.addEventListener('click', function(search) {
-//     if (search.target !== userSearch) {
-//         searchRanking.style.display = 'none'
-//     }
-// })
-
-//
-/* window.addEventListener('load', function() {
-    const searchInput = document.getElementById('search_input');
-    const searchResults = document.querySelector('.search_results');
-    console.log(searchInput,searchResults)
-
-    searchInput.addEventListener('input', function(){
-        const searchQuery = this.value.toLowerCase();
-        console.log(searchQuery)
-        if (searchQuery.length === 0) {
-            searchResults.innerHTML = ''; // 입력값이 없을 때 검색 결과 초기화
-            return;
-        }
-
-        // 여기서 실제 검색 로직을 수행하고 결과를 동적으로 생성합니다.
-        const fakeSearchResults = ['경주', '강릉', '속초', '여수', '부산', '전주', '춘천', '제주도', '포항', '대전'];
-        const filteredResults = fakeSearchResults.filter(result => result.toLowerCase().includes(searchQuery));
-        
-        // 검색 결과를 표시합니다.
-        renderResults(filteredResults);
-        console.log(fakeSearchResults,filteredResults)
-    });
-
-    function renderResults(results) {
-        searchResults.innerHTML = ''; // 검색 결과 초기화
-        results.forEach(result => {
-            const li = document.createElement('li');
-            li.textContent = result;
-            li.addEventListener('click', function() {
-                searchInput.value = result;
-                searchResults.innerHTML = ''; // 검색 결과 클릭 시 초기화
-            });
-            searchResults.appendChild(li);
-            console.log(li)
-        });
-    }
-}); */
-
-//
-
 let calBlean = false
 calendarDate.addEventListener('click',()=>{
     calBlean = !calBlean;
@@ -116,14 +81,6 @@ calendarDate.addEventListener('click',()=>{
         dateSelectBox.style.display = 'none'
     }
 })
-
-// 다른 곳 클릭하면 다시 비활성화 
-/* document.addEventListener('click', function(event) {
-    if (event.target !== calendarDate) {
-        calendarDate.classList.remove('input_active')
-        dateSelectBox.style.display = 'none'
-    }
-}) */
 
 let numViewBlean = false 
 numView.addEventListener('click',()=>{
@@ -156,3 +113,24 @@ calendarDate.addEventListener('mouseout',()=>{
 })
 
 // 해외 숙소 클릭 
+room_btn[0].classList.add('active')
+room_btn_m[0].classList.add('active')
+
+
+for(let i of room_btn){
+    i.addEventListener('click',()=>{
+        hide(room_btn)
+        i.classList.add('active')
+    })
+}
+for(let i of room_btn_m){
+    i.addEventListener('click',()=>{
+        hide(room_btn_m)
+        i.classList.add('active')
+    })
+}
+
+more_btn.addEventListener('click',()=>{
+    sub_menu_list.classList.toggle('active')
+    i_rotate.classList.toggle('rotate');
+})
