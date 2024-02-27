@@ -1,15 +1,26 @@
 const chat_container = document.querySelector('.chat_container')
-const customer_btn = document.querySelector('#customer_btn')
-
+const customer_btn = document.querySelectorAll('.customer_btn')
+const customer_container = document.querySelector('.customer_container')
+const customer_container_m = document.querySelector('.customer_container_m')
 const chat_message = document.querySelector('.chat_box')
 const chat_input = document.querySelector('#user_send_message')
 const chat_btn = document.querySelector('#chat_send_btn')
 const chat_close_btn = document.querySelector('#chat_close_btn')
 const apiEndpoint = 'https://api.openai.com/v1/chat/completions'
 const apiKey = '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'
+console.log(customer_container_m,customer_container)
 
+chat_container.classList.remove('show')
 
-
+chat_close_btn.addEventListener('click',()=>{
+    chat_container.classList.remove('show')
+})
+customer_container.addEventListener('click',()=>{
+    chat_container.classList.add('show')
+})
+customer_container_m.addEventListener('click',()=>{
+    chat_container.classList.add('show')
+})
 
 // api ai 연결
 async function fetchAIResponse(prompt) {
@@ -87,4 +98,3 @@ function add_message(target, contents){
     message_element.innerHTML = `${target} : ${contents}`
     chat_message.appendChild(message_element)
 }
-

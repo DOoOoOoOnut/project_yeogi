@@ -8,11 +8,25 @@ const dateSelectBox = document.querySelector('.date_select_box')
 const numView = document.querySelector('.num_view')
 const numSelect = document.querySelector('#num_select')
 const userSelect = document.querySelector('.user_select')
+const search_small = document.querySelector('.search_small')
+const main_popup = document.querySelector('.main_popup')
+const search_popup = document.querySelector('.search_popup')
+const travel_search = document.querySelector('.travel_search')
+const back_btn = document.querySelector('.back_btn')
 let hover = true
-console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
+// console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
+console.log(back_btn)
 
 userSearch.addEventListener('click',()=>{
     searchRanking.style.display = 'block'
+})
+
+search_small.addEventListener('click',()=>{
+    main_popup.style.display = 'block'
+})
+
+back_btn.addEventListener('click',()=>{
+    main_popup.style.display = 'none'
 })
 
 // 다른 곳 클릭하면 다시 비활성화 

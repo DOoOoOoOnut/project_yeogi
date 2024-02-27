@@ -7,10 +7,11 @@ header {
   margin: 0 auto;
   padding: 0 30px;
   background-color: #fff;
+  height: 75px;
 }
 header .header_wrap {
   width: 100%;
-  padding: 20px 0;
+  padding: 17px 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -507,12 +508,12 @@ header .show {
 }
 header .fixed_btn {
   position: fixed;
-  bottom: 50px;
-  right: 30px;
+  bottom: 40px;
+  right: 40px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  z-index: 99;
+  z-index: 9999;
 }
 header .fixed_btn .top_btn_container {
   margin-bottom: 10px;
@@ -524,15 +525,15 @@ header .fixed_btn .top_btn_container {
   justify-content: center;
   align-items: center;
 }
-header .fixed_btn .top_btn_container #top_btn i {
+header .fixed_btn .top_btn_container .top_btn i {
   margin-right: 3px;
   color: #fff;
 }
-header .fixed_btn .top_btn_container #top_btn span {
+header .fixed_btn .top_btn_container .top_btn span {
   color: #fff;
   letter-spacing: 1px;
 }
-header .fixed_btn .customer_container #customer_btn {
+header .fixed_btn .customer_container .customer_btn {
   background-color: #f7323f;
   padding: 10px 15px;
   border-radius: 20px;
@@ -541,13 +542,48 @@ header .fixed_btn .customer_container #customer_btn {
   justify-content: center;
   align-items: center;
 }
-header .fixed_btn .customer_container #customer_btn i {
+header .fixed_btn .customer_container .customer_btn i {
   margin-right: 8px;
   color: #fff;
 }
-header .fixed_btn .customer_container #customer_btn span {
+header .fixed_btn .customer_container .customer_btn span {
   color: #fff;
   letter-spacing: 1px;
+}
+header .fixed_btn_m {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+header .fixed_btn_m .top_btn_container_m {
+  margin-bottom: 7px;
+  background-color: #f7323f;
+  padding: 8px 10px;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+header .fixed_btn_m .top_btn_container_m .top_btn_m i {
+  color: #fff;
+}
+header .fixed_btn_m .customer_container_m .customer_btn_m {
+  background-color: #f7323f;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+header .fixed_btn_m .customer_container_m .customer_btn_m i {
+  color: #fff;
 }
 header .chat_container {
   position: fixed;
@@ -555,11 +591,11 @@ header .chat_container {
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   right: -100%;
-  bottom: 200px;
+  bottom: 150px;
   width: 350px;
   height: 500px;
   transition: right 0.5s;
-  z-index: 999;
+  z-index: 9999;
 }
 header .chat_container .top {
   position: absolute;
@@ -574,7 +610,7 @@ header .chat_container .chat_wrap {
 }
 header .chat_container .chat_wrap .chat_box {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: flex-start;
   background-color: #feebec;
   border-radius: 10px;
@@ -582,6 +618,8 @@ header .chat_container .chat_wrap .chat_box {
   margin-bottom: 10px;
   padding: 20px;
   overflow-x: hidden;
+  overflow-y: auto;
+  justify-content: flex-end;
 }
 header .chat_container .chat_wrap .chat_box .message {
   max-width: 80%;
@@ -623,7 +661,24 @@ header .show {
 
 @media screen and (max-width: 900px) {
   header {
-    padding: 10px 30px;
+    padding: 10px 20px;
+    height: 56px;
+  }
+  header .header_wrap {
+    padding: 10px 0;
+  }
+  header .header_wrap h1 a img {
+    width: 80px;
+  }
+  header .fixed_btn {
+    display: none;
+  }
+  header .fixed_btn_m {
+    display: block;
+  }
+  header .chat_container {
+    bottom: 60px;
+    right: 20px;
   }
   .popular_search, .over_travel {
     display: none !important;

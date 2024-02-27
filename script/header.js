@@ -51,14 +51,6 @@ mNavClose.addEventListener('click',()=>{
     mNav.style.display = 'none'
 })
 
-
-customer_btn.addEventListener('click',()=>{
-    chat_container.classList.add('show')
-})
-chat_close_btn.addEventListener('click',()=>{
-    chat_container.classList.remove('show')
-})
-
 const mypage_box_m =document.querySelector('.mypage_box_m')
 const mypage_warp_nonmember_m = document.querySelector('.mypage_warp_nonmember_m')
 

@@ -22,7 +22,7 @@
     main .main_container {height:100%;}
     main .main_container .main_wrap {width: calc(100% - 40px);}
     main .main_container .main_wrap h1 {font-size:1.5rem; top:60px; letter-spacing:1px;}
-    main .main_container .main_bg {height:260px; position: relative;}
+    main .main_container .main_bg {height:260px; position: relative; top:0;}
     main .main_container .main_wrap .search_wrap {top:150px; border-radius:10px;}
     main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big {display:none;}
     main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small {display:block;}

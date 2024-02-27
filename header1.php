@@ -13,82 +13,82 @@
                         <div class="japan">
                             <h3>일본 추천 여행지</h3>
                             <div class="japan_detail">
-                                <a href="#">고베</a>
-                                <a href="#">교토</a>
-                                <a href="#">기타큐슈</a>
-                                <a href="#">나고야</a>
-                                <a href="#">나리타</a>
-                                <a href="#">노보리베츠</a>
-                                <a href="#">도쿄/동경</a>
-                                <a href="#">본섬</a>
-                                <a href="#">삿포로</a>
-                                <a href="#">오사카</a>
-                                <a href="#">오타루</a>
-                                <a href="#">오키나와</a>
-                                <a href="#">요코하마</a>
-                                <a href="#">유후</a>
-                                <a href="#">하코네</a>
-                                <a href="#">후쿠오카</a>
+                                <a href="search.html">고베</a>
+                                <a href="search.html">교토</a>
+                                <a href="search.html">기타큐슈</a>
+                                <a href="search.html">나고야</a>
+                                <a href="search.html">나리타</a>
+                                <a href="search.html">노보리베츠</a>
+                                <a href="search.html">도쿄/동경</a>
+                                <a href="search.html">본섬</a>
+                                <a href="search.html">삿포로</a>
+                                <a href="search.html">오사카</a>
+                                <a href="search.html">오타루</a>
+                                <a href="search.html">오키나와</a>
+                                <a href="search.html">요코하마</a>
+                                <a href="search.html">유후</a>
+                                <a href="search.html">하코네</a>
+                                <a href="search.html">후쿠오카</a>
                             </div>
                         </div>
                         <div class="asia">
                             <h3>아시아 추천 여행지</h3>
                             <div class="asia_detail">
                                 <div class="left">
-                                    <a href="#">괌 보홀</a>
-                                    <a href="#">푸퀵 / 푸꾸옥섬</a>
-                                    <a href="#">마닐라</a>
-                                    <a href="#">앙헬레스 / 클락</a>
-                                    <a href="#">세부</a>
-                                    <a href="#">코타키나발루</a>
-                                    <a href="#">벳푸</a>
-                                    <a href="#">나트랑 / 나짱</a>
-                                    <a href="#">홍콩</a>
-                                    <a href="#">호이안</a>
-                                    <a href="#">하노이</a>
-                                    <a href="#">판티엣</a>
-                                    <a href="#">쿠알라룸푸르</a>
-                                    <a href="#">달랏</a>
-                                    <a href="#">다낭</a>
-                                    <a href="#">보라카이</a>
-                                    <a href="#">호놀룰루(HI)</a>
+                                    <a href="search.html">괌 보홀</a>
+                                    <a href="search.html">푸퀵 / 푸꾸옥섬</a>
+                                    <a href="search.html">마닐라</a>
+                                    <a href="search.html">앙헬레스 / 클락</a>
+                                    <a href="search.html">세부</a>
+                                    <a href="search.html">코타키나발루</a>
+                                    <a href="search.html">벳푸</a>
+                                    <a href="search.html">나트랑 / 나짱</a>
+                                    <a href="search.html">홍콩</a>
+                                    <a href="search.html">호이안</a>
+                                    <a href="search.html">하노이</a>
+                                    <a href="search.html">판티엣</a>
+                                    <a href="search.html">쿠알라룸푸르</a>
+                                    <a href="search.html">달랏</a>
+                                    <a href="search.html">다낭</a>
+                                    <a href="search.html">보라카이</a>
+                                    <a href="search.html">호놀룰루(HI)</a>
                                 </div>
                                 <div class="right">
-                                    <a href="#">파타야</a>
-                                    <a href="#">사이판</a>
-                                    <a href="#">로마</a>
-                                    <a href="#">꼬사무이 / 코사무이</a>
-                                    <a href="#">부다페스트</a>
-                                    <a href="#">싱가포르</a>
-                                    <a href="#">타이페이</a>
-                                    <a href="#">마카오</a>
-                                    <a href="#">푸켓</a>
-                                    <a href="#">끄라비 / 크라비</a>
-                                    <a href="#">방콕</a>
-                                    <a href="#">호치민</a>
-                                    <a href="#">발리</a>
-                                    <a href="#">치앙마이</a>
-                                    <a href="#">멜버른 / 멜번</a>
-                                    <a href="#">방콕</a>
-                                    <a href="#">시드니</a>
+                                    <a href="search.html">파타야</a>
+                                    <a href="search.html">사이판</a>
+                                    <a href="search.html">로마</a>
+                                    <a href="search.html">꼬사무이 / 코사무이</a>
+                                    <a href="search.html">부다페스트</a>
+                                    <a href="search.html">싱가포르</a>
+                                    <a href="search.html">타이페이</a>
+                                    <a href="search.html">마카오</a>
+                                    <a href="search.html">푸켓</a>
+                                    <a href="search.html">끄라비 / 크라비</a>
+                                    <a href="search.html">방콕</a>
+                                    <a href="search.html">호치민</a>
+                                    <a href="search.html">발리</a>
+                                    <a href="search.html">치앙마이</a>
+                                    <a href="search.html">멜버른 / 멜번</a>
+                                    <a href="search.html">방콕</a>
+                                    <a href="search.html">시드니</a>
                                 </div>
                             </div>
                         </div>
                         <div class="europe_us">
                             <h3>유럽·미국 추천 여행지</h3>
                             <div class="europe_us_detail">
-                                <a href="#">파리</a>
-                                <a href="#">런던</a>
-                                <a href="#">인터라켄</a>
-                                <a href="#">뉴욕(NY)</a>
-                                <a href="#">로마</a>
-                                <a href="#">바르셀로나</a>
-                                <a href="#">로스엔젤레스(CA)</a>
-                                <a href="#">라스베이거느 / 라스베가스(NV)</a>
-                                <a href="#">그린델발트</a>
-                                <a href="#">프라하</a>
-                                <a href="#">비엔나 / 빈</a>
-                                <a href="#">피렌체 / 플로렌스</a>
+                                <a href="search.html">파리</a>
+                                <a href="search.html">런던</a>
+                                <a href="search.html">인터라켄</a>
+                                <a href="search.html">뉴욕(NY)</a>
+                                <a href="search.html">로마</a>
+                                <a href="search.html">바르셀로나</a>
+                                <a href="search.html">로스엔젤레스(CA)</a>
+                                <a href="search.html">라스베이거느 / 라스베가스(NV)</a>
+                                <a href="search.html">그린델발트</a>
+                                <a href="search.html">프라하</a>
+                                <a href="search.html">비엔나 / 빈</a>
+                                <a href="search.html">피렌체 / 플로렌스</a>
                             </div>
                         </div>
                     </div>
@@ -279,6 +279,19 @@
                 <button type="button" id="customer_btn">
                     <i class="fa-solid fa-headset"></i>
                     <span>상담</span>
+                </button>
+            </div>
+        </div>
+        <!-- 고정버튼 모바일 -->
+        <div class="fixed_btn_m">
+            <div class="top_btn_container">
+                <button type="button" id="top_btn">
+                    <i class="fa-solid fa-angle-up"></i>
+                </button>
+            </div>
+            <div class="customer_container">
+                <button type="button" id="customer_btn">
+                    <i class="fa-solid fa-headset"></i>
                 </button>
             </div>
         </div>
