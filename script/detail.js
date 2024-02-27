@@ -7,30 +7,7 @@ const title4 = document.querySelector ('.location_box')
 const title5 = document.querySelector ('.real_review')
 console.log (move, title1, title2, title3, title4, title5)
 
-move[0].addEventListener('click',()=>{
-    console.log(title1.offsetTop)
-    window.scrollTo(0, title1.offsetTop)
-})
 
-move[1].addEventListener('click',()=>{
-    console.log(title2.offsetTop)
-    window.scrollTo(0, title2.offsetTop)
-})
-
-move[2].addEventListener('click',()=>{
-    console.log(title3.offsetTop)
-    window.scrollTo(0, title3.offsetTop)
-})
-
-move[3].addEventListener('click',()=>{
-    console.log(title4.offsetTop)
-    window.scrollTo(0, title4.offsetTop)
-})
-
-move[4].addEventListener('click',()=>{
-    console.log(title5.offsetTop)
-    window.scrollTo(0, title5.offsetTop)
-})
 
 
 // 포토 썸네일
