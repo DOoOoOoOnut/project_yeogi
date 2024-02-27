@@ -165,10 +165,10 @@ main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .sea
   align-items: center;
   gap: 30px;
 }
-main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul .room_btn {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul .room_btn_m {
   padding: 15px 30px;
 }
-main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul .room_btn span {
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul .room_btn_m span {
   font-size: 0.875rem;
   white-space: nowrap;
 }
@@ -1377,6 +1377,7 @@ main .center_container .recommend_room_wrap .sub_menu_box {
 }
 main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list {
   display: flex;
+  flex-flow: row nowrap;
   overflow-x: hidden;
   white-space: nowrap;
 }
@@ -1393,6 +1394,9 @@ main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list .menu1 
   background-color: #1273e4;
   color: #fff;
   border: 0;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .active {
+  flex-flow: row wrap;
 }
 main .center_container .recommend_room_wrap .sub_menu_box .more_btn {
   display: none;
@@ -1414,6 +1418,9 @@ main .center_container .recommend_room_wrap .sub_menu_box .more_btn i {
   cursor: pointer;
   border: 1px solid #eeeeee;
   font-size: 13px;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .more_btn .rotate {
+  transform: rotate(180deg);
 }
 main .center_container .recommend_room_wrap .box_btn {
   width: 100%;
