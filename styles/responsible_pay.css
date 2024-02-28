@@ -24,7 +24,7 @@
     main .top {
         margin:0; background-color:#fff;
         width:100%; padding:20px;
-        position:fixed; z-index:999;
+        position:fixed; z-index:999; top: 0;
         box-shadow:0px 2px 8px rgba(0, 0, 0, 0.05);
     }
     main .top a i {font-size:1rem;}
@@ -58,8 +58,8 @@
     }
     main .pay_contents #pay_frm fieldset .container .wrap_right {width:100%;}
     main .pay_contents #pay_frm fieldset .container .wrap_right .right_top {
-        border:0; border-radius:0; position:absolute; top:40px; width:100%;
-        padding:20px;
+        border:0; border-radius:0; position:absolute; top:30px; width:100%;
+        padding:20px; 
     }
     main .pay_contents #pay_frm fieldset .container .wrap_right .right_top .room_info {margin-bottom:0;}
     main .pay_contents #pay_frm fieldset .container .wrap_right .right_bottom {
