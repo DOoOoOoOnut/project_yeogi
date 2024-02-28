@@ -134,6 +134,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   position: relative;
+  top: 0;
   z-index: 950;
   position: fixed;
 }
@@ -247,6 +248,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   position: relative;
+  top: 0;
   z-index: 950;
   position: fixed;
 }
@@ -320,6 +322,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   position: relative;
+  top: 0;
   z-index: 950;
   position: fixed;
 }
