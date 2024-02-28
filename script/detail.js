@@ -6,15 +6,15 @@ const num_btn = document.querySelectorAll('.number ')
 const select_room = document.querySelector('#select_room')
 console.log(select_room)
 
-num_btn[0].classList.add('active')
-for(let i of num_btn){
-    i.addEventListener('click',()=>{
-        hide(num_btn)
-        i.classList.add('active')
-    })
-}
+// num_btn[0].classList.add('active')
+// for(let i of num_btn){
+//     i.addEventListener('click',()=>{
+//         hide(num_btn)
+//         i.classList.add('active')
+//     })
+// }
 
-move[0].classList.add('active');
+// move[0].classList.add('active');
 
 // 버튼 누르면 스크롤 이동
 window.addEventListener('scroll', () => {
