@@ -10,9 +10,6 @@ const numSelect = document.querySelector('#num_select')
 const userSelect = document.querySelector('.num_detail .user_select')
 const search_small = document.querySelector('.search_small')
 const main_popup = document.querySelector('.main_popup')
-const search_before = document.querySelector('.search_before')
-const search_change = search_before.querySelector('.change')
-const search_after = document.querySelector('.search_after')
 const search_popup = document.querySelector('.search_popup')
 const search_popup_back = document.querySelector('.search_popup .back')
 const user_search_detail_m = document.querySelector('.user_search_detail_m')
@@ -42,15 +39,59 @@ searchInput.addEventListener('blur',()=>{
     searchRanking.style.display = 'none'
 })
 
-search_before.addEventListener('click',()=>{
-    search_after.style.display = 'block'
-    search_before.style.display = 'none'
-})
+// search_before.addEventListener('click',()=>{
+//     search_after.style.display = 'block'
+//     search_before.style.display = 'none'
+// })
 
-search_change.addEventListener('click',()=>{
-    search_after.style.display = 'block'
-    search_before.style.display = 'none'
-})
+// search_change.addEventListener('click',()=>{
+//     search_after.style.display = 'block'
+//     search_before.style.display = 'none'
+// })
+
+const search_box = document.querySelector('.search_box_m');
+const search_before = document.querySelector('.search_before')
+const search_after = document.querySelector('.search_after')
+const calendar_detail = document.querySelector('.calendar_detail_m');
+const calendar_detail_before = document.querySelector('.calendar_date_m')
+const calendar_detail_after = document.querySelector('.date_select_box_m')
+const num_detail = document.querySelector('.num_detail_m');
+const num_detail_before = document.querySelector('.num_view_m')
+const num_detail_after = document.querySelector('.user_select')
+console.log(search_box,calendar_detail,num_detail)
+console.log(search_before,search_after)
+
+search_box.addEventListener('click', () => {
+    // 클릭 전 상태
+    if (search_before.style.display = 'none') {
+        search_after.style.display = 'block'
+        calendar_detail_before.style.display = 'block'
+        calendar_detail_after.style.display = 'none'
+        num_detail_before.style.display = 'block'
+        num_detail_after.style.display = 'none'
+    }
+});
+
+calendar_detail.addEventListener('click', () => {
+    if (calendar_detail_before.style.display = 'none') {
+        calendar_detail_after.style.display = 'block'
+        search_before.style.display = 'block'
+        search_after.style.display = 'none'
+        num_detail_before.style.display = 'block'
+        num_detail_after.style.display = 'none'
+    }
+});
+
+num_detail.addEventListener('click', () => {
+    if (num_detail_before.style.display = 'none') {
+        num_detail_after.style.display = 'block'
+        search_before.style.display = 'block'
+        search_after.style.display = 'none'
+        calendar_detail_before.style.display = 'block'
+        calendar_detail_after.style.display = 'none'
+    }
+});
+
 
 // 모바일 search 검색 클릭시 나오는 팝업
 user_search_detail_m.addEventListener('click',()=>{
