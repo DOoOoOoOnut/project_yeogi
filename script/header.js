@@ -8,12 +8,14 @@ const top_btn = document.querySelector('.top_btn')
 const top_btn_m = document.querySelector('.top_btn_m')
 const link_container = document.querySelector('.link_container')
 
+console.log(link_container)
 
 // top버튼
 top_btn.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo(0, link_container.offsetTop - 50);
 });
+
 top_btn_m.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo(0, link_container.offsetTop - 50);
