@@ -126,7 +126,7 @@
                     </div>
                     <div class="mypage_detail">
                         <a href="login.html">로그인/회원가입</a>
-                        <a href="non_member_reservation_check.html">비회원 예약조회</a>
+                        <a href="Non_member_reservation.html">비회원 예약조회</a>
                         <a href="customer_service.html">고객센터</a>
                     </div>
                 </div>
