@@ -57,7 +57,7 @@ const calendar_detail_before = document.querySelector('.calendar_date_m')
 const calendar_detail_after = document.querySelector('.date_select_box_m')
 const num_detail = document.querySelector('.num_detail_m');
 const num_detail_before = document.querySelector('.num_view_m')
-const num_detail_after = document.querySelector('.user_select')
+const num_detail_after = document.querySelector('.person_wrap')
 console.log(search_box,calendar_detail,num_detail)
 console.log(search_before,search_after)
 
