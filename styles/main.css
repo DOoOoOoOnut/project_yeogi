@@ -1878,7 +1878,7 @@ main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper {
 main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .black_pick_detail {
   width: 25%;
 }
-main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .black_pick_detail img {
+main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .black_pick_detail a img {
   width: 100%;
   border-radius: 15px;
 }
