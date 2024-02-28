@@ -42,7 +42,7 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.3);
         position: relative;
-        z-index: 950;
+        z-index: 950; top: 0;
         position: fixed;
         .information_container {
             display: none;
@@ -51,7 +51,7 @@
             padding: 16px;
             border-radius: 10px;
             background: #fff;
-            position: absolute; left: 50%;
+            position: absolute; left: 50%; top: 0;
             transform: translateX(-50%);
             overflow-y: auto;
             .title {
