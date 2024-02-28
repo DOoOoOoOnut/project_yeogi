@@ -4,7 +4,7 @@ const move = document.querySelectorAll ('.main_menu > .move')
 const link_contents = document.querySelectorAll('.link_contents')
 const num_btn = document.querySelectorAll('.number ')
 const select_room = document.querySelector('#select_room')
-console.log(select_room)
+console.log(num_btn)
 
 num_btn[0].classList.add('active')
 for(let i of num_btn){
