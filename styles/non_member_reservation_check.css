@@ -48,6 +48,7 @@
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 950;
+  top: 0;
   position: fixed;
 }
 .purchase_information .bg .information_container {
@@ -60,6 +61,7 @@
   background: #fff;
   position: absolute;
   left: 50%;
+  top: 0;
   transform: translateX(-50%);
   overflow-y: auto;
 }

@@ -1513,12 +1513,12 @@ main {
                         .number {
                             font-size: $small12;
                             padding: 0 10px;
+                            width: 32px; height: 32px;
+                            border-radius: 50%;
                         }
                         .active {
                             background: $mainColor-b;
-                            width: 32px; height: 32px;
                             color: #fff;
-                            border-radius: 50%;
                         }
                     }
                     #next {

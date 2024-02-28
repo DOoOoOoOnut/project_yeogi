@@ -1,5 +1,5 @@
     <header>
-        <div class="header_wrap">
+        <div class="header_wrap link_container">
             <h1><a href="./index.html"><img src="./images/icon/logo.png" alt="여기어때"></a></h1>
             <nav>
                 <div class="over_travel">

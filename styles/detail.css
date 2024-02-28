@@ -1658,13 +1658,13 @@ main section .room .real_review .pagination .num {
 main section .room .real_review .pagination .num .number {
   font-size: 0.75rem;
   padding: 0 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }
 main section .room .real_review .pagination .num .active {
   background: #1273e4;
-  width: 32px;
-  height: 32px;
   color: #fff;
-  border-radius: 50%;
 }
 main section .room .real_review .pagination #next {
   font-size: 0.75rem;

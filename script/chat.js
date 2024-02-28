@@ -7,7 +7,7 @@ const chat_input = document.querySelector('#user_send_message')
 const chat_btn = document.querySelector('#chat_send_btn')
 const chat_close_btn = document.querySelector('#chat_close_btn')
 const apiEndpoint = 'https://api.openai.com/v1/chat/completions'
-const apiKey = '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'
+const apiKey = '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'
 console.log(customer_container_m,customer_container)
 
 chat_container.classList.remove('show')
