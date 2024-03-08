@@ -96,7 +96,7 @@
                 <div class="popular_search">
                     <div class="search_container">
                         <div class="search_name">
-                            <a href="search.html">강릉</a>
+                            <a href="#">강릉</a>
                             <div class="search_list">
                                 <a href="search.html">강릉</a>
                                 <a href="search.html">경주</a>

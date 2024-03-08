@@ -43,7 +43,7 @@ header {
                     h2 {cursor:pointer;}
                     h2:hover {color:#707070;}
                     .down {
-                        
+                        cursor: pointer;
                     }
                 }
                 .over_travel_box {
@@ -135,6 +135,7 @@ header {
             .mypage_warp_nonmember {
                 position:relative;
                 @include flex-rncc;
+                cursor: pointer;
                 .menu {
                     width:80px;
                     @include flex-rnsc; 

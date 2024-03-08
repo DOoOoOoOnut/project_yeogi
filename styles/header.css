@@ -85,6 +85,9 @@ header .header_wrap nav .over_travel .prev h2 {
 header .header_wrap nav .over_travel .prev h2:hover {
   color: #707070;
 }
+header .header_wrap nav .over_travel .prev .down {
+  cursor: pointer;
+}
 header .header_wrap nav .over_travel .over_travel_box {
   display: none;
   flex-flow: row nowrap;
@@ -221,6 +224,7 @@ header .header_wrap nav .mypage_warp_nonmember {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 header .header_wrap nav .mypage_warp_nonmember .menu {
   width: 80px;

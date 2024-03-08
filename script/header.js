@@ -24,6 +24,8 @@ top_btn_m.addEventListener('click', (e) => {
 openMenu.classList.add('hide')
 menuBtn.addEventListener('click',()=>{
     openMenu.classList.toggle('hide')
+    popular_search_list.style.display = 'none';
+    overTravelBox.style.display = 'none';
 })
 
 let isMouseOver = false;
@@ -33,6 +35,8 @@ overTravelBtn.addEventListener('click', () => {
     overblean  = !overblean
     if(overblean){
         overTravelBox.style.display = 'flex';
+        popular_search_list.style.display = 'none';
+        openMenu.classList.add('hide')
     }else{
         overTravelBox.style.display = 'none';
     }
@@ -43,6 +47,8 @@ popular_search.addEventListener('click', () => {
     krblean  = !krblean
     if(krblean){
         popular_search_list.style.display = 'flex';
+        overTravelBox.style.display = 'none';
+        openMenu.classList.add('hide')
     }else{
         popular_search_list.style.display = 'none';
     }
