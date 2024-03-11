@@ -702,7 +702,6 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   width: 100%;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking {
-  display: none;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
@@ -738,6 +737,9 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   border-radius: 10px;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_results {
+  display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .active {
   display: none;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail {

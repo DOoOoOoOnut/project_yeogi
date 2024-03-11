@@ -3,6 +3,8 @@ import { getAccommodationsByType } from '/data/data.js';
 const userSearch = document.querySelector('.user_search')
 const searchInput = document.querySelector('#search_input')
 const searchRanking = document.querySelector('.search_ranking')
+const rank = searchRanking.querySelectorAll('li')
+const span = searchRanking.querySelectorAll('li span')
 const calendarDate = document.querySelector('.calendar_detail')
 const dateSelectBox = document.querySelector('.date_select_box')
 const numView = document.querySelector('.num_view')
@@ -22,7 +24,7 @@ const sub_menu_list = document.querySelector('.sub_menu_list')
 const i_rotate = document.querySelector('.more_btn i[class*=down]')
 let hover = true
 // console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
-console.log(sub_menu_list,i_rotate)
+// console.log(userSearch,searchInput,searchRanking)
 
 let hide = (name)=>{
     for(let i of name){
@@ -30,19 +32,29 @@ let hide = (name)=>{
     }
 }
 
-// 국내 숙소 검색 영역
-userSearch.addEventListener('click',()=>{
-    searchRanking.style.display = 'block'
-})
-// 국내 숙소 검색 input 벗어났을 시 숨기기
-searchInput.addEventListener('blur',()=>{
-    searchRanking.style.display = 'none'
-})
+searchRanking.classList.add('active')
 
-// search_before.addEventListener('click',()=>{
-//     search_after.style.display = 'block'
-//     search_before.style.display = 'none'
-// })
+userSearch.addEventListener('click', function(){
+    searchRanking.classList.remove('active');
+});
+
+// 다른 곳 클릭하면 다시 비활성화 
+document.addEventListener('click', function(event) {
+    if (!userSearch.contains(event.target)) {
+        searchRanking.classList.add('active');
+    }
+});
+
+console.log('--------------------')
+// console.log(li[0].innerHTML)
+for(let i of rank) {
+    i.addEventListener('click',function(){
+        console.log(this.children[1].innerText)
+        searchInput.value = this.children[1].innerText
+        searchRanking.style.display = 'none'
+        dateSelectBox.style.display = 'block'
+    })
+}
 
 // search_change.addEventListener('click',()=>{
 //     search_after.style.display = 'block'
