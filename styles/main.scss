@@ -591,7 +591,15 @@ main {
                                                                     background-color:$mainColor-b; color:#fff;
                                                                     border-radius:50%;
                                                                 }
+                                                                .start_active:hover {
+                                                                    background-color:$mainColor-b; color:#fff;
+                                                                    border-radius:50%;
+                                                                }
                                                                 .end_active {
+                                                                    background-color:$mainColor-b; color:#fff;
+                                                                    border-radius:50%;
+                                                                }
+                                                                .end_active:hover {
                                                                     background-color:$mainColor-b; color:#fff;
                                                                     border-radius:50%;
                                                                 }

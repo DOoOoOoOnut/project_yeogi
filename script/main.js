@@ -7,6 +7,7 @@ const rank = searchRanking.querySelectorAll('li')
 const span = searchRanking.querySelectorAll('li span')
 const calendarDate = document.querySelector('.calendar_detail')
 const dateSelectBox = document.querySelector('.date_select_box')
+const dateSelectTd = dateSelectBox.querySelectorAll('td')
 const numView = document.querySelector('.num_view')
 const numSelect = document.querySelector('#num_select')
 const userSelect = document.querySelector('.num_detail .user_select')
@@ -25,6 +26,17 @@ const i_rotate = document.querySelector('.more_btn i[class*=down]')
 let hover = true
 // console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
 // console.log(userSearch,searchInput,searchRanking)
+
+let count = 0
+dateSelectTd.forEach((t)=>{
+    t.addEventListener('click',()=>{
+        count++
+        t.classList.add('start_active')
+        if(count == 2){
+            dateSelectBox.style.display = 'none';
+        }
+    })
+})
 
 let hide = (name)=>{
     for(let i of name){
@@ -128,11 +140,11 @@ calendarDate.addEventListener('click',()=>{
     calBlean = !calBlean;
     if(calBlean == true){
         calendarDate.classList.add('input_active')
-        dateSelectBox.style.display = 'block'
-    }else{
-        calendarDate.classList.remove('input_active')
-        dateSelectBox.style.display = 'none'
-    }
+        dateSelectBox.style.display = 'block'}
+    // }else{
+    //     calendarDate.classList.remove('input_active')
+    //     dateSelectBox.style.display = 'none'
+    // }
 })
 
 let numViewBlean = false 
