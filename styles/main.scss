@@ -588,19 +588,19 @@ main {
                                                                 td:hover {background-color:#f5f5f5; border-radius:50%;}
                                                                 .redday {color:$subColor-r;}
                                                                 .start_active {
-                                                                    background-color:$mainColor-b; color:#fff;
+                                                                    background-color:$mainColor-b !important; color:#fff;
                                                                     border-radius:50%;
                                                                 }
                                                                 .start_active:hover {
-                                                                    background-color:$mainColor-b; color:#fff;
+                                                                    background-color:$mainColor-b !important; color:#fff;
                                                                     border-radius:50%;
                                                                 }
                                                                 .end_active {
-                                                                    background-color:$mainColor-b; color:#fff;
+                                                                    background-color:$mainColor-b !important; color:#fff;
                                                                     border-radius:50%;
                                                                 }
                                                                 .end_active:hover {
-                                                                    background-color:$mainColor-b; color:#fff;
+                                                                    background-color:$mainColor-b !important; color:#fff;
                                                                     border-radius:50%;
                                                                 }
                                                             }
