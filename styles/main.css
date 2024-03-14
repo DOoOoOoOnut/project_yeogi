@@ -702,7 +702,6 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   width: 100%;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking {
-  display: none;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
@@ -738,6 +737,9 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   border-radius: 10px;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_results {
+  display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .active {
   display: none;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail {
@@ -844,12 +846,22 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
   color: #f45858;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .start_active {
-  background-color: #1273e4;
+  background-color: #1273e4 !important;
+  color: #fff;
+  border-radius: 50%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .start_active:hover {
+  background-color: #1273e4 !important;
   color: #fff;
   border-radius: 50%;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .end_active {
-  background-color: #1273e4;
+  background-color: #1273e4 !important;
+  color: #fff;
+  border-radius: 50%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .end_active:hover {
+  background-color: #1273e4 !important;
   color: #fff;
   border-radius: 50%;
 }
