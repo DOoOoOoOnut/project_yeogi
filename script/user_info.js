@@ -368,7 +368,7 @@ let view_after = ()=>{
 hide_after()
 
 
-//휴데폰 input 클릭하면 활성화
+//휴대폰 input 클릭하면 활성화
 user_phone_input.forEach((t,i)=>{
     t.addEventListener('click',function(){
         t.classList.add('active')

@@ -5,9 +5,11 @@ const searchInput = document.querySelector('#search_input')
 const searchRanking = document.querySelector('.search_ranking')
 const rank = searchRanking.querySelectorAll('li')
 const span = searchRanking.querySelectorAll('li span')
-const calendarDate = document.querySelector('.calendar_detail')
+const calendarDetail = document.querySelector('.calendar_detail')
+const calendarDate = document.querySelector('.calendar_date')
 const dateSelectBox = document.querySelector('.date_select_box')
 const dateSelectTd = dateSelectBox.querySelectorAll('td')
+const disabled = document.querySelectorAll('.disabled')
 const numView = document.querySelector('.num_view')
 const numSelect = document.querySelector('#num_select')
 const userSelect = document.querySelector('.num_detail .user_select')
@@ -23,10 +25,14 @@ const room_btn_m = document.querySelectorAll('.room_btn_m')
 const more_btn = document.querySelector('.more_btn')
 const sub_menu_list = document.querySelector('.sub_menu_list')
 const i_rotate = document.querySelector('.more_btn i[class*=down]')
+const date_select_firstday = document.querySelectorAll('.date_select_firstday')
+const date_select_lastday = document.querySelectorAll('.date_select_lastday')
+const total_night = document.querySelectorAll('.total_night')
+const date_reset = document.querySelectorAll('.date_reset span')
+const date_reset_tab = document.querySelector('.date_reset_tab')
 let hover = true
-// console.log(calendarDate,dateSelectBox,userSearch,searchRanking,numSelect,userSelect)
 // console.log(userSearch,searchInput,searchRanking)
-
+console.log(date_reset)
 
 
 //?
@@ -39,19 +45,19 @@ let hide = (name)=>{
 // 1.국내 숙소 검색 팝업 초기 숨기기
 searchRanking.style.display = 'none'
 
-// 1.국내 숙소 첫번째 검색 클릭 
+// 1-1.국내 숙소 첫번째 검색 클릭 
 userSearch.addEventListener('click', function(){
     searchRanking.style.display = 'block'
 })
 
-// 1.다른 곳 클릭하면 다시 비활성화 
+// 1-2.다른 곳 클릭하면 다시 비활성화 
 document.addEventListener('click', function(event) {
     if (!userSearch.contains(event.target)) {
         searchRanking.style.display = 'none'
     }
 });
 
-//1.검색 순위 클릭 시 국내&해외 숙소 값 입력
+//1-3.검색 순위 클릭 시 국내&해외 숙소 값 입력
 for(let i of rank) {
     i.addEventListener('click',function(){
         console.log(this.children[1].innerText)
@@ -62,26 +68,77 @@ for(let i of rank) {
 }
 
 //2. 숙소 예약 달력
-let count = 0 //0 == 날짜 선택안했을 떄(초기값) //1 == 시작날짜를 선택했을 때 //2 == 종료날짜를 선택했을때(팝업닫힘)
-dateSelectTd.forEach((t)=>{
-    t.addEventListener('click',()=>{
-        count++
-        console.log(count)
-        if(count == 1){
-            for(let j of dateSelectTd){
-                j.style.backgroundColor = '#fff'
-                j.classList.remove('start_active')
-                j.classList.remove('end_active')
-            }
-            t.classList.add('start_active') // 파랑색 활성화
-        }else if (count == 2){
-            t.classList.add('start_active') // 파랑색 활성화
-            //날짜를 두개 이상 선택하면 달력 숨기기
-            dateSelectBox.style.display = 'none';
-        }
-    })
-})
+function resetCount() {
+    count = 0; // count를 0으로 초기화
+}
 
+let count = 0 //0 == 날짜 선택안했을 떄(초기값) //1 == 시작날짜를 선택했을 때 //2 == 종료날짜를 선택했을때(팝업닫힘)
+//클릭한 td가 몇일인지??
+// console.log('=============')
+// console.log(t.parentElement.parentElement.parentElement.title)
+// console.log(`0${t.parentElement.parentElement.parentElement.title}.${t.innerText} ${t.title}`)
+dateSelectTd.forEach((t) => {
+    // disabled 클래스를 가진 요소에 대해 클릭 이벤트를 추가하지 않음
+    if (!t.classList.contains('disabled')) {
+        t.addEventListener('click', () => {
+            //클릭한 td 배경색 활성화 적용
+            count++; //클릭한 td 횟수 인식 변수
+            let data_select = `0${t.parentElement.parentElement.parentElement.title}.${t.innerText} ${t.title}`
+            if (count === 1) { // 처음 td 클릭 시 
+                for (let j of dateSelectTd) {
+                    j.style.backgroundColor = '#fff';
+                    j.classList.remove('start_active');
+                    j.classList.remove('end_active');
+                }
+                console.log(t)
+                date_select_firstday[0].innerHTML = data_select
+                date_select_firstday[1].innerHTML = data_select
+                date_select_lastday[0].innerHTML = ''
+                date_select_lastday[1].innerHTML = ''
+                t.classList.add('start_active'); // 파랑색 활성화
+                date_reset_tab.classList.add('active_tab')
+            } else if (count === 2) { //두번쨰 td 클릭 시
+                t.classList.add('start_active'); // 파랑색 활성화
+                // 날짜를 두 개 이상 선택하면 달력 숨기기
+                dateSelectBox.style.display = 'none';
+                resetCount()
+                date_select_lastday[0].innerHTML = data_select
+                date_select_lastday[1].innerHTML = data_select
+            }
+        });
+    }
+});
+
+for(let i of date_reset){
+    i.addEventListener('click',()=>{
+        date_select_firstday[0].innerHTML = '03.12 화'
+        date_select_firstday[1].innerHTML = '03.12 화'
+        date_select_lastday[0].innerHTML = '03.13 수'
+        date_select_lastday[1].innerHTML = '03.13 수'
+        for (let j of dateSelectTd) {
+            j.style.backgroundColor = '#fff';
+            j.classList.remove('start_active');
+            j.classList.remove('end_active');
+        }
+        dateSelectTd[16].classList.add('start_active')
+        dateSelectTd[17].classList.add('end_active')
+        resetCount() 
+    })
+}
+
+// 2-1.다른 곳 클릭하면 다시 비활성화 
+document.addEventListener('click', function(event) {
+    if (!calendarDate.contains(event.target)) {
+        dateSelectBox.style.display = 'none'
+    }
+});
+
+dateSelectBox.addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+searchRanking.addEventListener('click', function(event) {
+    event.stopPropagation();
+});
 
 //mobile 변수
 const search_box = document.querySelector('.search_box_m');
@@ -127,7 +184,6 @@ num_detail.addEventListener('click', () => {
     }
 });
 
-
 // 모바일 search 검색 클릭시 나오는 팝업
 user_search_detail_m.addEventListener('click',()=>{
     search_popup.style.display = 'block'
@@ -147,13 +203,13 @@ back_btn.addEventListener('click',()=>{
 })
 
 let calBlean = false
-calendarDate.addEventListener('click',()=>{
+calendarDetail.addEventListener('click',()=>{
     calBlean = !calBlean;
     if(calBlean == true){
-        calendarDate.classList.add('input_active')
+        calendarDetail.classList.add('input_active')
         dateSelectBox.style.display = 'block'}
     // }else{
-    //     calendarDate.classList.remove('input_active')
+    //     calendarDetail.classList.remove('input_active')
     //     dateSelectBox.style.display = 'none'
     // }
 })
@@ -179,13 +235,6 @@ numView.addEventListener('mouseover',()=>{
         numView.style.backgroundColor = '#f5f5f5';
         numView.style.borderRadius = '10px';
     }
-})
-
-calendarDate.addEventListener('mouseover',()=>{
-    calendarDate.classList.add('hover')
-})
-calendarDate.addEventListener('mouseout',()=>{
-    calendarDate.classList.remove('hover')
 })
 
 // 해외 숙소 클릭 
