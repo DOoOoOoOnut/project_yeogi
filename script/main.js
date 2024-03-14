@@ -30,6 +30,21 @@ let hide = (name)=>{
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('search_input');
+    const searchRanking = document.querySelector('.search_ranking ol');
+
+    searchRanking.addEventListener('click', function (event) {
+        const clickedListItem = event.target.closest('li');
+
+        if (clickedListItem) {
+            const searchText = clickedListItem.querySelector('span').textContent;
+            searchInput.value = searchText;
+        }
+    });
+});
+
+
 // 국내 숙소 검색 영역
 userSearch.addEventListener('click',()=>{
     searchRanking.style.display = 'block'
@@ -235,3 +250,5 @@ num_minus_room.forEach(function(t,i){
         }
     })
 })
+
+

@@ -1,4 +1,3 @@
-
 // 모두 선택 체크하면 나머지도 체크상태로 변경
 const chkboxes = document.querySelectorAll('.checkbox-wrapper-4 .chk');
 const essentialChk = document.querySelectorAll('.essential')
