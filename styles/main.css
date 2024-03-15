@@ -509,10 +509,6 @@ main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .sea
 main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_room h3 {
   padding: 10px 5px;
 }
-main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_room .user_room_select .num_minus i {
-  background-color: #d6d6d6;
-  color: #f5f5f5;
-}
 main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_adult_left {
   padding-bottom: 0;
 }
@@ -570,6 +566,12 @@ main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .sea
 }
 main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age .user_children_age .children_age_select span {
   font-size: 0.938rem;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age .user_children_age .toggle {
+  display: flex;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age .user_children_age .rotate {
+  transform: rotate(180deg);
 }
 main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_bottom_m {
   width: 100%;
@@ -1003,10 +1005,6 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_room h3 {
   padding: 10px 5px;
 }
-main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_room .user_room_select .num_minus i {
-  background-color: #d6d6d6;
-  color: #f5f5f5;
-}
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_adult_left {
   padding-bottom: 0;
 }
@@ -1037,7 +1035,6 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age {
   margin-bottom: 10px;
-  display: none;
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age {
   border: 1px solid #f5f5f5;
@@ -1068,6 +1065,12 @@ main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .u
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age .children_age_select span {
   font-size: 0.938rem;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age .toggle {
+  display: flex;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age .rotate {
+  transform: rotate(180deg);
 }
 main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .search_btn {
   width: 10%;
